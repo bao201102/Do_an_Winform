@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Do_an_Winform
 {
-    public partial class Form1 : Form
+    public partial class frm_Nhap : Form
     {
-        public Form1()
+        public frm_Nhap()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
