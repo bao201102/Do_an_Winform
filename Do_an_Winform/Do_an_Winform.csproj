@@ -80,6 +80,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ElipseControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DangNhap.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
