@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Do_an_Winform
 {
-    public partial class Form1 : Form
+    public partial class frm_Quanly : Form
     {
-        public Form1()
+        public frm_Quanly()
         {
             InitializeComponent();
             this.Width = 1600;
@@ -49,9 +49,38 @@ namespace Do_an_Winform
             Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnMaximize_Click(object sender, EventArgs e)
         {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
 
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void userBtn_Click(object sender, EventArgs e)
+        {
+            if (subuserPanel.Visible == false)
+            {
+                subuserPanel.Visible = true;
+            }
+            else
+            {
+                subuserPanel.Visible = false;
+            }
+        }
+
+        private void frm_Quanly_Load(object sender, EventArgs e)
+        {
+            subuserPanel.Visible = false;
         }
     }
 }

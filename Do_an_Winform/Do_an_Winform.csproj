@@ -83,11 +83,23 @@
     <Compile Include="DangNhap.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="PL\Nhanvien\frm_Nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PL\Nhanvien\frm_Nhanvien.Designer.cs">
+      <DependentUpon>frm_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Thukho\frm_Thukho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Thukho\frm_Thukho.Designer.cs">
+      <DependentUpon>frm_Thukho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Quanly\frm_Quanly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\frm_Quanly.Designer.cs">
+      <DependentUpon>frm_Quanly.cs</DependentUpon>
     </Compile>
     <Compile Include="Thu_Kho\frm_Nhap.cs">
       <SubType>Form</SubType>
@@ -158,8 +170,14 @@
     <Compile Include="TrangThai.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Nhanvien\frm_Nhanvien.resx">
+      <DependentUpon>frm_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Thukho\frm_Thukho.resx">
+      <DependentUpon>frm_Thukho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\frm_Quanly.resx">
+      <DependentUpon>frm_Quanly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thu_Kho\frm_Nhap.resx">
       <DependentUpon>frm_Nhap.cs</DependentUpon>
@@ -231,6 +249,10 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
