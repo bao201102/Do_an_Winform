@@ -37,7 +37,7 @@
       <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>D:\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\..\hoctap\desktop\cuoiky\doanmau\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -88,6 +88,12 @@
     </Compile>
     <Compile Include="PL\Nhanvien\frm_Nhanvien.Designer.cs">
       <DependentUpon>frm_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Nhanvien\UserControlKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\Nhanvien\UserControlKhachHang.Designer.cs">
+      <DependentUpon>UserControlKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Thukho\frm_Thukho.cs">
       <SubType>Form</SubType>
@@ -172,6 +178,9 @@
     </Compile>
     <EmbeddedResource Include="PL\Nhanvien\frm_Nhanvien.resx">
       <DependentUpon>frm_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\UserControlKhachHang.resx">
+      <DependentUpon>UserControlKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_Thukho.resx">
       <DependentUpon>frm_Thukho.cs</DependentUpon>
