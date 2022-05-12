@@ -328,7 +328,7 @@ namespace Do_an_Winform
             this.bunifuFlatButton7.Iconimage_right = null;
             this.bunifuFlatButton7.Iconimage_right_Selected = null;
             this.bunifuFlatButton7.Iconimage_Selected = null;
-            this.bunifuFlatButton7.IconMarginLeft = 40;
+            this.bunifuFlatButton7.IconMarginLeft = 90;
             this.bunifuFlatButton7.IconMarginRight = 0;
             this.bunifuFlatButton7.IconRightVisible = false;
             this.bunifuFlatButton7.IconRightZoom = 0D;
@@ -344,7 +344,7 @@ namespace Do_an_Winform
             this.bunifuFlatButton7.Size = new System.Drawing.Size(250, 48);
             this.bunifuFlatButton7.TabIndex = 12;
             this.bunifuFlatButton7.Text = "Đăng xuất";
-            this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton7.Textcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
@@ -364,7 +364,7 @@ namespace Do_an_Winform
             this.bunifuFlatButton8.Iconimage_right = null;
             this.bunifuFlatButton8.Iconimage_right_Selected = null;
             this.bunifuFlatButton8.Iconimage_Selected = null;
-            this.bunifuFlatButton8.IconMarginLeft = 40;
+            this.bunifuFlatButton8.IconMarginLeft = 90;
             this.bunifuFlatButton8.IconMarginRight = 0;
             this.bunifuFlatButton8.IconRightVisible = false;
             this.bunifuFlatButton8.IconRightZoom = 0D;
@@ -380,7 +380,7 @@ namespace Do_an_Winform
             this.bunifuFlatButton8.Size = new System.Drawing.Size(250, 48);
             this.bunifuFlatButton8.TabIndex = 11;
             this.bunifuFlatButton8.Text = "Thông tin";
-            this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton8.Textcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 

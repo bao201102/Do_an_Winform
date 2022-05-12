@@ -19,6 +19,13 @@ namespace Do_an_Winform
             this.Height = 900;
         }
 
+        private void frm_Quanly_Load(object sender, EventArgs e)
+        {
+            subuserPanel.Visible = false;
+            subdoitacPanel.Visible = false;
+            subhoadonPanel.Visible = false;  
+        }
+
         private void slideBtn_Click(object sender, EventArgs e)
         {
 
@@ -38,6 +45,8 @@ namespace Do_an_Winform
                 sidemenu.Width = 55;
                 mainPanel.Location = new Point(65, 45);
                 subuserPanel.Visible = false;
+                subdoitacPanel.Visible = false;
+                subhoadonPanel.Visible = false;
                 mainPanel.Width += 195;
                 Transition.ShowSync(sidemenu, false, BunifuAnimatorNS.Animation.HorizSlide);
             }
@@ -78,9 +87,28 @@ namespace Do_an_Winform
             }
         }
 
-        private void frm_Quanly_Load(object sender, EventArgs e)
+        private void btnQLDT_Click(object sender, EventArgs e)
         {
-            subuserPanel.Visible = false;
+            if (subdoitacPanel.Visible == false)
+            {
+                subdoitacPanel.Visible = true;
+            }
+            else
+            {
+                subdoitacPanel.Visible = false;
+            }
+        }
+
+        private void btnQLHD_Click(object sender, EventArgs e)
+        {
+            if (subhoadonPanel.Visible == false)
+            {
+                subhoadonPanel.Visible = true;
+            }
+            else
+            {
+                subhoadonPanel.Visible = false;
+            }
         }
     }
 }
