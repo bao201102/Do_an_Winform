@@ -80,11 +80,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ElipseControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="DangNhap.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Thu_Kho\frm_Nhap.cs">
       <SubType>Form</SubType>
@@ -155,6 +158,9 @@
     <Compile Include="TrangThai.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Thu_Kho\frm_Nhap.resx">
       <DependentUpon>frm_Nhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +175,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -202,6 +209,12 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\crossed.png" />
+    <None Include="Resources\full-screen.png" />
+    <None Include="Resources\homepage1.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\slider1.png" />
+    <None Include="Resources\user.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

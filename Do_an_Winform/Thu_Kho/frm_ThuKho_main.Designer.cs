@@ -29,107 +29,26 @@ namespace Do_an_Winform
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ThuKho_main));
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnOverview = new System.Windows.Forms.Button();
+            this.btnStoreKeeper = new System.Windows.Forms.Button();
+            this.btnSetting = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelSettingSub = new System.Windows.Forms.Panel();
-            this.btnSetting = new System.Windows.Forms.Button();
-            this.panelStorekeeperSub = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnStoreKeeper = new System.Windows.Forms.Button();
-            this.btnOverview = new System.Windows.Forms.Button();
+            this.panelStorekeeperSub = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
             this.panel1.SuspendLayout();
             this.panelStorekeeperSub.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // bunifuElipse1
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Controls.Add(this.panelSettingSub);
-            this.panel1.Controls.Add(this.btnSetting);
-            this.panel1.Controls.Add(this.panelStorekeeperSub);
-            this.panel1.Controls.Add(this.btnStoreKeeper);
-            this.panel1.Controls.Add(this.btnOverview);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(278, 508);
-            this.panel1.TabIndex = 0;
-            // 
-            // panelSettingSub
-            // 
-            this.panelSettingSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSettingSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSettingSub.Location = new System.Drawing.Point(0, 387);
-            this.panelSettingSub.Margin = new System.Windows.Forms.Padding(4);
-            this.panelSettingSub.Name = "panelSettingSub";
-            this.panelSettingSub.Size = new System.Drawing.Size(278, 90);
-            this.panelSettingSub.TabIndex = 5;
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.Location = new System.Drawing.Point(0, 341);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(278, 46);
-            this.btnSetting.TabIndex = 4;
-            this.btnSetting.TabStop = false;
-            this.btnSetting.Text = "Cài đặt";
-            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.UseVisualStyleBackColor = true;
-            // 
-            // panelStorekeeperSub
-            // 
-            this.panelStorekeeperSub.Controls.Add(this.button1);
-            this.panelStorekeeperSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStorekeeperSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelStorekeeperSub.Location = new System.Drawing.Point(0, 199);
-            this.panelStorekeeperSub.Margin = new System.Windows.Forms.Padding(4);
-            this.panelStorekeeperSub.Name = "panelStorekeeperSub";
-            this.panelStorekeeperSub.Size = new System.Drawing.Size(278, 142);
-            this.panelStorekeeperSub.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(278, 46);
-            this.button1.TabIndex = 0;
-            this.button1.TabStop = false;
-            this.button1.Text = "Nhập hàng";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnStoreKeeper
-            // 
-            this.btnStoreKeeper.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStoreKeeper.FlatAppearance.BorderSize = 0;
-            this.btnStoreKeeper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStoreKeeper.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStoreKeeper.Location = new System.Drawing.Point(0, 153);
-            this.btnStoreKeeper.Name = "btnStoreKeeper";
-            this.btnStoreKeeper.Size = new System.Drawing.Size(278, 46);
-            this.btnStoreKeeper.TabIndex = 2;
-            this.btnStoreKeeper.TabStop = false;
-            this.btnStoreKeeper.Text = "Thủ kho";
-            this.btnStoreKeeper.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStoreKeeper.UseVisualStyleBackColor = true;
-            this.btnStoreKeeper.Click += new System.EventHandler(this.btnStoreKeeper_Click);
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // btnOverview
             // 
@@ -141,13 +60,99 @@ namespace Do_an_Winform
             this.btnOverview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOverview.Location = new System.Drawing.Point(0, 107);
             this.btnOverview.Name = "btnOverview";
-            this.btnOverview.Size = new System.Drawing.Size(278, 46);
+            this.btnOverview.Size = new System.Drawing.Size(228, 46);
             this.btnOverview.TabIndex = 1;
             this.btnOverview.TabStop = false;
             this.btnOverview.Text = "   Tổng quan";
             this.btnOverview.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOverview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOverview.UseVisualStyleBackColor = true;
+            // 
+            // btnStoreKeeper
+            // 
+            this.btnStoreKeeper.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStoreKeeper.FlatAppearance.BorderSize = 0;
+            this.btnStoreKeeper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStoreKeeper.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStoreKeeper.Location = new System.Drawing.Point(0, 153);
+            this.btnStoreKeeper.Name = "btnStoreKeeper";
+            this.btnStoreKeeper.Size = new System.Drawing.Size(228, 46);
+            this.btnStoreKeeper.TabIndex = 2;
+            this.btnStoreKeeper.TabStop = false;
+            this.btnStoreKeeper.Text = "Thủ kho";
+            this.btnStoreKeeper.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStoreKeeper.UseVisualStyleBackColor = true;
+            this.btnStoreKeeper.Click += new System.EventHandler(this.btnStoreKeeper_Click);
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.Location = new System.Drawing.Point(0, 341);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(228, 46);
+            this.btnSetting.TabIndex = 4;
+            this.btnSetting.TabStop = false;
+            this.btnSetting.Text = "Cài đặt";
+            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetting.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.panelSettingSub);
+            this.panel1.Controls.Add(this.btnSetting);
+            this.panel1.Controls.Add(this.panelStorekeeperSub);
+            this.panel1.Controls.Add(this.btnStoreKeeper);
+            this.panel1.Controls.Add(this.btnOverview);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(228, 514);
+            this.panel1.TabIndex = 0;
+            // 
+            // panelSettingSub
+            // 
+            this.panelSettingSub.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSettingSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelSettingSub.Location = new System.Drawing.Point(0, 387);
+            this.panelSettingSub.Margin = new System.Windows.Forms.Padding(4);
+            this.panelSettingSub.Name = "panelSettingSub";
+            this.panelSettingSub.Size = new System.Drawing.Size(228, 90);
+            this.panelSettingSub.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(228, 46);
+            this.button1.TabIndex = 0;
+            this.button1.TabStop = false;
+            this.button1.Text = "Nhập hàng";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panelStorekeeperSub
+            // 
+            this.panelStorekeeperSub.Controls.Add(this.button1);
+            this.panelStorekeeperSub.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelStorekeeperSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelStorekeeperSub.Location = new System.Drawing.Point(0, 199);
+            this.panelStorekeeperSub.Margin = new System.Windows.Forms.Padding(4);
+            this.panelStorekeeperSub.Name = "panelStorekeeperSub";
+            this.panelStorekeeperSub.Size = new System.Drawing.Size(228, 142);
+            this.panelStorekeeperSub.TabIndex = 3;
             // 
             // panel2
             // 
@@ -156,7 +161,7 @@ namespace Do_an_Winform
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(278, 107);
+            this.panel2.Size = new System.Drawing.Size(228, 107);
             this.panel2.TabIndex = 0;
             // 
             // panelChildForm
@@ -165,15 +170,10 @@ namespace Do_an_Winform
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelChildForm.BackColor = System.Drawing.SystemColors.Control;
-            this.panelChildForm.Location = new System.Drawing.Point(285, 8);
+            this.panelChildForm.Location = new System.Drawing.Point(235, 8);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(785, 489);
+            this.panelChildForm.Size = new System.Drawing.Size(835, 489);
             this.panelChildForm.TabIndex = 1;
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 14;
-            this.elipseControl1.TargetControl = this.panelChildForm;
             // 
             // frm_ThuKho_main
             // 
@@ -184,6 +184,7 @@ namespace Do_an_Winform
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_ThuKho_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -196,16 +197,15 @@ namespace Do_an_Winform
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnOverview;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelSettingSub;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Panel panelStorekeeperSub;
-        private System.Windows.Forms.Button btnStoreKeeper;
         private System.Windows.Forms.Button button1;
-        private ElipseToolDemo.ElipseControl elipseControl1;
+        private System.Windows.Forms.Button btnStoreKeeper;
+        private System.Windows.Forms.Button btnOverview;
+        private System.Windows.Forms.Panel panel2;
     }
 }
