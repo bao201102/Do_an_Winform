@@ -82,5 +82,20 @@ namespace Do_an_Winform
         {
             subuserPanel.Visible = false;
         }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            userControlKhachHang1.BringToFront();
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            userControlSanPham1.BringToFront();
+        }
+
+        private void btnLapHD_Click(object sender, EventArgs e)
+        {
+            userControlLapHoaDon1.BringToFront();
+        }
     }
 }

@@ -95,6 +95,18 @@
     <Compile Include="PL\Nhanvien\UserControlKhachHang.Designer.cs">
       <DependentUpon>UserControlKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Nhanvien\UserControlLapHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\Nhanvien\UserControlLapHoaDon.Designer.cs">
+      <DependentUpon>UserControlLapHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Nhanvien\UserControlSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\Nhanvien\UserControlSanPham.Designer.cs">
+      <DependentUpon>UserControlSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Thukho\frm_Thukho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +194,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\UserControlKhachHang.resx">
       <DependentUpon>UserControlKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\UserControlLapHoaDon.resx">
+      <DependentUpon>UserControlLapHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\UserControlSanPham.resx">
+      <DependentUpon>UserControlSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_Thukho.resx">
       <DependentUpon>frm_Thukho.cs</DependentUpon>

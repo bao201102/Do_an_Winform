@@ -17,14 +17,16 @@ namespace Do_an_Winform.PL.Nhanvien
             InitializeComponent();
         }
 
-        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void cbKhachHang_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void bunifuCustomDataGrid1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (cbKhachHang.SelectedIndex < 0)
+            {
+                cbKhachHang.Text = "Tìm kiếm khách hàng";
+            }
+            else
+            {
+                cbKhachHang.Text = cbKhachHang.SelectedText;
+            }
         }
     }
 }
