@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Do_an_Winform.PL.Nhanvien
 {
-    public partial class UserControlLapHoaDon : UserControl
+    public partial class UserControlDKThanhVien : UserControl
     {
-        public UserControlLapHoaDon()
+        public UserControlDKThanhVien()
         {
             InitializeComponent();
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UserControlLapHoaDon_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

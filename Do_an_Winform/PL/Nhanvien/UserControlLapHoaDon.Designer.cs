@@ -40,6 +40,8 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
@@ -76,8 +78,6 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -202,6 +202,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(325, 488);
             this.panel1.TabIndex = 16;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(24, 447);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(69, 23);
+            this.button7.TabIndex = 24;
+            this.button7.Text = "Lưu tạm";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(158, 447);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(155, 23);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Thanh toán và in hóa đơn";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -534,24 +552,6 @@
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(158, 447);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(155, 23);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "Thanh toán và in hóa đơn";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(24, 447);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(69, 23);
-            this.button7.TabIndex = 24;
-            this.button7.Text = "Lưu tạm";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // UserControlLapHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +577,7 @@
             this.Controls.Add(this.lbl1);
             this.Name = "UserControlLapHoaDon";
             this.Size = new System.Drawing.Size(1072, 590);
+            this.Load += new System.EventHandler(this.UserControlLapHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -81,6 +81,7 @@ namespace Do_an_Winform
         private void frm_Nhanvien_Load(object sender, EventArgs e)
         {
             subuserPanel.Visible = false;
+            userControlKhachHang1.BringToFront();
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
@@ -96,6 +97,11 @@ namespace Do_an_Winform
         private void btnLapHD_Click(object sender, EventArgs e)
         {
             userControlLapHoaDon1.BringToFront();
+        }
+
+        private void btnDKTV_Click(object sender, EventArgs e)
+        {
+            userControlDKThanhVien1.BringToFront();
         }
     }
 }

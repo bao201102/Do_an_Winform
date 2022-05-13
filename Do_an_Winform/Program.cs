@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Do_an_Winform.PL.Loading;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Do_an_Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Nhanvien());
+            Application.Run(new frm_Loading());
         }
     }
 }

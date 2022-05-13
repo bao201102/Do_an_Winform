@@ -30,7 +30,7 @@ namespace Do_an_Winform
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Nhanvien));
             this.Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.sidemenu = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -38,7 +38,7 @@ namespace Do_an_Winform
             this.btnSanPham = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapHD = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKhachHang = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnDKTV = new Bunifu.Framework.UI.BunifuFlatButton();
             this.subuserPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -52,9 +52,10 @@ namespace Do_an_Winform
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.userControlLapHoaDon1 = new Do_an_Winform.PL.Nhanvien.UserControlLapHoaDon();
-            this.userControlSanPham1 = new Do_an_Winform.PL.Nhanvien.UserControlSanPham();
             this.userControlKhachHang1 = new Do_an_Winform.PL.Nhanvien.UserControlKhachHang();
+            this.userControlSanPham1 = new Do_an_Winform.PL.Nhanvien.UserControlSanPham();
+            this.userControlLapHoaDon1 = new Do_an_Winform.PL.Nhanvien.UserControlLapHoaDon();
+            this.userControlDKThanhVien1 = new Do_an_Winform.PL.Nhanvien.UserControlDKThanhVien();
             this.sidemenu.SuspendLayout();
             this.functionPanel.SuspendLayout();
             this.subuserPanel.SuspendLayout();
@@ -72,22 +73,22 @@ namespace Do_an_Winform
             // 
             this.Transition.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.Transition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.Transition.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.Transition.DefaultAnimation = animation2;
             // 
             // sidemenu
             // 
@@ -106,7 +107,7 @@ namespace Do_an_Winform
             this.sidemenu.Location = new System.Drawing.Point(0, 38);
             this.sidemenu.Name = "sidemenu";
             this.sidemenu.Quality = 10;
-            this.sidemenu.Size = new System.Drawing.Size(250, 613);
+            this.sidemenu.Size = new System.Drawing.Size(249, 613);
             this.sidemenu.TabIndex = 3;
             // 
             // functionPanel
@@ -116,17 +117,17 @@ namespace Do_an_Winform
             this.functionPanel.Controls.Add(this.btnSanPham);
             this.functionPanel.Controls.Add(this.btnLapHD);
             this.functionPanel.Controls.Add(this.btnKhachHang);
-            this.functionPanel.Controls.Add(this.bunifuFlatButton4);
+            this.functionPanel.Controls.Add(this.btnDKTV);
             this.Transition.SetDecoration(this.functionPanel, BunifuAnimatorNS.DecorationType.None);
             this.functionPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.functionPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.functionPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.functionPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.functionPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.functionPanel.Location = new System.Drawing.Point(0, 236);
+            this.functionPanel.Location = new System.Drawing.Point(0, 230);
             this.functionPanel.Name = "functionPanel";
             this.functionPanel.Quality = 10;
-            this.functionPanel.Size = new System.Drawing.Size(250, 292);
+            this.functionPanel.Size = new System.Drawing.Size(249, 292);
             this.functionPanel.TabIndex = 12;
             // 
             // btnSanPham
@@ -240,41 +241,42 @@ namespace Do_an_Winform
             this.btnKhachHang.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
-            // bunifuFlatButton4
+            // btnDKTV
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Đăng kí thành viên";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.bunifuFlatButton4, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 12;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = false;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 60D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 165);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(250, 48);
-            this.bunifuFlatButton4.TabIndex = 5;
-            this.bunifuFlatButton4.Text = "Đăng kí thành viên";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDKTV.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btnDKTV.BackColor = System.Drawing.Color.Transparent;
+            this.btnDKTV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDKTV.BorderRadius = 0;
+            this.btnDKTV.ButtonText = "Đăng kí thành viên";
+            this.btnDKTV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btnDKTV, BunifuAnimatorNS.DecorationType.None);
+            this.btnDKTV.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDKTV.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDKTV.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDKTV.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDKTV.Iconimage")));
+            this.btnDKTV.Iconimage_right = null;
+            this.btnDKTV.Iconimage_right_Selected = null;
+            this.btnDKTV.Iconimage_Selected = null;
+            this.btnDKTV.IconMarginLeft = 12;
+            this.btnDKTV.IconMarginRight = 0;
+            this.btnDKTV.IconRightVisible = false;
+            this.btnDKTV.IconRightZoom = 0D;
+            this.btnDKTV.IconVisible = true;
+            this.btnDKTV.IconZoom = 60D;
+            this.btnDKTV.IsTab = false;
+            this.btnDKTV.Location = new System.Drawing.Point(0, 165);
+            this.btnDKTV.Name = "btnDKTV";
+            this.btnDKTV.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnDKTV.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnDKTV.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDKTV.selected = false;
+            this.btnDKTV.Size = new System.Drawing.Size(250, 48);
+            this.btnDKTV.TabIndex = 5;
+            this.btnDKTV.Text = "Đăng kí thành viên";
+            this.btnDKTV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDKTV.Textcolor = System.Drawing.Color.Transparent;
+            this.btnDKTV.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDKTV.Click += new System.EventHandler(this.btnDKTV_Click);
             // 
             // subuserPanel
             // 
@@ -288,10 +290,10 @@ namespace Do_an_Winform
             this.subuserPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subuserPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subuserPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
-            this.subuserPanel.Location = new System.Drawing.Point(0, 121);
+            this.subuserPanel.Location = new System.Drawing.Point(0, 115);
             this.subuserPanel.Name = "subuserPanel";
             this.subuserPanel.Quality = 10;
-            this.subuserPanel.Size = new System.Drawing.Size(250, 115);
+            this.subuserPanel.Size = new System.Drawing.Size(249, 115);
             this.subuserPanel.TabIndex = 13;
             // 
             // bunifuFlatButton7
@@ -377,10 +379,10 @@ namespace Do_an_Winform
             this.userPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.userPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.userPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.userPanel.Location = new System.Drawing.Point(0, 56);
+            this.userPanel.Location = new System.Drawing.Point(0, 50);
             this.userPanel.Name = "userPanel";
             this.userPanel.Quality = 10;
-            this.userPanel.Size = new System.Drawing.Size(250, 65);
+            this.userPanel.Size = new System.Drawing.Size(249, 65);
             this.userPanel.TabIndex = 14;
             // 
             // userBtn
@@ -434,7 +436,7 @@ namespace Do_an_Winform
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Quality = 10;
-            this.headerPanel.Size = new System.Drawing.Size(250, 56);
+            this.headerPanel.Size = new System.Drawing.Size(249, 50);
             this.headerPanel.TabIndex = 15;
             // 
             // slideBtn
@@ -459,6 +461,7 @@ namespace Do_an_Winform
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainPanel.Controls.Add(this.userControlDKThanhVien1);
             this.mainPanel.Controls.Add(this.userControlLapHoaDon1);
             this.mainPanel.Controls.Add(this.userControlSanPham1);
             this.mainPanel.Controls.Add(this.userControlKhachHang1);
@@ -545,35 +548,45 @@ namespace Do_an_Winform
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // userControlLapHoaDon1
+            // userControlKhachHang1
             // 
-            this.userControlLapHoaDon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(211)))), ((int)(((byte)(231)))));
-            this.Transition.SetDecoration(this.userControlLapHoaDon1, BunifuAnimatorNS.DecorationType.None);
-            this.userControlLapHoaDon1.Location = new System.Drawing.Point(3, 0);
-            this.userControlLapHoaDon1.Name = "userControlLapHoaDon1";
-            this.userControlLapHoaDon1.Size = new System.Drawing.Size(1139, 583);
-            this.userControlLapHoaDon1.TabIndex = 2;
+            this.userControlKhachHang1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(211)))), ((int)(((byte)(231)))));
+            this.Transition.SetDecoration(this.userControlKhachHang1, BunifuAnimatorNS.DecorationType.None);
+            this.userControlKhachHang1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlKhachHang1.Location = new System.Drawing.Point(0, 0);
+            this.userControlKhachHang1.Name = "userControlKhachHang1";
+            this.userControlKhachHang1.Size = new System.Drawing.Size(1112, 602);
+            this.userControlKhachHang1.TabIndex = 0;
             // 
             // userControlSanPham1
             // 
             this.userControlSanPham1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(211)))), ((int)(((byte)(231)))));
             this.Transition.SetDecoration(this.userControlSanPham1, BunifuAnimatorNS.DecorationType.None);
-            this.userControlSanPham1.Location = new System.Drawing.Point(3, 0);
+            this.userControlSanPham1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlSanPham1.Location = new System.Drawing.Point(0, 0);
             this.userControlSanPham1.Name = "userControlSanPham1";
-            this.userControlSanPham1.Size = new System.Drawing.Size(1014, 566);
+            this.userControlSanPham1.Size = new System.Drawing.Size(1112, 602);
             this.userControlSanPham1.TabIndex = 1;
             // 
-            // userControlKhachHang1
+            // userControlLapHoaDon1
             // 
-            this.userControlKhachHang1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlKhachHang1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(211)))), ((int)(((byte)(231)))));
-            this.Transition.SetDecoration(this.userControlKhachHang1, BunifuAnimatorNS.DecorationType.None);
-            this.userControlKhachHang1.Location = new System.Drawing.Point(0, 0);
-            this.userControlKhachHang1.Name = "userControlKhachHang1";
-            this.userControlKhachHang1.Size = new System.Drawing.Size(1020, 613);
-            this.userControlKhachHang1.TabIndex = 0;
+            this.userControlLapHoaDon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(211)))), ((int)(((byte)(231)))));
+            this.Transition.SetDecoration(this.userControlLapHoaDon1, BunifuAnimatorNS.DecorationType.None);
+            this.userControlLapHoaDon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlLapHoaDon1.Location = new System.Drawing.Point(0, 0);
+            this.userControlLapHoaDon1.Name = "userControlLapHoaDon1";
+            this.userControlLapHoaDon1.Size = new System.Drawing.Size(1112, 602);
+            this.userControlLapHoaDon1.TabIndex = 2;
+            // 
+            // userControlDKThanhVien1
+            // 
+            this.userControlDKThanhVien1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(211)))), ((int)(((byte)(231)))));
+            this.Transition.SetDecoration(this.userControlDKThanhVien1, BunifuAnimatorNS.DecorationType.None);
+            this.userControlDKThanhVien1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlDKThanhVien1.Location = new System.Drawing.Point(0, 0);
+            this.userControlDKThanhVien1.Name = "userControlDKThanhVien1";
+            this.userControlDKThanhVien1.Size = new System.Drawing.Size(1112, 602);
+            this.userControlDKThanhVien1.TabIndex = 3;
             // 
             // frm_Nhanvien
             // 
@@ -614,7 +627,7 @@ namespace Do_an_Winform
         private Bunifu.Framework.UI.BunifuFlatButton btnSanPham;
         private Bunifu.Framework.UI.BunifuFlatButton btnLapHD;
         private Bunifu.Framework.UI.BunifuFlatButton btnKhachHang;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDKTV;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
@@ -626,7 +639,8 @@ namespace Do_an_Winform
         private Bunifu.Framework.UI.BunifuGradientPanel titlePanel;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private PL.Nhanvien.UserControlKhachHang userControlKhachHang1;
-        private PL.Nhanvien.UserControlSanPham userControlSanPham1;
         private PL.Nhanvien.UserControlLapHoaDon userControlLapHoaDon1;
+        private PL.Nhanvien.UserControlSanPham userControlSanPham1;
+        private PL.Nhanvien.UserControlDKThanhVien userControlDKThanhVien1;
     }
 }
