@@ -173,7 +173,7 @@ namespace Do_an_Winform
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNhap.Location = new System.Drawing.Point(29, 28);
+            this.dataGridViewNhap.Location = new System.Drawing.Point(26, 21);
             this.dataGridViewNhap.Name = "dataGridViewNhap";
             this.dataGridViewNhap.Size = new System.Drawing.Size(740, 636);
             this.dataGridViewNhap.TabIndex = 12;

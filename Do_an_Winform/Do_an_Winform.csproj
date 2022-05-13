@@ -119,10 +119,10 @@
     <Compile Include="PL\Quanly\frm_Quanly.Designer.cs">
       <DependentUpon>frm_Quanly.cs</DependentUpon>
     </Compile>
-    <Compile Include="Thu_Kho\frm_Nhap.cs">
+    <Compile Include="PL\Thukho\frm_Nhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Thu_Kho\frm_Nhap.Designer.cs">
+    <Compile Include="PL\Thukho\frm_Nhap.Designer.cs">
       <DependentUpon>frm_Nhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Thu_Kho\frm_ThuKho_main.cs">
@@ -207,7 +207,7 @@
     <EmbeddedResource Include="PL\Quanly\frm_Quanly.resx">
       <DependentUpon>frm_Quanly.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Thu_Kho\frm_Nhap.resx">
+    <EmbeddedResource Include="PL\Thukho\frm_Nhap.resx">
       <DependentUpon>frm_Nhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thu_Kho\frm_ThuKho_main.resx">
