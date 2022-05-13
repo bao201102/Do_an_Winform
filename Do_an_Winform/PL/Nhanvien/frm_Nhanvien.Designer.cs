@@ -471,9 +471,7 @@ namespace Do_an_Winform
             this.mainPanel.Size = new System.Drawing.Size(1112, 475);
             this.mainPanel.TabIndex = 5;
             // 
-<<<<<<< HEAD
-=======
-            // Transition
+
             // 
             this.Transition.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.Transition.Cursor = null;
@@ -494,10 +492,7 @@ namespace Do_an_Winform
             animation1.TransparencyCoeff = 0F;
             this.Transition.DefaultAnimation = animation1;
             // 
-<<<<<<< Updated upstream
-=======
->>>>>>> 0848c6fcbbd6e7b60194f171595ec8f29fb0fb16
->>>>>>> Stashed changes
+
             // titlePanel
             // 
             this.titlePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titlePanel.BackgroundImage")));
