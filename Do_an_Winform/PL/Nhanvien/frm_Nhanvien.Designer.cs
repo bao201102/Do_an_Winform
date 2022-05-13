@@ -33,7 +33,6 @@ namespace Do_an_Winform
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Nhanvien));
             this.Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sidemenu = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.functionPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnSanPham = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -52,6 +51,7 @@ namespace Do_an_Winform
             this.btnMaximize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.userControlLapHoaDon1 = new Do_an_Winform.PL.Nhanvien.UserControlLapHoaDon();
             this.userControlSanPham1 = new Do_an_Winform.PL.Nhanvien.UserControlSanPham();
             this.userControlKhachHang1 = new Do_an_Winform.PL.Nhanvien.UserControlKhachHang();
@@ -89,11 +89,6 @@ namespace Do_an_Winform
             animation1.TransparencyCoeff = 0F;
             this.Transition.DefaultAnimation = animation1;
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // sidemenu
             // 
             this.sidemenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sidemenu.BackgroundImage")));
@@ -111,7 +106,7 @@ namespace Do_an_Winform
             this.sidemenu.Location = new System.Drawing.Point(0, 38);
             this.sidemenu.Name = "sidemenu";
             this.sidemenu.Quality = 10;
-            this.sidemenu.Size = new System.Drawing.Size(250, 486);
+            this.sidemenu.Size = new System.Drawing.Size(250, 613);
             this.sidemenu.TabIndex = 3;
             // 
             // functionPanel
@@ -475,7 +470,7 @@ namespace Do_an_Winform
             this.mainPanel.Location = new System.Drawing.Point(247, 38);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Quality = 10;
-            this.mainPanel.Size = new System.Drawing.Size(1112, 475);
+            this.mainPanel.Size = new System.Drawing.Size(1112, 602);
             this.mainPanel.TabIndex = 5;
             // 
             // titlePanel
@@ -545,13 +540,18 @@ namespace Do_an_Winform
             this.btnClose.Zoom = 10;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // userControlLapHoaDon1
             // 
             this.userControlLapHoaDon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(211)))), ((int)(((byte)(231)))));
             this.Transition.SetDecoration(this.userControlLapHoaDon1, BunifuAnimatorNS.DecorationType.None);
             this.userControlLapHoaDon1.Location = new System.Drawing.Point(3, 0);
             this.userControlLapHoaDon1.Name = "userControlLapHoaDon1";
-            this.userControlLapHoaDon1.Size = new System.Drawing.Size(1139, 545);
+            this.userControlLapHoaDon1.Size = new System.Drawing.Size(1139, 583);
             this.userControlLapHoaDon1.TabIndex = 2;
             // 
             // userControlSanPham1
@@ -572,14 +572,14 @@ namespace Do_an_Winform
             this.Transition.SetDecoration(this.userControlKhachHang1, BunifuAnimatorNS.DecorationType.None);
             this.userControlKhachHang1.Location = new System.Drawing.Point(0, 0);
             this.userControlKhachHang1.Name = "userControlKhachHang1";
-            this.userControlKhachHang1.Size = new System.Drawing.Size(1020, 486);
+            this.userControlKhachHang1.Size = new System.Drawing.Size(1020, 613);
             this.userControlKhachHang1.TabIndex = 0;
             // 
             // frm_Nhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 524);
+            this.ClientSize = new System.Drawing.Size(1267, 651);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.titlePanel);
