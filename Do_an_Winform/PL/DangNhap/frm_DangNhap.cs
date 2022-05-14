@@ -36,13 +36,9 @@ namespace Do_an_Winform.PL.DangNhap
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername._TextBox.Text == "")
+            if (txtUsername._TextBox.Text == "" || txtPassword._TextBox.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập tài khoản");
-            }
-            else if (txtPassword._TextBox.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập mật khẩu");
+                bunifuSnackbar1.Show(this, "Vui lòng nhập tài khoản và mật khẩu", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
             }
             else
             {
@@ -51,7 +47,6 @@ namespace Do_an_Winform.PL.DangNhap
                 user.MatKhau = txtPassword._TextBox.Text.Trim();
                 if (TaiKhoanBLL.GetUser(user) != null)
                 {
-                    MessageBox.Show("Đăng nhập thành công");
                     TaiKhoanDTO userLogin = TaiKhoanBLL.GetUser(user);
                     if (userLogin.MaLoaiNV == "LNV001")
                     {
@@ -75,7 +70,7 @@ namespace Do_an_Winform.PL.DangNhap
                 }
                 else
                 {
-                    MessageBox.Show("Sai tên tài khoản và mật khẩu. Vui lòng thử lại");
+                    bunifuSnackbar1.Show(this, "Sai tên hoặc mật khẩu vui lòng thử lại", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                 }
             }
         }
