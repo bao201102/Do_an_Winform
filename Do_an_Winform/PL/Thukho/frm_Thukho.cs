@@ -1,6 +1,7 @@
 ﻿
 using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.DangNhap;
 using Do_an_Winform.PL.Thukho;
 using System;
 using System.Collections.Generic;
@@ -121,6 +122,17 @@ namespace Do_an_Winform
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_Xuat());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+            result = MessageBox.Show("Bạn muốn đăng xuất ?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                frm_DangNhap frmLogin = new frm_DangNhap();
+                frmLogin.Show();
+            }
         }
     }
 }
