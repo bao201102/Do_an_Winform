@@ -34,19 +34,6 @@ namespace Do_an_Winform.PL.DangNhap
             }
         }
 
-        private void btnEye_Click(object sender, EventArgs e)
-        {
-            if (txtPassword._TextBox.UseSystemPasswordChar)
-            {
-                txtPassword._TextBox.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPassword._TextBox.UseSystemPasswordChar = true;
-                txtPassword._TextBox.PasswordChar = '*';
-            }
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtUsername._TextBox.Text == "")
@@ -90,6 +77,21 @@ namespace Do_an_Winform.PL.DangNhap
                 {
                     MessageBox.Show("Sai tên tài khoản và mật khẩu. Vui lòng thử lại");
                 }
+            }
+        }
+
+        private void btnSee_Click(object sender, EventArgs e)
+        {
+            if (txtPassword._TextBox.UseSystemPasswordChar)
+            {
+                btnSee.BackgroundImage = Properties.Resources.eye_icon;
+                txtPassword._TextBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                btnSee.BackgroundImage = Properties.Resources.icons8_eyelashes_2d_32;
+                txtPassword._TextBox.UseSystemPasswordChar = true;
+                txtPassword._TextBox.PasswordChar = '*';
             }
         }
     }
