@@ -33,13 +33,13 @@
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.txtPassword = new Bunifu.Framework.UI.BunifuTextbox();
+            this.txtUsername = new Bunifu.Framework.UI.BunifuTextbox();
             this.btnEye = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.txtUsername = new Bunifu.Framework.UI.BunifuTextbox();
-            this.txtPassword = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -95,6 +95,32 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(682, 788);
             this.bunifuGradientPanel1.TabIndex = 4;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.White;
+            this.txtPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtPassword.BackgroundImage")));
+            this.txtPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.Icon = ((System.Drawing.Image)(resources.GetObject("txtPassword.Icon")));
+            this.txtPassword.Location = new System.Drawing.Point(220, 392);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(350, 45);
+            this.txtPassword.TabIndex = 12;
+            this.txtPassword.text = "";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BackColor = System.Drawing.Color.White;
+            this.txtUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtUsername.BackgroundImage")));
+            this.txtUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtUsername.ForeColor = System.Drawing.Color.Black;
+            this.txtUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txtUsername.Icon")));
+            this.txtUsername.Location = new System.Drawing.Point(220, 320);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(350, 45);
+            this.txtUsername.TabIndex = 11;
+            this.txtUsername.text = "";
             // 
             // btnEye
             // 
@@ -167,32 +193,6 @@
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BackColor = System.Drawing.Color.White;
-            this.txtUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtUsername.BackgroundImage")));
-            this.txtUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtUsername.ForeColor = System.Drawing.Color.Black;
-            this.txtUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txtUsername.Icon")));
-            this.txtUsername.Location = new System.Drawing.Point(220, 320);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(350, 45);
-            this.txtUsername.TabIndex = 11;
-            this.txtUsername.text = "";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.White;
-            this.txtPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtPassword.BackgroundImage")));
-            this.txtPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtPassword.Icon = ((System.Drawing.Image)(resources.GetObject("txtPassword.Icon")));
-            this.txtPassword.Location = new System.Drawing.Point(220, 392);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(350, 45);
-            this.txtPassword.TabIndex = 12;
-            this.txtPassword.text = "";
             // 
             // frm_DangNhap
             // 
