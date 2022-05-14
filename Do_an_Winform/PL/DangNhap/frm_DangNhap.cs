@@ -17,44 +17,12 @@ namespace Do_an_Winform.PL.DangNhap
             InitializeComponent();
         }
 
-        //private void label3_Click(object sender, EventArgs e)
-        //{
-        //    DialogResult result;
-        //    result = MessageBox.Show("Bạn muốn thoát chương trình ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        //    if (result == DialogResult.Yes)
-        //    {
-        //        Application.Exit();
-        //    }
-        //}
-
-        //private void btnCancel_Click(object sender, EventArgs e)
-        //{
-        //    DialogResult result;
-        //    result = MessageBox.Show("Bạn muốn thoát chương trình ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        //    if (result == DialogResult.Yes)
-        //    {
-        //        Application.Exit();
-        //    }
-        //}
-        //bool seePass = false;
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    seePass = !seePass;
-        //    if (seePass)
-        //    {
-        //        button2.BackgroundImage = Properties.Resources.icons8_eyelashes_2d_32;
-        //        txtPassword.UseSystemPasswordChar = false; ;
-        //    }
-        //    else
-        //    {
-        //        button2.BackgroundImage = Properties.Resources.eye_icon;
-        //        txtPassword.UseSystemPasswordChar = true;
-        //    }
-        //}
-
         private void frm_DangNhap_Load(object sender, EventArgs e)
         {
-
+            txtUsername.ForeColor = Color.Black;
+            txtPassword.ForeColor = Color.Black;
+            txtPassword._TextBox.UseSystemPasswordChar = true;
+            txtPassword._TextBox.PasswordChar = '*';
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -66,19 +34,19 @@ namespace Do_an_Winform.PL.DangNhap
                 Application.Exit();
             }
         }
-        bool seePass = false;
 
+        bool seePass = true;
         private void btnEye_Click(object sender, EventArgs e)
         {
             seePass = !seePass;
             if (seePass)
             {
-                txtUsername.BackgroundImage = Properties.Resources.icons8_eyelashes_2d_32;
+                txtPassword._TextBox.UseSystemPasswordChar = true;
+                txtPassword._TextBox.PasswordChar = '*';
             }
             else
             {
-                txtPassword.BackgroundImage = Properties.Resources.eye_icon;
-                txtPassword._TextBox.PasswordChar = '*';
+                txtPassword._TextBox.UseSystemPasswordChar = false;
             }
         }
     }

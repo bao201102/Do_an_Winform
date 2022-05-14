@@ -22,32 +22,37 @@ namespace Do_an_Winform.PL.Loading
         {
 
         }
-        int startpoint;
+
+        int startpoint = 1;
+        int endpoint = 100;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            startpoint += 1;
-            MyProgress.Value = startpoint;
-            if (MyProgress.Value % 2 == 0 && MyProgress.Value % 3 != 0 && MyProgress.Value % 5 != 0)
+            if (MyProgress.Value == 95)
             {
-                lbl1.Text = "Loading.";
+                startpoint = -1;
+                MyProgress.animationIterval = 4;
             }
-            else if (MyProgress.Value % 3 == 0 && MyProgress.Value % 2 != 0 && MyProgress.Value % 5 != 0)
+            else if (MyProgress.Value == 10)
             {
-                lbl1.Text = "Loading..";
+                startpoint = +1;
+                MyProgress.animationIterval = 3;
             }
-            else if (MyProgress.Value % 5 == 0 && MyProgress.Value % 2 != 0 && MyProgress.Value % 3 != 0)
+            MyProgress.Value += startpoint;
+            endpoint += 1;
+            if (endpoint == 210)
             {
-                lbl1.Text = "Loading...";
-            }
-            if (MyProgress.Value == 100)
-            {
-                MyProgress.Value = 0;
                 timer1.Enabled = false;
-
+                frm_DangNhap loginform = new frm_DangNhap();
                 this.Hide();
-                frm_DangNhap frmLogin = new frm_DangNhap();
-                frmLogin.Show();
+                loginform.ShowDialog();
+                this.Close();
             }
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
