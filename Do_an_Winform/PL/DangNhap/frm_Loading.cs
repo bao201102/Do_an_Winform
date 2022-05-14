@@ -1,5 +1,4 @@
-﻿using Do_an_Winform.PL.DangNhap;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Do_an_Winform.PL.Loading
+namespace Do_an_Winform.PL.DangNhap
 {
     public partial class frm_Loading : Form
     {

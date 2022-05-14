@@ -26,9 +26,9 @@ namespace Do_an_Winform.PL.DangNhap
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            DialogResult result;
-            result = MessageBox.Show("Bạn muốn thoát chương trình ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            MessBox messBox = new MessBox();
+            bool result = messBox.ShowMess("Bạn muốn thoát chương trình ?");
+            if (result)
             {
                 Application.Exit();
             }

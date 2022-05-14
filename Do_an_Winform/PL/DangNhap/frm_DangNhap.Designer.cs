@@ -207,7 +207,7 @@
             this.bunifuSnackbar1.ErrorOptions.ActionBorderRadius = 20;
             this.bunifuSnackbar1.ErrorOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuSnackbar1.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
-            this.bunifuSnackbar1.ErrorOptions.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuSnackbar1.ErrorOptions.BackColor = System.Drawing.Color.White;
             this.bunifuSnackbar1.ErrorOptions.BorderColor = System.Drawing.Color.White;
             this.bunifuSnackbar1.ErrorOptions.CloseIconColor = System.Drawing.Color.Black;
             this.bunifuSnackbar1.ErrorOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,7 +221,7 @@
             this.bunifuSnackbar1.InformationOptions.ActionBorderRadius = 20;
             this.bunifuSnackbar1.InformationOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuSnackbar1.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
-            this.bunifuSnackbar1.InformationOptions.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuSnackbar1.InformationOptions.BackColor = System.Drawing.Color.White;
             this.bunifuSnackbar1.InformationOptions.BorderColor = System.Drawing.Color.White;
             this.bunifuSnackbar1.InformationOptions.CloseIconColor = System.Drawing.Color.Black;
             this.bunifuSnackbar1.InformationOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,7 +233,7 @@
             this.bunifuSnackbar1.MaximumViews = 7;
             this.bunifuSnackbar1.MessageRightMargin = 15;
             this.bunifuSnackbar1.MinimumSize = new System.Drawing.Size(0, 0);
-            this.bunifuSnackbar1.ShowBorders = false;
+            this.bunifuSnackbar1.ShowBorders = true;
             this.bunifuSnackbar1.ShowCloseIcon = true;
             this.bunifuSnackbar1.ShowIcon = true;
             this.bunifuSnackbar1.ShowShadows = true;
@@ -242,7 +242,7 @@
             this.bunifuSnackbar1.SuccessOptions.ActionBorderRadius = 20;
             this.bunifuSnackbar1.SuccessOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuSnackbar1.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
-            this.bunifuSnackbar1.SuccessOptions.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuSnackbar1.SuccessOptions.BackColor = System.Drawing.Color.White;
             this.bunifuSnackbar1.SuccessOptions.BorderColor = System.Drawing.Color.White;
             this.bunifuSnackbar1.SuccessOptions.CloseIconColor = System.Drawing.Color.Black;
             this.bunifuSnackbar1.SuccessOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -255,7 +255,7 @@
             this.bunifuSnackbar1.WarningOptions.ActionBorderRadius = 20;
             this.bunifuSnackbar1.WarningOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuSnackbar1.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
-            this.bunifuSnackbar1.WarningOptions.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuSnackbar1.WarningOptions.BackColor = System.Drawing.Color.White;
             this.bunifuSnackbar1.WarningOptions.BorderColor = System.Drawing.Color.White;
             this.bunifuSnackbar1.WarningOptions.CloseIconColor = System.Drawing.Color.Black;
             this.bunifuSnackbar1.WarningOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

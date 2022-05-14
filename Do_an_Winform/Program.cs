@@ -1,5 +1,4 @@
 ﻿using Do_an_Winform.PL.DangNhap;
-using Do_an_Winform.PL.Loading;
 using System;
 using System.Collections.Generic;
 using System.Linq;

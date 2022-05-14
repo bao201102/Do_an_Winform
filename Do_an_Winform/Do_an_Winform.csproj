@@ -251,11 +251,17 @@
     <Compile Include="PL\DangNhap\frm_DangNhap.Designer.cs">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Loading\frm_Loading.cs">
+    <Compile Include="PL\DangNhap\frm_Loading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Loading\frm_Loading.Designer.cs">
+    <Compile Include="PL\DangNhap\frm_Loading.Designer.cs">
       <DependentUpon>frm_Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DangNhap\MessBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\DangNhap\MessBox.Designer.cs">
+      <DependentUpon>MessBox.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Nhanvien\frm_Nhanvien.cs">
       <SubType>Form</SubType>
@@ -323,8 +329,11 @@
     <EmbeddedResource Include="PL\DangNhap\frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Loading\frm_Loading.resx">
+    <EmbeddedResource Include="PL\DangNhap\frm_Loading.resx">
       <DependentUpon>frm_Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DangNhap\MessBox.resx">
+      <DependentUpon>MessBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_Nhanvien.resx">
       <DependentUpon>frm_Nhanvien.cs</DependentUpon>

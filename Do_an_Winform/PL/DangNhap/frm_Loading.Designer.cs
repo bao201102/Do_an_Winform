@@ -1,4 +1,4 @@
-﻿namespace Do_an_Winform.PL.Loading
+﻿namespace Do_an_Winform.PL.DangNhap
 {
     partial class frm_Loading
     {
