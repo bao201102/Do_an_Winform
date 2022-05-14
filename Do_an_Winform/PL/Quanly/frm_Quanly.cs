@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Do_an_Winform.BLL;
+using Do_an_Winform.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +14,22 @@ namespace Do_an_Winform
 {
     public partial class frm_Quanly : Form
     {
-        public frm_Quanly()
+        TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+        public frm_Quanly(TaiKhoanDTO user)
         {
             InitializeComponent();
             this.Width = 1600;
             this.Height = 900;
+            taikhoan = user;
         }
 
         private void frm_Quanly_Load(object sender, EventArgs e)
         {
             subuserPanel.Visible = false;
             subdoitacPanel.Visible = false;
-            subhoadonPanel.Visible = false;  
+            subhoadonPanel.Visible = false;
+            NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+            userBtn.Text = emp.TenNV;
         }
 
         private void slideBtn_Click(object sender, EventArgs e)

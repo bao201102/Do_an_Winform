@@ -113,15 +113,15 @@ namespace Do_an_Winform.PL.DangNhap
                     }
                     else if (userLogin.MaLoaiNV == "LNV002")
                     {
-                        frm_Quanly frmQuanLi = new frm_Quanly();
-                        frmQuanLi.ShowDialog();
-                        this.Close();
+                        frm_Quanly frmQuanLi = new frm_Quanly(userLogin);
+                        frmQuanLi.Show();
+                        //this.Close();
                     }
                     else if (userLogin.MaLoaiNV == "LNV003")
                     {
-                        frm_Thukho frmThuKho = new frm_Thukho();
-                        frmThuKho.ShowDialog();
-                        this.Close();
+                        frm_Thukho frmThuKho = new frm_Thukho(userLogin);
+                        frmThuKho.Show();
+                        //this.Close();
                     }
                 }
                 else
