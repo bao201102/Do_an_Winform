@@ -1,6 +1,7 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
+using Do_an_Winform.PL.Nhanvien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace Do_an_Winform
     public partial class frm_Nhanvien : Form
     {
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+        NhanVienDTO nhanvien = new NhanVienDTO();
+        LoaiNhanVienDTO loaiNV = new LoaiNhanVienDTO();
         public frm_Nhanvien(TaiKhoanDTO user)
         {
             InitializeComponent();
@@ -93,7 +96,10 @@ namespace Do_an_Winform
             subuserPanel.Visible = false;
             userControlKhachHang1.BringToFront();
             NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+            nhanvien = emp;
             userBtn.Text = emp.TenNV;
+            LoaiNhanVienDTO empType = LoaiNhanVienBLL.GetEmpType(emp.MaLoaiNV);
+            loaiNV = empType;
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
@@ -113,7 +119,7 @@ namespace Do_an_Winform
 
         private void btnDKTV_Click(object sender, EventArgs e)
         {
-            //userControlDKThanhVien1.BringToFront();
+            userControlDKThanhVien1.BringToFront();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -125,6 +131,27 @@ namespace Do_an_Winform
                 frm_DangNhap frmLogin = new frm_DangNhap();
                 frmLogin.Show();
             }
+        }
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(childForm);
+            mainPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_Info(nhanvien, loaiNV));
         }
     }
 }

@@ -185,6 +185,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\LoaiNhanVienBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
     <Compile Include="CHDT_Entity.Context.cs">
@@ -211,8 +212,10 @@
     <Compile Include="ChiTietPhieuXuat.cs">
       <DependentUpon>CHDT_Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\LoaiNhanVienDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="DTO\LoaiNhanVienDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
     <Compile Include="HoaDon.cs">
@@ -262,6 +265,12 @@
     </Compile>
     <Compile Include="PL\DangNhap\MessBox.Designer.cs">
       <DependentUpon>MessBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Nhanvien\frm_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Nhanvien\frm_Info.Designer.cs">
+      <DependentUpon>frm_Info.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Nhanvien\frm_Nhanvien.cs">
       <SubType>Form</SubType>
@@ -334,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DangNhap\MessBox.resx">
       <DependentUpon>MessBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\frm_Info.resx">
+      <DependentUpon>frm_Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_Nhanvien.resx">
       <DependentUpon>frm_Nhanvien.cs</DependentUpon>
