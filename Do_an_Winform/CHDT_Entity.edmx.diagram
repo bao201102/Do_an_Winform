@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8e1e7a8efb84b2794c69a7a0bd4375f" Name="Diagram1">
+        <EntityTypeShape EntityType="CHDTModel.ChiTietHoaDon" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.ChiTietPhieuNhap" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.ChiTietPhieuXuat" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.HoaDon" Width="1.5" PointX="3" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.KhachHang" Width="1.5" PointX="0.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.LoaiNhanVien" Width="1.5" PointX="1.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.LoaiSanPham" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.LoaiThanhVien" Width="1.5" PointX="1.5" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.NhanVien" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.NhaSanXuat" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.PhieuNhapHang" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.PhieuXuatHang" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.SanPham" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.TaiKhoan" Width="1.5" PointX="1.5" PointY="19.125" IsExpanded="true" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietHoaDon_HoaDon" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietHoaDon_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_PhieuNhapHang" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuXuat_PhieuXuatHang" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuXuat_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_HoaDon_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__KhachHang__MaLoa__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__DangNhap__MaLoai__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__NhanVien__MaLoai__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__SanPham__MaLoaiS__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_PhieuNhapHang_NhaCungCap" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_PhieuXuatHang_NhaCungCap" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__NhanVien__MaNguo__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__PhieuNhapH__MaNV__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_PhieuXuatHang_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__SanPham__MaNhaSX__48CFD27E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

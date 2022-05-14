@@ -30,8 +30,8 @@ namespace Do_an_Winform
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Quanly));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.btnMaximize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.slideBtn = new Bunifu.Framework.UI.BunifuImageButton();
@@ -42,30 +42,30 @@ namespace Do_an_Winform
             this.subuserPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.userPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.sidemenu = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.doanhthuPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnQLDoanhThu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.subhoadonPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.hoadonPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnQLHD = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.banchayPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnQLBC = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.sanphamPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnQLSP = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tonkhoPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnQLTK = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.subdoitacPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.doitacPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnQLDT = new Bunifu.Framework.UI.BunifuFlatButton();
             this.headerPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.mainPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.titlePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.subhoadonPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.doitacPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnQLDT = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.subdoitacPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tonkhoPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnQLTK = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.sanphamPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnQLSP = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.banchayPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnQLBC = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.hoadonPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnQLHD = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.doanhthuPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnQLDoanhThu = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slideBtn)).BeginInit();
@@ -73,16 +73,16 @@ namespace Do_an_Winform
             this.subuserPanel.SuspendLayout();
             this.userPanel.SuspendLayout();
             this.sidemenu.SuspendLayout();
+            this.doanhthuPanel.SuspendLayout();
+            this.subhoadonPanel.SuspendLayout();
+            this.hoadonPanel.SuspendLayout();
+            this.banchayPanel.SuspendLayout();
+            this.sanphamPanel.SuspendLayout();
+            this.tonkhoPanel.SuspendLayout();
+            this.subdoitacPanel.SuspendLayout();
+            this.doitacPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.titlePanel.SuspendLayout();
-            this.subhoadonPanel.SuspendLayout();
-            this.doitacPanel.SuspendLayout();
-            this.subdoitacPanel.SuspendLayout();
-            this.tonkhoPanel.SuspendLayout();
-            this.sanphamPanel.SuspendLayout();
-            this.banchayPanel.SuspendLayout();
-            this.hoadonPanel.SuspendLayout();
-            this.doanhthuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMaximize
@@ -92,7 +92,7 @@ namespace Do_an_Winform
             this.Transition.SetDecoration(this.btnMaximize, BunifuAnimatorNS.DecorationType.None);
             this.btnMaximize.Image = global::Do_an_Winform.Properties.Resources.full_screen;
             this.btnMaximize.ImageActive = null;
-            this.btnMaximize.Location = new System.Drawing.Point(1531, 12);
+            this.btnMaximize.Location = new System.Drawing.Point(1311, 12);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(18, 22);
             this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -108,7 +108,7 @@ namespace Do_an_Winform
             this.Transition.SetDecoration(this.btnMinimize, BunifuAnimatorNS.DecorationType.None);
             this.btnMinimize.Image = global::Do_an_Winform.Properties.Resources.minus;
             this.btnMinimize.ImageActive = null;
-            this.btnMinimize.Location = new System.Drawing.Point(1487, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(1267, 12);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(23, 22);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -248,7 +248,7 @@ namespace Do_an_Winform
             this.Transition.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
             this.btnClose.Image = global::Do_an_Winform.Properties.Resources.crossed;
             this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(1567, 12);
+            this.btnClose.Location = new System.Drawing.Point(1347, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(21, 22);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -316,88 +316,61 @@ namespace Do_an_Winform
             this.sidemenu.Location = new System.Drawing.Point(0, 38);
             this.sidemenu.Name = "sidemenu";
             this.sidemenu.Quality = 10;
-            this.sidemenu.Size = new System.Drawing.Size(250, 840);
+            this.sidemenu.Size = new System.Drawing.Size(250, 750);
             this.sidemenu.TabIndex = 3;
             // 
-            // headerPanel
+            // doanhthuPanel
             // 
-            this.headerPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("headerPanel.BackgroundImage")));
-            this.headerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.headerPanel.Controls.Add(this.slideBtn);
-            this.Transition.SetDecoration(this.headerPanel, BunifuAnimatorNS.DecorationType.None);
-            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.headerPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.headerPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.headerPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.headerPanel.Location = new System.Drawing.Point(0, 0);
-            this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Quality = 10;
-            this.headerPanel.Size = new System.Drawing.Size(250, 56);
-            this.headerPanel.TabIndex = 15;
+            this.doanhthuPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("doanhthuPanel.BackgroundImage")));
+            this.doanhthuPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.doanhthuPanel.Controls.Add(this.btnQLDoanhThu);
+            this.Transition.SetDecoration(this.doanhthuPanel, BunifuAnimatorNS.DecorationType.None);
+            this.doanhthuPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.doanhthuPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.doanhthuPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.doanhthuPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.doanhthuPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.doanhthuPanel.Location = new System.Drawing.Point(0, 808);
+            this.doanhthuPanel.Name = "doanhthuPanel";
+            this.doanhthuPanel.Quality = 10;
+            this.doanhthuPanel.Size = new System.Drawing.Size(250, 57);
+            this.doanhthuPanel.TabIndex = 21;
             // 
-            // mainPanel
+            // btnQLDoanhThu
             // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
-            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Transition.SetDecoration(this.mainPanel, BunifuAnimatorNS.DecorationType.None);
-            this.mainPanel.GradientBottomLeft = System.Drawing.Color.White;
-            this.mainPanel.GradientBottomRight = System.Drawing.Color.White;
-            this.mainPanel.GradientTopLeft = System.Drawing.Color.White;
-            this.mainPanel.GradientTopRight = System.Drawing.Color.White;
-            this.mainPanel.Location = new System.Drawing.Point(260, 45);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Quality = 10;
-            this.mainPanel.Size = new System.Drawing.Size(1328, 822);
-            this.mainPanel.TabIndex = 5;
-            // 
-            // Transition
-            // 
-            this.Transition.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
-            this.Transition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.Transition.DefaultAnimation = animation2;
-            // 
-            // titlePanel
-            // 
-            this.titlePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titlePanel.BackgroundImage")));
-            this.titlePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.titlePanel.Controls.Add(this.btnMaximize);
-            this.titlePanel.Controls.Add(this.btnMinimize);
-            this.titlePanel.Controls.Add(this.btnClose);
-            this.Transition.SetDecoration(this.titlePanel, BunifuAnimatorNS.DecorationType.None);
-            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titlePanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.titlePanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.titlePanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.titlePanel.GradientTopRight = System.Drawing.Color.White;
-            this.titlePanel.Location = new System.Drawing.Point(0, 0);
-            this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Quality = 10;
-            this.titlePanel.Size = new System.Drawing.Size(1600, 38);
-            this.titlePanel.TabIndex = 4;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
+            this.btnQLDoanhThu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btnQLDoanhThu.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLDoanhThu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQLDoanhThu.BorderRadius = 0;
+            this.btnQLDoanhThu.ButtonText = "Quản lý doanh thu";
+            this.btnQLDoanhThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btnQLDoanhThu, BunifuAnimatorNS.DecorationType.None);
+            this.btnQLDoanhThu.DisabledColor = System.Drawing.Color.Gray;
+            this.btnQLDoanhThu.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLDoanhThu.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnQLDoanhThu.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLDoanhThu.Iconimage")));
+            this.btnQLDoanhThu.Iconimage_right = null;
+            this.btnQLDoanhThu.Iconimage_right_Selected = null;
+            this.btnQLDoanhThu.Iconimage_Selected = null;
+            this.btnQLDoanhThu.IconMarginLeft = 12;
+            this.btnQLDoanhThu.IconMarginRight = 0;
+            this.btnQLDoanhThu.IconRightVisible = false;
+            this.btnQLDoanhThu.IconRightZoom = 0D;
+            this.btnQLDoanhThu.IconVisible = true;
+            this.btnQLDoanhThu.IconZoom = 60D;
+            this.btnQLDoanhThu.IsTab = false;
+            this.btnQLDoanhThu.Location = new System.Drawing.Point(0, 3);
+            this.btnQLDoanhThu.Name = "btnQLDoanhThu";
+            this.btnQLDoanhThu.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnQLDoanhThu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnQLDoanhThu.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnQLDoanhThu.selected = false;
+            this.btnQLDoanhThu.Size = new System.Drawing.Size(250, 48);
+            this.btnQLDoanhThu.TabIndex = 2;
+            this.btnQLDoanhThu.Text = "Quản lý doanh thu";
+            this.btnQLDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnQLDoanhThu.Textcolor = System.Drawing.Color.Transparent;
+            this.btnQLDoanhThu.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // subhoadonPanel
             // 
@@ -489,59 +462,218 @@ namespace Do_an_Winform
             this.bunifuFlatButton6.Textcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // doitacPanel
+            // hoadonPanel
             // 
-            this.doitacPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("doitacPanel.BackgroundImage")));
-            this.doitacPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.doitacPanel.Controls.Add(this.btnQLDT);
-            this.Transition.SetDecoration(this.doitacPanel, BunifuAnimatorNS.DecorationType.None);
-            this.doitacPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.doitacPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doitacPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doitacPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doitacPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doitacPanel.Location = new System.Drawing.Point(0, 236);
-            this.doitacPanel.Name = "doitacPanel";
-            this.doitacPanel.Quality = 10;
-            this.doitacPanel.Size = new System.Drawing.Size(250, 57);
-            this.doitacPanel.TabIndex = 16;
+            this.hoadonPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hoadonPanel.BackgroundImage")));
+            this.hoadonPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.hoadonPanel.Controls.Add(this.btnQLHD);
+            this.Transition.SetDecoration(this.hoadonPanel, BunifuAnimatorNS.DecorationType.None);
+            this.hoadonPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.hoadonPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.hoadonPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.hoadonPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.hoadonPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.hoadonPanel.Location = new System.Drawing.Point(0, 636);
+            this.hoadonPanel.Name = "hoadonPanel";
+            this.hoadonPanel.Quality = 10;
+            this.hoadonPanel.Size = new System.Drawing.Size(250, 57);
+            this.hoadonPanel.TabIndex = 20;
             // 
-            // btnQLDT
+            // btnQLHD
             // 
-            this.btnQLDT.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.btnQLDT.BackColor = System.Drawing.Color.Transparent;
-            this.btnQLDT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnQLDT.BorderRadius = 0;
-            this.btnQLDT.ButtonText = "Quản lý đối tác";
-            this.btnQLDT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.btnQLDT, BunifuAnimatorNS.DecorationType.None);
-            this.btnQLDT.DisabledColor = System.Drawing.Color.Gray;
-            this.btnQLDT.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLDT.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLDT.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLDT.Iconimage")));
-            this.btnQLDT.Iconimage_right = null;
-            this.btnQLDT.Iconimage_right_Selected = null;
-            this.btnQLDT.Iconimage_Selected = null;
-            this.btnQLDT.IconMarginLeft = 12;
-            this.btnQLDT.IconMarginRight = 0;
-            this.btnQLDT.IconRightVisible = false;
-            this.btnQLDT.IconRightZoom = 0D;
-            this.btnQLDT.IconVisible = true;
-            this.btnQLDT.IconZoom = 60D;
-            this.btnQLDT.IsTab = false;
-            this.btnQLDT.Location = new System.Drawing.Point(0, 3);
-            this.btnQLDT.Name = "btnQLDT";
-            this.btnQLDT.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnQLDT.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.btnQLDT.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnQLDT.selected = false;
-            this.btnQLDT.Size = new System.Drawing.Size(250, 48);
-            this.btnQLDT.TabIndex = 2;
-            this.btnQLDT.Text = "Quản lý đối tác";
-            this.btnQLDT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnQLDT.Textcolor = System.Drawing.Color.Transparent;
-            this.btnQLDT.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLDT.Click += new System.EventHandler(this.btnQLDT_Click);
+            this.btnQLHD.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btnQLHD.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLHD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQLHD.BorderRadius = 0;
+            this.btnQLHD.ButtonText = "Quản lý hóa đơn";
+            this.btnQLHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btnQLHD, BunifuAnimatorNS.DecorationType.None);
+            this.btnQLHD.DisabledColor = System.Drawing.Color.Gray;
+            this.btnQLHD.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHD.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnQLHD.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLHD.Iconimage")));
+            this.btnQLHD.Iconimage_right = null;
+            this.btnQLHD.Iconimage_right_Selected = null;
+            this.btnQLHD.Iconimage_Selected = null;
+            this.btnQLHD.IconMarginLeft = 12;
+            this.btnQLHD.IconMarginRight = 0;
+            this.btnQLHD.IconRightVisible = false;
+            this.btnQLHD.IconRightZoom = 0D;
+            this.btnQLHD.IconVisible = true;
+            this.btnQLHD.IconZoom = 60D;
+            this.btnQLHD.IsTab = false;
+            this.btnQLHD.Location = new System.Drawing.Point(0, 3);
+            this.btnQLHD.Name = "btnQLHD";
+            this.btnQLHD.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnQLHD.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnQLHD.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnQLHD.selected = false;
+            this.btnQLHD.Size = new System.Drawing.Size(250, 48);
+            this.btnQLHD.TabIndex = 2;
+            this.btnQLHD.Text = "Quản lý hóa đơn";
+            this.btnQLHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnQLHD.Textcolor = System.Drawing.Color.Transparent;
+            this.btnQLHD.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHD.Click += new System.EventHandler(this.btnQLHD_Click);
+            // 
+            // banchayPanel
+            // 
+            this.banchayPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("banchayPanel.BackgroundImage")));
+            this.banchayPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.banchayPanel.Controls.Add(this.btnQLBC);
+            this.Transition.SetDecoration(this.banchayPanel, BunifuAnimatorNS.DecorationType.None);
+            this.banchayPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.banchayPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.banchayPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.banchayPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.banchayPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.banchayPanel.Location = new System.Drawing.Point(0, 579);
+            this.banchayPanel.Name = "banchayPanel";
+            this.banchayPanel.Quality = 10;
+            this.banchayPanel.Size = new System.Drawing.Size(250, 57);
+            this.banchayPanel.TabIndex = 19;
+            // 
+            // btnQLBC
+            // 
+            this.btnQLBC.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btnQLBC.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLBC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQLBC.BorderRadius = 0;
+            this.btnQLBC.ButtonText = "Quản lý bán chạy";
+            this.btnQLBC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btnQLBC, BunifuAnimatorNS.DecorationType.None);
+            this.btnQLBC.DisabledColor = System.Drawing.Color.Gray;
+            this.btnQLBC.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLBC.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnQLBC.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLBC.Iconimage")));
+            this.btnQLBC.Iconimage_right = null;
+            this.btnQLBC.Iconimage_right_Selected = null;
+            this.btnQLBC.Iconimage_Selected = null;
+            this.btnQLBC.IconMarginLeft = 12;
+            this.btnQLBC.IconMarginRight = 0;
+            this.btnQLBC.IconRightVisible = false;
+            this.btnQLBC.IconRightZoom = 0D;
+            this.btnQLBC.IconVisible = true;
+            this.btnQLBC.IconZoom = 60D;
+            this.btnQLBC.IsTab = false;
+            this.btnQLBC.Location = new System.Drawing.Point(0, 3);
+            this.btnQLBC.Name = "btnQLBC";
+            this.btnQLBC.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnQLBC.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnQLBC.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnQLBC.selected = false;
+            this.btnQLBC.Size = new System.Drawing.Size(250, 48);
+            this.btnQLBC.TabIndex = 2;
+            this.btnQLBC.Text = "Quản lý bán chạy";
+            this.btnQLBC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnQLBC.Textcolor = System.Drawing.Color.Transparent;
+            this.btnQLBC.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // sanphamPanel
+            // 
+            this.sanphamPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sanphamPanel.BackgroundImage")));
+            this.sanphamPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sanphamPanel.Controls.Add(this.btnQLSP);
+            this.Transition.SetDecoration(this.sanphamPanel, BunifuAnimatorNS.DecorationType.None);
+            this.sanphamPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sanphamPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.sanphamPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.sanphamPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.sanphamPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.sanphamPanel.Location = new System.Drawing.Point(0, 522);
+            this.sanphamPanel.Name = "sanphamPanel";
+            this.sanphamPanel.Quality = 10;
+            this.sanphamPanel.Size = new System.Drawing.Size(250, 57);
+            this.sanphamPanel.TabIndex = 18;
+            // 
+            // btnQLSP
+            // 
+            this.btnQLSP.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btnQLSP.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQLSP.BorderRadius = 0;
+            this.btnQLSP.ButtonText = "Quản lý sản phẩm";
+            this.btnQLSP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btnQLSP, BunifuAnimatorNS.DecorationType.None);
+            this.btnQLSP.DisabledColor = System.Drawing.Color.Gray;
+            this.btnQLSP.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLSP.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnQLSP.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLSP.Iconimage")));
+            this.btnQLSP.Iconimage_right = null;
+            this.btnQLSP.Iconimage_right_Selected = null;
+            this.btnQLSP.Iconimage_Selected = null;
+            this.btnQLSP.IconMarginLeft = 12;
+            this.btnQLSP.IconMarginRight = 0;
+            this.btnQLSP.IconRightVisible = false;
+            this.btnQLSP.IconRightZoom = 0D;
+            this.btnQLSP.IconVisible = true;
+            this.btnQLSP.IconZoom = 60D;
+            this.btnQLSP.IsTab = false;
+            this.btnQLSP.Location = new System.Drawing.Point(0, 3);
+            this.btnQLSP.Name = "btnQLSP";
+            this.btnQLSP.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnQLSP.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnQLSP.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnQLSP.selected = false;
+            this.btnQLSP.Size = new System.Drawing.Size(250, 48);
+            this.btnQLSP.TabIndex = 2;
+            this.btnQLSP.Text = "Quản lý sản phẩm";
+            this.btnQLSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnQLSP.Textcolor = System.Drawing.Color.Transparent;
+            this.btnQLSP.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // tonkhoPanel
+            // 
+            this.tonkhoPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tonkhoPanel.BackgroundImage")));
+            this.tonkhoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tonkhoPanel.Controls.Add(this.btnQLTK);
+            this.Transition.SetDecoration(this.tonkhoPanel, BunifuAnimatorNS.DecorationType.None);
+            this.tonkhoPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tonkhoPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.tonkhoPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.tonkhoPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.tonkhoPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.tonkhoPanel.Location = new System.Drawing.Point(0, 465);
+            this.tonkhoPanel.Name = "tonkhoPanel";
+            this.tonkhoPanel.Quality = 10;
+            this.tonkhoPanel.Size = new System.Drawing.Size(250, 57);
+            this.tonkhoPanel.TabIndex = 17;
+            // 
+            // btnQLTK
+            // 
+            this.btnQLTK.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btnQLTK.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLTK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQLTK.BorderRadius = 0;
+            this.btnQLTK.ButtonText = "Quản lý tồn kho";
+            this.btnQLTK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btnQLTK, BunifuAnimatorNS.DecorationType.None);
+            this.btnQLTK.DisabledColor = System.Drawing.Color.Gray;
+            this.btnQLTK.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLTK.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnQLTK.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLTK.Iconimage")));
+            this.btnQLTK.Iconimage_right = null;
+            this.btnQLTK.Iconimage_right_Selected = null;
+            this.btnQLTK.Iconimage_Selected = null;
+            this.btnQLTK.IconMarginLeft = 12;
+            this.btnQLTK.IconMarginRight = 0;
+            this.btnQLTK.IconRightVisible = false;
+            this.btnQLTK.IconRightZoom = 0D;
+            this.btnQLTK.IconVisible = true;
+            this.btnQLTK.IconZoom = 60D;
+            this.btnQLTK.IsTab = false;
+            this.btnQLTK.Location = new System.Drawing.Point(0, 3);
+            this.btnQLTK.Name = "btnQLTK";
+            this.btnQLTK.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnQLTK.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnQLTK.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnQLTK.selected = false;
+            this.btnQLTK.Size = new System.Drawing.Size(250, 48);
+            this.btnQLTK.TabIndex = 2;
+            this.btnQLTK.Text = "Quản lý tồn kho";
+            this.btnQLTK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnQLTK.Textcolor = System.Drawing.Color.Transparent;
+            this.btnQLTK.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // subdoitacPanel
             // 
@@ -561,6 +693,42 @@ namespace Do_an_Winform
             this.subdoitacPanel.Quality = 10;
             this.subdoitacPanel.Size = new System.Drawing.Size(250, 172);
             this.subdoitacPanel.TabIndex = 15;
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Nhà cung cấp";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = null;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 90;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = false;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 60D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 111);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(250, 48);
+            this.bunifuFlatButton1.TabIndex = 13;
+            this.bunifuFlatButton1.Text = "Nhà cung cấp";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // bunifuFlatButton9
             // 
@@ -634,313 +802,145 @@ namespace Do_an_Winform
             this.bunifuFlatButton10.Textcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // tonkhoPanel
+            // doitacPanel
             // 
-            this.tonkhoPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tonkhoPanel.BackgroundImage")));
-            this.tonkhoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tonkhoPanel.Controls.Add(this.btnQLTK);
-            this.Transition.SetDecoration(this.tonkhoPanel, BunifuAnimatorNS.DecorationType.None);
-            this.tonkhoPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tonkhoPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.tonkhoPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.tonkhoPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.tonkhoPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.tonkhoPanel.Location = new System.Drawing.Point(0, 465);
-            this.tonkhoPanel.Name = "tonkhoPanel";
-            this.tonkhoPanel.Quality = 10;
-            this.tonkhoPanel.Size = new System.Drawing.Size(250, 57);
-            this.tonkhoPanel.TabIndex = 17;
+            this.doitacPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("doitacPanel.BackgroundImage")));
+            this.doitacPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.doitacPanel.Controls.Add(this.btnQLDT);
+            this.Transition.SetDecoration(this.doitacPanel, BunifuAnimatorNS.DecorationType.None);
+            this.doitacPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.doitacPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.doitacPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.doitacPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.doitacPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.doitacPanel.Location = new System.Drawing.Point(0, 236);
+            this.doitacPanel.Name = "doitacPanel";
+            this.doitacPanel.Quality = 10;
+            this.doitacPanel.Size = new System.Drawing.Size(250, 57);
+            this.doitacPanel.TabIndex = 16;
             // 
-            // btnQLTK
+            // btnQLDT
             // 
-            this.btnQLTK.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.btnQLTK.BackColor = System.Drawing.Color.Transparent;
-            this.btnQLTK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnQLTK.BorderRadius = 0;
-            this.btnQLTK.ButtonText = "Quản lý tồn kho";
-            this.btnQLTK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.btnQLTK, BunifuAnimatorNS.DecorationType.None);
-            this.btnQLTK.DisabledColor = System.Drawing.Color.Gray;
-            this.btnQLTK.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLTK.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLTK.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLTK.Iconimage")));
-            this.btnQLTK.Iconimage_right = null;
-            this.btnQLTK.Iconimage_right_Selected = null;
-            this.btnQLTK.Iconimage_Selected = null;
-            this.btnQLTK.IconMarginLeft = 12;
-            this.btnQLTK.IconMarginRight = 0;
-            this.btnQLTK.IconRightVisible = false;
-            this.btnQLTK.IconRightZoom = 0D;
-            this.btnQLTK.IconVisible = true;
-            this.btnQLTK.IconZoom = 60D;
-            this.btnQLTK.IsTab = false;
-            this.btnQLTK.Location = new System.Drawing.Point(0, 3);
-            this.btnQLTK.Name = "btnQLTK";
-            this.btnQLTK.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnQLTK.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.btnQLTK.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnQLTK.selected = false;
-            this.btnQLTK.Size = new System.Drawing.Size(250, 48);
-            this.btnQLTK.TabIndex = 2;
-            this.btnQLTK.Text = "Quản lý tồn kho";
-            this.btnQLTK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnQLTK.Textcolor = System.Drawing.Color.Transparent;
-            this.btnQLTK.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLDT.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btnQLDT.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLDT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQLDT.BorderRadius = 0;
+            this.btnQLDT.ButtonText = "Quản lý đối tác";
+            this.btnQLDT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btnQLDT, BunifuAnimatorNS.DecorationType.None);
+            this.btnQLDT.DisabledColor = System.Drawing.Color.Gray;
+            this.btnQLDT.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLDT.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnQLDT.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLDT.Iconimage")));
+            this.btnQLDT.Iconimage_right = null;
+            this.btnQLDT.Iconimage_right_Selected = null;
+            this.btnQLDT.Iconimage_Selected = null;
+            this.btnQLDT.IconMarginLeft = 12;
+            this.btnQLDT.IconMarginRight = 0;
+            this.btnQLDT.IconRightVisible = false;
+            this.btnQLDT.IconRightZoom = 0D;
+            this.btnQLDT.IconVisible = true;
+            this.btnQLDT.IconZoom = 60D;
+            this.btnQLDT.IsTab = false;
+            this.btnQLDT.Location = new System.Drawing.Point(0, 3);
+            this.btnQLDT.Name = "btnQLDT";
+            this.btnQLDT.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnQLDT.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnQLDT.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnQLDT.selected = false;
+            this.btnQLDT.Size = new System.Drawing.Size(250, 48);
+            this.btnQLDT.TabIndex = 2;
+            this.btnQLDT.Text = "Quản lý đối tác";
+            this.btnQLDT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnQLDT.Textcolor = System.Drawing.Color.Transparent;
+            this.btnQLDT.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLDT.Click += new System.EventHandler(this.btnQLDT_Click);
             // 
-            // sanphamPanel
+            // headerPanel
             // 
-            this.sanphamPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sanphamPanel.BackgroundImage")));
-            this.sanphamPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.sanphamPanel.Controls.Add(this.btnQLSP);
-            this.Transition.SetDecoration(this.sanphamPanel, BunifuAnimatorNS.DecorationType.None);
-            this.sanphamPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sanphamPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.sanphamPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.sanphamPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.sanphamPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.sanphamPanel.Location = new System.Drawing.Point(0, 522);
-            this.sanphamPanel.Name = "sanphamPanel";
-            this.sanphamPanel.Quality = 10;
-            this.sanphamPanel.Size = new System.Drawing.Size(250, 57);
-            this.sanphamPanel.TabIndex = 18;
+            this.headerPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("headerPanel.BackgroundImage")));
+            this.headerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.headerPanel.Controls.Add(this.slideBtn);
+            this.Transition.SetDecoration(this.headerPanel, BunifuAnimatorNS.DecorationType.None);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.headerPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.headerPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.headerPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Quality = 10;
+            this.headerPanel.Size = new System.Drawing.Size(250, 56);
+            this.headerPanel.TabIndex = 15;
             // 
-            // btnQLSP
+            // mainPanel
             // 
-            this.btnQLSP.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.btnQLSP.BackColor = System.Drawing.Color.Transparent;
-            this.btnQLSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnQLSP.BorderRadius = 0;
-            this.btnQLSP.ButtonText = "Quản lý sản phẩm";
-            this.btnQLSP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.btnQLSP, BunifuAnimatorNS.DecorationType.None);
-            this.btnQLSP.DisabledColor = System.Drawing.Color.Gray;
-            this.btnQLSP.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLSP.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLSP.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLSP.Iconimage")));
-            this.btnQLSP.Iconimage_right = null;
-            this.btnQLSP.Iconimage_right_Selected = null;
-            this.btnQLSP.Iconimage_Selected = null;
-            this.btnQLSP.IconMarginLeft = 12;
-            this.btnQLSP.IconMarginRight = 0;
-            this.btnQLSP.IconRightVisible = false;
-            this.btnQLSP.IconRightZoom = 0D;
-            this.btnQLSP.IconVisible = true;
-            this.btnQLSP.IconZoom = 60D;
-            this.btnQLSP.IsTab = false;
-            this.btnQLSP.Location = new System.Drawing.Point(0, 3);
-            this.btnQLSP.Name = "btnQLSP";
-            this.btnQLSP.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnQLSP.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.btnQLSP.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnQLSP.selected = false;
-            this.btnQLSP.Size = new System.Drawing.Size(250, 48);
-            this.btnQLSP.TabIndex = 2;
-            this.btnQLSP.Text = "Quản lý sản phẩm";
-            this.btnQLSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnQLSP.Textcolor = System.Drawing.Color.Transparent;
-            this.btnQLSP.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
+            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Transition.SetDecoration(this.mainPanel, BunifuAnimatorNS.DecorationType.None);
+            this.mainPanel.GradientBottomLeft = System.Drawing.Color.White;
+            this.mainPanel.GradientBottomRight = System.Drawing.Color.White;
+            this.mainPanel.GradientTopLeft = System.Drawing.Color.White;
+            this.mainPanel.GradientTopRight = System.Drawing.Color.White;
+            this.mainPanel.Location = new System.Drawing.Point(260, 45);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Quality = 10;
+            this.mainPanel.Size = new System.Drawing.Size(1108, 732);
+            this.mainPanel.TabIndex = 5;
             // 
-            // banchayPanel
+            // Transition
             // 
-            this.banchayPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("banchayPanel.BackgroundImage")));
-            this.banchayPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.banchayPanel.Controls.Add(this.btnQLBC);
-            this.Transition.SetDecoration(this.banchayPanel, BunifuAnimatorNS.DecorationType.None);
-            this.banchayPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.banchayPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.banchayPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.banchayPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.banchayPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.banchayPanel.Location = new System.Drawing.Point(0, 579);
-            this.banchayPanel.Name = "banchayPanel";
-            this.banchayPanel.Quality = 10;
-            this.banchayPanel.Size = new System.Drawing.Size(250, 57);
-            this.banchayPanel.TabIndex = 19;
+            this.Transition.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
+            this.Transition.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.Transition.DefaultAnimation = animation1;
             // 
-            // btnQLBC
+            // titlePanel
             // 
-            this.btnQLBC.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.btnQLBC.BackColor = System.Drawing.Color.Transparent;
-            this.btnQLBC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnQLBC.BorderRadius = 0;
-            this.btnQLBC.ButtonText = "Quản lý bán chạy";
-            this.btnQLBC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.btnQLBC, BunifuAnimatorNS.DecorationType.None);
-            this.btnQLBC.DisabledColor = System.Drawing.Color.Gray;
-            this.btnQLBC.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLBC.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLBC.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLBC.Iconimage")));
-            this.btnQLBC.Iconimage_right = null;
-            this.btnQLBC.Iconimage_right_Selected = null;
-            this.btnQLBC.Iconimage_Selected = null;
-            this.btnQLBC.IconMarginLeft = 12;
-            this.btnQLBC.IconMarginRight = 0;
-            this.btnQLBC.IconRightVisible = false;
-            this.btnQLBC.IconRightZoom = 0D;
-            this.btnQLBC.IconVisible = true;
-            this.btnQLBC.IconZoom = 60D;
-            this.btnQLBC.IsTab = false;
-            this.btnQLBC.Location = new System.Drawing.Point(0, 3);
-            this.btnQLBC.Name = "btnQLBC";
-            this.btnQLBC.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnQLBC.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.btnQLBC.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnQLBC.selected = false;
-            this.btnQLBC.Size = new System.Drawing.Size(250, 48);
-            this.btnQLBC.TabIndex = 2;
-            this.btnQLBC.Text = "Quản lý bán chạy";
-            this.btnQLBC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnQLBC.Textcolor = System.Drawing.Color.Transparent;
-            this.btnQLBC.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titlePanel.BackgroundImage")));
+            this.titlePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.titlePanel.Controls.Add(this.btnMaximize);
+            this.titlePanel.Controls.Add(this.btnMinimize);
+            this.titlePanel.Controls.Add(this.btnClose);
+            this.Transition.SetDecoration(this.titlePanel, BunifuAnimatorNS.DecorationType.None);
+            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlePanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.GradientTopRight = System.Drawing.Color.White;
+            this.titlePanel.Location = new System.Drawing.Point(0, 0);
+            this.titlePanel.Name = "titlePanel";
+            this.titlePanel.Quality = 10;
+            this.titlePanel.Size = new System.Drawing.Size(1380, 38);
+            this.titlePanel.TabIndex = 4;
             // 
-            // hoadonPanel
+            // bunifuElipse1
             // 
-            this.hoadonPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hoadonPanel.BackgroundImage")));
-            this.hoadonPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.hoadonPanel.Controls.Add(this.btnQLHD);
-            this.Transition.SetDecoration(this.hoadonPanel, BunifuAnimatorNS.DecorationType.None);
-            this.hoadonPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.hoadonPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.hoadonPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.hoadonPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.hoadonPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.hoadonPanel.Location = new System.Drawing.Point(0, 636);
-            this.hoadonPanel.Name = "hoadonPanel";
-            this.hoadonPanel.Quality = 10;
-            this.hoadonPanel.Size = new System.Drawing.Size(250, 57);
-            this.hoadonPanel.TabIndex = 20;
-            // 
-            // btnQLHD
-            // 
-            this.btnQLHD.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.btnQLHD.BackColor = System.Drawing.Color.Transparent;
-            this.btnQLHD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnQLHD.BorderRadius = 0;
-            this.btnQLHD.ButtonText = "Quản lý hóa đơn";
-            this.btnQLHD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.btnQLHD, BunifuAnimatorNS.DecorationType.None);
-            this.btnQLHD.DisabledColor = System.Drawing.Color.Gray;
-            this.btnQLHD.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLHD.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLHD.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLHD.Iconimage")));
-            this.btnQLHD.Iconimage_right = null;
-            this.btnQLHD.Iconimage_right_Selected = null;
-            this.btnQLHD.Iconimage_Selected = null;
-            this.btnQLHD.IconMarginLeft = 12;
-            this.btnQLHD.IconMarginRight = 0;
-            this.btnQLHD.IconRightVisible = false;
-            this.btnQLHD.IconRightZoom = 0D;
-            this.btnQLHD.IconVisible = true;
-            this.btnQLHD.IconZoom = 60D;
-            this.btnQLHD.IsTab = false;
-            this.btnQLHD.Location = new System.Drawing.Point(0, 3);
-            this.btnQLHD.Name = "btnQLHD";
-            this.btnQLHD.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnQLHD.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.btnQLHD.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnQLHD.selected = false;
-            this.btnQLHD.Size = new System.Drawing.Size(250, 48);
-            this.btnQLHD.TabIndex = 2;
-            this.btnQLHD.Text = "Quản lý hóa đơn";
-            this.btnQLHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnQLHD.Textcolor = System.Drawing.Color.Transparent;
-            this.btnQLHD.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLHD.Click += new System.EventHandler(this.btnQLHD_Click);
-            // 
-            // doanhthuPanel
-            // 
-            this.doanhthuPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("doanhthuPanel.BackgroundImage")));
-            this.doanhthuPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.doanhthuPanel.Controls.Add(this.btnQLDoanhThu);
-            this.Transition.SetDecoration(this.doanhthuPanel, BunifuAnimatorNS.DecorationType.None);
-            this.doanhthuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.doanhthuPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doanhthuPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doanhthuPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doanhthuPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doanhthuPanel.Location = new System.Drawing.Point(0, 808);
-            this.doanhthuPanel.Name = "doanhthuPanel";
-            this.doanhthuPanel.Quality = 10;
-            this.doanhthuPanel.Size = new System.Drawing.Size(250, 57);
-            this.doanhthuPanel.TabIndex = 21;
-            // 
-            // btnQLDoanhThu
-            // 
-            this.btnQLDoanhThu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.btnQLDoanhThu.BackColor = System.Drawing.Color.Transparent;
-            this.btnQLDoanhThu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnQLDoanhThu.BorderRadius = 0;
-            this.btnQLDoanhThu.ButtonText = "Quản lý doanh thu";
-            this.btnQLDoanhThu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.btnQLDoanhThu, BunifuAnimatorNS.DecorationType.None);
-            this.btnQLDoanhThu.DisabledColor = System.Drawing.Color.Gray;
-            this.btnQLDoanhThu.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLDoanhThu.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLDoanhThu.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLDoanhThu.Iconimage")));
-            this.btnQLDoanhThu.Iconimage_right = null;
-            this.btnQLDoanhThu.Iconimage_right_Selected = null;
-            this.btnQLDoanhThu.Iconimage_Selected = null;
-            this.btnQLDoanhThu.IconMarginLeft = 12;
-            this.btnQLDoanhThu.IconMarginRight = 0;
-            this.btnQLDoanhThu.IconRightVisible = false;
-            this.btnQLDoanhThu.IconRightZoom = 0D;
-            this.btnQLDoanhThu.IconVisible = true;
-            this.btnQLDoanhThu.IconZoom = 60D;
-            this.btnQLDoanhThu.IsTab = false;
-            this.btnQLDoanhThu.Location = new System.Drawing.Point(0, 3);
-            this.btnQLDoanhThu.Name = "btnQLDoanhThu";
-            this.btnQLDoanhThu.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnQLDoanhThu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.btnQLDoanhThu.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnQLDoanhThu.selected = false;
-            this.btnQLDoanhThu.Size = new System.Drawing.Size(250, 48);
-            this.btnQLDoanhThu.TabIndex = 2;
-            this.btnQLDoanhThu.Text = "Quản lý doanh thu";
-            this.btnQLDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnQLDoanhThu.Textcolor = System.Drawing.Color.Transparent;
-            this.btnQLDoanhThu.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Nhà cung cấp";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 90;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = false;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 60D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 111);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(250, 48);
-            this.bunifuFlatButton1.TabIndex = 13;
-            this.bunifuFlatButton1.Text = "Nhà cung cấp";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // frm_Quanly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 878);
+            this.ClientSize = new System.Drawing.Size(1380, 788);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.titlePanel);
@@ -957,16 +957,16 @@ namespace Do_an_Winform
             this.subuserPanel.ResumeLayout(false);
             this.userPanel.ResumeLayout(false);
             this.sidemenu.ResumeLayout(false);
+            this.doanhthuPanel.ResumeLayout(false);
+            this.subhoadonPanel.ResumeLayout(false);
+            this.hoadonPanel.ResumeLayout(false);
+            this.banchayPanel.ResumeLayout(false);
+            this.sanphamPanel.ResumeLayout(false);
+            this.tonkhoPanel.ResumeLayout(false);
+            this.subdoitacPanel.ResumeLayout(false);
+            this.doitacPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             this.titlePanel.ResumeLayout(false);
-            this.subhoadonPanel.ResumeLayout(false);
-            this.doitacPanel.ResumeLayout(false);
-            this.subdoitacPanel.ResumeLayout(false);
-            this.tonkhoPanel.ResumeLayout(false);
-            this.sanphamPanel.ResumeLayout(false);
-            this.banchayPanel.ResumeLayout(false);
-            this.hoadonPanel.ResumeLayout(false);
-            this.doanhthuPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

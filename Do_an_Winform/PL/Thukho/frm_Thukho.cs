@@ -46,7 +46,12 @@ namespace Do_an_Winform
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result;
+            result = MessageBox.Show("Bạn muốn thoát chương trình ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
