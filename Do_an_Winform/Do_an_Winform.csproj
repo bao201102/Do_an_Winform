@@ -200,7 +200,18 @@
     <Compile Include="PL\Thukho\frm_Nhap.Designer.cs">
       <DependentUpon>frm_Nhap.cs</DependentUpon>
     </Compile>
+< HEAD
     <Compile Include="PL\Thukho\frm_Xuat.cs">
+=======
+    </Compile>
+    <Compile Include="SanPham.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Thu_Kho\frm_ThuKho_main.cs">
+>>>>>>> fca46f2bfdfc0ec1a07d3e4d0f3d918c20b9a0a8
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\Thukho\frm_Xuat.Designer.cs">
