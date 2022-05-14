@@ -59,7 +59,27 @@ namespace Do_an_Winform.PL.DangNhap
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result;
+            result = MessageBox.Show("Bạn muốn thoát chương trình ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+        bool seePass = false;
+
+        private void btnEye_Click(object sender, EventArgs e)
+        {
+            seePass = !seePass;
+            if (seePass)
+            {
+                txtUsername.BackgroundImage = Properties.Resources.icons8_eyelashes_2d_32;
+            }
+            else
+            {
+                txtPassword.BackgroundImage = Properties.Resources.eye_icon;
+                txtPassword._TextBox.PasswordChar = '*';
+            }
         }
     }
 }
