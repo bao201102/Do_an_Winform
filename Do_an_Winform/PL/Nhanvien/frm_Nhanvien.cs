@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Do_an_Winform.BLL;
+using Do_an_Winform.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,13 @@ namespace Do_an_Winform
 {
     public partial class frm_Nhanvien : Form
     {
-        public frm_Nhanvien()
+        TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+        public frm_Nhanvien(TaiKhoanDTO user)
         {
             InitializeComponent();
             this.Width = 1600;
             this.Height = 900;
+            taikhoan = user;
         }
 
         private void slideBtn_Click(object sender, EventArgs e)
@@ -46,7 +50,12 @@ namespace Do_an_Winform
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result;
+            result = MessageBox.Show("Bạn muốn thoát chương trình ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -82,6 +91,8 @@ namespace Do_an_Winform
         {
             subuserPanel.Visible = false;
             userControlKhachHang1.BringToFront();
+            NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+            userBtn.Text = emp.TenNV;
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)

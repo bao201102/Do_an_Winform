@@ -33,18 +33,20 @@
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnEye = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtPassword = new Bunifu.Framework.UI.BunifuTextbox();
             this.txtUsername = new Bunifu.Framework.UI.BunifuTextbox();
             this.label4 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+=======
+            this.btnEye = new System.Windows.Forms.Button();
+>>>>>>> 159039179d0f5ba3b14dca6d235e218d8f440cf3
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEye)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
@@ -78,9 +80,9 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuThinButton21);
-            this.bunifuGradientPanel1.Controls.Add(this.btnClose);
             this.bunifuGradientPanel1.Controls.Add(this.btnEye);
+            this.bunifuGradientPanel1.Controls.Add(this.btnLogin);
+            this.bunifuGradientPanel1.Controls.Add(this.btnClose);
             this.bunifuGradientPanel1.Controls.Add(this.txtPassword);
             this.bunifuGradientPanel1.Controls.Add(this.txtUsername);
             this.bunifuGradientPanel1.Controls.Add(this.label4);
@@ -95,6 +97,7 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(682, 788);
             this.bunifuGradientPanel1.TabIndex = 4;
             // 
+<<<<<<< HEAD
             // bunifuThinButton21
             // 
             this.bunifuThinButton21.ActiveBorderThickness = 1;
@@ -119,6 +122,33 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(199, 55);
             this.bunifuThinButton21.TabIndex = 10;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+=======
+            // btnLogin
+            // 
+            this.btnLogin.ActiveBorderThickness = 1;
+            this.btnLogin.ActiveCornerRadius = 20;
+            this.btnLogin.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnLogin.ActiveForecolor = System.Drawing.Color.White;
+            this.btnLogin.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
+            this.btnLogin.ButtonText = "Login";
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.IdleBorderThickness = 1;
+            this.btnLogin.IdleCornerRadius = 20;
+            this.btnLogin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnLogin.IdleForecolor = System.Drawing.Color.White;
+            this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnLogin.Location = new System.Drawing.Point(300, 500);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(199, 55);
+            this.btnLogin.TabIndex = 10;
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+>>>>>>> 159039179d0f5ba3b14dca6d235e218d8f440cf3
             // 
             // btnClose
             // 
@@ -135,27 +165,17 @@
             this.btnClose.Zoom = 10;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnEye
-            // 
-            this.btnEye.BackColor = System.Drawing.Color.Transparent;
-            this.btnEye.Image = global::Do_an_Winform.Properties.Resources.eye_icon;
-            this.btnEye.ImageActive = null;
-            this.btnEye.Location = new System.Drawing.Point(574, 405);
-            this.btnEye.Name = "btnEye";
-            this.btnEye.Size = new System.Drawing.Size(30, 30);
-            this.btnEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEye.TabIndex = 8;
-            this.btnEye.TabStop = false;
-            this.btnEye.Zoom = 10;
-            this.btnEye.Click += new System.EventHandler(this.btnEye_Click);
-            // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtPassword.BackgroundImage")));
             this.txtPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+<<<<<<< HEAD
             this.txtPassword.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+=======
+            this.txtPassword.ForeColor = System.Drawing.Color.Gray;
+>>>>>>> 159039179d0f5ba3b14dca6d235e218d8f440cf3
             this.txtPassword.Icon = ((System.Drawing.Image)(resources.GetObject("txtPassword.Icon")));
             this.txtPassword.Location = new System.Drawing.Point(218, 397);
             this.txtPassword.Name = "txtPassword";
@@ -168,8 +188,12 @@
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtUsername.BackgroundImage")));
             this.txtUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+<<<<<<< HEAD
             this.txtUsername.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+=======
+            this.txtUsername.ForeColor = System.Drawing.Color.Gray;
+>>>>>>> 159039179d0f5ba3b14dca6d235e218d8f440cf3
             this.txtUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txtUsername.Icon")));
             this.txtUsername.Location = new System.Drawing.Point(219, 329);
             this.txtUsername.Name = "txtUsername";
@@ -189,10 +213,24 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Hello!";
             // 
+<<<<<<< HEAD
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
+=======
+            // btnEye
+            // 
+            this.btnEye.BackgroundImage = global::Do_an_Winform.Properties.Resources.eye_icon;
+            this.btnEye.FlatAppearance.BorderSize = 0;
+            this.btnEye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEye.Location = new System.Drawing.Point(585, 412);
+            this.btnEye.Name = "btnEye";
+            this.btnEye.Size = new System.Drawing.Size(31, 30);
+            this.btnEye.TabIndex = 11;
+            this.btnEye.UseVisualStyleBackColor = true;
+            this.btnEye.Click += new System.EventHandler(this.btnEye_Click);
+>>>>>>> 159039179d0f5ba3b14dca6d235e218d8f440cf3
             // 
             // frm_DangNhap
             // 
@@ -211,7 +249,6 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEye)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,11 +259,19 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+<<<<<<< HEAD
         private Bunifu.Framework.UI.BunifuImageButton btnEye;
         private Bunifu.Framework.UI.BunifuTextbox txtUsername;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuTextbox txtPassword;
+=======
+        private Bunifu.Framework.UI.BunifuTextbox txtPassword;
+        private Bunifu.Framework.UI.BunifuTextbox txtUsername;
+        private Bunifu.Framework.UI.BunifuImageButton btnClose;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
+        private System.Windows.Forms.Button btnEye;
+>>>>>>> 159039179d0f5ba3b14dca6d235e218d8f440cf3
     }
 }

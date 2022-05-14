@@ -18,7 +18,12 @@ namespace Do_an_Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new frm_Loading());
+=======
+
+            Application.Run(new frm_DangNhap());
+>>>>>>> 159039179d0f5ba3b14dca6d235e218d8f440cf3
         }
     }
 }

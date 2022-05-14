@@ -37,7 +37,7 @@
       <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\hoctap\desktop\cuoiky\doanmau\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -80,6 +80,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\NhanVienBLL.cs" />
+    <Compile Include="BLL\TaiKhoanBLL.cs" />
+    <Compile Include="CHDT_Entity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHDT_Entity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHDT_Entity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHDT_Entity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHDT_Entity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietHoaDon.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietPhieuNhap.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietPhieuXuat.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\TaiKhoanDTO.cs" />
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiNhanVien.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiSanPham.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiThanhVien.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhaCungCap.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhaSanXuat.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuNhapHang.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuXuatHang.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="PL\DangNhap\frm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,11 +200,17 @@
     <Compile Include="PL\Thukho\frm_Nhap.Designer.cs">
       <DependentUpon>frm_Nhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Thu_Kho\frm_ThuKho_main.cs">
+    <Compile Include="PL\Thukho\frm_Xuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Thu_Kho\frm_ThuKho_main.Designer.cs">
-      <DependentUpon>frm_ThuKho_main.cs</DependentUpon>
+    <Compile Include="PL\Thukho\frm_Xuat.Designer.cs">
+      <DependentUpon>frm_Xuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -180,8 +246,8 @@
     <EmbeddedResource Include="PL\Thukho\frm_Nhap.resx">
       <DependentUpon>frm_Nhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Thu_Kho\frm_ThuKho_main.resx">
-      <DependentUpon>frm_ThuKho_main.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Thukho\frm_Xuat.resx">
+      <DependentUpon>frm_Xuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -193,6 +259,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="CHDT_Entity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CHDT_Entity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CHDT_Entity.edmx.diagram">
+      <DependentUpon>CHDT_Entity.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -222,6 +295,16 @@
     <None Include="Resources\key.png" />
     <None Include="Resources\280060958_782111566022312_2539372052837857405_n.png" />
     <None Include="Resources\banner.png" />
+    <Content Include="CHDT_Entity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CHDT_Entity.edmx</DependentUpon>
+      <LastGenOutput>CHDT_Entity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CHDT_Entity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CHDT_Entity.edmx</DependentUpon>
+      <LastGenOutput>CHDT_Entity.cs</LastGenOutput>
+    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -239,9 +322,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
