@@ -30,8 +30,8 @@ namespace Do_an_Winform
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Thukho));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.btnMaximize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.slideBtn = new Bunifu.Framework.UI.BunifuImageButton();
@@ -71,7 +71,7 @@ namespace Do_an_Winform
             this.Transition.SetDecoration(this.btnMaximize, BunifuAnimatorNS.DecorationType.None);
             this.btnMaximize.Image = global::Do_an_Winform.Properties.Resources.full_screen;
             this.btnMaximize.ImageActive = null;
-            this.btnMaximize.Location = new System.Drawing.Point(1091, 12);
+            this.btnMaximize.Location = new System.Drawing.Point(1146, 12);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(18, 22);
             this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -87,7 +87,7 @@ namespace Do_an_Winform
             this.Transition.SetDecoration(this.btnMinimize, BunifuAnimatorNS.DecorationType.None);
             this.btnMinimize.Image = global::Do_an_Winform.Properties.Resources.minus;
             this.btnMinimize.ImageActive = null;
-            this.btnMinimize.Location = new System.Drawing.Point(1047, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(1102, 12);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(23, 22);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -392,7 +392,7 @@ namespace Do_an_Winform
             this.Transition.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
             this.btnClose.Image = global::Do_an_Winform.Properties.Resources.crossed;
             this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(1127, 12);
+            this.btnClose.Location = new System.Drawing.Point(1182, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(21, 22);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -453,7 +453,7 @@ namespace Do_an_Winform
             this.sidemenu.Location = new System.Drawing.Point(0, 38);
             this.sidemenu.Name = "sidemenu";
             this.sidemenu.Quality = 10;
-            this.sidemenu.Size = new System.Drawing.Size(250, 569);
+            this.sidemenu.Size = new System.Drawing.Size(250, 567);
             this.sidemenu.TabIndex = 3;
             // 
             // headerPanel
@@ -488,29 +488,29 @@ namespace Do_an_Winform
             this.mainPanel.Location = new System.Drawing.Point(260, 45);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Quality = 10;
-            this.mainPanel.Size = new System.Drawing.Size(888, 551);
+            this.mainPanel.Size = new System.Drawing.Size(943, 549);
             this.mainPanel.TabIndex = 5;
             // 
             // Transition
             // 
             this.Transition.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.Transition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.Transition.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.Transition.DefaultAnimation = animation1;
             // 
             // titlePanel
             // 
@@ -528,7 +528,7 @@ namespace Do_an_Winform
             this.titlePanel.Location = new System.Drawing.Point(0, 0);
             this.titlePanel.Name = "titlePanel";
             this.titlePanel.Quality = 10;
-            this.titlePanel.Size = new System.Drawing.Size(1160, 38);
+            this.titlePanel.Size = new System.Drawing.Size(1215, 38);
             this.titlePanel.TabIndex = 4;
             // 
             // bunifuElipse1
@@ -540,7 +540,7 @@ namespace Do_an_Winform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 607);
+            this.ClientSize = new System.Drawing.Size(1215, 605);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.titlePanel);
