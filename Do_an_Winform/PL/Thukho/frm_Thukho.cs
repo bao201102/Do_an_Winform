@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Do_an_Winform.PL.Thukho;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -103,6 +104,11 @@ namespace Do_an_Winform
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_Nhap());
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_Xuat());
         }
     }
 }

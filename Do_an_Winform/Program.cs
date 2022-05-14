@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.PL.DangNhap;
 using Do_an_Winform.PL.Loading;
+using Do_an_Winform.PL.Thukho;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace Do_an_Winform
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new frm_DangNhap());
+            Application.Run(new frm_Thukho());
         }
     }
 }
