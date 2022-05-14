@@ -17,6 +17,7 @@ namespace Do_an_Winform
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         public frm_Nhanvien(TaiKhoanDTO user)
         {
+            InitializeComponent();
             this.Width = 1600;
             this.Height = 900;
             taikhoan = user;

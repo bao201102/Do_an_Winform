@@ -109,7 +109,7 @@ namespace Do_an_Winform.PL.DangNhap
                         frm_Nhanvien frmNhanVien = new frm_Nhanvien(userLogin);
                         //Form frmEmp = new frm_Nhanvien(userLogin);
                         frmNhanVien.Show();
-                        this.Close();
+                        //this.Close();
                     }
                     else if (userLogin.MaLoaiNV == "LNV002")
                     {
