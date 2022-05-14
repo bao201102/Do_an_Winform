@@ -38,6 +38,7 @@ namespace Do_an_Winform.PL.DangNhap
 
         private void btnNo_Click(object sender, EventArgs e)
         {
+            result = false;
             this.Close();
         }
     }

@@ -83,19 +83,19 @@
             this.btnYes.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnYes.ActiveForecolor = System.Drawing.Color.White;
             this.btnYes.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnYes.BackColor = System.Drawing.Color.White;
+            this.btnYes.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnYes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnYes.BackgroundImage")));
             this.btnYes.ButtonText = "Yes";
             this.btnYes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYes.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYes.ForeColor = System.Drawing.Color.White;
+            this.btnYes.ForeColor = System.Drawing.Color.Transparent;
             this.btnYes.IdleBorderThickness = 1;
             this.btnYes.IdleCornerRadius = 20;
             this.btnYes.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnYes.IdleForecolor = System.Drawing.Color.White;
             this.btnYes.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnYes.Location = new System.Drawing.Point(43, 121);
-            this.btnYes.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnYes.Margin = new System.Windows.Forms.Padding(5);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(70, 35);
             this.btnYes.TabIndex = 11;
@@ -109,12 +109,12 @@
             this.btnNo.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.btnNo.ActiveForecolor = System.Drawing.Color.White;
             this.btnNo.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.btnNo.BackColor = System.Drawing.Color.White;
+            this.btnNo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnNo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNo.BackgroundImage")));
             this.btnNo.ButtonText = "No";
             this.btnNo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNo.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNo.ForeColor = System.Drawing.Color.White;
+            this.btnNo.ForeColor = System.Drawing.Color.Transparent;
             this.btnNo.IdleBorderThickness = 1;
             this.btnNo.IdleCornerRadius = 20;
             this.btnNo.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
@@ -133,6 +133,7 @@
             this.lblText.AllowParentOverrides = false;
             this.lblText.AutoEllipsis = false;
             this.lblText.AutoSize = false;
+            this.lblText.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblText.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblText.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.Location = new System.Drawing.Point(12, 37);
@@ -148,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(280, 170);
             this.Controls.Add(this.lblText);
             this.Controls.Add(this.btnNo);
@@ -156,6 +157,7 @@
             this.Controls.Add(this.titlePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MessBox";
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessBox";
             this.titlePanel.ResumeLayout(false);

@@ -22,6 +22,7 @@ namespace Do_an_Winform.PL.DangNhap
         private void frm_DangNhap_Load(object sender, EventArgs e)
         {
             txtPassword._TextBox.PasswordChar = '*';
+            this.AcceptButton = btnLogin as System.Windows.Forms.IButtonControl;           
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -126,9 +126,11 @@ namespace Do_an_Winform
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult result;
-            result = MessageBox.Show("Bạn muốn đăng xuất ?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            MessBox messBox = new MessBox();
+
+            bool result = messBox.ShowMess("Bạn có muốn đăng xuất không ?");
+            
+            if (result)
             {
                 frm_DangNhap frmLogin = new frm_DangNhap();
                 frmLogin.Show();
