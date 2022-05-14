@@ -32,17 +32,16 @@
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuTextbox2 = new Bunifu.Framework.UI.BunifuTextbox();
-            this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
+            this.txtPassword = new Bunifu.Framework.UI.BunifuTextbox();
+            this.txtUsername = new Bunifu.Framework.UI.BunifuTextbox();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnEye = new System.Windows.Forms.Button();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
@@ -58,7 +57,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(700, 800);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(700, 788);
             this.bunifuGradientPanel2.TabIndex = 5;
             // 
             // pictureBox1
@@ -76,22 +75,48 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuThinButton21);
+            this.bunifuGradientPanel1.Controls.Add(this.btnEye);
+            this.bunifuGradientPanel1.Controls.Add(this.btnLogin);
             this.bunifuGradientPanel1.Controls.Add(this.btnClose);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuTextbox2);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuTextbox1);
+            this.bunifuGradientPanel1.Controls.Add(this.txtPassword);
+            this.bunifuGradientPanel1.Controls.Add(this.txtUsername);
             this.bunifuGradientPanel1.Controls.Add(this.label4);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(700, 0);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(680, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(700, 800);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(700, 788);
             this.bunifuGradientPanel1.TabIndex = 4;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.ActiveBorderThickness = 1;
+            this.btnLogin.ActiveCornerRadius = 20;
+            this.btnLogin.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnLogin.ActiveForecolor = System.Drawing.Color.White;
+            this.btnLogin.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
+            this.btnLogin.ButtonText = "Login";
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.IdleBorderThickness = 1;
+            this.btnLogin.IdleCornerRadius = 20;
+            this.btnLogin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnLogin.IdleForecolor = System.Drawing.Color.White;
+            this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnLogin.Location = new System.Drawing.Point(300, 500);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(199, 55);
+            this.btnLogin.TabIndex = 10;
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnClose
             // 
@@ -108,44 +133,31 @@
             this.btnClose.Zoom = 10;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // bunifuImageButton1
+            // txtPassword
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = global::Do_an_Winform.Properties.Resources.eye_icon;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(574, 405);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 30);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 8;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.txtPassword.BackColor = System.Drawing.Color.White;
+            this.txtPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtPassword.BackgroundImage")));
+            this.txtPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtPassword.ForeColor = System.Drawing.Color.Gray;
+            this.txtPassword.Icon = ((System.Drawing.Image)(resources.GetObject("txtPassword.Icon")));
+            this.txtPassword.Location = new System.Drawing.Point(218, 397);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(350, 45);
+            this.txtPassword.TabIndex = 7;
+            this.txtPassword.text = "";
             // 
-            // bunifuTextbox2
+            // txtUsername
             // 
-            this.bunifuTextbox2.BackColor = System.Drawing.Color.White;
-            this.bunifuTextbox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.BackgroundImage")));
-            this.bunifuTextbox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuTextbox2.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.Icon")));
-            this.bunifuTextbox2.Location = new System.Drawing.Point(218, 397);
-            this.bunifuTextbox2.Name = "bunifuTextbox2";
-            this.bunifuTextbox2.Size = new System.Drawing.Size(350, 45);
-            this.bunifuTextbox2.TabIndex = 7;
-            this.bunifuTextbox2.text = "";
-            // 
-            // bunifuTextbox1
-            // 
-            this.bunifuTextbox1.BackColor = System.Drawing.Color.White;
-            this.bunifuTextbox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.BackgroundImage")));
-            this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(219, 329);
-            this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(350, 45);
-            this.bunifuTextbox1.TabIndex = 6;
-            this.bunifuTextbox1.text = "";
+            this.txtUsername.BackColor = System.Drawing.Color.White;
+            this.txtUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtUsername.BackgroundImage")));
+            this.txtUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtUsername.ForeColor = System.Drawing.Color.Gray;
+            this.txtUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txtUsername.Icon")));
+            this.txtUsername.Location = new System.Drawing.Point(219, 329);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(350, 45);
+            this.txtUsername.TabIndex = 6;
+            this.txtUsername.text = "";
             // 
             // label4
             // 
@@ -159,36 +171,23 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Hello!";
             // 
-            // bunifuThinButton21
+            // btnEye
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Login";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(300, 500);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(199, 55);
-            this.bunifuThinButton21.TabIndex = 10;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEye.BackgroundImage = global::Do_an_Winform.Properties.Resources.eye_icon;
+            this.btnEye.FlatAppearance.BorderSize = 0;
+            this.btnEye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEye.Location = new System.Drawing.Point(585, 412);
+            this.btnEye.Name = "btnEye";
+            this.btnEye.Size = new System.Drawing.Size(31, 30);
+            this.btnEye.TabIndex = 11;
+            this.btnEye.UseVisualStyleBackColor = true;
+            this.btnEye.Click += new System.EventHandler(this.btnEye_Click);
             // 
             // frm_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.ClientSize = new System.Drawing.Size(1380, 788);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -201,7 +200,6 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,10 +210,10 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox2;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
+        private Bunifu.Framework.UI.BunifuTextbox txtPassword;
+        private Bunifu.Framework.UI.BunifuTextbox txtUsername;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
+        private System.Windows.Forms.Button btnEye;
     }
 }
