@@ -39,7 +39,7 @@ namespace Do_an_Winform.PL.Loading
             }
             MyProgress.Value += startpoint;
             endpoint += 1;
-            if (endpoint == 210)
+            if (endpoint == 180)
             {
                 timer1.Enabled = false;
                 frm_DangNhap loginform = new frm_DangNhap();
@@ -47,7 +47,6 @@ namespace Do_an_Winform.PL.Loading
                 loginform.ShowDialog();
                 this.Close();
             }
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

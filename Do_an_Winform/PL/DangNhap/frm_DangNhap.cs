@@ -21,9 +21,6 @@ namespace Do_an_Winform.PL.DangNhap
 
         private void frm_DangNhap_Load(object sender, EventArgs e)
         {
-            txtUsername.ForeColor = Color.Black;
-            txtPassword.ForeColor = Color.Black;
-            txtPassword._TextBox.UseSystemPasswordChar = true;
             txtPassword._TextBox.PasswordChar = '*';
         }
 
@@ -37,27 +34,16 @@ namespace Do_an_Winform.PL.DangNhap
             }
         }
 
-        bool seePass = true;
         private void btnEye_Click(object sender, EventArgs e)
         {
-            seePass = !seePass;
-            if (seePass == true)
+            if (txtPassword._TextBox.UseSystemPasswordChar)
             {
-<<<<<<< HEAD
+                txtPassword._TextBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
                 txtPassword._TextBox.UseSystemPasswordChar = true;
                 txtPassword._TextBox.PasswordChar = '*';
-            }
-            else
-            {
-                txtPassword._TextBox.UseSystemPasswordChar = false;
-=======
-                btnEye.BackgroundImage = Properties.Resources.icons8_eyelashes_2d_32;
-                txtPassword._TextBox.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                btnEye.BackgroundImage = Properties.Resources.eye_icon;
-                txtPassword._TextBox.UseSystemPasswordChar = true;
             }
         }
 
@@ -74,8 +60,8 @@ namespace Do_an_Winform.PL.DangNhap
             else
             {
                 TaiKhoan user = new TaiKhoan();
-                user.TaiKhoan1 = txtUsername._TextBox.Text;
-                user.MatKhau = txtPassword._TextBox.Text;
+                user.TaiKhoan1 = txtUsername._TextBox.Text.Trim();
+                user.MatKhau = txtPassword._TextBox.Text.Trim();
                 if (TaiKhoanBLL.GetUser(user) != null)
                 {
                     MessageBox.Show("Đăng nhập thành công");
@@ -104,7 +90,6 @@ namespace Do_an_Winform.PL.DangNhap
                 {
                     MessageBox.Show("Sai tên tài khoản và mật khẩu. Vui lòng thử lại");
                 }
->>>>>>> 159039179d0f5ba3b14dca6d235e218d8f440cf3
             }
         }
     }
