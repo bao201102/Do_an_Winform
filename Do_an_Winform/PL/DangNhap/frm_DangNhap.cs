@@ -106,9 +106,9 @@ namespace Do_an_Winform.PL.DangNhap
                     TaiKhoanDTO userLogin = TaiKhoanBLL.GetUser(user);
                     if (userLogin.MaLoaiNV == "LNV001")
                     {
-                        //frm_Nhanvien frmNhanVien = new frm_Nhanvien(userLogin);
-                        Form frmEmp = new frm_Nhanvien(userLogin);
-                        frmEmp.ShowDialog();
+                        frm_Nhanvien frmNhanVien = new frm_Nhanvien(userLogin);
+                        //Form frmEmp = new frm_Nhanvien(userLogin);
+                        frmNhanVien.Show();
                         this.Close();
                     }
                     else if (userLogin.MaLoaiNV == "LNV002")
