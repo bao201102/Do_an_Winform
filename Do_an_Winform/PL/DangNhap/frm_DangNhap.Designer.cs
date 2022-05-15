@@ -275,6 +275,7 @@
             this.Name = "frm_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_DangNhap";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_DangNhap_FormClosing);
             this.Load += new System.EventHandler(this.frm_DangNhap_Load);
             this.bunifuGradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

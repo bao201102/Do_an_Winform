@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Do_an_Winform.BLL;
+using Do_an_Winform.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +14,28 @@ namespace Do_an_Winform.PL.Nhanvien
 {
     public partial class UserControlKhachHang : UserControl
     {
+        List<KhachHangDTO> listKhachHang = new List<KhachHangDTO>();
         public UserControlKhachHang()
         {
             InitializeComponent();
+            dgvAllCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAllCustomer.ReadOnly = true;
         }
 
-        private void cbKhachHang_TextChanged(object sender, EventArgs e)
+        private void UserControlKhachHang_Load(object sender, EventArgs e)
         {
-            if (cbKhachHang.SelectedIndex < 0)
+            listKhachHang = KhachHangBLL.GetAllCustomer();
+            foreach(KhachHangDTO kh in listKhachHang)
             {
-                cbKhachHang.Text = "Tìm kiếm khách hàng";
-            }
-            else
-            {
-                cbKhachHang.Text = cbKhachHang.SelectedText;
+                dgvAllCustomer.Rows.Add(new string[] {
+                    kh.MaKH,
+                    kh.TenKH,
+                    kh.GioiTinh,
+                    kh.Email,
+                    kh.SĐT,
+                    kh.DiaChi,
+                    kh.MaLoaiTVien
+                });
             }
         }
     }

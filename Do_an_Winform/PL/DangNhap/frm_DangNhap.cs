@@ -88,5 +88,10 @@ namespace Do_an_Winform.PL.DangNhap
                 txtPassword._TextBox.PasswordChar = '*';
             }
         }
+
+        private void frm_DangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

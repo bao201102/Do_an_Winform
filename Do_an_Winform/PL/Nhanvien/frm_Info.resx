@@ -126,11 +126,11 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAoCAYAAAAYEYTzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
         eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
-        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIK8gPM/z
-        3YeZ3bndgJMDgG2MPyiB6n34dP1xAAAAAElFTkSuQmCC
+        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIA5BWE
+        53m++zCzO7cbcHIAsI3xB4uv7Tfybxo4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
@@ -141,20 +141,20 @@
   </data>
   <data name="txtGender.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAoCAYAAAAYEYTzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
         eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
-        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIK8gPM/z
-        3YeZ3bndgJMDgG2MPyiB6n34dP1xAAAAAElFTkSuQmCC
+        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIA5BWE
+        53m++zCzO7cbcHIAsI3xB4uv7Tfybxo4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="txtPhone.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAoCAYAAAAYEYTzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
         eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
-        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIK8gPM/z
-        3YeZ3bndgJMDgG2MPyiB6n34dP1xAAAAAElFTkSuQmCC
+        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIA5BWE
+        53m++zCzO7cbcHIAsI3xB4uv7Tfybxo4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
@@ -162,11 +162,11 @@
   </data>
   <data name="txtEmail.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAoCAYAAAAYEYTzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
         eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
-        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIK8gPM/z
-        3YeZ3bndgJMDgG2MPyiB6n34dP1xAAAAAElFTkSuQmCC
+        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIA5BWE
+        53m++zCzO7cbcHIAsI3xB4uv7Tfybxo4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuLabel6.BaseStylesheet" xml:space="preserve">
@@ -174,11 +174,11 @@
   </data>
   <data name="txtAddress.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAoCAYAAAAYEYTzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
         eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
-        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIK8gPM/z
-        3YeZ3bndgJMDgG2MPyiB6n34dP1xAAAAAElFTkSuQmCC
+        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIA5BWE
+        53m++zCzO7cbcHIAsI3xB4uv7Tfybxo4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuLabel7.BaseStylesheet" xml:space="preserve">
@@ -186,11 +186,11 @@
   </data>
   <data name="txtEmpType.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAoCAYAAAAYEYTzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVHhe7dRRCQMxAETB+FeVIzIqowJaAuHBacgM7M8K
         eAPgZa31mXP+zOzO7QacHIyxD+BeuwEnB4IAtxMEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQ
-        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIK8gPM/z
-        3YeZ3bndgJMDgG2MPyiB6n34dP1xAAAAAElFTkSuQmCC
+        QQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIARBCACAIQQQAiCEAEAYggABEEIIIA5BWE
+        53m++zCzO7cbcHIAsI3xB4uv7Tfybxo4AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

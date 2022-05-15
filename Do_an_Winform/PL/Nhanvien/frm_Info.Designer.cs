@@ -119,7 +119,7 @@
             this.txtName.BorderThickness = 1;
             this.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtName.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.DefaultText = "";
             this.txtName.FillColor = System.Drawing.Color.White;
             this.txtName.HideSelection = true;
@@ -165,7 +165,7 @@
             this.txtName.SelectionLength = 0;
             this.txtName.SelectionStart = 0;
             this.txtName.ShortcutsEnabled = true;
-            this.txtName.Size = new System.Drawing.Size(260, 39);
+            this.txtName.Size = new System.Drawing.Size(260, 40);
             this.txtName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtName.TabIndex = 2;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -226,7 +226,7 @@
             this.txtGender.BorderThickness = 1;
             this.txtGender.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtGender.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGender.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtGender.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.DefaultText = "";
             this.txtGender.FillColor = System.Drawing.Color.White;
             this.txtGender.HideSelection = true;
@@ -272,7 +272,7 @@
             this.txtGender.SelectionLength = 0;
             this.txtGender.SelectionStart = 0;
             this.txtGender.ShortcutsEnabled = true;
-            this.txtGender.Size = new System.Drawing.Size(260, 39);
+            this.txtGender.Size = new System.Drawing.Size(260, 40);
             this.txtGender.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtGender.TabIndex = 6;
             this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -301,7 +301,7 @@
             this.txtPhone.BorderThickness = 1;
             this.txtPhone.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtPhone.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.DefaultText = "";
             this.txtPhone.FillColor = System.Drawing.Color.White;
             this.txtPhone.HideSelection = true;
@@ -347,7 +347,7 @@
             this.txtPhone.SelectionLength = 0;
             this.txtPhone.SelectionStart = 0;
             this.txtPhone.ShortcutsEnabled = true;
-            this.txtPhone.Size = new System.Drawing.Size(260, 39);
+            this.txtPhone.Size = new System.Drawing.Size(260, 40);
             this.txtPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPhone.TabIndex = 7;
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -392,7 +392,7 @@
             this.txtEmail.BorderThickness = 1;
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtEmail.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.DefaultText = "";
             this.txtEmail.FillColor = System.Drawing.Color.White;
             this.txtEmail.HideSelection = true;
@@ -438,7 +438,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(260, 39);
+            this.txtEmail.Size = new System.Drawing.Size(260, 40);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEmail.TabIndex = 9;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -483,7 +483,7 @@
             this.txtAddress.BorderThickness = 1;
             this.txtAddress.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtAddress.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.DefaultText = "";
             this.txtAddress.FillColor = System.Drawing.Color.White;
             this.txtAddress.HideSelection = true;
@@ -529,7 +529,7 @@
             this.txtAddress.SelectionLength = 0;
             this.txtAddress.SelectionStart = 0;
             this.txtAddress.ShortcutsEnabled = true;
-            this.txtAddress.Size = new System.Drawing.Size(260, 39);
+            this.txtAddress.Size = new System.Drawing.Size(260, 40);
             this.txtAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAddress.TabIndex = 11;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -574,7 +574,7 @@
             this.txtEmpType.BorderThickness = 1;
             this.txtEmpType.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmpType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmpType.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtEmpType.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmpType.DefaultText = "";
             this.txtEmpType.FillColor = System.Drawing.Color.White;
             this.txtEmpType.HideSelection = true;
@@ -620,7 +620,7 @@
             this.txtEmpType.SelectionLength = 0;
             this.txtEmpType.SelectionStart = 0;
             this.txtEmpType.ShortcutsEnabled = true;
-            this.txtEmpType.Size = new System.Drawing.Size(260, 39);
+            this.txtEmpType.Size = new System.Drawing.Size(260, 40);
             this.txtEmpType.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEmpType.TabIndex = 13;
             this.txtEmpType.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
