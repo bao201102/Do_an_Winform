@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Do_an_Winform
+namespace Do_an_Winform.PL.Thukho
 {
     public partial class frm_Nhap : Form
     {
         public frm_Nhap()
         {
             InitializeComponent();
-            bunifuCustomDataGrid1.EditMode = DataGridViewEditMode.EditOnEnter;
         }
     }
 }
