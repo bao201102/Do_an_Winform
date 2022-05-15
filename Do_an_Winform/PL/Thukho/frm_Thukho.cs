@@ -117,16 +117,6 @@ namespace Do_an_Winform
             childForm.Show();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frm_Nhap());
-        }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frm_Xuat());
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             MessBox messBox = new MessBox();
@@ -140,9 +130,19 @@ namespace Do_an_Winform
             }
         }
 
-        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        private void btnStock_Click(object sender, EventArgs e)
         {
+            openChildForm(new frm_TonKho());
+        }
 
+        private void btnNhap_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_Nhap());
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_Xuat());
         }
     }
 }

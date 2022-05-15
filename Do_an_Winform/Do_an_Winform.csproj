@@ -386,6 +386,9 @@
     <EmbeddedResource Include="PL\Quanly\frm_Quanly.resx">
       <DependentUpon>frm_Quanly.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Thukho\frm_TonKho.resx">
+      <DependentUpon>frm_TonKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_Xuat.resx">
       <DependentUpon>frm_Xuat.cs</DependentUpon>
     </EmbeddedResource>
@@ -445,6 +448,7 @@
     <None Include="Resources\printer.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\delete.png" />
+    <None Include="Resources\search.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
