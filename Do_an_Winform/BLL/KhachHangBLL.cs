@@ -14,5 +14,9 @@ namespace Do_an_Winform.BLL
         {
             return KhachHangDAL.GetAllCustomer();
         }
+        public static List<KhachHangDTO> GetCusByTxtNameChanged(string txtNameChanged)
+        {
+            return KhachHangDAL.GetCusByTxtNameChanged(txtNameChanged);
+        }
     }
 }

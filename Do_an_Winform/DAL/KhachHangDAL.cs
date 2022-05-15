@@ -28,5 +28,25 @@ namespace Do_an_Winform.DAL
             }
             return khachHangDTOs;
         }
+        public static List<KhachHangDTO> GetCusByTxtNameChanged(string txtNameChanged)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var customers = from kh in entities.KhachHangs
+                            where kh.TenKH.Contains(txtNameChanged)
+                            select kh;
+            List<KhachHangDTO> khachHangDTOs = new List<KhachHangDTO>();
+            foreach (KhachHang ctm in customers)
+            {
+                if (ctm.TrangThai == "1")
+                {
+                    var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHang, KhachHangDTO>());
+                    var mapper = new Mapper(config);
+                    KhachHangDTO khachhang = mapper.Map<KhachHangDTO>(ctm);
+                    khachHangDTOs.Add(khachhang);
+                }
+            }
+            return khachHangDTOs;
+        }
+        
     }
 }
