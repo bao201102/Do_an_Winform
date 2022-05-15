@@ -57,6 +57,8 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewXuat)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -97,6 +99,9 @@ namespace Do_an_Winform.PL.Thukho
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewXuat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridviewXuat.ColumnHeadersHeight = 40;
+            this.gridviewXuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
             this.gridviewXuat.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.gridviewXuat.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.gridviewXuat.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -104,7 +109,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewXuat.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridviewXuat.CurrentTheme.BackColor = System.Drawing.Color.White;
             this.gridviewXuat.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gridviewXuat.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.gridviewXuat.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridviewXuat.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.gridviewXuat.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.gridviewXuat.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
@@ -126,7 +131,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewXuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridviewXuat.EnableHeadersVisualStyles = false;
             this.gridviewXuat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gridviewXuat.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.gridviewXuat.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.gridviewXuat.HeaderBgColor = System.Drawing.Color.Empty;
             this.gridviewXuat.HeaderForeColor = System.Drawing.Color.White;
             this.gridviewXuat.Location = new System.Drawing.Point(0, 0);
@@ -711,6 +716,16 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuButton3.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton3.UseDefaultRadiusAndThickness = true;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            // 
             // frm_Xuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -763,5 +778,7 @@ namespace Do_an_Winform.PL.Thukho
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

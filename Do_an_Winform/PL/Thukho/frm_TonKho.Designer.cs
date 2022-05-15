@@ -242,7 +242,6 @@ namespace Do_an_Winform.PL.Thukho
             // 
             this.gridviewStock.AllowCustomTheming = false;
             this.gridviewStock.AllowUserToAddRows = false;
-            this.gridviewStock.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.gridviewStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -296,7 +295,6 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewStock.HeaderForeColor = System.Drawing.Color.White;
             this.gridviewStock.Location = new System.Drawing.Point(12, 86);
             this.gridviewStock.Name = "gridviewStock";
-            this.gridviewStock.ReadOnly = true;
             this.gridviewStock.RowHeadersVisible = false;
             this.gridviewStock.RowTemplate.Height = 40;
             this.gridviewStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

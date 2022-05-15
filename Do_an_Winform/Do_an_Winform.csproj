@@ -188,6 +188,7 @@
     <Compile Include="BLL\KhachHangBLL.cs" />
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
+    <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
     <Compile Include="CHDT_Entity.Context.cs">
       <AutoGen>True</AutoGen>
@@ -216,10 +217,13 @@
     <Compile Include="DAL\KhachHangDAL.cs" />
     <Compile Include="DAL\LoaiNhanVienDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DTO\KhachHangDTO.cs" />
     <Compile Include="DTO\LoaiNhanVienDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\NhaSanXuatDTO.cs" />
+    <Compile Include="DTO\SanPhamDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
     <Compile Include="HoaDon.cs">
       <DependentUpon>CHDT_Entity.tt</DependentUpon>
