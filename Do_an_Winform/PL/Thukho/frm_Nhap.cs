@@ -15,6 +15,7 @@ namespace Do_an_Winform
         public frm_Nhap()
         {
             InitializeComponent();
+            bunifuCustomDataGrid1.EditMode = DataGridViewEditMode.EditOnEnter;
         }
     }
 }
