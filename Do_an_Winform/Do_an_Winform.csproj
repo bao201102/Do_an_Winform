@@ -323,6 +323,12 @@
     <Compile Include="PL\Quanly\frm_Quanly.Designer.cs">
       <DependentUpon>frm_Quanly.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Thukho\frm_TonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Thukho\frm_TonKho.Designer.cs">
+      <DependentUpon>frm_TonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Thukho\frm_Xuat.cs">
       <SubType>Form</SubType>
     </Compile>
