@@ -270,7 +270,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewStock.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridviewStock.CurrentTheme.BackColor = System.Drawing.Color.White;
             this.gridviewStock.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gridviewStock.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.gridviewStock.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridviewStock.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.gridviewStock.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.gridviewStock.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
@@ -291,7 +291,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewStock.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewStock.EnableHeadersVisualStyles = false;
             this.gridviewStock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gridviewStock.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.gridviewStock.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.gridviewStock.HeaderBgColor = System.Drawing.Color.Empty;
             this.gridviewStock.HeaderForeColor = System.Drawing.Color.White;
             this.gridviewStock.Location = new System.Drawing.Point(12, 86);
@@ -332,6 +332,7 @@ namespace Do_an_Winform.PL.Thukho
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_TonKho";
             this.Text = "frm_TonKho";
+            this.Load += new System.EventHandler(this.frm_TonKho_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewStock)).EndInit();
