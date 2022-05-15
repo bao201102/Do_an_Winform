@@ -20,7 +20,7 @@ namespace Do_an_Winform.DAL
                       
             List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
             foreach (SanPham item in emp)
-            {
+    {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
                 var mapper = new Mapper(config);
                 SanPhamDTO sanPham = mapper.Map<SanPhamDTO>(item);

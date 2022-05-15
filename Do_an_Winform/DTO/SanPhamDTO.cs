@@ -69,7 +69,7 @@ namespace Do_an_Winform.DTO
 		}
 
 		public SanPhamDTO()
-        {
+    {
 			this.MaSP = "";
 			this.TenSP = "";
 			this.SoLuong = 0;
@@ -78,5 +78,5 @@ namespace Do_an_Winform.DTO
 			this.MaNhaSX = "";
 			this.TrangThai = "";
 		}
-	}
+    }
 }
