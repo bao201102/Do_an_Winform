@@ -33,6 +33,7 @@ namespace Do_an_Winform
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Thukho));
             this.Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sidemenu = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.functionPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -51,7 +52,6 @@ namespace Do_an_Winform
             this.btnMaximize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sidemenu.SuspendLayout();
             this.functionPanel.SuspendLayout();
             this.subuserPanel.SuspendLayout();
@@ -84,6 +84,11 @@ namespace Do_an_Winform
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.Transition.DefaultAnimation = animation1;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // sidemenu
             // 
@@ -361,6 +366,7 @@ namespace Do_an_Winform
             this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton8.Textcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton8.Click += new System.EventHandler(this.bunifuFlatButton8_Click);
             // 
             // userPanel
             // 
@@ -532,11 +538,6 @@ namespace Do_an_Winform
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // frm_Thukho
             // 

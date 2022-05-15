@@ -2,6 +2,7 @@
 using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
+using Do_an_Winform.PL.Nhanvien;
 using Do_an_Winform.PL.Thukho;
 using System;
 using System.Collections.Generic;
@@ -137,6 +138,11 @@ namespace Do_an_Winform
                 frm_DangNhap frmLogin = new frm_DangNhap();
                 frmLogin.Show();
             }
+        }
+
+        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
