@@ -148,6 +148,7 @@ namespace Do_an_Winform.PL.Thukho
             // 
             this.gridviewStock.AllowCustomTheming = false;
             this.gridviewStock.AllowUserToAddRows = false;
+            this.gridviewStock.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.gridviewStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -161,7 +162,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -188,7 +189,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewStock.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -201,6 +202,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewStock.HeaderForeColor = System.Drawing.Color.White;
             this.gridviewStock.Location = new System.Drawing.Point(12, 86);
             this.gridviewStock.Name = "gridviewStock";
+            this.gridviewStock.ReadOnly = true;
             this.gridviewStock.RowHeadersVisible = false;
             this.gridviewStock.RowTemplate.Height = 40;
             this.gridviewStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

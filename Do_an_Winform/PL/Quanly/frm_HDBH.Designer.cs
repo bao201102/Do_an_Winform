@@ -30,9 +30,9 @@ namespace Do_an_Winform.DTO
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_HDBH));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelhead = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -70,9 +70,10 @@ namespace Do_an_Winform.DTO
             this.panelhead.Controls.Add(this.bunifuPanel3);
             this.panelhead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelhead.Location = new System.Drawing.Point(0, 0);
+            this.panelhead.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelhead.Name = "panelhead";
             this.panelhead.ShowBorders = true;
-            this.panelhead.Size = new System.Drawing.Size(1459, 139);
+            this.panelhead.Size = new System.Drawing.Size(1094, 113);
             this.panelhead.TabIndex = 0;
             // 
             // bunifuPanel3
@@ -88,9 +89,10 @@ namespace Do_an_Winform.DTO
             this.bunifuPanel3.Controls.Add(this.lblHDBH);
             this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel3.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(1459, 94);
+            this.bunifuPanel3.Size = new System.Drawing.Size(1094, 76);
             this.bunifuPanel3.TabIndex = 65;
             // 
             // bunifuGradientPanel2
@@ -108,18 +110,20 @@ namespace Do_an_Winform.DTO
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(982, 0);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(736, 0);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(477, 94);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(358, 76);
             this.bunifuGradientPanel2.TabIndex = 67;
             // 
             // maskedtxtEndDay
             // 
-            this.maskedtxtEndDay.Location = new System.Drawing.Point(156, 43);
+            this.maskedtxtEndDay.Location = new System.Drawing.Point(117, 35);
+            this.maskedtxtEndDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedtxtEndDay.Mask = "00/00/0000 90:00";
             this.maskedtxtEndDay.Name = "maskedtxtEndDay";
-            this.maskedtxtEndDay.Size = new System.Drawing.Size(152, 22);
+            this.maskedtxtEndDay.Size = new System.Drawing.Size(115, 20);
             this.maskedtxtEndDay.TabIndex = 3;
             this.maskedtxtEndDay.ValidatingType = typeof(System.DateTime);
             // 
@@ -141,20 +145,20 @@ namespace Do_an_Winform.DTO
             this.btnPrint.IdleFillColor = System.Drawing.Color.White;
             this.btnPrint.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnPrint.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnPrint.Location = new System.Drawing.Point(345, 39);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Location = new System.Drawing.Point(259, 32);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(110, 37);
+            this.btnPrint.Size = new System.Drawing.Size(82, 30);
             this.btnPrint.TabIndex = 64;
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // maskedtxtStartDay
             // 
-            this.maskedtxtStartDay.Location = new System.Drawing.Point(156, 12);
+            this.maskedtxtStartDay.Location = new System.Drawing.Point(117, 10);
+            this.maskedtxtStartDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedtxtStartDay.Mask = "00/00/0000 90:00";
             this.maskedtxtStartDay.Name = "maskedtxtStartDay";
-            this.maskedtxtStartDay.Size = new System.Drawing.Size(152, 22);
+            this.maskedtxtStartDay.Size = new System.Drawing.Size(115, 20);
             this.maskedtxtStartDay.TabIndex = 1;
             this.maskedtxtStartDay.ValidatingType = typeof(System.DateTime);
             // 
@@ -176,28 +180,29 @@ namespace Do_an_Winform.DTO
             this.btnView.IdleFillColor = System.Drawing.Color.White;
             this.btnView.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnView.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnView.Location = new System.Drawing.Point(345, 9);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView.Location = new System.Drawing.Point(259, 7);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(110, 37);
+            this.btnView.Size = new System.Drawing.Size(82, 30);
             this.btnView.TabIndex = 63;
             this.btnView.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblStartDay
             // 
             this.lblStartDay.AutoSize = true;
-            this.lblStartDay.Location = new System.Drawing.Point(16, 12);
+            this.lblStartDay.Location = new System.Drawing.Point(12, 10);
+            this.lblStartDay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStartDay.Name = "lblStartDay";
-            this.lblStartDay.Size = new System.Drawing.Size(97, 17);
+            this.lblStartDay.Size = new System.Drawing.Size(75, 13);
             this.lblStartDay.TabIndex = 0;
             this.lblStartDay.Text = "Ngày bắt đầu:";
             // 
             // lblEndDay
             // 
             this.lblEndDay.AutoSize = true;
-            this.lblEndDay.Location = new System.Drawing.Point(16, 43);
+            this.lblEndDay.Location = new System.Drawing.Point(12, 35);
+            this.lblEndDay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEndDay.Name = "lblEndDay";
-            this.lblEndDay.Size = new System.Drawing.Size(103, 17);
+            this.lblEndDay.Size = new System.Drawing.Size(80, 13);
             this.lblEndDay.TabIndex = 2;
             this.lblEndDay.Text = "Ngày kết thúc: ";
             // 
@@ -213,10 +218,11 @@ namespace Do_an_Winform.DTO
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Controls.Add(this.btnSearch);
             this.bunifuPanel2.Controls.Add(this.txtSearch);
-            this.bunifuPanel2.Location = new System.Drawing.Point(217, 12);
+            this.bunifuPanel2.Location = new System.Drawing.Point(163, 10);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(681, 34);
+            this.bunifuPanel2.Size = new System.Drawing.Size(511, 28);
             this.bunifuPanel2.TabIndex = 66;
             // 
             // btnSearch
@@ -226,9 +232,10 @@ namespace Do_an_Winform.DTO
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageActive = null;
-            this.btnSearch.Location = new System.Drawing.Point(654, 0);
+            this.btnSearch.Location = new System.Drawing.Point(490, 0);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(27, 34);
+            this.btnSearch.Size = new System.Drawing.Size(20, 28);
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSearch.TabIndex = 54;
             this.btnSearch.TabStop = false;
@@ -241,9 +248,10 @@ namespace Do_an_Winform.DTO
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSearch.ForeColor = System.Drawing.Color.Silver;
             this.txtSearch.Location = new System.Drawing.Point(0, 0);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(681, 34);
+            this.txtSearch.Size = new System.Drawing.Size(511, 28);
             this.txtSearch.TabIndex = 40;
             this.txtSearch.Text = "Tìm kiếm mã hóa đơn";
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
@@ -253,11 +261,12 @@ namespace Do_an_Winform.DTO
             // 
             this.lblHDBH.AutoSize = true;
             this.lblHDBH.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblHDBH.Font = new System.Drawing.Font("UTM Seagull", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHDBH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHDBH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.lblHDBH.Location = new System.Drawing.Point(0, 0);
+            this.lblHDBH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHDBH.Name = "lblHDBH";
-            this.lblHDBH.Size = new System.Drawing.Size(197, 28);
+            this.lblHDBH.Size = new System.Drawing.Size(165, 20);
             this.lblHDBH.TabIndex = 39;
             this.lblHDBH.Text = "Hóa Đơn Bán Hàng";
             this.lblHDBH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,30 +281,31 @@ namespace Do_an_Winform.DTO
             this.panelcontent.BorderThickness = 1;
             this.panelcontent.Controls.Add(this.gvHDBH);
             this.panelcontent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelcontent.Location = new System.Drawing.Point(0, 139);
+            this.panelcontent.Location = new System.Drawing.Point(0, 113);
+            this.panelcontent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelcontent.Name = "panelcontent";
             this.panelcontent.ShowBorders = true;
-            this.panelcontent.Size = new System.Drawing.Size(1459, 715);
+            this.panelcontent.Size = new System.Drawing.Size(1094, 581);
             this.panelcontent.TabIndex = 1;
             // 
             // gvHDBH
             // 
             this.gvHDBH.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.gvHDBH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.gvHDBH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gvHDBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvHDBH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gvHDBH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gvHDBH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvHDBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvHDBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gvHDBH.ColumnHeadersHeight = 40;
             this.gvHDBH.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.gvHDBH.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -315,14 +325,14 @@ namespace Do_an_Winform.DTO
             this.gvHDBH.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gvHDBH.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.gvHDBH.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvHDBH.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvHDBH.DefaultCellStyle = dataGridViewCellStyle6;
             this.gvHDBH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvHDBH.EnableHeadersVisualStyles = false;
             this.gvHDBH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
@@ -330,12 +340,13 @@ namespace Do_an_Winform.DTO
             this.gvHDBH.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvHDBH.HeaderForeColor = System.Drawing.Color.White;
             this.gvHDBH.Location = new System.Drawing.Point(0, 0);
+            this.gvHDBH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gvHDBH.Name = "gvHDBH";
             this.gvHDBH.RowHeadersVisible = false;
             this.gvHDBH.RowHeadersWidth = 51;
             this.gvHDBH.RowTemplate.Height = 40;
             this.gvHDBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvHDBH.Size = new System.Drawing.Size(1459, 715);
+            this.gvHDBH.Size = new System.Drawing.Size(1094, 581);
             this.gvHDBH.TabIndex = 0;
             this.gvHDBH.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -352,14 +363,16 @@ namespace Do_an_Winform.DTO
             this.printPreviewDialogHDBH.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialogHDBH.Icon")));
             this.printPreviewDialogHDBH.Name = "printPreviewDialogHDBH";
             this.printPreviewDialogHDBH.Visible = false;
+            this.printPreviewDialogHDBH.Load += new System.EventHandler(this.printPreviewDialogHDBH_Load);
             // 
             // frm_HDBH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1459, 854);
+            this.ClientSize = new System.Drawing.Size(1094, 694);
             this.Controls.Add(this.panelcontent);
             this.Controls.Add(this.panelhead);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_HDBH";
             this.Text = "frm_HDBH";
             this.Load += new System.EventHandler(this.frm_HDBH_Load);

@@ -138,7 +138,7 @@ namespace Do_an_Winform
 
         private void btnNhap_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_Nhap());
+            openChildForm(new frm_DanhSachPN(taikhoan));
         }
 
         private void btnXuat_Click(object sender, EventArgs e)

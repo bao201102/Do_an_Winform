@@ -87,5 +87,10 @@ namespace Do_an_Winform.DTO
         {
             e.Graphics.DrawImage(bmp, 0, 0);
         }
+
+        private void printPreviewDialogHDBH_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

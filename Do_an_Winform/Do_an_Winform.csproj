@@ -349,6 +349,12 @@
     <Compile Include="PL\Quanly\frm_TKDT.Designer.cs">
       <DependentUpon>frm_TKDT.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Thukho\frm_DanhSachPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Thukho\frm_DanhSachPN.Designer.cs">
+      <DependentUpon>frm_DanhSachPN.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Thukho\frm_Nhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,6 +437,9 @@
     <EmbeddedResource Include="PL\Quanly\frm_TKDT.resx">
       <DependentUpon>frm_TKDT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Thukho\frm_DanhSachPN.resx">
+      <DependentUpon>frm_DanhSachPN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_Nhap.resx">
       <DependentUpon>frm_Nhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -509,6 +518,7 @@
     <None Include="Resources\add.png" />
     <None Include="Resources\delete.png" />
     <None Include="Resources\search.png" />
+    <None Include="Resources\plus.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

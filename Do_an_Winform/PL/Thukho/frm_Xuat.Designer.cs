@@ -246,13 +246,13 @@ namespace Do_an_Winform.PL.Thukho
             this.cbbTenSP.ItemBackColor = System.Drawing.Color.White;
             this.cbbTenSP.ItemBorderColor = System.Drawing.Color.White;
             this.cbbTenSP.ItemForeColor = System.Drawing.Color.Black;
-            this.cbbTenSP.ItemHeight = 26;
+            this.cbbTenSP.ItemHeight = 40;
             this.cbbTenSP.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cbbTenSP.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cbbTenSP.ItemTopMargin = 3;
             this.cbbTenSP.Location = new System.Drawing.Point(149, 49);
             this.cbbTenSP.Name = "cbbTenSP";
-            this.cbbTenSP.Size = new System.Drawing.Size(237, 32);
+            this.cbbTenSP.Size = new System.Drawing.Size(237, 46);
             this.cbbTenSP.Sorted = true;
             this.cbbTenSP.TabIndex = 16;
             this.cbbTenSP.Text = null;
