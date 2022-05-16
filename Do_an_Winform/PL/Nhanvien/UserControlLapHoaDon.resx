@@ -133,6 +133,19 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuThinButton22.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADMAAAAcCAYAAADMW4fJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF7SURBVFhH7ZddS8MwFIb9/79Euq2KXigofoCCXogXOjuH
+        25jiR9e6rrasWrse82Zt2NrMC4Ut0b7wUihpch7Sk3OyRn9IFYyqqmBU1f+BSdKU+qOIju992u14tNFy
+        ab05WKqxJtY+7I2o60UUJ2kWXVkLYZ6CDzLZRA0AXNvShZbtuuVQw3LpbjjOopxXCQbkJ2wnzJYjnVAF
+        I7b9rkfR5ySLeqo5GIBst10ymuqCzHqr/UphnGTRF2CwI7qA5EY+5RIw0xzRCwRGHl3ZIWfgMGePbzzZ
+        ZYN1ME68c8bAYfAChMVButjIngJGleP3NxYwNY13JjeHwRGnY/LnNlkh3WN1h8NAly+BlnmDfDnq+5xB
+        wKAP2+kMpR+o7M1bR/RrAgby35OVNJM/NcqJHcZZ9AUYyB3HvKWp3cgnUMEGiw07MgsClWAg/HIXz4F6
+        hZSVD3TxBz1PehWQwuQC+emDz9ru1R8MdWvA71W4Xy3StzC6qYJRVRWMmiL6Apgkga4iDK3cAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
   <data name="btnSaveAndPrint.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGYAAAAsCAYAAACXHM1oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

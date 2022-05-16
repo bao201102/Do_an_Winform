@@ -10,6 +10,10 @@ namespace Do_an_Winform.BLL
 {
     class SanPhamBLL
     {
+        public static List<SanPhamDTO> GetAllProduct()
+        {
+            return SanPhamDAL.GetAllProduct();
+        }
         public static List<object> GetProduct()
         {
             return SanPhamDAL.GetProduct();
@@ -23,6 +27,10 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetProByTxtNameChanged(txtNameChanged);
         }
-        
+        public static SanPhamDTO GetProductById(string masp)
+        {
+            return SanPhamDAL.GetProductById(masp);
+        }
+
     }
 }

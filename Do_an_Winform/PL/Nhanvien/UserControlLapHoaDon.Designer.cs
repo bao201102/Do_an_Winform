@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlLapHoaDon));
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +41,9 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnSaveAndPrint = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -61,44 +64,42 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLoaiSP = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtThuongHieu = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.btnAdd = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnDelete = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSearch = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnSaveAndPrint = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.cbMaSP = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCustomDataGrid1
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuCustomDataGrid1.ColumnHeadersHeight = 40;
             this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -106,14 +107,14 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Leelawadee UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuCustomDataGrid1.DoubleBuffered = true;
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
             this.bunifuCustomDataGrid1.GridColor = System.Drawing.Color.WhiteSmoke;
@@ -175,6 +176,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.bunifuThinButton22);
             this.panel1.Controls.Add(this.btnSaveAndPrint);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label19);
@@ -202,6 +204,81 @@
             this.panel1.Size = new System.Drawing.Size(320, 489);
             this.panel1.TabIndex = 16;
             // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.Black;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Tìm";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.Black;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Black;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.bunifuThinButton22.Location = new System.Drawing.Point(262, 151);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(51, 28);
+            this.bunifuThinButton22.TabIndex = 35;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnSaveAndPrint
+            // 
+            this.btnSaveAndPrint.ActiveBorderThickness = 1;
+            this.btnSaveAndPrint.ActiveCornerRadius = 20;
+            this.btnSaveAndPrint.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSaveAndPrint.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnSaveAndPrint.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSaveAndPrint.BackColor = System.Drawing.Color.White;
+            this.btnSaveAndPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveAndPrint.BackgroundImage")));
+            this.btnSaveAndPrint.ButtonText = "Lưu và in";
+            this.btnSaveAndPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveAndPrint.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAndPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveAndPrint.IdleBorderThickness = 1;
+            this.btnSaveAndPrint.IdleCornerRadius = 20;
+            this.btnSaveAndPrint.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSaveAndPrint.IdleForecolor = System.Drawing.Color.Black;
+            this.btnSaveAndPrint.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSaveAndPrint.Location = new System.Drawing.Point(211, 419);
+            this.btnSaveAndPrint.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSaveAndPrint.Name = "btnSaveAndPrint";
+            this.btnSaveAndPrint.Size = new System.Drawing.Size(102, 44);
+            this.btnSaveAndPrint.TabIndex = 36;
+            this.btnSaveAndPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnSave
+            // 
+            this.btnSave.ActiveBorderThickness = 1;
+            this.btnSave.ActiveCornerRadius = 20;
+            this.btnSave.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSave.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnSave.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSave.BackColor = System.Drawing.Color.White;
+            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
+            this.btnSave.ButtonText = "Lưu tạm";
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.IdleBorderThickness = 1;
+            this.btnSave.IdleCornerRadius = 20;
+            this.btnSave.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSave.IdleForecolor = System.Drawing.Color.Black;
+            this.btnSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSave.Location = new System.Drawing.Point(15, 419);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(102, 44);
+            this.btnSave.TabIndex = 35;
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -223,7 +300,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(12, 230);
+            this.label18.Location = new System.Drawing.Point(16, 230);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(89, 13);
             this.label18.TabIndex = 18;
@@ -240,7 +317,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(15, 197);
+            this.label17.Location = new System.Drawing.Point(15, 201);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(48, 13);
             this.label17.TabIndex = 16;
@@ -250,7 +327,7 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(114, 159);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(199, 20);
+            this.textBox7.Size = new System.Drawing.Size(141, 20);
             this.textBox7.TabIndex = 15;
             // 
             // label16
@@ -395,13 +472,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nhân viên:";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(133, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 17;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -412,12 +482,12 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Tên SP:";
             // 
-            // textBox2
+            // txtTenSP
             // 
-            this.textBox2.Location = new System.Drawing.Point(568, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 20);
-            this.textBox2.TabIndex = 20;
+            this.txtTenSP.Location = new System.Drawing.Point(568, 98);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(146, 20);
+            this.txtTenSP.TabIndex = 20;
             // 
             // label7
             // 
@@ -429,12 +499,12 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "Đơn giá:";
             // 
-            // textBox3
+            // txtDonGia
             // 
-            this.textBox3.Location = new System.Drawing.Point(133, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 20);
-            this.textBox3.TabIndex = 22;
+            this.txtDonGia.Location = new System.Drawing.Point(133, 141);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.Size = new System.Drawing.Size(139, 20);
+            this.txtDonGia.TabIndex = 22;
             // 
             // label8
             // 
@@ -446,12 +516,12 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "Loại sản phẩm:";
             // 
-            // textBox4
+            // txtLoaiSP
             // 
-            this.textBox4.Location = new System.Drawing.Point(568, 141);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(147, 20);
-            this.textBox4.TabIndex = 24;
+            this.txtLoaiSP.Location = new System.Drawing.Point(568, 141);
+            this.txtLoaiSP.Name = "txtLoaiSP";
+            this.txtLoaiSP.Size = new System.Drawing.Size(147, 20);
+            this.txtLoaiSP.TabIndex = 24;
             // 
             // label9
             // 
@@ -463,13 +533,13 @@
             this.label9.TabIndex = 25;
             this.label9.Text = "Thương hiệu:";
             // 
-            // textBox5
+            // txtThuongHieu
             // 
-            this.textBox5.Location = new System.Drawing.Point(133, 185);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 20);
-            this.textBox5.TabIndex = 26;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtThuongHieu.Location = new System.Drawing.Point(133, 185);
+            this.txtThuongHieu.Name = "txtThuongHieu";
+            this.txtThuongHieu.Size = new System.Drawing.Size(139, 20);
+            this.txtThuongHieu.TabIndex = 26;
+            this.txtThuongHieu.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label10
             // 
@@ -481,12 +551,12 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "Số lượng:";
             // 
-            // textBox6
+            // txtSoLuong
             // 
-            this.textBox6.Location = new System.Drawing.Point(568, 185);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(147, 20);
-            this.textBox6.TabIndex = 28;
+            this.txtSoLuong.Location = new System.Drawing.Point(568, 185);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(147, 20);
+            this.txtSoLuong.TabIndex = 28;
             // 
             // btnAdd
             // 
@@ -562,6 +632,7 @@
             this.btnSearch.Size = new System.Drawing.Size(74, 34);
             this.btnSearch.TabIndex = 33;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // bunifuThinButton21
             // 
@@ -588,76 +659,36 @@
             this.bunifuThinButton21.TabIndex = 34;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSave
+            // cbMaSP
             // 
-            this.btnSave.ActiveBorderThickness = 1;
-            this.btnSave.ActiveCornerRadius = 20;
-            this.btnSave.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSave.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnSave.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSave.BackColor = System.Drawing.Color.White;
-            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
-            this.btnSave.ButtonText = "Lưu tạm";
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.IdleBorderThickness = 1;
-            this.btnSave.IdleCornerRadius = 20;
-            this.btnSave.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSave.IdleForecolor = System.Drawing.Color.Black;
-            this.btnSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSave.Location = new System.Drawing.Point(15, 419);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(102, 44);
-            this.btnSave.TabIndex = 35;
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSaveAndPrint
-            // 
-            this.btnSaveAndPrint.ActiveBorderThickness = 1;
-            this.btnSaveAndPrint.ActiveCornerRadius = 20;
-            this.btnSaveAndPrint.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSaveAndPrint.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnSaveAndPrint.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSaveAndPrint.BackColor = System.Drawing.Color.White;
-            this.btnSaveAndPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveAndPrint.BackgroundImage")));
-            this.btnSaveAndPrint.ButtonText = "Lưu và in";
-            this.btnSaveAndPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveAndPrint.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAndPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveAndPrint.IdleBorderThickness = 1;
-            this.btnSaveAndPrint.IdleCornerRadius = 20;
-            this.btnSaveAndPrint.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSaveAndPrint.IdleForecolor = System.Drawing.Color.Black;
-            this.btnSaveAndPrint.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSaveAndPrint.Location = new System.Drawing.Point(211, 419);
-            this.btnSaveAndPrint.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSaveAndPrint.Name = "btnSaveAndPrint";
-            this.btnSaveAndPrint.Size = new System.Drawing.Size(102, 44);
-            this.btnSaveAndPrint.TabIndex = 36;
-            this.btnSaveAndPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbMaSP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbMaSP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbMaSP.FormattingEnabled = true;
+            this.cbMaSP.Location = new System.Drawing.Point(133, 95);
+            this.cbMaSP.Name = "cbMaSP";
+            this.cbMaSP.Size = new System.Drawing.Size(139, 21);
+            this.cbMaSP.TabIndex = 35;
             // 
             // UserControlLapHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cbMaSP);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtThuongHieu);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtLoaiSP);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtDonGia);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTenSP);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuCustomDataGrid1);
@@ -684,7 +715,6 @@
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblNgayBan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTenNV;
@@ -694,15 +724,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtLoaiSP;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtThuongHieu;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -721,5 +751,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSaveAndPrint;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSave;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private System.Windows.Forms.ComboBox cbMaSP;
     }
 }

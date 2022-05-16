@@ -15,6 +15,7 @@ namespace Do_an_Winform.PL.Nhanvien
     public partial class UserControlSanPham : UserControl
     {
         List<SanPhamDTO> listSanPham = new List<SanPhamDTO>();
+        List<object> listSP = new List<object>();
         NhaSanXuatDTO nhasx = new NhaSanXuatDTO();
         LoaiSanPhamDTO loaisp = new LoaiSanPhamDTO();
         public UserControlSanPham()
@@ -26,23 +27,17 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void UserControlSanPham_Load(object sender, EventArgs e)
         {
-            listSanPham = SanPhamBLL.GetProduct();
-            foreach(SanPhamDTO sp in listSanPham)
+            listSanPham = SanPhamBLL.GetProByTxtNameChanged(cbTenSP.Text);
+            foreach (SanPhamDTO sp in listSanPham)
             {
-                nhasx = NhaSanXuatBLL.GetManufacById(sp.MaNhaSX);
-                loaisp = LoaiSanPhamBLL.GetProTypeById(sp.MaLoaiSP);
-                sp.MaLoaiSP = loaisp.TenLoaiSP;
-                sp.MaNhaSX = nhasx.TenNhaSX;
                 cbTenSP.Items.Add(sp.TenSP);
             }
-            dgvAllProduct.DataSource = listSanPham;
-            dgvAllProduct.Columns[0].HeaderText = "Mã SP";
-            dgvAllProduct.Columns[1].HeaderText = "Tên SP";
-            dgvAllProduct.Columns[2].Visible = false;
-            dgvAllProduct.Columns[3].HeaderText = "Đơn giá";
-            dgvAllProduct.Columns[4].HeaderText = "Loại SP";
-            dgvAllProduct.Columns[5].HeaderText = "Thương hiệu";
-            dgvAllProduct.Columns[6].Visible = false;
+            dgvAllProduct.DataSource = SanPhamBLL.GetProduct();
+            dgvAllProduct.Columns[0].HeaderText = "Tên SP";
+            dgvAllProduct.Columns[1].HeaderText = "Số lượng";
+            dgvAllProduct.Columns[2].HeaderText = "Đơn giá";
+            dgvAllProduct.Columns[3].HeaderText = "Loại SP";
+            dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
         }
 
         private void bunifuLabel1_Click(object sender, EventArgs e)
@@ -52,23 +47,20 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void cbTenSP_TextChanged(object sender, EventArgs e)
         {
-            listSanPham = SanPhamBLL.GetProByTxtNameChanged(cbTenSP.Text);
-            foreach (SanPhamDTO sp in listSanPham)
-            {
-                nhasx = NhaSanXuatBLL.GetManufacById(sp.MaNhaSX);
-                loaisp = LoaiSanPhamBLL.GetProTypeById(sp.MaLoaiSP);
-                sp.MaLoaiSP = loaisp.TenLoaiSP;
-                sp.MaNhaSX = nhasx.TenNhaSX;
-                cbTenSP.Items.Add(sp.TenSP);
-            }
-            dgvAllProduct.DataSource = listSanPham;
-            dgvAllProduct.Columns[0].HeaderText = "Mã SP";
-            dgvAllProduct.Columns[1].HeaderText = "Tên SP";
-            dgvAllProduct.Columns[2].Visible = false;
-            dgvAllProduct.Columns[3].HeaderText = "Đơn giá";
-            dgvAllProduct.Columns[4].HeaderText = "Loại SP";
-            dgvAllProduct.Columns[5].HeaderText = "Thương hiệu";
-            dgvAllProduct.Columns[6].Visible = false;
+            //listSanPham = SanPhamBLL.GetProByTxtNameChanged(cbTenSP.Text);
+            //foreach (SanPhamDTO sp in listSanPham)
+            //{
+            //    cbTenSP.Items.Add(sp.TenSP);
+            //}
+            listSP = SanPhamBLL.GetProductByName(cbTenSP.Text);
+            dgvAllProduct.DataSource = listSP;
+            //dgvAllProduct.Columns[0].Visible = false;
+            //dgvAllProduct.Columns[0].HeaderText = "Tên SP";
+            //dgvAllProduct.Columns[1].HeaderText = "Số lượng";
+            //dgvAllProduct.Columns[2].HeaderText = "Đơn giá";
+            //dgvAllProduct.Columns[3].HeaderText = "Loại SP";
+            //dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
+            //dgvAllProduct.Columns[6].Visible = false;
         }
     }
 }
