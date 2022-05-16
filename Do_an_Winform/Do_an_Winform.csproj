@@ -292,6 +292,12 @@
     <Compile Include="PL\DangNhap\frm_Loading.Designer.cs">
       <DependentUpon>frm_Loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\DangNhap\frm_Thongtin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\DangNhap\frm_Thongtin.Designer.cs">
+      <DependentUpon>frm_Thongtin.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\DangNhap\MessBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -407,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DangNhap\frm_Loading.resx">
       <DependentUpon>frm_Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DangNhap\frm_Thongtin.resx">
+      <DependentUpon>frm_Thongtin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DangNhap\MessBox.resx">
       <DependentUpon>MessBox.cs</DependentUpon>

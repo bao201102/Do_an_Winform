@@ -157,7 +157,7 @@ namespace Do_an_Winform
 
         private void btnThongtin_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_Profile(nhanvien, loainhanvien));
+            OpenChildForm(new frm_Thongtin(nhanvien, loainhanvien));
         }
     }
 }
