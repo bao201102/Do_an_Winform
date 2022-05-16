@@ -14,5 +14,11 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetProduct();
         }
+
+        public static List<SanPhamDTO> GetProductByName(string tensp)
+        {
+            return SanPhamDAL.GetProductByName(tensp);
+        }
+        
     }
 }
