@@ -162,11 +162,18 @@
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib_Report\Add reference\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -189,7 +196,14 @@
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
     <Compile Include="BLL\LoaiThanhVienBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
+<<<<<<< Updated upstream
     <Compile Include="BLL\NhaSanXuatBLL.cs" />
+=======
+<<<<<<< HEAD
+=======
+    <Compile Include="BLL\NhaSanXuatBLL.cs" />
+>>>>>>> 1e6951c3e3d3fdec1868c43a944d47680346cbc1
+>>>>>>> Stashed changes
     <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
     <Compile Include="CHDT_Entity.Context.cs">
@@ -220,7 +234,14 @@
     <Compile Include="DAL\LoaiNhanVienDAL.cs" />
     <Compile Include="DAL\LoaiThanhVienDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
+<<<<<<< Updated upstream
     <Compile Include="DAL\NhaSanXuatDAL.cs" />
+=======
+<<<<<<< HEAD
+=======
+    <Compile Include="DAL\NhaSanXuatDAL.cs" />
+>>>>>>> 1e6951c3e3d3fdec1868c43a944d47680346cbc1
+>>>>>>> Stashed changes
     <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DTO\KhachHangDTO.cs" />
@@ -358,6 +379,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="PL\Quanly\frm_HDBH.resx">
+      <DependentUpon>frm_HDBH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\DangNhap\frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -415,6 +439,8 @@
       <DependentUpon>CHDT_Entity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.HoaDonDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.SanPhamDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

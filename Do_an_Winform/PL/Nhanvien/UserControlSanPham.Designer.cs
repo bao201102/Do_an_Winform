@@ -28,12 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.cbKhachHang = new System.Windows.Forms.ComboBox();
+=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlSanPham));
             this.dgvAllProduct = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.cbDonGia = new System.Windows.Forms.ComboBox();
+<<<<<<< Updated upstream
+=======
+>>>>>>> 1e6951c3e3d3fdec1868c43a944d47680346cbc1
+>>>>>>> Stashed changes
             this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbThuongHieu = new System.Windows.Forms.ComboBox();
@@ -51,6 +62,58 @@
             // 
             // dgvAllProduct
             // 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.bunifuCustomDataGrid1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuCustomDataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.bunifuCustomDataGrid1.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Leelawadee UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.bunifuCustomDataGrid1.DoubleBuffered = true;
+            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
+            this.bunifuCustomDataGrid1.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(80, 188);
+            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
+            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bunifuCustomDataGrid1.RowTemplate.DividerHeight = 1;
+            this.bunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(932, 361);
+            this.bunifuCustomDataGrid1.TabIndex = 3;
+            // 
+            // cbKhachHang
+            // 
+            this.cbKhachHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbKhachHang.FormattingEnabled = true;
+            this.cbKhachHang.Location = new System.Drawing.Point(249, 144);
+            this.cbKhachHang.Name = "cbKhachHang";
+            this.cbKhachHang.Size = new System.Drawing.Size(180, 21);
+            this.cbKhachHang.TabIndex = 5;
+            this.cbKhachHang.SelectedIndexChanged += new System.EventHandler(this.cbKhachHang_SelectedIndexChanged);
+=======
+>>>>>>> Stashed changes
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvAllProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAllProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -114,6 +177,10 @@
             this.cbDonGia.Size = new System.Drawing.Size(139, 21);
             this.cbDonGia.TabIndex = 5;
             this.cbDonGia.SelectedIndexChanged += new System.EventHandler(this.cbKhachHang_SelectedIndexChanged);
+<<<<<<< Updated upstream
+=======
+>>>>>>> 1e6951c3e3d3fdec1868c43a944d47680346cbc1
+>>>>>>> Stashed changes
             // 
             // lbl1
             // 
@@ -274,9 +341,19 @@
             this.Name = "UserControlSanPham";
             this.Size = new System.Drawing.Size(1072, 590);
             this.Load += new System.EventHandler(this.UserControlSanPham_Load);
+<<<<<<< Updated upstream
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllProduct)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
+=======
+<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllProduct)).EndInit();
+            this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel1.PerformLayout();
+>>>>>>> 1e6951c3e3d3fdec1868c43a944d47680346cbc1
+>>>>>>> Stashed changes
             this.ResumeLayout(false);
             this.PerformLayout();
 
