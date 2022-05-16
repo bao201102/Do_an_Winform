@@ -132,9 +132,10 @@ namespace Do_an_Winform
             bool result = messBox.ShowMess("Bạn muốn đăng xuất ?");
             if (result)
             {
-                Close();
-                frm_DangNhap frmLogin = new frm_DangNhap();
-                frmLogin.Show();
+                frm_DangNhap loginform = new frm_DangNhap();
+                this.Hide();
+                loginform.ShowDialog();
+                this.Close();
             }
         }
 

@@ -59,8 +59,9 @@ namespace Do_an_Winform.PL.DangNhap
                     else if (userLogin.MaLoaiNV == "LNV002")
                     {
                         frm_Quanly frmQuanLi = new frm_Quanly(userLogin);
-                        frmQuanLi.Show();
-                        //this.Close();
+                        this.Hide();
+                        frmQuanLi.ShowDialog();
+                        this.Close();
                     }
                     else if (userLogin.MaLoaiNV == "LNV003")
                     {
