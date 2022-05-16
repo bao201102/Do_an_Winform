@@ -21,5 +21,10 @@ namespace Do_an_Winform.PL.Nhanvien
         {
 
         }
+
+        private void UserControlSanPham_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

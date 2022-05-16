@@ -14,6 +14,8 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var customers = from kh in entities.KhachHangs
+                            join loaitv in entities.LoaiThanhViens
+                            on kh.MaLoaiTVien equals loaitv.MaLoaiTVien
                             select kh;
             List<KhachHangDTO> khachHangDTOs = new List<KhachHangDTO>();
             foreach(KhachHang ctm in customers)
