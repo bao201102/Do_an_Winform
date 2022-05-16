@@ -38,7 +38,7 @@ namespace Do_an_Winform.DAL
             var pros = (from sp in entities.SanPhams
                         join nsx in entities.NhaSanXuats
                         on sp.MaNhaSX equals nsx.MaNhaSX
-                        where sp.TenSP == tensp
+                        where sp.TenSP.Contains(tensp)
                         select sp);
 
             List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();

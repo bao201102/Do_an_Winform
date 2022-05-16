@@ -98,6 +98,7 @@ namespace Do_an_Winform
             subuserPanel.Visible = false;
             NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
             userBtn.Text = emp.TenNV;
+            openChildForm(new frm_TonKho());
         }
 
         private Form activeForm = null;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Do_an_Winform.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,20 @@ namespace Do_an_Winform.PL.Thukho
 
         private void frm_Xuat_Load(object sender, EventArgs e)
         {
+            cbbNhaCC.DataSource = NhaCungCapBLL.GetNhaCungCap();
+            cbbNhaCC.DisplayMember = "TenNCC";
+            cbbNhaCC.ValueMember = "MaNCC";
 
+            cbbTenSP.DataSource = SanPhamBLL.GetProduct();
+            cbbTenSP.DisplayMember = "TenSP";
+            cbbTenSP.ValueMember = "MaSP";
         }
 
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }
