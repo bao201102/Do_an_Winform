@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Do_an_Winform.DTO
 {
-    class NhaSanXuatDTO
+    public class NhaSanXuatDTO
     {
         private string _MaNhaSX;
         public string MaNhaSX

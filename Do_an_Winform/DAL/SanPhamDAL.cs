@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Do_an_Winform.DAL
 {
-    class SanPhamDAL
+    public class SanPhamDAL
     {
         public static List<SanPhamDTO> GetProduct()
         {

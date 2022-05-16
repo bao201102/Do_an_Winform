@@ -189,6 +189,7 @@
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
     <Compile Include="BLL\LoaiThanhVienBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
+    <Compile Include="BLL\NhaSanXuatBLL.cs" />
     <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
     <Compile Include="CHDT_Entity.Context.cs">
@@ -219,6 +220,7 @@
     <Compile Include="DAL\LoaiNhanVienDAL.cs" />
     <Compile Include="DAL\LoaiThanhVienDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="DAL\NhaSanXuatDAL.cs" />
     <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DTO\KhachHangDTO.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Do_an_Winform.DTO
 {
-    class SanPhamDTO
+    public class SanPhamDTO
     {
 		private string _MaSP;
 		public string MaSP
