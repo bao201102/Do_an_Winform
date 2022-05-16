@@ -367,9 +367,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="PL\Quanly\frm_HDBH.resx">
-      <DependentUpon>frm_HDBH.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PL\DangNhap\frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
