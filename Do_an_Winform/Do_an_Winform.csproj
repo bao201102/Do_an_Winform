@@ -197,6 +197,7 @@
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
     <Compile Include="BLL\LoaiSanPhamBLL.cs" />
     <Compile Include="BLL\LoaiThanhVienBLL.cs" />
+    <Compile Include="BLL\NhaCungCapBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\NhaSanXuatBLL.cs" />
     <Compile Include="BLL\SanPhamBLL.cs" />
@@ -230,17 +231,23 @@
     <Compile Include="DAL\LoaiNhanVienDAL.cs" />
     <Compile Include="DAL\LoaiSanPhamDAL.cs" />
     <Compile Include="DAL\LoaiThanhVienDAL.cs" />
+    <Compile Include="DAL\NhaCungCapDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\NhaSanXuatDAL.cs" />
     <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="DTO\ChiTietPhieuNhapDTO.cs" />
+    <Compile Include="DTO\ChiTietPhieuXuatDTO.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\KhachHangDTO.cs" />
     <Compile Include="DTO\LoaiNhanVienDTO.cs" />
     <Compile Include="DTO\LoaiSanPhamDTO.cs" />
     <Compile Include="DTO\LoaiThanhVienDTO.cs" />
+    <Compile Include="DTO\NhaCungCapDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\NhaSanXuatDTO.cs" />
+    <Compile Include="DTO\PhieuNhapHangDTO.cs" />
+    <Compile Include="DTO\PhieuXuatHangDTO.cs" />
     <Compile Include="DTO\SanPhamDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
     <Compile Include="HoaDon.cs">
@@ -442,6 +449,7 @@
     <EmbeddedResource Include="PL\Thukho\frm_Xuat.resx">
       <DependentUpon>frm_Xuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Thukho\rpt_Nhap.rdlc" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -456,7 +464,10 @@
       <DependentUpon>CHDT_Entity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.ChiTietPhieuNhapDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.HoaDonDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.NhaSanXuatDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.PhieuNhapHangDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.SanPhamDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
