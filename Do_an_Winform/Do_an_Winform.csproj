@@ -196,14 +196,8 @@
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
     <Compile Include="BLL\LoaiThanhVienBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
-<<<<<<< Updated upstream
     <Compile Include="BLL\NhaSanXuatBLL.cs" />
-=======
-<<<<<<< HEAD
-=======
     <Compile Include="BLL\NhaSanXuatBLL.cs" />
->>>>>>> 1e6951c3e3d3fdec1868c43a944d47680346cbc1
->>>>>>> Stashed changes
     <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
     <Compile Include="CHDT_Entity.Context.cs">
@@ -234,14 +228,8 @@
     <Compile Include="DAL\LoaiNhanVienDAL.cs" />
     <Compile Include="DAL\LoaiThanhVienDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
-<<<<<<< Updated upstream
     <Compile Include="DAL\NhaSanXuatDAL.cs" />
-=======
-<<<<<<< HEAD
-=======
     <Compile Include="DAL\NhaSanXuatDAL.cs" />
->>>>>>> 1e6951c3e3d3fdec1868c43a944d47680346cbc1
->>>>>>> Stashed changes
     <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DTO\KhachHangDTO.cs" />
