@@ -19,6 +19,10 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetProductByName(tensp);
         }
+        public static List<SanPhamDTO> GetProByTxtNameChanged(string txtNameChanged)
+        {
+            return SanPhamDAL.GetProByTxtNameChanged(txtNameChanged);
+        }
         
     }
 }

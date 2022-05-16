@@ -26,7 +26,7 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void UserControlKhachHang_Load(object sender, EventArgs e)
         {
-            listKhachHang = KhachHangBLL.GetCusByTxtNameChanged(cbTenKhachHang.Text);
+            listKhachHang = KhachHangBLL.GetAllCustomer();
             foreach (KhachHangDTO kh in listKhachHang)
             {
                 loaiThanhVien = LoaiThanhVienBLL.GetTypeMemById(kh.MaLoaiTVien);

@@ -70,9 +70,10 @@ namespace Do_an_Winform.PL.Quanly
             this.panelhead.Controls.Add(this.bunifuPanel3);
             this.panelhead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelhead.Location = new System.Drawing.Point(0, 0);
+            this.panelhead.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelhead.Name = "panelhead";
             this.panelhead.ShowBorders = true;
-            this.panelhead.Size = new System.Drawing.Size(1459, 139);
+            this.panelhead.Size = new System.Drawing.Size(1023, 113);
             this.panelhead.TabIndex = 2;
             // 
             // bunifuPanel3
@@ -88,9 +89,10 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel3.Controls.Add(this.lblHDBH);
             this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel3.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(1459, 76);
+            this.bunifuPanel3.Size = new System.Drawing.Size(1023, 62);
             this.bunifuPanel3.TabIndex = 65;
             // 
             // bunifuGradientPanel2
@@ -108,18 +110,20 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(982, 0);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(665, 0);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(477, 76);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(358, 62);
             this.bunifuGradientPanel2.TabIndex = 67;
             // 
             // maskedtxtEndDay
             // 
-            this.maskedtxtEndDay.Location = new System.Drawing.Point(156, 43);
+            this.maskedtxtEndDay.Location = new System.Drawing.Point(117, 35);
+            this.maskedtxtEndDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedtxtEndDay.Mask = "00/00/0000 90:00";
             this.maskedtxtEndDay.Name = "maskedtxtEndDay";
-            this.maskedtxtEndDay.Size = new System.Drawing.Size(152, 22);
+            this.maskedtxtEndDay.Size = new System.Drawing.Size(115, 20);
             this.maskedtxtEndDay.TabIndex = 3;
             this.maskedtxtEndDay.ValidatingType = typeof(System.DateTime);
             // 
@@ -141,19 +145,19 @@ namespace Do_an_Winform.PL.Quanly
             this.btnPrint.IdleFillColor = System.Drawing.Color.White;
             this.btnPrint.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnPrint.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnPrint.Location = new System.Drawing.Point(345, 39);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Location = new System.Drawing.Point(259, 32);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(110, 37);
+            this.btnPrint.Size = new System.Drawing.Size(82, 30);
             this.btnPrint.TabIndex = 64;
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // maskedtxtStartDay
             // 
-            this.maskedtxtStartDay.Location = new System.Drawing.Point(156, 12);
+            this.maskedtxtStartDay.Location = new System.Drawing.Point(117, 10);
+            this.maskedtxtStartDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedtxtStartDay.Mask = "00/00/0000 90:00";
             this.maskedtxtStartDay.Name = "maskedtxtStartDay";
-            this.maskedtxtStartDay.Size = new System.Drawing.Size(152, 22);
+            this.maskedtxtStartDay.Size = new System.Drawing.Size(115, 20);
             this.maskedtxtStartDay.TabIndex = 1;
             this.maskedtxtStartDay.ValidatingType = typeof(System.DateTime);
             // 
@@ -175,28 +179,29 @@ namespace Do_an_Winform.PL.Quanly
             this.btnView.IdleFillColor = System.Drawing.Color.White;
             this.btnView.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnView.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnView.Location = new System.Drawing.Point(345, 9);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView.Location = new System.Drawing.Point(259, 7);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(110, 37);
+            this.btnView.Size = new System.Drawing.Size(82, 30);
             this.btnView.TabIndex = 63;
             this.btnView.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblStartDay
             // 
             this.lblStartDay.AutoSize = true;
-            this.lblStartDay.Location = new System.Drawing.Point(16, 12);
+            this.lblStartDay.Location = new System.Drawing.Point(12, 10);
+            this.lblStartDay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStartDay.Name = "lblStartDay";
-            this.lblStartDay.Size = new System.Drawing.Size(97, 17);
+            this.lblStartDay.Size = new System.Drawing.Size(75, 13);
             this.lblStartDay.TabIndex = 0;
             this.lblStartDay.Text = "Ngày bắt đầu:";
             // 
             // lblEndDay
             // 
             this.lblEndDay.AutoSize = true;
-            this.lblEndDay.Location = new System.Drawing.Point(16, 43);
+            this.lblEndDay.Location = new System.Drawing.Point(12, 35);
+            this.lblEndDay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEndDay.Name = "lblEndDay";
-            this.lblEndDay.Size = new System.Drawing.Size(103, 17);
+            this.lblEndDay.Size = new System.Drawing.Size(80, 13);
             this.lblEndDay.TabIndex = 2;
             this.lblEndDay.Text = "Ngày kết thúc: ";
             // 
@@ -213,10 +218,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel2.Controls.Add(this.bunifuImageButton1);
             this.bunifuPanel2.Controls.Add(this.txtSearch);
             this.bunifuPanel2.Controls.Add(this.btnSearch);
-            this.bunifuPanel2.Location = new System.Drawing.Point(217, 12);
+            this.bunifuPanel2.Location = new System.Drawing.Point(163, 10);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(681, 34);
+            this.bunifuPanel2.Size = new System.Drawing.Size(440, 28);
             this.bunifuPanel2.TabIndex = 66;
             // 
             // bunifuImageButton1
@@ -225,9 +231,10 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuImageButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuImageButton1.Image = global::Do_an_Winform.Properties.Resources.search;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(654, 0);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(420, 0);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(27, 34);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(20, 28);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 68;
             this.bunifuImageButton1.TabStop = false;
@@ -239,9 +246,10 @@ namespace Do_an_Winform.PL.Quanly
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSearch.ForeColor = System.Drawing.Color.Silver;
             this.txtSearch.Location = new System.Drawing.Point(0, 0);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(681, 34);
+            this.txtSearch.Size = new System.Drawing.Size(440, 28);
             this.txtSearch.TabIndex = 40;
             this.txtSearch.Text = "Tìm kiếm mã hóa đơn";
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
@@ -254,9 +262,10 @@ namespace Do_an_Winform.PL.Quanly
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageActive = null;
-            this.btnSearch.Location = new System.Drawing.Point(654, 0);
+            this.btnSearch.Location = new System.Drawing.Point(490, 0);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(27, 34);
+            this.btnSearch.Size = new System.Drawing.Size(0, 28);
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSearch.TabIndex = 54;
             this.btnSearch.TabStop = false;
@@ -266,11 +275,12 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.lblHDBH.AutoSize = true;
             this.lblHDBH.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblHDBH.Font = new System.Drawing.Font("UTM Seagull", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHDBH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHDBH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.lblHDBH.Location = new System.Drawing.Point(0, 0);
+            this.lblHDBH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHDBH.Name = "lblHDBH";
-            this.lblHDBH.Size = new System.Drawing.Size(211, 28);
+            this.lblHDBH.Size = new System.Drawing.Size(175, 20);
             this.lblHDBH.TabIndex = 39;
             this.lblHDBH.Text = "Hóa Đơn Nhập Hàng";
             this.lblHDBH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,9 +296,10 @@ namespace Do_an_Winform.PL.Quanly
             this.panelcontent.Controls.Add(this.gvHDBH);
             this.panelcontent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcontent.Location = new System.Drawing.Point(0, 0);
+            this.panelcontent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelcontent.Name = "panelcontent";
             this.panelcontent.ShowBorders = true;
-            this.panelcontent.Size = new System.Drawing.Size(1459, 854);
+            this.panelcontent.Size = new System.Drawing.Size(1023, 609);
             this.panelcontent.TabIndex = 3;
             // 
             // gvHDBH
@@ -343,22 +354,24 @@ namespace Do_an_Winform.PL.Quanly
             this.gvHDBH.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvHDBH.HeaderForeColor = System.Drawing.Color.White;
             this.gvHDBH.Location = new System.Drawing.Point(0, 0);
+            this.gvHDBH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gvHDBH.Name = "gvHDBH";
             this.gvHDBH.RowHeadersVisible = false;
             this.gvHDBH.RowHeadersWidth = 51;
             this.gvHDBH.RowTemplate.Height = 40;
             this.gvHDBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvHDBH.Size = new System.Drawing.Size(1459, 854);
+            this.gvHDBH.Size = new System.Drawing.Size(1023, 609);
             this.gvHDBH.TabIndex = 0;
             this.gvHDBH.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // frm_HDNH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1459, 854);
+            this.ClientSize = new System.Drawing.Size(1023, 609);
             this.Controls.Add(this.panelhead);
             this.Controls.Add(this.panelcontent);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_HDNH";
             this.Text = "frm_HDNH";
             this.Load += new System.EventHandler(this.frm_HDNH_Load);

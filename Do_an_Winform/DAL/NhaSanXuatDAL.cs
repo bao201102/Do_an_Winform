@@ -10,13 +10,12 @@ namespace Do_an_Winform.DAL
 {
     public class NhaSanXuatDAL
     {
-        public static List<NhaSanXuatDTO> GetManufacById(string manhasx)
+        public static List<NhaSanXuatDTO> GetAllManufac()
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var manufacs = from nhasx in entities.NhaSanXuats
                            join sp in entities.SanPhams
                            on nhasx.MaNhaSX equals sp.MaNhaSX
-                           where nhasx.MaNhaSX == manhasx
                            select nhasx;
             List<NhaSanXuatDTO> nhaSanXuatDTOs = new List<NhaSanXuatDTO>();
             foreach (NhaSanXuat nsx in manufacs)
@@ -29,6 +28,18 @@ namespace Do_an_Winform.DAL
                 
             }
             return nhaSanXuatDTOs;
+        }
+
+        public static NhaSanXuatDTO GetManufacById(string maNhaSX)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            NhaSanXuat manufac = (from nhasx in entities.NhaSanXuats
+                                   where nhasx.MaNhaSX == maNhaSX
+                                   select nhasx).Single();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaSanXuat, NhaSanXuatDTO>());
+            var mapper = new Mapper(config);
+            NhaSanXuatDTO nhaSX = mapper.Map<NhaSanXuatDTO>(manufac);
+            return nhaSX;
         }
     }
 }

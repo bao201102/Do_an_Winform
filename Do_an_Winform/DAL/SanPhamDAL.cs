@@ -55,5 +55,24 @@ namespace Do_an_Winform.DAL
             return sanPhamDTOs;
 
         }
+        public static List<SanPhamDTO> GetProByTxtNameChanged(string txtNameChanged)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var products = from pro in entities.SanPhams
+                            where pro.TenSP.Contains(txtNameChanged)
+                            select pro;
+            List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
+            foreach (SanPham pro in products)
+            {
+                if (pro.TrangThai == "1")
+                {
+                    var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+                    var mapper = new Mapper(config);
+                    SanPhamDTO khachhang = mapper.Map<SanPhamDTO>(pro);
+                    sanPhamDTOs.Add(khachhang);
+                }
+            }
+            return sanPhamDTOs;
+        }
     }
 }

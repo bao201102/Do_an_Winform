@@ -10,9 +10,13 @@ namespace Do_an_Winform.BLL
 {
     public class NhaSanXuatBLL
     {
-        public static List<NhaSanXuatDTO> GetManufacById(string manhasx)
+        public static List<NhaSanXuatDTO> GetAllManufac()
         {
-            return NhaSanXuatDAL.GetManufacById(manhasx);
+            return NhaSanXuatDAL.GetAllManufac();
+        }
+        public static NhaSanXuatDTO GetManufacById(string manhaSX)
+        {
+            return NhaSanXuatDAL.GetManufacById(manhaSX);
         }
     }
 }
