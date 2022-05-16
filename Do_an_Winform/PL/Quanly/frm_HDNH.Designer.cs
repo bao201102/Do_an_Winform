@@ -43,20 +43,20 @@ namespace Do_an_Winform.PL.Quanly
             this.lblStartDay = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblEndDay = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtSearch = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.btnSearch = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblHDBH = new System.Windows.Forms.Label();
             this.panelcontent = new Bunifu.UI.WinForms.BunifuPanel();
             this.gvHDBH = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelhead.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.panelcontent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvHDBH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelhead
@@ -219,6 +219,20 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel2.Size = new System.Drawing.Size(681, 34);
             this.bunifuPanel2.TabIndex = 66;
             // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bunifuImageButton1.Image = global::Do_an_Winform.Properties.Resources.search;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(654, 0);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(27, 34);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 68;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
             // txtSearch
             // 
             this.txtSearch.BorderColor = System.Drawing.Color.SeaGreen;
@@ -338,20 +352,6 @@ namespace Do_an_Winform.PL.Quanly
             this.gvHDBH.TabIndex = 0;
             this.gvHDBH.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
-            this.bunifuImageButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuImageButton1.Image = global::Do_an_Winform.Properties.Resources.search;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(654, 0);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(27, 34);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 68;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
             // frm_HDNH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -369,10 +369,10 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel2.PerformLayout();
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.panelcontent.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvHDBH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
