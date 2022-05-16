@@ -195,6 +195,7 @@
     <Compile Include="BLL\HoaDonBLL.cs" />
     <Compile Include="BLL\KhachHangBLL.cs" />
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
+    <Compile Include="BLL\LoaiSanPhamBLL.cs" />
     <Compile Include="BLL\LoaiThanhVienBLL.cs" />
     <Compile Include="BLL\NhaCungCapBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
@@ -228,6 +229,7 @@
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
     <Compile Include="DAL\LoaiNhanVienDAL.cs" />
+    <Compile Include="DAL\LoaiSanPhamDAL.cs" />
     <Compile Include="DAL\LoaiThanhVienDAL.cs" />
     <Compile Include="DAL\NhaCungCapDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
@@ -239,6 +241,7 @@
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\KhachHangDTO.cs" />
     <Compile Include="DTO\LoaiNhanVienDTO.cs" />
+    <Compile Include="DTO\LoaiSanPhamDTO.cs" />
     <Compile Include="DTO\LoaiThanhVienDTO.cs" />
     <Compile Include="DTO\NhaCungCapDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
