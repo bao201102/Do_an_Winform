@@ -26,23 +26,23 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void UserControlSanPham_Load(object sender, EventArgs e)
         {
-            listSanPham = SanPhamBLL.GetProduct();
-            foreach(SanPhamDTO sp in listSanPham)
-            {
-                nhasx = NhaSanXuatBLL.GetManufacById(sp.MaNhaSX);
-                loaisp = LoaiSanPhamBLL.GetProTypeById(sp.MaLoaiSP);
-                sp.MaLoaiSP = loaisp.TenLoaiSP;
-                sp.MaNhaSX = nhasx.TenNhaSX;
-                cbTenSP.Items.Add(sp.TenSP);
-            }
-            dgvAllProduct.DataSource = listSanPham;
-            dgvAllProduct.Columns[0].HeaderText = "Mã SP";
-            dgvAllProduct.Columns[1].HeaderText = "Tên SP";
-            dgvAllProduct.Columns[2].Visible = false;
-            dgvAllProduct.Columns[3].HeaderText = "Đơn giá";
-            dgvAllProduct.Columns[4].HeaderText = "Loại SP";
-            dgvAllProduct.Columns[5].HeaderText = "Thương hiệu";
-            dgvAllProduct.Columns[6].Visible = false;
+            //listSanPham = SanPhamBLL.GetProduct();
+            //foreach(SanPhamDTO sp in listSanPham)
+            //{
+            //    nhasx = NhaSanXuatBLL.GetManufacById(sp.MaNhaSX);
+            //    loaisp = LoaiSanPhamBLL.GetProTypeById(sp.MaLoaiSP);
+            //    sp.MaLoaiSP = loaisp.TenLoaiSP;
+            //    sp.MaNhaSX = nhasx.TenNhaSX;
+            //    cbTenSP.Items.Add(sp.TenSP);
+            //}
+            //dgvAllProduct.DataSource = listSanPham;
+            //dgvAllProduct.Columns[0].HeaderText = "Mã SP";
+            //dgvAllProduct.Columns[1].HeaderText = "Tên SP";
+            //dgvAllProduct.Columns[2].Visible = false;
+            //dgvAllProduct.Columns[3].HeaderText = "Đơn giá";
+            //dgvAllProduct.Columns[4].HeaderText = "Loại SP";
+            //dgvAllProduct.Columns[5].HeaderText = "Thương hiệu";
+            //dgvAllProduct.Columns[6].Visible = false;
         }
 
         private void bunifuLabel1_Click(object sender, EventArgs e)

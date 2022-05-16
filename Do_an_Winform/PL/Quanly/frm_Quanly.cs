@@ -16,6 +16,8 @@ namespace Do_an_Winform
     public partial class frm_Quanly : Form
     {
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+        NhanVienDTO nhanvien = new NhanVienDTO();
+        LoaiNhanVienDTO loainhanvien = new LoaiNhanVienDTO();
         public frm_Quanly(TaiKhoanDTO user)
         {
             InitializeComponent();
@@ -29,8 +31,9 @@ namespace Do_an_Winform
             subuserPanel.Visible = false;
             subdoitacPanel.Visible = false;
             subhoadonPanel.Visible = false;
-            NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
-            userBtn.Text = emp.TenNV;
+            nhanvien = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+            loainhanvien = LoaiNhanVienBLL.GetEmpType(nhanvien.MaLoaiNV);
+            userBtn.Text = nhanvien.TenNV;
         }
 
         private void slideBtn_Click(object sender, EventArgs e)
@@ -62,9 +65,9 @@ namespace Do_an_Winform
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            DialogResult result;
-            result = MessageBox.Show("Bạn muốn thoát chương trình ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            MessBox messBox = new MessBox();
+            bool result = messBox.ShowMess("Bạn muốn thoát chương trình ?");           
+            if (result)
             {
                 Application.Exit();
             }
@@ -125,13 +128,36 @@ namespace Do_an_Winform
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult result;
-            result = MessageBox.Show("Bạn muốn đăng xuất ?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            MessBox messBox = new MessBox();
+            bool result = messBox.ShowMess("Bạn muốn đăng xuất ?");
+            if (result)
             {
+                Close();
                 frm_DangNhap frmLogin = new frm_DangNhap();
                 frmLogin.Show();
             }
+        }
+
+        private Form activeForm = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(childForm);
+            mainPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btnThongtin_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_Profile(nhanvien, loainhanvien));
         }
     }
 }
