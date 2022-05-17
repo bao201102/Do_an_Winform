@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.Quanly;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

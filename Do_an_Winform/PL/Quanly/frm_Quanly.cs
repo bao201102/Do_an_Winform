@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Do_an_Winform
+namespace Do_an_Winform.PL.Quanly
 {
     public partial class frm_Quanly : Form
     {
@@ -159,6 +159,11 @@ namespace Do_an_Winform
         private void btnThongtin_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frm_Thongtin(nhanvien, loainhanvien));
+        }
+
+        private void btnQLSP_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_QLSP());
         }
     }
 }
