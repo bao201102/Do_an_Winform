@@ -43,7 +43,8 @@ namespace Do_an_Winform.PL.Nhanvien
                 dgvAllCustomer.Columns[4].HeaderText = "SĐT";
                 dgvAllCustomer.Columns[5].HeaderText = "Địa chi";
                 dgvAllCustomer.Columns[6].HeaderText = "Loại thành viên";
-                dgvAllCustomer.Columns[7].Visible = false;
+                dgvAllCustomer.Columns[7].HeaderText = "Điểm tích lũy";
+                dgvAllCustomer.Columns[8].Visible = false;
             }
         }
 
@@ -64,7 +65,8 @@ namespace Do_an_Winform.PL.Nhanvien
             dgvAllCustomer.Columns[4].HeaderText = "SĐT";
             dgvAllCustomer.Columns[5].HeaderText = "Địa chi";
             dgvAllCustomer.Columns[6].HeaderText = "Loại thành viên";
-            dgvAllCustomer.Columns[7].Visible = false;
+            dgvAllCustomer.Columns[7].HeaderText = "Điểm tích lũy";
+            dgvAllCustomer.Columns[8].Visible = false;
         }
     }
 }
