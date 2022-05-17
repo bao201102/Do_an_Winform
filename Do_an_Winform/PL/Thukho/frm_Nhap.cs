@@ -23,16 +23,18 @@ namespace Do_an_Winform.PL.Thukho
 
         private void frm_Nhap_Load(object sender, EventArgs e)
         {
+            NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+            lblTenNV.Text = emp.TenNV;
+
             cbbNhaCC.DataSource = NhaCungCapBLL.GetNhaCungCap();
             cbbNhaCC.DisplayMember = "TenNCC";
             cbbNhaCC.ValueMember = "MaNCC";
 
-            //cbbTenSP.DataSource = SanPhamBLL.GetProduct();
-            //cbbTenSP.DisplayMember = "TenSP";
-            //cbbTenSP.ValueMember = "MaSP";
+            cbbTenSP.DataSource = SanPhamBLL.GetAllProduct();
+            cbbTenSP.DisplayMember = "TenSP";
+            cbbTenSP.ValueMember = "MaSP";
 
-            NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
-            lblTenNV.Text = emp.TenNV;
+            lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
         }
 
         private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -41,19 +43,20 @@ namespace Do_an_Winform.PL.Thukho
                 e.Handled = true;
         }
 
-        private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        private void cbbTenSP_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (activeForm != null)
+            lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
+        }
+
+        private void cbbTenSP_TextChanged(object sender, EventArgs e)
+        {
+            try
             {
-                activeForm.Close();
+                lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
             }
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            childForm.BringToFront();
-            childForm.Show();
+            catch (Exception)
+            {                
+            }
         }
     }
 }

@@ -21,9 +21,9 @@ namespace Do_an_Winform
         }
     
         public string MaPX { get; set; }
-        public System.DateTime NgayTaoPN { get; set; }
         public string MaNV { get; set; }
         public string MaNCC { get; set; }
+        public System.DateTime NgayTaoPX { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }

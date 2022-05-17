@@ -22,27 +22,22 @@ namespace Do_an_Winform.PL.Thukho
 
         private void frm_TonKho_Load(object sender, EventArgs e)
         {           
-
             gridviewStock.DataSource = SanPhamBLL.GetProduct();
             gridviewStock.Columns[0].HeaderText = "Tên sản phẩm";
             gridviewStock.Columns[1].HeaderText = "Số lượng";
             gridviewStock.Columns[2].HeaderText = "Đơn giá";
-            gridviewStock.Columns[3].HeaderText = "Nhà sản xuất";
-
+            gridviewStock.Columns[3].HeaderText = "Tên loại";
+            gridviewStock.Columns[4].HeaderText = "Nhà sản xuất";
         }
 
         private void txtFind_TextChange(object sender, EventArgs e)
         {
-            gridviewStock.DataSource = SanPhamBLL.GetProductByName(txtFind.Text);
+            gridviewStock.DataSource = SanPhamBLL.GetAllProductByName(txtFind.Text);
             gridviewStock.Columns[0].HeaderText = "Tên sản phẩm";
             gridviewStock.Columns[1].HeaderText = "Số lượng";
             gridviewStock.Columns[2].HeaderText = "Đơn giá";
-            gridviewStock.Columns[3].HeaderText = "Nhà sản xuất";
-        }
-
-        private void gridviewStock_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-
+            gridviewStock.Columns[3].HeaderText = "Tên loại";
+            gridviewStock.Columns[4].HeaderText = "Nhà sản xuất";
         }
     }
 }

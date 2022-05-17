@@ -40,5 +40,6 @@ namespace Do_an_Winform
         public virtual DbSet<PhieuXuatHang> PhieuXuatHangs { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

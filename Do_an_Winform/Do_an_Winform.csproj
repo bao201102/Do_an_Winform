@@ -402,6 +402,9 @@
     <Compile Include="SanPham.cs">
       <DependentUpon>CHDT_Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>CHDT_Entity.tt</DependentUpon>
     </Compile>

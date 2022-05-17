@@ -38,6 +38,7 @@
         <AssociationConnector Association="CHDTModel.FK__PhieuNhapH__MaNV__4316F928" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK_PhieuXuatHang_NhanVien" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK__SanPham__MaNhaSX__48CFD27E" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CHDTModel.sysdiagram" Width="1.5" PointX="7.125" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
