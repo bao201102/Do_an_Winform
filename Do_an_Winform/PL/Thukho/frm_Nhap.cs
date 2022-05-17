@@ -34,6 +34,9 @@ namespace Do_an_Winform.PL.Thukho
             cbbTenSP.DisplayMember = "TenSP";
             cbbTenSP.ValueMember = "MaSP";
 
+            txtSoLuong.Text = "1";
+
+            //lblTong.Text = (int.Parse(lblDongia.Text) * int.Parse(txtSoLuong.Text)).ToString();
             lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
         }
 
@@ -46,6 +49,7 @@ namespace Do_an_Winform.PL.Thukho
         private void cbbTenSP_SelectedValueChanged(object sender, EventArgs e)
         {
             lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
+            //lblTong.Text = (int.Parse(lblDongia.Text) * int.Parse(txtSoLuong.Text)).ToString();
         }
 
         private void cbbTenSP_TextChanged(object sender, EventArgs e)
@@ -55,7 +59,18 @@ namespace Do_an_Winform.PL.Thukho
                 lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
             }
             catch (Exception)
-            {                
+            {
+            }
+        }
+
+        private void txtSoLuong_TextChange(object sender, EventArgs e)
+        {
+            try
+            {
+                lblTong.Text = (int.Parse(lblDongia.Text) * int.Parse(txtSoLuong.Text)).ToString();
+            }
+            catch (Exception)
+            {
             }
         }
     }
