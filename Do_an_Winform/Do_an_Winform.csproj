@@ -425,6 +425,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DangNhap\frm_Thongtin.resx">
       <DependentUpon>frm_Thongtin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DangNhap\MessBox.resx">
       <DependentUpon>MessBox.cs</DependentUpon>
