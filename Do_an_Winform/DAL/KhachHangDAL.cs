@@ -49,6 +49,15 @@ namespace Do_an_Winform.DAL
             }
             return khachHangDTOs;
         }
+        public static bool AddNewCustomer(KhachHangDTO kh) 
+        {
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHangDTO, KhachHang>());
+            var mapper = new Mapper(config);
+            KhachHang khachHang = mapper.Map<KhachHang>(kh);
+            CHDTEntities1 entities = new CHDTEntities1();
+            entities.KhachHangs.Add(khachHang);
+            return entities.SaveChanges() > 0 ? true : false;
+        }
         
     }
 }
