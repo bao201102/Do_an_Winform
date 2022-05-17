@@ -41,15 +41,14 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnSearchMem = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSaveAndPrint = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtLoaiTV = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -57,8 +56,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbThanhVien = new System.Windows.Forms.RadioButton();
+            this.rbKhachLe = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNgayBan = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,6 +78,7 @@
             this.btnSearch = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cbMaSP = new System.Windows.Forms.ComboBox();
+            this.cbMaKH = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -176,15 +176,15 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.bunifuThinButton22);
+            this.panel1.Controls.Add(this.cbMaKH);
+            this.panel1.Controls.Add(this.btnSearchMem);
             this.panel1.Controls.Add(this.btnSaveAndPrint);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.txtLoaiTV);
             this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.txtTenKH);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
@@ -192,8 +192,8 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.rbThanhVien);
+            this.panel1.Controls.Add(this.rbKhachLe);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblNgayBan);
             this.panel1.Controls.Add(this.label3);
@@ -204,30 +204,30 @@
             this.panel1.Size = new System.Drawing.Size(320, 489);
             this.panel1.TabIndex = 16;
             // 
-            // bunifuThinButton22
+            // btnSearchMem
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Tìm";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuThinButton22.Location = new System.Drawing.Point(262, 151);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(51, 28);
-            this.bunifuThinButton22.TabIndex = 35;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearchMem.ActiveBorderThickness = 1;
+            this.btnSearchMem.ActiveCornerRadius = 20;
+            this.btnSearchMem.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSearchMem.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnSearchMem.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSearchMem.BackColor = System.Drawing.Color.White;
+            this.btnSearchMem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchMem.BackgroundImage")));
+            this.btnSearchMem.ButtonText = "Tìm";
+            this.btnSearchMem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchMem.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchMem.ForeColor = System.Drawing.Color.Black;
+            this.btnSearchMem.IdleBorderThickness = 1;
+            this.btnSearchMem.IdleCornerRadius = 20;
+            this.btnSearchMem.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSearchMem.IdleForecolor = System.Drawing.Color.Black;
+            this.btnSearchMem.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSearchMem.Location = new System.Drawing.Point(263, 159);
+            this.btnSearchMem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchMem.Name = "btnSearchMem";
+            this.btnSearchMem.Size = new System.Drawing.Size(51, 28);
+            this.btnSearchMem.TabIndex = 35;
+            this.btnSearchMem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSaveAndPrint
             // 
@@ -289,12 +289,12 @@
             this.label19.TabIndex = 20;
             this.label19.Text = "Total";
             // 
-            // textBox9
+            // txtLoaiTV
             // 
-            this.textBox9.Location = new System.Drawing.Point(114, 227);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(199, 20);
-            this.textBox9.TabIndex = 19;
+            this.txtLoaiTV.Location = new System.Drawing.Point(114, 227);
+            this.txtLoaiTV.Name = "txtLoaiTV";
+            this.txtLoaiTV.Size = new System.Drawing.Size(199, 20);
+            this.txtLoaiTV.TabIndex = 19;
             // 
             // label18
             // 
@@ -306,12 +306,12 @@
             this.label18.TabIndex = 18;
             this.label18.Text = "Loại thành viên:";
             // 
-            // textBox8
+            // txtTenKH
             // 
-            this.textBox8.Location = new System.Drawing.Point(114, 194);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(199, 20);
-            this.textBox8.TabIndex = 17;
+            this.txtTenKH.Location = new System.Drawing.Point(114, 194);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(199, 20);
+            this.txtTenKH.TabIndex = 17;
             // 
             // label17
             // 
@@ -322,13 +322,6 @@
             this.label17.Size = new System.Drawing.Size(48, 13);
             this.label17.TabIndex = 16;
             this.label17.Text = "Tên KH: ";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(114, 159);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(141, 20);
-            this.textBox7.TabIndex = 15;
             // 
             // label16
             // 
@@ -400,27 +393,28 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Thông tin thanh toán";
             // 
-            // radioButton2
+            // rbThanhVien
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(234, 122);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(79, 17);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Thành viên";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbThanhVien.AutoSize = true;
+            this.rbThanhVien.Location = new System.Drawing.Point(234, 122);
+            this.rbThanhVien.Name = "rbThanhVien";
+            this.rbThanhVien.Size = new System.Drawing.Size(79, 17);
+            this.rbThanhVien.TabIndex = 6;
+            this.rbThanhVien.TabStop = true;
+            this.rbThanhVien.Text = "Thành viên";
+            this.rbThanhVien.UseVisualStyleBackColor = true;
+            this.rbThanhVien.CheckedChanged += new System.EventHandler(this.rbThanhVien_CheckedChanged);
             // 
-            // radioButton1
+            // rbKhachLe
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(14, 122);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(67, 17);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Khách lẻ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbKhachLe.AutoSize = true;
+            this.rbKhachLe.Location = new System.Drawing.Point(14, 122);
+            this.rbKhachLe.Name = "rbKhachLe";
+            this.rbKhachLe.Size = new System.Drawing.Size(67, 17);
+            this.rbKhachLe.TabIndex = 5;
+            this.rbKhachLe.TabStop = true;
+            this.rbKhachLe.Text = "Khách lẻ";
+            this.rbKhachLe.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -669,6 +663,14 @@
             this.cbMaSP.Size = new System.Drawing.Size(139, 21);
             this.cbMaSP.TabIndex = 35;
             // 
+            // cbMaKH
+            // 
+            this.cbMaKH.FormattingEnabled = true;
+            this.cbMaKH.Location = new System.Drawing.Point(114, 163);
+            this.cbMaKH.Name = "cbMaKH";
+            this.cbMaKH.Size = new System.Drawing.Size(141, 21);
+            this.cbMaKH.TabIndex = 37;
+            // 
             // UserControlLapHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -719,8 +721,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTenNV;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbThanhVien;
+        private System.Windows.Forms.RadioButton rbKhachLe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -738,11 +740,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtLoaiTV;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAdd;
@@ -751,7 +752,8 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSaveAndPrint;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSave;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnSearchMem;
         private System.Windows.Forms.ComboBox cbMaSP;
+        private System.Windows.Forms.ComboBox cbMaKH;
     }
 }

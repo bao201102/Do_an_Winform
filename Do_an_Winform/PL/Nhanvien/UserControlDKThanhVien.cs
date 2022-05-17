@@ -40,23 +40,31 @@ namespace Do_an_Winform.PL.Nhanvien
             }else
             {
                 listKH = KhachHangBLL.GetAllCustomer();
-                KhachHangDTO khachHang = new KhachHangDTO();
-                if(listKH.Count + 1 < 10)
+                int count = listKH.Count + 1;
+                string maKH = "KH" + count.ToString("000");
+                KhachHangDTO khachHang = new KhachHangDTO(maKH, txtHoTen.Text, cbGioiTinh.Text, txtEmail.Text, txtSDT.Text, txtDiaChi.Text, "LTV001", "1");
+                if(KhachHangBLL.AddNewCustomer(khachHang))
                 {
-                    MessageBox.Show($"KH00{listKH.Count + 1}");
-                }else if(listKH.Count + 1 >= 10 && listKH.Count + 1 < 100)
-                {
-                    MessageBox.Show($"KH0{listKH.Count + 1}");
-                }else
-                {
-                    MessageBox.Show($"KH{listKH.Count + 1}");
+                    MessageBox.Show("Thêm thành công");
                 }
-                //MessageBox.Show($"KH{listKH.Count + 1}");
             }
         }
         public static string CreateId(List<KhachHangDTO> listKH)
         {
-            return "KH" + listKH.Count + 1;    
+            string maKH = "";
+            if (listKH.Count + 1 < 10)
+            {
+                maKH = $"KH00{listKH.Count + 1}";
+            }
+            else if (listKH.Count + 1 >= 10 && listKH.Count + 1 < 100)
+            {
+                maKH = $"KH0{listKH.Count + 1}";
+            }
+            else
+            {
+                maKH = $"KH{listKH.Count + 1}";
+            }
+            return maKH;
         }
     }
 }
