@@ -27,21 +27,23 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void UserControlSanPham_Load(object sender, EventArgs e)
         {
-
-            listSanPham = SanPhamBLL.GetProByTxtNameChanged(cbTenSP.Text);
-            foreach (SanPhamDTO sp in listSanPham)
+            if (!DesignMode)
             {
-                cbTenSP.Items.Add(sp.TenSP);
-            }
-            dgvAllProduct.DataSource = SanPhamBLL.GetProduct();
-            dgvAllProduct.Columns[0].HeaderText = "Tên SP";
-            dgvAllProduct.Columns[1].HeaderText = "Số lượng";
-            dgvAllProduct.Columns[2].HeaderText = "Đơn giá";
-            dgvAllProduct.Columns[3].HeaderText = "Loại SP";
-            dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
+                listSanPham = SanPhamBLL.GetProByTxtNameChanged(cbTenSP.Text);
+                foreach (SanPhamDTO sp in listSanPham)
+                {
+                    cbTenSP.Items.Add(sp.TenSP);
+                }
+                dgvAllProduct.DataSource = SanPhamBLL.GetProduct();
+                dgvAllProduct.Columns[0].HeaderText = "Tên SP";
+                dgvAllProduct.Columns[1].HeaderText = "Số lượng";
+                dgvAllProduct.Columns[2].HeaderText = "Đơn giá";
+                dgvAllProduct.Columns[3].HeaderText = "Loại SP";
+                dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
+            }         
 
             //listSanPham = SanPhamBLL.GetProduct();
-            //foreach(SanPhamDTO sp in listSanPham)
+            //foreach (SanPhamDTO sp in listSanPham)
             //{
             //    nhasx = NhaSanXuatBLL.GetManufacById(sp.MaNhaSX);
             //    loaisp = LoaiSanPhamBLL.GetProTypeById(sp.MaLoaiSP);

@@ -31,25 +31,28 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void UserControlLapHoaDon_Load(object sender, EventArgs e)
         {
-            listSP = SanPhamBLL.GetAllProduct();
-            foreach(SanPhamDTO sp in listSP)
+            if (!DesignMode)
             {
-                cbMaSP.Items.Add(sp.MaSP);
+                listSP = SanPhamBLL.GetAllProduct();
+                foreach (SanPhamDTO sp in listSP)
+                {
+                    cbMaSP.Items.Add(sp.MaSP);
+                }
+                txtDonGia.Enabled = false;
+                txtTenSP.Enabled = false;
+                txtLoaiSP.Enabled = false;
+                txtThuongHieu.Enabled = false;
+                cbMaKH.Enabled = false;
+                txtTenKH.Enabled = false;
+                txtLoaiTV.Enabled = false;
+                rbKhachLe.Checked = true;
+                if (rbThanhVien.Checked)
+                {
+                    cbMaKH.Enabled = true;
+                    txtTenKH.Enabled = true;
+                    txtLoaiTV.Enabled = true;
+                }
             }
-            txtDonGia.Enabled = false;
-            txtTenSP.Enabled = false;
-            txtLoaiSP.Enabled = false;
-            txtThuongHieu.Enabled = false;
-            cbMaKH.Enabled = false;
-            txtTenKH.Enabled = false;
-            txtLoaiTV.Enabled = false;
-            rbKhachLe.Checked = true;
-            //if(rbThanhVien.Checked)
-            //{
-            //    cbMaKH.Enabled = true;
-            //    txtTenKH.Enabled = true;
-            //    txtLoaiTV.Enabled = true;
-            //}
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
