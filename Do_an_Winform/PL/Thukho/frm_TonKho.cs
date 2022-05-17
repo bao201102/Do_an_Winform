@@ -40,9 +40,5 @@ namespace Do_an_Winform.PL.Thukho
             gridviewStock.Columns[3].HeaderText = "Nhà sản xuất";
         }
 
-        private void gridviewStock_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-
-        }
     }
 }
