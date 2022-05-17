@@ -223,9 +223,6 @@
     <Compile Include="ChiTietPhieuNhap.cs">
       <DependentUpon>CHDT_Entity.tt</DependentUpon>
     </Compile>
-    <Compile Include="ChiTietPhieuXuat.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
     <Compile Include="DAL\LoaiNhanVienDAL.cs" />
@@ -237,7 +234,6 @@
     <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DTO\ChiTietPhieuNhapDTO.cs" />
-    <Compile Include="DTO\ChiTietPhieuXuatDTO.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\KhachHangDTO.cs" />
     <Compile Include="DTO\LoaiNhanVienDTO.cs" />
@@ -247,7 +243,6 @@
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\NhaSanXuatDTO.cs" />
     <Compile Include="DTO\PhieuNhapHangDTO.cs" />
-    <Compile Include="DTO\PhieuXuatHangDTO.cs" />
     <Compile Include="DTO\SanPhamDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
     <Compile Include="HoaDon.cs">
@@ -275,9 +270,6 @@
       <DependentUpon>CHDT_Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="PhieuNhapHang.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PhieuXuatHang.cs">
       <DependentUpon>CHDT_Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="PL\DangNhap\frm_DangNhap.cs">

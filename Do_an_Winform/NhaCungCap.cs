@@ -18,7 +18,6 @@ namespace Do_an_Winform
         public NhaCungCap()
         {
             this.PhieuNhapHangs = new HashSet<PhieuNhapHang>();
-            this.PhieuXuatHangs = new HashSet<PhieuXuatHang>();
         }
     
         public string MaNCC { get; set; }
@@ -26,7 +25,5 @@ namespace Do_an_Winform
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuNhapHang> PhieuNhapHangs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuXuatHang> PhieuXuatHangs { get; set; }
     }
 }

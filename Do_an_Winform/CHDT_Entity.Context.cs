@@ -27,7 +27,6 @@ namespace Do_an_Winform
     
         public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         public virtual DbSet<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
-        public virtual DbSet<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<LoaiNhanVien> LoaiNhanViens { get; set; }
@@ -37,7 +36,6 @@ namespace Do_an_Winform
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<NhaSanXuat> NhaSanXuats { get; set; }
         public virtual DbSet<PhieuNhapHang> PhieuNhapHangs { get; set; }
-        public virtual DbSet<PhieuXuatHang> PhieuXuatHangs { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }

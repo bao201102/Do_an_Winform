@@ -19,7 +19,6 @@ namespace Do_an_Winform
         {
             this.HoaDons = new HashSet<HoaDon>();
             this.PhieuNhapHangs = new HashSet<PhieuNhapHang>();
-            this.PhieuXuatHangs = new HashSet<PhieuXuatHang>();
         }
     
         public string MaNV { get; set; }
@@ -38,7 +37,5 @@ namespace Do_an_Winform
         public virtual TaiKhoan TaiKhoan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuNhapHang> PhieuNhapHangs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuXuatHang> PhieuXuatHangs { get; set; }
     }
 }

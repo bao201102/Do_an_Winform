@@ -19,7 +19,6 @@ namespace Do_an_Winform
         {
             this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
             this.ChiTietPhieuNhaps = new HashSet<ChiTietPhieuNhap>();
-            this.ChiTietPhieuXuats = new HashSet<ChiTietPhieuXuat>();
         }
     
         public string MaSP { get; set; }
@@ -34,8 +33,6 @@ namespace Do_an_Winform
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietPhieuXuat> ChiTietPhieuXuats { get; set; }
         public virtual LoaiSanPham LoaiSanPham { get; set; }
         public virtual NhaSanXuat NhaSanXuat { get; set; }
     }

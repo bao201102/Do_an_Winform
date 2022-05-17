@@ -34,12 +34,20 @@ namespace Do_an_Winform.DTO
 			set { _MaKH = value; }
 		}
 
-		public HoaDonDTO(string MaHD_, DateTime NgayTaoHD_, string MaNV_, string MaKH_)
+		private int _ThanhTien;
+		public int ThanhTien
+		{
+			get { return _ThanhTien; }
+			set { _ThanhTien = value; }
+		}
+
+		public HoaDonDTO(string MaHD_, DateTime NgayTaoHD_, string MaNV_, string MaKH_,int ThanhTien_)
 		{
 			this.MaHD = MaHD_;
 			this.NgayTaoHD = NgayTaoHD_;
 			this.MaNV = MaNV_;
 			this.MaKH = MaKH_;
+			this.ThanhTien = ThanhTien_;
 		}
 		public HoaDonDTO()
 		{
@@ -47,6 +55,7 @@ namespace Do_an_Winform.DTO
 			this.NgayTaoHD = DateTime.Now;
 			this.MaNV = "";
 			this.MaKH = "";
+			this.ThanhTien = 0;
 		}
 	}
 }

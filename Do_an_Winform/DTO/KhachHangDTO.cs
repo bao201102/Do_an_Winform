@@ -57,6 +57,13 @@ namespace Do_an_Winform.DTO
 			set { _MaLoaiTVien = value; }
 		}
 
+		private int _DiemTichLuy;
+		public int DiemTichLuy
+		{
+			get { return _DiemTichLuy; }
+			set { _DiemTichLuy = value; }
+		}
+
 		private string _TrangThai;
 		public string TrangThai
 		{
@@ -74,8 +81,9 @@ namespace Do_an_Winform.DTO
 			this.DiaChi = "";
 			this.MaLoaiTVien = "";
 			this.TrangThai = "";
+			this.DiemTichLuy = 0;
         }
-		public KhachHangDTO(string MaKH_, string TenKH_, string GioiTinh_, string Email_, string SĐT_, string DiaChi_, string MaLoaiTVien_, string TrangThai_)
+		public KhachHangDTO(string MaKH_, string TenKH_, string GioiTinh_, string Email_, string SĐT_, string DiaChi_, string MaLoaiTVien_, string TrangThai_, int DiemTichLuy_)
 		{
 			this.MaKH = MaKH_;
 			this.TenKH = TenKH_;
@@ -85,6 +93,7 @@ namespace Do_an_Winform.DTO
 			this.DiaChi = DiaChi_;
 			this.MaLoaiTVien = MaLoaiTVien_;
 			this.TrangThai = TrangThai_;
+			this.DiemTichLuy = DiemTichLuy_;
 		}
 	}
 }

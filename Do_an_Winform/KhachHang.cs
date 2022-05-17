@@ -28,6 +28,7 @@ namespace Do_an_Winform
         public string DiaChi { get; set; }
         public string MaLoaiTVien { get; set; }
         public string TrangThai { get; set; }
+        public int DiemTichLuy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

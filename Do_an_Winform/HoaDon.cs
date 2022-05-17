@@ -24,6 +24,7 @@ namespace Do_an_Winform
         public System.DateTime NgayTaoHD { get; set; }
         public string MaNV { get; set; }
         public string MaKH { get; set; }
+        public int ThanhTien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
