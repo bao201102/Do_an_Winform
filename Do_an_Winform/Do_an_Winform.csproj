@@ -352,6 +352,12 @@
     <Compile Include="PL\Quanly\frm_HDNH.Designer.cs">
       <DependentUpon>frm_HDNH.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Quanly\frm_QLSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\frm_QLSP.Designer.cs">
+      <DependentUpon>frm_QLSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\frm_TKDT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\frm_HDNH.resx">
       <DependentUpon>frm_HDNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\frm_QLSP.resx">
+      <DependentUpon>frm_QLSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\frm_TKDT.resx">
       <DependentUpon>frm_TKDT.cs</DependentUpon>
