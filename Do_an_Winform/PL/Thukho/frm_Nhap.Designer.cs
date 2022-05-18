@@ -529,7 +529,6 @@ namespace Do_an_Winform.PL.Thukho
             this.btnLuu.TextMarginLeft = 0;
             this.btnLuu.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnLuu.UseDefaultRadiusAndThickness = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // bunifuPanel3
             // 

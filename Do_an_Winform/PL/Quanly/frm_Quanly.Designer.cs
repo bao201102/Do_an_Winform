@@ -32,6 +32,21 @@ namespace Do_an_Winform.PL.Quanly
             this.components = new System.ComponentModel.Container();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Quanly));
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.sidemenu = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.doanhthuPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -49,8 +64,8 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLTK = new Bunifu.Framework.UI.BunifuFlatButton();
             this.subdoitacPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btDoiTac_KH = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btDoiTac_NV = new Bunifu.Framework.UI.BunifuFlatButton();
             this.doitacPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnQLDT = new Bunifu.Framework.UI.BunifuFlatButton();
             this.subuserPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -61,11 +76,27 @@ namespace Do_an_Winform.PL.Quanly
             this.headerPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.slideBtn = new Bunifu.Framework.UI.BunifuImageButton();
             this.mainPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btTimKiemNhanVien = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.titlePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnMaximize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btThemNhanVien = new System.Windows.Forms.Button();
+            this.txtTimKiemNhanVien = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgNhanVien = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTimKiemKhachHang = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.btTimKiemKhachHang = new System.Windows.Forms.Button();
+            this.btThemKhachHang = new System.Windows.Forms.Button();
+            this.dgKhachHang = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.sidemenu.SuspendLayout();
             this.doanhthuPanel.SuspendLayout();
             this.subhoadonPanel.SuspendLayout();
@@ -79,10 +110,16 @@ namespace Do_an_Winform.PL.Quanly
             this.userPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slideBtn)).BeginInit();
+            this.mainPanel.SuspendLayout();
+            this.bunifuPages1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.titlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
             // Transition
@@ -127,10 +164,11 @@ namespace Do_an_Winform.PL.Quanly
             this.sidemenu.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.sidemenu.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.sidemenu.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.sidemenu.Location = new System.Drawing.Point(0, 38);
+            this.sidemenu.Location = new System.Drawing.Point(0, 47);
+            this.sidemenu.Margin = new System.Windows.Forms.Padding(4);
             this.sidemenu.Name = "sidemenu";
             this.sidemenu.Quality = 10;
-            this.sidemenu.Size = new System.Drawing.Size(250, 750);
+            this.sidemenu.Size = new System.Drawing.Size(333, 923);
             this.sidemenu.TabIndex = 3;
             // 
             // doanhthuPanel
@@ -144,10 +182,11 @@ namespace Do_an_Winform.PL.Quanly
             this.doanhthuPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.doanhthuPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.doanhthuPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doanhthuPanel.Location = new System.Drawing.Point(0, 808);
+            this.doanhthuPanel.Location = new System.Drawing.Point(0, 995);
+            this.doanhthuPanel.Margin = new System.Windows.Forms.Padding(4);
             this.doanhthuPanel.Name = "doanhthuPanel";
             this.doanhthuPanel.Quality = 10;
-            this.doanhthuPanel.Size = new System.Drawing.Size(250, 57);
+            this.doanhthuPanel.Size = new System.Drawing.Size(333, 70);
             this.doanhthuPanel.TabIndex = 21;
             // 
             // btnQLDoanhThu
@@ -173,13 +212,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLDoanhThu.IconVisible = true;
             this.btnQLDoanhThu.IconZoom = 60D;
             this.btnQLDoanhThu.IsTab = false;
-            this.btnQLDoanhThu.Location = new System.Drawing.Point(0, 3);
+            this.btnQLDoanhThu.Location = new System.Drawing.Point(0, 4);
+            this.btnQLDoanhThu.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLDoanhThu.Name = "btnQLDoanhThu";
             this.btnQLDoanhThu.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLDoanhThu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLDoanhThu.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLDoanhThu.selected = false;
-            this.btnQLDoanhThu.Size = new System.Drawing.Size(250, 48);
+            this.btnQLDoanhThu.Size = new System.Drawing.Size(333, 59);
             this.btnQLDoanhThu.TabIndex = 2;
             this.btnQLDoanhThu.Text = "Quản lý doanh thu";
             this.btnQLDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,10 +238,11 @@ namespace Do_an_Winform.PL.Quanly
             this.subhoadonPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subhoadonPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subhoadonPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
-            this.subhoadonPanel.Location = new System.Drawing.Point(0, 693);
+            this.subhoadonPanel.Location = new System.Drawing.Point(0, 853);
+            this.subhoadonPanel.Margin = new System.Windows.Forms.Padding(4);
             this.subhoadonPanel.Name = "subhoadonPanel";
             this.subhoadonPanel.Quality = 10;
-            this.subhoadonPanel.Size = new System.Drawing.Size(250, 115);
+            this.subhoadonPanel.Size = new System.Drawing.Size(333, 142);
             this.subhoadonPanel.TabIndex = 14;
             // 
             // bunifuFlatButton5
@@ -227,13 +268,14 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuFlatButton5.IconVisible = true;
             this.bunifuFlatButton5.IconZoom = 60D;
             this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 57);
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 70);
+            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(247, 48);
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(329, 59);
             this.bunifuFlatButton5.TabIndex = 12;
             this.bunifuFlatButton5.Text = "Hóa đơn bán";
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -263,13 +305,14 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuFlatButton6.IconVisible = true;
             this.bunifuFlatButton6.IconZoom = 60D;
             this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 3);
+            this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 4);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton6.selected = true;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(247, 48);
+            this.bunifuFlatButton6.Size = new System.Drawing.Size(329, 59);
             this.bunifuFlatButton6.TabIndex = 11;
             this.bunifuFlatButton6.Text = "Hóa đơn nhập";
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -287,10 +330,11 @@ namespace Do_an_Winform.PL.Quanly
             this.hoadonPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.hoadonPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.hoadonPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.hoadonPanel.Location = new System.Drawing.Point(0, 636);
+            this.hoadonPanel.Location = new System.Drawing.Point(0, 783);
+            this.hoadonPanel.Margin = new System.Windows.Forms.Padding(4);
             this.hoadonPanel.Name = "hoadonPanel";
             this.hoadonPanel.Quality = 10;
-            this.hoadonPanel.Size = new System.Drawing.Size(250, 57);
+            this.hoadonPanel.Size = new System.Drawing.Size(333, 70);
             this.hoadonPanel.TabIndex = 20;
             // 
             // btnQLHD
@@ -316,13 +360,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLHD.IconVisible = true;
             this.btnQLHD.IconZoom = 60D;
             this.btnQLHD.IsTab = false;
-            this.btnQLHD.Location = new System.Drawing.Point(0, 3);
+            this.btnQLHD.Location = new System.Drawing.Point(0, 4);
+            this.btnQLHD.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLHD.Name = "btnQLHD";
             this.btnQLHD.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLHD.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLHD.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLHD.selected = false;
-            this.btnQLHD.Size = new System.Drawing.Size(250, 48);
+            this.btnQLHD.Size = new System.Drawing.Size(333, 59);
             this.btnQLHD.TabIndex = 2;
             this.btnQLHD.Text = "Quản lý hóa đơn";
             this.btnQLHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -341,10 +386,11 @@ namespace Do_an_Winform.PL.Quanly
             this.banchayPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.banchayPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.banchayPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.banchayPanel.Location = new System.Drawing.Point(0, 579);
+            this.banchayPanel.Location = new System.Drawing.Point(0, 713);
+            this.banchayPanel.Margin = new System.Windows.Forms.Padding(4);
             this.banchayPanel.Name = "banchayPanel";
             this.banchayPanel.Quality = 10;
-            this.banchayPanel.Size = new System.Drawing.Size(250, 57);
+            this.banchayPanel.Size = new System.Drawing.Size(333, 70);
             this.banchayPanel.TabIndex = 19;
             // 
             // btnQLBC
@@ -370,13 +416,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLBC.IconVisible = true;
             this.btnQLBC.IconZoom = 60D;
             this.btnQLBC.IsTab = false;
-            this.btnQLBC.Location = new System.Drawing.Point(0, 3);
+            this.btnQLBC.Location = new System.Drawing.Point(0, 4);
+            this.btnQLBC.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLBC.Name = "btnQLBC";
             this.btnQLBC.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLBC.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLBC.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLBC.selected = false;
-            this.btnQLBC.Size = new System.Drawing.Size(250, 48);
+            this.btnQLBC.Size = new System.Drawing.Size(333, 59);
             this.btnQLBC.TabIndex = 2;
             this.btnQLBC.Text = "Quản lý bán chạy";
             this.btnQLBC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -394,10 +441,11 @@ namespace Do_an_Winform.PL.Quanly
             this.sanphamPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.sanphamPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.sanphamPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.sanphamPanel.Location = new System.Drawing.Point(0, 522);
+            this.sanphamPanel.Location = new System.Drawing.Point(0, 643);
+            this.sanphamPanel.Margin = new System.Windows.Forms.Padding(4);
             this.sanphamPanel.Name = "sanphamPanel";
             this.sanphamPanel.Quality = 10;
-            this.sanphamPanel.Size = new System.Drawing.Size(250, 57);
+            this.sanphamPanel.Size = new System.Drawing.Size(333, 70);
             this.sanphamPanel.TabIndex = 18;
             // 
             // btnQLSP
@@ -423,13 +471,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLSP.IconVisible = true;
             this.btnQLSP.IconZoom = 60D;
             this.btnQLSP.IsTab = false;
-            this.btnQLSP.Location = new System.Drawing.Point(0, 3);
+            this.btnQLSP.Location = new System.Drawing.Point(0, 4);
+            this.btnQLSP.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLSP.Name = "btnQLSP";
             this.btnQLSP.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLSP.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLSP.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLSP.selected = false;
-            this.btnQLSP.Size = new System.Drawing.Size(250, 48);
+            this.btnQLSP.Size = new System.Drawing.Size(333, 59);
             this.btnQLSP.TabIndex = 2;
             this.btnQLSP.Text = "Quản lý sản phẩm";
             this.btnQLSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -448,10 +497,11 @@ namespace Do_an_Winform.PL.Quanly
             this.tonkhoPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.tonkhoPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.tonkhoPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.tonkhoPanel.Location = new System.Drawing.Point(0, 465);
+            this.tonkhoPanel.Location = new System.Drawing.Point(0, 573);
+            this.tonkhoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.tonkhoPanel.Name = "tonkhoPanel";
             this.tonkhoPanel.Quality = 10;
-            this.tonkhoPanel.Size = new System.Drawing.Size(250, 57);
+            this.tonkhoPanel.Size = new System.Drawing.Size(333, 70);
             this.tonkhoPanel.TabIndex = 17;
             // 
             // btnQLTK
@@ -477,13 +527,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLTK.IconVisible = true;
             this.btnQLTK.IconZoom = 60D;
             this.btnQLTK.IsTab = false;
-            this.btnQLTK.Location = new System.Drawing.Point(0, 3);
+            this.btnQLTK.Location = new System.Drawing.Point(0, 4);
+            this.btnQLTK.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLTK.Name = "btnQLTK";
             this.btnQLTK.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLTK.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLTK.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLTK.selected = false;
-            this.btnQLTK.Size = new System.Drawing.Size(250, 48);
+            this.btnQLTK.Size = new System.Drawing.Size(333, 59);
             this.btnQLTK.TabIndex = 2;
             this.btnQLTK.Text = "Quản lý tồn kho";
             this.btnQLTK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -495,18 +546,19 @@ namespace Do_an_Winform.PL.Quanly
             this.subdoitacPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("subdoitacPanel.BackgroundImage")));
             this.subdoitacPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.subdoitacPanel.Controls.Add(this.bunifuFlatButton1);
-            this.subdoitacPanel.Controls.Add(this.bunifuFlatButton9);
-            this.subdoitacPanel.Controls.Add(this.bunifuFlatButton10);
+            this.subdoitacPanel.Controls.Add(this.btDoiTac_KH);
+            this.subdoitacPanel.Controls.Add(this.btDoiTac_NV);
             this.Transition.SetDecoration(this.subdoitacPanel, BunifuAnimatorNS.DecorationType.None);
             this.subdoitacPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.subdoitacPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subdoitacPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subdoitacPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subdoitacPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
-            this.subdoitacPanel.Location = new System.Drawing.Point(0, 293);
+            this.subdoitacPanel.Location = new System.Drawing.Point(0, 361);
+            this.subdoitacPanel.Margin = new System.Windows.Forms.Padding(4);
             this.subdoitacPanel.Name = "subdoitacPanel";
             this.subdoitacPanel.Quality = 10;
-            this.subdoitacPanel.Size = new System.Drawing.Size(250, 172);
+            this.subdoitacPanel.Size = new System.Drawing.Size(333, 212);
             this.subdoitacPanel.TabIndex = 15;
             // 
             // bunifuFlatButton1
@@ -532,90 +584,95 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 60D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 111);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 137);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(250, 48);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(333, 59);
             this.bunifuFlatButton1.TabIndex = 13;
             this.bunifuFlatButton1.Text = "Nhà cung cấp";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton9
+            // btDoiTac_KH
             // 
-            this.bunifuFlatButton9.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton9.BorderRadius = 0;
-            this.bunifuFlatButton9.ButtonText = "Khách hàng";
-            this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.bunifuFlatButton9, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton9.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton9.Iconimage = null;
-            this.bunifuFlatButton9.Iconimage_right = null;
-            this.bunifuFlatButton9.Iconimage_right_Selected = null;
-            this.bunifuFlatButton9.Iconimage_Selected = null;
-            this.bunifuFlatButton9.IconMarginLeft = 90;
-            this.bunifuFlatButton9.IconMarginRight = 0;
-            this.bunifuFlatButton9.IconRightVisible = false;
-            this.bunifuFlatButton9.IconRightZoom = 0D;
-            this.bunifuFlatButton9.IconVisible = true;
-            this.bunifuFlatButton9.IconZoom = 60D;
-            this.bunifuFlatButton9.IsTab = false;
-            this.bunifuFlatButton9.Location = new System.Drawing.Point(0, 57);
-            this.bunifuFlatButton9.Name = "bunifuFlatButton9";
-            this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton9.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton9.selected = false;
-            this.bunifuFlatButton9.Size = new System.Drawing.Size(250, 48);
-            this.bunifuFlatButton9.TabIndex = 12;
-            this.bunifuFlatButton9.Text = "Khách hàng";
-            this.bunifuFlatButton9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton9.Textcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton9.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDoiTac_KH.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btDoiTac_KH.BackColor = System.Drawing.Color.Transparent;
+            this.btDoiTac_KH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btDoiTac_KH.BorderRadius = 0;
+            this.btDoiTac_KH.ButtonText = "Khách hàng";
+            this.btDoiTac_KH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btDoiTac_KH, BunifuAnimatorNS.DecorationType.None);
+            this.btDoiTac_KH.DisabledColor = System.Drawing.Color.Gray;
+            this.btDoiTac_KH.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDoiTac_KH.Iconcolor = System.Drawing.Color.Transparent;
+            this.btDoiTac_KH.Iconimage = null;
+            this.btDoiTac_KH.Iconimage_right = null;
+            this.btDoiTac_KH.Iconimage_right_Selected = null;
+            this.btDoiTac_KH.Iconimage_Selected = null;
+            this.btDoiTac_KH.IconMarginLeft = 90;
+            this.btDoiTac_KH.IconMarginRight = 0;
+            this.btDoiTac_KH.IconRightVisible = false;
+            this.btDoiTac_KH.IconRightZoom = 0D;
+            this.btDoiTac_KH.IconVisible = true;
+            this.btDoiTac_KH.IconZoom = 60D;
+            this.btDoiTac_KH.IsTab = false;
+            this.btDoiTac_KH.Location = new System.Drawing.Point(0, 70);
+            this.btDoiTac_KH.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btDoiTac_KH.Name = "btDoiTac_KH";
+            this.btDoiTac_KH.Normalcolor = System.Drawing.Color.Transparent;
+            this.btDoiTac_KH.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btDoiTac_KH.OnHoverTextColor = System.Drawing.Color.White;
+            this.btDoiTac_KH.selected = false;
+            this.btDoiTac_KH.Size = new System.Drawing.Size(333, 59);
+            this.btDoiTac_KH.TabIndex = 12;
+            this.btDoiTac_KH.Text = "Khách hàng";
+            this.btDoiTac_KH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDoiTac_KH.Textcolor = System.Drawing.Color.Transparent;
+            this.btDoiTac_KH.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDoiTac_KH.Click += new System.EventHandler(this.btDoiTac_KH_Click);
             // 
-            // bunifuFlatButton10
+            // btDoiTac_NV
             // 
-            this.bunifuFlatButton10.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton10.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton10.BorderRadius = 0;
-            this.bunifuFlatButton10.ButtonText = "Nhân viên";
-            this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.bunifuFlatButton10, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton10.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton10.Iconimage = null;
-            this.bunifuFlatButton10.Iconimage_right = null;
-            this.bunifuFlatButton10.Iconimage_right_Selected = null;
-            this.bunifuFlatButton10.Iconimage_Selected = null;
-            this.bunifuFlatButton10.IconMarginLeft = 90;
-            this.bunifuFlatButton10.IconMarginRight = 0;
-            this.bunifuFlatButton10.IconRightVisible = false;
-            this.bunifuFlatButton10.IconRightZoom = 0D;
-            this.bunifuFlatButton10.IconVisible = true;
-            this.bunifuFlatButton10.IconZoom = 60D;
-            this.bunifuFlatButton10.IsTab = false;
-            this.bunifuFlatButton10.Location = new System.Drawing.Point(0, 3);
-            this.bunifuFlatButton10.Name = "bunifuFlatButton10";
-            this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton10.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton10.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton10.selected = true;
-            this.bunifuFlatButton10.Size = new System.Drawing.Size(250, 48);
-            this.bunifuFlatButton10.TabIndex = 11;
-            this.bunifuFlatButton10.Text = "Nhân viên";
-            this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton10.Textcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDoiTac_NV.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btDoiTac_NV.BackColor = System.Drawing.Color.Transparent;
+            this.btDoiTac_NV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btDoiTac_NV.BorderRadius = 0;
+            this.btDoiTac_NV.ButtonText = "Nhân viên";
+            this.btDoiTac_NV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btDoiTac_NV, BunifuAnimatorNS.DecorationType.None);
+            this.btDoiTac_NV.DisabledColor = System.Drawing.Color.Gray;
+            this.btDoiTac_NV.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDoiTac_NV.Iconcolor = System.Drawing.Color.Transparent;
+            this.btDoiTac_NV.Iconimage = null;
+            this.btDoiTac_NV.Iconimage_right = null;
+            this.btDoiTac_NV.Iconimage_right_Selected = null;
+            this.btDoiTac_NV.Iconimage_Selected = null;
+            this.btDoiTac_NV.IconMarginLeft = 90;
+            this.btDoiTac_NV.IconMarginRight = 0;
+            this.btDoiTac_NV.IconRightVisible = false;
+            this.btDoiTac_NV.IconRightZoom = 0D;
+            this.btDoiTac_NV.IconVisible = true;
+            this.btDoiTac_NV.IconZoom = 60D;
+            this.btDoiTac_NV.IsTab = false;
+            this.btDoiTac_NV.Location = new System.Drawing.Point(0, 4);
+            this.btDoiTac_NV.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btDoiTac_NV.Name = "btDoiTac_NV";
+            this.btDoiTac_NV.Normalcolor = System.Drawing.Color.Transparent;
+            this.btDoiTac_NV.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btDoiTac_NV.OnHoverTextColor = System.Drawing.Color.White;
+            this.btDoiTac_NV.selected = true;
+            this.btDoiTac_NV.Size = new System.Drawing.Size(333, 59);
+            this.btDoiTac_NV.TabIndex = 11;
+            this.btDoiTac_NV.Text = "Nhân viên";
+            this.btDoiTac_NV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btDoiTac_NV.Textcolor = System.Drawing.Color.Transparent;
+            this.btDoiTac_NV.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDoiTac_NV.Click += new System.EventHandler(this.btDoiTac_NV_Click);
             // 
             // doitacPanel
             // 
@@ -628,10 +685,11 @@ namespace Do_an_Winform.PL.Quanly
             this.doitacPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.doitacPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.doitacPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doitacPanel.Location = new System.Drawing.Point(0, 236);
+            this.doitacPanel.Location = new System.Drawing.Point(0, 291);
+            this.doitacPanel.Margin = new System.Windows.Forms.Padding(4);
             this.doitacPanel.Name = "doitacPanel";
             this.doitacPanel.Quality = 10;
-            this.doitacPanel.Size = new System.Drawing.Size(250, 57);
+            this.doitacPanel.Size = new System.Drawing.Size(333, 70);
             this.doitacPanel.TabIndex = 16;
             // 
             // btnQLDT
@@ -657,13 +715,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLDT.IconVisible = true;
             this.btnQLDT.IconZoom = 60D;
             this.btnQLDT.IsTab = false;
-            this.btnQLDT.Location = new System.Drawing.Point(0, 3);
+            this.btnQLDT.Location = new System.Drawing.Point(0, 4);
+            this.btnQLDT.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLDT.Name = "btnQLDT";
             this.btnQLDT.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLDT.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLDT.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLDT.selected = false;
-            this.btnQLDT.Size = new System.Drawing.Size(250, 48);
+            this.btnQLDT.Size = new System.Drawing.Size(333, 59);
             this.btnQLDT.TabIndex = 2;
             this.btnQLDT.Text = "Quản lý đối tác";
             this.btnQLDT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -683,10 +742,11 @@ namespace Do_an_Winform.PL.Quanly
             this.subuserPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subuserPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subuserPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
-            this.subuserPanel.Location = new System.Drawing.Point(0, 121);
+            this.subuserPanel.Location = new System.Drawing.Point(0, 149);
+            this.subuserPanel.Margin = new System.Windows.Forms.Padding(4);
             this.subuserPanel.Name = "subuserPanel";
             this.subuserPanel.Quality = 10;
-            this.subuserPanel.Size = new System.Drawing.Size(250, 115);
+            this.subuserPanel.Size = new System.Drawing.Size(333, 142);
             this.subuserPanel.TabIndex = 13;
             // 
             // btnLogout
@@ -712,13 +772,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnLogout.IconVisible = true;
             this.btnLogout.IconZoom = 60D;
             this.btnLogout.IsTab = false;
-            this.btnLogout.Location = new System.Drawing.Point(0, 57);
+            this.btnLogout.Location = new System.Drawing.Point(0, 70);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Normalcolor = System.Drawing.Color.Transparent;
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogout.selected = false;
-            this.btnLogout.Size = new System.Drawing.Size(250, 48);
+            this.btnLogout.Size = new System.Drawing.Size(333, 59);
             this.btnLogout.TabIndex = 12;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -749,13 +810,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnThongtin.IconVisible = true;
             this.btnThongtin.IconZoom = 60D;
             this.btnThongtin.IsTab = false;
-            this.btnThongtin.Location = new System.Drawing.Point(0, 3);
+            this.btnThongtin.Location = new System.Drawing.Point(0, 4);
+            this.btnThongtin.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnThongtin.Name = "btnThongtin";
             this.btnThongtin.Normalcolor = System.Drawing.Color.Transparent;
             this.btnThongtin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnThongtin.OnHoverTextColor = System.Drawing.Color.White;
             this.btnThongtin.selected = true;
-            this.btnThongtin.Size = new System.Drawing.Size(250, 48);
+            this.btnThongtin.Size = new System.Drawing.Size(333, 59);
             this.btnThongtin.TabIndex = 11;
             this.btnThongtin.Text = "Thông tin";
             this.btnThongtin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -774,10 +836,11 @@ namespace Do_an_Winform.PL.Quanly
             this.userPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.userPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.userPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.userPanel.Location = new System.Drawing.Point(0, 56);
+            this.userPanel.Location = new System.Drawing.Point(0, 69);
+            this.userPanel.Margin = new System.Windows.Forms.Padding(4);
             this.userPanel.Name = "userPanel";
             this.userPanel.Quality = 10;
-            this.userPanel.Size = new System.Drawing.Size(250, 65);
+            this.userPanel.Size = new System.Drawing.Size(333, 80);
             this.userPanel.TabIndex = 14;
             // 
             // userBtn
@@ -803,13 +866,14 @@ namespace Do_an_Winform.PL.Quanly
             this.userBtn.IconVisible = true;
             this.userBtn.IconZoom = 90D;
             this.userBtn.IsTab = false;
-            this.userBtn.Location = new System.Drawing.Point(0, 6);
+            this.userBtn.Location = new System.Drawing.Point(0, 7);
+            this.userBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.userBtn.Name = "userBtn";
             this.userBtn.Normalcolor = System.Drawing.Color.Transparent;
             this.userBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.userBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.userBtn.selected = true;
-            this.userBtn.Size = new System.Drawing.Size(250, 48);
+            this.userBtn.Size = new System.Drawing.Size(333, 59);
             this.userBtn.TabIndex = 4;
             this.userBtn.Text = "Lồ Sìn Dậu";
             this.userBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -829,9 +893,10 @@ namespace Do_an_Winform.PL.Quanly
             this.headerPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.headerPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Quality = 10;
-            this.headerPanel.Size = new System.Drawing.Size(250, 56);
+            this.headerPanel.Size = new System.Drawing.Size(333, 69);
             this.headerPanel.TabIndex = 15;
             // 
             // slideBtn
@@ -840,9 +905,10 @@ namespace Do_an_Winform.PL.Quanly
             this.Transition.SetDecoration(this.slideBtn, BunifuAnimatorNS.DecorationType.None);
             this.slideBtn.Image = ((System.Drawing.Image)(resources.GetObject("slideBtn.Image")));
             this.slideBtn.ImageActive = null;
-            this.slideBtn.Location = new System.Drawing.Point(9, 19);
+            this.slideBtn.Location = new System.Drawing.Point(12, 23);
+            this.slideBtn.Margin = new System.Windows.Forms.Padding(4);
             this.slideBtn.Name = "slideBtn";
-            this.slideBtn.Size = new System.Drawing.Size(35, 20);
+            this.slideBtn.Size = new System.Drawing.Size(47, 25);
             this.slideBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.slideBtn.TabIndex = 6;
             this.slideBtn.TabStop = false;
@@ -856,16 +922,133 @@ namespace Do_an_Winform.PL.Quanly
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainPanel.Controls.Add(this.bunifuPages1);
             this.Transition.SetDecoration(this.mainPanel, BunifuAnimatorNS.DecorationType.None);
             this.mainPanel.GradientBottomLeft = System.Drawing.Color.White;
             this.mainPanel.GradientBottomRight = System.Drawing.Color.White;
             this.mainPanel.GradientTopLeft = System.Drawing.Color.White;
             this.mainPanel.GradientTopRight = System.Drawing.Color.White;
-            this.mainPanel.Location = new System.Drawing.Point(260, 45);
+            this.mainPanel.Location = new System.Drawing.Point(347, 55);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Quality = 10;
-            this.mainPanel.Size = new System.Drawing.Size(1108, 732);
+            this.mainPanel.Size = new System.Drawing.Size(1477, 901);
             this.mainPanel.TabIndex = 5;
+            // 
+            // bunifuPages1
+            // 
+            this.bunifuPages1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.bunifuPages1.AllowTransitions = false;
+            this.bunifuPages1.Controls.Add(this.tabPage1);
+            this.bunifuPages1.Controls.Add(this.tabPage2);
+            this.bunifuPages1.Controls.Add(this.tabPage3);
+            this.bunifuPages1.Controls.Add(this.tabPage4);
+            this.bunifuPages1.Controls.Add(this.tabPage5);
+            this.Transition.SetDecoration(this.bunifuPages1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuPages1.Location = new System.Drawing.Point(4, 0);
+            this.bunifuPages1.Multiline = true;
+            this.bunifuPages1.Name = "bunifuPages1";
+            this.bunifuPages1.Page = this.tabPage3;
+            this.bunifuPages1.PageIndex = 2;
+            this.bunifuPages1.PageName = "tabPage3";
+            this.bunifuPages1.PageTitle = "tabPage3";
+            this.bunifuPages1.SelectedIndex = 0;
+            this.bunifuPages1.Size = new System.Drawing.Size(1800, 898);
+            this.bunifuPages1.TabIndex = 0;
+            animation2.AnimateOnlyDifferences = false;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.bunifuPages1.Transition = animation2;
+            this.bunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            // 
+            // tabPage1
+            // 
+            this.Transition.SetDecoration(this.tabPage1, BunifuAnimatorNS.DecorationType.None);
+            this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1792, 869);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgNhanVien);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.txtTimKiemNhanVien);
+            this.tabPage2.Controls.Add(this.btThemNhanVien);
+            this.tabPage2.Controls.Add(this.btTimKiemNhanVien);
+            this.Transition.SetDecoration(this.tabPage2, BunifuAnimatorNS.DecorationType.None);
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1792, 869);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btTimKiemNhanVien
+            // 
+            this.btTimKiemNhanVien.BackgroundImage = global::Do_an_Winform.Properties.Resources.search;
+            this.btTimKiemNhanVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Transition.SetDecoration(this.btTimKiemNhanVien, BunifuAnimatorNS.DecorationType.None);
+            this.btTimKiemNhanVien.Location = new System.Drawing.Point(848, 57);
+            this.btTimKiemNhanVien.Name = "btTimKiemNhanVien";
+            this.btTimKiemNhanVien.Size = new System.Drawing.Size(46, 43);
+            this.btTimKiemNhanVien.TabIndex = 0;
+            this.btTimKiemNhanVien.UseVisualStyleBackColor = true;
+            this.btTimKiemNhanVien.Click += new System.EventHandler(this.btTimKiemNhanVien_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dgKhachHang);
+            this.tabPage3.Controls.Add(this.btThemKhachHang);
+            this.tabPage3.Controls.Add(this.btTimKiemKhachHang);
+            this.tabPage3.Controls.Add(this.txtTimKiemKhachHang);
+            this.tabPage3.Controls.Add(this.label2);
+            this.Transition.SetDecoration(this.tabPage3, BunifuAnimatorNS.DecorationType.None);
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1792, 869);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.Transition.SetDecoration(this.tabPage4, BunifuAnimatorNS.DecorationType.None);
+            this.tabPage4.Location = new System.Drawing.Point(4, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1792, 869);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.Transition.SetDecoration(this.tabPage5, BunifuAnimatorNS.DecorationType.None);
+            this.tabPage5.Location = new System.Drawing.Point(4, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1792, 869);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // titlePanel
             // 
@@ -881,9 +1064,10 @@ namespace Do_an_Winform.PL.Quanly
             this.titlePanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.titlePanel.GradientTopRight = System.Drawing.Color.White;
             this.titlePanel.Location = new System.Drawing.Point(0, 0);
+            this.titlePanel.Margin = new System.Windows.Forms.Padding(4);
             this.titlePanel.Name = "titlePanel";
             this.titlePanel.Quality = 10;
-            this.titlePanel.Size = new System.Drawing.Size(1380, 38);
+            this.titlePanel.Size = new System.Drawing.Size(1840, 47);
             this.titlePanel.TabIndex = 4;
             // 
             // btnMaximize
@@ -893,9 +1077,10 @@ namespace Do_an_Winform.PL.Quanly
             this.Transition.SetDecoration(this.btnMaximize, BunifuAnimatorNS.DecorationType.None);
             this.btnMaximize.Image = global::Do_an_Winform.Properties.Resources.full_screen;
             this.btnMaximize.ImageActive = null;
-            this.btnMaximize.Location = new System.Drawing.Point(1311, 12);
+            this.btnMaximize.Location = new System.Drawing.Point(1748, 15);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(18, 22);
+            this.btnMaximize.Size = new System.Drawing.Size(24, 27);
             this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaximize.TabIndex = 4;
             this.btnMaximize.TabStop = false;
@@ -909,9 +1094,10 @@ namespace Do_an_Winform.PL.Quanly
             this.Transition.SetDecoration(this.btnMinimize, BunifuAnimatorNS.DecorationType.None);
             this.btnMinimize.Image = global::Do_an_Winform.Properties.Resources.minus;
             this.btnMinimize.ImageActive = null;
-            this.btnMinimize.Location = new System.Drawing.Point(1267, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(1689, 15);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(23, 22);
+            this.btnMinimize.Size = new System.Drawing.Size(31, 27);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.TabStop = false;
@@ -925,9 +1111,10 @@ namespace Do_an_Winform.PL.Quanly
             this.Transition.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
             this.btnClose.Image = global::Do_an_Winform.Properties.Resources.crossed;
             this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(1347, 12);
+            this.btnClose.Location = new System.Drawing.Point(1796, 15);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(21, 22);
+            this.btnClose.Size = new System.Drawing.Size(28, 27);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnClose.TabIndex = 2;
             this.btnClose.TabStop = false;
@@ -939,16 +1126,355 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // btThemNhanVien
+            // 
+            this.btThemNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.Transition.SetDecoration(this.btThemNhanVien, BunifuAnimatorNS.DecorationType.None);
+            this.btThemNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemNhanVien.ForeColor = System.Drawing.Color.Blue;
+            this.btThemNhanVien.Location = new System.Drawing.Point(1159, 57);
+            this.btThemNhanVien.Name = "btThemNhanVien";
+            this.btThemNhanVien.Size = new System.Drawing.Size(128, 43);
+            this.btThemNhanVien.TabIndex = 1;
+            this.btThemNhanVien.Text = "Thêm";
+            this.btThemNhanVien.UseVisualStyleBackColor = false;
+            this.btThemNhanVien.Click += new System.EventHandler(this.btThemNhanVien_Click);
+            // 
+            // txtTimKiemNhanVien
+            // 
+            this.txtTimKiemNhanVien.AcceptsReturn = false;
+            this.txtTimKiemNhanVien.AcceptsTab = false;
+            this.txtTimKiemNhanVien.AnimationSpeed = 200;
+            this.txtTimKiemNhanVien.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtTimKiemNhanVien.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtTimKiemNhanVien.AutoSizeHeight = true;
+            this.txtTimKiemNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.txtTimKiemNhanVien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTimKiemNhanVien.BackgroundImage")));
+            this.txtTimKiemNhanVien.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtTimKiemNhanVien.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtTimKiemNhanVien.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtTimKiemNhanVien.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtTimKiemNhanVien.BorderRadius = 1;
+            this.txtTimKiemNhanVien.BorderThickness = 1;
+            this.txtTimKiemNhanVien.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtTimKiemNhanVien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Transition.SetDecoration(this.txtTimKiemNhanVien, BunifuAnimatorNS.DecorationType.None);
+            this.txtTimKiemNhanVien.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtTimKiemNhanVien.DefaultText = "";
+            this.txtTimKiemNhanVien.FillColor = System.Drawing.Color.White;
+            this.txtTimKiemNhanVien.HideSelection = true;
+            this.txtTimKiemNhanVien.IconLeft = null;
+            this.txtTimKiemNhanVien.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiemNhanVien.IconPadding = 10;
+            this.txtTimKiemNhanVien.IconRight = null;
+            this.txtTimKiemNhanVien.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiemNhanVien.Lines = new string[0];
+            this.txtTimKiemNhanVien.Location = new System.Drawing.Point(358, 57);
+            this.txtTimKiemNhanVien.MaxLength = 32767;
+            this.txtTimKiemNhanVien.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtTimKiemNhanVien.Modified = false;
+            this.txtTimKiemNhanVien.Multiline = false;
+            this.txtTimKiemNhanVien.Name = "txtTimKiemNhanVien";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTimKiemNhanVien.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtTimKiemNhanVien.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTimKiemNhanVien.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTimKiemNhanVien.OnIdleState = stateProperties4;
+            this.txtTimKiemNhanVien.Padding = new System.Windows.Forms.Padding(3);
+            this.txtTimKiemNhanVien.PasswordChar = '\0';
+            this.txtTimKiemNhanVien.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtTimKiemNhanVien.PlaceholderText = "Enter text";
+            this.txtTimKiemNhanVien.ReadOnly = false;
+            this.txtTimKiemNhanVien.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTimKiemNhanVien.SelectedText = "";
+            this.txtTimKiemNhanVien.SelectionLength = 0;
+            this.txtTimKiemNhanVien.SelectionStart = 0;
+            this.txtTimKiemNhanVien.ShortcutsEnabled = true;
+            this.txtTimKiemNhanVien.Size = new System.Drawing.Size(483, 43);
+            this.txtTimKiemNhanVien.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtTimKiemNhanVien.TabIndex = 2;
+            this.txtTimKiemNhanVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTimKiemNhanVien.TextMarginBottom = 0;
+            this.txtTimKiemNhanVien.TextMarginLeft = 3;
+            this.txtTimKiemNhanVien.TextMarginTop = 1;
+            this.txtTimKiemNhanVien.TextPlaceholder = "Enter text";
+            this.txtTimKiemNhanVien.UseSystemPasswordChar = false;
+            this.txtTimKiemNhanVien.WordWrap = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.Transition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(61, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nhân viên";
+            // 
+            // dgNhanVien
+            // 
+            this.dgNhanVien.AllowCustomTheming = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgNhanVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgNhanVien.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgNhanVien.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgNhanVien.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgNhanVien.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgNhanVien.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgNhanVien.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgNhanVien.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgNhanVien.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgNhanVien.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgNhanVien.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgNhanVien.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgNhanVien.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgNhanVien.CurrentTheme.Name = null;
+            this.dgNhanVien.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgNhanVien.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgNhanVien.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgNhanVien.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgNhanVien.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.Transition.SetDecoration(this.dgNhanVien, BunifuAnimatorNS.DecorationType.None);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgNhanVien.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgNhanVien.EnableHeadersVisualStyles = false;
+            this.dgNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgNhanVien.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgNhanVien.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgNhanVien.HeaderForeColor = System.Drawing.Color.White;
+            this.dgNhanVien.Location = new System.Drawing.Point(6, 262);
+            this.dgNhanVien.Name = "dgNhanVien";
+            this.dgNhanVien.RowHeadersVisible = false;
+            this.dgNhanVien.RowHeadersWidth = 51;
+            this.dgNhanVien.RowTemplate.Height = 40;
+            this.dgNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgNhanVien.Size = new System.Drawing.Size(1700, 560);
+            this.dgNhanVien.TabIndex = 4;
+            this.dgNhanVien.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.Transition.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(61, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Khách hàng";
+            // 
+            // txtTimKiemKhachHang
+            // 
+            this.txtTimKiemKhachHang.AcceptsReturn = false;
+            this.txtTimKiemKhachHang.AcceptsTab = false;
+            this.txtTimKiemKhachHang.AnimationSpeed = 200;
+            this.txtTimKiemKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtTimKiemKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtTimKiemKhachHang.AutoSizeHeight = true;
+            this.txtTimKiemKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.txtTimKiemKhachHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTimKiemKhachHang.BackgroundImage")));
+            this.txtTimKiemKhachHang.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtTimKiemKhachHang.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtTimKiemKhachHang.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtTimKiemKhachHang.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtTimKiemKhachHang.BorderRadius = 1;
+            this.txtTimKiemKhachHang.BorderThickness = 1;
+            this.txtTimKiemKhachHang.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtTimKiemKhachHang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Transition.SetDecoration(this.txtTimKiemKhachHang, BunifuAnimatorNS.DecorationType.None);
+            this.txtTimKiemKhachHang.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtTimKiemKhachHang.DefaultText = "";
+            this.txtTimKiemKhachHang.FillColor = System.Drawing.Color.White;
+            this.txtTimKiemKhachHang.HideSelection = true;
+            this.txtTimKiemKhachHang.IconLeft = null;
+            this.txtTimKiemKhachHang.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiemKhachHang.IconPadding = 10;
+            this.txtTimKiemKhachHang.IconRight = null;
+            this.txtTimKiemKhachHang.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiemKhachHang.Lines = new string[0];
+            this.txtTimKiemKhachHang.Location = new System.Drawing.Point(358, 57);
+            this.txtTimKiemKhachHang.MaxLength = 32767;
+            this.txtTimKiemKhachHang.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtTimKiemKhachHang.Modified = false;
+            this.txtTimKiemKhachHang.Multiline = false;
+            this.txtTimKiemKhachHang.Name = "txtTimKiemKhachHang";
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTimKiemKhachHang.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtTimKiemKhachHang.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTimKiemKhachHang.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTimKiemKhachHang.OnIdleState = stateProperties8;
+            this.txtTimKiemKhachHang.Padding = new System.Windows.Forms.Padding(3);
+            this.txtTimKiemKhachHang.PasswordChar = '\0';
+            this.txtTimKiemKhachHang.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtTimKiemKhachHang.PlaceholderText = "Enter text";
+            this.txtTimKiemKhachHang.ReadOnly = false;
+            this.txtTimKiemKhachHang.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTimKiemKhachHang.SelectedText = "";
+            this.txtTimKiemKhachHang.SelectionLength = 0;
+            this.txtTimKiemKhachHang.SelectionStart = 0;
+            this.txtTimKiemKhachHang.ShortcutsEnabled = true;
+            this.txtTimKiemKhachHang.Size = new System.Drawing.Size(483, 43);
+            this.txtTimKiemKhachHang.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtTimKiemKhachHang.TabIndex = 1;
+            this.txtTimKiemKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTimKiemKhachHang.TextMarginBottom = 0;
+            this.txtTimKiemKhachHang.TextMarginLeft = 3;
+            this.txtTimKiemKhachHang.TextMarginTop = 1;
+            this.txtTimKiemKhachHang.TextPlaceholder = "Enter text";
+            this.txtTimKiemKhachHang.UseSystemPasswordChar = false;
+            this.txtTimKiemKhachHang.WordWrap = true;
+            // 
+            // btTimKiemKhachHang
+            // 
+            this.btTimKiemKhachHang.BackgroundImage = global::Do_an_Winform.Properties.Resources.search;
+            this.btTimKiemKhachHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Transition.SetDecoration(this.btTimKiemKhachHang, BunifuAnimatorNS.DecorationType.None);
+            this.btTimKiemKhachHang.Location = new System.Drawing.Point(848, 57);
+            this.btTimKiemKhachHang.Name = "btTimKiemKhachHang";
+            this.btTimKiemKhachHang.Size = new System.Drawing.Size(46, 43);
+            this.btTimKiemKhachHang.TabIndex = 2;
+            this.btTimKiemKhachHang.UseVisualStyleBackColor = true;
+            this.btTimKiemKhachHang.Click += new System.EventHandler(this.btTimKiemKhachHang_Click);
+            // 
+            // btThemKhachHang
+            // 
+            this.btThemKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.Transition.SetDecoration(this.btThemKhachHang, BunifuAnimatorNS.DecorationType.None);
+            this.btThemKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemKhachHang.ForeColor = System.Drawing.Color.Blue;
+            this.btThemKhachHang.Location = new System.Drawing.Point(1159, 57);
+            this.btThemKhachHang.Name = "btThemKhachHang";
+            this.btThemKhachHang.Size = new System.Drawing.Size(128, 43);
+            this.btThemKhachHang.TabIndex = 3;
+            this.btThemKhachHang.Text = "Thêm";
+            this.btThemKhachHang.UseVisualStyleBackColor = false;
+            this.btThemKhachHang.Click += new System.EventHandler(this.btThemKhachHang_Click);
+            // 
+            // dgKhachHang
+            // 
+            this.dgKhachHang.AllowCustomTheming = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgKhachHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgKhachHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgKhachHang.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgKhachHang.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgKhachHang.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgKhachHang.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgKhachHang.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgKhachHang.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgKhachHang.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgKhachHang.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgKhachHang.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgKhachHang.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgKhachHang.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgKhachHang.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgKhachHang.CurrentTheme.Name = null;
+            this.dgKhachHang.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgKhachHang.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgKhachHang.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgKhachHang.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgKhachHang.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.Transition.SetDecoration(this.dgKhachHang, BunifuAnimatorNS.DecorationType.None);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgKhachHang.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgKhachHang.EnableHeadersVisualStyles = false;
+            this.dgKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgKhachHang.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgKhachHang.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgKhachHang.HeaderForeColor = System.Drawing.Color.White;
+            this.dgKhachHang.Location = new System.Drawing.Point(6, 262);
+            this.dgKhachHang.Name = "dgKhachHang";
+            this.dgKhachHang.RowHeadersVisible = false;
+            this.dgKhachHang.RowHeadersWidth = 51;
+            this.dgKhachHang.RowTemplate.Height = 40;
+            this.dgKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgKhachHang.Size = new System.Drawing.Size(1700, 560);
+            this.dgKhachHang.TabIndex = 4;
+            this.dgKhachHang.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
             // frm_Quanly
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 788);
+            this.ClientSize = new System.Drawing.Size(1840, 970);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.titlePanel);
             this.Transition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Quanly";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -966,10 +1492,18 @@ namespace Do_an_Winform.PL.Quanly
             this.userPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.slideBtn)).EndInit();
+            this.mainPanel.ResumeLayout(false);
+            this.bunifuPages1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.titlePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgKhachHang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -996,8 +1530,8 @@ namespace Do_an_Winform.PL.Quanly
         private Bunifu.Framework.UI.BunifuGradientPanel doitacPanel;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLDT;
         private Bunifu.Framework.UI.BunifuGradientPanel subdoitacPanel;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton9;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton10;
+        private Bunifu.Framework.UI.BunifuFlatButton btDoiTac_KH;
+        private Bunifu.Framework.UI.BunifuFlatButton btDoiTac_NV;
         private Bunifu.Framework.UI.BunifuGradientPanel doanhthuPanel;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLDoanhThu;
         private Bunifu.Framework.UI.BunifuGradientPanel hoadonPanel;
@@ -1009,5 +1543,21 @@ namespace Do_an_Winform.PL.Quanly
         private Bunifu.Framework.UI.BunifuGradientPanel tonkhoPanel;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLTK;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.UI.WinForms.BunifuPages bunifuPages1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button btTimKiemNhanVien;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgNhanVien;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuTextBox txtTimKiemNhanVien;
+        private System.Windows.Forms.Button btThemNhanVien;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgKhachHang;
+        private System.Windows.Forms.Button btThemKhachHang;
+        private System.Windows.Forms.Button btTimKiemKhachHang;
+        private Bunifu.UI.WinForms.BunifuTextBox txtTimKiemKhachHang;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -22,5 +22,14 @@ namespace Do_an_Winform.BLL
         {
             return KhachHangDAL.AddNewCustomer(kh);
         }
+        public static KhachHangDTO GetCustomerWithName(string name)
+        {
+            return KhachHangDAL.GetCustomerWithName(name);
+        }
+        public static bool AddCustomer(KhachHangDTO dto)
+        {
+            return KhachHangDAL.AddCustomer(dto);
+        }
+
     }
 }

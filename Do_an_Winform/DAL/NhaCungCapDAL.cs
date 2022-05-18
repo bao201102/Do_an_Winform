@@ -29,5 +29,41 @@ namespace Do_an_Winform.DAL
             return nhaCungCapDTOs;
 
         }
+        public static bool AddNCC(NhaCungCapDTO dto)
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCapDTO, NhaCungCap>());
+            var mapper = new Mapper(config);
+            NhaCungCap ncc = mapper.Map<NhaCungCap>(dto);
+            data.NhaCungCaps.Add(ncc);
+            return data.SaveChanges() > 0 ? true : false;
+        }
+        public static NhaCungCapDTO GetSupplyWithName(string name)
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            NhaCungCap ncc = (from nv in data.NhaCungCaps
+                              where nv.TenNCC == name.Trim().ToLower()
+                              select nv).SingleOrDefault();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
+            var mapper = new Mapper(config);
+            NhaCungCapDTO dto = mapper.Map<NhaCungCapDTO>(ncc);
+            return dto;
+        }
+        public static List<NhaCungCapDTO> GetAllSupply()
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            List<NhaCungCapDTO> list = new List<NhaCungCapDTO>();
+            var nhacungcap = from ncc in data.NhaCungCaps
+                             select ncc;
+            foreach (NhaCungCap ncc in nhacungcap)
+            {
+                NhaCungCapDTO dto = new NhaCungCapDTO();
+                dto.MaNCC = ncc.MaNCC;
+                dto.TenNCC = ncc.TenNCC;
+                list.Add(dto);
+            }
+            return list;
+        }
+
     }
 }

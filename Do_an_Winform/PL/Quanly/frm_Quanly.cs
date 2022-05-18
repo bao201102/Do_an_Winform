@@ -34,6 +34,7 @@ namespace Do_an_Winform.PL.Quanly
             nhanvien = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
             loainhanvien = LoaiNhanVienBLL.GetEmpType(nhanvien.MaLoaiNV);
             userBtn.Text = nhanvien.TenNV;
+            bunifuPages1.PageIndex = 0;
         }
 
         private void slideBtn_Click(object sender, EventArgs e)
@@ -164,6 +165,99 @@ namespace Do_an_Winform.PL.Quanly
         private void btnQLSP_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frm_QLSP());
+        }
+
+
+
+
+
+        //                             Đối tác - Nhân viên
+        
+
+
+
+
+        private void btDoiTac_NV_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 1;
+        }
+
+        private void btTimKiemNhanVien_Click(object sender, EventArgs e)
+        {
+            string name = txtTimKiemNhanVien.Text;
+            if (name != "")
+            {
+                List<NhanVienDTO> list = new List<NhanVienDTO>();
+                NhanVienDTO dto = NhanVienBLL.GetEmployeeWithName(name);
+                list.Add(dto);
+                dgNhanVien.DataSource = list;
+            }
+            else
+            {
+                List<NhanVienDTO> list = NhanVienBLL.GetAllEmployee();
+                dgNhanVien.DataSource = list;
+            }
+
+            dgNhanVien.Columns[0].HeaderText = "Mã nhân viên";
+            dgNhanVien.Columns[1].HeaderText = "Tên nhân viên";
+            dgNhanVien.Columns[2].HeaderText = "Giới tính";
+            dgNhanVien.Columns[3].HeaderText = "Email";
+            dgNhanVien.Columns[4].HeaderText = "Số điện thoại";
+            dgNhanVien.Columns[5].HeaderText = "Địa chỉ";
+            dgNhanVien.Columns[6].HeaderText = "Mã loại nhân viên";
+            dgNhanVien.Columns[7].HeaderText = "Mã người dùng";
+            dgNhanVien.Columns[8].HeaderText = "Trạng thái";
+        }
+
+        private void btThemNhanVien_Click(object sender, EventArgs e)
+        {
+            frm_ThemNV form = new frm_ThemNV();
+            this.Hide();
+            form.ShowDialog();
+        }
+
+
+
+
+        //                                 Đối tác - Khách hàng
+        
+
+
+
+        private void btDoiTac_KH_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 2;
+        }
+
+        private void btTimKiemKhachHang_Click(object sender, EventArgs e)
+        {
+            string name = txtTimKiemKhachHang.Text;
+            if (name != "")
+            {
+                List<KhachHangDTO> list = new List<KhachHangDTO>();
+                KhachHangDTO dto = KhachHangBLL.GetCustomerWithName(name);
+                list.Add(dto);
+                dgNhanVien.DataSource = list;
+            }
+            else
+            {
+                List<KhachHangDTO> list = KhachHangBLL.GetAllCustomer();
+                dgKhachHang.DataSource = list;
+            }
+            dgKhachHang.Columns[0].HeaderText = "Mã khách hàng";
+            dgKhachHang.Columns[1].HeaderText = "Tên khách hàng";
+            dgKhachHang.Columns[2].HeaderText = "Giới tính";
+            dgKhachHang.Columns[3].HeaderText = "Email";
+            dgKhachHang.Columns[4].HeaderText = "Số điện thoại";
+            dgKhachHang.Columns[5].HeaderText = "Địa chỉ";
+            dgKhachHang.Columns[6].HeaderText = "Mã loại thành viên";
+        }
+
+        private void btThemKhachHang_Click(object sender, EventArgs e)
+        {
+            frm_ThemKH form = new frm_ThemKH();
+            this.Hide();
+            form.ShowDialog();
         }
     }
 }
