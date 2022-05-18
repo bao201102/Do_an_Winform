@@ -40,8 +40,13 @@ namespace Do_an_Winform.PL.Nhanvien
                 dgvAllProduct.Columns[2].HeaderText = "Đơn giá";
                 dgvAllProduct.Columns[3].HeaderText = "Loại SP";
                 dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
-            }         
-
+            }
+            cbLoaiSP.DataSource = LoaiSanPhamBLL.GetAllCat();
+            cbLoaiSP.DisplayMember = "TenLoaiSP";
+            cbLoaiSP.ValueMember = "MaLoaiSP";
+            cbThuongHieu.DataSource = NhaSanXuatBLL.GetAllManufac();
+            cbThuongHieu.DisplayMember = "TenNhaSX";
+            cbThuongHieu.ValueMember = "MaNhaSX";
             //listSanPham = SanPhamBLL.GetProduct();
             //foreach (SanPhamDTO sp in listSanPham)
             //{
@@ -69,20 +74,31 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void cbTenSP_TextChanged(object sender, EventArgs e)
         {
-            //listSanPham = SanPhamBLL.GetProByTxtNameChanged(cbTenSP.Text);
-            //foreach (SanPhamDTO sp in listSanPham)
-            //{
-            //    cbTenSP.Items.Add(sp.TenSP);
-            //}
-            listSP = SanPhamBLL.GetAllProductByName(cbTenSP.Text);
-            dgvAllProduct.DataSource = listSP;
-            //dgvAllProduct.Columns[0].Visible = false;
-            //dgvAllProduct.Columns[0].HeaderText = "Tên SP";
-            //dgvAllProduct.Columns[1].HeaderText = "Số lượng";
-            //dgvAllProduct.Columns[2].HeaderText = "Đơn giá";
-            //dgvAllProduct.Columns[3].HeaderText = "Loại SP";
-            //dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
-            //dgvAllProduct.Columns[6].Visible = false;
+            listSanPham = SanPhamBLL.GetProByTxtNameChanged(cbTenSP.Text);
+            foreach (SanPhamDTO sp in listSanPham)
+            {
+                nhasx = NhaSanXuatBLL.GetManufacById(sp.MaNhaSX);
+                loaisp = LoaiSanPhamBLL.GetProTypeById(sp.MaLoaiSP);
+                sp.MaLoaiSP = loaisp.TenLoaiSP;
+                sp.MaNhaSX = nhasx.TenNhaSX;
+                cbTenSP.Items.Add(sp.TenSP);
+            }
+            dgvAllProduct.DataSource = listSanPham;
+            dgvAllProduct.Columns[0].Visible = false;
+            dgvAllProduct.Columns[1].HeaderText = "Tên SP";
+            dgvAllProduct.Columns[2].HeaderText = "Số lượng";
+            dgvAllProduct.Columns[3].HeaderText = "Đơn giá";
+            dgvAllProduct.Columns[4].HeaderText = "Loại SP";
+            dgvAllProduct.Columns[5].HeaderText = "Thương hiệu";
+            dgvAllProduct.Columns[6].Visible = false;
+        }
+
+        private void btnLoc_Click(object sender, EventArgs e)
+        {
+            if(cbThuongHieu.SelectedIndex >= 0)
+            {
+                MessageBox.Show("Đã chọn thương hiệu");
+            }
         }
     }
 }

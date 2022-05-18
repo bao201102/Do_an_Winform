@@ -39,14 +39,14 @@ namespace Do_an_Winform.PL.Nhanvien
                 MessageBox.Show("Vui lòng nhập địa chỉ");
             }else
             {
-                //listKH = KhachHangBLL.GetAllCustomer();
-                //int count = listKH.Count + 1;
-                //string maKH = "KH" + count.ToString("000");
-                //KhachHangDTO khachHang = new KhachHangDTO(maKH, txtHoTen.Text, cbGioiTinh.Text, txtEmail.Text, txtSDT.Text, txtDiaChi.Text, "LTV001", "1");
-                //if(KhachHangBLL.AddNewCustomer(khachHang))
-                //{
-                //    MessageBox.Show("Thêm thành công");
-                //}
+                listKH = KhachHangBLL.GetAllCustomer();
+                int count = listKH.Count + 1;
+                string maKH = "KH" + count.ToString("000");
+                KhachHangDTO khachHang = new KhachHangDTO(maKH, txtHoTen.Text, cbGioiTinh.Text, txtEmail.Text, txtSDT.Text, txtDiaChi.Text, "LTV001", "1", 50);
+                if (KhachHangBLL.AddNewCustomer(khachHang))
+                {
+                    MessageBox.Show("Thêm thành công");
+                }
             }
         }
         public static string CreateId(List<KhachHangDTO> listKH)

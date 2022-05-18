@@ -18,6 +18,7 @@ namespace Do_an_Winform.DAL
                            on nhasx.MaNhaSX equals sp.MaNhaSX
                            select nhasx;
             List<NhaSanXuatDTO> nhaSanXuatDTOs = new List<NhaSanXuatDTO>();
+            nhaSanXuatDTOs.Add(new NhaSanXuatDTO("Tất cả", "Tất cả"));
             foreach (NhaSanXuat nsx in manufacs)
             {
                 
