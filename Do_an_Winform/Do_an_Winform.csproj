@@ -223,6 +223,7 @@
     <Compile Include="ChiTietPhieuNhap.cs">
       <DependentUpon>CHDT_Entity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\ChiTietPhieuNhapDAL.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
     <Compile Include="DAL\LoaiNhanVienDAL.cs" />
