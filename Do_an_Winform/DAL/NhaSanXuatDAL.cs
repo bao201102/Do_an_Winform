@@ -14,8 +14,8 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var manufacs = from nhasx in entities.NhaSanXuats
-                           join sp in entities.SanPhams
-                           on nhasx.MaNhaSX equals sp.MaNhaSX
+                           //join sp in entities.SanPhams
+                           //on nhasx.MaNhaSX equals sp.MaNhaSX
                            select nhasx;
             List<NhaSanXuatDTO> nhaSanXuatDTOs = new List<NhaSanXuatDTO>();
             nhaSanXuatDTOs.Add(new NhaSanXuatDTO("Tất cả", "Tất cả"));

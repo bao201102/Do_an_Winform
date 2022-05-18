@@ -94,12 +94,12 @@
             this.cbGia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbGia.FormattingEnabled = true;
             this.cbGia.Items.AddRange(new object[] {
-            "Từ 500 - 1 triệu",
-            "Từ 1 - 5 triệu",
-            "Từ 5 - 10 triệu",
-            "Từ 10 - 20 triệu",
-            "Từ 20 - 30 triệu",
-            "Từ 30- 50 triệu"});
+            "500000 - 1000000",
+            "1000000 - 5000000",
+            "5000000 - 10000000",
+            "10000000 - 20000000",
+            "20000000 - 30000000",
+            "30000000 - 50000000"});
             this.cbGia.Location = new System.Drawing.Point(129, 165);
             this.cbGia.Name = "cbGia";
             this.cbGia.Size = new System.Drawing.Size(133, 21);

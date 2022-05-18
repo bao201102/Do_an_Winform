@@ -44,5 +44,9 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetAllProductByCat(maloaisp);
         }
+        public static List<object> GetProductByManufacId(string maNhaSX)
+        {
+            return SanPhamDAL.GetProductByManufacId(maNhaSX);
+        }
     }
 }
