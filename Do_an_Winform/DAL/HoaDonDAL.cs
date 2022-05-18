@@ -14,18 +14,24 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
-                           join cthd in data.ChiTietHoaDons on hd.MaHD equals cthd.MaHD
-                           join sp in data.SanPhams on cthd.MaSP equals sp.MaSP
-                           where (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
-                           select hd;
+                          where (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
+                          select new 
+                          {
+                              hd.MaHD,
+                              //NgayTaoHD = ((DateTime)hd.NgayTaoHD).ToString("dd/MM/yyyy HH:mm"),              
+                              hd.NgayTaoHD,
+                              hd.MaNV,
+                              hd.MaKH,
+                              hd.ThanhTien
+                          };
 
             List<HoaDonDTO> listKQ = new List<HoaDonDTO>();
             for (int i = 0; i < truyvan.Count(); i++)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
                 var mapper = new Mapper(config);
-                HoaDonDTO dto = mapper.Map<HoaDonDTO>(i);
-                listKQ.Add(dto);
+                HoaDonDTO hddto = mapper.Map<HoaDonDTO>(i);
+                listKQ.Add(hddto);
             }
             return listKQ;
         }
@@ -33,18 +39,23 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
-                          join cthd in data.ChiTietHoaDons on hd.MaHD equals cthd.MaHD
-                          join sp in data.SanPhams on cthd.MaSP equals sp.MaSP
                           where (hd.MaHD == hdsearch.MaHD) && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
-                          select hd;
-
+                          select new
+                          {
+                              hd.MaHD,
+                              //NgayTaoHD = ((DateTime)hd.NgayTaoHD).ToString("dd/MM/yyyy HH:mm"),              
+                              hd.NgayTaoHD,
+                              hd.MaNV,
+                              hd.MaKH,
+                              hd.ThanhTien
+                          };
             List<HoaDonDTO> listKQ = new List<HoaDonDTO>();
             for (int i = 0; i < truyvan.Count(); i++)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
                 var mapper = new Mapper(config);
-                HoaDonDTO dto = mapper.Map<HoaDonDTO>(i);
-                listKQ.Add(dto);
+                HoaDonDTO hddto = mapper.Map<HoaDonDTO>(i);
+                listKQ.Add(hddto);
             }
             return listKQ;
         }

@@ -16,5 +16,23 @@ namespace Do_an_Winform.PL.Quanly
         {
             InitializeComponent();
         }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            printPreviewDialogTKDT.ShowDialog();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.PrintDialog printdialog = new PrintDialog();
+            printdialog.AllowSomePages = true;
+            printdialog.ShowHelp = true;
+            printdialog.Document = printDocumentTKDT;
+            DialogResult result = printdialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                printDocumentTKDT.Print();
+            }
+        }
     }
 }
