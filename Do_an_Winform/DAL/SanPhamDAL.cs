@@ -75,7 +75,6 @@ namespace Do_an_Winform.DAL
                sanPhamDTOs.Add(item);
             }
             return sanPhamDTOs;
-
         }
         public static List<SanPhamDTO> GetProByTxtNameChanged(string txtNameChanged)
         {
@@ -116,6 +115,32 @@ namespace Do_an_Winform.DAL
             var mapper = new Mapper(config);
             SanPhamDTO sanPham = mapper.Map<SanPhamDTO>(product);
             return sanPham;
+        }
+
+        public static List<object> GetAllProductByCat(string maloaisp)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var query = from sp in entities.SanPhams
+                       join nsx in entities.NhaSanXuats
+                       on sp.MaNhaSX equals nsx.MaNhaSX
+                       join lsp in entities.LoaiSanPhams
+                       on sp.MaLoaiSP equals lsp.MaLoaiSP
+                       where sp.MaLoaiSP.Contains(maloaisp) && sp.TrangThai == "1"
+                       select new
+                       {
+                           sp.TenSP,
+                           sp.SoLuong,
+                           sp.DonGia,
+                           lsp.TenLoaiSP,
+                           nsx.TenNhaSX
+                       };
+
+            List<object> sanPhamDTOs = new List<object>();
+            foreach (var item in query)
+            {
+                sanPhamDTOs.Add(item);
+            }
+            return sanPhamDTOs;
         }
     }
 }

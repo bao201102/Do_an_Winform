@@ -14,6 +14,7 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetAllProduct();
         }
+
         public static List<object> GetProduct()
         {
             return SanPhamDAL.GetProduct();
@@ -23,18 +24,25 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetAllProductByName(tensp);
         }
+
         public static List<SanPhamDTO> GetProByTxtNameChanged(string txtNameChanged)
         {
             return SanPhamDAL.GetProByTxtNameChanged(txtNameChanged);
         }
+
         public static SanPhamDTO GetProductById(string masp)
         {
             return SanPhamDAL.GetProductById(masp);
         }
+
         public static SanPhamDTO GetProductByName(string tensp)
         {
             return SanPhamDAL.GetProductByName(tensp);
         }
 
+        public static List<object> GetAllProductByCat(string maloaisp)
+        {
+            return SanPhamDAL.GetAllProductByCat(maloaisp);
+        }
     }
 }

@@ -14,5 +14,10 @@ namespace Do_an_Winform.BLL
         {
             return LoaiSanPhamDAL.GetProTypeById(maLoaiSP);
         }
+
+        public static List<LoaiSanPhamDTO> GetAllCat()
+        {
+            return LoaiSanPhamDAL.GetAllCat();
+        }
     }
 }
