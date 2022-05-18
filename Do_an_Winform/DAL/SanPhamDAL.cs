@@ -108,9 +108,9 @@ namespace Do_an_Winform.DAL
         public static SanPhamDTO GetProductByName(string ten)
         {
             CHDTEntities1 entities = new CHDTEntities1();
-            SanPham product = (from sp in entities.SanPhams
+            var product = (from sp in entities.SanPhams
                                where sp.TenSP.Contains(ten) && sp.TrangThai == "1"
-                               select sp).SingleOrDefault();
+                               select sp).FirstOrDefault();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
             var mapper = new Mapper(config);

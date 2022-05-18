@@ -67,8 +67,9 @@ namespace Do_an_Winform.PL.DangNhap
                     else if (userLogin.MaLoaiNV == "LNV003")
                     {
                         frm_Thukho frmThuKho = new frm_Thukho(userLogin);
-                        frmThuKho.Show();
-                        //this.Close();
+                        this.Hide();
+                        frmThuKho.ShowDialog();
+                        this.Close();
                     }
                 }
                 else

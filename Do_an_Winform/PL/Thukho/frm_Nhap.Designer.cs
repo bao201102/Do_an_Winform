@@ -29,6 +29,7 @@ namespace Do_an_Winform.PL.Thukho
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Nhap));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -67,6 +68,7 @@ namespace Do_an_Winform.PL.Thukho
             this.DatePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewNhap)).BeginInit();
             this.bunifuPanel3.SuspendLayout();
@@ -95,6 +97,8 @@ namespace Do_an_Winform.PL.Thukho
             // gridviewNhap
             // 
             this.gridviewNhap.AllowCustomTheming = false;
+            this.gridviewNhap.AllowUserToAddRows = false;
+            this.gridviewNhap.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.gridviewNhap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -102,7 +106,7 @@ namespace Do_an_Winform.PL.Thukho
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridviewNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridviewNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gridviewNhap.BackgroundColor = System.Drawing.Color.White;
             this.gridviewNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridviewNhap.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridviewNhap.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -154,6 +158,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewNhap.Size = new System.Drawing.Size(779, 742);
             this.gridviewNhap.TabIndex = 0;
             this.gridviewNhap.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gridviewNhap.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewNhap_CellEndEdit);
             // 
             // btnXoa
             // 
@@ -246,6 +251,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnXoa.TextMarginLeft = 0;
             this.btnXoa.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnXoa.UseDefaultRadiusAndThickness = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -523,6 +529,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnLuu.TextMarginLeft = 0;
             this.btnLuu.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnLuu.UseDefaultRadiusAndThickness = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // bunifuPanel3
             // 
@@ -780,7 +787,7 @@ namespace Do_an_Winform.PL.Thukho
             this.cbbNhaCC.BackColor = System.Drawing.Color.Transparent;
             this.cbbNhaCC.BackgroundColor = System.Drawing.Color.White;
             this.cbbNhaCC.BorderColor = System.Drawing.Color.Silver;
-            this.cbbNhaCC.BorderRadius = 1;
+            this.cbbNhaCC.BorderRadius = 7;
             this.cbbNhaCC.Color = System.Drawing.Color.Silver;
             this.cbbNhaCC.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cbbNhaCC.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -901,6 +908,75 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuPanel5.Size = new System.Drawing.Size(401, 144);
             this.bunifuPanel5.TabIndex = 30;
             // 
+            // bunifuSnackbar1
+            // 
+            this.bunifuSnackbar1.AllowDragging = false;
+            this.bunifuSnackbar1.AllowMultipleViews = false;
+            this.bunifuSnackbar1.ClickToClose = false;
+            this.bunifuSnackbar1.DoubleClickToClose = false;
+            this.bunifuSnackbar1.DurationAfterIdle = 3000;
+            this.bunifuSnackbar1.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.ErrorOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bunifuSnackbar1.ErrorOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.FadeCloseIcon = true;
+            this.bunifuSnackbar1.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bunifuSnackbar1.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.InformationOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bunifuSnackbar1.InformationOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.Margin = 10;
+            this.bunifuSnackbar1.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.MaximumViews = 7;
+            this.bunifuSnackbar1.MessageRightMargin = 15;
+            this.bunifuSnackbar1.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.ShowBorders = true;
+            this.bunifuSnackbar1.ShowCloseIcon = true;
+            this.bunifuSnackbar1.ShowIcon = true;
+            this.bunifuSnackbar1.ShowShadows = true;
+            this.bunifuSnackbar1.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.SuccessOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bunifuSnackbar1.SuccessOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ViewsMargin = 7;
+            this.bunifuSnackbar1.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.WarningOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ZoomCloseIcon = true;
+            // 
             // frm_Nhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -917,6 +993,7 @@ namespace Do_an_Winform.PL.Thukho
             this.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_Nhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Nhap";
             this.Load += new System.EventHandler(this.frm_Nhap_Load);
             this.bunifuPanel4.ResumeLayout(false);
@@ -958,5 +1035,6 @@ namespace Do_an_Winform.PL.Thukho
         private System.Windows.Forms.ComboBox cbbTenSP;
         private Bunifu.UI.WinForms.BunifuLabel lblTong;
         private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
     }
 }

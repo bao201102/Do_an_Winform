@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.DangNhap;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,15 @@ namespace Do_an_Winform.PL.Thukho
             InitializeComponent();
             gridview_Load();
             taikhoan = user;
+
+            gridviewNhap.AllowUserToResizeColumns = false;
+            gridviewNhap.AllowUserToResizeRows = false;
+            gridviewNhap.MultiSelect = false;
+            gridviewNhap.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            gridviewNhap.Columns[0].ReadOnly = true;
+            gridviewNhap.Columns[2].ReadOnly = true;
+            gridviewNhap.Columns[3].ReadOnly = true;
+            gridviewNhap.Columns[4].ReadOnly = true;
         }
 
         private void frm_Nhap_Load(object sender, EventArgs e)
@@ -47,6 +57,7 @@ namespace Do_an_Winform.PL.Thukho
         private void cbbTenSP_SelectedValueChanged(object sender, EventArgs e)
         {
             lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
+            txtSoLuong.Text = "";
         }
 
         private void cbbTenSP_TextChanged(object sender, EventArgs e)
@@ -54,6 +65,7 @@ namespace Do_an_Winform.PL.Thukho
             try
             {
                 lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
+                txtSoLuong.Text = "";
             }
             catch (Exception)
             {
@@ -83,12 +95,45 @@ namespace Do_an_Winform.PL.Thukho
             gridviewNhap.DataSource = dataTable;
         }
 
+        private int sum = 0;
         private void btnThem_Click(object sender, EventArgs e)
         {
             SanPhamDTO spById = SanPhamBLL.GetProductById(cbbTenSP.SelectedValue.ToString());
             NhaSanXuatDTO nsx = NhaSanXuatBLL.GetManufacById(spById.MaNhaSX);
+            if (txtSoLuong.Text == "")
+            {
+                bunifuSnackbar1.Show(this, "Chưa nhập số lượng. Vui lòng thử lại!", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+            }
+            else
+            {
+                sum += int.Parse(lblTong.Text);
+                lblThanhToan.Text = sum.ToString();
+                dataTable.Rows.Add(cbbTenSP.Text, txtSoLuong.Text, lblDongia.Text, nsx.TenNhaSX, lblTong.Text);
+            }
+            txtSoLuong.Clear();
+        }
 
-            dataTable.Rows.Add(cbbTenSP.Text, txtSoLuong.Text, lblDongia.Text, nsx.TenNhaSX, lblTong.Text);
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (gridviewNhap.SelectedRows.Count > 0)
+            {
+                MessBox messBox = new MessBox();
+                bool result = messBox.ShowMess("Bạn có muốn xóa sản phẩm này không ?");
+
+                if (result)
+                {
+                    int thanhtien = int.Parse(gridviewNhap.SelectedRows[0].Cells[4].Value.ToString());
+                    sum -= thanhtien;
+                    lblThanhToan.Text = sum.ToString();
+                    gridviewNhap.Rows.RemoveAt(gridviewNhap.SelectedRows[0].Index);
+                }
+            }
+        }
+
+        private void gridviewNhap_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            gridviewNhap.SelectedRows[0].Cells[4].Value = int.Parse(gridviewNhap.SelectedRows[0].Cells[1].Value.ToString())
+                * int.Parse(gridviewNhap.SelectedRows[0].Cells[2].Value.ToString());
         }
     }
 }
