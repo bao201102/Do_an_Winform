@@ -35,11 +35,7 @@ namespace Do_an_Winform.PL.Nhanvien
                     cbTenSP.Items.Add(sp.TenSP);
                 }
                 dgvAllProduct.DataSource = SanPhamBLL.GetProduct();
-                dgvAllProduct.Columns[0].HeaderText = "Tên SP";
-                dgvAllProduct.Columns[1].HeaderText = "Số lượng";
-                dgvAllProduct.Columns[2].HeaderText = "Đơn giá";
-                dgvAllProduct.Columns[3].HeaderText = "Loại SP";
-                dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
+                this.GanDuLieu();
             }
             cbLoaiSP.DataSource = LoaiSanPhamBLL.GetAllCat();
             cbLoaiSP.DisplayMember = "TenLoaiSP";
@@ -95,10 +91,87 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            if(cbThuongHieu.SelectedIndex >= 0)
+            if(cbThuongHieu.SelectedIndex >= 0 && cbThuongHieu.SelectedValue.ToString() != "Tất cả")
             {
-                MessageBox.Show("Đã chọn thương hiệu");
+                if(cbGia.SelectedIndex >= 0)
+                {
+                    if(cbLoaiSP.SelectedIndex >= 0 && cbLoaiSP.SelectedValue.ToString() != "Tất cả")
+                    {
+                        MessageBox.Show("T.hiệu, Giá, Loại SP");
+                    }else
+                    {
+                        MessageBox.Show("T.hiệu, Giá");
+                    }
+                }else
+                {
+                    if (cbLoaiSP.SelectedIndex < 0 || cbLoaiSP.SelectedValue.ToString() == "Tất cả")
+                    {
+                        MessageBox.Show("T.hiệu");
+                    }else
+                    {
+                        MessageBox.Show("T.hiệu, Loại SP");
+                    }
+                    dgvAllProduct.DataSource = SanPhamBLL.GetProductByManufacId(cbThuongHieu.SelectedValue.ToString());
+                    this.GanDuLieu();
+                }
+            }else
+            {
+                if(cbGia.SelectedIndex >= 0)
+                {
+                    if(cbLoaiSP.SelectedIndex >= 0 && cbLoaiSP.SelectedValue.ToString() != "Tất cả")
+                    {
+                        MessageBox.Show("Giá, Lọai SP");
+                    }else
+                    {
+                        MessageBox.Show("Giá");
+                    }
+                }else
+                {
+                    if(cbLoaiSP.SelectedIndex >= 0 && cbLoaiSP.SelectedValue.ToString() != "Tất cả")
+                    {
+                        MessageBox.Show("Loại SP");
+                    }else
+                    {
+                        MessageBox.Show("Vui lòng chọn dữ liệu cần lọc");
+                    }
+                }
             }
+            //MessageBox.Show(cbGia.Text);
+            MessageBox.Show($"Min price: {GetMinPrice(cbGia.Text)}, Max price: {GetMaxPrice(cbGia.Text)}");
+        }
+        public void GanDuLieu()
+        {
+            dgvAllProduct.Columns[0].HeaderText = "Tên SP";
+            dgvAllProduct.Columns[1].HeaderText = "Số lượng";
+            dgvAllProduct.Columns[2].HeaderText = "Đơn giá";
+            dgvAllProduct.Columns[3].HeaderText = "Loại SP";
+            dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
+        }
+        public static int GetMinPrice(string priceRange)
+        {
+            int a = 0;
+            for(int i = 0; i < priceRange.Length ; i++)
+            {
+                if(priceRange[i] == ' ')
+                {
+                    int v = int.Parse(priceRange.Substring(0, i - 1));
+                    a = v;
+                }
+            }
+            return a;
+        }
+        public static int GetMaxPrice(string priceRange)
+        {
+            int b = 0;
+            for (int i = 0; i < priceRange.Length; i++)
+            {
+                if (priceRange[i] == ' ')
+                {
+                    int v = Int32.Parse(priceRange.Substring(i + 1));
+                    b = v;
+                }
+            }
+            return b;
         }
     }
 }

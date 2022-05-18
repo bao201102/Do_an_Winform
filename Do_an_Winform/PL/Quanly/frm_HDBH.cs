@@ -1,4 +1,5 @@
 ﻿using Do_an_Winform.DAL;
+using Do_an_Winform.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,15 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PagedList;
 
-namespace Do_an_Winform.DTO
+namespace Do_an_Winform.PL.Quanly
 {
     public partial class frm_HDBH : Form
     {
         public frm_HDBH()
         {
             InitializeComponent();
+            gvHDBH.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            gvHDBH.ReadOnly = true;
         }
 
         private void txtSearch_Enter(object sender, EventArgs e)
@@ -37,25 +39,24 @@ namespace Do_an_Winform.DTO
             }
         }
 
-        private void frm_HDBH_Load(object sender, EventArgs e)
-        {
-            //load Date
-            maskedtxtStartDay.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
-            maskedtxtEndDay.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-
-            //load Datagridview
-            DateTime startday, endday;
-            startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            List<HoaDonDTO> listhd = HoaDonDAL.ThongKeTatCaHD(startday, endday);
-            gvHDBH.DataSource = listhd;
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void txtSearch_OnIconRightClick(object sender, EventArgs e)
         {
             DateTime startday, endday;
-            startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+            try
+            {
+                startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+                endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+                if(endday<=startday)
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (txtSearch.Text.Trim() != "")
             {
                 HoaDonDTO hdsearch = new HoaDonDTO();
@@ -71,26 +72,36 @@ namespace Do_an_Winform.DTO
             }
         }
 
-        //Print gvHDBH
-        Bitmap bmp;
+        private void frm_HDBH_Load(object sender, EventArgs e)
+        {
+            //load Date
+            maskedtxtStartDay.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
+            maskedtxtEndDay.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+
+            //load Datagridview
+            DateTime startday, endday;
+            startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+            endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+            List<HoaDonDTO> listhd = HoaDonDAL.ThongKeTatCaHD(startday, endday);
+            gvHDBH.DataSource = listhd;
+        }
+
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            int height = gvHDBH.Height;
-            gvHDBH.Height = gvHDBH.RowCount * gvHDBH.RowTemplate.Height * 2;
-            bmp = new Bitmap(gvHDBH.Width, gvHDBH.Height);
-            gvHDBH.DrawToBitmap(bmp, new Rectangle(0, 0, gvHDBH.Width, gvHDBH.Height));
-            gvHDBH.Height = height;
+            System.Windows.Forms.PrintDialog printdialog = new PrintDialog();
+            printdialog.AllowSomePages = true;
+            printdialog.ShowHelp = true;
+            printdialog.Document = printDocumentHDBH;
+            DialogResult result = printdialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                printDocumentHDBH.Print();
+            }
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
             printPreviewDialogHDBH.ShowDialog();
-        }
-
-        private void printHDBH_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            e.Graphics.DrawImage(bmp, 0, 0);
-        }
-
-        private void printPreviewDialogHDBH_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
