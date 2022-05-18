@@ -38,16 +38,21 @@ namespace Do_an_Winform.DAL
             data.NhaCungCaps.Add(ncc);
             return data.SaveChanges() > 0 ? true : false;
         }
-        public static NhaCungCapDTO GetSupplyWithName(string name)
+        public static List<NhaCungCapDTO> GetSupplyWithName(string name)
         {
             CHDTEntities1 data = new CHDTEntities1();
-            NhaCungCap ncc = (from nv in data.NhaCungCaps
-                              where nv.TenNCC == name.Trim().ToLower()
-                              select nv).SingleOrDefault();
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
-            var mapper = new Mapper(config);
-            NhaCungCapDTO dto = mapper.Map<NhaCungCapDTO>(ncc);
-            return dto;
+            var nhacungcap = from ncc in data.NhaCungCaps
+                              where ncc.TenNCC.Contains(name.Trim().ToLower())
+                              select ncc;
+            List<NhaCungCapDTO> list = new List<NhaCungCapDTO>();
+            foreach(NhaCungCap ncc in nhacungcap)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
+                var mapper = new Mapper(config);
+                NhaCungCapDTO dto = mapper.Map<NhaCungCapDTO>(ncc);
+                list.Add(dto);
+            }
+            return list;
         }
         public static List<NhaCungCapDTO> GetAllSupply()
         {

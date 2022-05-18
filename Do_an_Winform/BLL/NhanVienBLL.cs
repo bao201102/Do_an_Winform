@@ -14,7 +14,7 @@ namespace Do_an_Winform.BLL
         {
             return NhanVienDAL.GetEmployee(manguoidung);
         }
-        public static NhanVienDTO GetEmployeeWithName(string name)
+        public static List<NhanVienDTO> GetEmployeeWithName(string name)
         {
             return NhanVienDAL.GetEmployeeWithName(name);
         }

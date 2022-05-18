@@ -187,9 +187,7 @@ namespace Do_an_Winform.PL.Quanly
             string name = txtTimKiemNhanVien.Text;
             if (name != "")
             {
-                List<NhanVienDTO> list = new List<NhanVienDTO>();
-                NhanVienDTO dto = NhanVienBLL.GetEmployeeWithName(name);
-                list.Add(dto);
+                List<NhanVienDTO> list = NhanVienBLL.GetEmployeeWithName(name);               
                 dgNhanVien.DataSource = list;
             }
             else
@@ -197,7 +195,9 @@ namespace Do_an_Winform.PL.Quanly
                 List<NhanVienDTO> list = NhanVienBLL.GetAllEmployee();
                 dgNhanVien.DataSource = list;
             }
-
+            dgNhanVien.ReadOnly = true;
+            dgNhanVien.AllowUserToResizeColumns = false;
+            dgNhanVien.AllowUserToResizeRows = false;
             dgNhanVien.Columns[0].HeaderText = "Mã nhân viên";
             dgNhanVien.Columns[1].HeaderText = "Tên nhân viên";
             dgNhanVien.Columns[2].HeaderText = "Giới tính";
@@ -215,12 +215,16 @@ namespace Do_an_Winform.PL.Quanly
             this.Hide();
             form.ShowDialog();
         }
+        private void dgNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtTimKiemNhanVien.Text = dgNhanVien.SelectedCells[0].OwningRow.Cells["TenNV"].Value.ToString();
+        }
 
 
 
 
         //                                 Đối tác - Khách hàng
-        
+
 
 
 
@@ -234,16 +238,17 @@ namespace Do_an_Winform.PL.Quanly
             string name = txtTimKiemKhachHang.Text;
             if (name != "")
             {
-                List<KhachHangDTO> list = new List<KhachHangDTO>();
-                KhachHangDTO dto = KhachHangBLL.GetCustomerWithName(name);
-                list.Add(dto);
-                dgNhanVien.DataSource = list;
+                List<KhachHangDTO> list = KhachHangBLL.GetCustomerWithName(name);
+                dgKhachHang.DataSource = list;
             }
             else
             {
                 List<KhachHangDTO> list = KhachHangBLL.GetAllCustomer();
                 dgKhachHang.DataSource = list;
             }
+            dgKhachHang.ReadOnly = true;
+            dgKhachHang.AllowUserToResizeColumns = false;
+            dgKhachHang.AllowUserToResizeRows = false;  
             dgKhachHang.Columns[0].HeaderText = "Mã khách hàng";
             dgKhachHang.Columns[1].HeaderText = "Tên khách hàng";
             dgKhachHang.Columns[2].HeaderText = "Giới tính";
@@ -251,6 +256,8 @@ namespace Do_an_Winform.PL.Quanly
             dgKhachHang.Columns[4].HeaderText = "Số điện thoại";
             dgKhachHang.Columns[5].HeaderText = "Địa chỉ";
             dgKhachHang.Columns[6].HeaderText = "Mã loại thành viên";
+            dgKhachHang.Columns[7].HeaderText = "Điểm tích lũy";
+            dgKhachHang.Columns[8].HeaderText = "Trạng thái";
         }
 
         private void btThemKhachHang_Click(object sender, EventArgs e)
@@ -258,6 +265,53 @@ namespace Do_an_Winform.PL.Quanly
             frm_ThemKH form = new frm_ThemKH();
             this.Hide();
             form.ShowDialog();
+        }
+        private void dgKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtTimKiemKhachHang.Text = dgKhachHang.SelectedCells[0].OwningRow.Cells["TenKH"].Value.ToString();
+        }
+
+
+
+
+        //                                    Đối tác - nhà cung cấp
+
+
+        private void btDoiTac_NCC_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.PageIndex = 3;
+        }
+
+        private void btTimKiemNCC_Click(object sender, EventArgs e)
+        {
+            string name = txtTimKiemNCC.Text;
+            if (name != "")
+            {
+                List<NhaCungCapDTO> list = NhaCungCapBLL.GetSupplyWithName(name);
+                dgNhaCungCap.DataSource = list;
+            }
+            else
+            {
+                List<NhaCungCapDTO> list = NhaCungCapBLL.GetAllSupply();
+                dgNhaCungCap.DataSource = list;
+            }
+            dgNhaCungCap.ReadOnly = true;
+            dgNhaCungCap.AllowUserToResizeColumns = false;
+            dgNhaCungCap.AllowUserToResizeRows = false;
+            dgNhaCungCap.Columns[0].HeaderText = "Mã nhà cung cấp";
+            dgNhaCungCap.Columns[1].HeaderText = "Tên nhà cung cấp";
+        }
+
+        private void btThemNCC_Click(object sender, EventArgs e)
+        {
+            frm_ThemNCC form = new frm_ThemNCC();
+            this.Hide();
+            form.ShowDialog();
+        }
+
+        private void dgNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtTimKiemNCC.Text = dgNhaCungCap.SelectedCells[0].OwningRow.Cells["TenNCC"].Value.ToString();
         }
     }
 }

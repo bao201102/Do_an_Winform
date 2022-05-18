@@ -58,16 +58,21 @@ namespace Do_an_Winform.DAL
             entities.KhachHangs.Add(khachHang);
             return entities.SaveChanges() > 0 ? true : false;
         }
-        public static KhachHangDTO GetCustomerWithName(string name)
+        public static List<KhachHangDTO> GetCustomerWithName(string name)
         {
             CHDTEntities1 data = new CHDTEntities1();
-            KhachHang khachhang = (from kh in data.KhachHangs
-                                   where kh.TenKH == name.Trim().ToLower()
-                                   select kh).SingleOrDefault();
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHang, KhachHangDTO>());
-            var mapper = new Mapper(config);
-            KhachHangDTO dto = mapper.Map<KhachHangDTO>(khachhang);
-            return dto;
+            var khachhang = from kh in data.KhachHangs
+                                   where kh.TenKH.Contains(name.Trim().ToLower())
+                                   select kh;
+            List<KhachHangDTO> list = new List<KhachHangDTO>();
+            foreach(KhachHang kh in khachhang)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHang, KhachHangDTO>());
+                var mapper = new Mapper(config);
+                KhachHangDTO dto = mapper.Map<KhachHangDTO>(kh);
+                list.Add(dto);
+            }
+            return list;
         }
         public static bool AddCustomer(KhachHangDTO dto)
         {

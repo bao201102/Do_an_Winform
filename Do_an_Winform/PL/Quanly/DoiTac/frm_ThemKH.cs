@@ -29,6 +29,7 @@ namespace Do_an_Winform.PL.Quanly
             kh.SĐT = txtSDTKH.Text;
             kh.GioiTinh = cbGioiTinhKH.Text;
             kh.MaLoaiTVien = cbMaLoaiTV.Text;
+            kh.DiemTichLuy = 0;
             kh.TrangThai = "1";
             if (KhachHangBLL.AddCustomer(kh))
             {
