@@ -32,6 +32,7 @@
         <AssociationConnector Association="CHDTModel.FK__NhanVien__MaNguo__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK__PhieuNhapH__MaNV__4316F928" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK__SanPham__MaNhaSX__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_NhaSanXuat" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -18,6 +18,7 @@ namespace Do_an_Winform.PL.Thukho
         public frm_Nhap(TaiKhoanDTO user)
         {
             InitializeComponent();
+            gridview_Load();
             taikhoan = user;
         }
 
@@ -34,9 +35,6 @@ namespace Do_an_Winform.PL.Thukho
             cbbTenSP.DisplayMember = "TenSP";
             cbbTenSP.ValueMember = "MaSP";
 
-            txtSoLuong.Text = "1";
-
-            //lblTong.Text = (int.Parse(lblDongia.Text) * int.Parse(txtSoLuong.Text)).ToString();
             lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
         }
 
@@ -49,7 +47,6 @@ namespace Do_an_Winform.PL.Thukho
         private void cbbTenSP_SelectedValueChanged(object sender, EventArgs e)
         {
             lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
-            //lblTong.Text = (int.Parse(lblDongia.Text) * int.Parse(txtSoLuong.Text)).ToString();
         }
 
         private void cbbTenSP_TextChanged(object sender, EventArgs e)
@@ -72,6 +69,26 @@ namespace Do_an_Winform.PL.Thukho
             catch (Exception)
             {
             }
+        }
+
+        private DataTable dataTable = new DataTable();
+        private void gridview_Load()
+        {
+            dataTable.Columns.Add("Tên sản phẩm");
+            dataTable.Columns.Add("Số lượng");
+            dataTable.Columns.Add("Đơn giá");
+            dataTable.Columns.Add("Tên nhà sản xuất");
+            dataTable.Columns.Add("Thành tiền");
+
+            gridviewNhap.DataSource = dataTable;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            SanPhamDTO spById = SanPhamBLL.GetProductById(cbbTenSP.SelectedValue.ToString());
+            NhaSanXuatDTO nsx = NhaSanXuatBLL.GetManufacById(spById.MaNhaSX);
+
+            dataTable.Rows.Add(cbbTenSP.Text, txtSoLuong.Text, lblDongia.Text, nsx.TenNhaSX, lblTong.Text);
         }
     }
 }
