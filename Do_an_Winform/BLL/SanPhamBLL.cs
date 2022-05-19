@@ -48,5 +48,10 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetProductByManufacId(maNhaSX);
         }
+        public static List<object> GetProductByCondition(string maNhaSX, int minprice, int maxprice, string maLoaiSP)
+        {
+            
+            return SanPhamDAL.GetProductByCondition(maNhaSX, minprice, maxprice, maLoaiSP);
+        }
     }
 }

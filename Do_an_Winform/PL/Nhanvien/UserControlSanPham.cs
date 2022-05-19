@@ -91,53 +91,123 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            if(cbThuongHieu.SelectedIndex >= 0 && cbThuongHieu.SelectedValue.ToString() != "Tất cả")
+            
+            if (cbThuongHieu.SelectedIndex >= 0 && cbThuongHieu.SelectedValue.ToString() != "Tất cả")
             {
                 if(cbGia.SelectedIndex >= 0)
                 {
-                    if(cbLoaiSP.SelectedIndex >= 0 && cbLoaiSP.SelectedValue.ToString() != "Tất cả")
+                    int a = int.Parse(GetMinPrice(cbGia.Text));
+                    int b = int.Parse(GetMaxPrice(cbGia.Text));
+                    if (cbLoaiSP.SelectedIndex >= 0 && cbLoaiSP.SelectedValue.ToString() != "Tất cả")
                     {
-                        MessageBox.Show("T.hiệu, Giá, Loại SP");
+                        
+                        dgvAllProduct.DataSource = SanPhamBLL.GetProductByCondition(cbThuongHieu.SelectedValue.ToString(), a, b, cbLoaiSP.SelectedValue.ToString());
+                        try
+                        {
+                            this.GanDuLieu();
+                        }catch
+                        {
+                            MessageBox.Show("Không tìm thấy sản phẩm. Vui lòng thử lại");
+                        }
+                            
+                        
                     }else
                     {
-                        MessageBox.Show("T.hiệu, Giá");
+                        //MessageBox.Show("T.hiệu, Giá");
+                        dgvAllProduct.DataSource = SanPhamBLL.GetProductByCondition(cbThuongHieu.SelectedValue.ToString(), a, b, cbLoaiSP.SelectedValue.ToString());
+                        try
+                        {
+                            this.GanDuLieu();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Không tìm thấy sản phẩm. Vui lòng thử lại");
+                        }
                     }
                 }else
                 {
                     if (cbLoaiSP.SelectedIndex < 0 || cbLoaiSP.SelectedValue.ToString() == "Tất cả")
                     {
-                        MessageBox.Show("T.hiệu");
-                    }else
-                    {
-                        MessageBox.Show("T.hiệu, Loại SP");
+                        int a = int.Parse(GetMinPrice(cbGia.Text));
+                        int b = int.Parse(GetMaxPrice(cbGia.Text));
+                        //MessageBox.Show("T.hiệu");
+                        dgvAllProduct.DataSource = SanPhamBLL.GetProductByCondition(cbThuongHieu.SelectedValue.ToString(), 0, 0, cbLoaiSP.SelectedValue.ToString());
+                        try
+                        {
+                            this.GanDuLieu();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Không tìm thấy sản phẩm. Vui lòng thử lại");
+                        }
                     }
-                    dgvAllProduct.DataSource = SanPhamBLL.GetProductByManufacId(cbThuongHieu.SelectedValue.ToString());
-                    this.GanDuLieu();
+                    else
+                    {
+                        //MessageBox.Show("T.hiệu, Loại SP");
+                        dgvAllProduct.DataSource = SanPhamBLL.GetProductByCondition(cbThuongHieu.SelectedValue.ToString(), 0, 0, cbLoaiSP.SelectedValue.ToString());
+                        try
+                        {
+                            this.GanDuLieu();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Không tìm thấy sản phẩm. Vui lòng thử lại");
+                        }
+                    }
                 }
             }else
             {
                 if(cbGia.SelectedIndex >= 0)
                 {
-                    if(cbLoaiSP.SelectedIndex >= 0 && cbLoaiSP.SelectedValue.ToString() != "Tất cả")
+                    int a = int.Parse(GetMinPrice(cbGia.Text));
+                    int b = int.Parse(GetMaxPrice(cbGia.Text));
+                    if (cbLoaiSP.SelectedIndex >= 0 && cbLoaiSP.SelectedValue.ToString() != "Tất cả")
                     {
-                        MessageBox.Show("Giá, Lọai SP");
-                    }else
+                        //MessageBox.Show("Giá, Lọai SP");
+                        dgvAllProduct.DataSource = SanPhamBLL.GetProductByCondition(cbThuongHieu.SelectedValue.ToString(), a, b, cbLoaiSP.SelectedValue.ToString());
+                        try
+                        {
+                            this.GanDuLieu();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Không tìm thấy sản phẩm. Vui lòng thử lại");
+                        }
+                    }
+                    else
                     {
-                        MessageBox.Show("Giá");
+                        //MessageBox.Show("Giá");
+                        dgvAllProduct.DataSource = SanPhamBLL.GetProductByCondition(cbThuongHieu.SelectedValue.ToString(), a, b, cbLoaiSP.SelectedValue.ToString());
+                        try
+                        {
+                            this.GanDuLieu();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Không tìm thấy sản phẩm. Vui lòng thử lại");
+                        }
                     }
                 }else
                 {
                     if(cbLoaiSP.SelectedIndex >= 0 && cbLoaiSP.SelectedValue.ToString() != "Tất cả")
                     {
-                        MessageBox.Show("Loại SP");
-                    }else
+                        //MessageBox.Show("Loại SP");
+                        dgvAllProduct.DataSource = SanPhamBLL.GetProductByCondition(cbThuongHieu.SelectedValue.ToString(), 0, 0, cbLoaiSP.SelectedValue.ToString());
+                        try
+                        {
+                            this.GanDuLieu();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Không tìm thấy sản phẩm. Vui lòng thử lại");
+                        }
+                    }
+                    else
                     {
                         MessageBox.Show("Vui lòng chọn dữ liệu cần lọc");
                     }
                 }
-            }
-            //MessageBox.Show(cbGia.Text);
-            MessageBox.Show($"Min price: {GetMinPrice(cbGia.Text)}, Max price: {GetMaxPrice(cbGia.Text)}");
+            }    
         }
         public void GanDuLieu()
         {
@@ -147,31 +217,29 @@ namespace Do_an_Winform.PL.Nhanvien
             dgvAllProduct.Columns[3].HeaderText = "Loại SP";
             dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
         }
-        public static int GetMinPrice(string priceRange)
+        public static string GetMinPrice(string priceRange)
         {
-            int a = 0;
+            string v = "";
             for(int i = 0; i < priceRange.Length ; i++)
             {
                 if(priceRange[i] == ' ')
                 {
-                    int v = int.Parse(priceRange.Substring(0, i - 1));
-                    a = v;
+                    v = priceRange.Substring(0, i - 2);
                 }
             }
-            return a;
+            return v;
         }
-        public static int GetMaxPrice(string priceRange)
+        public static string GetMaxPrice(string priceRange)
         {
-            int b = 0;
+            string v = "";
             for (int i = 0; i < priceRange.Length; i++)
             {
                 if (priceRange[i] == ' ')
                 {
-                    int v = Int32.Parse(priceRange.Substring(i + 1));
-                    b = v;
+                    v = priceRange.Substring(i + 1);
                 }
             }
-            return b;
+            return v;
         }
     }
 }
