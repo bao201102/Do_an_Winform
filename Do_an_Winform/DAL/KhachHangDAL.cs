@@ -83,6 +83,17 @@ namespace Do_an_Winform.DAL
             data.KhachHangs.Add(kh);
             return data.SaveChanges() > 0 ? true : false;
         }
+        public static KhachHangDTO GetCustomerById(string maKH) 
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            KhachHang cus = (from kh in entities.KhachHangs
+                                where kh.MaKH == maKH
+                                select kh).Single();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHang, KhachHangDTO>());
+            var mapper = new Mapper(config);
+            KhachHangDTO khachHang = mapper.Map<KhachHangDTO>(cus);
+            return khachHang;
+        }
 
     }
 }

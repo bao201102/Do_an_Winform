@@ -41,6 +41,7 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbMaKH = new System.Windows.Forms.ComboBox();
             this.btnSearchMem = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSaveAndPrint = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSave = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -78,7 +79,7 @@
             this.btnSearch = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cbMaSP = new System.Windows.Forms.ComboBox();
-            this.cbMaKH = new System.Windows.Forms.ComboBox();
+            this.cbTichDiem = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -176,6 +177,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbTichDiem);
             this.panel1.Controls.Add(this.cbMaKH);
             this.panel1.Controls.Add(this.btnSearchMem);
             this.panel1.Controls.Add(this.btnSaveAndPrint);
@@ -204,6 +206,16 @@
             this.panel1.Size = new System.Drawing.Size(320, 489);
             this.panel1.TabIndex = 16;
             // 
+            // cbMaKH
+            // 
+            this.cbMaKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbMaKH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbMaKH.FormattingEnabled = true;
+            this.cbMaKH.Location = new System.Drawing.Point(114, 163);
+            this.cbMaKH.Name = "cbMaKH";
+            this.cbMaKH.Size = new System.Drawing.Size(141, 21);
+            this.cbMaKH.TabIndex = 37;
+            // 
             // btnSearchMem
             // 
             this.btnSearchMem.ActiveBorderThickness = 1;
@@ -228,6 +240,7 @@
             this.btnSearchMem.Size = new System.Drawing.Size(51, 28);
             this.btnSearchMem.TabIndex = 35;
             this.btnSearchMem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearchMem.Click += new System.EventHandler(this.btnSearchMem_Click);
             // 
             // btnSaveAndPrint
             // 
@@ -247,7 +260,7 @@
             this.btnSaveAndPrint.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnSaveAndPrint.IdleForecolor = System.Drawing.Color.Black;
             this.btnSaveAndPrint.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSaveAndPrint.Location = new System.Drawing.Point(211, 419);
+            this.btnSaveAndPrint.Location = new System.Drawing.Point(211, 438);
             this.btnSaveAndPrint.Margin = new System.Windows.Forms.Padding(5);
             this.btnSaveAndPrint.Name = "btnSaveAndPrint";
             this.btnSaveAndPrint.Size = new System.Drawing.Size(102, 44);
@@ -272,7 +285,7 @@
             this.btnSave.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnSave.IdleForecolor = System.Drawing.Color.Black;
             this.btnSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSave.Location = new System.Drawing.Point(15, 419);
+            this.btnSave.Location = new System.Drawing.Point(14, 438);
             this.btnSave.Margin = new System.Windows.Forms.Padding(5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(102, 44);
@@ -283,7 +296,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(260, 368);
+            this.label19.Location = new System.Drawing.Point(260, 391);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(32, 13);
             this.label19.TabIndex = 20;
@@ -337,7 +350,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(16, 368);
+            this.label15.Location = new System.Drawing.Point(15, 391);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(65, 13);
             this.label15.TabIndex = 13;
@@ -347,7 +360,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(260, 334);
+            this.label14.Location = new System.Drawing.Point(260, 357);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 13);
             this.label14.TabIndex = 12;
@@ -357,7 +370,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(15, 334);
+            this.label13.Location = new System.Drawing.Point(16, 357);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(66, 13);
             this.label13.TabIndex = 10;
@@ -367,7 +380,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(260, 301);
+            this.label12.Location = new System.Drawing.Point(260, 321);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 13);
             this.label12.TabIndex = 9;
@@ -377,7 +390,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 301);
+            this.label11.Location = new System.Drawing.Point(16, 321);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 13);
             this.label11.TabIndex = 8;
@@ -387,7 +400,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 268);
+            this.label5.Location = new System.Drawing.Point(16, 290);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 13);
             this.label5.TabIndex = 7;
@@ -487,7 +500,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 136);
+            this.label7.Location = new System.Drawing.Point(34, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 17);
             this.label7.TabIndex = 21;
@@ -663,13 +676,15 @@
             this.cbMaSP.Size = new System.Drawing.Size(139, 21);
             this.cbMaSP.TabIndex = 35;
             // 
-            // cbMaKH
+            // cbTichDiem
             // 
-            this.cbMaKH.FormattingEnabled = true;
-            this.cbMaKH.Location = new System.Drawing.Point(114, 163);
-            this.cbMaKH.Name = "cbMaKH";
-            this.cbMaKH.Size = new System.Drawing.Size(141, 21);
-            this.cbMaKH.TabIndex = 37;
+            this.cbTichDiem.AutoSize = true;
+            this.cbTichDiem.Location = new System.Drawing.Point(233, 262);
+            this.cbTichDiem.Name = "cbTichDiem";
+            this.cbTichDiem.Size = new System.Drawing.Size(75, 17);
+            this.cbTichDiem.TabIndex = 38;
+            this.cbTichDiem.Text = "Tích điểm";
+            this.cbTichDiem.UseVisualStyleBackColor = true;
             // 
             // UserControlLapHoaDon
             // 
@@ -755,5 +770,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnSearchMem;
         private System.Windows.Forms.ComboBox cbMaSP;
         private System.Windows.Forms.ComboBox cbMaKH;
+        private System.Windows.Forms.CheckBox cbTichDiem;
     }
 }
