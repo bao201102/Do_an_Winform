@@ -22,6 +22,7 @@ namespace Do_an_Winform.PL.Nhanvien
         List<KhachHangDTO> listKH = new List<KhachHangDTO>();
         KhachHangDTO khachHang = new KhachHangDTO();
         LoaiThanhVienDTO loaitv = new LoaiThanhVienDTO();
+        TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         public UserControlLapHoaDon()
         {
             InitializeComponent();
@@ -62,9 +63,11 @@ namespace Do_an_Winform.PL.Nhanvien
                 //    txtTenKH.Enabled = true;
                 //    txtLoaiTV.Enabled = true;
                 //    txtSoLuong.Enabled = true;
-                    
+
                 //}
-                
+                lblTenNV.Text = NhanVienBLL.GetEmployee(frm_Nhanvien.taikhoan1.MaNguoiDung).TenNV;
+                DateTime curDay = DateTime.Now;
+                lblNgayBan.Text = (new DateTime(curDay.Year, curDay.Month, curDay.Day)).ToString("dd / MM / yyyy");
             }
         }
 
@@ -124,6 +127,11 @@ namespace Do_an_Winform.PL.Nhanvien
                 MessageBox.Show("Không tìm thấy khách hàng. Vui lòng thử lại");
             }
             
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

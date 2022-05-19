@@ -1,4 +1,6 @@
 ﻿
+using Do_an_Winform.DTO;
+
 namespace Do_an_Winform
 {
     partial class frm_Nhanvien
