@@ -963,10 +963,10 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPages1.Location = new System.Drawing.Point(4, 0);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage2;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "tabPage2";
-            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.Page = this.tabPage4;
+            this.bunifuPages1.PageIndex = 3;
+            this.bunifuPages1.PageName = "tabPage4";
+            this.bunifuPages1.PageTitle = "tabPage4";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(1800, 898);
             this.bunifuPages1.TabIndex = 0;
@@ -1083,11 +1083,11 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.label1.AutoSize = true;
             this.Transition.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.label1.Location = new System.Drawing.Point(61, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 25);
+            this.label1.Size = new System.Drawing.Size(109, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nhân viên";
             // 
@@ -1149,7 +1149,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTimKiemNhanVien.Padding = new System.Windows.Forms.Padding(3);
             this.txtTimKiemNhanVien.PasswordChar = '\0';
             this.txtTimKiemNhanVien.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtTimKiemNhanVien.PlaceholderText = "Enter text";
+            this.txtTimKiemNhanVien.PlaceholderText = "Nhập tên nhân viên";
             this.txtTimKiemNhanVien.ReadOnly = false;
             this.txtTimKiemNhanVien.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtTimKiemNhanVien.SelectedText = "";
@@ -1163,7 +1163,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTimKiemNhanVien.TextMarginBottom = 0;
             this.txtTimKiemNhanVien.TextMarginLeft = 3;
             this.txtTimKiemNhanVien.TextMarginTop = 1;
-            this.txtTimKiemNhanVien.TextPlaceholder = "Enter text";
+            this.txtTimKiemNhanVien.TextPlaceholder = "Nhập tên nhân viên";
             this.txtTimKiemNhanVien.UseSystemPasswordChar = false;
             this.txtTimKiemNhanVien.WordWrap = true;
             // 
@@ -1172,7 +1172,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btThemNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.Transition.SetDecoration(this.btThemNhanVien, BunifuAnimatorNS.DecorationType.None);
             this.btThemNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemNhanVien.ForeColor = System.Drawing.Color.Blue;
+            this.btThemNhanVien.ForeColor = System.Drawing.Color.AliceBlue;
             this.btThemNhanVien.Location = new System.Drawing.Point(1159, 57);
             this.btThemNhanVien.Name = "btThemNhanVien";
             this.btThemNhanVien.Size = new System.Drawing.Size(128, 43);
@@ -1278,7 +1278,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btThemKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.Transition.SetDecoration(this.btThemKhachHang, BunifuAnimatorNS.DecorationType.None);
             this.btThemKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemKhachHang.ForeColor = System.Drawing.Color.Blue;
+            this.btThemKhachHang.ForeColor = System.Drawing.Color.AliceBlue;
             this.btThemKhachHang.Location = new System.Drawing.Point(1159, 57);
             this.btThemKhachHang.Name = "btThemKhachHang";
             this.btThemKhachHang.Size = new System.Drawing.Size(128, 43);
@@ -1357,7 +1357,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTimKiemKhachHang.Padding = new System.Windows.Forms.Padding(3);
             this.txtTimKiemKhachHang.PasswordChar = '\0';
             this.txtTimKiemKhachHang.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtTimKiemKhachHang.PlaceholderText = "Enter text";
+            this.txtTimKiemKhachHang.PlaceholderText = "Nhập tên khách hàng";
             this.txtTimKiemKhachHang.ReadOnly = false;
             this.txtTimKiemKhachHang.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtTimKiemKhachHang.SelectedText = "";
@@ -1371,7 +1371,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTimKiemKhachHang.TextMarginBottom = 0;
             this.txtTimKiemKhachHang.TextMarginLeft = 3;
             this.txtTimKiemKhachHang.TextMarginTop = 1;
-            this.txtTimKiemKhachHang.TextPlaceholder = "Enter text";
+            this.txtTimKiemKhachHang.TextPlaceholder = "Nhập tên khách hàng";
             this.txtTimKiemKhachHang.UseSystemPasswordChar = false;
             this.txtTimKiemKhachHang.WordWrap = true;
             // 
@@ -1379,11 +1379,11 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.label2.AutoSize = true;
             this.Transition.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.label2.Location = new System.Drawing.Point(61, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 25);
+            this.label2.Size = new System.Drawing.Size(128, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Khách hàng";
             // 
@@ -1472,7 +1472,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btThemNCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.Transition.SetDecoration(this.btThemNCC, BunifuAnimatorNS.DecorationType.None);
             this.btThemNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemNCC.ForeColor = System.Drawing.Color.Blue;
+            this.btThemNCC.ForeColor = System.Drawing.Color.AliceBlue;
             this.btThemNCC.Location = new System.Drawing.Point(1159, 57);
             this.btThemNCC.Name = "btThemNCC";
             this.btThemNCC.Size = new System.Drawing.Size(128, 43);
@@ -1551,7 +1551,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTimKiemNCC.Padding = new System.Windows.Forms.Padding(3);
             this.txtTimKiemNCC.PasswordChar = '\0';
             this.txtTimKiemNCC.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtTimKiemNCC.PlaceholderText = "Enter text";
+            this.txtTimKiemNCC.PlaceholderText = "Nhập tên nhà cung cấp";
             this.txtTimKiemNCC.ReadOnly = false;
             this.txtTimKiemNCC.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtTimKiemNCC.SelectedText = "";
@@ -1565,7 +1565,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTimKiemNCC.TextMarginBottom = 0;
             this.txtTimKiemNCC.TextMarginLeft = 3;
             this.txtTimKiemNCC.TextMarginTop = 1;
-            this.txtTimKiemNCC.TextPlaceholder = "Enter text";
+            this.txtTimKiemNCC.TextPlaceholder = "Nhập tên nhà cung cấp";
             this.txtTimKiemNCC.UseSystemPasswordChar = false;
             this.txtTimKiemNCC.WordWrap = true;
             // 
@@ -1573,11 +1573,11 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.label3.AutoSize = true;
             this.Transition.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.label3.Location = new System.Drawing.Point(61, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 25);
+            this.label3.Size = new System.Drawing.Size(145, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nhà cung cấp";
             // 

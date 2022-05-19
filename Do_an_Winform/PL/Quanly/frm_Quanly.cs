@@ -18,6 +18,7 @@ namespace Do_an_Winform.PL.Quanly
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         NhanVienDTO nhanvien = new NhanVienDTO();
         LoaiNhanVienDTO loainhanvien = new LoaiNhanVienDTO();
+        bool opened = true;
         public frm_Quanly(TaiKhoanDTO user)
         {
             InitializeComponent();
@@ -313,5 +314,6 @@ namespace Do_an_Winform.PL.Quanly
         {
             txtTimKiemNCC.Text = dgNhaCungCap.SelectedCells[0].OwningRow.Cells["TenNCC"].Value.ToString();
         }
+
     }
 }
