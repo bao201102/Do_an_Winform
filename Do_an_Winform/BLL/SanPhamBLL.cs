@@ -53,5 +53,9 @@ namespace Do_an_Winform.BLL
             
             return SanPhamDAL.GetProductByCondition(maNhaSX, minprice, maxprice, maLoaiSP);
         }
+        public static bool InsertProduct(SanPhamDTO product)
+        {
+            return SanPhamDAL.InsertProdut(product);
+        }
     }
 }

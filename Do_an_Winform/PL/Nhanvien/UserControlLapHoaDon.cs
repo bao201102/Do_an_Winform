@@ -19,6 +19,10 @@ namespace Do_an_Winform.PL.Nhanvien
         LoaiSanPhamDTO loaisp = new LoaiSanPhamDTO();
         NhaSanXuatDTO nhasx = new NhaSanXuatDTO();
         List<SanPhamDTO> listSP = new List<SanPhamDTO>();
+        List<KhachHangDTO> listKH = new List<KhachHangDTO>();
+        KhachHangDTO khachHang = new KhachHangDTO();
+        LoaiThanhVienDTO loaitv = new LoaiThanhVienDTO();
+        TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         public UserControlLapHoaDon()
         {
             InitializeComponent();
@@ -34,24 +38,36 @@ namespace Do_an_Winform.PL.Nhanvien
             if (!DesignMode)
             {
                 listSP = SanPhamBLL.GetAllProduct();
+                listKH = KhachHangBLL.GetAllCustomer();
                 foreach (SanPhamDTO sp in listSP)
                 {
                     cbMaSP.Items.Add(sp.MaSP);
+                }
+                foreach(KhachHangDTO kh in listKH)
+                {
+                    cbMaKH.Items.Add(kh.MaKH);
                 }
                 txtDonGia.Enabled = false;
                 txtTenSP.Enabled = false;
                 txtLoaiSP.Enabled = false;
                 txtThuongHieu.Enabled = false;
+                txtSoLuong.Enabled = false;
                 cbMaKH.Enabled = false;
+                cbTichDiem.Enabled = false;
                 txtTenKH.Enabled = false;
                 txtLoaiTV.Enabled = false;
                 rbKhachLe.Checked = true;
-                if (rbThanhVien.Checked)
-                {
-                    cbMaKH.Enabled = true;
-                    txtTenKH.Enabled = true;
-                    txtLoaiTV.Enabled = true;
-                }
+                //if (rbThanhVien.Checked)
+                //{
+                //    cbMaKH.Enabled = true;
+                //    txtTenKH.Enabled = true;
+                //    txtLoaiTV.Enabled = true;
+                //    txtSoLuong.Enabled = true;
+
+                //}
+                lblTenNV.Text = NhanVienBLL.GetEmployee(frm_Nhanvien.taikhoan1.MaNguoiDung).TenNV;
+                DateTime curDay = DateTime.Now;
+                lblNgayBan.Text = (new DateTime(curDay.Year, curDay.Month, curDay.Day)).ToString("dd / MM / yyyy");
             }
         }
 
@@ -66,6 +82,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 txtTenSP.Enabled = true;
                 txtLoaiSP.Enabled = true;
                 txtThuongHieu.Enabled = true;
+                txtSoLuong.Enabled = true;
                 txtTenSP.Text = sp.TenSP;
                 txtDonGia.Text = sp.DonGia.ToString();
                 txtLoaiSP.Text = loaisp.TenLoaiSP;
@@ -83,17 +100,38 @@ namespace Do_an_Winform.PL.Nhanvien
             if(isShowMemId)
             {
                 cbMaKH.Enabled = true;
+                
+            }
+            else
+            {
+                cbMaKH.Enabled = false;
+            }
+            
+        }
+
+        private void btnSearchMem_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 txtTenKH.Enabled = true;
                 txtLoaiTV.Enabled = true;
                 btnSearchMem.Enabled = true;
-            }else
+                cbTichDiem.Enabled = true;
+                khachHang = KhachHangBLL.GetCustomerById(cbMaKH.Text);
+                txtTenKH.Text = khachHang.TenKH;
+                loaitv = LoaiThanhVienBLL.GetTypeMemById(khachHang.MaLoaiTVien);
+                txtLoaiTV.Text = loaitv.TenLoaiTVien;
+            }
+            catch
             {
-                cbMaKH.Enabled = false;
-                txtTenKH.Enabled = false;
-                txtLoaiTV.Enabled = false;
-                btnSearchMem.Enabled = false;
+                MessageBox.Show("Không tìm thấy khách hàng. Vui lòng thử lại");
             }
             
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -192,6 +192,7 @@
             // 
             // bunifuPanel1
             // 
+            this.bunifuPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
             this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -206,7 +207,7 @@
             this.bunifuPanel1.Controls.Add(this.label4);
             this.bunifuPanel1.Controls.Add(this.label3);
             this.bunifuPanel1.Controls.Add(this.cbGia);
-            this.bunifuPanel1.Location = new System.Drawing.Point(818, 147);
+            this.bunifuPanel1.Location = new System.Drawing.Point(748, 147);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(273, 350);

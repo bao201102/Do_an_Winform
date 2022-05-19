@@ -30,6 +30,10 @@ namespace Do_an_Winform.BLL
         {
             return KhachHangDAL.AddCustomer(dto);
         }
+        public static KhachHangDTO GetCustomerById(string maKH)
+        {
+            return KhachHangDAL.GetCustomerById(maKH);
+        }
 
     }
 }

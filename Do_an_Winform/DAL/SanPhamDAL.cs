@@ -116,7 +116,6 @@ namespace Do_an_Winform.DAL
             SanPhamDTO sanPham = mapper.Map<SanPhamDTO>(product);
             return sanPham;
         }
-
         public static List<object> GetAllProductByCat(string maloaisp)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -352,9 +351,25 @@ namespace Do_an_Winform.DAL
             {
                 return null;
             }
-            
-            
+        }
+        public static bool InsertProdut(SanPhamDTO product)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
 
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPhamDTO, SanPham>());
+            var mapper = new Mapper(config);
+            SanPham sp = mapper.Map<SanPham>(product);
+            entities.SanPhams.Add(sp);
+
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

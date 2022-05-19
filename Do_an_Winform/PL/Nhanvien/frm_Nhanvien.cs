@@ -19,13 +19,16 @@ namespace Do_an_Winform
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         NhanVienDTO nhanvien = new NhanVienDTO();
         LoaiNhanVienDTO loaiNV = new LoaiNhanVienDTO();
+        public static TaiKhoanDTO taikhoan1;
         public frm_Nhanvien(TaiKhoanDTO user)
         {
             InitializeComponent();
             this.Width = 1600;
             this.Height = 900;
             taikhoan = user;
-        }
+            taikhoan1 = user;
+            
+    }
 
         private void slideBtn_Click(object sender, EventArgs e)
         {
@@ -104,22 +107,26 @@ namespace Do_an_Winform
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            userControlKhachHang1.BringToFront();
+            //userControlKhachHang1.BringToFront();
+            openChildUsercontrol(new UserControlKhachHang());
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
-            userControlSanPham1.BringToFront();
+            //userControlSanPham1.BringToFront();
+            openChildUsercontrol(new UserControlSanPham());
         }
 
         private void btnLapHD_Click(object sender, EventArgs e)
         {
-            userControlLapHoaDon1.BringToFront();
+            //userControlLapHoaDon1.BringToFront();
+            openChildUsercontrol(new UserControlLapHoaDon());
         }
 
         private void btnDKTV_Click(object sender, EventArgs e)
         {
-            userControlDKThanhVien1.BringToFront();
+            //userControlDKThanhVien1.BringToFront();
+            openChildUsercontrol(new UserControlDKThanhVien());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -133,6 +140,7 @@ namespace Do_an_Winform
             }
         }
         private Form activeForm = null;
+        private UserControl activeUserControl = null;
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -147,6 +155,21 @@ namespace Do_an_Winform
             mainPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+        private void openChildUsercontrol(UserControl userControl)
+        {
+            if (activeUserControl != null)
+            {
+                activeUserControl.Hide();
+            }
+            activeUserControl = userControl;
+            //userControl.TopLevel = false;
+            //userControl.FormBorderStyle = FormBorderStyle.None;
+            userControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(userControl);
+            mainPanel.Tag = userControl;
+            userControl.BringToFront();
+            userControl.Show();
         }
 
         private void btnInfo_Click(object sender, EventArgs e)
