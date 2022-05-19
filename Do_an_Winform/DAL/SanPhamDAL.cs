@@ -167,30 +167,194 @@ namespace Do_an_Winform.DAL
             }
             return sanPhamDTOs;
         }
-        //public static List<object> GetProductByCondition1(string manhasx, int gia, string maloaisp)
-        //{
-        //    CHDTEntities1 entities = new CHDTEntities1();
-        //    var query = from sp in entities.SanPhams
-        //                join nsx in entities.NhaSanXuats
-        //                on sp.MaNhaSX equals nsx.MaNhaSX
-        //                join lsp in entities.LoaiSanPhams
-        //                on sp.MaLoaiSP equals lsp.MaLoaiSP
-        //                where sp.MaNhaSX == maNhaSX && sp.TrangThai == "1"
-        //                select new
-        //                {
-        //                    sp.TenSP,
-        //                    sp.SoLuong,
-        //                    sp.DonGia,
-        //                    lsp.TenLoaiSP,
-        //                    nsx.TenNhaSX
-        //                };
+        public static List<object> GetProductByCondition(string manhasx, int minprice, int maxprice, string maloaisp)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var query = from sp in entities.SanPhams
+                        join nsx in entities.NhaSanXuats
+                        on sp.MaNhaSX equals nsx.MaNhaSX
+                        join lsp in entities.LoaiSanPhams
+                        on sp.MaLoaiSP equals lsp.MaLoaiSP
+                        where sp.TrangThai == "1"
+                        select new
+                        {
+                            sp.TenSP,
+                            sp.SoLuong,
+                            sp.DonGia,
+                            lsp.TenLoaiSP,
+                            nsx.TenNhaSX
+                        };
+            if(manhasx != " " && manhasx != "Tất cả")
+            {
+                if(minprice != 0 && maxprice != 0)
+                {
+                    if(maloaisp != " " && maloaisp != "Tất cả")
+                    {
+                        query = from sp in entities.SanPhams
+                                    join nsx in entities.NhaSanXuats
+                                    on sp.MaNhaSX equals nsx.MaNhaSX
+                                    join lsp in entities.LoaiSanPhams
+                                    on sp.MaLoaiSP equals lsp.MaLoaiSP
+                                    where sp.MaNhaSX == manhasx && minprice <= sp.DonGia && sp.DonGia <= maxprice
+                                    && sp.MaLoaiSP == maloaisp
+                                    &&  sp.TrangThai == "1"
+                                    select new
+                                    {
+                                        sp.TenSP,
+                                        sp.SoLuong,
+                                        sp.DonGia,
+                                        lsp.TenLoaiSP,
+                                        nsx.TenNhaSX
+                                    };
+                        
+                    }else
+                    {
+                        query = from sp in entities.SanPhams
+                                join nsx in entities.NhaSanXuats
+                                on sp.MaNhaSX equals nsx.MaNhaSX
+                                join lsp in entities.LoaiSanPhams
+                                on sp.MaLoaiSP equals lsp.MaLoaiSP
+                                where sp.MaNhaSX == manhasx && minprice <= sp.DonGia && sp.DonGia <= maxprice
+                                && sp.TrangThai == "1"
+                                select new
+                                {
+                                    sp.TenSP,
+                                    sp.SoLuong,
+                                    sp.DonGia,
+                                    lsp.TenLoaiSP,
+                                    nsx.TenNhaSX
+                                };
+                    }
+                }else
+                {
+                    if(maloaisp == " " || maloaisp == "Tất cả")
+                    {
+                        query = from sp in entities.SanPhams
+                                join nsx in entities.NhaSanXuats
+                                on sp.MaNhaSX equals nsx.MaNhaSX
+                                join lsp in entities.LoaiSanPhams
+                                on sp.MaLoaiSP equals lsp.MaLoaiSP
+                                where sp.MaNhaSX == manhasx
+                                && sp.TrangThai == "1"
+                                select new
+                                {
+                                    sp.TenSP,
+                                    sp.SoLuong,
+                                    sp.DonGia,
+                                    lsp.TenLoaiSP,
+                                    nsx.TenNhaSX
+                                };
+                    }else
+                    {
+                        query = from sp in entities.SanPhams
+                                join nsx in entities.NhaSanXuats
+                                on sp.MaNhaSX equals nsx.MaNhaSX
+                                join lsp in entities.LoaiSanPhams
+                                on sp.MaLoaiSP equals lsp.MaLoaiSP
+                                where sp.MaNhaSX == manhasx && sp.MaLoaiSP == maloaisp
+                                && sp.TrangThai == "1"
+                                select new
+                                {
+                                    sp.TenSP,
+                                    sp.SoLuong,
+                                    sp.DonGia,
+                                    lsp.TenLoaiSP,
+                                    nsx.TenNhaSX
+                                };
+                    }
+                }
+            }else
+            {
+                if(minprice != 0 && maxprice != 0)
+                {
+                    if(maloaisp != " " && maloaisp != "Tất cả")
+                    {
+                        query = from sp in entities.SanPhams
+                                join nsx in entities.NhaSanXuats
+                                on sp.MaNhaSX equals nsx.MaNhaSX
+                                join lsp in entities.LoaiSanPhams
+                                on sp.MaLoaiSP equals lsp.MaLoaiSP
+                                where minprice <= sp.DonGia && sp.DonGia <= maxprice
+                                && sp.MaLoaiSP == maloaisp
+                                && sp.TrangThai == "1"
+                                select new
+                                {
+                                    sp.TenSP,
+                                    sp.SoLuong,
+                                    sp.DonGia,
+                                    lsp.TenLoaiSP,
+                                    nsx.TenNhaSX
+                                };
+                    }else
+                    {
+                        query = from sp in entities.SanPhams
+                                join nsx in entities.NhaSanXuats
+                                on sp.MaNhaSX equals nsx.MaNhaSX
+                                join lsp in entities.LoaiSanPhams
+                                on sp.MaLoaiSP equals lsp.MaLoaiSP
+                                where minprice <= sp.DonGia && sp.DonGia <= maxprice
+                                && sp.TrangThai == "1"
+                                select new
+                                {
+                                    sp.TenSP,
+                                    sp.SoLuong,
+                                    sp.DonGia,
+                                    lsp.TenLoaiSP,
+                                    nsx.TenNhaSX
+                                };
+                    }
+                }else
+                {
+                    if(maloaisp != " " && maloaisp != "Tất cả")
+                    {
+                        query = from sp in entities.SanPhams
+                                join nsx in entities.NhaSanXuats
+                                on sp.MaNhaSX equals nsx.MaNhaSX
+                                join lsp in entities.LoaiSanPhams
+                                on sp.MaLoaiSP equals lsp.MaLoaiSP
+                                where sp.MaLoaiSP == maloaisp
+                                && sp.TrangThai == "1"
+                                select new
+                                {
+                                    sp.TenSP,
+                                    sp.SoLuong,
+                                    sp.DonGia,
+                                    lsp.TenLoaiSP,
+                                    nsx.TenNhaSX
+                                };
+                    }else
+                    {
+                        query = from sp in entities.SanPhams
+                                join nsx in entities.NhaSanXuats
+                                on sp.MaNhaSX equals nsx.MaNhaSX
+                                join lsp in entities.LoaiSanPhams
+                                on sp.MaLoaiSP equals lsp.MaLoaiSP
+                                where sp.TrangThai == "1"
+                                select new
+                                {
+                                    sp.TenSP,
+                                    sp.SoLuong,
+                                    sp.DonGia,
+                                    lsp.TenLoaiSP,
+                                    nsx.TenNhaSX
+                                };
+                    }
+                }
+            }
+            try {
+                List<object> sanPhamDTOs = new List<object>();
+                foreach (var item in query)
+                {
+                    sanPhamDTOs.Add(item);
+                }
+                return sanPhamDTOs;
+            }catch
+            {
+                return null;
+            }
+            
+            
 
-        //    List<object> sanPhamDTOs = new List<object>();
-        //    foreach (var item in query)
-        //    {
-        //        sanPhamDTOs.Add(item);
-        //    }
-        //    return sanPhamDTOs;
-        //}
+        }
     }
 }
