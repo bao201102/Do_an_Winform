@@ -73,5 +73,11 @@ namespace Do_an_Winform.PL.Thukho
             {
             }
         }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Parent = null;
+        }
     }
 }
