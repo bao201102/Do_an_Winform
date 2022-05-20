@@ -61,12 +61,12 @@ namespace Do_an_Winform.PL.Quanly
                 PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
                 pnsearch.MaPN = txtSearch.Text;
 
-                listpn = PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
+                //listpn = PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
                 gvHDNH.DataSource = listpn;
             }
             else
             {
-                listpn = PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
+                //listpn = PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
                 gvHDNH.DataSource = listpn;
             }
         }
@@ -83,7 +83,7 @@ namespace Do_an_Winform.PL.Quanly
             DateTime startday, endday;
             startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
             endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            listpn = PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
+            //listpn = PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
             gvHDNH.DataSource = listpn;
             //auto complete
             AutoCompleteStringCollection autocom = new AutoCompleteStringCollection();
@@ -121,7 +121,7 @@ namespace Do_an_Winform.PL.Quanly
                 PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
                 pnsearch.MaPN = txtSearch.Text;
 
-                listpn = PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
+                //listpn = PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
                 gvHDNH.DataSource = listpn;
             }
         }
