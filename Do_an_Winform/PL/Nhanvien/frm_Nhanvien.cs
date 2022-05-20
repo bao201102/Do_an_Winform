@@ -19,16 +19,15 @@ namespace Do_an_Winform
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         NhanVienDTO nhanvien = new NhanVienDTO();
         LoaiNhanVienDTO loaiNV = new LoaiNhanVienDTO();
-        public static TaiKhoanDTO taikhoan1;
+        public static TaiKhoanDTO taikhoan1 = new TaiKhoanDTO();
         public frm_Nhanvien(TaiKhoanDTO user)
         {
             InitializeComponent();
             this.Width = 1600;
             this.Height = 900;
             taikhoan = user;
-            taikhoan1 = user;
             
-    }
+        }
 
         private void slideBtn_Click(object sender, EventArgs e)
         {
@@ -103,6 +102,7 @@ namespace Do_an_Winform
             userBtn.Text = emp.TenNV;
             LoaiNhanVienDTO empType = LoaiNhanVienBLL.GetEmpType(emp.MaLoaiNV);
             loaiNV = empType;
+            taikhoan1 = taikhoan;
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)

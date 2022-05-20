@@ -23,9 +23,12 @@ namespace Do_an_Winform.PL.Nhanvien
         KhachHangDTO khachHang = new KhachHangDTO();
         LoaiThanhVienDTO loaitv = new LoaiThanhVienDTO();
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+        NhanVienDTO nhanVien = new NhanVienDTO();
+        List<HoaDonDTO> listHoaDon = new List<HoaDonDTO>();
         public UserControlLapHoaDon()
         {
             InitializeComponent();
+            
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -35,6 +38,8 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void UserControlLapHoaDon_Load(object sender, EventArgs e)
         {
+            nhanVien = NhanVienBLL.GetEmployee(frm_Nhanvien.taikhoan1.MaNguoiDung);
+            
             if (!DesignMode)
             {
                 listSP = SanPhamBLL.GetAllProduct();
@@ -50,7 +55,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 txtDonGia.Enabled = false;
                 txtTenSP.Enabled = false;
                 txtLoaiSP.Enabled = false;
-                txtThuongHieu.Enabled = false;
+                
                 txtSoLuong.Enabled = false;
                 cbMaKH.Enabled = false;
                 cbTichDiem.Enabled = false;
@@ -65,7 +70,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 //    txtSoLuong.Enabled = true;
 
                 //}
-                lblTenNV.Text = NhanVienBLL.GetEmployee(frm_Nhanvien.taikhoan1.MaNguoiDung).TenNV;
+                lblTenNV.Text = nhanVien.TenNV;
                 DateTime curDay = DateTime.Now;
                 lblNgayBan.Text = (new DateTime(curDay.Year, curDay.Month, curDay.Day)).ToString("dd / MM / yyyy");
             }
@@ -74,20 +79,20 @@ namespace Do_an_Winform.PL.Nhanvien
         private void btnSearch_Click(object sender, EventArgs e)
         {
             sp = SanPhamBLL.GetProductById(cbMaSP.Text);
-            if(sp != null)
+            try
             {
                 loaisp = LoaiSanPhamBLL.GetProTypeById(sp.MaLoaiSP);
                 nhasx = NhaSanXuatBLL.GetManufacById(sp.MaNhaSX);
                 txtDonGia.Enabled = true;
                 txtTenSP.Enabled = true;
                 txtLoaiSP.Enabled = true;
-                txtThuongHieu.Enabled = true;
+                
                 txtSoLuong.Enabled = true;
                 txtTenSP.Text = sp.TenSP;
                 txtDonGia.Text = sp.DonGia.ToString();
                 txtLoaiSP.Text = loaisp.TenLoaiSP;
-                txtThuongHieu.Text = nhasx.TenNhaSX;
-            }else
+                
+            }catch
             {
                 MessageBox.Show("Không tìm thấy sản phẩm. Vui lòng nhập lại");
             }
@@ -135,8 +140,30 @@ namespace Do_an_Winform.PL.Nhanvien
             }
             
         }
+        public static string TachChuoi(string discount)
+        {
+            string v = "";
+            for(int i = 0; i < discount.Length; i++)
+            {
+                if(discount[i] == '%')
+                {
+                    v = discount.Substring(0, i);
+                }
+            }
+            return v;
+        }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void rbKhachLe_CheckedChanged(object sender, EventArgs e)
+        {
+            cbMaKH.Enabled = false;
+            txtTenKH.Enabled = true;
+            txtLoaiTV.Enabled = false;
+            txtTenKH.Text = "";
+            cbMaKH.Text = "";
+            txtLoaiTV.Text = "";
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
         {
             if (cbMaSP.Text == "")
             {
@@ -175,36 +202,22 @@ namespace Do_an_Winform.PL.Nhanvien
                 if (lblDiscount.Text == "0%")
                 {
                     lblTotal.Text = (tongCong).ToString() + "đ";
-                }else
+                }
+                else
                 {
                     int discount = int.Parse(TachChuoi(lblDiscount.Text));
                     int thanhTien = tongCong - (tongCong * discount / 100);
                     lblTotal.Text = (thanhTien).ToString() + "đ";
                 }
             }
-            
-        }
-        public static string TachChuoi(string discount)
-        {
-            string v = "";
-            for(int i = 0; i < discount.Length; i++)
-            {
-                if(discount[i] == '%')
-                {
-                    v = discount.Substring(0, i);
-                }
-            }
-            return v;
         }
 
-        private void rbKhachLe_CheckedChanged(object sender, EventArgs e)
+        private void btnCreateBill_Click(object sender, EventArgs e)
         {
-            cbMaKH.Enabled = false;
-            txtTenKH.Enabled = true;
-            txtLoaiTV.Enabled = false;
-            txtTenKH.Text = "";
-            cbMaKH.Text = "";
-            txtLoaiTV.Text = "";
+            listHoaDon = HoaDonBLL.GetAllBill();
+            int count = listHoaDon.Count + 1;
+            string maHD = "HD" + count.ToString("000");
+            txtMaHD.Text = maHD;
         }
     }
 }

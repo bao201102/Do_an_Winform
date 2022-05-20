@@ -53,8 +53,10 @@ namespace Do_an_Winform.PL.DangNhap
                     if (userLogin.MaLoaiNV == "LNV001")
                     {
                         frm_Nhanvien frmNhanVien = new frm_Nhanvien(userLogin);
+                        this.Hide();
                         //Form frmEmp = new frm_Nhanvien(userLogin);
                         frmNhanVien.Show();
+                        //this.Close();
                         //this.Close();
                     }
                     else if (userLogin.MaLoaiNV == "LNV002")

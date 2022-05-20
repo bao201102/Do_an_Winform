@@ -38,5 +38,9 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.ThongKeDoanhThuTheoThang(thangTK);
         }
+        public static List<HoaDonDTO> GetAllBill()
+        {
+            return HoaDonDAL.GetAllBill();
+        }
     }
 }
