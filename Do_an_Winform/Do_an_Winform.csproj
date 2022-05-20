@@ -203,26 +203,26 @@
     <Compile Include="BLL\PhieuNhapHangBLL.cs" />
     <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
-    <Compile Include="CHDT_Entity.Context.cs">
+    <Compile Include="CHDTEntity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CHDT_Entity.Context.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="CHDT_Entity.cs">
+    <Compile Include="CHDTEntity.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="CHDT_Entity.Designer.cs">
+    <Compile Include="CHDTEntity.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CHDT_Entity.edmx</DependentUpon>
+      <DependentUpon>CHDTEntity.edmx</DependentUpon>
     </Compile>
     <Compile Include="ChiTietHoaDon.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="ChiTietPhieuNhap.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\ChiTietPhieuNhapDAL.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
@@ -249,31 +249,31 @@
     <Compile Include="DTO\SanPhamDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
     <Compile Include="HoaDon.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiNhanVien.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiSanPham.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiThanhVien.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="NhaCungCap.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="NhanVien.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="NhaSanXuat.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="PhieuNhapHang.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="PL\DangNhap\frm_DangNhap.cs">
       <SubType>Form</SubType>
@@ -412,15 +412,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SanPham.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TaiKhoan.cs">
-      <DependentUpon>CHDT_Entity.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanPham.cs">
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>CHDTEntity.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="PL\DangNhap\frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -494,12 +497,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="CHDT_Entity.edmx">
+    <EntityDeploy Include="CHDTEntity.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CHDT_Entity.Designer.cs</LastGenOutput>
+      <LastGenOutput>CHDTEntity.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CHDT_Entity.edmx.diagram">
-      <DependentUpon>CHDT_Entity.edmx</DependentUpon>
+    <None Include="CHDTEntity.edmx.diagram">
+      <DependentUpon>CHDTEntity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.ChiTietPhieuNhapDTO.datasource" />
@@ -535,22 +538,22 @@
     <None Include="Resources\key.png" />
     <None Include="Resources\280060958_782111566022312_2539372052837857405_n.png" />
     <None Include="Resources\banner.png" />
-    <Content Include="CHDT_Entity.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CHDT_Entity.edmx</DependentUpon>
-      <LastGenOutput>CHDT_Entity.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="CHDT_Entity.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CHDT_Entity.edmx</DependentUpon>
-      <LastGenOutput>CHDT_Entity.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\save-white.png" />
     <None Include="Resources\printer.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\delete.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\plus.png" />
+    <Content Include="CHDTEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CHDTEntity.edmx</DependentUpon>
+      <LastGenOutput>CHDTEntity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CHDTEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CHDTEntity.edmx</DependentUpon>
+      <LastGenOutput>CHDTEntity.cs</LastGenOutput>
+    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
