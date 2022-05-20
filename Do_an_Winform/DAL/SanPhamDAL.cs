@@ -356,6 +356,10 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
 
+            var query = (from x in entities.SanPhams
+                         select x).Count();
+            product.MaSP = "SP" + (query + 1).ToString("000");
+
             var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPhamDTO, SanPham>());
             var mapper = new Mapper(config);
             SanPham sp = mapper.Map<SanPham>(product);
