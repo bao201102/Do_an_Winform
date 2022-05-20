@@ -56,7 +56,6 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.gvHDBH = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.printDocumentHDBH = new System.Drawing.Printing.PrintDocument();
             this.printDialogHDBH = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialogHDBH = new System.Windows.Forms.PrintPreviewDialog();
@@ -67,7 +66,8 @@ namespace Do_an_Winform.PL.Quanly
             // 
             // bunifuPanel1
             // 
-            this.bunifuPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.bunifuPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
             this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
@@ -81,18 +81,18 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel1.Controls.Add(this.bunifuGradientPanel1);
             this.bunifuPanel1.Controls.Add(this.txtSearch);
             this.bunifuPanel1.Controls.Add(this.gvHDBH);
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(-1, -2);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuPanel1.Location = new System.Drawing.Point(12, 13);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1481, 903);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1126, 483);
             this.bunifuPanel1.TabIndex = 71;
             // 
             // txtTongCong
             // 
             this.txtTongCong.AcceptsReturn = false;
             this.txtTongCong.AcceptsTab = false;
+            this.txtTongCong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTongCong.AnimationSpeed = 200;
             this.txtTongCong.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtTongCong.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -103,11 +103,11 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTongCong.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtTongCong.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtTongCong.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtTongCong.BorderRadius = 1;
+            this.txtTongCong.BorderRadius = 10;
             this.txtTongCong.BorderThickness = 1;
             this.txtTongCong.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTongCong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTongCong.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtTongCong.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongCong.DefaultText = "";
             this.txtTongCong.Enabled = false;
             this.txtTongCong.FillColor = System.Drawing.Color.White;
@@ -118,7 +118,8 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTongCong.IconRight = null;
             this.txtTongCong.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTongCong.Lines = new string[0];
-            this.txtTongCong.Location = new System.Drawing.Point(1097, 107);
+            this.txtTongCong.Location = new System.Drawing.Point(863, 145);
+            this.txtTongCong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTongCong.MaxLength = 32767;
             this.txtTongCong.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTongCong.Modified = false;
@@ -144,7 +145,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtTongCong.OnIdleState = stateProperties4;
-            this.txtTongCong.Padding = new System.Windows.Forms.Padding(3);
+            this.txtTongCong.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTongCong.PasswordChar = '\0';
             this.txtTongCong.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtTongCong.PlaceholderText = "Enter text";
@@ -154,7 +155,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTongCong.SelectionLength = 0;
             this.txtTongCong.SelectionStart = 0;
             this.txtTongCong.ShortcutsEnabled = true;
-            this.txtTongCong.Size = new System.Drawing.Size(351, 43);
+            this.txtTongCong.Size = new System.Drawing.Size(251, 41);
             this.txtTongCong.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTongCong.TabIndex = 76;
             this.txtTongCong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -168,14 +169,16 @@ namespace Do_an_Winform.PL.Quanly
             // bunifuLabel3
             // 
             this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(960, 118);
+            this.bunifuLabel3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.Location = new System.Drawing.Point(755, 155);
+            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(74, 20);
+            this.bunifuLabel3.Size = new System.Drawing.Size(76, 21);
             this.bunifuLabel3.TabIndex = 75;
             this.bunifuLabel3.Text = "Tổng cộng: ";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -189,11 +192,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(26, 16);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuLabel2.Location = new System.Drawing.Point(12, 32);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(261, 41);
+            this.bunifuLabel2.Size = new System.Drawing.Size(212, 33);
             this.bunifuLabel2.TabIndex = 74;
             this.bunifuLabel2.Text = "Hóa đơn bán hàng";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -214,10 +217,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(941, 12);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(755, 17);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(507, 80);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(358, 84);
             this.bunifuGradientPanel1.TabIndex = 72;
             // 
             // btnPrint
@@ -270,10 +274,11 @@ namespace Do_an_Winform.PL.Quanly
             this.btnPrint.IdleIconLeftImage = null;
             this.btnPrint.IdleIconRightImage = null;
             this.btnPrint.IndicateFocus = true;
-            this.btnPrint.Location = new System.Drawing.Point(364, 45);
+            this.btnPrint.Location = new System.Drawing.Point(254, 46);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnPrint.OnDisabledState.BorderRadius = 32;
+            this.btnPrint.OnDisabledState.BorderRadius = 26;
             this.btnPrint.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnPrint.OnDisabledState.BorderThickness = 1;
             this.btnPrint.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -281,7 +286,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnPrint.OnDisabledState.IconLeftImage = null;
             this.btnPrint.OnDisabledState.IconRightImage = null;
             this.btnPrint.onHoverState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPrint.onHoverState.BorderRadius = 32;
+            this.btnPrint.onHoverState.BorderRadius = 26;
             this.btnPrint.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnPrint.onHoverState.BorderThickness = 1;
             this.btnPrint.onHoverState.FillColor = System.Drawing.SystemColors.ActiveCaption;
@@ -289,7 +294,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnPrint.onHoverState.IconLeftImage = null;
             this.btnPrint.onHoverState.IconRightImage = null;
             this.btnPrint.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnPrint.OnIdleState.BorderRadius = 32;
+            this.btnPrint.OnIdleState.BorderRadius = 26;
             this.btnPrint.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnPrint.OnIdleState.BorderThickness = 1;
             this.btnPrint.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
@@ -297,14 +302,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnPrint.OnIdleState.IconLeftImage = null;
             this.btnPrint.OnIdleState.IconRightImage = null;
             this.btnPrint.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnPrint.OnPressedState.BorderRadius = 32;
+            this.btnPrint.OnPressedState.BorderRadius = 26;
             this.btnPrint.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnPrint.OnPressedState.BorderThickness = 1;
             this.btnPrint.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnPrint.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnPrint.OnPressedState.IconLeftImage = null;
             this.btnPrint.OnPressedState.IconRightImage = null;
-            this.btnPrint.Size = new System.Drawing.Size(106, 32);
+            this.btnPrint.Size = new System.Drawing.Size(86, 26);
             this.btnPrint.TabIndex = 5;
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPrint.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -363,10 +368,11 @@ namespace Do_an_Winform.PL.Quanly
             this.btnView.IdleIconLeftImage = null;
             this.btnView.IdleIconRightImage = null;
             this.btnView.IndicateFocus = true;
-            this.btnView.Location = new System.Drawing.Point(364, 8);
+            this.btnView.Location = new System.Drawing.Point(254, 11);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnView.Name = "btnView";
             this.btnView.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnView.OnDisabledState.BorderRadius = 32;
+            this.btnView.OnDisabledState.BorderRadius = 26;
             this.btnView.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnView.OnDisabledState.BorderThickness = 1;
             this.btnView.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -374,7 +380,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnView.OnDisabledState.IconLeftImage = null;
             this.btnView.OnDisabledState.IconRightImage = null;
             this.btnView.onHoverState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnView.onHoverState.BorderRadius = 32;
+            this.btnView.onHoverState.BorderRadius = 26;
             this.btnView.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnView.onHoverState.BorderThickness = 1;
             this.btnView.onHoverState.FillColor = System.Drawing.SystemColors.ActiveCaption;
@@ -382,7 +388,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnView.onHoverState.IconLeftImage = null;
             this.btnView.onHoverState.IconRightImage = null;
             this.btnView.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnView.OnIdleState.BorderRadius = 32;
+            this.btnView.OnIdleState.BorderRadius = 26;
             this.btnView.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnView.OnIdleState.BorderThickness = 1;
             this.btnView.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
@@ -390,14 +396,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnView.OnIdleState.IconLeftImage = null;
             this.btnView.OnIdleState.IconRightImage = null;
             this.btnView.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnView.OnPressedState.BorderRadius = 32;
+            this.btnView.OnPressedState.BorderRadius = 26;
             this.btnView.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnView.OnPressedState.BorderThickness = 1;
             this.btnView.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnView.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnView.OnPressedState.IconLeftImage = null;
             this.btnView.OnPressedState.IconRightImage = null;
-            this.btnView.Size = new System.Drawing.Size(106, 32);
+            this.btnView.Size = new System.Drawing.Size(86, 26);
             this.btnView.TabIndex = 4;
             this.btnView.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnView.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -408,28 +414,35 @@ namespace Do_an_Winform.PL.Quanly
             // 
             // maskedtxtEndDay
             // 
-            this.maskedtxtEndDay.Location = new System.Drawing.Point(156, 43);
+            this.maskedtxtEndDay.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedtxtEndDay.Location = new System.Drawing.Point(117, 46);
+            this.maskedtxtEndDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedtxtEndDay.Mask = "00/00/0000 90:00";
             this.maskedtxtEndDay.Name = "maskedtxtEndDay";
-            this.maskedtxtEndDay.Size = new System.Drawing.Size(152, 22);
+            this.maskedtxtEndDay.Size = new System.Drawing.Size(115, 25);
             this.maskedtxtEndDay.TabIndex = 3;
             this.maskedtxtEndDay.ValidatingType = typeof(System.DateTime);
             // 
             // maskedtxtStartDay
             // 
-            this.maskedtxtStartDay.Location = new System.Drawing.Point(156, 12);
+            this.maskedtxtStartDay.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedtxtStartDay.Location = new System.Drawing.Point(117, 12);
+            this.maskedtxtStartDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedtxtStartDay.Mask = "00/00/0000 90:00";
             this.maskedtxtStartDay.Name = "maskedtxtStartDay";
-            this.maskedtxtStartDay.Size = new System.Drawing.Size(152, 22);
+            this.maskedtxtStartDay.Size = new System.Drawing.Size(115, 25);
             this.maskedtxtStartDay.TabIndex = 1;
             this.maskedtxtStartDay.ValidatingType = typeof(System.DateTime);
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(16, 12);
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 15);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(97, 17);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(91, 17);
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "Ngày bắt đầu:";
             // 
@@ -438,9 +451,12 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuCustomLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(16, 43);
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(12, 49);
+            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(103, 17);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(95, 17);
             this.bunifuCustomLabel2.TabIndex = 2;
             this.bunifuCustomLabel2.Text = "Ngày kết thúc: ";
             // 
@@ -448,7 +464,7 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.txtSearch.AcceptsReturn = false;
             this.txtSearch.AcceptsTab = false;
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSearch.AnimationSpeed = 200;
             this.txtSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
@@ -473,7 +489,8 @@ namespace Do_an_Winform.PL.Quanly
             this.txtSearch.IconRight = null;
             this.txtSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(378, 28);
+            this.txtSearch.Location = new System.Drawing.Point(304, 32);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSearch.Modified = false;
@@ -499,7 +516,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtSearch.OnIdleState = stateProperties8;
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSearch.PlaceholderText = "Tìm kiếm mã hóa đơn";
@@ -509,7 +526,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(519, 49);
+            this.txtSearch.Size = new System.Drawing.Size(389, 40);
             this.txtSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearch.TabIndex = 3;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -535,7 +552,7 @@ namespace Do_an_Winform.PL.Quanly
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gvHDBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvHDBH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gvHDBH.BackgroundColor = System.Drawing.Color.White;
             this.gvHDBH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gvHDBH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gvHDBH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -577,36 +594,19 @@ namespace Do_an_Winform.PL.Quanly
             this.gvHDBH.EnableHeadersVisualStyles = false;
             this.gvHDBH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.gvHDBH.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            //this.gvHDBH.HeaderBgColor = System.Drawing.Color.Empty;
+            this.gvHDBH.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvHDBH.HeaderForeColor = System.Drawing.Color.White;
             this.gvHDBH.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gvHDBH.Location = new System.Drawing.Point(12, 174);
+            this.gvHDBH.Location = new System.Drawing.Point(12, 240);
+            this.gvHDBH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gvHDBH.Name = "gvHDBH";
             this.gvHDBH.RowHeadersVisible = false;
             this.gvHDBH.RowHeadersWidth = 51;
             this.gvHDBH.RowTemplate.Height = 40;
             this.gvHDBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvHDBH.Size = new System.Drawing.Size(1436, 670);
+            this.gvHDBH.Size = new System.Drawing.Size(1102, 226);
             this.gvHDBH.TabIndex = 2;
             this.gvHDBH.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(592, 431);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(296, 41);
-            this.bunifuLabel1.TabIndex = 73;
-            this.bunifuLabel1.Text = "Thống Kê Doanh Thu";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // printDialogHDBH
             // 
@@ -626,11 +626,12 @@ namespace Do_an_Winform.PL.Quanly
             // 
             // frm_HDBH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1459, 854);
+            this.ClientSize = new System.Drawing.Size(1150, 509);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_HDBH";
             this.Text = "frm_HDBH";
             this.Load += new System.EventHandler(this.frm_HDBH_Load);
@@ -657,7 +658,6 @@ namespace Do_an_Winform.PL.Quanly
         private System.Drawing.Printing.PrintDocument printDocumentHDBH;
         private System.Windows.Forms.PrintDialog printDialogHDBH;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialogHDBH;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuTextBox txtTongCong;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
