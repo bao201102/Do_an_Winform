@@ -249,7 +249,20 @@
         x23b9naer1b6BgAAAAAAdmdnvwAKUeQpOb3MPgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+  <data name="txtTongCong.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAV8AAAArCAYAAADfcYviAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADSSURBVHhe7dRBDcMwAARB80flyDAKowAaWfKnAJL9zEj3
+        OQA7AIistT5zzp+ZmT273duT3jH2AcDzdm9PesUX4C3iCxAQX4CA+AIExBcgIL4AAfEFCIgvQEB8AQLi
+        CxAQX4CA+AIExBcgIL4AAfEFCIgvQEB8AQLiCxAQX4CA+AIExBcgIL4AAfEFCIgvQEB8AQLiCxAQX4CA
+        +AIExBcgIL4AAfEFCIgvQEB8AQLiCxAQX4CA+AIExBcgIL4Agb/4Xtf13YeZmT273duTXgDeNcYNbU2E
+        IVTcfjIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 0px;font-family: 'Leelawadee UI'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(121, 162, 184); text-align: center; }</value>
   </data>
   <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -291,20 +304,23 @@
   </data>
   <data name="txtSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
+        xwAA4Kai+AXbiValRKGRiQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 0px;font-family: 'Leelawadee UI'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(121, 162, 184); text-align: center; }</value>
   </data>
   <metadata name="printDocumentHDBH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

@@ -39,6 +39,10 @@ namespace Do_an_Winform.PL.Quanly
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.gvHDNH = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnPrint = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -48,6 +52,8 @@ namespace Do_an_Winform.PL.Quanly
             this.lblStartDay = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblEndDay = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.txtTongCong = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.printDocumentHDNH = new System.Drawing.Printing.PrintDocument();
@@ -113,13 +119,13 @@ namespace Do_an_Winform.PL.Quanly
             this.gvHDNH.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.gvHDNH.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvHDNH.HeaderForeColor = System.Drawing.Color.White;
-            this.gvHDNH.Location = new System.Drawing.Point(8, 95);
+            this.gvHDNH.Location = new System.Drawing.Point(8, 164);
             this.gvHDNH.Name = "gvHDNH";
             this.gvHDNH.RowHeadersVisible = false;
             this.gvHDNH.RowHeadersWidth = 51;
             this.gvHDNH.RowTemplate.Height = 40;
             this.gvHDNH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvHDNH.Size = new System.Drawing.Size(1435, 742);
+            this.gvHDNH.Size = new System.Drawing.Size(1435, 673);
             this.gvHDNH.TabIndex = 2;
             this.gvHDNH.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -376,6 +382,8 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 15;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.txtTongCong);
+            this.bunifuPanel1.Controls.Add(this.bunifuLabel3);
             this.bunifuPanel1.Controls.Add(this.txtSearch);
             this.bunifuPanel1.Controls.Add(this.gvHDNH);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
@@ -385,6 +393,98 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1477, 901);
             this.bunifuPanel1.TabIndex = 71;
+            // 
+            // txtTongCong
+            // 
+            this.txtTongCong.AcceptsReturn = false;
+            this.txtTongCong.AcceptsTab = false;
+            this.txtTongCong.AnimationSpeed = 200;
+            this.txtTongCong.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtTongCong.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtTongCong.AutoSizeHeight = true;
+            this.txtTongCong.BackColor = System.Drawing.Color.Transparent;
+            this.txtTongCong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTongCong.BackgroundImage")));
+            this.txtTongCong.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtTongCong.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtTongCong.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtTongCong.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtTongCong.BorderRadius = 1;
+            this.txtTongCong.BorderThickness = 1;
+            this.txtTongCong.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtTongCong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTongCong.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtTongCong.DefaultText = "";
+            this.txtTongCong.Enabled = false;
+            this.txtTongCong.FillColor = System.Drawing.Color.White;
+            this.txtTongCong.HideSelection = true;
+            this.txtTongCong.IconLeft = null;
+            this.txtTongCong.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTongCong.IconPadding = 10;
+            this.txtTongCong.IconRight = null;
+            this.txtTongCong.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTongCong.Lines = new string[0];
+            this.txtTongCong.Location = new System.Drawing.Point(1092, 98);
+            this.txtTongCong.MaxLength = 32767;
+            this.txtTongCong.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtTongCong.Modified = false;
+            this.txtTongCong.Multiline = false;
+            this.txtTongCong.Name = "txtTongCong";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTongCong.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtTongCong.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTongCong.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTongCong.OnIdleState = stateProperties4;
+            this.txtTongCong.Padding = new System.Windows.Forms.Padding(3);
+            this.txtTongCong.PasswordChar = '\0';
+            this.txtTongCong.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtTongCong.PlaceholderText = "Enter text";
+            this.txtTongCong.ReadOnly = false;
+            this.txtTongCong.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTongCong.SelectedText = "";
+            this.txtTongCong.SelectionLength = 0;
+            this.txtTongCong.SelectionStart = 0;
+            this.txtTongCong.ShortcutsEnabled = true;
+            this.txtTongCong.Size = new System.Drawing.Size(351, 43);
+            this.txtTongCong.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtTongCong.TabIndex = 78;
+            this.txtTongCong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTongCong.TextMarginBottom = 0;
+            this.txtTongCong.TextMarginLeft = 3;
+            this.txtTongCong.TextMarginTop = 1;
+            this.txtTongCong.TextPlaceholder = "Enter text";
+            this.txtTongCong.UseSystemPasswordChar = false;
+            this.txtTongCong.WordWrap = true;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel3.Location = new System.Drawing.Point(955, 109);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(74, 20);
+            this.bunifuLabel3.TabIndex = 77;
+            this.bunifuLabel3.Text = "Tổng cộng: ";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtSearch
             // 
@@ -422,26 +522,26 @@ namespace Do_an_Winform.PL.Quanly
             this.txtSearch.Modified = false;
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnIdleState = stateProperties4;
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnIdleState = stateProperties8;
             this.txtSearch.Padding = new System.Windows.Forms.Padding(3);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -463,6 +563,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtSearch.UseSystemPasswordChar = false;
             this.txtSearch.WordWrap = true;
             this.txtSearch.OnIconRightClick += new System.EventHandler(this.txtSearch_OnIconRightClick);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
@@ -536,5 +637,7 @@ namespace Do_an_Winform.PL.Quanly
         private System.Drawing.Printing.PrintDocument printDocumentHDNH;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialogHDNH;
         private System.Windows.Forms.PrintDialog printDialogHDNH;
+        private Bunifu.UI.WinForms.BunifuTextBox txtTongCong;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
     }
 }
