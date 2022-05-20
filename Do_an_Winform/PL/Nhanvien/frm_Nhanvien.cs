@@ -95,14 +95,22 @@ namespace Do_an_Winform
 
         private void frm_Nhanvien_Load(object sender, EventArgs e)
         {
-            subuserPanel.Visible = false;
-            userControlKhachHang1.BringToFront();
-            NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
-            nhanvien = emp;
-            userBtn.Text = emp.TenNV;
-            LoaiNhanVienDTO empType = LoaiNhanVienBLL.GetEmpType(emp.MaLoaiNV);
-            loaiNV = empType;
-            taikhoan1 = taikhoan;
+            try
+            {
+                subuserPanel.Visible = false;
+                //userControlKhachHang1.BringToFront();
+                openChildUsercontrol(new UserControlKhachHang());
+                NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+                nhanvien = emp;
+                userBtn.Text = emp.TenNV;
+                LoaiNhanVienDTO empType = LoaiNhanVienBLL.GetEmpType(emp.MaLoaiNV);
+                loaiNV = empType;
+                taikhoan1 = taikhoan;
+            }catch
+            {
+
+            }
+            
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
