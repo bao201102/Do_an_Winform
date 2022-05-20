@@ -69,7 +69,7 @@
             this.Transition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_DoiTacNV";
-            this.Text = "frm_DoiTacNV";
+            this.Text = " ";
             this.ResumeLayout(false);
 
         }
