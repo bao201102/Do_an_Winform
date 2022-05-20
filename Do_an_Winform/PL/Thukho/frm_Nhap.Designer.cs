@@ -981,12 +981,12 @@ namespace Do_an_Winform.PL.Thukho
             // 
             this.lblReturn.AutoSize = true;
             this.lblReturn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblReturn.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturn.Location = new System.Drawing.Point(29, 1);
+            this.lblReturn.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReturn.Location = new System.Drawing.Point(-2, -1);
             this.lblReturn.Name = "lblReturn";
-            this.lblReturn.Size = new System.Drawing.Size(54, 21);
+            this.lblReturn.Size = new System.Drawing.Size(74, 23);
             this.lblReturn.TabIndex = 38;
-            this.lblReturn.Text = "Trở lại";
+            this.lblReturn.Text = "< Trở lại";
             this.lblReturn.Click += new System.EventHandler(this.lblReturn_Click);
             this.lblReturn.MouseLeave += new System.EventHandler(this.lblReturn_MouseLeave);
             this.lblReturn.MouseHover += new System.EventHandler(this.lblReturn_MouseHover);
