@@ -54,7 +54,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 txtSoLuong.Enabled = false;
                 cbMaKH.Enabled = false;
                 cbTichDiem.Enabled = false;
-                txtTenKH.Enabled = false;
+                txtTenKH.Enabled = true;
                 txtLoaiTV.Enabled = false;
                 rbKhachLe.Checked = true;
                 //if (rbThanhVien.Checked)
@@ -100,11 +100,18 @@ namespace Do_an_Winform.PL.Nhanvien
             if(isShowMemId)
             {
                 cbMaKH.Enabled = true;
-                
+                txtTenKH.Enabled = false;
+                txtLoaiTV.Enabled = false;
+                txtTenKH.Text = "";
+                txtLoaiTV.Text = "";
+                cbMaKH.Text = "";
             }
             else
             {
                 cbMaKH.Enabled = false;
+                txtTenKH.Text = "";
+                txtLoaiTV.Text = "";
+                cbMaKH.Text = "";
             }
             
         }
@@ -113,8 +120,8 @@ namespace Do_an_Winform.PL.Nhanvien
         {
             try
             {
-                txtTenKH.Enabled = true;
-                txtLoaiTV.Enabled = true;
+                //txtTenKH.Enabled = true;
+                //txtLoaiTV.Enabled = true;
                 btnSearchMem.Enabled = true;
                 cbTichDiem.Enabled = true;
                 khachHang = KhachHangBLL.GetCustomerById(cbMaKH.Text);
@@ -131,7 +138,73 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (cbMaSP.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã sản phẩm");
+            }
+            else if (txtSoLuong.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số lượng");
+            }
+            else
+            {
+                int donGia = int.Parse(txtDonGia.Text);
+                int soLuong = int.Parse(txtSoLuong.Text);
+                int tongCong = donGia * soLuong;
+                lblSum.Text = tongCong.ToString() + "đ";
+                lblDiscount.Text = "0%";
+                if (txtLoaiTV.Text != "")
+                {
+                    if (txtLoaiTV.Text == "Đồng")
+                    {
+                        lblDiscount.Text = "5%";
+                    }
+                    else if (txtLoaiTV.Text == "Bạc")
+                    {
+                        lblDiscount.Text = "8%";
+                    }
+                    else if (txtLoaiTV.Text == "Vàng")
+                    {
+                        lblDiscount.Text = "10%";
+                    }
+                    else
+                    {
+                        lblDiscount.Text = "12%";
+                    }
+                }
+                if (lblDiscount.Text == "0%")
+                {
+                    lblTotal.Text = (tongCong).ToString() + "đ";
+                }else
+                {
+                    int discount = int.Parse(TachChuoi(lblDiscount.Text));
+                    int thanhTien = tongCong - (tongCong * discount / 100);
+                    lblTotal.Text = (thanhTien).ToString() + "đ";
+                }
+            }
+            
+        }
+        public static string TachChuoi(string discount)
+        {
+            string v = "";
+            for(int i = 0; i < discount.Length; i++)
+            {
+                if(discount[i] == '%')
+                {
+                    v = discount.Substring(0, i);
+                }
+            }
+            return v;
+        }
 
+        private void rbKhachLe_CheckedChanged(object sender, EventArgs e)
+        {
+            cbMaKH.Enabled = false;
+            txtTenKH.Enabled = true;
+            txtLoaiTV.Enabled = false;
+            txtTenKH.Text = "";
+            cbMaKH.Text = "";
+            txtLoaiTV.Text = "";
         }
     }
 }

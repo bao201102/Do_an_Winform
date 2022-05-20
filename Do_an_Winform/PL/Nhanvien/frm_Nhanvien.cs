@@ -174,7 +174,7 @@ namespace Do_an_Winform
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_Info(nhanvien, loaiNV));
+            openChildForm(new frm_Thongtin(nhanvien, loaiNV));
         }
     }
 }
