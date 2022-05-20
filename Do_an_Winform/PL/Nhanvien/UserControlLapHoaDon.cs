@@ -38,7 +38,13 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void UserControlLapHoaDon_Load(object sender, EventArgs e)
         {
-            nhanVien = NhanVienBLL.GetEmployee(frm_Nhanvien.taikhoan1.MaNguoiDung);
+            try
+            {
+                nhanVien = NhanVienBLL.GetEmployee(frm_Nhanvien.taikhoan1.MaNguoiDung);
+            }
+            catch (Exception)
+            {
+            }
             
             if (!DesignMode)
             {
