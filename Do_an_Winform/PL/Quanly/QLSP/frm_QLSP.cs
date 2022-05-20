@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.Quanly.QLSP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,26 +47,10 @@ namespace Do_an_Winform.PL.Quanly
             }
         }
 
-        private Form activeForm = null;
-        private void OpenChildForm(Form childForm)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(childForm);
-            mainPanel.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
         private void btnInsert_Click(object sender, EventArgs e)
         {
-
+            frm_Insert form = new frm_Insert();
+            form.ShowDialog();
         }
     }
 }

@@ -44,7 +44,6 @@
             this.dgvDSSP = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btnInsert = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnCreateRP = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.mainPanel = new Bunifu.UI.WinForms.BunifuPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -303,21 +302,6 @@
             this.btnCreateRP.TabIndex = 13;
             this.btnCreateRP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // mainPanel
-            // 
-            this.mainPanel.BackgroundColor = System.Drawing.Color.Transparent;
-            this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
-            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mainPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.mainPanel.BorderRadius = 3;
-            this.mainPanel.BorderThickness = 1;
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.ShowBorders = true;
-            this.mainPanel.Size = new System.Drawing.Size(1328, 844);
-            this.mainPanel.TabIndex = 14;
-            // 
             // frm_QLSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,10 +314,10 @@
             this.Controls.Add(this.cbLoaisp);
             this.Controls.Add(this.txtFind);
             this.Controls.Add(this.bunifuLabel1);
-            this.Controls.Add(this.mainPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_QLSP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QLSP";
             this.Load += new System.EventHandler(this.frm_QLSP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSP)).EndInit();
@@ -351,6 +335,5 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtFind;
         private Bunifu.Framework.UI.BunifuThinButton2 btnInsert;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCreateRP;
-        private Bunifu.UI.WinForms.BunifuPanel mainPanel;
     }
 }
