@@ -219,5 +219,22 @@ namespace Do_an_Winform.DAL
             dtResult = dtResult.AddDays(-(dtResult.Day));
             return dtResult;
         }
+        //Hàm lấy tất cả hóa đơn
+        public static List<HoaDonDTO> GetAllBill()
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var bills = from hd in entities.HoaDons
+                           where hd.TrangThai == "1"
+                           select hd;
+            List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
+            foreach (HoaDon bill in bills)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
+                var mapper = new Mapper(config);
+                HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
+                hoaDonDTOs.Add(hoadon);
+            }
+            return hoaDonDTOs;
+        }
     }
 }

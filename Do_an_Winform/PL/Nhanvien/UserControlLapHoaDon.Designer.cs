@@ -28,18 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlLapHoaDon));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.cbTichDiem = new System.Windows.Forms.CheckBox();
+            this.btnThanhToan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cbMaKH = new System.Windows.Forms.ComboBox();
             this.btnSearchMem = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnSaveAndPrint = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtLoaiTV = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -65,70 +74,94 @@
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtLoaiSP = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtThuongHieu = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.btnSearch = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnEdit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cbMaSP = new System.Windows.Forms.ComboBox();
-            this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnSaveAndPrint = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAdd = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnDelete = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lblMaHD = new System.Windows.Forms.Label();
+            this.btnCreateBill = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCustomDataGrid1
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuCustomDataGrid1.ColumnHeadersHeight = 40;
             this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Column2,
             this.Column5,
             this.Column3,
+            this.Column6,
             this.Column1});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Leelawadee UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuCustomDataGrid1.DoubleBuffered = true;
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
             this.bunifuCustomDataGrid1.GridColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(30, 312);
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(7, 313);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid1.RowTemplate.DividerHeight = 1;
             this.bunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(684, 298);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(728, 298);
             this.bunifuCustomDataGrid1.TabIndex = 13;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Mã SP";
+            this.Column4.Name = "Column4";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tên SP";
+            this.Column2.Name = "Column2";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Số lượng";
+            this.Column5.Name = "Column5";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Đơn giá";
+            this.Column3.Name = "Column3";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Giảm giá";
+            this.Column6.Name = "Column6";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Thành tiền";
+            this.Column1.Name = "Column1";
             // 
             // lbl1
             // 
@@ -144,7 +177,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 95);
+            this.label1.Location = new System.Drawing.Point(34, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 15;
@@ -155,6 +188,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.cbTichDiem);
+            this.panel1.Controls.Add(this.btnThanhToan);
             this.panel1.Controls.Add(this.cbMaKH);
             this.panel1.Controls.Add(this.btnSearchMem);
             this.panel1.Controls.Add(this.btnSaveAndPrint);
@@ -179,8 +213,100 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(759, 98);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 489);
+            this.panel1.Size = new System.Drawing.Size(320, 492);
             this.panel1.TabIndex = 16;
+            // 
+            // btnSave
+            // 
+            this.btnSave.AllowAnimations = true;
+            this.btnSave.AllowMouseEffects = true;
+            this.btnSave.AllowToggling = false;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.AnimationSpeed = 200;
+            this.btnSave.AutoGenerateColors = false;
+            this.btnSave.AutoRoundBorders = true;
+            this.btnSave.AutoSizeLeftIcon = false;
+            this.btnSave.AutoSizeRightIcon = true;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
+            this.btnSave.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSave.ButtonText = "Lưu";
+            this.btnSave.ButtonTextMarginLeft = 0;
+            this.btnSave.ColorContrastOnClick = 45;
+            this.btnSave.ColorContrastOnHover = 45;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = false;
+            borderEdges1.TopLeft = false;
+            borderEdges1.TopRight = true;
+            this.btnSave.CustomizableEdges = borderEdges1;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSave.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnSave.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnSave.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnSave.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.btnSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.IconLeft = global::Do_an_Winform.Properties.Resources.save_white;
+            this.btnSave.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSave.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnSave.IconMarginLeft = 11;
+            this.btnSave.IconPadding = 10;
+            this.btnSave.IconRight = null;
+            this.btnSave.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSave.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnSave.IconSize = 20;
+            this.btnSave.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnSave.IdleBorderRadius = 0;
+            this.btnSave.IdleBorderThickness = 0;
+            this.btnSave.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnSave.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.save_white;
+            this.btnSave.IdleIconRightImage = null;
+            this.btnSave.IndicateFocus = false;
+            this.btnSave.Location = new System.Drawing.Point(18, 441);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnSave.OnDisabledState.BorderRadius = 39;
+            this.btnSave.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSave.OnDisabledState.BorderThickness = 1;
+            this.btnSave.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnSave.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnSave.OnDisabledState.IconLeftImage = null;
+            this.btnSave.OnDisabledState.IconRightImage = null;
+            this.btnSave.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnSave.onHoverState.BorderRadius = 39;
+            this.btnSave.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSave.onHoverState.BorderThickness = 1;
+            this.btnSave.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btnSave.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSave.onHoverState.IconLeftImage = null;
+            this.btnSave.onHoverState.IconRightImage = null;
+            this.btnSave.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSave.OnIdleState.BorderRadius = 39;
+            this.btnSave.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSave.OnIdleState.BorderThickness = 1;
+            this.btnSave.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSave.OnIdleState.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.OnIdleState.IconLeftImage = global::Do_an_Winform.Properties.Resources.save_white;
+            this.btnSave.OnIdleState.IconRightImage = null;
+            this.btnSave.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnSave.OnPressedState.BorderRadius = 39;
+            this.btnSave.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSave.OnPressedState.BorderThickness = 1;
+            this.btnSave.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnSave.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnSave.OnPressedState.IconLeftImage = null;
+            this.btnSave.OnPressedState.IconRightImage = null;
+            this.btnSave.Size = new System.Drawing.Size(120, 39);
+            this.btnSave.TabIndex = 39;
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSave.TextMarginLeft = 0;
+            this.btnSave.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnSave.UseDefaultRadiusAndThickness = true;
             // 
             // cbTichDiem
             // 
@@ -191,6 +317,32 @@
             this.cbTichDiem.TabIndex = 38;
             this.cbTichDiem.Text = "Tích điểm";
             this.cbTichDiem.UseVisualStyleBackColor = true;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.ActiveBorderThickness = 1;
+            this.btnThanhToan.ActiveCornerRadius = 20;
+            this.btnThanhToan.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThanhToan.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnThanhToan.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThanhToan.BackColor = System.Drawing.Color.White;
+            this.btnThanhToan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.BackgroundImage")));
+            this.btnThanhToan.ButtonText = "Thanh toán";
+            this.btnThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.Color.Black;
+            this.btnThanhToan.IdleBorderThickness = 1;
+            this.btnThanhToan.IdleCornerRadius = 20;
+            this.btnThanhToan.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnThanhToan.IdleForecolor = System.Drawing.Color.Black;
+            this.btnThanhToan.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnThanhToan.Location = new System.Drawing.Point(14, 262);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(90, 33);
+            this.btnThanhToan.TabIndex = 38;
+            this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // cbMaKH
             // 
@@ -228,11 +380,36 @@
             this.btnSearchMem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSearchMem.Click += new System.EventHandler(this.btnSearchMem_Click);
             // 
+            // btnSaveAndPrint
+            // 
+            this.btnSaveAndPrint.ActiveBorderThickness = 1;
+            this.btnSaveAndPrint.ActiveCornerRadius = 20;
+            this.btnSaveAndPrint.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSaveAndPrint.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnSaveAndPrint.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSaveAndPrint.BackColor = System.Drawing.Color.White;
+            this.btnSaveAndPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveAndPrint.BackgroundImage")));
+            this.btnSaveAndPrint.ButtonText = "Lưu và in";
+            this.btnSaveAndPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveAndPrint.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAndPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveAndPrint.IdleBorderThickness = 1;
+            this.btnSaveAndPrint.IdleCornerRadius = 20;
+            this.btnSaveAndPrint.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSaveAndPrint.IdleForecolor = System.Drawing.Color.Black;
+            this.btnSaveAndPrint.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnSaveAndPrint.Location = new System.Drawing.Point(211, 438);
+            this.btnSaveAndPrint.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSaveAndPrint.Name = "btnSaveAndPrint";
+            this.btnSaveAndPrint.Size = new System.Drawing.Size(102, 44);
+            this.btnSaveAndPrint.TabIndex = 36;
+            this.btnSaveAndPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(226, 391);
+            this.lblTotal.Location = new System.Drawing.Point(226, 403);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(32, 13);
             this.lblTotal.TabIndex = 20;
@@ -286,7 +463,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(15, 391);
+            this.label15.Location = new System.Drawing.Point(17, 403);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(65, 13);
             this.label15.TabIndex = 13;
@@ -296,7 +473,7 @@
             // 
             this.lblDiscount.AutoSize = true;
             this.lblDiscount.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.Location = new System.Drawing.Point(226, 357);
+            this.lblDiscount.Location = new System.Drawing.Point(226, 368);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(53, 13);
             this.lblDiscount.TabIndex = 12;
@@ -306,7 +483,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(16, 357);
+            this.label13.Location = new System.Drawing.Point(17, 368);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(66, 13);
             this.label13.TabIndex = 10;
@@ -316,7 +493,7 @@
             // 
             this.lblSum.AutoSize = true;
             this.lblSum.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSum.Location = new System.Drawing.Point(226, 321);
+            this.lblSum.Location = new System.Drawing.Point(226, 336);
             this.lblSum.Name = "lblSum";
             this.lblSum.Size = new System.Drawing.Size(29, 13);
             this.lblSum.TabIndex = 9;
@@ -326,7 +503,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 321);
+            this.label11.Location = new System.Drawing.Point(20, 336);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 13);
             this.label11.TabIndex = 8;
@@ -336,7 +513,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 290);
+            this.label5.Location = new System.Drawing.Point(16, 303);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 13);
             this.label5.TabIndex = 7;
@@ -437,7 +614,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 141);
+            this.label7.Location = new System.Drawing.Point(34, 182);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 17);
             this.label7.TabIndex = 21;
@@ -445,7 +622,7 @@
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(133, 141);
+            this.txtDonGia.Location = new System.Drawing.Point(133, 182);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(139, 20);
             this.txtDonGia.TabIndex = 22;
@@ -466,24 +643,6 @@
             this.txtLoaiSP.Name = "txtLoaiSP";
             this.txtLoaiSP.Size = new System.Drawing.Size(147, 20);
             this.txtLoaiSP.TabIndex = 24;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(34, 185);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 17);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Thương hiệu:";
-            // 
-            // txtThuongHieu
-            // 
-            this.txtThuongHieu.Location = new System.Drawing.Point(133, 185);
-            this.txtThuongHieu.Name = "txtThuongHieu";
-            this.txtThuongHieu.Size = new System.Drawing.Size(139, 20);
-            this.txtThuongHieu.TabIndex = 26;
-            this.txtThuongHieu.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label10
             // 
@@ -520,7 +679,7 @@
             this.btnSearch.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnSearch.IdleForecolor = System.Drawing.Color.Black;
             this.btnSearch.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSearch.Location = new System.Drawing.Point(300, 84);
+            this.btnSearch.Location = new System.Drawing.Point(293, 128);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(5);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(74, 34);
@@ -558,178 +717,10 @@
             this.cbMaSP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbMaSP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbMaSP.FormattingEnabled = true;
-            this.cbMaSP.Location = new System.Drawing.Point(133, 95);
+            this.cbMaSP.Location = new System.Drawing.Point(133, 141);
             this.cbMaSP.Name = "cbMaSP";
             this.cbMaSP.Size = new System.Drawing.Size(139, 21);
             this.cbMaSP.TabIndex = 35;
-            // 
-            // btnSave
-            // 
-            this.btnSave.AllowAnimations = true;
-            this.btnSave.AllowMouseEffects = true;
-            this.btnSave.AllowToggling = false;
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.AnimationSpeed = 200;
-            this.btnSave.AutoGenerateColors = false;
-            this.btnSave.AutoRoundBorders = true;
-            this.btnSave.AutoSizeLeftIcon = false;
-            this.btnSave.AutoSizeRightIcon = true;
-            this.btnSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnSave.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
-            this.btnSave.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSave.ButtonText = "Lưu";
-            this.btnSave.ButtonTextMarginLeft = 0;
-            this.btnSave.ColorContrastOnClick = 45;
-            this.btnSave.ColorContrastOnHover = 45;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = false;
-            borderEdges4.TopLeft = false;
-            borderEdges4.TopRight = true;
-            this.btnSave.CustomizableEdges = borderEdges4;
-            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSave.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSave.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btnSave.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btnSave.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.btnSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.IconLeft = global::Do_an_Winform.Properties.Resources.save_white;
-            this.btnSave.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnSave.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnSave.IconMarginLeft = 11;
-            this.btnSave.IconPadding = 10;
-            this.btnSave.IconRight = null;
-            this.btnSave.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnSave.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnSave.IconSize = 20;
-            this.btnSave.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btnSave.IdleBorderRadius = 0;
-            this.btnSave.IdleBorderThickness = 0;
-            this.btnSave.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnSave.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.save_white;
-            this.btnSave.IdleIconRightImage = null;
-            this.btnSave.IndicateFocus = false;
-            this.btnSave.Location = new System.Drawing.Point(18, 438);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSave.OnDisabledState.BorderRadius = 39;
-            this.btnSave.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSave.OnDisabledState.BorderThickness = 1;
-            this.btnSave.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnSave.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnSave.OnDisabledState.IconLeftImage = null;
-            this.btnSave.OnDisabledState.IconRightImage = null;
-            this.btnSave.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnSave.onHoverState.BorderRadius = 39;
-            this.btnSave.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSave.onHoverState.BorderThickness = 1;
-            this.btnSave.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnSave.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSave.onHoverState.IconLeftImage = null;
-            this.btnSave.onHoverState.IconRightImage = null;
-            this.btnSave.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSave.OnIdleState.BorderRadius = 39;
-            this.btnSave.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSave.OnIdleState.BorderThickness = 1;
-            this.btnSave.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSave.OnIdleState.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.OnIdleState.IconLeftImage = global::Do_an_Winform.Properties.Resources.save_white;
-            this.btnSave.OnIdleState.IconRightImage = null;
-            this.btnSave.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnSave.OnPressedState.BorderRadius = 39;
-            this.btnSave.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSave.OnPressedState.BorderThickness = 1;
-            this.btnSave.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnSave.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnSave.OnPressedState.IconLeftImage = null;
-            this.btnSave.OnPressedState.IconRightImage = null;
-            this.btnSave.Size = new System.Drawing.Size(120, 39);
-            this.btnSave.TabIndex = 39;
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnSave.TextMarginLeft = 0;
-            this.btnSave.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnSave.UseDefaultRadiusAndThickness = true;
-            // 
-            // btnSaveAndPrint
-            // 
-            this.btnSaveAndPrint.ActiveBorderThickness = 1;
-            this.btnSaveAndPrint.ActiveCornerRadius = 20;
-            this.btnSaveAndPrint.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSaveAndPrint.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnSaveAndPrint.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSaveAndPrint.BackColor = System.Drawing.Color.White;
-            this.btnSaveAndPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveAndPrint.BackgroundImage")));
-            this.btnSaveAndPrint.ButtonText = "Lưu và in";
-            this.btnSaveAndPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveAndPrint.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAndPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveAndPrint.IdleBorderThickness = 1;
-            this.btnSaveAndPrint.IdleCornerRadius = 20;
-            this.btnSaveAndPrint.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSaveAndPrint.IdleForecolor = System.Drawing.Color.Black;
-            this.btnSaveAndPrint.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSaveAndPrint.Location = new System.Drawing.Point(211, 438);
-            this.btnSaveAndPrint.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSaveAndPrint.Name = "btnSaveAndPrint";
-            this.btnSaveAndPrint.Size = new System.Drawing.Size(102, 44);
-            this.btnSaveAndPrint.TabIndex = 36;
-            this.btnSaveAndPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Mã HD";
-            this.Column4.Name = "Column4";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên SP";
-            this.Column2.Name = "Column2";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Thương hiệu";
-            this.Column5.Name = "Column5";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Đơn giá";
-            this.Column3.Name = "Column3";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Thành tiền";
-            this.Column1.Name = "Column1";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.ActiveBorderThickness = 1;
-            this.btnAdd.ActiveCornerRadius = 20;
-            this.btnAdd.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdd.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnAdd.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdd.BackColor = System.Drawing.Color.White;
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.ButtonText = "Thêm";
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.IdleBorderThickness = 1;
-            this.btnAdd.IdleCornerRadius = 20;
-            this.btnAdd.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnAdd.IdleForecolor = System.Drawing.Color.Black;
-            this.btnAdd.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnAdd.Location = new System.Drawing.Point(335, 241);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(102, 44);
-            this.btnAdd.TabIndex = 38;
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -756,20 +747,63 @@
             this.btnDelete.TabIndex = 39;
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblMaHD
+            // 
+            this.lblMaHD.AutoSize = true;
+            this.lblMaHD.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaHD.Location = new System.Drawing.Point(34, 98);
+            this.lblMaHD.Name = "lblMaHD";
+            this.lblMaHD.Size = new System.Drawing.Size(55, 17);
+            this.lblMaHD.TabIndex = 40;
+            this.lblMaHD.Text = "Mã HD:";
+            // 
+            // btnCreateBill
+            // 
+            this.btnCreateBill.ActiveBorderThickness = 1;
+            this.btnCreateBill.ActiveCornerRadius = 20;
+            this.btnCreateBill.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCreateBill.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnCreateBill.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCreateBill.BackColor = System.Drawing.Color.White;
+            this.btnCreateBill.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCreateBill.BackgroundImage")));
+            this.btnCreateBill.ButtonText = "Tạo hóa đơn";
+            this.btnCreateBill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreateBill.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateBill.ForeColor = System.Drawing.Color.Black;
+            this.btnCreateBill.IdleBorderThickness = 1;
+            this.btnCreateBill.IdleCornerRadius = 20;
+            this.btnCreateBill.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnCreateBill.IdleForecolor = System.Drawing.Color.Black;
+            this.btnCreateBill.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnCreateBill.Location = new System.Drawing.Point(328, 241);
+            this.btnCreateBill.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCreateBill.Name = "btnCreateBill";
+            this.btnCreateBill.Size = new System.Drawing.Size(102, 44);
+            this.btnCreateBill.TabIndex = 41;
+            this.btnCreateBill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCreateBill.Click += new System.EventHandler(this.btnCreateBill_Click);
+            // 
+            // txtMaHD
+            // 
+            this.txtMaHD.Location = new System.Drawing.Point(133, 98);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(139, 20);
+            this.txtMaHD.TabIndex = 42;
+            // 
             // UserControlLapHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txtMaHD);
+            this.Controls.Add(this.btnCreateBill);
+            this.Controls.Add(this.lblMaHD);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cbMaSP);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtThuongHieu);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtLoaiSP);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtDonGia);
@@ -811,8 +845,6 @@
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtLoaiSP;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtThuongHieu;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label lblDiscount;
@@ -834,12 +866,16 @@
         private System.Windows.Forms.CheckBox cbTichDiem;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSave;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSaveAndPrint;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnThanhToan;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnAdd;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnDelete;
+        private System.Windows.Forms.Label lblMaHD;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnCreateBill;
+        private System.Windows.Forms.TextBox txtMaHD;
     }
 }

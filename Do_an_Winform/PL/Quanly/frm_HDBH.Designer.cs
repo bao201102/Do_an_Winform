@@ -577,7 +577,7 @@ namespace Do_an_Winform.PL.Quanly
             this.gvHDBH.EnableHeadersVisualStyles = false;
             this.gvHDBH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.gvHDBH.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.gvHDBH.HeaderBgColor = System.Drawing.Color.Empty;
+            //this.gvHDBH.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvHDBH.HeaderForeColor = System.Drawing.Color.White;
             this.gvHDBH.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.gvHDBH.Location = new System.Drawing.Point(12, 174);
