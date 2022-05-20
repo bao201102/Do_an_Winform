@@ -193,7 +193,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl1);
             this.Name = "UserControlDKThanhVien";
-            this.Size = new System.Drawing.Size(1032, 464);
+            this.Size = new System.Drawing.Size(1046, 477);
             this.Load += new System.EventHandler(this.UserControlDKThanhVien_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

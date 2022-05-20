@@ -14,6 +14,8 @@ namespace Do_an_Winform.PL.Quanly
 {
     public partial class frm_HDNH : Form
     {
+        DateTime startday, endday;
+        List<PhieuNhapHangDTO> listpn;
         public frm_HDNH()
         {
             InitializeComponent();
@@ -39,7 +41,6 @@ namespace Do_an_Winform.PL.Quanly
 
         private void txtSearch_OnIconRightClick(object sender, EventArgs e)
         {
-            DateTime startday, endday;
             try
             {
                 startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
@@ -60,18 +61,20 @@ namespace Do_an_Winform.PL.Quanly
                 PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
                 pnsearch.MaPN = txtSearch.Text;
 
-                List<PhieuNhapHangDTO> listhd = PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
-                gvHDNH.DataSource = listhd;
+                //listpn = PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
+                gvHDNH.DataSource = listpn;
             }
             else
             {
-                List<PhieuNhapHangDTO> listhd = PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
-                gvHDNH.DataSource = listhd;
+                //listpn = PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
+                gvHDNH.DataSource = listpn;
             }
         }
 
         private void frm_HDNH_Load(object sender, EventArgs e)
         {
+            //load Tổng
+            txtTongCong.Text = "0";
             //load Date
             maskedtxtStartDay.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
             maskedtxtEndDay.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
@@ -80,8 +83,15 @@ namespace Do_an_Winform.PL.Quanly
             DateTime startday, endday;
             startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
             endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            List<PhieuNhapHangDTO> listhd = PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
-            gvHDNH.DataSource = listhd;
+            //listpn = PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
+            gvHDNH.DataSource = listpn;
+            //auto complete
+            AutoCompleteStringCollection autocom = new AutoCompleteStringCollection();
+            foreach (PhieuNhapHangDTO pn in listpn)
+            {
+                autocom.Add(pn.MaPN);
+            }
+            txtSearch.AutoCompleteCustomSource = autocom;
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -100,6 +110,20 @@ namespace Do_an_Winform.PL.Quanly
         private void btnView_Click(object sender, EventArgs e)
         {
             printPreviewDialogHDNH.ShowDialog();
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+                endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+                PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
+                pnsearch.MaPN = txtSearch.Text;
+
+                //listpn = PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
+                gvHDNH.DataSource = listpn;
+            }
         }
     }
 }

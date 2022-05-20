@@ -40,14 +40,21 @@ namespace Do_an_Winform.DTO
 			get { return _ThanhTien; }
 			set { _ThanhTien = value; }
 		}
+		private string _TrangThai;
+		public string TrangThai
+        {
+			get { return _TrangThai; }
+			set { _TrangThai = value; }
+		}
 
-		public HoaDonDTO(string MaHD_, DateTime NgayTaoHD_, string MaNV_, string MaKH_,int ThanhTien_)
+		public HoaDonDTO(string MaHD_, DateTime NgayTaoHD_, string MaNV_, string MaKH_,int ThanhTien_, string TrangThai_)
 		{
 			this.MaHD = MaHD_;
 			this.NgayTaoHD = NgayTaoHD_;
 			this.MaNV = MaNV_;
 			this.MaKH = MaKH_;
 			this.ThanhTien = ThanhTien_;
+			this.TrangThai = TrangThai_;
 		}
 		public HoaDonDTO()
 		{
@@ -56,6 +63,7 @@ namespace Do_an_Winform.DTO
 			this.MaNV = "";
 			this.MaKH = "";
 			this.ThanhTien = 0;
+			this.TrangThai = "";
 		}
 	}
 }

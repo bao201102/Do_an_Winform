@@ -18,6 +18,29 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.ThongKeTheoMaHD(hdsearch, startday, endday);
         }
-
+        public static double DoanhThuTatCaHD(DateTime startday, DateTime endday)
+        {
+            return HoaDonDAL.DoanhThuTatCaHD(startday, endday);
+        }
+        public static double DoanhThuTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
+        {
+            return HoaDonDAL.DoanhThuTheoMaHD(hdsearch, startday, endday);
+        }
+        public static double ThongKeDoanhThuTheoTDHT(DateTime today)
+        {
+            return HoaDonDAL.ThongKeDoanhThuTheoTDHT(today);
+        }
+        public static double ThongKeDoanhThuTheoQuy(int quyTK)
+        {
+            return HoaDonDAL.ThongKeDoanhThuTheoQuy(quyTK);
+        }
+        public static double ThongKeDoanhThuTheoThang(int thangTK)
+        {
+            return HoaDonDAL.ThongKeDoanhThuTheoThang(thangTK);
+        }
+        public static List<HoaDonDTO> GetAllBill()
+        {
+            return HoaDonDAL.GetAllBill();
+        }
     }
 }

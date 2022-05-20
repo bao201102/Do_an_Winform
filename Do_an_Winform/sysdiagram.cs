@@ -12,15 +12,12 @@ namespace Do_an_Winform
     using System;
     using System.Collections.Generic;
     
-    public partial class ChiTietHoaDon
+    public partial class sysdiagram
     {
-        public string MaHD { get; set; }
-        public string MaSP { get; set; }
-        public int SoLuong { get; set; }
-        public int ThanhTien { get; set; }
-        public string TrangThai { get; set; }
-    
-        public virtual HoaDon HoaDon { get; set; }
-        public virtual SanPham SanPham { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -117,7 +117,7 @@
             this.bunifuPanel1.Location = new System.Drawing.Point(35, 23);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1260, 380);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1260, 324);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // btnCancelChanges
@@ -127,7 +127,7 @@
             this.btnCancelChanges.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.btnCancelChanges.ActiveForecolor = System.Drawing.Color.White;
             this.btnCancelChanges.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.btnCancelChanges.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelChanges.BackColor = System.Drawing.SystemColors.Control;
             this.btnCancelChanges.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelChanges.BackgroundImage")));
             this.btnCancelChanges.ButtonText = "Hủy thay đổi";
             this.btnCancelChanges.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -152,7 +152,7 @@
             this.btnSaveChanges.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnSaveChanges.ActiveForecolor = System.Drawing.Color.White;
             this.btnSaveChanges.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSaveChanges.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveChanges.BackColor = System.Drawing.SystemColors.Control;
             this.btnSaveChanges.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveChanges.BackgroundImage")));
             this.btnSaveChanges.ButtonText = "Lưu thay đổi";
             this.btnSaveChanges.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -636,10 +636,10 @@
             this.bunifuPanel2.Controls.Add(this.txtPassword);
             this.bunifuPanel2.Controls.Add(this.bunifuLabel11);
             this.bunifuPanel2.Controls.Add(this.bunifuLabel12);
-            this.bunifuPanel2.Location = new System.Drawing.Point(35, 440);
+            this.bunifuPanel2.Location = new System.Drawing.Point(35, 378);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(1260, 380);
+            this.bunifuPanel2.Size = new System.Drawing.Size(1260, 324);
             this.bunifuPanel2.TabIndex = 1;
             // 
             // btnChangePassword
@@ -649,7 +649,7 @@
             this.btnChangePassword.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnChangePassword.ActiveForecolor = System.Drawing.Color.White;
             this.btnChangePassword.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnChangePassword.BackColor = System.Drawing.Color.Transparent;
+            this.btnChangePassword.BackColor = System.Drawing.SystemColors.Control;
             this.btnChangePassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.BackgroundImage")));
             this.btnChangePassword.ButtonText = "Đổi mật khẩu";
             this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1051,7 +1051,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 844);
+            this.ClientSize = new System.Drawing.Size(1328, 788);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

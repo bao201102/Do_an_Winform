@@ -72,11 +72,13 @@
             // bunifuLabel1
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(313, 12);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(492, 44);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(326, 47);
@@ -88,11 +90,12 @@
             // bunifuLabel2
             // 
             this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Leelawadee UI", 12F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(53, 104);
+            this.bunifuLabel2.Location = new System.Drawing.Point(164, 142);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(97, 21);
@@ -105,6 +108,7 @@
             // 
             this.txtName.AcceptsReturn = false;
             this.txtName.AcceptsTab = false;
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtName.AnimationSpeed = 200;
             this.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -115,11 +119,11 @@
             this.txtName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtName.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtName.BorderRadius = 1;
+            this.txtName.BorderRadius = 14;
             this.txtName.BorderThickness = 1;
             this.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.DefaultText = "";
             this.txtName.FillColor = System.Drawing.Color.White;
             this.txtName.HideSelection = true;
@@ -129,7 +133,7 @@
             this.txtName.IconRight = null;
             this.txtName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtName.Lines = new string[0];
-            this.txtName.Location = new System.Drawing.Point(53, 140);
+            this.txtName.Location = new System.Drawing.Point(164, 190);
             this.txtName.MaxLength = 32767;
             this.txtName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtName.Modified = false;
@@ -165,7 +169,7 @@
             this.txtName.SelectionLength = 0;
             this.txtName.SelectionStart = 0;
             this.txtName.ShortcutsEnabled = true;
-            this.txtName.Size = new System.Drawing.Size(260, 40);
+            this.txtName.Size = new System.Drawing.Size(303, 44);
             this.txtName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtName.TabIndex = 2;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -179,11 +183,12 @@
             // bunifuLabel3
             // 
             this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("Leelawadee UI", 12F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(635, 104);
+            this.bunifuLabel3.Location = new System.Drawing.Point(816, 142);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(60, 21);
@@ -195,11 +200,12 @@
             // bunifuLabel4
             // 
             this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Leelawadee UI", 12F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(53, 205);
+            this.bunifuLabel4.Location = new System.Drawing.Point(164, 261);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(28, 21);
@@ -212,6 +218,7 @@
             // 
             this.txtGender.AcceptsReturn = false;
             this.txtGender.AcceptsTab = false;
+            this.txtGender.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtGender.AnimationSpeed = 200;
             this.txtGender.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtGender.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -222,11 +229,11 @@
             this.txtGender.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtGender.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtGender.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtGender.BorderRadius = 1;
+            this.txtGender.BorderRadius = 14;
             this.txtGender.BorderThickness = 1;
             this.txtGender.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtGender.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGender.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.DefaultText = "";
             this.txtGender.FillColor = System.Drawing.Color.White;
             this.txtGender.HideSelection = true;
@@ -236,7 +243,7 @@
             this.txtGender.IconRight = null;
             this.txtGender.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGender.Lines = new string[0];
-            this.txtGender.Location = new System.Drawing.Point(635, 140);
+            this.txtGender.Location = new System.Drawing.Point(816, 190);
             this.txtGender.MaxLength = 32767;
             this.txtGender.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtGender.Modified = false;
@@ -272,7 +279,7 @@
             this.txtGender.SelectionLength = 0;
             this.txtGender.SelectionStart = 0;
             this.txtGender.ShortcutsEnabled = true;
-            this.txtGender.Size = new System.Drawing.Size(260, 40);
+            this.txtGender.Size = new System.Drawing.Size(303, 44);
             this.txtGender.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtGender.TabIndex = 6;
             this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -287,6 +294,7 @@
             // 
             this.txtPhone.AcceptsReturn = false;
             this.txtPhone.AcceptsTab = false;
+            this.txtPhone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPhone.AnimationSpeed = 200;
             this.txtPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtPhone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -297,11 +305,11 @@
             this.txtPhone.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtPhone.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtPhone.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtPhone.BorderRadius = 1;
+            this.txtPhone.BorderRadius = 14;
             this.txtPhone.BorderThickness = 1;
             this.txtPhone.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.DefaultText = "";
             this.txtPhone.FillColor = System.Drawing.Color.White;
             this.txtPhone.HideSelection = true;
@@ -311,7 +319,7 @@
             this.txtPhone.IconRight = null;
             this.txtPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhone.Lines = new string[0];
-            this.txtPhone.Location = new System.Drawing.Point(53, 245);
+            this.txtPhone.Location = new System.Drawing.Point(164, 309);
             this.txtPhone.MaxLength = 32767;
             this.txtPhone.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPhone.Modified = false;
@@ -347,7 +355,7 @@
             this.txtPhone.SelectionLength = 0;
             this.txtPhone.SelectionStart = 0;
             this.txtPhone.ShortcutsEnabled = true;
-            this.txtPhone.Size = new System.Drawing.Size(260, 40);
+            this.txtPhone.Size = new System.Drawing.Size(303, 44);
             this.txtPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPhone.TabIndex = 7;
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -361,11 +369,12 @@
             // bunifuLabel5
             // 
             this.bunifuLabel5.AllowParentOverrides = false;
+            this.bunifuLabel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel5.AutoEllipsis = false;
             this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel5.Font = new System.Drawing.Font("Leelawadee UI", 12F);
-            this.bunifuLabel5.Location = new System.Drawing.Point(635, 205);
+            this.bunifuLabel5.Location = new System.Drawing.Point(816, 261);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(38, 21);
@@ -378,6 +387,7 @@
             // 
             this.txtEmail.AcceptsReturn = false;
             this.txtEmail.AcceptsTab = false;
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEmail.AnimationSpeed = 200;
             this.txtEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -388,11 +398,11 @@
             this.txtEmail.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtEmail.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtEmail.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtEmail.BorderRadius = 1;
+            this.txtEmail.BorderRadius = 14;
             this.txtEmail.BorderThickness = 1;
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.DefaultText = "";
             this.txtEmail.FillColor = System.Drawing.Color.White;
             this.txtEmail.HideSelection = true;
@@ -402,7 +412,7 @@
             this.txtEmail.IconRight = null;
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(635, 245);
+            this.txtEmail.Location = new System.Drawing.Point(816, 309);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEmail.Modified = false;
@@ -438,7 +448,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(260, 40);
+            this.txtEmail.Size = new System.Drawing.Size(303, 44);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEmail.TabIndex = 9;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -452,11 +462,12 @@
             // bunifuLabel6
             // 
             this.bunifuLabel6.AllowParentOverrides = false;
+            this.bunifuLabel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel6.AutoEllipsis = false;
             this.bunifuLabel6.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel6.Font = new System.Drawing.Font("Leelawadee UI", 12F);
-            this.bunifuLabel6.Location = new System.Drawing.Point(53, 340);
+            this.bunifuLabel6.Location = new System.Drawing.Point(164, 380);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(47, 21);
@@ -469,6 +480,7 @@
             // 
             this.txtAddress.AcceptsReturn = false;
             this.txtAddress.AcceptsTab = false;
+            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAddress.AnimationSpeed = 200;
             this.txtAddress.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtAddress.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -479,11 +491,11 @@
             this.txtAddress.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtAddress.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtAddress.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtAddress.BorderRadius = 1;
+            this.txtAddress.BorderRadius = 14;
             this.txtAddress.BorderThickness = 1;
             this.txtAddress.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.DefaultText = "";
             this.txtAddress.FillColor = System.Drawing.Color.White;
             this.txtAddress.HideSelection = true;
@@ -493,7 +505,7 @@
             this.txtAddress.IconRight = null;
             this.txtAddress.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAddress.Lines = new string[0];
-            this.txtAddress.Location = new System.Drawing.Point(53, 390);
+            this.txtAddress.Location = new System.Drawing.Point(164, 428);
             this.txtAddress.MaxLength = 32767;
             this.txtAddress.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAddress.Modified = false;
@@ -529,7 +541,7 @@
             this.txtAddress.SelectionLength = 0;
             this.txtAddress.SelectionStart = 0;
             this.txtAddress.ShortcutsEnabled = true;
-            this.txtAddress.Size = new System.Drawing.Size(260, 40);
+            this.txtAddress.Size = new System.Drawing.Size(303, 44);
             this.txtAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAddress.TabIndex = 11;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -543,11 +555,12 @@
             // bunifuLabel7
             // 
             this.bunifuLabel7.AllowParentOverrides = false;
+            this.bunifuLabel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel7.AutoEllipsis = false;
             this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.Font = new System.Drawing.Font("Leelawadee UI", 12F);
-            this.bunifuLabel7.Location = new System.Drawing.Point(635, 340);
+            this.bunifuLabel7.Location = new System.Drawing.Point(816, 380);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel7.Size = new System.Drawing.Size(56, 21);
@@ -560,6 +573,7 @@
             // 
             this.txtEmpType.AcceptsReturn = false;
             this.txtEmpType.AcceptsTab = false;
+            this.txtEmpType.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEmpType.AnimationSpeed = 200;
             this.txtEmpType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtEmpType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -570,11 +584,11 @@
             this.txtEmpType.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtEmpType.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtEmpType.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtEmpType.BorderRadius = 1;
+            this.txtEmpType.BorderRadius = 14;
             this.txtEmpType.BorderThickness = 1;
             this.txtEmpType.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmpType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmpType.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpType.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmpType.DefaultText = "";
             this.txtEmpType.FillColor = System.Drawing.Color.White;
             this.txtEmpType.HideSelection = true;
@@ -584,7 +598,7 @@
             this.txtEmpType.IconRight = null;
             this.txtEmpType.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmpType.Lines = new string[0];
-            this.txtEmpType.Location = new System.Drawing.Point(635, 390);
+            this.txtEmpType.Location = new System.Drawing.Point(816, 428);
             this.txtEmpType.MaxLength = 32767;
             this.txtEmpType.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEmpType.Modified = false;
@@ -620,7 +634,7 @@
             this.txtEmpType.SelectionLength = 0;
             this.txtEmpType.SelectionStart = 0;
             this.txtEmpType.ShortcutsEnabled = true;
-            this.txtEmpType.Size = new System.Drawing.Size(260, 40);
+            this.txtEmpType.Size = new System.Drawing.Size(303, 44);
             this.txtEmpType.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEmpType.TabIndex = 13;
             this.txtEmpType.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -638,6 +652,7 @@
             this.bunifuThinButton21.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bunifuThinButton21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "Cập nhật thông tin";
@@ -649,10 +664,10 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(740, 460);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(558, 518);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(155, 44);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(192, 51);
             this.bunifuThinButton21.TabIndex = 35;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -660,7 +675,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 534);
+            this.ClientSize = new System.Drawing.Size(1289, 608);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.txtEmpType);
             this.Controls.Add(this.bunifuLabel7);
