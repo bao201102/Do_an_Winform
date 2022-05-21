@@ -14,5 +14,9 @@ namespace Do_an_Winform.BLL
         {
             return ChiTietHoaDonDAL.AddNewBillDetail(chitiethd);
         }
+        public static List<ChiTietHoaDonDTO> GetAllDetailBillById(string maHD)
+        {
+            return ChiTietHoaDonDAL.GetAllDetailBill(maHD);
+        }
     }
 }

@@ -130,7 +130,7 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_Thongtin(nhanvien, loaiNV));
+            openChildForm(new frm_Thongtin(nhanvien, loaiNV, this));
         }
         private Form activeForm = null;
         private UserControl activeUserControl = null;

@@ -19,5 +19,21 @@ namespace Do_an_Winform.DAL
             data.ChiTietHoaDons.Add(chiTietHD);
             return data.SaveChanges() > 0 ? true : false;
         }
+        public static List<ChiTietHoaDonDTO> GetAllDetailBill(string maHD)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var detailBills = from cthd in entities.ChiTietHoaDons
+                           where cthd.TrangThai == "1" && cthd.MaHD == maHD
+                           select cthd;
+            List<ChiTietHoaDonDTO> CTHDDTOs = new List<ChiTietHoaDonDTO>();
+            foreach (ChiTietHoaDon pro in detailBills)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<ChiTietHoaDon, ChiTietHoaDonDTO>());
+                var mapper = new Mapper(config);
+                ChiTietHoaDonDTO sanpham = mapper.Map<ChiTietHoaDonDTO>(pro);
+                CTHDDTOs.Add(sanpham);
+            }
+            return CTHDDTOs;
+        }
     }
 }

@@ -21,6 +21,17 @@ namespace Do_an_Winform.DAL
             NhanVienDTO nhanVien = mapper.Map<NhanVienDTO>(emp);
             return nhanVien;
         }
+
+        public static NhanVienDTO GetEmployeeById(string manv)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            NhanVien emp = entities.NhanViens.Where(x => x.MaNV.Equals(manv)).Single();
+
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<NhanVien, NhanVienDTO>());
+            var mapper = new Mapper(config);
+            NhanVienDTO empDTO = mapper.Map<NhanVienDTO>(emp);
+            return empDTO;
+        }
         public static List<NhanVienDTO> GetEmployeeWithName(string name)
         {
 
@@ -81,7 +92,7 @@ namespace Do_an_Winform.DAL
         public static bool UpdateEmployee(NhanVienDTO empDTO)
         {
             CHDTEntities1 entities = new CHDTEntities1();
-            NhanVien emp = entities.NhanViens.Where(x => x.MaNV.Equals(empDTO.MaNV)).SingleOrDefault();
+            NhanVien emp = entities.NhanViens.Where(x => x.MaNV.Equals(empDTO.MaNV)).Single();
 
             emp.TenNV = empDTO.TenNV;
             emp.GioiTinh = empDTO.GioiTinh;

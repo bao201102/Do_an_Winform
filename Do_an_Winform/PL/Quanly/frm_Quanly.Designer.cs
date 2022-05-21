@@ -875,10 +875,10 @@ namespace Do_an_Winform.PL.Quanly
             this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Transition.SetDecoration(this.mainPanel, BunifuAnimatorNS.DecorationType.None);
-            this.mainPanel.GradientBottomLeft = System.Drawing.Color.White;
-            this.mainPanel.GradientBottomRight = System.Drawing.Color.White;
-            this.mainPanel.GradientTopLeft = System.Drawing.Color.White;
-            this.mainPanel.GradientTopRight = System.Drawing.Color.White;
+            this.mainPanel.GradientBottomLeft = System.Drawing.SystemColors.Control;
+            this.mainPanel.GradientBottomRight = System.Drawing.SystemColors.Control;
+            this.mainPanel.GradientTopLeft = System.Drawing.SystemColors.Control;
+            this.mainPanel.GradientTopRight = System.Drawing.SystemColors.Control;
             this.mainPanel.Location = new System.Drawing.Point(260, 45);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Quality = 10;
