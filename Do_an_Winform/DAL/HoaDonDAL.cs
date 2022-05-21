@@ -10,25 +10,7 @@ namespace Do_an_Winform.DAL
 {
     public class HoaDonDAL
     {
-        public static List<HoaDonDTO> GetAllBill()
-        {
-            CHDTEntities1 entities = new CHDTEntities1();
-            var bills = from hd in entities.HoaDons
-                        where hd.TrangThai == "1"
-                        select hd;
-            List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
-            foreach (HoaDon bill in bills)
-            {
-                if (bill.TrangThai == "1")
-                {
-                    var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
-                    var mapper = new Mapper(config);
-                    HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
-                    hoaDonDTOs.Add(hoadon);
-                }
-            }
-            return hoaDonDTOs;
-        }
+        
         public static bool AddNewBill(HoaDonDTO hd)
         {
             CHDTEntities1 data = new CHDTEntities1();
