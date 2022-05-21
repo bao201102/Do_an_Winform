@@ -20,6 +20,7 @@ namespace Do_an_Winform.PL.DangNhap
             InitializeComponent();
             emp = nhanvien;
             empType = loainhanvien;
+
         }
 
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
@@ -29,7 +30,7 @@ namespace Do_an_Winform.PL.DangNhap
         }
 
         private void frm_Profile_Load(object sender, EventArgs e)
-        {
+        { 
             txtHoten.Text = emp.TenNV;
             txtEmail.Text = emp.Email;
             txtSDT.Text = emp.SĐT;

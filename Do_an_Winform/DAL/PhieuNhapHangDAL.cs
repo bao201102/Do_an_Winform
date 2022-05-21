@@ -13,7 +13,7 @@ namespace Do_an_Winform.DAL
         public static List<PhieuNhapHangDTO> ThongKeTatCaPN(DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
-            var truyvan = from pn in data.PhieuNhapHangs                        
+            var truyvan = from pn in data.PhieuNhapHangs
                           where (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
                           select new
                           {
@@ -183,6 +183,30 @@ namespace Do_an_Winform.DAL
             dtResult = dtResult.AddMonths(1);
             dtResult = dtResult.AddDays(-(dtResult.Day));
             return dtResult;
+        }
+
+        public static bool InsertPhieuNhap(PhieuNhapHangDTO phieuNhapHangDTO)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = (from x in entities.PhieuNhapHangs
+                         select x).Count();
+            phieuNhapHangDTO.MaPN = "PN" + (query + 1).ToString("000");
+
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuNhapHangDTO, PhieuNhapHang>());
+            var mapper = new Mapper(config);
+            PhieuNhapHang pn = mapper.Map<PhieuNhapHang>(phieuNhapHangDTO);
+            entities.PhieuNhapHangs.Add(pn);
+
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

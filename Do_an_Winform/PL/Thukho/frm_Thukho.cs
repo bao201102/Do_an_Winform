@@ -19,6 +19,8 @@ namespace Do_an_Winform
     public partial class frm_Thukho : Form
     {
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+        NhanVienDTO nhanvien = new NhanVienDTO();
+        LoaiNhanVienDTO loainhanvien = new LoaiNhanVienDTO();
         public frm_Thukho(TaiKhoanDTO user)
         {
             InitializeComponent();
@@ -57,7 +59,7 @@ namespace Do_an_Winform
             MessBox messBox = new MessBox();
 
             bool result = messBox.ShowMess("Bạn có muốn thoát chương trình ?");
-            
+
             if (result)
             {
                 Application.Exit();
@@ -118,16 +120,22 @@ namespace Do_an_Winform
             childForm.Show();
         }
 
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_Thongtin(nhanvien, loainhanvien));
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             MessBox messBox = new MessBox();
-
             bool result = messBox.ShowMess("Bạn có muốn đăng xuất không ?");
-            
+
             if (result)
             {
                 frm_DangNhap frmLogin = new frm_DangNhap();
+                this.Hide();
                 frmLogin.Show();
+                this.Close();
             }
         }
 
@@ -141,9 +149,5 @@ namespace Do_an_Winform
             openChildForm(new frm_DanhSachPN(taikhoan));
         }
 
-        private void btnXuat_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frm_Xuat());
-        }
     }
 }

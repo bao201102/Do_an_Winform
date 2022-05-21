@@ -20,7 +20,7 @@ namespace Do_an_Winform.PL.Quanly
             InitializeComponent();
         }
 
-        private void frm_QLSP_Load(object sender, EventArgs e)
+        internal void frm_QLSP_Load(object sender, EventArgs e)
         {
             cbLoaisp.DataSource = LoaiSanPhamBLL.GetAllCat();
             cbLoaisp.DisplayMember = "TenLoaiSP";
@@ -51,6 +51,20 @@ namespace Do_an_Winform.PL.Quanly
         {
             frm_Insert form = new frm_Insert();
             form.ShowDialog();
+            dgvDSSP.DataSource = SanPhamBLL.GetProduct();
+        }
+
+        private void txtFind_TextChange(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvDSSP.DataSource = SanPhamBLL.GetAllProductByName(txtFind.Text);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

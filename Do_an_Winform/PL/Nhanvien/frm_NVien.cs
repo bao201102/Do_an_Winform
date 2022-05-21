@@ -1,7 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
-using Do_an_Winform.PL.Nhanvien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,26 +11,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Do_an_Winform
+namespace Do_an_Winform.PL.Nhanvien
 {
-    public partial class frm_Nhanvien : Form
+    public partial class frm_NVien : Form
     {
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         NhanVienDTO nhanvien = new NhanVienDTO();
         LoaiNhanVienDTO loaiNV = new LoaiNhanVienDTO();
         public static TaiKhoanDTO taikhoan1 = new TaiKhoanDTO();
-        public frm_Nhanvien(TaiKhoanDTO user)
+        public frm_NVien(TaiKhoanDTO user)
         {
             InitializeComponent();
             this.Width = 1600;
             this.Height = 900;
             taikhoan = user;
-            
+        }
+
+        private void titlePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void slideBtn_Click(object sender, EventArgs e)
         {
-
             if (sidemenu.Width == 55)
             {
                 Transition.HideSync(sidemenu, false, BunifuAnimatorNS.Animation.HorizSlide);
@@ -51,7 +53,6 @@ namespace Do_an_Winform
                 mainPanel.Width += 195;
                 Transition.ShowSync(sidemenu, false, BunifuAnimatorNS.Animation.HorizSlide);
             }
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -93,10 +94,10 @@ namespace Do_an_Winform
             }
         }
 
-        private void frm_Nhanvien_Load(object sender, EventArgs e)
+        private void frm_NVien_Load(object sender, EventArgs e)
         {
             subuserPanel.Visible = false;
-            userControlKhachHang1.BringToFront();
+            openChildUsercontrol(new UserControlKhachHang());
             NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
             nhanvien = emp;
             userBtn.Text = emp.TenNV;
@@ -104,43 +105,48 @@ namespace Do_an_Winform
             loaiNV = empType;
             taikhoan1 = taikhoan;
         }
+        
+        
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            //userControlKhachHang1.BringToFront();
             openChildUsercontrol(new UserControlKhachHang());
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
-            //userControlSanPham1.BringToFront();
             openChildUsercontrol(new UserControlSanPham());
         }
 
         private void btnLapHD_Click(object sender, EventArgs e)
         {
-            //userControlLapHoaDon1.BringToFront();
             openChildUsercontrol(new UserControlLapHoaDon());
         }
 
         private void btnDKTV_Click(object sender, EventArgs e)
         {
-            //userControlDKThanhVien1.BringToFront();
             openChildUsercontrol(new UserControlDKThanhVien());
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void btnInfo_Click(object sender, EventArgs e)
         {
-            MessBox messBox = new MessBox();
-            bool result = messBox.ShowMess("Bạn có muốn đăng xuất ?");
-            if (result)
-            {
-                frm_DangNhap frmLogin = new frm_DangNhap();
-                frmLogin.Show();
-            }
+            openChildForm(new frm_Thongtin(nhanvien, loaiNV));
         }
         private Form activeForm = null;
         private UserControl activeUserControl = null;
+        private void openChildUsercontrol(UserControl userControl)
+        {
+            if (activeUserControl != null)
+            {
+                activeUserControl.Hide();
+            }
+            activeUserControl = userControl;
+            userControl.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(userControl);
+            mainPanel.Tag = userControl;
+            userControl.BringToFront();
+            userControl.Show();
+        }
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -156,25 +162,16 @@ namespace Do_an_Winform
             childForm.BringToFront();
             childForm.Show();
         }
-        private void openChildUsercontrol(UserControl userControl)
-        {
-            if (activeUserControl != null)
-            {
-                activeUserControl.Hide();
-            }
-            activeUserControl = userControl;
-            //userControl.TopLevel = false;
-            //userControl.FormBorderStyle = FormBorderStyle.None;
-            userControl.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(userControl);
-            mainPanel.Tag = userControl;
-            userControl.BringToFront();
-            userControl.Show();
-        }
 
-        private void btnInfo_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_Thongtin(nhanvien, loaiNV));
+            MessBox messBox = new MessBox();
+            bool result = messBox.ShowMess("Bạn có muốn đăng xuất ?");
+            if (result)
+            {
+                frm_DangNhap frmLogin = new frm_DangNhap();
+                frmLogin.Show();
+            }
         }
     }
 }

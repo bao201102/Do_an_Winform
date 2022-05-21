@@ -162,10 +162,6 @@
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Lib_Report\Add reference\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
@@ -192,6 +188,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ChiTietHoaDonBLL.cs" />
     <Compile Include="BLL\HoaDonBLL.cs" />
     <Compile Include="BLL\KhachHangBLL.cs" />
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
@@ -200,6 +197,7 @@
     <Compile Include="BLL\NhaCungCapBLL.cs" />
     <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\NhaSanXuatBLL.cs" />
+    <Compile Include="BLL\PhieuNhapHangBLL.cs" />
     <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
     <Compile Include="CHDTEntity.Context.cs">
@@ -223,6 +221,7 @@
     <Compile Include="ChiTietPhieuNhap.cs">
       <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\ChiTietHoaDonDAL.cs" />
     <Compile Include="DAL\ChiTietPhieuNhapDAL.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
@@ -232,8 +231,10 @@
     <Compile Include="DAL\NhaCungCapDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\NhaSanXuatDAL.cs" />
+    <Compile Include="DAL\PhieuNhapHangDAL.cs" />
     <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="DTO\ChiTietHoaDonDTO.cs" />
     <Compile Include="DTO\ChiTietPhieuNhapDTO.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\KhachHangDTO.cs" />
@@ -303,11 +304,11 @@
     <Compile Include="PL\Nhanvien\frm_Info.Designer.cs">
       <DependentUpon>frm_Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Nhanvien\frm_Nhanvien.cs">
+    <Compile Include="PL\Nhanvien\frm_NVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Nhanvien\frm_Nhanvien.Designer.cs">
-      <DependentUpon>frm_Nhanvien.cs</DependentUpon>
+    <Compile Include="PL\Nhanvien\frm_NVien.Designer.cs">
+      <DependentUpon>frm_NVien.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Nhanvien\UserControlDKThanhVien.cs">
       <SubType>UserControl</SubType>
@@ -411,12 +412,6 @@
     <Compile Include="PL\Thukho\frm_TonKho.Designer.cs">
       <DependentUpon>frm_TonKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Thukho\frm_Xuat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Thukho\frm_Xuat.Designer.cs">
-      <DependentUpon>frm_Xuat.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -450,9 +445,8 @@
     <EmbeddedResource Include="PL\Nhanvien\frm_Info.resx">
       <DependentUpon>frm_Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Nhanvien\frm_Nhanvien.resx">
-      <DependentUpon>frm_Nhanvien.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="PL\Nhanvien\frm_NVien.resx">
+      <DependentUpon>frm_NVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\UserControlDKThanhVien.resx">
       <DependentUpon>UserControlDKThanhVien.cs</DependentUpon>
@@ -467,6 +461,9 @@
       <DependentUpon>UserControlSanPham.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDBH.rdlc" />
+    <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDNH.rdlc" />
+    <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_TKDT.rdlc" />
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacNV.resx">
       <DependentUpon>frm_DoiTacNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -502,9 +499,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_TonKho.resx">
       <DependentUpon>frm_TonKho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Thukho\frm_Xuat.resx">
-      <DependentUpon>frm_Xuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\rpt_Nhap.rdlc" />
     <EmbeddedResource Include="Properties\licenses.licx" />

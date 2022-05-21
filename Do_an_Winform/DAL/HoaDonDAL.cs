@@ -10,6 +10,16 @@ namespace Do_an_Winform.DAL
 {
     public class HoaDonDAL
     {
+        
+        public static bool AddNewBill(HoaDonDTO hd)
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDonDTO, HoaDon>());
+            var mapper = new Mapper(config);
+            HoaDon hoaDon = mapper.Map<HoaDon>(hd);
+            data.HoaDons.Add(hoaDon);
+            return data.SaveChanges() > 0 ? true : false;
+        }
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
@@ -35,6 +45,12 @@ namespace Do_an_Winform.DAL
             }
             return listKQ;
         }
+
+        internal static List<HoaDonDTO> GetAllBill()
+        {
+            throw new NotImplementedException();
+        }
+
         public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
@@ -218,23 +234,6 @@ namespace Do_an_Winform.DAL
             dtResult = dtResult.AddMonths(1);
             dtResult = dtResult.AddDays(-(dtResult.Day));
             return dtResult;
-        }
-        //Hàm lấy tất cả hóa đơn
-        public static List<HoaDonDTO> GetAllBill()
-        {
-            CHDTEntities1 entities = new CHDTEntities1();
-            var bills = from hd in entities.HoaDons
-                           where hd.TrangThai == "1"
-                           select hd;
-            List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
-            foreach (HoaDon bill in bills)
-            {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
-                var mapper = new Mapper(config);
-                HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
-                hoaDonDTOs.Add(hoadon);
-            }
-            return hoaDonDTOs;
         }
     }
 }

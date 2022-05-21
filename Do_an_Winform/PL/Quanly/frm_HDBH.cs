@@ -1,4 +1,5 @@
-﻿using Do_an_Winform.DAL;
+﻿using Do_an_Winform.BLL;
+using Do_an_Winform.DAL;
 using Do_an_Winform.DTO;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,6 @@ namespace Do_an_Winform.PL.Quanly
                 txtSearch.ForeColor = Color.Black;
             }
         }
-
         private void txtSearch_Leave(object sender, EventArgs e)
         {
             if (txtSearch.Text == "")
@@ -51,12 +51,12 @@ namespace Do_an_Winform.PL.Quanly
 
                 if(endday <= startday)
                 {
-                    MessageBox.Show("Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 return;
             }
 
@@ -67,15 +67,15 @@ namespace Do_an_Winform.PL.Quanly
                 HoaDonDTO hdsearch = new HoaDonDTO();
                 hdsearch.MaHD = txtSearch.Text;
 
-                listhd = HoaDonDAL.ThongKeTheoMaHD(hdsearch, startday, endday);
+                listhd = HoaDonBLL.ThongKeTheoMaHD(hdsearch, startday, endday);
                 gvHDBH.DataSource = listhd;
-                txtTongCong.Text = HoaDonDAL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
+                txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
             }
             else
             {
-                listhd = HoaDonDAL.ThongKeTatCaHD(startday, endday);
+                listhd = HoaDonBLL.ThongKeTatCaHD(startday, endday);
                 gvHDBH.DataSource = listhd;
-                txtTongCong.Text = HoaDonDAL.DoanhThuTatCaHD(startday, endday).ToString();
+                txtTongCong.Text = HoaDonBLL.DoanhThuTatCaHD(startday, endday).ToString();
             }
         }
 
@@ -91,15 +91,8 @@ namespace Do_an_Winform.PL.Quanly
             DateTime startday, endday;
             startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
             endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            listhd = HoaDonDAL.ThongKeTatCaHD(startday, endday);
+            listhd = HoaDonBLL.ThongKeTatCaHD(startday, endday);
             gvHDBH.DataSource = listhd;
-
-            AutoCompleteStringCollection autocom = new AutoCompleteStringCollection();
-            foreach (HoaDonDTO hd in listhd)
-            {
-                autocom.Add(hd.MaHD);
-            }
-            txtSearch.AutoCompleteCustomSource = autocom;
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -114,24 +107,9 @@ namespace Do_an_Winform.PL.Quanly
                 printDocumentHDBH.Print();
             }
         }
-
         private void btnView_Click(object sender, EventArgs e)
         {
             printPreviewDialogHDBH.ShowDialog();
-        }
-
-        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            {
-                startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-                endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-                HoaDonDTO hdsearch = new HoaDonDTO();
-                hdsearch.MaHD = txtSearch.Text;
-
-                listhd = HoaDonDAL.ThongKeTheoMaHD(hdsearch, startday, endday);
-                gvHDBH.DataSource = listhd;
-            }
         }
     }
 }

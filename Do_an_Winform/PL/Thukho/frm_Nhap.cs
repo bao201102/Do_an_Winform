@@ -54,7 +54,7 @@ namespace Do_an_Winform.PL.Thukho
                 e.Handled = true;
         }
 
-        private void cbbTenSP_SelectedValueChanged(object sender, EventArgs e)
+        private void cbbTenSP_SelectionChangeCommitted(object sender, EventArgs e)
         {
             lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
             txtSoLuong.Text = "";
@@ -134,6 +134,13 @@ namespace Do_an_Winform.PL.Thukho
         {
             gridviewNhap.SelectedRows[0].Cells[4].Value = int.Parse(gridviewNhap.SelectedRows[0].Cells[1].Value.ToString())
                 * int.Parse(gridviewNhap.SelectedRows[0].Cells[2].Value.ToString());
+
+            sum = 0;
+            for (int i = 0; i < gridviewNhap.RowCount; i++)
+            {
+                sum += int.Parse(gridviewNhap.Rows[i].Cells[4].Value.ToString());
+            }
+            lblThanhToan.Text = sum.ToString();
         }
 
         private void lblReturn_Click(object sender, EventArgs e)
@@ -151,5 +158,7 @@ namespace Do_an_Winform.PL.Thukho
         {
             lblReturn.Font = new Font(lblReturn.Font, FontStyle.Regular);
         }
+
+
     }
 }
