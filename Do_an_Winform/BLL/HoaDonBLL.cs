@@ -10,6 +10,10 @@ namespace Do_an_Winform.BLL
 {
     class HoaDonBLL
     {
+        public static bool AddNewBill(HoaDonDTO hoaDon)
+        {
+            return HoaDonDAL.AddNewBill(hoaDon);
+        }
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {
             return HoaDonDAL.ThongKeTatCaHD(startday, endday);
