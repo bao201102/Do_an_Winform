@@ -52,21 +52,31 @@ namespace Do_an_Winform.PL.Quanly.QLSP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SanPhamDTO product = new SanPhamDTO();
-            product.TenSP = txtTensp.Text;
-            product.SoLuong = 1;
-            product.DonGia = int.Parse(txtDongia.Text);
-            product.MaLoaiSP = cbLoaisp.SelectedValue.ToString();
-            product.MaNhaSX = cbNSX.SelectedValue.ToString();
-            product.TrangThai = "1";
-
-            MessBox messBox = new MessBox();
-            bool result = messBox.ShowMess("Bạn có muốn thêm sản phẩm mới không ?");
-            if (result)
+            if (txtTensp.Text == "" || txtDongia.Text == "")
             {
-                SanPhamBLL.InsertProduct(product);
-                Close();
+                bunifuSnackbar1.Show(this, "Vui lòng nhập đủ thông tin vào ô trống", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
             }
+            else
+            {
+                SanPhamDTO product = new SanPhamDTO();
+                product.TenSP = txtTensp.Text;
+                product.SoLuong = 1;
+                product.DonGia = int.Parse(txtDongia.Text);
+                product.MaLoaiSP = cbLoaisp.SelectedValue.ToString();
+                product.MaNhaSX = cbNSX.SelectedValue.ToString();
+                product.TrangThai = "1";
+
+                MessBox messBox = new MessBox();
+                bool result = messBox.ShowMess("Bạn có muốn thêm sản phẩm mới không ?");
+                if (result)
+                {
+                    if (SanPhamBLL.InsertProduct(product))
+                    {
+                        bunifuSnackbar1.Show(new frm_QLSP(), "Bạn đã thêm sản phẩm mới thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                        Close();
+                    }
+                }
+            }            
         }
     }
 }
