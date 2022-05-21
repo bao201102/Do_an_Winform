@@ -54,6 +54,7 @@ namespace Do_an_Winform.PL.Quanly
             dgvDSSP.DataSource = SanPhamBLL.GetProduct();
         }
 
+<<<<<<< HEAD
         private void txtFind_TextChange(object sender, EventArgs e)
         {
             try
@@ -75,5 +76,7 @@ namespace Do_an_Winform.PL.Quanly
             form.cbNSX.SelectedText = dgvDSSP.CurrentRow.Cells[4].Value.ToString();
             form.ShowDialog();
         }
+=======
+>>>>>>> 261cbdba06f0fa3cb7de6d01556edb809f8e9dfd
     }
 }

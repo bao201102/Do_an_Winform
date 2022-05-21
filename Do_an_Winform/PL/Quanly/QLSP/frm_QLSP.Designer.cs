@@ -1,4 +1,6 @@
-﻿namespace Do_an_Winform.PL.Quanly
+﻿using Do_an_Winform.PL.Quanly.DoiTac;
+
+namespace Do_an_Winform.PL.Quanly
 {
     partial class frm_QLSP
     {
@@ -61,15 +63,97 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(36, 30);
+            this.bunifuLabel1.Location = new System.Drawing.Point(49, 37);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(192, 28);
+            this.bunifuLabel1.Size = new System.Drawing.Size(239, 35);
             this.bunifuLabel1.TabIndex = 1;
             this.bunifuLabel1.Text = "Danh sách sản phẩm";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+<<<<<<< HEAD
+=======
+            // txtFind
+            // 
+            this.txtFind.AcceptsReturn = false;
+            this.txtFind.AcceptsTab = false;
+            this.txtFind.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFind.AnimationSpeed = 200;
+            this.txtFind.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtFind.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtFind.AutoSizeHeight = true;
+            this.txtFind.BackColor = System.Drawing.Color.Transparent;
+            this.txtFind.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtFind.BackgroundImage")));
+            this.txtFind.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtFind.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtFind.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtFind.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtFind.BorderRadius = 15;
+            this.txtFind.BorderThickness = 1;
+            this.txtFind.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtFind.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFind.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFind.DefaultText = "";
+            this.txtFind.FillColor = System.Drawing.Color.White;
+            this.txtFind.HideSelection = true;
+            this.txtFind.IconLeft = null;
+            this.txtFind.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFind.IconPadding = 10;
+            this.txtFind.IconRight = global::Do_an_Winform.Properties.Resources.search;
+            this.txtFind.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFind.Lines = new string[0];
+            this.txtFind.Location = new System.Drawing.Point(344, 37);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFind.MaxLength = 32767;
+            this.txtFind.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtFind.Modified = false;
+            this.txtFind.Multiline = false;
+            this.txtFind.Name = "txtFind";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtFind.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtFind.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtFind.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtFind.OnIdleState = stateProperties4;
+            this.txtFind.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFind.PasswordChar = '\0';
+            this.txtFind.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtFind.PlaceholderText = "Tìm kiếm tên sản phẩm";
+            this.txtFind.ReadOnly = false;
+            this.txtFind.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFind.SelectedText = "";
+            this.txtFind.SelectionLength = 0;
+            this.txtFind.SelectionStart = 0;
+            this.txtFind.ShortcutsEnabled = true;
+            this.txtFind.Size = new System.Drawing.Size(675, 54);
+            this.txtFind.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtFind.TabIndex = 4;
+            this.txtFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtFind.TextMarginBottom = 0;
+            this.txtFind.TextMarginLeft = 3;
+            this.txtFind.TextMarginTop = 1;
+            this.txtFind.TextPlaceholder = "Tìm kiếm tên sản phẩm";
+            this.txtFind.UseSystemPasswordChar = false;
+            this.txtFind.WordWrap = true;
+            // 
+>>>>>>> 261cbdba06f0fa3cb7de6d01556edb809f8e9dfd
             // cbLoaisp
             // 
             this.cbLoaisp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -107,9 +191,10 @@
             this.cbLoaisp.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cbLoaisp.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cbLoaisp.ItemTopMargin = 3;
-            this.cbLoaisp.Location = new System.Drawing.Point(816, 30);
+            this.cbLoaisp.Location = new System.Drawing.Point(1088, 37);
+            this.cbLoaisp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbLoaisp.Name = "cbLoaisp";
-            this.cbLoaisp.Size = new System.Drawing.Size(149, 32);
+            this.cbLoaisp.Size = new System.Drawing.Size(197, 32);
             this.cbLoaisp.TabIndex = 5;
             this.cbLoaisp.Text = null;
             this.cbLoaisp.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -170,15 +255,77 @@
             this.dgvDSSP.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDSSP.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSSP.HeaderForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.dgvDSSP.Location = new System.Drawing.Point(60, 112);
+=======
+            this.dgvDSSP.Location = new System.Drawing.Point(75, 137);
+            this.dgvDSSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 261cbdba06f0fa3cb7de6d01556edb809f8e9dfd
             this.dgvDSSP.Name = "dgvDSSP";
             this.dgvDSSP.RowHeadersVisible = false;
+            this.dgvDSSP.RowHeadersWidth = 51;
             this.dgvDSSP.RowTemplate.Height = 40;
             this.dgvDSSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSSP.Size = new System.Drawing.Size(1221, 708);
+            this.dgvDSSP.Size = new System.Drawing.Size(1628, 871);
             this.dgvDSSP.TabIndex = 6;
             this.dgvDSSP.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+<<<<<<< HEAD
             this.dgvDSSP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSSP_CellDoubleClick);
+=======
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.ActiveBorderThickness = 1;
+            this.btnInsert.ActiveCornerRadius = 20;
+            this.btnInsert.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnInsert.ActiveForecolor = System.Drawing.Color.White;
+            this.btnInsert.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInsert.BackColor = System.Drawing.Color.White;
+            this.btnInsert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInsert.BackgroundImage")));
+            this.btnInsert.ButtonText = "Thêm";
+            this.btnInsert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInsert.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.ForeColor = System.Drawing.Color.White;
+            this.btnInsert.IdleBorderThickness = 1;
+            this.btnInsert.IdleCornerRadius = 20;
+            this.btnInsert.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnInsert.IdleForecolor = System.Drawing.Color.White;
+            this.btnInsert.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnInsert.Location = new System.Drawing.Point(1453, 30);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(133, 62);
+            this.btnInsert.TabIndex = 12;
+            this.btnInsert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnCreateRP
+            // 
+            this.btnCreateRP.ActiveBorderThickness = 1;
+            this.btnCreateRP.ActiveCornerRadius = 20;
+            this.btnCreateRP.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnCreateRP.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCreateRP.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnCreateRP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateRP.BackColor = System.Drawing.Color.White;
+            this.btnCreateRP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCreateRP.BackgroundImage")));
+            this.btnCreateRP.ButtonText = "Tạo báo cáo";
+            this.btnCreateRP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreateRP.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateRP.ForeColor = System.Drawing.Color.White;
+            this.btnCreateRP.IdleBorderThickness = 1;
+            this.btnCreateRP.IdleCornerRadius = 20;
+            this.btnCreateRP.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnCreateRP.IdleForecolor = System.Drawing.Color.White;
+            this.btnCreateRP.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnCreateRP.Location = new System.Drawing.Point(1597, 31);
+            this.btnCreateRP.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnCreateRP.Name = "btnCreateRP";
+            this.btnCreateRP.Size = new System.Drawing.Size(133, 62);
+            this.btnCreateRP.TabIndex = 13;
+            this.btnCreateRP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+>>>>>>> 261cbdba06f0fa3cb7de6d01556edb809f8e9dfd
             // 
             // bunifuSnackbar1
             // 
@@ -382,10 +529,10 @@
             // 
             // frm_QLSP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1328, 844);
+            this.ClientSize = new System.Drawing.Size(1771, 1039);
             this.Controls.Add(this.btnCreateRP);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.dgvDSSP);
@@ -394,6 +541,7 @@
             this.Controls.Add(this.bunifuLabel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_QLSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QLSP";
