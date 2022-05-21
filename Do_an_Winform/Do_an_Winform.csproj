@@ -347,18 +347,42 @@
     <Compile Include="PL\Quanly\BaoCao\frm_XemBaoCao.Designer.cs">
       <DependentUpon>frm_XemBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacKH.Designer.cs">
+      <DependentUpon>frm_DoiTacKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacNCC.Designer.cs">
+      <DependentUpon>frm_DoiTacNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacNV.Designer.cs">
+      <DependentUpon>frm_DoiTacNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\DoiTac\frm_ThemKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Quanly\DoiTac\frm_ThemKH.Designer.cs" />
+    <Compile Include="PL\Quanly\DoiTac\frm_ThemKH.Designer.cs">
+      <DependentUpon>frm_ThemKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\DoiTac\frm_ThemNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Quanly\DoiTac\frm_ThemNCC.Designer.cs" />
+    <Compile Include="PL\Quanly\DoiTac\frm_ThemNCC.Designer.cs">
+      <DependentUpon>frm_ThemNCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\DoiTac\frm_ThemNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Quanly\DoiTac\frm_ThemNV.Designer.cs" />
+    <Compile Include="PL\Quanly\DoiTac\frm_ThemNV.Designer.cs">
+      <DependentUpon>frm_ThemNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\frm_HDBH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -492,9 +516,15 @@
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacNV.resx">
       <DependentUpon>frm_DoiTacNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemKH.resx" />
-    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemNCC.resx" />
-    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemNV.resx" />
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemKH.resx">
+      <DependentUpon>frm_ThemKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemNCC.resx">
+      <DependentUpon>frm_ThemNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemNV.resx">
+      <DependentUpon>frm_ThemNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\frm_HDBH.resx">
       <DependentUpon>frm_HDBH.cs</DependentUpon>
     </EmbeddedResource>
