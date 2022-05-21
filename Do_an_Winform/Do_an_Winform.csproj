@@ -376,6 +376,12 @@
     <Compile Include="PL\Quanly\frm_TKDT.Designer.cs">
       <DependentUpon>frm_TKDT.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Quanly\QLSP\frm_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\QLSP\frm_Update.Designer.cs">
+      <DependentUpon>frm_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Thukho\frm_DanhSachPN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -475,6 +481,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\frm_TKDT.resx">
       <DependentUpon>frm_TKDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\QLSP\frm_Update.resx">
+      <DependentUpon>frm_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_DanhSachPN.resx">
       <DependentUpon>frm_DanhSachPN.cs</DependentUpon>
