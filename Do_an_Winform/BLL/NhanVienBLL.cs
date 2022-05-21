@@ -14,18 +14,25 @@ namespace Do_an_Winform.BLL
         {
             return NhanVienDAL.GetEmployee(manguoidung);
         }
+
         public static List<NhanVienDTO> GetEmployeeWithName(string name)
         {
             return NhanVienDAL.GetEmployeeWithName(name);
         }
+
         public static List<NhanVienDTO> GetAllEmployee()
         {
             return NhanVienDAL.GetAllEmployee();
         }
+
         public static bool AddEmployee(NhanVienDTO dto)
         {
             return NhanVienDAL.AddEmployee(dto);
         }
 
+        public static bool UpdateEmployee(NhanVienDTO empDTO)
+        {
+            return NhanVienDAL.UpdateEmployee(empDTO);
+        }
     }
 }

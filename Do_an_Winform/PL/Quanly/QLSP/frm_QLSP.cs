@@ -59,6 +59,11 @@ namespace Do_an_Winform.PL.Quanly
             try
             {
                 dgvDSSP.DataSource = SanPhamBLL.GetAllProductByName(txtFind.Text);
+                dgvDSSP.Columns[0].HeaderText = "Tên sản phẩm";
+                dgvDSSP.Columns[1].Visible = false;
+                dgvDSSP.Columns[2].HeaderText = "Đơn giá";
+                dgvDSSP.Columns[3].HeaderText = "Tên loại";
+                dgvDSSP.Columns[4].HeaderText = "Nhà sản xuất";
             }
             catch (Exception)
             {

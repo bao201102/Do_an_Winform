@@ -39,5 +39,24 @@ namespace Do_an_Winform.PL.DangNhap
             txtLoaitaikhoan.Text = empType.TenLoaiNV;
             txtLoaitaikhoan.Enabled = false;
         }
+
+        private void btnCancelChanges_Click(object sender, EventArgs e)
+        {
+            txtHoten.Text = emp.TenNV;
+            txtEmail.Text = emp.Email;
+            txtSDT.Text = emp.SĐT;
+            txtDiachi.Text = emp.DiaChi;
+            cbGender.Text = emp.GioiTinh;
+        }
+
+        private void btnSaveChanges_Click(object sender, EventArgs e)
+        {
+            NhanVienDTO empDTO = new NhanVienDTO();
+            empDTO.TenNV = txtHoten.Text;
+            empDTO.GioiTinh = cbGender.Text;
+            empDTO.Email = txtEmail.Text;
+            empDTO.DiaChi = txtDiachi.Text;
+            empDTO.SĐT = txtSDT.Text;
+        }
     }
 }

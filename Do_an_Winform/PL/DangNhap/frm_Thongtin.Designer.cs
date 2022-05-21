@@ -131,19 +131,20 @@
             this.btnCancelChanges.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelChanges.BackgroundImage")));
             this.btnCancelChanges.ButtonText = "Hủy thay đổi";
             this.btnCancelChanges.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelChanges.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelChanges.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelChanges.ForeColor = System.Drawing.Color.White;
             this.btnCancelChanges.IdleBorderThickness = 1;
             this.btnCancelChanges.IdleCornerRadius = 20;
             this.btnCancelChanges.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.btnCancelChanges.IdleForecolor = System.Drawing.Color.White;
             this.btnCancelChanges.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.btnCancelChanges.Location = new System.Drawing.Point(952, 268);
+            this.btnCancelChanges.Location = new System.Drawing.Point(952, 260);
             this.btnCancelChanges.Margin = new System.Windows.Forms.Padding(5);
             this.btnCancelChanges.Name = "btnCancelChanges";
             this.btnCancelChanges.Size = new System.Drawing.Size(140, 50);
             this.btnCancelChanges.TabIndex = 12;
             this.btnCancelChanges.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancelChanges.Click += new System.EventHandler(this.btnCancelChanges_Click);
             // 
             // btnSaveChanges
             // 
@@ -156,19 +157,20 @@
             this.btnSaveChanges.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveChanges.BackgroundImage")));
             this.btnSaveChanges.ButtonText = "Lưu thay đổi";
             this.btnSaveChanges.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveChanges.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveChanges.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveChanges.ForeColor = System.Drawing.Color.White;
             this.btnSaveChanges.IdleBorderThickness = 1;
             this.btnSaveChanges.IdleCornerRadius = 20;
             this.btnSaveChanges.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnSaveChanges.IdleForecolor = System.Drawing.Color.White;
             this.btnSaveChanges.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnSaveChanges.Location = new System.Drawing.Point(778, 268);
+            this.btnSaveChanges.Location = new System.Drawing.Point(778, 260);
             this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(5);
             this.btnSaveChanges.Name = "btnSaveChanges";
             this.btnSaveChanges.Size = new System.Drawing.Size(140, 50);
             this.btnSaveChanges.TabIndex = 11;
             this.btnSaveChanges.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
             // cbGender
             // 
@@ -652,14 +654,14 @@
             this.btnChangePassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.BackgroundImage")));
             this.btnChangePassword.ButtonText = "Đổi mật khẩu";
             this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePassword.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
             this.btnChangePassword.IdleBorderThickness = 1;
             this.btnChangePassword.IdleCornerRadius = 20;
             this.btnChangePassword.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnChangePassword.IdleForecolor = System.Drawing.Color.White;
             this.btnChangePassword.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnChangePassword.Location = new System.Drawing.Point(1077, 270);
+            this.btnChangePassword.Location = new System.Drawing.Point(1082, 275);
             this.btnChangePassword.Margin = new System.Windows.Forms.Padding(5);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(140, 50);

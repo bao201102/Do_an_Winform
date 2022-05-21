@@ -77,6 +77,28 @@ namespace Do_an_Winform.DAL
             return data.SaveChanges() > 0 ? true : false;
         }
 
+        public static bool UpdateEmployee(NhanVienDTO empDTO)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            NhanVien emp = entities.NhanViens.Where(x => x.MaNV.Equals(empDTO.MaNV)).SingleOrDefault();
+
+            emp.TenNV = empDTO.TenNV;
+            emp.GioiTinh = empDTO.GioiTinh;
+            emp.Email = empDTO.Email;
+            emp.DiaChi = empDTO.DiaChi;
+            emp.SĐT = empDTO.SĐT;
+
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 
 }
