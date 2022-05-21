@@ -57,6 +57,7 @@ namespace Do_an_Winform.PL.Quanly
         private void txtFind_TextChange(object sender, EventArgs e)
         {
 
+            }
         }
     }
 }
