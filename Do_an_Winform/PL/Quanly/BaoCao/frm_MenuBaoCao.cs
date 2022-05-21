@@ -24,6 +24,8 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             //Set Date
             maskedtxtStartDay.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
             maskedtxtEndDay.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+            //Set Combox
+            //load combobox
         }
 
         private void btnViewReport_Click(object sender, EventArgs e)
@@ -46,7 +48,8 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             }
 
             if(radTatCaHD.Checked)
-            {             
+            {
+                List<HoaDonDTO> listSanPham = HoaDonBLL.ThongKeTatCaHD(startday, endday);                
             }
         }
     }

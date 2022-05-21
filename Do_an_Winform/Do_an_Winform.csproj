@@ -335,6 +335,18 @@
     <Compile Include="PL\Nhanvien\UserControlSanPham.Designer.cs">
       <DependentUpon>UserControlSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Quanly\BaoCao\frm_MenuBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\BaoCao\frm_MenuBaoCao.Designer.cs">
+      <DependentUpon>frm_MenuBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Quanly\BaoCao\frm_XemBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\BaoCao\frm_XemBaoCao.Designer.cs">
+      <DependentUpon>frm_XemBaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\DoiTac\frm_ThemKH.cs">
       <SubType>Form</SubType>
     </Compile>
