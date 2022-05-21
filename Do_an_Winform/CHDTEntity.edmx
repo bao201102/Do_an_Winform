@@ -443,11 +443,8 @@
           <Property Name="ThanhTien" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_HoaDon" FromRole="HoaDon" ToRole="ChiTietHoaDon" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDon_NhanVien" FromRole="HoaDon" ToRole="NhanVien" />
-<<<<<<< HEAD
           <NavigationProperty Name="KhachHang" Relationship="CHDTModel.FK_HoaDon_KhachHang" FromRole="HoaDon" ToRole="KhachHang" />
-=======
           <Property Name="TrangThai" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
->>>>>>> cb5c4dd4e7e9b6b2aa14c8d430a4459c7ff4d121
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
