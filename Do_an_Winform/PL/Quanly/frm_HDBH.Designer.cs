@@ -35,8 +35,8 @@ namespace Do_an_Winform.PL.Quanly
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -44,6 +44,7 @@ namespace Do_an_Winform.PL.Quanly
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.txtTongCong = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -61,6 +62,7 @@ namespace Do_an_Winform.PL.Quanly
             this.printDialogHDBH = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialogHDBH = new System.Windows.Forms.PrintPreviewDialog();
             this.bunifuSnackbarHDBH = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.btnViewReport = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvHDBH)).BeginInit();
@@ -209,6 +211,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.btnViewReport);
             this.bunifuGradientPanel1.Controls.Add(this.btnPrint);
             this.bunifuGradientPanel1.Controls.Add(this.btnView);
             this.bunifuGradientPanel1.Controls.Add(this.maskedtxtEndDay);
@@ -223,7 +226,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(477, 103);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(477, 153);
             this.bunifuGradientPanel1.TabIndex = 72;
             // 
             // btnPrint
@@ -246,11 +249,11 @@ namespace Do_an_Winform.PL.Quanly
             this.btnPrint.ColorContrastOnClick = 45;
             this.btnPrint.ColorContrastOnHover = 45;
             this.btnPrint.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = false;
-            borderEdges1.TopRight = true;
-            this.btnPrint.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = false;
+            borderEdges2.TopRight = true;
+            this.btnPrint.CustomizableEdges = borderEdges2;
             this.btnPrint.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPrint.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPrint.DisabledFillColor = System.Drawing.Color.Empty;
@@ -340,11 +343,11 @@ namespace Do_an_Winform.PL.Quanly
             this.btnView.ColorContrastOnClick = 45;
             this.btnView.ColorContrastOnHover = 45;
             this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = false;
-            borderEdges2.TopRight = true;
-            this.btnView.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = false;
+            borderEdges3.TopRight = true;
+            this.btnView.CustomizableEdges = borderEdges3;
             this.btnView.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnView.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnView.DisabledFillColor = System.Drawing.Color.Empty;
@@ -692,6 +695,100 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuSnackbarHDBH.WarningOptions.IconLeftMargin = 12;
             this.bunifuSnackbarHDBH.ZoomCloseIcon = true;
             // 
+            // btnViewReport
+            // 
+            this.btnViewReport.AllowAnimations = true;
+            this.btnViewReport.AllowMouseEffects = true;
+            this.btnViewReport.AllowToggling = false;
+            this.btnViewReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewReport.AnimationSpeed = 200;
+            this.btnViewReport.AutoGenerateColors = false;
+            this.btnViewReport.AutoRoundBorders = true;
+            this.btnViewReport.AutoSizeLeftIcon = true;
+            this.btnViewReport.AutoSizeRightIcon = true;
+            this.btnViewReport.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewReport.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.btnViewReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewReport.BackgroundImage")));
+            this.btnViewReport.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnViewReport.ButtonText = "View report";
+            this.btnViewReport.ButtonTextMarginLeft = 0;
+            this.btnViewReport.ColorContrastOnClick = 45;
+            this.btnViewReport.ColorContrastOnHover = 45;
+            this.btnViewReport.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = false;
+            borderEdges1.TopRight = true;
+            this.btnViewReport.CustomizableEdges = borderEdges1;
+            this.btnViewReport.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnViewReport.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnViewReport.DisabledFillColor = System.Drawing.Color.Empty;
+            this.btnViewReport.DisabledForecolor = System.Drawing.Color.Empty;
+            this.btnViewReport.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnViewReport.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewReport.ForeColor = System.Drawing.Color.White;
+            this.btnViewReport.IconLeft = null;
+            this.btnViewReport.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewReport.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnViewReport.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnViewReport.IconMarginLeft = 11;
+            this.btnViewReport.IconPadding = 10;
+            this.btnViewReport.IconRight = null;
+            this.btnViewReport.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnViewReport.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnViewReport.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnViewReport.IconSize = 25;
+            this.btnViewReport.IdleBorderColor = System.Drawing.Color.Empty;
+            this.btnViewReport.IdleBorderRadius = 0;
+            this.btnViewReport.IdleBorderThickness = 0;
+            this.btnViewReport.IdleFillColor = System.Drawing.Color.Empty;
+            this.btnViewReport.IdleIconLeftImage = null;
+            this.btnViewReport.IdleIconRightImage = null;
+            this.btnViewReport.IndicateFocus = true;
+            this.btnViewReport.Location = new System.Drawing.Point(339, 102);
+            this.btnViewReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnViewReport.Name = "btnViewReport";
+            this.btnViewReport.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnViewReport.OnDisabledState.BorderRadius = 32;
+            this.btnViewReport.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnViewReport.OnDisabledState.BorderThickness = 1;
+            this.btnViewReport.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnViewReport.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnViewReport.OnDisabledState.IconLeftImage = null;
+            this.btnViewReport.OnDisabledState.IconRightImage = null;
+            this.btnViewReport.onHoverState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnViewReport.onHoverState.BorderRadius = 32;
+            this.btnViewReport.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnViewReport.onHoverState.BorderThickness = 1;
+            this.btnViewReport.onHoverState.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnViewReport.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnViewReport.onHoverState.IconLeftImage = null;
+            this.btnViewReport.onHoverState.IconRightImage = null;
+            this.btnViewReport.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnViewReport.OnIdleState.BorderRadius = 32;
+            this.btnViewReport.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnViewReport.OnIdleState.BorderThickness = 1;
+            this.btnViewReport.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnViewReport.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnViewReport.OnIdleState.IconLeftImage = null;
+            this.btnViewReport.OnIdleState.IconRightImage = null;
+            this.btnViewReport.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnViewReport.OnPressedState.BorderRadius = 32;
+            this.btnViewReport.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnViewReport.OnPressedState.BorderThickness = 1;
+            this.btnViewReport.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnViewReport.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnViewReport.OnPressedState.IconLeftImage = null;
+            this.btnViewReport.OnPressedState.IconRightImage = null;
+            this.btnViewReport.Size = new System.Drawing.Size(115, 32);
+            this.btnViewReport.TabIndex = 6;
+            this.btnViewReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnViewReport.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnViewReport.TextMarginLeft = 0;
+            this.btnViewReport.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnViewReport.UseDefaultRadiusAndThickness = true;
+            this.btnViewReport.Click += new System.EventHandler(this.btnViewReport_Click);
+            // 
             // frm_HDBH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -730,5 +827,6 @@ namespace Do_an_Winform.PL.Quanly
         private Bunifu.UI.WinForms.BunifuTextBox txtTongCong;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbarHDBH;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnViewReport;
     }
 }

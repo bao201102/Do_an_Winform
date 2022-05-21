@@ -1,6 +1,7 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DAL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.Quanly.BaoCao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,20 +70,30 @@ namespace Do_an_Winform.PL.Quanly
 
                 listhd = HoaDonBLL.ThongKeTheoMaHD(hdsearch, startday, endday);
                 gvHDBH.DataSource = listhd;
+                gvHDBH.Columns[0].HeaderText = "Mã HD";
+                gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
+                gvHDBH.Columns[2].HeaderText = "Mã NV";
+                gvHDBH.Columns[3].HeaderText = "Mã KH";
+                gvHDBH.Columns[4].HeaderText = "Thành tiền";
+                gvHDBH.Columns[5].Visible = false;
                 txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
             }
             else
             {
                 listhd = HoaDonBLL.ThongKeTatCaHD(startday, endday);
                 gvHDBH.DataSource = listhd;
+                gvHDBH.Columns[0].HeaderText = "Mã HD";
+                gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
+                gvHDBH.Columns[2].HeaderText = "Mã NV";
+                gvHDBH.Columns[3].HeaderText = "Mã KH";
+                gvHDBH.Columns[4].HeaderText = "Thành tiền";
+                gvHDBH.Columns[5].Visible = false;
                 txtTongCong.Text = HoaDonBLL.DoanhThuTatCaHD(startday, endday).ToString();
             }
         }
 
         private void frm_HDBH_Load(object sender, EventArgs e)
         {
-            //load Tổng
-            txtTongCong.Text = "0";
             //load Date
             maskedtxtStartDay.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
             maskedtxtEndDay.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
@@ -93,6 +104,13 @@ namespace Do_an_Winform.PL.Quanly
             endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
             listhd = HoaDonBLL.ThongKeTatCaHD(startday, endday);
             gvHDBH.DataSource = listhd;
+            gvHDBH.Columns[0].HeaderText = "Mã HD";
+            gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
+            gvHDBH.Columns[2].HeaderText = "Mã NV";
+            gvHDBH.Columns[3].HeaderText = "Mã KH";
+            gvHDBH.Columns[4].HeaderText = "Thành tiền";
+            gvHDBH.Columns[5].Visible = false;
+            txtTongCong.Text = HoaDonBLL.ThongKeDoanhThuTheoTDHT(DateTime.Now).ToString();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -107,6 +125,13 @@ namespace Do_an_Winform.PL.Quanly
                 printDocumentHDBH.Print();
             }
         }
+
+        private void btnViewReport_Click(object sender, EventArgs e)
+        {
+            frm_MenuBaoCao formMenuXemBaoCao = new frm_MenuBaoCao();
+            formMenuXemBaoCao.ShowDialog();
+        }
+
         private void btnView_Click(object sender, EventArgs e)
         {
             printPreviewDialogHDBH.ShowDialog();
