@@ -163,7 +163,6 @@ namespace Do_an_Winform.PL.Thukho
         {
             NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
             string count = PhieuNhapHangBLL.CountMaPN();
-            MessageBox.Show(count);
 
             PhieuNhapHangDTO phieuNhapHangDTO = new PhieuNhapHangDTO();
             phieuNhapHangDTO.MaPN = count;
@@ -172,16 +171,37 @@ namespace Do_an_Winform.PL.Thukho
             phieuNhapHangDTO.MaNCC = cbbNhaCC.SelectedValue.ToString();
             phieuNhapHangDTO.ThanhTien = int.Parse(lblThanhToan.Text);
 
+            if (PhieuNhapHangBLL.AddPhieuNhap(phieuNhapHangDTO))
+            {
+
+            }
+
             for (int i = 0; i < gridviewNhap.RowCount; i++)
             {
                 ChiTietPhieuNhapDTO chiTiet = new ChiTietPhieuNhapDTO();
                 chiTiet.MaPN = count;
-                chiTiet.MaSP = gridviewNhap.Rows[i].Cells[0].Value.ToString();
+                string tensp = gridviewNhap.Rows[i].Cells[0].Value.ToString();
+                chiTiet.MaSP = SanPhamBLL.GetProductEqualsName(tensp).MaSP;
                 chiTiet.SoLuong = int.Parse(gridviewNhap.Rows[i].Cells[1].Value.ToString());
                 string tennsx = gridviewNhap.Rows[i].Cells[3].Value.ToString();
-                chiTiet.MaNSX = NhaSanXuatBLL.GetManufacByName(tennsx).MaNhaSX;
+                chiTiet.MaNhaSX = NhaSanXuatBLL.GetManufacByName(tennsx).MaNhaSX;
                 chiTiet.ThanhTien = int.Parse(gridviewNhap.Rows[i].Cells[4].Value.ToString());
+
+                if (ChiTietPhieuNhapBLL.AddChiTietPN(chiTiet))
+                {
+
+                }
+
+                if (SanPhamBLL.UpdateQuantityProduct(chiTiet))
+                {
+
+                }
             }
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

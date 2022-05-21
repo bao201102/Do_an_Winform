@@ -46,6 +46,17 @@ namespace Do_an_Winform.PL.Thukho
         private void frm_DanhSachPN_Load(object sender, EventArgs e)
         {
             gridviewDSNhap.DataSource = PhieuNhapHangBLL.GetAll();
+            gridviewDSNhap.Columns[0].HeaderText = "Mã phiếu nhập";
+            gridviewDSNhap.Columns[1].HeaderText = "Ngày tạo PN";
+            gridviewDSNhap.Columns[2].HeaderText = "Mã nhân viên";
+            gridviewDSNhap.Columns[3].HeaderText = "Mã nhà cung cấp";
+            gridviewDSNhap.Columns[4].HeaderText = "Thành tiền";
+            gridviewDSNhap.Columns[5].Visible = false;
+        }
+
+        private void gridviewDSNhap_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
