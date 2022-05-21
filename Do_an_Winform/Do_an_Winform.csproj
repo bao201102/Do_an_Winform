@@ -192,6 +192,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ChiTietHoaDonBLL.cs" />
     <Compile Include="BLL\HoaDonBLL.cs" />
     <Compile Include="BLL\KhachHangBLL.cs" />
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
@@ -224,6 +225,7 @@
     <Compile Include="ChiTietPhieuNhap.cs">
       <DependentUpon>CHDTEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\ChiTietHoaDonDAL.cs" />
     <Compile Include="DAL\ChiTietPhieuNhapDAL.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
@@ -236,6 +238,7 @@
     <Compile Include="DAL\PhieuNhapHangDAL.cs" />
     <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="DTO\ChiTietHoaDonDTO.cs" />
     <Compile Include="DTO\ChiTietPhieuNhapDTO.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\KhachHangDTO.cs" />
@@ -304,12 +307,6 @@
     </Compile>
     <Compile Include="PL\Nhanvien\frm_Info.Designer.cs">
       <DependentUpon>frm_Info.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\Nhanvien\frm_Nhanvien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Nhanvien\frm_Nhanvien.Designer.cs">
-      <DependentUpon>frm_Nhanvien.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Nhanvien\frm_NVien.cs">
       <SubType>Form</SubType>
@@ -451,10 +448,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_Info.resx">
       <DependentUpon>frm_Info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Nhanvien\frm_Nhanvien.resx">
-      <DependentUpon>frm_Nhanvien.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_NVien.resx">
       <DependentUpon>frm_NVien.cs</DependentUpon>

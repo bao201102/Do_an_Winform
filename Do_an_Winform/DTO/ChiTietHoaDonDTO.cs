@@ -29,18 +29,35 @@ namespace Do_an_Winform.DTO
 			set { _SoLuong = value; }
 		}
 
-
-		public ChiTietHoaDonDTO(string MaHD_, string MaSP_, int SoLuong_)
+		private int _ThanhTien;
+		public int ThanhTien
 		{
-			this.MaHD = MaHD_;
-			this.MaSP = MaSP_;
-			this.SoLuong = SoLuong_;
+			get { return _ThanhTien; }
+			set { _ThanhTien = value; }
 		}
+
+		private string _TrangThai;
+		public string TrangThai
+		{
+			get { return _TrangThai; }
+			set { _TrangThai = value; }
+		}
+
 		public ChiTietHoaDonDTO()
 		{
 			this.MaHD = "";
 			this.MaSP = "";
 			this.SoLuong = 0;
+			this.ThanhTien = 0;
+			this.TrangThai = "";
+		}
+		public ChiTietHoaDonDTO(string MaHD_, string MaSP_, int SoLuong_, int ThanhTien_, string TrangThai_)
+		{
+			this.MaHD = MaHD_;
+			this.MaSP = MaSP_;
+			this.SoLuong = SoLuong_;
+			this.ThanhTien = ThanhTien_;
+			this.TrangThai = TrangThai_;
 		}
 	}
 }
