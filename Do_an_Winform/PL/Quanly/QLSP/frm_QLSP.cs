@@ -53,5 +53,27 @@ namespace Do_an_Winform.PL.Quanly
             form.ShowDialog();
             dgvDSSP.DataSource = SanPhamBLL.GetProduct();
         }
+
+        private void txtFind_TextChange(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvDSSP.DataSource = SanPhamBLL.GetAllProductByName(txtFind.Text);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void dgvDSSP_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frm_Update form = new frm_Update();
+            form.txtTensp.Text = dgvDSSP.CurrentRow.Cells[0].Value.ToString();
+            form.txtDongia.Text = dgvDSSP.CurrentRow.Cells[2].Value.ToString();
+            form.cbLoaisp.SelectedText = dgvDSSP.CurrentRow.Cells[3].Value.ToString();
+            form.cbNSX.SelectedText = dgvDSSP.CurrentRow.Cells[4].Value.ToString();
+            form.ShowDialog();
+        }
     }
 }

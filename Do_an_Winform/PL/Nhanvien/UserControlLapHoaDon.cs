@@ -1,4 +1,5 @@
 ﻿using Do_an_Winform.BLL;
+using Do_an_Winform.DAL;
 using Do_an_Winform.DTO;
 using System;
 using System.Collections.Generic;
@@ -253,29 +254,60 @@ namespace Do_an_Winform.PL.Nhanvien
                 MessageBox.Show("Vui lòng nhấn nút thanh toán để thanh toán trước");
             }else
             {
+                int total = int.Parse(TachThanhTien(lblTotal.Text));
                 HoaDonDTO hoaDon = new HoaDonDTO();
-                hoaDon.MaHD = txtMaHD.Text;
-                DateTime curDay = DateTime.Now;
-                hoaDon.NgayTaoHD = (new DateTime(curDay.Year, curDay.Month, curDay.Day));
-                try
+                listHoaDon = HoaDonDAL.GetAllBill();
+
+                hoaDon = CheckIdBill(listHoaDon, txtMaHD.Text);
+                if (hoaDon.MaHD != "")
                 {
-                    nhanVien = NhanVienBLL.GetEmployee(frm_NVien.taikhoan1.MaNguoiDung);
+                    hoaDon.ThanhTien += total;
+                    if (HoaDonBLL.EditBill(hoaDon) == true)
+                    {
+                        MessageBox.Show("Cập nhật thông tin hóa đơn thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi xảy ra");
+                    }
                 }
-                catch (Exception)
+                else
                 {
+                    hoaDon.MaHD = txtMaHD.Text;
+                    DateTime curDay = DateTime.Now;
+                    hoaDon.NgayTaoHD = (new DateTime(curDay.Year, curDay.Month, curDay.Day));
+                    try
+                    {
+                        nhanVien = NhanVienBLL.GetEmployee(frm_NVien.taikhoan1.MaNguoiDung);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                    hoaDon.MaNV = nhanVien.MaNV;
+                    if (cbMaKH.Text == "")
+                    {
+                        hoaDon.MaKH = null;
+                    }
+                    else
+                    {
+                        hoaDon.MaKH = cbMaKH.Text;
+                    }
+                    hoaDon.ThanhTien = total;
+                    hoaDon.TrangThai = "1";
+                    if (HoaDonDAL.AddNewBill(hoaDon))
+                    {
+                        MessageBox.Show("Thêm hóa đơn thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi xảy ra");
+                    }
+                    
                 }
-                hoaDon.MaNV = nhanVien.MaNV;
-                if(cbMaKH.Text == "")
-                {
-                    hoaDon.MaKH = null;
-                }else
-                {
-                    hoaDon.MaKH = cbMaKH.Text;
-                }
-                int total = 0;
-                hoaDon.TrangThai = "1"; 
+
+
                 ChiTietHoaDonDTO chiTietHD = new ChiTietHoaDonDTO();
-                chiTietHD.MaHD = lblMaHD.Text;
+                chiTietHD.MaHD = txtMaHD.Text;
                 chiTietHD.MaSP = cbMaSP.Text;
                 int soLuong = int.Parse(txtSoLuong.Text);
                 chiTietHD.SoLuong = soLuong;
@@ -285,7 +317,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 bool result = ChiTietHoaDonBLL.AddNewBillDetail(chiTietHD);
                 if (result)
                 {
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show("Thêm chi tiết hóa đơn thành công");
                 }
                 else
                 {
@@ -304,6 +336,19 @@ namespace Do_an_Winform.PL.Nhanvien
                 }
             }
             return v;
+        }
+        public static HoaDonDTO CheckIdBill(List<HoaDonDTO> listHoaDon, string maHD)
+        {
+            HoaDonDTO hoaDon = new HoaDonDTO();
+            for (int i = 0; i < listHoaDon.Count; i++)
+            {
+                if (listHoaDon[i].MaHD == maHD)
+                {
+                    hoaDon = listHoaDon[i];
+                    break;
+                }
+            }
+            return hoaDon;
         }
     }
 }

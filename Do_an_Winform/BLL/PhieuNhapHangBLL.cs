@@ -30,6 +30,18 @@ namespace Do_an_Winform.BLL
         {
             return PhieuNhapHangDAL.ThongKeChiPhiTheoThang(thangTK);
         }
+        public static string CountMaPN()
+        {
+            return PhieuNhapHangDAL.CountMaPN();
+        }
+        public static bool AddPhieuNhap(PhieuNhapHangDTO phieuNhapHangDTO)
+        {
+            return PhieuNhapHangDAL.AddPhieuNhap(phieuNhapHangDTO);
+        }
+        public static List<PhieuNhapHangDTO> GetAll()
+        {
+            return PhieuNhapHangDAL.GetAll();
+        }
 
     }
 }

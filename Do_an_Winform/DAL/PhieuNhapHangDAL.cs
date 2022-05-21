@@ -184,29 +184,45 @@ namespace Do_an_Winform.DAL
             dtResult = dtResult.AddDays(-(dtResult.Day));
             return dtResult;
         }
-
-        public static bool InsertPhieuNhap(PhieuNhapHangDTO phieuNhapHangDTO)
+        // Thêm Phiếu nhập
+        public static bool AddPhieuNhap(PhieuNhapHangDTO phieuNhapHangDTO)
         {
             CHDTEntities1 entities = new CHDTEntities1();
-
-            var query = (from x in entities.PhieuNhapHangs
-                         select x).Count();
-            phieuNhapHangDTO.MaPN = "PN" + (query + 1).ToString("000");
+            phieuNhapHangDTO.TrangThai = "1";
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuNhapHangDTO, PhieuNhapHang>());
             var mapper = new Mapper(config);
             PhieuNhapHang pn = mapper.Map<PhieuNhapHang>(phieuNhapHangDTO);
             entities.PhieuNhapHangs.Add(pn);
 
-            try
+            return entities.SaveChanges() > 0 ? true : false;
+        }
+        // Lấy mã Phiếu nhập
+        public static string CountMaPN()
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = (from x in entities.PhieuNhapHangs
+                         select x).Count();
+            var count =  "PN" + (query + 1).ToString("000");
+            return count;
+        }
+        // Lấy tất cả 
+        public static List<PhieuNhapHangDTO> GetAll()
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var query = from pn in entities.PhieuNhapHangs
+                           where pn.TrangThai == "1"
+                           select pn;
+            List<PhieuNhapHangDTO> phieuNhaps = new List<PhieuNhapHangDTO>();
+            foreach (PhieuNhapHang item in query)
             {
-                entities.SaveChanges();
-                return true;
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuNhapHang, PhieuNhapHangDTO>());
+                var mapper = new Mapper(config);
+                PhieuNhapHangDTO phieuNhap = mapper.Map<PhieuNhapHangDTO>(item);
+                phieuNhaps.Add(phieuNhap);
             }
-            catch (Exception)
-            {
-                return false;
-            }
+            return phieuNhaps;
         }
     }
 }

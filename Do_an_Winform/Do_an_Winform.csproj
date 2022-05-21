@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ChiTietHoaDonBLL.cs" />
+    <Compile Include="BLL\ChiTietPhieuNhapBLL.cs" />
     <Compile Include="BLL\HoaDonBLL.cs" />
     <Compile Include="BLL\KhachHangBLL.cs" />
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
@@ -334,18 +335,6 @@
     <Compile Include="PL\Nhanvien\UserControlSanPham.Designer.cs">
       <DependentUpon>UserControlSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Quanly\BaoCao\frm_MenuBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Quanly\BaoCao\frm_MenuBaoCao.Designer.cs">
-      <DependentUpon>frm_MenuBaoCao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\Quanly\BaoCao\frm_XemBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Quanly\BaoCao\frm_XemBaoCao.Designer.cs">
-      <DependentUpon>frm_XemBaoCao.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\Quanly\DoiTac\frm_ThemKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +376,12 @@
     </Compile>
     <Compile Include="PL\Quanly\frm_TKDT.Designer.cs">
       <DependentUpon>frm_TKDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Quanly\QLSP\frm_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\QLSP\frm_Update.Designer.cs">
+      <DependentUpon>frm_Update.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Thukho\frm_DanhSachPN.cs">
       <SubType>Form</SubType>
@@ -476,6 +471,15 @@
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDBH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDNH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_TKDT.rdlc" />
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacKH.resx">
+      <DependentUpon>frm_DoiTacKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacNCC.resx">
+      <DependentUpon>frm_DoiTacNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacNV.resx">
+      <DependentUpon>frm_DoiTacNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemKH.resx" />
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemNCC.resx" />
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemNV.resx" />
@@ -493,6 +497,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\frm_TKDT.resx">
       <DependentUpon>frm_TKDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\QLSP\frm_Update.resx">
+      <DependentUpon>frm_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_DanhSachPN.resx">
       <DependentUpon>frm_DanhSachPN.cs</DependentUpon>

@@ -42,6 +42,14 @@ namespace Do_an_Winform.DTO
             get { return _ThanhTien; }
             set { _ThanhTien = value; }
         }
+
+        private string _TrangThai;
+        public string TrangThai
+        {
+            get { return _TrangThai; }
+            set { _TrangThai = value; }
+        }
+
         public PhieuNhapHangDTO()
         {
             this.MaPN = "";
@@ -49,15 +57,17 @@ namespace Do_an_Winform.DTO
             this.MaNV = "";
             this.MaNCC = "";
             this.ThanhTien = 0;
+            this.TrangThai = "";
         }
 
-        public PhieuNhapHangDTO(string MaPN_, DateTime NgayTaoPN_, string MaNV_, string MaNCC_, int ThanhTien_)
+        public PhieuNhapHangDTO(string MaPN_, DateTime NgayTaoPN_, string MaNV_, string MaNCC_, int ThanhTien_,string TrangThai_)
         {
             this.MaPN = MaPN_;
             this.NgayTaoPN = NgayTaoPN_;
             this.MaNV = MaNV_;
             this.MaNCC = MaNCC_;
             this.ThanhTien = ThanhTien_;
+            this.TrangThai = TrangThai_;
         }
     }
 }

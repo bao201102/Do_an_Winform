@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Do_an_Winform.DTO
 {
-    class ChiTietPhieuNhapDTO
+    public class ChiTietPhieuNhapDTO
     {
         private string _MaPN;
         public string MaPN
@@ -29,11 +29,11 @@ namespace Do_an_Winform.DTO
             set { _SoLuong = value; }
         }
 
-        private string _MaNSX;
-        public string MaNSX
+        private string _MaNhaSX;
+        public string MaNhaSX
         {
-            get { return _MaNSX; }
-            set { _MaNSX = value; }
+            get { return _MaNhaSX; }
+            set { _MaNhaSX = value; }
         }
 
         private int _ThanhTien;
@@ -43,22 +43,31 @@ namespace Do_an_Winform.DTO
             set { _ThanhTien = value; }
         }
 
+        private string _TrangThai;
+        public string TrangThai
+        {
+            get { return _TrangThai; }
+            set { _TrangThai = value; }
+        }
+
         public ChiTietPhieuNhapDTO()
         {
             this.MaPN = "";
             this.MaSP = "";
             this.SoLuong = 0;
-            this.MaNSX = "";
+            this.MaNhaSX = "";
             this.ThanhTien = 0;
+            this.TrangThai = "";
         }
 
-        public ChiTietPhieuNhapDTO(string MaPN_, string MaSP_, int SoLuong_, string MaNSX_, int ThanhTien_)
+        public ChiTietPhieuNhapDTO(string MaPN_, string MaSP_, int SoLuong_, string MaNhaSX_, int ThanhTien_, string TrangThai_)
         {
             this.MaPN = MaPN_;
             this.MaSP = MaSP_;
             this.SoLuong = SoLuong_;
-            this.MaNSX = MaNSX_;
+            this.MaNhaSX = MaNhaSX_;
             this.ThanhTien = ThanhTien_;
+            this.TrangThai = TrangThai_;
         }
     }
 }

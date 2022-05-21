@@ -478,7 +478,7 @@
             this.userBtn.BackColor = System.Drawing.Color.Transparent;
             this.userBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.userBtn.BorderRadius = 0;
-            this.userBtn.ButtonText = "Đỗ Thị Phương Anh";
+            this.userBtn.ButtonText = "Name";
             this.userBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Transition.SetDecoration(this.userBtn, BunifuAnimatorNS.DecorationType.None);
             this.userBtn.DisabledColor = System.Drawing.Color.Gray;
@@ -503,7 +503,7 @@
             this.userBtn.selected = true;
             this.userBtn.Size = new System.Drawing.Size(250, 48);
             this.userBtn.TabIndex = 4;
-            this.userBtn.Text = "Đỗ Thị Phương Anh";
+            this.userBtn.Text = "Name";
             this.userBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.userBtn.Textcolor = System.Drawing.Color.Transparent;
             this.userBtn.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

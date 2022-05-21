@@ -46,5 +46,9 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.GetAllBill();
         }
+        public static bool EditBill(HoaDonDTO hd)
+        {
+            return HoaDonDAL.EditBill(hd);
+        }
     }
 }
