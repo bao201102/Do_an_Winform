@@ -335,6 +335,24 @@
     <Compile Include="PL\Nhanvien\UserControlSanPham.Designer.cs">
       <DependentUpon>UserControlSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacKH.Designer.cs">
+      <DependentUpon>frm_DoiTacKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacNCC.Designer.cs">
+      <DependentUpon>frm_DoiTacNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_DoiTacNV.Designer.cs">
+      <DependentUpon>frm_DoiTacNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\DoiTac\frm_ThemKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -465,6 +483,15 @@
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDBH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDNH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_TKDT.rdlc" />
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacKH.resx">
+      <DependentUpon>frm_DoiTacKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacNCC.resx">
+      <DependentUpon>frm_DoiTacNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacNV.resx">
+      <DependentUpon>frm_DoiTacNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemKH.resx" />
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemNCC.resx" />
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemNV.resx" />

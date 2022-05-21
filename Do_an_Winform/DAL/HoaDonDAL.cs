@@ -48,7 +48,19 @@ namespace Do_an_Winform.DAL
 
         internal static List<HoaDonDTO> GetAllBill()
         {
-            throw new NotImplementedException();
+            CHDTEntities1 entities = new CHDTEntities1();
+            var bills = from hd in entities.HoaDons
+                        where hd.TrangThai == "1"
+                        select hd;
+            List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
+            foreach (HoaDon bill in bills)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
+                var mapper = new Mapper(config);
+                HoaDonDTO hoaDon = mapper.Map<HoaDonDTO>(bill);
+                hoaDonDTOs.Add(hoaDon);
+            }
+            return hoaDonDTOs;
         }
 
         public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
@@ -234,6 +246,22 @@ namespace Do_an_Winform.DAL
             dtResult = dtResult.AddMonths(1);
             dtResult = dtResult.AddDays(-(dtResult.Day));
             return dtResult;
+        }
+        public static bool EditBill(HoaDonDTO hd)
+        {
+            CHDTEntities1 entities1 = new CHDTEntities1();
+            var bill1 = (from bill in entities1.HoaDons
+                         where bill.MaHD == hd.MaHD
+                         select bill).Single();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDonDTO, HoaDon>());
+            var mapper = new Mapper(config);
+            HoaDon hoaDon = mapper.Map<HoaDon>(bill1);
+            hoaDon.MaNV = hd.MaNV;
+            hoaDon.NgayTaoHD = hd.NgayTaoHD;
+            hoaDon.MaNV = hd.MaNV;
+            hoaDon.MaKH = hd.MaKH;
+            hoaDon.ThanhTien = hd.ThanhTien;
+            return entities1.SaveChanges() > 0 ? true : false;
         }
     }
 }

@@ -161,6 +161,7 @@
             this.btnClose.TabIndex = 2;
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtTensp
             // 
@@ -555,6 +556,7 @@
             this.btnCancel.Size = new System.Drawing.Size(100, 50);
             this.btnCancel.TabIndex = 41;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frm_Update
             // 
@@ -577,6 +579,7 @@
             this.Controls.Add(this.txtTensp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Update";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Update";
             this.Load += new System.EventHandler(this.frm_Update_Load);
             this.titlePanel.ResumeLayout(false);
@@ -592,17 +595,17 @@
         private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
         private Bunifu.Framework.UI.BunifuGradientPanel titlePanel;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
-        private Bunifu.UI.WinForms.BunifuDropdown cbNSX;
-        private Bunifu.UI.WinForms.BunifuDropdown cbLoaisp;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSave;
-        private Bunifu.UI.WinForms.BunifuTextBox txtDongia;
-        private Bunifu.UI.WinForms.BunifuTextBox txtTensp;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCancel;
         private Bunifu.Framework.UI.BunifuThinButton2 btnDelete;
+        internal Bunifu.UI.WinForms.BunifuDropdown cbNSX;
+        internal Bunifu.UI.WinForms.BunifuDropdown cbLoaisp;
+        internal Bunifu.UI.WinForms.BunifuTextBox txtDongia;
+        internal Bunifu.UI.WinForms.BunifuTextBox txtTensp;
     }
 }
