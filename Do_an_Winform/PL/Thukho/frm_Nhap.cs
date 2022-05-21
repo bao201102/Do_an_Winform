@@ -159,6 +159,29 @@ namespace Do_an_Winform.PL.Thukho
             lblReturn.Font = new Font(lblReturn.Font, FontStyle.Regular);
         }
 
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+            string count = PhieuNhapHangBLL.CountMaPN();
+            MessageBox.Show(count);
 
+            PhieuNhapHangDTO phieuNhapHangDTO = new PhieuNhapHangDTO();
+            phieuNhapHangDTO.MaPN = count;
+            phieuNhapHangDTO.NgayTaoPN = DatePicker.Value;
+            phieuNhapHangDTO.MaNV = emp.MaNV;
+            phieuNhapHangDTO.MaNCC = cbbNhaCC.SelectedValue.ToString();
+            phieuNhapHangDTO.ThanhTien = int.Parse(lblThanhToan.Text);
+
+            for (int i = 0; i < gridviewNhap.RowCount; i++)
+            {
+                ChiTietPhieuNhapDTO chiTiet = new ChiTietPhieuNhapDTO();
+                chiTiet.MaPN = count;
+                chiTiet.MaSP = gridviewNhap.Rows[i].Cells[0].Value.ToString();
+                chiTiet.SoLuong = int.Parse(gridviewNhap.Rows[i].Cells[1].Value.ToString());
+                string tennsx = gridviewNhap.Rows[i].Cells[3].Value.ToString();
+                chiTiet.MaNSX = NhaSanXuatBLL.GetManufacByName(tennsx).MaNhaSX;
+                chiTiet.ThanhTien = int.Parse(gridviewNhap.Rows[i].Cells[4].Value.ToString());
+            }
+        }
     }
 }

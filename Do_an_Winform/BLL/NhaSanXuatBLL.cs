@@ -18,5 +18,9 @@ namespace Do_an_Winform.BLL
         {
             return NhaSanXuatDAL.GetManufacById(manhaSX);
         }
+        public static NhaSanXuatDTO GetManufacByName(string tenNSX)
+        {
+            return NhaSanXuatDAL.GetManufacByName(tenNSX);
+        }
     }
 }

@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ChiTietHoaDonBLL.cs" />
+    <Compile Include="BLL\ChiTietPhieuNhapBLL.cs" />
     <Compile Include="BLL\HoaDonBLL.cs" />
     <Compile Include="BLL\KhachHangBLL.cs" />
     <Compile Include="BLL\LoaiNhanVienBLL.cs" />
