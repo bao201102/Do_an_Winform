@@ -42,7 +42,7 @@ namespace Do_an_Winform.DAL
                            lsp.TenLoaiSP,
                            nsx.TenNhaSX
                        };
-                      
+
             List<object> sanPhamDTOs = new List<object>();
             foreach (var item in pros)
             {
@@ -71,8 +71,8 @@ namespace Do_an_Winform.DAL
 
             List<object> sanPhamDTOs = new List<object>();
             foreach (var item in pros)
-            {               
-               sanPhamDTOs.Add(item);
+            {
+                sanPhamDTOs.Add(item);
             }
             return sanPhamDTOs;
         }
@@ -98,7 +98,7 @@ namespace Do_an_Winform.DAL
             SanPham product = (from sp in entities.SanPhams
                                where sp.MaSP == masp && sp.TrangThai == "1"
                                select sp).SingleOrDefault();
-            
+
             var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
             var mapper = new Mapper(config);
             SanPhamDTO sanPham = mapper.Map<SanPhamDTO>(product);
@@ -108,8 +108,8 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var product = (from sp in entities.SanPhams
-                               where sp.TenSP.Contains(ten) && sp.TrangThai == "1"
-                               select sp).FirstOrDefault();
+                           where sp.TenSP.Contains(ten) && sp.TrangThai == "1"
+                           select sp).FirstOrDefault();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
             var mapper = new Mapper(config);
@@ -120,19 +120,19 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var query = from sp in entities.SanPhams
-                       join nsx in entities.NhaSanXuats
-                       on sp.MaNhaSX equals nsx.MaNhaSX
-                       join lsp in entities.LoaiSanPhams
-                       on sp.MaLoaiSP equals lsp.MaLoaiSP
-                       where sp.MaLoaiSP.Contains(maloaisp) && sp.TrangThai == "1"
-                       select new
-                       {
-                           sp.TenSP,
-                           sp.SoLuong,
-                           sp.DonGia,
-                           lsp.TenLoaiSP,
-                           nsx.TenNhaSX
-                       };
+                        join nsx in entities.NhaSanXuats
+                        on sp.MaNhaSX equals nsx.MaNhaSX
+                        join lsp in entities.LoaiSanPhams
+                        on sp.MaLoaiSP equals lsp.MaLoaiSP
+                        where sp.MaLoaiSP.Contains(maloaisp) && sp.TrangThai == "1"
+                        select new
+                        {
+                            sp.TenSP,
+                            sp.SoLuong,
+                            sp.DonGia,
+                            lsp.TenLoaiSP,
+                            nsx.TenNhaSX
+                        };
 
             List<object> sanPhamDTOs = new List<object>();
             foreach (var item in query)
@@ -141,7 +141,7 @@ namespace Do_an_Winform.DAL
             }
             return sanPhamDTOs;
         }
-        public static List<object> GetProductByManufacId(string maNhaSX) 
+        public static List<object> GetProductByManufacId(string maNhaSX)
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var query = from sp in entities.SanPhams
@@ -183,30 +183,31 @@ namespace Do_an_Winform.DAL
                             lsp.TenLoaiSP,
                             nsx.TenNhaSX
                         };
-            if(manhasx != " " && manhasx != "Tất cả")
+            if (manhasx != " " && manhasx != "Tất cả")
             {
-                if(minprice != 0 && maxprice != 0)
+                if (minprice != 0 && maxprice != 0)
                 {
-                    if(maloaisp != " " && maloaisp != "Tất cả")
+                    if (maloaisp != " " && maloaisp != "Tất cả")
                     {
                         query = from sp in entities.SanPhams
-                                    join nsx in entities.NhaSanXuats
-                                    on sp.MaNhaSX equals nsx.MaNhaSX
-                                    join lsp in entities.LoaiSanPhams
-                                    on sp.MaLoaiSP equals lsp.MaLoaiSP
-                                    where sp.MaNhaSX == manhasx && minprice <= sp.DonGia && sp.DonGia <= maxprice
-                                    && sp.MaLoaiSP == maloaisp
-                                    &&  sp.TrangThai == "1"
-                                    select new
-                                    {
-                                        sp.TenSP,
-                                        sp.SoLuong,
-                                        sp.DonGia,
-                                        lsp.TenLoaiSP,
-                                        nsx.TenNhaSX
-                                    };
-                        
-                    }else
+                                join nsx in entities.NhaSanXuats
+                                on sp.MaNhaSX equals nsx.MaNhaSX
+                                join lsp in entities.LoaiSanPhams
+                                on sp.MaLoaiSP equals lsp.MaLoaiSP
+                                where sp.MaNhaSX == manhasx && minprice <= sp.DonGia && sp.DonGia <= maxprice
+                                && sp.MaLoaiSP == maloaisp
+                                && sp.TrangThai == "1"
+                                select new
+                                {
+                                    sp.TenSP,
+                                    sp.SoLuong,
+                                    sp.DonGia,
+                                    lsp.TenLoaiSP,
+                                    nsx.TenNhaSX
+                                };
+
+                    }
+                    else
                     {
                         query = from sp in entities.SanPhams
                                 join nsx in entities.NhaSanXuats
@@ -224,9 +225,10 @@ namespace Do_an_Winform.DAL
                                     nsx.TenNhaSX
                                 };
                     }
-                }else
+                }
+                else
                 {
-                    if(maloaisp == " " || maloaisp == "Tất cả")
+                    if (maloaisp == " " || maloaisp == "Tất cả")
                     {
                         query = from sp in entities.SanPhams
                                 join nsx in entities.NhaSanXuats
@@ -243,7 +245,8 @@ namespace Do_an_Winform.DAL
                                     lsp.TenLoaiSP,
                                     nsx.TenNhaSX
                                 };
-                    }else
+                    }
+                    else
                     {
                         query = from sp in entities.SanPhams
                                 join nsx in entities.NhaSanXuats
@@ -262,11 +265,12 @@ namespace Do_an_Winform.DAL
                                 };
                     }
                 }
-            }else
+            }
+            else
             {
-                if(minprice != 0 && maxprice != 0)
+                if (minprice != 0 && maxprice != 0)
                 {
-                    if(maloaisp != " " && maloaisp != "Tất cả")
+                    if (maloaisp != " " && maloaisp != "Tất cả")
                     {
                         query = from sp in entities.SanPhams
                                 join nsx in entities.NhaSanXuats
@@ -284,7 +288,8 @@ namespace Do_an_Winform.DAL
                                     lsp.TenLoaiSP,
                                     nsx.TenNhaSX
                                 };
-                    }else
+                    }
+                    else
                     {
                         query = from sp in entities.SanPhams
                                 join nsx in entities.NhaSanXuats
@@ -302,9 +307,10 @@ namespace Do_an_Winform.DAL
                                     nsx.TenNhaSX
                                 };
                     }
-                }else
+                }
+                else
                 {
-                    if(maloaisp != " " && maloaisp != "Tất cả")
+                    if (maloaisp != " " && maloaisp != "Tất cả")
                     {
                         query = from sp in entities.SanPhams
                                 join nsx in entities.NhaSanXuats
@@ -321,7 +327,8 @@ namespace Do_an_Winform.DAL
                                     lsp.TenLoaiSP,
                                     nsx.TenNhaSX
                                 };
-                    }else
+                    }
+                    else
                     {
                         query = from sp in entities.SanPhams
                                 join nsx in entities.NhaSanXuats
@@ -340,14 +347,16 @@ namespace Do_an_Winform.DAL
                     }
                 }
             }
-            try {
+            try
+            {
                 List<object> sanPhamDTOs = new List<object>();
                 foreach (var item in query)
                 {
                     sanPhamDTOs.Add(item);
                 }
                 return sanPhamDTOs;
-            }catch
+            }
+            catch
             {
                 return null;
             }

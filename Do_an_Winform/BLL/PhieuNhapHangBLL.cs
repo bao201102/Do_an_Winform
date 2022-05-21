@@ -14,7 +14,7 @@ namespace Do_an_Winform.BLL
         {
             return PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
         }
-        public static List<PhieuNhapHangDTO> ThongKeTheoMaHD(PhieuNhapHangDTO pnsearch, DateTime startday, DateTime endday)
+        public static List<PhieuNhapHangDTO> ThongKeTheoMaPN(PhieuNhapHangDTO pnsearch, DateTime startday, DateTime endday)
         {
             return PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
         }
@@ -30,6 +30,6 @@ namespace Do_an_Winform.BLL
         {
             return PhieuNhapHangDAL.ThongKeChiPhiTheoThang(thangTK);
         }
-        
+
     }
 }

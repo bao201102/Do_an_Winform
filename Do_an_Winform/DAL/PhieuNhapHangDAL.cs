@@ -13,7 +13,7 @@ namespace Do_an_Winform.DAL
         public static List<PhieuNhapHangDTO> ThongKeTatCaPN(DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
-            var truyvan = from pn in data.PhieuNhapHangs                        
+            var truyvan = from pn in data.PhieuNhapHangs
                           where (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
                           select new
                           {
