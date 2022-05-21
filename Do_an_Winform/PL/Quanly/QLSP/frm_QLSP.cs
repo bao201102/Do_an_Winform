@@ -63,7 +63,6 @@ namespace Do_an_Winform.PL.Quanly
             catch (Exception)
             {
 
-                throw;
             }
         }
     }
