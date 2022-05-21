@@ -496,6 +496,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLTK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnQLTK.Textcolor = System.Drawing.Color.Transparent;
             this.btnQLTK.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLTK.Click += new System.EventHandler(this.btnQLTK_Click);
             // 
             // subdoitacPanel
             // 

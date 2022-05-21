@@ -27,7 +27,7 @@ namespace Do_an_Winform.DAL
             CHDTEntities1 data = new CHDTEntities1();
             List<NhanVienDTO> list = new List<NhanVienDTO>();
             var nhanvien = from nv in data.NhanViens
-                                 where nv.TenNV.Contains(name.Trim().ToLower())
+                                 where nv.TenNV.Contains(name.Trim().ToLower()) && nv.TrangThai == "1"
                                  select nv;
             foreach(NhanVien nv in nhanvien)
             {
@@ -50,6 +50,7 @@ namespace Do_an_Winform.DAL
             CHDTEntities1 data = new CHDTEntities1();
             List<NhanVienDTO> list = new List<NhanVienDTO>();
             var nhanvien = from nv in data.NhanViens
+                           where nv.TrangThai == "1"
                            select nv;
             foreach (NhanVien nv in nhanvien)
             {

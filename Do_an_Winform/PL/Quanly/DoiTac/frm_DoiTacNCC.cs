@@ -42,7 +42,6 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
         private void btThemNCC_Click(object sender, EventArgs e)
         {
             frm_ThemNCC form = new frm_ThemNCC();
-            this.Hide();
             form.ShowDialog();
         }
 

@@ -49,7 +49,6 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
         private void btThemKH_Click(object sender, EventArgs e)
         {
             frm_ThemKH form = new frm_ThemKH();
-            this.Hide();
             form.ShowDialog();
         }
 

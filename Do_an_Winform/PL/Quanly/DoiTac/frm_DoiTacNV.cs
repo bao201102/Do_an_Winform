@@ -49,7 +49,6 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
         private void btThemNV_Click(object sender, EventArgs e)
         {
             frm_ThemNV form = new frm_ThemNV();
-            this.Hide();
             form.ShowDialog();
         }
 

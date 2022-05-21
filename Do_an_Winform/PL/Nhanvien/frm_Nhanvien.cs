@@ -1,8 +1,7 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
-using Do_an_Winform.PL.Quanly.DoiTac;
-using Do_an_Winform.PL.Quanly.QLTK;
+using Do_an_Winform.PL.Nhanvien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,31 +12,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Do_an_Winform.PL.Quanly
+namespace Do_an_Winform
 {
-    public partial class frm_Quanly : Form
+    public partial class frm_Nhanvien : Form
     {
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         NhanVienDTO nhanvien = new NhanVienDTO();
-        LoaiNhanVienDTO loainhanvien = new LoaiNhanVienDTO();
-        
-        public frm_Quanly(TaiKhoanDTO user)
+        LoaiNhanVienDTO loaiNV = new LoaiNhanVienDTO();
+        public frm_Nhanvien(TaiKhoanDTO user)
         {
             InitializeComponent();
             this.Width = 1600;
             this.Height = 900;
             taikhoan = user;
-        }
-
-        private void frm_Quanly_Load(object sender, EventArgs e)
-        {
-            subuserPanel.Visible = false;
-            subdoitacPanel.Visible = false;
-            subhoadonPanel.Visible = false;
-            nhanvien = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
-            loainhanvien = LoaiNhanVienBLL.GetEmpType(nhanvien.MaLoaiNV);
-            userBtn.Text = nhanvien.TenNV;
-            
         }
 
         private void slideBtn_Click(object sender, EventArgs e)
@@ -59,8 +46,6 @@ namespace Do_an_Winform.PL.Quanly
                 sidemenu.Width = 55;
                 mainPanel.Location = new Point(65, 45);
                 subuserPanel.Visible = false;
-                subdoitacPanel.Visible = false;
-                subhoadonPanel.Visible = false;
                 mainPanel.Width += 195;
                 Transition.ShowSync(sidemenu, false, BunifuAnimatorNS.Animation.HorizSlide);
             }
@@ -70,7 +55,7 @@ namespace Do_an_Winform.PL.Quanly
         private void btnClose_Click(object sender, EventArgs e)
         {
             MessBox messBox = new MessBox();
-            bool result = messBox.ShowMess("Bạn muốn thoát chương trình ?");           
+            bool result = messBox.ShowMess("Bạn muốn thoát chương trình ?");
             if (result)
             {
                 Application.Exit();
@@ -106,45 +91,49 @@ namespace Do_an_Winform.PL.Quanly
             }
         }
 
-        private void btnQLDT_Click(object sender, EventArgs e)
+        private void frm_Nhanvien_Load(object sender, EventArgs e)
         {
-            if (subdoitacPanel.Visible == false)
-            {
-                subdoitacPanel.Visible = true;
-            }
-            else
-            {
-                subdoitacPanel.Visible = false;
-            }
+            subuserPanel.Visible = false;
+            userControlKhachHang1.BringToFront();
+            NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+            nhanvien = emp;
+            userBtn.Text = emp.TenNV;
+            LoaiNhanVienDTO empType = LoaiNhanVienBLL.GetEmpType(emp.MaLoaiNV);
+            loaiNV = empType;
         }
 
-        private void btnQLHD_Click(object sender, EventArgs e)
+        private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            if (subhoadonPanel.Visible == false)
-            {
-                subhoadonPanel.Visible = true;
-            }
-            else
-            {
-                subhoadonPanel.Visible = false;
-            }
+            userControlKhachHang1.BringToFront();
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            userControlSanPham1.BringToFront();
+        }
+
+        private void btnLapHD_Click(object sender, EventArgs e)
+        {
+            userControlLapHoaDon1.BringToFront();
+        }
+
+        private void btnDKTV_Click(object sender, EventArgs e)
+        {
+            userControlDKThanhVien1.BringToFront();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             MessBox messBox = new MessBox();
-            bool result = messBox.ShowMess("Bạn muốn đăng xuất ?");
+            bool result = messBox.ShowMess("Bạn có muốn đăng xuất ?");
             if (result)
             {
-                frm_DangNhap loginform = new frm_DangNhap();
-                this.Hide();
-                loginform.ShowDialog();
-                this.Close();
+                frm_DangNhap frmLogin = new frm_DangNhap();
+                frmLogin.Show();
             }
         }
-
         private Form activeForm = null;
-        private void OpenChildForm(Form childForm)
+        private void openChildForm(Form childForm)
         {
             if (activeForm != null)
             {
@@ -160,40 +149,9 @@ namespace Do_an_Winform.PL.Quanly
             childForm.Show();
         }
 
-        private void btnThongtin_Click(object sender, EventArgs e)
+        private void btnInfo_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_Thongtin(nhanvien, loainhanvien));
-        }
-
-        private void btnQLSP_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frm_QLSP());
-        }
-
-        //                             Đối tác - Nhân viên
-       
-        private void btDoiTac_NV_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frm_DoiTacNV());
-        }
-
-        //                             Đối tác - Khách hàng
-
-        private void btDoiTac_KH_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frm_DoiTacKH());
-        }
-
-        //                             Đối tác - nhà cung cấp
-
-        private void btDoiTac_NCC_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frm_DoiTacNCC());
-        }
-
-        private void btnQLTK_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frm_QLTK());
+            openChildForm(new frm_Info(nhanvien, loaiNV));
         }
     }
 }

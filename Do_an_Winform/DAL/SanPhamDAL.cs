@@ -26,6 +26,76 @@ namespace Do_an_Winform.DAL
             }
             return sanPhamDTOs;
         }
+        public static List<SanPhamDTO> GetAllProductWithConditions(string name)
+        {
+            if (name != "")
+            {
+                CHDTEntities1 entities = new CHDTEntities1();
+                var products = from pro in entities.SanPhams
+                               where pro.TenSP.Contains(name.ToLower().Trim()) && pro.TrangThai == "1"
+                               select pro;
+                List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
+                foreach (SanPham pro in products)
+                {
+                    var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+                    var mapper = new Mapper(config);
+                    SanPhamDTO sanpham = mapper.Map<SanPhamDTO>(pro);
+                    sanPhamDTOs.Add(sanpham);
+                }
+                return sanPhamDTOs;
+            }
+            else
+            {
+                CHDTEntities1 entities = new CHDTEntities1();
+                var products = from pro in entities.SanPhams
+                               where pro.TrangThai == "1"
+                               select pro;
+                List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
+                foreach (SanPham pro in products)
+                {
+                    var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+                    var mapper = new Mapper(config);
+                    SanPhamDTO sanpham = mapper.Map<SanPhamDTO>(pro);
+                    sanPhamDTOs.Add(sanpham);
+                }
+                return sanPhamDTOs;
+            }
+        }
+        public static List<SanPhamDTO> GetProductByMaLoaiWithConditions(string name, string maloai)
+        {
+            if (name != "")
+            {
+                CHDTEntities1 entities = new CHDTEntities1();
+                var products = from pro in entities.SanPhams
+                               where pro.TenSP.Contains(name.Trim().ToLower()) && pro.MaLoaiSP == maloai && pro.TrangThai == "1"
+                               select pro;
+                List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
+                foreach (SanPham pro in products)
+                {
+                    var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+                    var mapper = new Mapper(config);
+                    SanPhamDTO sanpham = mapper.Map<SanPhamDTO>(pro);
+                    sanPhamDTOs.Add(sanpham);
+                }
+                return sanPhamDTOs;
+            }
+            else
+            {
+                CHDTEntities1 entities = new CHDTEntities1();
+                var products = from pro in entities.SanPhams
+                               where pro.MaLoaiSP == maloai && pro.TrangThai == "1"
+                               select pro;
+                List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
+                foreach (SanPham pro in products)
+                {
+                    var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+                    var mapper = new Mapper(config);
+                    SanPhamDTO sanpham = mapper.Map<SanPhamDTO>(pro);
+                    sanPhamDTOs.Add(sanpham);
+                }
+                return sanPhamDTOs;
+            }
+        }
         public static List<object> GetProduct()
         {
             CHDTEntities1 entities = new CHDTEntities1();

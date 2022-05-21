@@ -16,6 +16,7 @@ namespace Do_an_Winform.DAL
             var customers = from kh in entities.KhachHangs
                             join loaitv in entities.LoaiThanhViens
                             on kh.MaLoaiTVien equals loaitv.MaLoaiTVien
+                            where kh.TrangThai == "1"
                             select kh;
             List<KhachHangDTO> khachHangDTOs = new List<KhachHangDTO>();
             foreach(KhachHang ctm in customers)
@@ -62,7 +63,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 data = new CHDTEntities1();
             var khachhang = from kh in data.KhachHangs
-                                   where kh.TenKH.Contains(name.Trim().ToLower())
+                                   where kh.TenKH.Contains(name.Trim().ToLower()) && kh.TrangThai == "1"
                                    select kh;
             List<KhachHangDTO> list = new List<KhachHangDTO>();
             foreach(KhachHang kh in khachhang)

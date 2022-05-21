@@ -65,5 +65,13 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.UpdateQuantityProduct(pn);
         }
+        public static List<SanPhamDTO> GetProductByMaLoaiWithConditions(string name, string maloai)
+        {
+            return SanPhamDAL.GetProductByMaLoaiWithConditions(name, maloai);
+        }
+        public static List<SanPhamDTO> GetAllProductWithConditions(string name)
+        {
+            return SanPhamDAL.GetAllProductWithConditions(name);
+        }
     }
 }
