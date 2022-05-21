@@ -144,6 +144,18 @@
           <Property Name="MatKhau" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MaLoaiNV" Type="nvarchar" MaxLength="10" />
         </EntityType>
+        <Association Name="FK__ChiTietPh__MaNha__282DF8C2">
+          <End Role="NhaSanXuat" Type="Self.NhaSanXuat" Multiplicity="1" />
+          <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaSanXuat">
+              <PropertyRef Name="MaNhaSX" />
+            </Principal>
+            <Dependent Role="ChiTietPhieuNhap">
+              <PropertyRef Name="MaNhaSX" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__DangNhap__MaLoai__398D8EEE">
           <End Role="LoaiNhanVien" Type="Self.LoaiNhanVien" Multiplicity="0..1" />
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
@@ -252,18 +264,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ChiTietPhieuNhap_NhaSanXuat">
-          <End Role="NhaSanXuat" Type="Self.NhaSanXuat" Multiplicity="1" />
-          <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhaSanXuat">
-              <PropertyRef Name="MaNhaSX" />
-            </Principal>
-            <Dependent Role="ChiTietPhieuNhap">
-              <PropertyRef Name="MaNhaSX" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ChiTietPhieuNhap_PhieuNhapHang">
           <End Role="PhieuNhapHang" Type="Self.PhieuNhapHang" Multiplicity="1" />
           <End Role="ChiTietPhieuNhap" Type="Self.ChiTietPhieuNhap" Multiplicity="*" />
@@ -285,18 +285,6 @@
             </Principal>
             <Dependent Role="ChiTietPhieuNhap">
               <PropertyRef Name="MaSP" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HoaDon_KhachHang">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KhachHang">
-              <PropertyRef Name="MaKH" />
-            </Principal>
-            <Dependent Role="HoaDon">
-              <PropertyRef Name="MaKH" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -339,6 +327,10 @@
           <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__ChiTietPh__MaNha__282DF8C2" Association="Self.FK__ChiTietPh__MaNha__282DF8C2">
+            <End Role="NhaSanXuat" EntitySet="NhaSanXuat" />
+            <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhap" />
+          </AssociationSet>
           <AssociationSet Name="FK__DangNhap__MaLoai__398D8EEE" Association="Self.FK__DangNhap__MaLoai__398D8EEE">
             <End Role="LoaiNhanVien" EntitySet="LoaiNhanVien" />
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
@@ -375,10 +367,6 @@
             <End Role="SanPham" EntitySet="SanPham" />
             <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDon" />
           </AssociationSet>
-          <AssociationSet Name="FK_ChiTietPhieuNhap_NhaSanXuat" Association="Self.FK_ChiTietPhieuNhap_NhaSanXuat">
-            <End Role="NhaSanXuat" EntitySet="NhaSanXuat" />
-            <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhap" />
-          </AssociationSet>
           <AssociationSet Name="FK_ChiTietPhieuNhap_PhieuNhapHang" Association="Self.FK_ChiTietPhieuNhap_PhieuNhapHang">
             <End Role="PhieuNhapHang" EntitySet="PhieuNhapHang" />
             <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhap" />
@@ -386,10 +374,6 @@
           <AssociationSet Name="FK_ChiTietPhieuNhap_SanPham" Association="Self.FK_ChiTietPhieuNhap_SanPham">
             <End Role="SanPham" EntitySet="SanPham" />
             <End Role="ChiTietPhieuNhap" EntitySet="ChiTietPhieuNhap" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HoaDon_KhachHang" Association="Self.FK_HoaDon_KhachHang">
-            <End Role="KhachHang" EntitySet="KhachHang" />
-            <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
           <AssociationSet Name="FK_HoaDon_NhanVien" Association="Self.FK_HoaDon_NhanVien">
             <End Role="NhanVien" EntitySet="NhanVien" />
