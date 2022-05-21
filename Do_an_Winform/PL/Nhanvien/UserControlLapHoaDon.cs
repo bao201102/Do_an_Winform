@@ -225,5 +225,10 @@ namespace Do_an_Winform.PL.Nhanvien
             string maHD = "HD" + count.ToString("000");
             txtMaHD.Text = maHD;
         }
+
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

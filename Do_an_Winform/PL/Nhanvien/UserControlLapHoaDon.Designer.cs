@@ -125,13 +125,14 @@
             this.bunifuCustomDataGrid1.GridColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(7, 313);
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(3, 300);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid1.RowTemplate.DividerHeight = 1;
             this.bunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(728, 298);
             this.bunifuCustomDataGrid1.TabIndex = 13;
+            this.bunifuCustomDataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
             // 
             // Column4
             // 
@@ -815,7 +816,7 @@
             this.Controls.Add(this.bunifuCustomDataGrid1);
             this.Controls.Add(this.lbl1);
             this.Name = "UserControlLapHoaDon";
-            this.Size = new System.Drawing.Size(1111, 590);
+            this.Size = new System.Drawing.Size(1006, 590);
             this.Load += new System.EventHandler(this.UserControlLapHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.panel1.ResumeLayout(false);

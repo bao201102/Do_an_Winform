@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.Nhanvien;
 using Do_an_Winform.PL.Quanly;
 using System;
 using System.Collections.Generic;
@@ -52,12 +53,9 @@ namespace Do_an_Winform.PL.DangNhap
                     TaiKhoanDTO userLogin = TaiKhoanBLL.GetUser(user);
                     if (userLogin.MaLoaiNV == "LNV001")
                     {
-                        frm_Nhanvien frmNhanVien = new frm_Nhanvien(userLogin);
+                        frm_NVien frmNVien = new frm_NVien(userLogin);
                         this.Hide();
-                        //Form frmEmp = new frm_Nhanvien(userLogin);
-                        frmNhanVien.Show();
-                        //this.Close();
-                        //this.Close();
+                        frmNVien.Show();
                     }
                     else if (userLogin.MaLoaiNV == "LNV002")
                     {
