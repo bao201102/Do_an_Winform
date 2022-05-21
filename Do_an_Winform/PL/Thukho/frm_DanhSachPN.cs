@@ -1,4 +1,5 @@
-﻿using Do_an_Winform.DTO;
+﻿using Do_an_Winform.BLL;
+using Do_an_Winform.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +41,11 @@ namespace Do_an_Winform.PL.Thukho
         private void btnTaoDon_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_Nhap(taikhoan));
+        }
+
+        private void frm_DanhSachPN_Load(object sender, EventArgs e)
+        {
+            gridviewDSNhap.DataSource = PhieuNhapHangBLL.GetAll();
         }
     }
 }
