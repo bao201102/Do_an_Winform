@@ -9,8 +9,7 @@ using Do_an_Winform.DTO;
 namespace Do_an_Winform.DAL
 {
     public class HoaDonDAL
-    {
-        
+    {      
         public static bool AddNewBill(HoaDonDTO hd)
         {
             CHDTEntities1 data = new CHDTEntities1();
@@ -20,30 +19,38 @@ namespace Do_an_Winform.DAL
             data.HoaDons.Add(hoaDon);
             return data.SaveChanges() > 0 ? true : false;
         }
-        public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
+        //Hàm lấy tất cả hóa đơn
+        public static List<HoaDonDTO> GetAllBill()
         {
-            CHDTEntities1 data = new CHDTEntities1();
-            var truyvan = from hd in data.HoaDons
-                          where (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
-                          select new 
-                          {
-                              hd.MaHD,
-                              //NgayTaoHD = ((DateTime)hd.NgayTaoHD).ToString("dd/MM/yyyy HH:mm"),              
-                              hd.NgayTaoHD,
-                              hd.MaNV,
-                              hd.MaKH,
-                              hd.ThanhTien
-                          };
-
-            List<HoaDonDTO> listKQ = new List<HoaDonDTO>();
-            for (int i = 0; i < truyvan.Count(); i++)
+            CHDTEntities1 entities = new CHDTEntities1();
+            var bills = from hd in entities.HoaDons
+                        where hd.TrangThai == "1"
+                        select hd;
+            List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
+            foreach (HoaDon bill in bills)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
                 var mapper = new Mapper(config);
-                HoaDonDTO hddto = mapper.Map<HoaDonDTO>(i);
-                listKQ.Add(hddto);
+                HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
+                hoaDonDTOs.Add(hoadon);
             }
-            return listKQ;
+            return hoaDonDTOs;
+        }
+        public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var bills = from hd in entities.HoaDons
+                        where hd.TrangThai == "1" && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
+                        select hd;
+            List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
+            foreach (HoaDon bill in bills)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
+                var mapper = new Mapper(config);
+                HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
+                hoaDonDTOs.Add(hoadon);
+            }
+            return hoaDonDTOs;
         }
 
         internal static List<HoaDonDTO> GetAllBill()
@@ -65,33 +72,25 @@ namespace Do_an_Winform.DAL
 
         public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
         {
-            CHDTEntities1 data = new CHDTEntities1();
-            var truyvan = from hd in data.HoaDons
-                          where (hd.MaHD == hdsearch.MaHD) && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
-                          select new
-                          {
-                              hd.MaHD,
-                              //NgayTaoHD = ((DateTime)hd.NgayTaoHD).ToString("dd/MM/yyyy HH:mm"),              
-                              hd.NgayTaoHD,
-                              hd.MaNV,
-                              hd.MaKH,
-                              hd.ThanhTien
-                          };
-            List<HoaDonDTO> listKQ = new List<HoaDonDTO>();
-            for (int i = 0; i < truyvan.Count(); i++)
+            CHDTEntities1 entities = new CHDTEntities1();
+            var bills = from hd in entities.HoaDons
+                        where hd.TrangThai == "1" && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday) && (hd.MaHD == hdsearch.MaHD)
+                        select hd;
+            List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
+            foreach (HoaDon bill in bills)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
                 var mapper = new Mapper(config);
-                HoaDonDTO hddto = mapper.Map<HoaDonDTO>(i);
-                listKQ.Add(hddto);
+                HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
+                hoaDonDTOs.Add(hoadon);
             }
-            return listKQ;
+            return hoaDonDTOs;
         }
         public static double DoanhThuTatCaHD(DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
-                          where (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
+                          where (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday) && (hd.TrangThai == "1")
                           select new
                           {                             
                               hd.ThanhTien
@@ -108,7 +107,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
-                          where (hd.MaHD == hdsearch.MaHD) && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
+                          where (hd.MaHD == hdsearch.MaHD) && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday) && (hd.TrangThai == "1")
                           select new
                           {
                               hd.ThanhTien
@@ -128,8 +127,8 @@ namespace Do_an_Winform.DAL
 
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
-                           where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= today)
-                           select new
+                           where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= today) && (hd.TrangThai == "1")
+                          select new
                            {
                                hd.ThanhTien
                            };
@@ -151,7 +150,7 @@ namespace Do_an_Winform.DAL
                 lastDayOfMonth = GetLastDayOfMonth(3);
                 CHDTEntities1 data = new CHDTEntities1();
                 var truyvan = from hd in data.HoaDons
-                              where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
+                              where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth) && (hd.TrangThai == "1")
                               select new
                               {
                                   hd.ThanhTien
@@ -219,7 +218,7 @@ namespace Do_an_Winform.DAL
             var lastDayOfMonth = GetLastDayOfMonth(ThangTK);
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
-                          where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
+                          where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth) && (hd.TrangThai == "1")
                           select new
                           {
                               hd.ThanhTien

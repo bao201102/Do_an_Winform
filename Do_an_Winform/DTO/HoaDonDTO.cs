@@ -12,6 +12,7 @@ namespace Do_an_Winform.DTO
 		private DateTime _NgayTaoHD;
 		private string _MaNV;
 		private string _MaKH;
+		private string _TrangThai;
 
 		public string MaHD
 		{
@@ -40,7 +41,7 @@ namespace Do_an_Winform.DTO
 			get { return _ThanhTien; }
 			set { _ThanhTien = value; }
 		}
-		private string _TrangThai;
+
 		public string TrangThai
         {
 			get { return _TrangThai; }
