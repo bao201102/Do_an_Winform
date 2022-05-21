@@ -302,6 +302,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewDSNhap.Size = new System.Drawing.Size(1196, 427);
             this.gridviewDSNhap.TabIndex = 2;
             this.gridviewDSNhap.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gridviewDSNhap.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewDSNhap_CellDoubleClick);
             // 
             // bunifuLabel1
             // 
@@ -343,7 +344,7 @@ namespace Do_an_Winform.PL.Thukho
         private Bunifu.UI.WinForms.BunifuPanel mainPanel;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTaoDon;
         private Bunifu.UI.WinForms.BunifuTextBox txtFind;
-        private Bunifu.UI.WinForms.BunifuDataGridView gridviewDSNhap;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        public Bunifu.UI.WinForms.BunifuDataGridView gridviewDSNhap;
     }
 }

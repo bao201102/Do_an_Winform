@@ -46,8 +46,8 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             NhaSanXuat manufac = (from nhasx in entities.NhaSanXuats
-                                  where nhasx.TenNhaSX == tenNSX
-                                  select nhasx).Single();
+                                  where nhasx.TenNhaSX.Equals(tenNSX)
+                                  select nhasx).SingleOrDefault();
             var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaSanXuat, NhaSanXuatDTO>());
             var mapper = new Mapper(config);
             NhaSanXuatDTO nhaSX = mapper.Map<NhaSanXuatDTO>(manufac);

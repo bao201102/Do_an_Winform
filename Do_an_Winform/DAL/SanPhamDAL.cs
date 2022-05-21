@@ -76,46 +76,7 @@ namespace Do_an_Winform.DAL
             }
             return sanPhamDTOs;
         }
-        public static List<SanPhamDTO> GetProByTxtNameChanged(string txtNameChanged)
-        {
-            CHDTEntities1 entities = new CHDTEntities1();
-            var products = from pro in entities.SanPhams
-                           where pro.TenSP.Contains(txtNameChanged) && pro.TrangThai == "1"
-                           select pro;
-            List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
-            foreach (SanPham pro in products)
-            {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
-                var mapper = new Mapper(config);
-                SanPhamDTO sanpham = mapper.Map<SanPhamDTO>(pro);
-                sanPhamDTOs.Add(sanpham);
-            }
-            return sanPhamDTOs;
-        }
-        public static SanPhamDTO GetProductById(string masp)
-        {
-            CHDTEntities1 entities = new CHDTEntities1();
-            SanPham product = (from sp in entities.SanPhams
-                               where sp.MaSP == masp && sp.TrangThai == "1"
-                               select sp).SingleOrDefault();
 
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
-            var mapper = new Mapper(config);
-            SanPhamDTO sanPham = mapper.Map<SanPhamDTO>(product);
-            return sanPham;
-        }
-        public static SanPhamDTO GetProductByName(string ten)
-        {
-            CHDTEntities1 entities = new CHDTEntities1();
-            var product = (from sp in entities.SanPhams
-                           where sp.TenSP.Contains(ten) && sp.TrangThai == "1"
-                           select sp).FirstOrDefault();
-
-            var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
-            var mapper = new Mapper(config);
-            SanPhamDTO sanPham = mapper.Map<SanPhamDTO>(product);
-            return sanPham;
-        }
         public static List<object> GetAllProductByCat(string maloaisp)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -141,6 +102,7 @@ namespace Do_an_Winform.DAL
             }
             return sanPhamDTOs;
         }
+
         public static List<object> GetProductByManufacId(string maNhaSX)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -166,6 +128,63 @@ namespace Do_an_Winform.DAL
             }
             return sanPhamDTOs;
         }
+
+        public static List<SanPhamDTO> GetProByTxtNameChanged(string txtNameChanged)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var products = from pro in entities.SanPhams
+                           where pro.TenSP.Contains(txtNameChanged) && pro.TrangThai == "1"
+                           select pro;
+            List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
+            foreach (SanPham pro in products)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+                var mapper = new Mapper(config);
+                SanPhamDTO sanpham = mapper.Map<SanPhamDTO>(pro);
+                sanPhamDTOs.Add(sanpham);
+            }
+            return sanPhamDTOs;
+        }
+
+        public static SanPhamDTO GetProductById(string masp)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            SanPham product = (from sp in entities.SanPhams
+                               where sp.MaSP == masp && sp.TrangThai == "1"
+                               select sp).SingleOrDefault();
+
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+            var mapper = new Mapper(config);
+            SanPhamDTO sanPham = mapper.Map<SanPhamDTO>(product);
+            return sanPham;
+        }
+
+        public static SanPhamDTO GetProductByName(string ten)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var product = (from sp in entities.SanPhams
+                           where sp.TenSP.Contains(ten) && sp.TrangThai == "1"
+                           select sp).FirstOrDefault();
+
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+            var mapper = new Mapper(config);
+            SanPhamDTO sanPham = mapper.Map<SanPhamDTO>(product);
+            return sanPham;
+        }
+
+        public static SanPhamDTO GetProductEqualsName(string ten)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var product = (from sp in entities.SanPhams
+                           where sp.TenSP.Equals(ten) && sp.TrangThai == "1"
+                           select sp).FirstOrDefault();
+
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+            var mapper = new Mapper(config);
+            SanPhamDTO sanPham = mapper.Map<SanPhamDTO>(product);
+            return sanPham;
+        }
+
         public static List<object> GetProductByCondition(string manhasx, int minprice, int maxprice, string maloaisp)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -383,6 +402,16 @@ namespace Do_an_Winform.DAL
             {
                 return false;
             }
+        }
+
+        public static bool UpdateQuantityProduct(ChiTietPhieuNhapDTO pn)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var sp = (from p in entities.SanPhams
+                      where p.MaSP.Equals(pn.MaSP)
+                      select p).SingleOrDefault();
+            sp.SoLuong += pn.SoLuong;
+            return entities.SaveChanges() > 0 ? true : false;
         }
     }
 }

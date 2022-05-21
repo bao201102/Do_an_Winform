@@ -57,5 +57,13 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.InsertProdut(product);
         }
+        public static SanPhamDTO GetProductEqualsName(string ten)
+        {
+            return SanPhamDAL.GetProductEqualsName(ten);
+        }
+        public static bool UpdateQuantityProduct(ChiTietPhieuNhapDTO pn)
+        {
+            return SanPhamDAL.UpdateQuantityProduct(pn);
+        }
     }
 }

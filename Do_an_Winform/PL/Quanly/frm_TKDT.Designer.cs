@@ -121,7 +121,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1242, 540);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1208, 537);
             this.bunifuPanel1.TabIndex = 72;
             // 
             // bunifuGradientPanel1
@@ -136,8 +136,8 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(970, 17);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(936, 17);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(243, 41);
@@ -147,7 +147,7 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.maskedtxtToday.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedtxtToday.Location = new System.Drawing.Point(113, 10);
-            this.maskedtxtToday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedtxtToday.Margin = new System.Windows.Forms.Padding(2);
             this.maskedtxtToday.Mask = "00/00/0000 90:00";
             this.maskedtxtToday.Name = "maskedtxtToday";
             this.maskedtxtToday.Size = new System.Drawing.Size(115, 23);
@@ -182,8 +182,8 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel2.Controls.Add(this.label3);
             this.bunifuPanel2.Controls.Add(this.label4);
             this.bunifuPanel2.Controls.Add(this.ChiPhi);
-            this.bunifuPanel2.Location = new System.Drawing.Point(677, 87);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel2.Location = new System.Drawing.Point(643, 87);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(415, 172);
@@ -220,7 +220,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtDoanhThu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDoanhThu.Lines = new string[0];
             this.txtDoanhThu.Location = new System.Drawing.Point(155, 45);
-            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(2);
             this.txtDoanhThu.MaxLength = 32767;
             this.txtDoanhThu.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDoanhThu.Modified = false;
@@ -246,7 +246,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtDoanhThu.OnIdleState = stateProperties4;
-            this.txtDoanhThu.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDoanhThu.Padding = new System.Windows.Forms.Padding(2);
             this.txtDoanhThu.PasswordChar = '\0';
             this.txtDoanhThu.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtDoanhThu.PlaceholderText = "Enter text";
@@ -298,7 +298,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtLoiNhuan.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLoiNhuan.Lines = new string[0];
             this.txtLoiNhuan.Location = new System.Drawing.Point(155, 106);
-            this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(2);
             this.txtLoiNhuan.MaxLength = 32767;
             this.txtLoiNhuan.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtLoiNhuan.Modified = false;
@@ -324,7 +324,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtLoiNhuan.OnIdleState = stateProperties8;
-            this.txtLoiNhuan.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLoiNhuan.Padding = new System.Windows.Forms.Padding(2);
             this.txtLoiNhuan.PasswordChar = '\0';
             this.txtLoiNhuan.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtLoiNhuan.PlaceholderText = "Enter text";
@@ -376,7 +376,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtChiPhi.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtChiPhi.Lines = new string[0];
             this.txtChiPhi.Location = new System.Drawing.Point(155, 75);
-            this.txtChiPhi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtChiPhi.Margin = new System.Windows.Forms.Padding(2);
             this.txtChiPhi.MaxLength = 32767;
             this.txtChiPhi.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtChiPhi.Modified = false;
@@ -402,7 +402,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtChiPhi.OnIdleState = stateProperties12;
-            this.txtChiPhi.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtChiPhi.Padding = new System.Windows.Forms.Padding(2);
             this.txtChiPhi.PasswordChar = '\0';
             this.txtChiPhi.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtChiPhi.PlaceholderText = "Enter text";
@@ -497,10 +497,10 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel3.Controls.Add(this.label15);
             this.bunifuPanel3.Controls.Add(this.label13);
             this.bunifuPanel3.Location = new System.Drawing.Point(179, 87);
-            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(415, 172);
+            this.bunifuPanel3.Size = new System.Drawing.Size(418, 172);
             this.bunifuPanel3.TabIndex = 73;
             // 
             // cbThangTK
@@ -508,10 +508,10 @@ namespace Do_an_Winform.PL.Quanly
             this.cbThangTK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbThangTK.FormattingEnabled = true;
-            this.cbThangTK.Location = new System.Drawing.Point(155, 142);
-            this.cbThangTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbThangTK.Location = new System.Drawing.Point(165, 140);
+            this.cbThangTK.Margin = new System.Windows.Forms.Padding(2);
             this.cbThangTK.Name = "cbThangTK";
-            this.cbThangTK.Size = new System.Drawing.Size(134, 21);
+            this.cbThangTK.Size = new System.Drawing.Size(137, 21);
             this.cbThangTK.TabIndex = 77;
             // 
             // label2
@@ -578,8 +578,8 @@ namespace Do_an_Winform.PL.Quanly
             this.btnPrint.IdleIconLeftImage = null;
             this.btnPrint.IdleIconRightImage = null;
             this.btnPrint.IndicateFocus = true;
-            this.btnPrint.Location = new System.Drawing.Point(324, 88);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Location = new System.Drawing.Point(327, 88);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPrint.OnDisabledState.BorderRadius = 26;
@@ -652,8 +652,8 @@ namespace Do_an_Winform.PL.Quanly
             this.txtNamTK.IconRight = null;
             this.txtNamTK.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNamTK.Lines = new string[0];
-            this.txtNamTK.Location = new System.Drawing.Point(155, 75);
-            this.txtNamTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNamTK.Location = new System.Drawing.Point(165, 73);
+            this.txtNamTK.Margin = new System.Windows.Forms.Padding(2);
             this.txtNamTK.MaxLength = 32767;
             this.txtNamTK.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNamTK.Modified = false;
@@ -679,7 +679,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNamTK.OnIdleState = stateProperties16;
-            this.txtNamTK.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNamTK.Padding = new System.Windows.Forms.Padding(2);
             this.txtNamTK.PasswordChar = '\0';
             this.txtNamTK.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNamTK.PlaceholderText = "Enter text";
@@ -689,7 +689,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtNamTK.SelectionLength = 0;
             this.txtNamTK.SelectionStart = 0;
             this.txtNamTK.ShortcutsEnabled = true;
-            this.txtNamTK.Size = new System.Drawing.Size(134, 23);
+            this.txtNamTK.Size = new System.Drawing.Size(137, 23);
             this.txtNamTK.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNamTK.TabIndex = 14;
             this.txtNamTK.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -750,8 +750,8 @@ namespace Do_an_Winform.PL.Quanly
             this.btnView.IdleIconLeftImage = null;
             this.btnView.IdleIconRightImage = null;
             this.btnView.IndicateFocus = true;
-            this.btnView.Location = new System.Drawing.Point(324, 49);
-            this.btnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnView.Location = new System.Drawing.Point(327, 49);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2);
             this.btnView.Name = "btnView";
             this.btnView.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnView.OnDisabledState.BorderRadius = 26;
@@ -805,10 +805,10 @@ namespace Do_an_Winform.PL.Quanly
             "3",
             "4",
             "Tất cả"});
-            this.cbQuyTK.Location = new System.Drawing.Point(155, 109);
-            this.cbQuyTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbQuyTK.Location = new System.Drawing.Point(165, 107);
+            this.cbQuyTK.Margin = new System.Windows.Forms.Padding(2);
             this.cbQuyTK.Name = "cbQuyTK";
-            this.cbQuyTK.Size = new System.Drawing.Size(134, 21);
+            this.cbQuyTK.Size = new System.Drawing.Size(137, 21);
             this.cbQuyTK.TabIndex = 13;
             this.cbQuyTK.SelectedIndexChanged += new System.EventHandler(this.cbQuyTK_SelectedIndexChanged);
             // 
@@ -821,10 +821,10 @@ namespace Do_an_Winform.PL.Quanly
             "Năm",
             "Quý",
             "Tháng"});
-            this.cbHTTK.Location = new System.Drawing.Point(155, 49);
-            this.cbHTTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbHTTK.Location = new System.Drawing.Point(165, 47);
+            this.cbHTTK.Margin = new System.Windows.Forms.Padding(2);
             this.cbHTTK.Name = "cbHTTK";
-            this.cbHTTK.Size = new System.Drawing.Size(134, 21);
+            this.cbHTTK.Size = new System.Drawing.Size(137, 21);
             this.cbHTTK.TabIndex = 11;
             // 
             // label16
@@ -937,13 +937,13 @@ namespace Do_an_Winform.PL.Quanly
             this.gvTKDT.HeaderBgColor = System.Drawing.Color.Empty;
             this.gvTKDT.HeaderForeColor = System.Drawing.Color.White;
             this.gvTKDT.Location = new System.Drawing.Point(7, 289);
-            this.gvTKDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gvTKDT.Margin = new System.Windows.Forms.Padding(2);
             this.gvTKDT.Name = "gvTKDT";
             this.gvTKDT.RowHeadersVisible = false;
             this.gvTKDT.RowHeadersWidth = 51;
             this.gvTKDT.RowTemplate.Height = 40;
             this.gvTKDT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvTKDT.Size = new System.Drawing.Size(1223, 233);
+            this.gvTKDT.Size = new System.Drawing.Size(1189, 230);
             this.gvTKDT.TabIndex = 2;
             this.gvTKDT.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -969,10 +969,10 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 566);
+            this.ClientSize = new System.Drawing.Size(1232, 563);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_TKDT";
             this.Text = "frm_TKDT";
             this.Load += new System.EventHandler(this.frm_TKDT_Load);
