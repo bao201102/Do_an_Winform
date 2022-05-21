@@ -530,6 +530,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnLuu.TextMarginLeft = 0;
             this.btnLuu.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnLuu.UseDefaultRadiusAndThickness = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // bunifuPanel3
             // 
@@ -587,6 +588,7 @@ namespace Do_an_Winform.PL.Thukho
             // 
             this.cbbTenSP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbbTenSP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbTenSP.BackColor = System.Drawing.Color.White;
             this.cbbTenSP.FormattingEnabled = true;
             this.cbbTenSP.Location = new System.Drawing.Point(150, 59);
             this.cbbTenSP.Name = "cbbTenSP";

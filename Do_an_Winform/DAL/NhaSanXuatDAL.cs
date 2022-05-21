@@ -42,5 +42,16 @@ namespace Do_an_Winform.DAL
             NhaSanXuatDTO nhaSX = mapper.Map<NhaSanXuatDTO>(manufac);
             return nhaSX;
         }
+        public static NhaSanXuatDTO GetManufacByName(string tenNSX)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            NhaSanXuat manufac = (from nhasx in entities.NhaSanXuats
+                                  where nhasx.TenNhaSX == tenNSX
+                                  select nhasx).Single();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaSanXuat, NhaSanXuatDTO>());
+            var mapper = new Mapper(config);
+            NhaSanXuatDTO nhaSX = mapper.Map<NhaSanXuatDTO>(manufac);
+            return nhaSX;
+        }
     }
 }
