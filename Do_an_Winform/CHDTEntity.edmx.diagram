@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6ec74317953f46c6975509c3e5bddcb4" Name="Diagram1">
+      <Diagram DiagramId="6ec74317953f46c6975509c3e5bddcb4" Name="Diagram1" ZoomLevel="100">
         <EntityTypeShape EntityType="CHDTModel.ChiTietHoaDon" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="CHDTModel.ChiTietPhieuNhap" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CHDTModel.HoaDon" Width="1.5" PointX="6" PointY="26.125" IsExpanded="true" />
@@ -24,7 +24,6 @@
         <AssociationConnector Association="CHDTModel.FK__ChiTietPh__MaNha__282DF8C2" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_PhieuNhapHang" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_SanPham" ManuallyRouted="false" />
-        <AssociationConnector Association="CHDTModel.FK_HoaDon_KhachHang" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK__KhachHang__MaLoa__3D5E1FD2" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK__DangNhap__MaLoai__398D8EEE" ManuallyRouted="false" />
@@ -34,6 +33,7 @@
         <AssociationConnector Association="CHDTModel.FK__NhanVien__MaNguo__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK__PhieuNhapH__MaNV__4316F928" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK__SanPham__MaNhaSX__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_HoaDon_KhachHang" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
