@@ -16,5 +16,6 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
         {
             InitializeComponent();
         }
+
     }
 }

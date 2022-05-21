@@ -56,15 +56,7 @@ namespace Do_an_Winform.PL.Quanly
 
         private void txtFind_TextChange(object sender, EventArgs e)
         {
-            try
-            {
-                dgvDSSP.DataSource = SanPhamBLL.GetAllProductByName(txtFind.Text);
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
         }
     }
 }

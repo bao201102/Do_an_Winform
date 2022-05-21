@@ -1,6 +1,7 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
+using Do_an_Winform.PL.Quanly.DoiTac;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace Do_an_Winform.PL.Quanly
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         NhanVienDTO nhanvien = new NhanVienDTO();
         LoaiNhanVienDTO loainhanvien = new LoaiNhanVienDTO();
-        bool opened = true;
+        
         public frm_Quanly(TaiKhoanDTO user)
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace Do_an_Winform.PL.Quanly
             nhanvien = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
             loainhanvien = LoaiNhanVienBLL.GetEmpType(nhanvien.MaLoaiNV);
             userBtn.Text = nhanvien.TenNV;
-            bunifuPages1.PageIndex = 0;
+            
         }
 
         private void slideBtn_Click(object sender, EventArgs e)
@@ -180,7 +181,7 @@ namespace Do_an_Winform.PL.Quanly
 
         private void btDoiTac_NV_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 1;
+            OpenChildForm(new frm_DoiTacNV());
         }
 
         private void btTimKiemNhanVien_Click(object sender, EventArgs e)
@@ -231,7 +232,7 @@ namespace Do_an_Winform.PL.Quanly
 
         private void btDoiTac_KH_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 2;
+            
         }
 
         private void btTimKiemKhachHang_Click(object sender, EventArgs e)
@@ -280,7 +281,7 @@ namespace Do_an_Winform.PL.Quanly
 
         private void btDoiTac_NCC_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageIndex = 3;
+            
         }
 
         private void btTimKiemNCC_Click(object sender, EventArgs e)
