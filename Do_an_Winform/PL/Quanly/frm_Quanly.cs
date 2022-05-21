@@ -161,7 +161,7 @@ namespace Do_an_Winform.PL.Quanly
 
         private void btnThongtin_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_Thongtin(nhanvien, loainhanvien));
+            OpenChildForm(new frm_Thongtin(nhanvien, loainhanvien, this));
         }
 
         private void btnQLSP_Click(object sender, EventArgs e)

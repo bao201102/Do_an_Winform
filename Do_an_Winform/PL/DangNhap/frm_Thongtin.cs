@@ -1,4 +1,6 @@
-﻿using Do_an_Winform.DTO;
+﻿using Do_an_Winform.BLL;
+using Do_an_Winform.DTO;
+using Do_an_Winform.PL.Quanly;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +17,13 @@ namespace Do_an_Winform.PL.DangNhap
     {
         NhanVienDTO emp = new NhanVienDTO();
         LoaiNhanVienDTO empType = new LoaiNhanVienDTO();
-        public frm_Thongtin(NhanVienDTO nhanvien, LoaiNhanVienDTO loainhanvien)
+        Form mainform = new Form();
+        public frm_Thongtin(NhanVienDTO nhanvien, LoaiNhanVienDTO loainhanvien, Form form)
         {
             InitializeComponent();
             emp = nhanvien;
             empType = loainhanvien;
-
+            mainform = form;
         }
 
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
@@ -29,34 +32,55 @@ namespace Do_an_Winform.PL.DangNhap
                 e.Handled = true;
         }
 
-        private void frm_Profile_Load(object sender, EventArgs e)
-        { 
+        private void employee_LoadData()
+        {
+            emp = NhanVienBLL.GetEmployeeById(emp.MaNV);
             txtHoten.Text = emp.TenNV;
             txtEmail.Text = emp.Email;
             txtSDT.Text = emp.SĐT;
             txtDiachi.Text = emp.DiaChi;
             cbGender.Text = emp.GioiTinh;
+        }
+
+        private void frm_Profile_Load(object sender, EventArgs e)
+        {
+            employee_LoadData();
             txtLoaitaikhoan.Text = empType.TenLoaiNV;
             txtLoaitaikhoan.Enabled = false;
         }
 
         private void btnCancelChanges_Click(object sender, EventArgs e)
         {
-            txtHoten.Text = emp.TenNV;
-            txtEmail.Text = emp.Email;
-            txtSDT.Text = emp.SĐT;
-            txtDiachi.Text = emp.DiaChi;
-            cbGender.Text = emp.GioiTinh;
+            employee_LoadData();
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
             NhanVienDTO empDTO = new NhanVienDTO();
+            empDTO.MaNV = emp.MaNV;
             empDTO.TenNV = txtHoten.Text;
             empDTO.GioiTinh = cbGender.Text;
             empDTO.Email = txtEmail.Text;
             empDTO.DiaChi = txtDiachi.Text;
             empDTO.SĐT = txtSDT.Text;
+
+            if (txtHoten.Text == "" || txtEmail.Text == "" || txtDiachi.Text == "" || txtSDT.Text == "")
+            {
+                bunifuSnackbar1.Show(this, "Vui lòng nhập đủ thông tin vào ô trống", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+            }
+            else
+            {
+                MessBox messBox = new MessBox();
+                bool result = messBox.ShowMess("Bạn có muốn lưu thông tin này không ?");
+                if (result)
+                {
+                    if (NhanVienBLL.UpdateEmployee(empDTO))
+                    {
+                        bunifuSnackbar1.Show(mainform, "Bạn đã lưu thông tin mới thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                        employee_LoadData();
+                    }
+                }
+            }
         }
     }
 }
