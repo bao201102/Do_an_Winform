@@ -39,12 +39,12 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.lblKhachHang = new System.Windows.Forms.Label();
             this.dgKhachHang = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btThemKH = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btTimKiemKhachHang = new System.Windows.Forms.Button();
             this.txtTimKiemKhachHang = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,11 +68,6 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.Transition.DefaultAnimation = animation1;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // lblKhachHang
             // 
@@ -161,7 +156,7 @@
             this.btThemKH.ActiveForecolor = System.Drawing.Color.White;
             this.btThemKH.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btThemKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btThemKH.BackColor = System.Drawing.SystemColors.Control;
+            this.btThemKH.BackColor = System.Drawing.Color.White;
             this.btThemKH.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btThemKH.BackgroundImage")));
             this.btThemKH.ButtonText = "Thêm";
             this.btThemKH.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -272,10 +267,16 @@
             this.txtTimKiemKhachHang.UseSystemPasswordChar = false;
             this.txtTimKiemKhachHang.WordWrap = true;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // frm_DoiTacKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1328, 844);
             this.Controls.Add(this.dgKhachHang);
             this.Controls.Add(this.btThemKH);

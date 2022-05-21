@@ -186,7 +186,7 @@
             this.btThemNCC.ActiveForecolor = System.Drawing.Color.White;
             this.btThemNCC.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btThemNCC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btThemNCC.BackColor = System.Drawing.SystemColors.Control;
+            this.btThemNCC.BackColor = System.Drawing.Color.White;
             this.btThemNCC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btThemNCC.BackgroundImage")));
             this.btThemNCC.ButtonText = "Thêm";
             this.btThemNCC.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -276,6 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1328, 844);
             this.Controls.Add(this.dgNhaCungCap);
             this.Controls.Add(this.btThemNCC);
