@@ -25,6 +25,7 @@ namespace Do_an_Winform
         public string MaNV { get; set; }
         public string MaNCC { get; set; }
         public int ThanhTien { get; set; }
+        public string TrangThai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietPhieuNhap> ChiTietPhieuNhaps { get; set; }
