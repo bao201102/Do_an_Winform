@@ -160,7 +160,6 @@ namespace Do_an_Winform
             this.btnXuat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnXuat.Textcolor = System.Drawing.Color.Transparent;
             this.btnXuat.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnStock
             // 
@@ -362,6 +361,7 @@ namespace Do_an_Winform
             this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.Textcolor = System.Drawing.Color.Transparent;
             this.btnInfo.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // userPanel
             // 
