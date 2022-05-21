@@ -45,6 +45,12 @@ namespace Do_an_Winform.DAL
             }
             return listKQ;
         }
+
+        internal static List<HoaDonDTO> GetAllBill()
+        {
+            throw new NotImplementedException();
+        }
+
         public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
