@@ -1,4 +1,4 @@
-﻿using Do_an_Winform.PL.Quanly.DoiTac;
+﻿//using Do_an_Winform.PL.Quanly.DoiTac;
 
 namespace Do_an_Winform.PL.Quanly
 {

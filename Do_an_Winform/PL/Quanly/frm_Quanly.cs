@@ -1,7 +1,7 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
-using Do_an_Winform.PL.Quanly.DoiTac;
+//using Do_an_Winform.PL.Quanly.DoiTac;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -173,21 +173,21 @@ namespace Do_an_Winform.PL.Quanly
        
         private void btDoiTac_NV_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_DoiTacNV());
+            //OpenChildForm(new frm_DoiTacNV());
         }
 
         //                             Đối tác - Khách hàng
 
         private void btDoiTac_KH_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_DoiTacKH());
+            //OpenChildForm(new frm_DoiTacKH());
         }
 
         //                             Đối tác - nhà cung cấp
 
         private void btDoiTac_NCC_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_DoiTacNCC());
+            //OpenChildForm(new frm_DoiTacNCC());
         }
 
     }
