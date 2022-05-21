@@ -1,7 +1,7 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DAL;
 using Do_an_Winform.DTO;
-using Do_an_Winform.PL.Quanly.BaoCao;
+//using Do_an_Winform.PL.Quanly.BaoCao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -128,8 +128,8 @@ namespace Do_an_Winform.PL.Quanly
 
         private void btnViewReport_Click(object sender, EventArgs e)
         {
-            frm_MenuBaoCao formMenuXemBaoCao = new frm_MenuBaoCao();
-            formMenuXemBaoCao.ShowDialog();
+            //frm_MenuBaoCao formMenuXemBaoCao = new frm_MenuBaoCao();
+            //formMenuXemBaoCao.ShowDialog();
         }
 
         private void btnView_Click(object sender, EventArgs e)
