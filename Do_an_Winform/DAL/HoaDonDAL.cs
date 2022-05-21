@@ -52,7 +52,6 @@ namespace Do_an_Winform.DAL
             }
             return hoaDonDTOs;
         }
-
         public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
         {
             CHDTEntities1 entities = new CHDTEntities1();
