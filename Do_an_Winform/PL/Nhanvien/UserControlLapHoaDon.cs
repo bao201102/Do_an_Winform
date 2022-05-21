@@ -26,6 +26,7 @@ namespace Do_an_Winform.PL.Nhanvien
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         NhanVienDTO nhanVien = new NhanVienDTO();
         List<HoaDonDTO> listHoaDon = new List<HoaDonDTO>();
+        List<ChiTietHoaDonDTO> listCTHD = new List<ChiTietHoaDonDTO>();
         public UserControlLapHoaDon()
         {
             InitializeComponent();
@@ -50,15 +51,12 @@ namespace Do_an_Winform.PL.Nhanvien
             if (!DesignMode)
             {
                 listSP = SanPhamBLL.GetAllProduct();
-                listKH = KhachHangBLL.GetAllCustomer();
+                
                 foreach (SanPhamDTO sp in listSP)
                 {
                     cbTenSP.Items.Add(sp.TenSP);
                 }
-                foreach(KhachHangDTO kh in listKH)
-                {
-                    cbTenKH.Items.Add(kh.TenKH);
-                }
+                
                 txtDonGia.Enabled = false;
                 txtMaSP.Enabled = false;
                 txtLoaiSP.Enabled = false;
@@ -108,6 +106,7 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void rbThanhVien_CheckedChanged(object sender, EventArgs e)
         {
+            listKH = KhachHangBLL.GetAllCustomer();
             isShowMemId = !isShowMemId;
             if(isShowMemId)
             {
@@ -117,6 +116,11 @@ namespace Do_an_Winform.PL.Nhanvien
                 txtMaKH.Text = "";
                 txtLoaiTV.Text = "";
                 cbTenKH.Text = "";
+                
+                foreach (KhachHangDTO kh in listKH)
+                {
+                    cbTenKH.Items.Add(kh.TenKH);
+                }
             }
             else
             {
@@ -124,6 +128,11 @@ namespace Do_an_Winform.PL.Nhanvien
                 txtMaKH.Text = "";
                 txtLoaiTV.Text = "";
                 cbTenKH.Text = "";
+                foreach (KhachHangDTO kh in listKH)
+                {
+                    cbTenKH.Items.Remove(kh.TenKH);
+                }
+                btnSearchMem.Enabled = false;
             }
             
         }
@@ -168,6 +177,7 @@ namespace Do_an_Winform.PL.Nhanvien
             txtMaKH.Text = "";
             cbTenKH.Text = "";
             txtLoaiTV.Text = "";
+            btnSearchMem.Enabled = true;
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -323,6 +333,13 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     MessageBox.Show("Có lỗi xảy ra");
                 }
+                listCTHD = ChiTietHoaDonDAL.GetAllDetailBill(txtMaHD.Text);
+                dgvAllDetailBill.DataSource = listCTHD;
+                dgvAllDetailBill.Columns[0].HeaderText = "Mã HD";
+                dgvAllDetailBill.Columns[1].HeaderText = "Mã SP";
+                dgvAllDetailBill.Columns[2].HeaderText = "Số lượng";
+                dgvAllDetailBill.Columns[3].HeaderText = "Thành tiền";
+                dgvAllDetailBill.Columns[4].HeaderText = "Trạng thái";
             }
         }
         private static string TachThanhTien(string thanhTien)
