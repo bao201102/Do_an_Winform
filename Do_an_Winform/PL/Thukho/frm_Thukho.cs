@@ -98,8 +98,9 @@ namespace Do_an_Winform
         private void frm_Thukho_Load(object sender, EventArgs e)
         {
             subuserPanel.Visible = false;
-            NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
-            userBtn.Text = emp.TenNV;
+            nhanvien = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+            loainhanvien = LoaiNhanVienBLL.GetEmpType(nhanvien.MaLoaiNV);
+            userBtn.Text = nhanvien.TenNV;
             openChildForm(new frm_TonKho());
         }
 
