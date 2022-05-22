@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Do_an_Winform.BLL;
+using Do_an_Winform.DTO;
+using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +24,13 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
         {
 
             this.reportViewerResult.RefreshReport();
+        }
+
+        public void rpt_Nhap(string mapn)
+        {
+            List<ChiTietPhieuNhapDTO> chiTiets = ChiTietPhieuNhapBLL.GetAll(mapn);
+            reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Thukho.rpt_Nhap.rdlc";
+            reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("CTPN", chiTiets));
         }
     }
 }
