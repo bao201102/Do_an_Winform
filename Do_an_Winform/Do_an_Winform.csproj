@@ -334,6 +334,12 @@
     <Compile Include="PL\Nhanvien\UserControlKhachHang.Designer.cs">
       <DependentUpon>UserControlKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Nhanvien\UserControlLapHDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\Nhanvien\UserControlLapHDon.Designer.cs">
+      <DependentUpon>UserControlLapHDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Nhanvien\UserControlLapHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -511,6 +517,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\UserControlKhachHang.resx">
       <DependentUpon>UserControlKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\UserControlLapHDon.resx">
+      <DependentUpon>UserControlLapHDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\UserControlLapHoaDon.resx">
       <DependentUpon>UserControlLapHoaDon.cs</DependentUpon>
