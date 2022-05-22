@@ -49,6 +49,13 @@ namespace Do_an_Winform.DTO
             get { return _TrangThai; }
             set { _TrangThai = value; }
         }
+        
+        private string _TenSP;
+        public string TenSP
+        {
+            get { return _TenSP; }
+            set { _TenSP = value; }
+        }
 
         public ChiTietPhieuNhapDTO()
         {
@@ -58,9 +65,10 @@ namespace Do_an_Winform.DTO
             this.MaNhaSX = "";
             this.ThanhTien = 0;
             this.TrangThai = "";
+            this.TenSP = "";
         }
 
-        public ChiTietPhieuNhapDTO(string MaPN_, string MaSP_, int SoLuong_, string MaNhaSX_, int ThanhTien_, string TrangThai_)
+        public ChiTietPhieuNhapDTO(string MaPN_, string MaSP_, int SoLuong_, string MaNhaSX_, int ThanhTien_, string TrangThai_, string TenSP_)
         {
             this.MaPN = MaPN_;
             this.MaSP = MaSP_;
@@ -68,6 +76,7 @@ namespace Do_an_Winform.DTO
             this.MaNhaSX = MaNhaSX_;
             this.ThanhTien = ThanhTien_;
             this.TrangThai = TrangThai_;
+            this.TenSP = TenSP_;
         }
     }
 }
