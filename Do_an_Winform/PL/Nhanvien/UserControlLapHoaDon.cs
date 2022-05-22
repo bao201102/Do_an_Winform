@@ -60,13 +60,15 @@ namespace Do_an_Winform.PL.Nhanvien
                 txtDonGia.Enabled = false;
                 txtMaSP.Enabled = false;
                 txtLoaiSP.Enabled = false;
-                
+                cbTenSP.Enabled = false;
                 txtSoLuong.Enabled = false;
                 cbTenKH.Enabled = false;
                 cbTichDiem.Enabled = false;
                 txtMaKH.Enabled = true;
                 txtLoaiTV.Enabled = false;
                 rbKhachLe.Checked = true;
+                btnSearch.Visible = false;
+                btnSearchMem.Visible = false;
                 //if (rbThanhVien.Checked)
                 //{
                 //    cbMaKH.Enabled = true;
@@ -121,6 +123,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     cbTenKH.Items.Add(kh.TenKH);
                 }
+                btnSearchMem.Visible = true;
             }
             else
             {
@@ -132,7 +135,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     cbTenKH.Items.Remove(kh.TenKH);
                 }
-                btnSearchMem.Enabled = false;
+                btnSearchMem.Visible = false;
             }
             
         }
@@ -239,6 +242,8 @@ namespace Do_an_Winform.PL.Nhanvien
             int count = listHoaDon.Count + 1;
             string maHD = "HD" + count.ToString("000");
             txtMaHD.Text = maHD;
+            cbTenSP.Enabled = true;
+            btnSearch.Visible = true;
         }
 
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -333,13 +338,14 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     MessageBox.Show("Có lỗi xảy ra");
                 }
-                listCTHD = ChiTietHoaDonDAL.GetAllDetailBill(txtMaHD.Text);
+                listCTHD = ChiTietHoaDonBLL.GetAllDetailBillById(txtMaHD.Text);
                 dgvAllDetailBill.DataSource = listCTHD;
                 dgvAllDetailBill.Columns[0].HeaderText = "Mã HD";
                 dgvAllDetailBill.Columns[1].HeaderText = "Mã SP";
                 dgvAllDetailBill.Columns[2].HeaderText = "Số lượng";
                 dgvAllDetailBill.Columns[3].HeaderText = "Thành tiền";
                 dgvAllDetailBill.Columns[4].HeaderText = "Trạng thái";
+                
             }
         }
         private static string TachThanhTien(string thanhTien)
@@ -391,6 +397,20 @@ namespace Do_an_Winform.PL.Nhanvien
         private void DatePicker_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            string tenNV = lblTenNV.Text;
+            string ngayTao = lblNgayBan.Text;
+            string tenKH = cbTenKH.Text;
+            string loaiTV = txtLoaiTV.Text;
+            if(txtLoaiTV.Text == "")
+            {
+                loaiTV = "Không";
+            }
+            frm_XemHoaDon frmHD = new frm_XemHoaDon(txtMaHD.Text, tenNV, ngayTao, tenKH, loaiTV);
+            frmHD.Show();
         }
     }
 }

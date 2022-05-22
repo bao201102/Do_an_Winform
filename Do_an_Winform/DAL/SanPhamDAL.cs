@@ -483,5 +483,21 @@ namespace Do_an_Winform.DAL
             sp.SoLuong += pn.SoLuong;
             return entities.SaveChanges() > 0 ? true : false;
         }
+        public static List<SanPhamDTO> GetProductByProId(string maSP)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var products = from pro in entities.SanPhams
+                           where pro.TrangThai == "1" && pro.MaSP == maSP
+                           select pro;
+            List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
+            foreach (SanPham pro in products)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+                var mapper = new Mapper(config);
+                SanPhamDTO sanpham = mapper.Map<SanPhamDTO>(pro);
+                sanPhamDTOs.Add(sanpham);
+            }
+            return sanPhamDTOs;
+        }
     }
 }

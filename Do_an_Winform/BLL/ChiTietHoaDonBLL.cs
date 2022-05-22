@@ -16,7 +16,11 @@ namespace Do_an_Winform.BLL
         }
         public static List<ChiTietHoaDonDTO> GetAllDetailBillById(string maHD)
         {
-            return ChiTietHoaDonDAL.GetAllDetailBill(maHD);
+            return ChiTietHoaDonDAL.GetAllDetailBillById(maHD);
+        }
+        public static List<ChiTietHoaDonDTO> GetAllDetailBill()
+        {
+            return ChiTietHoaDonDAL.GetAllDetailBill();
         }
     }
 }

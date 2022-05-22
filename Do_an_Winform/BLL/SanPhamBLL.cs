@@ -73,5 +73,9 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetAllProductWithConditions(name);
         }
+        public static List<SanPhamDTO> GetProductByProId(string maSP)
+        {
+            return SanPhamDAL.GetProductByProId(maSP);
+        }
     }
 }

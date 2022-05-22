@@ -180,7 +180,7 @@
             this.btnSave.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
             this.btnSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.IconLeft = global::Do_an_Winform.Properties.Resources.save_white;
+            this.btnSave.IconLeft = null;
             this.btnSave.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnSave.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -195,10 +195,10 @@
             this.btnSave.IdleBorderRadius = 0;
             this.btnSave.IdleBorderThickness = 0;
             this.btnSave.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnSave.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.save_white;
+            this.btnSave.IdleIconLeftImage = null;
             this.btnSave.IdleIconRightImage = null;
             this.btnSave.IndicateFocus = false;
-            this.btnSave.Location = new System.Drawing.Point(15, 179);
+            this.btnSave.Location = new System.Drawing.Point(25, 179);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSave.OnDisabledState.BorderRadius = 39;
@@ -222,7 +222,7 @@
             this.btnSave.OnIdleState.BorderThickness = 1;
             this.btnSave.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnSave.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnSave.OnIdleState.IconLeftImage = global::Do_an_Winform.Properties.Resources.save_white;
+            this.btnSave.OnIdleState.IconLeftImage = null;
             this.btnSave.OnIdleState.IconRightImage = null;
             this.btnSave.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnSave.OnPressedState.BorderRadius = 39;
@@ -650,7 +650,7 @@
             this.bunifuPanel2.Location = new System.Drawing.Point(740, 108);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(327, 253);
+            this.bunifuPanel2.Size = new System.Drawing.Size(331, 253);
             this.bunifuPanel2.TabIndex = 40;
             // 
             // bunifuPanel3
@@ -675,10 +675,10 @@
             this.bunifuPanel3.Controls.Add(this.lblDongia);
             this.bunifuPanel3.Controls.Add(this.label21);
             this.bunifuPanel3.Controls.Add(this.label22);
-            this.bunifuPanel3.Location = new System.Drawing.Point(742, 369);
+            this.bunifuPanel3.Location = new System.Drawing.Point(740, 369);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(321, 243);
+            this.bunifuPanel3.Size = new System.Drawing.Size(331, 243);
             this.bunifuPanel3.TabIndex = 39;
             // 
             // btnIn
@@ -713,7 +713,7 @@
             this.btnIn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
             this.btnIn.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.ForeColor = System.Drawing.Color.White;
-            this.btnIn.IconLeft = global::Do_an_Winform.Properties.Resources.printer;
+            this.btnIn.IconLeft = null;
             this.btnIn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnIn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -728,10 +728,10 @@
             this.btnIn.IdleBorderRadius = 0;
             this.btnIn.IdleBorderThickness = 0;
             this.btnIn.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnIn.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.printer;
+            this.btnIn.IdleIconLeftImage = null;
             this.btnIn.IdleIconRightImage = null;
             this.btnIn.IndicateFocus = false;
-            this.btnIn.Location = new System.Drawing.Point(172, 180);
+            this.btnIn.Location = new System.Drawing.Point(182, 180);
             this.btnIn.Name = "btnIn";
             this.btnIn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnIn.OnDisabledState.BorderRadius = 38;
@@ -755,7 +755,7 @@
             this.btnIn.OnIdleState.BorderThickness = 1;
             this.btnIn.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnIn.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnIn.OnIdleState.IconLeftImage = global::Do_an_Winform.Properties.Resources.printer;
+            this.btnIn.OnIdleState.IconLeftImage = null;
             this.btnIn.OnIdleState.IconRightImage = null;
             this.btnIn.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnIn.OnPressedState.BorderRadius = 38;
@@ -772,6 +772,7 @@
             this.btnIn.TextMarginLeft = 0;
             this.btnIn.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnIn.UseDefaultRadiusAndThickness = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // lblTotal1
             // 

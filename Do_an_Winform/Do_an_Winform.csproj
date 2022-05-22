@@ -201,6 +201,11 @@
     <Compile Include="BLL\PhieuNhapHangBLL.cs" />
     <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
+    <Compile Include="CHDTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHDTDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CHDTEntity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -310,6 +315,12 @@
     </Compile>
     <Compile Include="PL\Nhanvien\frm_NVien.Designer.cs">
       <DependentUpon>frm_NVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Nhanvien\frm_XemHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Nhanvien\frm_XemHoaDon.Designer.cs">
+      <DependentUpon>frm_XemHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Nhanvien\UserControlDKThanhVien.cs">
       <SubType>UserControl</SubType>
@@ -491,6 +502,10 @@
     <EmbeddedResource Include="PL\Nhanvien\frm_NVien.resx">
       <DependentUpon>frm_NVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\frm_XemHoaDon.resx">
+      <DependentUpon>frm_XemHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\rpt_HoaDon.rdlc" />
     <EmbeddedResource Include="PL\Nhanvien\UserControlDKThanhVien.resx">
       <DependentUpon>UserControlDKThanhVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -578,15 +593,34 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CHDTEntity.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="CHDTDataSet.xsc">
+      <DependentUpon>CHDTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CHDTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CHDTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CHDTDataSet.xss">
+      <DependentUpon>CHDTDataSet.xsd</DependentUpon>
+    </None>
     <None Include="CHDTEntity.edmx.diagram">
       <DependentUpon>CHDTEntity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.ChiTietHoaDonDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.ChiTietPhieuNhapDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.HoaDonDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.KhachHangDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.LoaiNhanVienDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.LoaiSanPhamDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.LoaiThanhVienDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.NhaCungCapDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.NhanVienDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.NhaSanXuatDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.PhieuNhapHangDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.SanPhamDTO.datasource" />
+    <None Include="Properties\DataSources\Do_an_Winform.DTO.TaiKhoanDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
