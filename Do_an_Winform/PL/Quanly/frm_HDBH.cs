@@ -16,7 +16,6 @@ namespace Do_an_Winform.PL.Quanly
 {
     public partial class frm_HDBH : Form
     {
-        DateTime startday, endday;
         List<HoaDonDTO> listhd;
         public frm_HDBH()
         {
@@ -24,7 +23,22 @@ namespace Do_an_Winform.PL.Quanly
             gvHDBH.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gvHDBH.ReadOnly = true;
         }
+        private void frm_HDBH_Load(object sender, EventArgs e)
+        {
+            //load Date
+            DatePickerStartDay.Value = System.DateTime.Now;
+            DatePickerEndDay.Value = System.DateTime.Now;
 
+            listhd = HoaDonBLL.ThongKeTatCaHD(DatePickerStartDay.Value, DatePickerEndDay.Value);
+            gvHDBH.DataSource = listhd;
+            gvHDBH.Columns[0].HeaderText = "Mã HD";
+            gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
+            gvHDBH.Columns[2].HeaderText = "Mã NV";
+            gvHDBH.Columns[3].HeaderText = "Mã KH";
+            gvHDBH.Columns[4].HeaderText = "Thành tiền";
+            gvHDBH.Columns[5].Visible = false;
+            txtTongCong.Text = HoaDonBLL.ThongKeDoanhThuTheoTDHT(DateTime.Now).ToString();
+        }
         private void txtSearch_Enter(object sender, EventArgs e)
         {
             if (txtSearch.Text == "Tìm kiếm mã hóa đơn")
@@ -41,16 +55,15 @@ namespace Do_an_Winform.PL.Quanly
                 txtSearch.ForeColor = Color.Silver;
             }
         }
-
-        private void txtSearch_OnIconRightClick(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             DateTime startday, endday;
             try
             {
-                startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-                endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+                startday = DatePickerStartDay.Value;
+                endday = DatePickerEndDay.Value;
 
-                if(endday <= startday)
+                if (endday <= startday)
                 {
                     bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
@@ -63,8 +76,8 @@ namespace Do_an_Winform.PL.Quanly
 
             if (txtSearch.Text.Trim() != "")
             {
-                startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-                endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+                startday = DatePickerStartDay.Value;
+                endday = DatePickerEndDay.Value;
                 HoaDonDTO hdsearch = new HoaDonDTO();
                 hdsearch.MaHD = txtSearch.Text;
 
@@ -91,50 +104,11 @@ namespace Do_an_Winform.PL.Quanly
                 txtTongCong.Text = HoaDonBLL.DoanhThuTatCaHD(startday, endday).ToString();
             }
         }
-
-        private void frm_HDBH_Load(object sender, EventArgs e)
-        {
-            //load Date
-            maskedtxtStartDay.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
-            maskedtxtEndDay.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-
-            //load Datagridview          
-            DateTime startday, endday;
-            startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            listhd = HoaDonBLL.ThongKeTatCaHD(startday, endday);
-            gvHDBH.DataSource = listhd;
-            gvHDBH.Columns[0].HeaderText = "Mã HD";
-            gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
-            gvHDBH.Columns[2].HeaderText = "Mã NV";
-            gvHDBH.Columns[3].HeaderText = "Mã KH";
-            gvHDBH.Columns[4].HeaderText = "Thành tiền";
-            gvHDBH.Columns[5].Visible = false;
-            txtTongCong.Text = HoaDonBLL.ThongKeDoanhThuTheoTDHT(DateTime.Now).ToString();
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.PrintDialog printdialog = new PrintDialog();
-            printdialog.AllowSomePages = true;
-            printdialog.ShowHelp = true;
-            printdialog.Document = printDocumentHDBH;
-            DialogResult result = printdialog.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                printDocumentHDBH.Print();
-            }
-        }
-
         private void btnViewReport_Click(object sender, EventArgs e)
         {
             //frm_MenuBaoCao formMenuXemBaoCao = new frm_MenuBaoCao();
             //formMenuXemBaoCao.ShowDialog();
         }
 
-        private void btnView_Click(object sender, EventArgs e)
-        {
-            printPreviewDialogHDBH.ShowDialog();
-        }
     }
 }

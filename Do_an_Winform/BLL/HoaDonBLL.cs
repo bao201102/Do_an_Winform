@@ -34,13 +34,25 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.ThongKeDoanhThuTheoTDHT(today);
         }
-        public static double ThongKeDoanhThuTheoQuy(int quyTK)
+        public static double ThongKeDoanhThuTheoNam(string namTK)
         {
-            return HoaDonDAL.ThongKeDoanhThuTheoQuy(quyTK);
+            return HoaDonDAL.ThongKeDoanhThuTheoNam(namTK);
         }
-        public static double ThongKeDoanhThuTheoThang(int thangTK)
+        public static double ThongKeDoanhThuTheoQuy(string quyTK, string namTK)
         {
-            return HoaDonDAL.ThongKeDoanhThuTheoThang(thangTK);
+            return HoaDonDAL.ThongKeDoanhThuTheoQuy(quyTK, namTK);
+        }
+        public static double ThongKeDoanhThuTheoThang(string thangTK, string namTK)
+        {
+            return HoaDonDAL.ThongKeDoanhThuTheoThang(thangTK, namTK);
+        }
+        public static DateTime GetFirstDayOfMonth(string iMonth, string iYear)
+        {
+            return HoaDonDAL.GetFirstDayOfMonth(iMonth, iYear);
+        }
+        public static DateTime GetLastDayOfMonth(string iMonth, string iYear)
+        {
+            return HoaDonDAL.GetLastDayOfMonth(iMonth, iYear);
         }
         public static List<HoaDonDTO> GetAllBill()
         {

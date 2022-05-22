@@ -195,5 +195,10 @@ namespace Do_an_Winform.PL.Quanly
         {
             OpenChildForm(new frm_QLTK());
         }
+
+        private void btnQLDoanhThu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
