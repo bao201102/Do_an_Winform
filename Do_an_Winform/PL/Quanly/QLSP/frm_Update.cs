@@ -53,7 +53,33 @@ namespace Do_an_Winform.PL.Quanly.QLSP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SanPhamDTO productDTO = new SanPhamDTO();
+            
+
+            if (txtTensp.Text == "" || txtDongia.Text == "")
+            {
+                bunifuSnackbar1.Show(this, "Vui lòng nhập đủ thông tin vào ô trống", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+            }
+            else
+            {
+                SanPhamDTO productDTO = new SanPhamDTO();
+
+                productDTO.MaSP = masp;
+                productDTO.TenSP = txtTensp.Text;
+                productDTO.DonGia = int.Parse(txtDongia.Text);
+                productDTO.MaLoaiSP = cbLoaisp.SelectedValue.ToString();
+                productDTO.MaNhaSX = cbLoaisp.SelectedValue.ToString();
+
+                MessBox messBox = new MessBox();
+                bool result = messBox.ShowMess("Bạn có muốn sửa thông tin sản phẩm không ?");
+                if (result)
+                {
+                    if (SanPhamBLL.UpdateProduct(productDTO))
+                    {
+                        bunifuSnackbar1.Show(new frm_QLSP(), "Bạn đã sửa thông tin sản phẩm thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                        Close();
+                    }
+                }
+            }
         }
     }
 }
