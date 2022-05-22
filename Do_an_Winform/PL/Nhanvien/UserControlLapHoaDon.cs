@@ -63,7 +63,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 cbTenSP.Enabled = false;
                 txtSoLuong.Enabled = false;
                 cbTenKH.Enabled = false;
-                cbTichDiem.Enabled = false;
+                rbTichDiem.Enabled = false;
                 txtMaKH.Enabled = true;
                 txtLoaiTV.Enabled = false;
                 rbKhachLe.Checked = true;
@@ -124,6 +124,7 @@ namespace Do_an_Winform.PL.Nhanvien
                     cbTenKH.Items.Add(kh.TenKH);
                 }
                 btnSearchMem.Visible = true;
+                rbTichDiem.Enabled = true;
             }
             else
             {
@@ -136,7 +137,9 @@ namespace Do_an_Winform.PL.Nhanvien
                     cbTenKH.Items.Remove(kh.TenKH);
                 }
                 btnSearchMem.Visible = false;
+                rbTichDiem.Enabled = false;
             }
+            
             
         }
 
@@ -147,7 +150,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 //txtTenKH.Enabled = true;
                 //txtLoaiTV.Enabled = true;
                 btnSearchMem.Enabled = true;
-                cbTichDiem.Enabled = true;
+                rbTichDiem.Enabled = true;
                 khachHang = KhachHangBLL.GetCustomerByName(cbTenKH.Text);
                 txtMaKH.Text = khachHang.MaKH;
                 loaitv = LoaiThanhVienBLL.GetTypeMemById(khachHang.MaLoaiTVien);

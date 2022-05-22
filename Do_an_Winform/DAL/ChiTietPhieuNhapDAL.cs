@@ -22,5 +22,22 @@ namespace Do_an_Winform.DAL
             entities.ChiTietPhieuNhaps.Add(phieuNhap);
             return entities.SaveChanges() > 0 ? true : false;
         }
+
+        public static List<ChiTietPhieuNhapDTO> GetAll(string maPn)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var query = from pn in entities.ChiTietPhieuNhaps
+                           where pn.MaPN.Equals(maPn)
+                           select pn;
+            List<ChiTietPhieuNhapDTO> chiTiets = new List<ChiTietPhieuNhapDTO>();
+            foreach (ChiTietPhieuNhap pro in query)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<ChiTietPhieuNhap, ChiTietPhieuNhapDTO>());
+                var mapper = new Mapper(config);
+                ChiTietPhieuNhapDTO phieuNhapDTO = mapper.Map<ChiTietPhieuNhapDTO>(pro);
+                chiTiets.Add(phieuNhapDTO);
+            }
+            return chiTiets;
+        }
     }
 }

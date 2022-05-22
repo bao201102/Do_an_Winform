@@ -38,7 +38,7 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.cbTichDiem = new System.Windows.Forms.CheckBox();
+            this.rbTichDiem = new System.Windows.Forms.CheckBox();
             this.btnThanhToan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cbTenKH = new System.Windows.Forms.ComboBox();
             this.btnSearchMem = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -241,15 +241,15 @@
             this.btnSave.UseDefaultRadiusAndThickness = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // cbTichDiem
+            // rbTichDiem
             // 
-            this.cbTichDiem.AutoSize = true;
-            this.cbTichDiem.Location = new System.Drawing.Point(248, 220);
-            this.cbTichDiem.Name = "cbTichDiem";
-            this.cbTichDiem.Size = new System.Drawing.Size(75, 17);
-            this.cbTichDiem.TabIndex = 38;
-            this.cbTichDiem.Text = "Tích điểm";
-            this.cbTichDiem.UseVisualStyleBackColor = true;
+            this.rbTichDiem.AutoSize = true;
+            this.rbTichDiem.Location = new System.Drawing.Point(248, 220);
+            this.rbTichDiem.Name = "rbTichDiem";
+            this.rbTichDiem.Size = new System.Drawing.Size(75, 17);
+            this.rbTichDiem.TabIndex = 38;
+            this.rbTichDiem.Text = "Tích điểm";
+            this.rbTichDiem.UseVisualStyleBackColor = true;
             // 
             // btnThanhToan
             // 
@@ -635,7 +635,7 @@
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Black;
             this.bunifuPanel2.BorderRadius = 15;
             this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Controls.Add(this.cbTichDiem);
+            this.bunifuPanel2.Controls.Add(this.rbTichDiem);
             this.bunifuPanel2.Controls.Add(this.btnThanhToan);
             this.bunifuPanel2.Controls.Add(this.btnSearchMem);
             this.bunifuPanel2.Controls.Add(this.cbTenKH);
@@ -979,7 +979,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnSearchMem;
         private System.Windows.Forms.ComboBox cbTenSP;
         private System.Windows.Forms.ComboBox cbTenKH;
-        private System.Windows.Forms.CheckBox cbTichDiem;
+        private System.Windows.Forms.CheckBox rbTichDiem;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSave;
         private Bunifu.Framework.UI.BunifuThinButton2 btnThanhToan;
         private Bunifu.Framework.UI.BunifuThinButton2 btnDelete;
