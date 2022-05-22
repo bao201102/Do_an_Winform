@@ -19,6 +19,7 @@ namespace Do_an_Winform
         public int SoLuong { get; set; }
         public int ThanhTien { get; set; }
         public string TrangThai { get; set; }
+        public string TenSP { get; set; }
     
         public virtual HoaDon HoaDon { get; set; }
         public virtual SanPham SanPham { get; set; }

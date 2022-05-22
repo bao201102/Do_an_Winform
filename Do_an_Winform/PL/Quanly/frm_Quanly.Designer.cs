@@ -131,7 +131,7 @@ namespace Do_an_Winform.PL.Quanly
             this.sidemenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sidemenu.Name = "sidemenu";
             this.sidemenu.Quality = 10;
-            this.sidemenu.Size = new System.Drawing.Size(333, 1055);
+            this.sidemenu.Size = new System.Drawing.Size(250, 911);
             this.sidemenu.TabIndex = 3;
             // 
             // doanhthuPanel
@@ -896,7 +896,7 @@ namespace Do_an_Winform.PL.Quanly
             this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Quality = 10;
-            this.mainPanel.Size = new System.Drawing.Size(1477, 1033);
+            this.mainPanel.Size = new System.Drawing.Size(1108, 732);
             this.mainPanel.TabIndex = 5;
             // 
             // titlePanel
@@ -979,7 +979,7 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1840, 1102);
+            this.ClientSize = new System.Drawing.Size(1380, 788);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.titlePanel);

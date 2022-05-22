@@ -104,8 +104,10 @@ namespace Do_an_Winform.DAL
                        on sp.MaNhaSX equals nsx.MaNhaSX
                        join lsp in entities.LoaiSanPhams
                        on sp.MaLoaiSP equals lsp.MaLoaiSP
+                       where sp.TrangThai == "1"
                        select new
                        {
+                           sp.MaSP,
                            sp.TenSP,
                            sp.SoLuong,
                            sp.DonGia,
@@ -132,6 +134,7 @@ namespace Do_an_Winform.DAL
                        where sp.TenSP.Contains(tensp) && sp.TrangThai == "1"
                        select new
                        {
+                           sp.MaSP,
                            sp.TenSP,
                            sp.SoLuong,
                            sp.DonGia,
@@ -158,6 +161,7 @@ namespace Do_an_Winform.DAL
                         where sp.MaLoaiSP.Contains(maloaisp) && sp.TrangThai == "1"
                         select new
                         {
+                            sp.MaSP,
                             sp.TenSP,
                             sp.SoLuong,
                             sp.DonGia,
@@ -233,7 +237,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var product = (from sp in entities.SanPhams
-                           where sp.TenSP.Contains(ten) && sp.TrangThai == "1"
+                           where sp.TenSP == ten && sp.TrangThai == "1"
                            select sp).FirstOrDefault();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
@@ -482,6 +486,64 @@ namespace Do_an_Winform.DAL
                       select p).SingleOrDefault();
             sp.SoLuong += pn.SoLuong;
             return entities.SaveChanges() > 0 ? true : false;
+        }
+
+        public static bool UpdateProduct(SanPhamDTO productDTO)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            SanPham sp = entities.SanPhams.Where(x => x.MaSP.Equals(productDTO.MaSP)).Single();
+
+            sp.TenSP = productDTO.TenSP;
+            sp.DonGia = productDTO.DonGia;
+            sp.MaLoaiSP = productDTO.MaLoaiSP;
+            sp.MaNhaSX = productDTO.MaNhaSX;
+
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                entities.SaveChanges();
+                return false;
+            }
+        }
+
+        public static bool DeleteProduct(string masp)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            SanPham sp = entities.SanPhams.Where(x => x.MaSP.Equals(masp)).Single();
+
+            sp.TrangThai = "0";
+
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                entities.SaveChanges();
+                return false;
+            }
+        }
+
+        public static List<SanPhamDTO> GetProductByProId(string maSP)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var products = from pro in entities.SanPhams
+                           where pro.TrangThai == "1" && pro.MaSP == maSP
+                           select pro;
+            List<SanPhamDTO> sanPhamDTOs = new List<SanPhamDTO>();
+            foreach (SanPham pro in products)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
+                var mapper = new Mapper(config);
+                SanPhamDTO sanpham = mapper.Map<SanPhamDTO>(pro);
+                sanPhamDTOs.Add(sanpham);
+            }
+            return sanPhamDTOs;
         }
     }
 }

@@ -14,6 +14,9 @@ namespace Do_an_Winform.BLL
         {
             return ChiTietPhieuNhapDAL.AddChiTietPN(phieuNhapDTO);
         }
-
+        public static List<ChiTietPhieuNhapDTO> GetAll(string maPn)
+        {
+            return ChiTietPhieuNhapDAL.GetAll(maPn);
+        }
     }
 }

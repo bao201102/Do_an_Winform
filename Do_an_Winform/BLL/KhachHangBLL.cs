@@ -31,9 +31,9 @@ namespace Do_an_Winform.BLL
             return KhachHangDAL.AddCustomer(dto);
         }
         
-        public static KhachHangDTO GetCustomerByName(string name)
+        public static KhachHangDTO GetCustomerByPhone(string phone)
         {
-            return KhachHangDAL.GetCustomerByName(name);
+            return KhachHangDAL.GetCustomerByPhone(phone);
         }
 
     }

@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="6ec74317953f46c6975509c3e5bddcb4" Name="Diagram1" ZoomLevel="100">
         <EntityTypeShape EntityType="CHDTModel.ChiTietHoaDon" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CHDTModel.ChiTietPhieuNhap" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.ChiTietPhieuNhap" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CHDTModel.HoaDon" Width="1.5" PointX="6" PointY="26.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CHDTModel.KhachHang" Width="1.5" PointX="3.75" PointY="26" IsExpanded="true" />
         <EntityTypeShape EntityType="CHDTModel.LoaiNhanVien" Width="1.5" PointX="1.5" PointY="19.75" IsExpanded="true" />
@@ -33,7 +33,6 @@
         <AssociationConnector Association="CHDTModel.FK__NhanVien__MaNguo__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK__PhieuNhapH__MaNV__4316F928" ManuallyRouted="false" />
         <AssociationConnector Association="CHDTModel.FK__SanPham__MaNhaSX__48CFD27E" ManuallyRouted="false" />
-        <AssociationConnector Association="CHDTModel.FK_HoaDon_KhachHang" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
