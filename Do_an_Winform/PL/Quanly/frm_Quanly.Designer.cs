@@ -30,15 +30,15 @@ namespace Do_an_Winform.PL.Quanly
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Quanly));
             this.Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.sidemenu = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.doanhthuPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnQLDoanhThu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.subhoadonPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnHDBH = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnHDNH = new Bunifu.Framework.UI.BunifuFlatButton();
             this.hoadonPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnQLHD = new Bunifu.Framework.UI.BunifuFlatButton();
             this.banchayPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -89,22 +89,22 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.Transition.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.Transition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.Transition.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.Transition.DefaultAnimation = animation2;
             // 
             // sidemenu
             // 
@@ -127,7 +127,8 @@ namespace Do_an_Winform.PL.Quanly
             this.sidemenu.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.sidemenu.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.sidemenu.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.sidemenu.Location = new System.Drawing.Point(0, 38);
+            this.sidemenu.Location = new System.Drawing.Point(0, 47);
+            this.sidemenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sidemenu.Name = "sidemenu";
             this.sidemenu.Quality = 10;
             this.sidemenu.Size = new System.Drawing.Size(250, 911);
@@ -144,10 +145,11 @@ namespace Do_an_Winform.PL.Quanly
             this.doanhthuPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.doanhthuPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.doanhthuPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doanhthuPanel.Location = new System.Drawing.Point(0, 808);
+            this.doanhthuPanel.Location = new System.Drawing.Point(0, 995);
+            this.doanhthuPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.doanhthuPanel.Name = "doanhthuPanel";
             this.doanhthuPanel.Quality = 10;
-            this.doanhthuPanel.Size = new System.Drawing.Size(250, 57);
+            this.doanhthuPanel.Size = new System.Drawing.Size(333, 70);
             this.doanhthuPanel.TabIndex = 21;
             // 
             // btnQLDoanhThu
@@ -173,14 +175,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLDoanhThu.IconVisible = true;
             this.btnQLDoanhThu.IconZoom = 60D;
             this.btnQLDoanhThu.IsTab = false;
-            this.btnQLDoanhThu.Location = new System.Drawing.Point(0, 3);
-            this.btnQLDoanhThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQLDoanhThu.Location = new System.Drawing.Point(0, 4);
+            this.btnQLDoanhThu.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLDoanhThu.Name = "btnQLDoanhThu";
             this.btnQLDoanhThu.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLDoanhThu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLDoanhThu.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLDoanhThu.selected = false;
-            this.btnQLDoanhThu.Size = new System.Drawing.Size(250, 48);
+            this.btnQLDoanhThu.Size = new System.Drawing.Size(333, 59);
             this.btnQLDoanhThu.TabIndex = 2;
             this.btnQLDoanhThu.Text = "Quản lý doanh thu";
             this.btnQLDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,93 +193,94 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.subhoadonPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("subhoadonPanel.BackgroundImage")));
             this.subhoadonPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.subhoadonPanel.Controls.Add(this.bunifuFlatButton5);
-            this.subhoadonPanel.Controls.Add(this.bunifuFlatButton6);
+            this.subhoadonPanel.Controls.Add(this.btnHDBH);
+            this.subhoadonPanel.Controls.Add(this.btnHDNH);
             this.Transition.SetDecoration(this.subhoadonPanel, BunifuAnimatorNS.DecorationType.None);
             this.subhoadonPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.subhoadonPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subhoadonPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subhoadonPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subhoadonPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
-            this.subhoadonPanel.Location = new System.Drawing.Point(0, 693);
+            this.subhoadonPanel.Location = new System.Drawing.Point(0, 853);
+            this.subhoadonPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.subhoadonPanel.Name = "subhoadonPanel";
             this.subhoadonPanel.Quality = 10;
-            this.subhoadonPanel.Size = new System.Drawing.Size(250, 115);
+            this.subhoadonPanel.Size = new System.Drawing.Size(333, 142);
             this.subhoadonPanel.TabIndex = 14;
             // 
-            // bunifuFlatButton5
+            // btnHDBH
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "Hóa đơn bán";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.bunifuFlatButton5, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = null;
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 90;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = false;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = true;
-            this.bunifuFlatButton5.IconZoom = 60D;
-            this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 57);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(247, 48);
-            this.bunifuFlatButton5.TabIndex = 12;
-            this.bunifuFlatButton5.Text = "Hóa đơn bán";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHDBH.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btnHDBH.BackColor = System.Drawing.Color.Transparent;
+            this.btnHDBH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHDBH.BorderRadius = 0;
+            this.btnHDBH.ButtonText = "Hóa đơn bán";
+            this.btnHDBH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btnHDBH, BunifuAnimatorNS.DecorationType.None);
+            this.btnHDBH.DisabledColor = System.Drawing.Color.Gray;
+            this.btnHDBH.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHDBH.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnHDBH.Iconimage = null;
+            this.btnHDBH.Iconimage_right = null;
+            this.btnHDBH.Iconimage_right_Selected = null;
+            this.btnHDBH.Iconimage_Selected = null;
+            this.btnHDBH.IconMarginLeft = 90;
+            this.btnHDBH.IconMarginRight = 0;
+            this.btnHDBH.IconRightVisible = false;
+            this.btnHDBH.IconRightZoom = 0D;
+            this.btnHDBH.IconVisible = true;
+            this.btnHDBH.IconZoom = 60D;
+            this.btnHDBH.IsTab = false;
+            this.btnHDBH.Location = new System.Drawing.Point(0, 70);
+            this.btnHDBH.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnHDBH.Name = "btnHDBH";
+            this.btnHDBH.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnHDBH.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnHDBH.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnHDBH.selected = false;
+            this.btnHDBH.Size = new System.Drawing.Size(329, 59);
+            this.btnHDBH.TabIndex = 12;
+            this.btnHDBH.Text = "Hóa đơn bán";
+            this.btnHDBH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHDBH.Textcolor = System.Drawing.Color.Transparent;
+            this.btnHDBH.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton6
+            // btnHDNH
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton6.BorderRadius = 0;
-            this.bunifuFlatButton6.ButtonText = "Hóa đơn nhập";
-            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.bunifuFlatButton6, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton6.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = null;
-            this.bunifuFlatButton6.Iconimage_right = null;
-            this.bunifuFlatButton6.Iconimage_right_Selected = null;
-            this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 90;
-            this.bunifuFlatButton6.IconMarginRight = 0;
-            this.bunifuFlatButton6.IconRightVisible = false;
-            this.bunifuFlatButton6.IconRightZoom = 0D;
-            this.bunifuFlatButton6.IconVisible = true;
-            this.bunifuFlatButton6.IconZoom = 60D;
-            this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 3);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.selected = true;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(247, 48);
-            this.bunifuFlatButton6.TabIndex = 11;
-            this.bunifuFlatButton6.Text = "Hóa đơn nhập";
-            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHDNH.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
+            this.btnHDNH.BackColor = System.Drawing.Color.Transparent;
+            this.btnHDNH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHDNH.BorderRadius = 0;
+            this.btnHDNH.ButtonText = "Hóa đơn nhập";
+            this.btnHDNH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Transition.SetDecoration(this.btnHDNH, BunifuAnimatorNS.DecorationType.None);
+            this.btnHDNH.DisabledColor = System.Drawing.Color.Gray;
+            this.btnHDNH.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHDNH.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnHDNH.Iconimage = null;
+            this.btnHDNH.Iconimage_right = null;
+            this.btnHDNH.Iconimage_right_Selected = null;
+            this.btnHDNH.Iconimage_Selected = null;
+            this.btnHDNH.IconMarginLeft = 90;
+            this.btnHDNH.IconMarginRight = 0;
+            this.btnHDNH.IconRightVisible = false;
+            this.btnHDNH.IconRightZoom = 0D;
+            this.btnHDNH.IconVisible = true;
+            this.btnHDNH.IconZoom = 60D;
+            this.btnHDNH.IsTab = false;
+            this.btnHDNH.Location = new System.Drawing.Point(0, 4);
+            this.btnHDNH.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnHDNH.Name = "btnHDNH";
+            this.btnHDNH.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnHDNH.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.btnHDNH.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnHDNH.selected = true;
+            this.btnHDNH.Size = new System.Drawing.Size(329, 59);
+            this.btnHDNH.TabIndex = 11;
+            this.btnHDNH.Text = "Hóa đơn nhập";
+            this.btnHDNH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHDNH.Textcolor = System.Drawing.Color.Transparent;
+            this.btnHDNH.TextFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // hoadonPanel
             // 
@@ -290,10 +293,11 @@ namespace Do_an_Winform.PL.Quanly
             this.hoadonPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.hoadonPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.hoadonPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.hoadonPanel.Location = new System.Drawing.Point(0, 636);
+            this.hoadonPanel.Location = new System.Drawing.Point(0, 783);
+            this.hoadonPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hoadonPanel.Name = "hoadonPanel";
             this.hoadonPanel.Quality = 10;
-            this.hoadonPanel.Size = new System.Drawing.Size(250, 57);
+            this.hoadonPanel.Size = new System.Drawing.Size(333, 70);
             this.hoadonPanel.TabIndex = 20;
             // 
             // btnQLHD
@@ -319,14 +323,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLHD.IconVisible = true;
             this.btnQLHD.IconZoom = 60D;
             this.btnQLHD.IsTab = false;
-            this.btnQLHD.Location = new System.Drawing.Point(0, 3);
-            this.btnQLHD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQLHD.Location = new System.Drawing.Point(0, 4);
+            this.btnQLHD.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLHD.Name = "btnQLHD";
             this.btnQLHD.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLHD.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLHD.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLHD.selected = false;
-            this.btnQLHD.Size = new System.Drawing.Size(250, 48);
+            this.btnQLHD.Size = new System.Drawing.Size(333, 59);
             this.btnQLHD.TabIndex = 2;
             this.btnQLHD.Text = "Quản lý hóa đơn";
             this.btnQLHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -345,10 +349,11 @@ namespace Do_an_Winform.PL.Quanly
             this.banchayPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.banchayPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.banchayPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.banchayPanel.Location = new System.Drawing.Point(0, 579);
+            this.banchayPanel.Location = new System.Drawing.Point(0, 713);
+            this.banchayPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.banchayPanel.Name = "banchayPanel";
             this.banchayPanel.Quality = 10;
-            this.banchayPanel.Size = new System.Drawing.Size(250, 57);
+            this.banchayPanel.Size = new System.Drawing.Size(333, 70);
             this.banchayPanel.TabIndex = 19;
             // 
             // btnQLBC
@@ -374,14 +379,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLBC.IconVisible = true;
             this.btnQLBC.IconZoom = 60D;
             this.btnQLBC.IsTab = false;
-            this.btnQLBC.Location = new System.Drawing.Point(0, 3);
-            this.btnQLBC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQLBC.Location = new System.Drawing.Point(0, 4);
+            this.btnQLBC.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLBC.Name = "btnQLBC";
             this.btnQLBC.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLBC.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLBC.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLBC.selected = false;
-            this.btnQLBC.Size = new System.Drawing.Size(250, 48);
+            this.btnQLBC.Size = new System.Drawing.Size(333, 59);
             this.btnQLBC.TabIndex = 2;
             this.btnQLBC.Text = "Quản lý bán chạy";
             this.btnQLBC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -399,10 +404,11 @@ namespace Do_an_Winform.PL.Quanly
             this.sanphamPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.sanphamPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.sanphamPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.sanphamPanel.Location = new System.Drawing.Point(0, 522);
+            this.sanphamPanel.Location = new System.Drawing.Point(0, 643);
+            this.sanphamPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sanphamPanel.Name = "sanphamPanel";
             this.sanphamPanel.Quality = 10;
-            this.sanphamPanel.Size = new System.Drawing.Size(250, 57);
+            this.sanphamPanel.Size = new System.Drawing.Size(333, 70);
             this.sanphamPanel.TabIndex = 18;
             // 
             // btnQLSP
@@ -428,14 +434,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLSP.IconVisible = true;
             this.btnQLSP.IconZoom = 60D;
             this.btnQLSP.IsTab = false;
-            this.btnQLSP.Location = new System.Drawing.Point(0, 3);
-            this.btnQLSP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQLSP.Location = new System.Drawing.Point(0, 4);
+            this.btnQLSP.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLSP.Name = "btnQLSP";
             this.btnQLSP.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLSP.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLSP.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLSP.selected = false;
-            this.btnQLSP.Size = new System.Drawing.Size(250, 48);
+            this.btnQLSP.Size = new System.Drawing.Size(333, 59);
             this.btnQLSP.TabIndex = 2;
             this.btnQLSP.Text = "Quản lý sản phẩm";
             this.btnQLSP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -454,10 +460,11 @@ namespace Do_an_Winform.PL.Quanly
             this.tonkhoPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.tonkhoPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.tonkhoPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.tonkhoPanel.Location = new System.Drawing.Point(0, 465);
+            this.tonkhoPanel.Location = new System.Drawing.Point(0, 573);
+            this.tonkhoPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tonkhoPanel.Name = "tonkhoPanel";
             this.tonkhoPanel.Quality = 10;
-            this.tonkhoPanel.Size = new System.Drawing.Size(250, 57);
+            this.tonkhoPanel.Size = new System.Drawing.Size(333, 70);
             this.tonkhoPanel.TabIndex = 17;
             // 
             // btnQLTK
@@ -483,14 +490,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLTK.IconVisible = true;
             this.btnQLTK.IconZoom = 60D;
             this.btnQLTK.IsTab = false;
-            this.btnQLTK.Location = new System.Drawing.Point(0, 3);
-            this.btnQLTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQLTK.Location = new System.Drawing.Point(0, 4);
+            this.btnQLTK.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLTK.Name = "btnQLTK";
             this.btnQLTK.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLTK.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLTK.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLTK.selected = false;
-            this.btnQLTK.Size = new System.Drawing.Size(250, 48);
+            this.btnQLTK.Size = new System.Drawing.Size(333, 59);
             this.btnQLTK.TabIndex = 2;
             this.btnQLTK.Text = "Quản lý tồn kho";
             this.btnQLTK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -511,10 +518,11 @@ namespace Do_an_Winform.PL.Quanly
             this.subdoitacPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subdoitacPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subdoitacPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
-            this.subdoitacPanel.Location = new System.Drawing.Point(0, 293);
+            this.subdoitacPanel.Location = new System.Drawing.Point(0, 361);
+            this.subdoitacPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.subdoitacPanel.Name = "subdoitacPanel";
             this.subdoitacPanel.Quality = 10;
-            this.subdoitacPanel.Size = new System.Drawing.Size(250, 172);
+            this.subdoitacPanel.Size = new System.Drawing.Size(333, 212);
             this.subdoitacPanel.TabIndex = 15;
             // 
             // btDoiTac_NCC
@@ -540,14 +548,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btDoiTac_NCC.IconVisible = true;
             this.btDoiTac_NCC.IconZoom = 60D;
             this.btDoiTac_NCC.IsTab = false;
-            this.btDoiTac_NCC.Location = new System.Drawing.Point(0, 111);
-            this.btDoiTac_NCC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btDoiTac_NCC.Location = new System.Drawing.Point(0, 137);
+            this.btDoiTac_NCC.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btDoiTac_NCC.Name = "btDoiTac_NCC";
             this.btDoiTac_NCC.Normalcolor = System.Drawing.Color.Transparent;
             this.btDoiTac_NCC.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btDoiTac_NCC.OnHoverTextColor = System.Drawing.Color.White;
             this.btDoiTac_NCC.selected = false;
-            this.btDoiTac_NCC.Size = new System.Drawing.Size(250, 48);
+            this.btDoiTac_NCC.Size = new System.Drawing.Size(333, 59);
             this.btDoiTac_NCC.TabIndex = 13;
             this.btDoiTac_NCC.Text = "Nhà cung cấp";
             this.btDoiTac_NCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -578,14 +586,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btDoiTac_KH.IconVisible = true;
             this.btDoiTac_KH.IconZoom = 60D;
             this.btDoiTac_KH.IsTab = false;
-            this.btDoiTac_KH.Location = new System.Drawing.Point(0, 57);
-            this.btDoiTac_KH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btDoiTac_KH.Location = new System.Drawing.Point(0, 70);
+            this.btDoiTac_KH.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btDoiTac_KH.Name = "btDoiTac_KH";
             this.btDoiTac_KH.Normalcolor = System.Drawing.Color.Transparent;
             this.btDoiTac_KH.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btDoiTac_KH.OnHoverTextColor = System.Drawing.Color.White;
             this.btDoiTac_KH.selected = false;
-            this.btDoiTac_KH.Size = new System.Drawing.Size(250, 48);
+            this.btDoiTac_KH.Size = new System.Drawing.Size(333, 59);
             this.btDoiTac_KH.TabIndex = 12;
             this.btDoiTac_KH.Text = "Khách hàng";
             this.btDoiTac_KH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -616,14 +624,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btDoiTac_NV.IconVisible = true;
             this.btDoiTac_NV.IconZoom = 60D;
             this.btDoiTac_NV.IsTab = false;
-            this.btDoiTac_NV.Location = new System.Drawing.Point(0, 3);
-            this.btDoiTac_NV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btDoiTac_NV.Location = new System.Drawing.Point(0, 4);
+            this.btDoiTac_NV.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btDoiTac_NV.Name = "btDoiTac_NV";
             this.btDoiTac_NV.Normalcolor = System.Drawing.Color.Transparent;
             this.btDoiTac_NV.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btDoiTac_NV.OnHoverTextColor = System.Drawing.Color.White;
             this.btDoiTac_NV.selected = true;
-            this.btDoiTac_NV.Size = new System.Drawing.Size(250, 48);
+            this.btDoiTac_NV.Size = new System.Drawing.Size(333, 59);
             this.btDoiTac_NV.TabIndex = 11;
             this.btDoiTac_NV.Text = "Nhân viên";
             this.btDoiTac_NV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -642,10 +650,11 @@ namespace Do_an_Winform.PL.Quanly
             this.doitacPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.doitacPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.doitacPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.doitacPanel.Location = new System.Drawing.Point(0, 236);
+            this.doitacPanel.Location = new System.Drawing.Point(0, 291);
+            this.doitacPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.doitacPanel.Name = "doitacPanel";
             this.doitacPanel.Quality = 10;
-            this.doitacPanel.Size = new System.Drawing.Size(250, 57);
+            this.doitacPanel.Size = new System.Drawing.Size(333, 70);
             this.doitacPanel.TabIndex = 16;
             // 
             // btnQLDT
@@ -671,14 +680,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLDT.IconVisible = true;
             this.btnQLDT.IconZoom = 60D;
             this.btnQLDT.IsTab = false;
-            this.btnQLDT.Location = new System.Drawing.Point(0, 3);
-            this.btnQLDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQLDT.Location = new System.Drawing.Point(0, 4);
+            this.btnQLDT.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnQLDT.Name = "btnQLDT";
             this.btnQLDT.Normalcolor = System.Drawing.Color.Transparent;
             this.btnQLDT.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnQLDT.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLDT.selected = false;
-            this.btnQLDT.Size = new System.Drawing.Size(250, 48);
+            this.btnQLDT.Size = new System.Drawing.Size(333, 59);
             this.btnQLDT.TabIndex = 2;
             this.btnQLDT.Text = "Quản lý đối tác";
             this.btnQLDT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -698,10 +707,11 @@ namespace Do_an_Winform.PL.Quanly
             this.subuserPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subuserPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
             this.subuserPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(111)))), ((int)(((byte)(133)))));
-            this.subuserPanel.Location = new System.Drawing.Point(0, 121);
+            this.subuserPanel.Location = new System.Drawing.Point(0, 149);
+            this.subuserPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.subuserPanel.Name = "subuserPanel";
             this.subuserPanel.Quality = 10;
-            this.subuserPanel.Size = new System.Drawing.Size(250, 115);
+            this.subuserPanel.Size = new System.Drawing.Size(333, 142);
             this.subuserPanel.TabIndex = 13;
             // 
             // btnLogout
@@ -727,14 +737,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnLogout.IconVisible = true;
             this.btnLogout.IconZoom = 60D;
             this.btnLogout.IsTab = false;
-            this.btnLogout.Location = new System.Drawing.Point(0, 57);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogout.Location = new System.Drawing.Point(0, 70);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Normalcolor = System.Drawing.Color.Transparent;
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogout.selected = false;
-            this.btnLogout.Size = new System.Drawing.Size(250, 48);
+            this.btnLogout.Size = new System.Drawing.Size(333, 59);
             this.btnLogout.TabIndex = 12;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -765,14 +775,14 @@ namespace Do_an_Winform.PL.Quanly
             this.btnThongtin.IconVisible = true;
             this.btnThongtin.IconZoom = 60D;
             this.btnThongtin.IsTab = false;
-            this.btnThongtin.Location = new System.Drawing.Point(0, 3);
-            this.btnThongtin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThongtin.Location = new System.Drawing.Point(0, 4);
+            this.btnThongtin.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnThongtin.Name = "btnThongtin";
             this.btnThongtin.Normalcolor = System.Drawing.Color.Transparent;
             this.btnThongtin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.btnThongtin.OnHoverTextColor = System.Drawing.Color.White;
             this.btnThongtin.selected = true;
-            this.btnThongtin.Size = new System.Drawing.Size(250, 48);
+            this.btnThongtin.Size = new System.Drawing.Size(333, 59);
             this.btnThongtin.TabIndex = 11;
             this.btnThongtin.Text = "Thông tin";
             this.btnThongtin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -791,10 +801,11 @@ namespace Do_an_Winform.PL.Quanly
             this.userPanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.userPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.userPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.userPanel.Location = new System.Drawing.Point(0, 56);
+            this.userPanel.Location = new System.Drawing.Point(0, 69);
+            this.userPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userPanel.Name = "userPanel";
             this.userPanel.Quality = 10;
-            this.userPanel.Size = new System.Drawing.Size(250, 65);
+            this.userPanel.Size = new System.Drawing.Size(333, 80);
             this.userPanel.TabIndex = 14;
             // 
             // userBtn
@@ -820,14 +831,14 @@ namespace Do_an_Winform.PL.Quanly
             this.userBtn.IconVisible = true;
             this.userBtn.IconZoom = 90D;
             this.userBtn.IsTab = false;
-            this.userBtn.Location = new System.Drawing.Point(0, 6);
-            this.userBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userBtn.Location = new System.Drawing.Point(0, 7);
+            this.userBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.userBtn.Name = "userBtn";
             this.userBtn.Normalcolor = System.Drawing.Color.Transparent;
             this.userBtn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.userBtn.OnHoverTextColor = System.Drawing.Color.White;
             this.userBtn.selected = true;
-            this.userBtn.Size = new System.Drawing.Size(250, 48);
+            this.userBtn.Size = new System.Drawing.Size(333, 59);
             this.userBtn.TabIndex = 4;
             this.userBtn.Text = "Lồ Sìn Dậu";
             this.userBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -847,9 +858,10 @@ namespace Do_an_Winform.PL.Quanly
             this.headerPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.headerPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Quality = 10;
-            this.headerPanel.Size = new System.Drawing.Size(250, 56);
+            this.headerPanel.Size = new System.Drawing.Size(333, 69);
             this.headerPanel.TabIndex = 15;
             // 
             // slideBtn
@@ -858,9 +870,10 @@ namespace Do_an_Winform.PL.Quanly
             this.Transition.SetDecoration(this.slideBtn, BunifuAnimatorNS.DecorationType.None);
             this.slideBtn.Image = ((System.Drawing.Image)(resources.GetObject("slideBtn.Image")));
             this.slideBtn.ImageActive = null;
-            this.slideBtn.Location = new System.Drawing.Point(9, 19);
+            this.slideBtn.Location = new System.Drawing.Point(12, 23);
+            this.slideBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.slideBtn.Name = "slideBtn";
-            this.slideBtn.Size = new System.Drawing.Size(35, 20);
+            this.slideBtn.Size = new System.Drawing.Size(47, 25);
             this.slideBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.slideBtn.TabIndex = 6;
             this.slideBtn.TabStop = false;
@@ -879,10 +892,11 @@ namespace Do_an_Winform.PL.Quanly
             this.mainPanel.GradientBottomRight = System.Drawing.SystemColors.Control;
             this.mainPanel.GradientTopLeft = System.Drawing.SystemColors.Control;
             this.mainPanel.GradientTopRight = System.Drawing.SystemColors.Control;
-            this.mainPanel.Location = new System.Drawing.Point(260, 45);
+            this.mainPanel.Location = new System.Drawing.Point(347, 55);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Quality = 10;
-            this.mainPanel.Size = new System.Drawing.Size(1108, 893);
+            this.mainPanel.Size = new System.Drawing.Size(1108, 732);
             this.mainPanel.TabIndex = 5;
             // 
             // titlePanel
@@ -899,9 +913,10 @@ namespace Do_an_Winform.PL.Quanly
             this.titlePanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.titlePanel.GradientTopRight = System.Drawing.Color.White;
             this.titlePanel.Location = new System.Drawing.Point(0, 0);
+            this.titlePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.titlePanel.Name = "titlePanel";
             this.titlePanel.Quality = 10;
-            this.titlePanel.Size = new System.Drawing.Size(1380, 38);
+            this.titlePanel.Size = new System.Drawing.Size(1840, 47);
             this.titlePanel.TabIndex = 4;
             // 
             // btnMaximize
@@ -911,9 +926,10 @@ namespace Do_an_Winform.PL.Quanly
             this.Transition.SetDecoration(this.btnMaximize, BunifuAnimatorNS.DecorationType.None);
             this.btnMaximize.Image = global::Do_an_Winform.Properties.Resources.full_screen;
             this.btnMaximize.ImageActive = null;
-            this.btnMaximize.Location = new System.Drawing.Point(1311, 12);
+            this.btnMaximize.Location = new System.Drawing.Point(1748, 15);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(18, 22);
+            this.btnMaximize.Size = new System.Drawing.Size(24, 27);
             this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaximize.TabIndex = 4;
             this.btnMaximize.TabStop = false;
@@ -927,9 +943,10 @@ namespace Do_an_Winform.PL.Quanly
             this.Transition.SetDecoration(this.btnMinimize, BunifuAnimatorNS.DecorationType.None);
             this.btnMinimize.Image = global::Do_an_Winform.Properties.Resources.minus;
             this.btnMinimize.ImageActive = null;
-            this.btnMinimize.Location = new System.Drawing.Point(1267, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(1689, 15);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(23, 22);
+            this.btnMinimize.Size = new System.Drawing.Size(31, 27);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.TabStop = false;
@@ -943,9 +960,10 @@ namespace Do_an_Winform.PL.Quanly
             this.Transition.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
             this.btnClose.Image = global::Do_an_Winform.Properties.Resources.crossed;
             this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(1347, 12);
+            this.btnClose.Location = new System.Drawing.Point(1796, 15);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(21, 22);
+            this.btnClose.Size = new System.Drawing.Size(28, 27);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnClose.TabIndex = 2;
             this.btnClose.TabStop = false;
@@ -959,14 +977,15 @@ namespace Do_an_Winform.PL.Quanly
             // 
             // frm_Quanly
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 949);
+            this.ClientSize = new System.Drawing.Size(1380, 788);
             this.Controls.Add(this.sidemenu);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.titlePanel);
             this.Transition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Quanly";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -1009,8 +1028,8 @@ namespace Do_an_Winform.PL.Quanly
         private Bunifu.Framework.UI.BunifuGradientPanel titlePanel;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuGradientPanel subhoadonPanel;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
+        private Bunifu.Framework.UI.BunifuFlatButton btnHDBH;
+        private Bunifu.Framework.UI.BunifuFlatButton btnHDNH;
         private Bunifu.Framework.UI.BunifuGradientPanel doitacPanel;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLDT;
         private Bunifu.Framework.UI.BunifuGradientPanel subdoitacPanel;

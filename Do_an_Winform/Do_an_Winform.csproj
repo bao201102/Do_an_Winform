@@ -352,12 +352,6 @@
     <Compile Include="PL\Nhanvien\UserControlSanPham.Designer.cs">
       <DependentUpon>UserControlSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Quanly\BaoCao\frm_MenuBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Quanly\BaoCao\frm_MenuBaoCao.Designer.cs">
-      <DependentUpon>frm_MenuBaoCao.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\Quanly\BaoCao\frm_XemBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -527,9 +521,6 @@
     <EmbeddedResource Include="PL\Nhanvien\UserControlSanPham.resx">
       <DependentUpon>UserControlSanPham.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\BaoCao\frm_MenuBaoCao.resx">
-      <DependentUpon>frm_MenuBaoCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\BaoCao\frm_XemBaoCao.resx">
       <DependentUpon>frm_XemBaoCao.cs</DependentUpon>

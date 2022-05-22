@@ -15,13 +15,11 @@ namespace Do_an_Winform.PL.Quanly
 {
     public partial class frm_HDNH : Form
     {
-        DateTime startday, endday;
         List<PhieuNhapHangDTO> listpn;
         public frm_HDNH()
         {
             InitializeComponent();
         }
-
         private void txtSearch_Enter(object sender, EventArgs e)
         {
             if (txtSearch.Text == "Tìm kiếm mã hóa đơn")
@@ -30,7 +28,6 @@ namespace Do_an_Winform.PL.Quanly
                 txtSearch.ForeColor = Color.Black;
             }
         }
-
         private void txtSearch_Leave(object sender, EventArgs e)
         {
             if (txtSearch.Text == "")
@@ -39,13 +36,29 @@ namespace Do_an_Winform.PL.Quanly
                 txtSearch.ForeColor = Color.Silver;
             }
         }
-
-        private void txtSearch_OnIconRightClick(object sender, EventArgs e)
+        private void frm_HDNH_Load(object sender, EventArgs e)
         {
+            //load Date
+            DatePickerStartDay.Value = System.DateTime.Now;
+            DatePickerEndDay.Value = System.DateTime.Now;
+
+            listpn = PhieuNhapHangBLL.ThongKeTatCaPN(DatePickerStartDay.Value, DatePickerEndDay.Value);
+            gvHDNH.DataSource = listpn;
+            gvHDNH.Columns[0].HeaderText = "Mã PN";
+            gvHDNH.Columns[1].HeaderText = "Ngày tạo PN";
+            gvHDNH.Columns[2].HeaderText = "Mã NV";
+            gvHDNH.Columns[3].HeaderText = "Mã NCC";
+            gvHDNH.Columns[4].HeaderText = "Thành tiền";
+            gvHDNH.Columns[5].Visible = false;
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            DateTime startday, endday;
             try
             {
-                startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-                endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+                startday = DatePickerStartDay.Value;
+                endday = DatePickerEndDay.Value;
+
                 if (endday <= startday)
                 {
                     bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
@@ -70,40 +83,6 @@ namespace Do_an_Winform.PL.Quanly
                 listpn = PhieuNhapHangBLL.ThongKeTatCaPN(startday, endday);
                 gvHDNH.DataSource = listpn;
             }
-        }
-
-        private void frm_HDNH_Load(object sender, EventArgs e)
-        {
-            //load Tổng
-            txtTongCong.Text = "0";
-            //load Date
-            maskedtxtStartDay.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
-            maskedtxtEndDay.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-
-            //load Datagridview
-            DateTime startday, endday;
-            startday = DateTime.ParseExact(maskedtxtStartDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            endday = DateTime.ParseExact(maskedtxtEndDay.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            listpn = PhieuNhapHangBLL.ThongKeTatCaPN(startday, endday);
-            gvHDNH.DataSource = listpn;
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.PrintDialog printdialog = new PrintDialog();
-            printdialog.AllowSomePages = true;
-            printdialog.ShowHelp = true;
-            printdialog.Document = printDocumentHDNH;
-            DialogResult result = printdialog.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                printDocumentHDNH.Print();
-            }
-        }
-
-        private void btnView_Click(object sender, EventArgs e)
-        {
-            printPreviewDialogHDNH.ShowDialog();
         }
     }
 }

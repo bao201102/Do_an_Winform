@@ -121,15 +121,34 @@ namespace Do_an_Winform.DAL
             };
             return reusultDT;
         }
-        public static double ThongKeDoanhThuTheoQuy(int quyTK)
+        public static double ThongKeDoanhThuTheoNam(string namTK)
+        {
+            var firstDayOfMonth = GetLastDayOfMonth("1", namTK);
+            var lastDayOfMonth = GetLastDayOfMonth("12", namTK);
+            CHDTEntities1 data = new CHDTEntities1();
+            var truyvan = from hd in data.HoaDons
+                          where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth) && (hd.TrangThai == "1")
+                          select new
+                          {
+                              hd.ThanhTien
+                          };
+            double reusultDT = 0;
+            foreach (var i in truyvan)
+            {
+                reusultDT += i.ThanhTien;
+            };
+            return reusultDT;
+        }
+        public static double ThongKeDoanhThuTheoQuy(string quyTK, string namTK)
         {
             DateTime firstDayOfMonth;
             DateTime lastDayOfMonth;
+
             double reusultDT = 0;
-            if (quyTK == 1)
+            if (quyTK == "1")
             {
-                firstDayOfMonth = GetFirstDayOfMonth(1);
-                lastDayOfMonth = GetLastDayOfMonth(3);
+                firstDayOfMonth = GetFirstDayOfMonth("1", namTK);
+                lastDayOfMonth = GetLastDayOfMonth("3", namTK);
                 CHDTEntities1 data = new CHDTEntities1();
                 var truyvan = from hd in data.HoaDons
                               where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth) && (hd.TrangThai == "1")
@@ -143,10 +162,10 @@ namespace Do_an_Winform.DAL
                     reusultDT += i.ThanhTien;
                 };
             }
-            if(quyTK == 2)
+            if(quyTK == "2")
             {
-                firstDayOfMonth = GetFirstDayOfMonth(4);
-                lastDayOfMonth = GetLastDayOfMonth(6);
+                firstDayOfMonth = GetFirstDayOfMonth("4", namTK);
+                lastDayOfMonth = GetLastDayOfMonth("6", namTK);
                 CHDTEntities1 data = new CHDTEntities1();
                 var truyvan = from hd in data.HoaDons
                               where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
@@ -159,10 +178,10 @@ namespace Do_an_Winform.DAL
                     reusultDT += i.ThanhTien;
                 };
             }
-            if (quyTK == 3)
+            if (quyTK == "3")
             {
-                firstDayOfMonth = GetFirstDayOfMonth(7);
-                lastDayOfMonth = GetLastDayOfMonth(9);
+                firstDayOfMonth = GetFirstDayOfMonth("7", namTK);
+                lastDayOfMonth = GetLastDayOfMonth("9", namTK);
                 CHDTEntities1 data = new CHDTEntities1();
                 var truyvan = from hd in data.HoaDons
                               where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
@@ -175,10 +194,10 @@ namespace Do_an_Winform.DAL
                     reusultDT += i.ThanhTien;
                 };
             }
-            if(quyTK == 4)
+            if(quyTK == "4")
             {
-                firstDayOfMonth = GetFirstDayOfMonth(10);
-                lastDayOfMonth = GetLastDayOfMonth(12);
+                firstDayOfMonth = GetFirstDayOfMonth("10", namTK);
+                lastDayOfMonth = GetLastDayOfMonth("12", namTK);
                 CHDTEntities1 data = new CHDTEntities1();
                 var truyvan = from hd in data.HoaDons
                               where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
@@ -194,10 +213,10 @@ namespace Do_an_Winform.DAL
             
             return reusultDT;
         }
-        public static double ThongKeDoanhThuTheoThang(int ThangTK)
+        public static double ThongKeDoanhThuTheoThang(string thangTK, string namTK)
         {
-            var firstDayOfMonth = GetLastDayOfMonth(ThangTK);
-            var lastDayOfMonth = GetLastDayOfMonth(ThangTK);
+            var firstDayOfMonth = GetLastDayOfMonth(thangTK, namTK);
+            var lastDayOfMonth = GetLastDayOfMonth(thangTK, namTK);
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
                           where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth) && (hd.TrangThai == "1")
@@ -214,16 +233,20 @@ namespace Do_an_Winform.DAL
         }
 
         //Hàm lấy ra ngày đầu tiên của tháng
-        public static DateTime GetFirstDayOfMonth(int iMonth)
+        public static DateTime GetFirstDayOfMonth(string strMonth, string strYear)
         {
-            DateTime dtResult = new DateTime(DateTime.Now.Year, iMonth, 1);
+            int iMonth = int.Parse(strMonth);
+            int iYear = int.Parse(strYear);
+            DateTime dtResult = new DateTime(iYear, iMonth, 1);
             dtResult = dtResult.AddDays((-dtResult.Day) + 1);
             return dtResult;
         }
         //Hàm lấy ra ngày cuối cùng của tháng
-        public static DateTime GetLastDayOfMonth(int iMonth)
+        public static DateTime GetLastDayOfMonth(string strMonth, string strYear)
         {
-            DateTime dtResult = new DateTime(DateTime.Now.Year, iMonth, 1);
+            int iMonth = int.Parse(strMonth);
+            int iYear = int.Parse(strYear);
+            DateTime dtResult = new DateTime(iYear, iMonth, 1);
             dtResult = dtResult.AddMonths(1);
             dtResult = dtResult.AddDays(-(dtResult.Day));
             return dtResult;
