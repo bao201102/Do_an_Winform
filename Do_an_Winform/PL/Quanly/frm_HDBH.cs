@@ -106,8 +106,7 @@ namespace Do_an_Winform.PL.Quanly
         }
         private void btnViewReport_Click(object sender, EventArgs e)
         {
-            //frm_MenuBaoCao formMenuXemBaoCao = new frm_MenuBaoCao();
-            //formMenuXemBaoCao.ShowDialog();
+            
         }
 
     }

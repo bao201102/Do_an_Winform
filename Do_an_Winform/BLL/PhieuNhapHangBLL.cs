@@ -18,6 +18,14 @@ namespace Do_an_Winform.BLL
         {
             return PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
         }
+        public static double ChiPhiTatCaPN(DateTime startday, DateTime endday)
+        {
+            return PhieuNhapHangDAL.ChiPhiTatCaPN(startday, endday);
+        }
+        public static double ChiPhiTheoMaPN(PhieuNhapHangDTO pnsearch, DateTime startday, DateTime endday)
+        {
+            return PhieuNhapHangDAL.ChiPhiTheoMaPN(pnsearch, startday, endday);
+        }
         public static double ThongKeChiPhiTheoTDHT(DateTime today)
         {
             return PhieuNhapHangDAL.ThongKeChiPhiTheoTDHT(today);

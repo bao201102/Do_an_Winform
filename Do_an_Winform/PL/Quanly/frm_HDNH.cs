@@ -38,7 +38,6 @@ namespace Do_an_Winform.PL.Quanly
         }
         private void frm_HDNH_Load(object sender, EventArgs e)
         {
-            //load Date
             DatePickerStartDay.Value = System.DateTime.Now;
             DatePickerEndDay.Value = System.DateTime.Now;
 
@@ -50,6 +49,7 @@ namespace Do_an_Winform.PL.Quanly
             gvHDNH.Columns[3].HeaderText = "Mã NCC";
             gvHDNH.Columns[4].HeaderText = "Thành tiền";
             gvHDNH.Columns[5].Visible = false;
+            txtTongCong.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoTDHT(DateTime.Now).ToString();
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -77,11 +77,25 @@ namespace Do_an_Winform.PL.Quanly
 
                 listpn = PhieuNhapHangBLL.ThongKeTheoMaPN(pnsearch, startday, endday);
                 gvHDNH.DataSource = listpn;
+                gvHDNH.Columns[0].HeaderText = "Mã PN";
+                gvHDNH.Columns[1].HeaderText = "Ngày tạo PN";
+                gvHDNH.Columns[2].HeaderText = "Mã NV";
+                gvHDNH.Columns[3].HeaderText = "Mã NCC";
+                gvHDNH.Columns[4].HeaderText = "Thành tiền";
+                gvHDNH.Columns[5].Visible = false;
+                txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();
             }
             else
             {
                 listpn = PhieuNhapHangBLL.ThongKeTatCaPN(startday, endday);
                 gvHDNH.DataSource = listpn;
+                gvHDNH.Columns[0].HeaderText = "Mã PN";
+                gvHDNH.Columns[1].HeaderText = "Ngày tạo PN";
+                gvHDNH.Columns[2].HeaderText = "Mã NV";
+                gvHDNH.Columns[3].HeaderText = "Mã NCC";
+                gvHDNH.Columns[4].HeaderText = "Thành tiền";
+                gvHDNH.Columns[5].Visible = false;
+                txtTongCong.Text = PhieuNhapHangBLL.ThongKeTatCaPN(startday, endday).ToString();
             }
         }
     }

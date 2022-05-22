@@ -42,6 +42,40 @@ namespace Do_an_Winform.DAL
             }
             return listpn;
         }
+        public static double ChiPhiTatCaPN(DateTime startday, DateTime endday)
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            var truyvan = from pn in data.PhieuNhapHangs
+                          where (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday) && (pn.TrangThai == "1")
+                          select new
+                          {
+                              pn.ThanhTien
+                          };
+
+            double reusultDT = 0;
+            foreach (var i in truyvan)
+            {
+                reusultDT += i.ThanhTien;
+            };
+            return reusultDT;
+        }
+        public static double ChiPhiTheoMaPN(PhieuNhapHangDTO pnsearch, DateTime startday, DateTime endday)
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            var truyvan = from pn in data.PhieuNhapHangs
+                          where (pn.MaPN ==pnsearch.MaPN) && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday) && (pn.TrangThai == "1")
+                          select new
+                          {
+                              pn.ThanhTien
+                          };
+
+            double reusultDT = 0;
+            foreach (var i in truyvan)
+            {
+                reusultDT += i.ThanhTien;
+            };
+            return reusultDT;
+        }
         public static double ThongKeChiPhiTheoTDHT(DateTime today)
         {
             DateTime date = DateTime.Now;
