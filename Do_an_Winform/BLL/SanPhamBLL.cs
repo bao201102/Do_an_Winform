@@ -69,6 +69,10 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.UpdateProduct(productDTO);
         }
+        public static bool DeleteProduct(string masp)
+        {
+            return SanPhamDAL.DeleteProduct(masp);
+        }
         public static List<SanPhamDTO> GetProductByMaLoaiWithConditions(string name, string maloai)
         {
             return SanPhamDAL.GetProductByMaLoaiWithConditions(name, maloai);
