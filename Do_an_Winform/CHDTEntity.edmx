@@ -12,7 +12,7 @@
           </Key>
           <Property Name="MaHD" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="MaSP" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenSP" Type="nchar" MaxLength="10" />
+          <Property Name="TenSP" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
           <Property Name="ThanhTien" Type="int" Nullable="false" />
           <Property Name="TrangThai" Type="char" MaxLength="1" Nullable="false" />
@@ -24,7 +24,7 @@
           </Key>
           <Property Name="MaPN" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="MaSP" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenSP" Type="nchar" MaxLength="10" />
+          <Property Name="TenSP" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
           <Property Name="MaNhaSX" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="ThanhTien" Type="int" Nullable="false" />
@@ -402,7 +402,7 @@
           <Property Name="TrangThai" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
           <NavigationProperty Name="HoaDon" Relationship="Self.FK_ChiTietHoaDon_HoaDon" FromRole="ChiTietHoaDon" ToRole="HoaDon" />
           <NavigationProperty Name="SanPham" Relationship="Self.FK_ChiTietHoaDon_SanPham" FromRole="ChiTietHoaDon" ToRole="SanPham" />
-          <Property Name="TenSP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TenSP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="ChiTietPhieuNhap">
           <Key>
@@ -418,7 +418,7 @@
           <NavigationProperty Name="PhieuNhapHang" Relationship="Self.FK_ChiTietPhieuNhap_PhieuNhapHang" FromRole="ChiTietPhieuNhap" ToRole="PhieuNhapHang" />
           <NavigationProperty Name="SanPham" Relationship="Self.FK_ChiTietPhieuNhap_SanPham" FromRole="ChiTietPhieuNhap" ToRole="SanPham" />
           <Property Name="TrangThai" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="TenSP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TenSP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
