@@ -151,7 +151,7 @@ namespace Do_an_Winform.PL.Thukho
             this.lblReturn.AutoSize = true;
             this.lblReturn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblReturn.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturn.Location = new System.Drawing.Point(-2, 0);
+            this.lblReturn.Location = new System.Drawing.Point(12, -1);
             this.lblReturn.Name = "lblReturn";
             this.lblReturn.Size = new System.Drawing.Size(74, 23);
             this.lblReturn.TabIndex = 38;
@@ -172,10 +172,10 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuPanel4.BorderRadius = 15;
             this.bunifuPanel4.BorderThickness = 1;
             this.bunifuPanel4.Controls.Add(this.gridviewNhap);
-            this.bunifuPanel4.Location = new System.Drawing.Point(2, 25);
+            this.bunifuPanel4.Location = new System.Drawing.Point(3, 25);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(810, 752);
+            this.bunifuPanel4.Size = new System.Drawing.Size(794, 719);
             this.bunifuPanel4.TabIndex = 37;
             // 
             // gridviewNhap
@@ -234,12 +234,12 @@ namespace Do_an_Winform.PL.Thukho
             this.gridviewNhap.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.gridviewNhap.HeaderBgColor = System.Drawing.Color.Empty;
             this.gridviewNhap.HeaderForeColor = System.Drawing.Color.White;
-            this.gridviewNhap.Location = new System.Drawing.Point(15, 14);
+            this.gridviewNhap.Location = new System.Drawing.Point(13, 18);
             this.gridviewNhap.Name = "gridviewNhap";
             this.gridviewNhap.RowHeadersVisible = false;
             this.gridviewNhap.RowTemplate.Height = 40;
             this.gridviewNhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridviewNhap.Size = new System.Drawing.Size(779, 723);
+            this.gridviewNhap.Size = new System.Drawing.Size(763, 689);
             this.gridviewNhap.TabIndex = 0;
             this.gridviewNhap.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.gridviewNhap.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewNhap_CellEndEdit);
@@ -294,7 +294,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnXoa.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.delete;
             this.btnXoa.IdleIconRightImage = null;
             this.btnXoa.IndicateFocus = false;
-            this.btnXoa.Location = new System.Drawing.Point(1056, 645);
+            this.btnXoa.Location = new System.Drawing.Point(1026, 612);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnXoa.OnDisabledState.BorderRadius = 57;
@@ -328,7 +328,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnXoa.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnXoa.OnPressedState.IconLeftImage = null;
             this.btnXoa.OnPressedState.IconRightImage = null;
-            this.btnXoa.Size = new System.Drawing.Size(179, 57);
+            this.btnXoa.Size = new System.Drawing.Size(193, 57);
             this.btnXoa.TabIndex = 36;
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnXoa.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -387,7 +387,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnThem.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.add;
             this.btnThem.IdleIconRightImage = null;
             this.btnThem.IndicateFocus = false;
-            this.btnThem.Location = new System.Drawing.Point(834, 645);
+            this.btnThem.Location = new System.Drawing.Point(818, 612);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnThem.OnDisabledState.BorderRadius = 57;
@@ -421,7 +421,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnThem.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnThem.OnPressedState.IconLeftImage = null;
             this.btnThem.OnPressedState.IconRightImage = null;
-            this.btnThem.Size = new System.Drawing.Size(179, 57);
+            this.btnThem.Size = new System.Drawing.Size(193, 57);
             this.btnThem.TabIndex = 35;
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThem.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -445,7 +445,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnIn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btnIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIn.BackgroundImage")));
             this.btnIn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnIn.ButtonText = "Lưu và in";
+            this.btnIn.ButtonText = "Thanh toán và in";
             this.btnIn.ButtonTextMarginLeft = 0;
             this.btnIn.ColorContrastOnClick = 45;
             this.btnIn.ColorContrastOnHover = 45;
@@ -480,7 +480,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnIn.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.printer;
             this.btnIn.IdleIconRightImage = null;
             this.btnIn.IndicateFocus = false;
-            this.btnIn.Location = new System.Drawing.Point(1056, 720);
+            this.btnIn.Location = new System.Drawing.Point(1026, 687);
             this.btnIn.Name = "btnIn";
             this.btnIn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnIn.OnDisabledState.BorderRadius = 57;
@@ -514,7 +514,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnIn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnIn.OnPressedState.IconLeftImage = null;
             this.btnIn.OnPressedState.IconRightImage = null;
-            this.btnIn.Size = new System.Drawing.Size(179, 57);
+            this.btnIn.Size = new System.Drawing.Size(193, 57);
             this.btnIn.TabIndex = 34;
             this.btnIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -538,7 +538,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnLuu.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btnLuu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLuu.BackgroundImage")));
             this.btnLuu.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnLuu.ButtonText = "Lưu";
+            this.btnLuu.ButtonText = "Thanh toán";
             this.btnLuu.ButtonTextMarginLeft = 0;
             this.btnLuu.ColorContrastOnClick = 45;
             this.btnLuu.ColorContrastOnHover = 45;
@@ -555,7 +555,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnLuu.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
             this.btnLuu.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.IconLeft = global::Do_an_Winform.Properties.Resources.save_white;
+            this.btnLuu.IconLeft = global::Do_an_Winform.Properties.Resources.bill;
             this.btnLuu.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnLuu.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -565,15 +565,15 @@ namespace Do_an_Winform.PL.Thukho
             this.btnLuu.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnLuu.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnLuu.IconSize = 20;
+            this.btnLuu.IconSize = 30;
             this.btnLuu.IdleBorderColor = System.Drawing.Color.Empty;
             this.btnLuu.IdleBorderRadius = 0;
             this.btnLuu.IdleBorderThickness = 0;
             this.btnLuu.IdleFillColor = System.Drawing.Color.Empty;
-            this.btnLuu.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.save_white;
+            this.btnLuu.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.bill;
             this.btnLuu.IdleIconRightImage = null;
             this.btnLuu.IndicateFocus = false;
-            this.btnLuu.Location = new System.Drawing.Point(834, 720);
+            this.btnLuu.Location = new System.Drawing.Point(818, 687);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLuu.OnDisabledState.BorderRadius = 57;
@@ -597,7 +597,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnLuu.OnIdleState.BorderThickness = 1;
             this.btnLuu.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnLuu.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.OnIdleState.IconLeftImage = global::Do_an_Winform.Properties.Resources.save_white;
+            this.btnLuu.OnIdleState.IconLeftImage = global::Do_an_Winform.Properties.Resources.bill;
             this.btnLuu.OnIdleState.IconRightImage = null;
             this.btnLuu.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnLuu.OnPressedState.BorderRadius = 57;
@@ -607,7 +607,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnLuu.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnLuu.OnPressedState.IconLeftImage = null;
             this.btnLuu.OnPressedState.IconRightImage = null;
-            this.btnLuu.Size = new System.Drawing.Size(179, 57);
+            this.btnLuu.Size = new System.Drawing.Size(193, 57);
             this.btnLuu.TabIndex = 33;
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLuu.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -637,10 +637,10 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuPanel3.Controls.Add(this.label14);
             this.bunifuPanel3.Controls.Add(this.label15);
             this.bunifuPanel3.Controls.Add(this.label13);
-            this.bunifuPanel3.Location = new System.Drawing.Point(823, 286);
+            this.bunifuPanel3.Location = new System.Drawing.Point(818, 317);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(401, 311);
+            this.bunifuPanel3.Size = new System.Drawing.Size(401, 276);
             this.bunifuPanel3.TabIndex = 32;
             // 
             // lblTong
@@ -852,7 +852,7 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Controls.Add(this.cbbNhaCC);
             this.bunifuPanel2.Controls.Add(this.label11);
-            this.bunifuPanel2.Location = new System.Drawing.Point(834, 179);
+            this.bunifuPanel2.Location = new System.Drawing.Point(818, 179);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(401, 112);
@@ -925,7 +925,7 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuPanel5.Controls.Add(this.label2);
             this.bunifuPanel5.Controls.Add(this.lblTenNV);
             this.bunifuPanel5.Controls.Add(this.label3);
-            this.bunifuPanel5.Location = new System.Drawing.Point(834, 25);
+            this.bunifuPanel5.Location = new System.Drawing.Point(818, 25);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
             this.bunifuPanel5.Size = new System.Drawing.Size(401, 125);
@@ -998,7 +998,7 @@ namespace Do_an_Winform.PL.Thukho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1236, 749);
+            this.ClientSize = new System.Drawing.Size(1220, 744);
             this.Controls.Add(this.lblReturn);
             this.Controls.Add(this.bunifuPanel4);
             this.Controls.Add(this.bunifuPanel3);
