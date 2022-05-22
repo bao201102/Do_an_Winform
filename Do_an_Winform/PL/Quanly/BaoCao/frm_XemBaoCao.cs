@@ -24,13 +24,19 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
         {
 
             this.reportViewerResult.RefreshReport();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
-        public void rpt_Nhap(string mapn)
+        public void rpt_Nhap(PhieuNhapHangDTO phieuNhap, string tenncc,string nhanVien)
         {
-            List<ChiTietPhieuNhapDTO> chiTiets = ChiTietPhieuNhapBLL.GetAll(mapn);
+            List<ChiTietPhieuNhapDTO> chiTiets = ChiTietPhieuNhapBLL.GetAll(phieuNhap.MaPN);
             reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Thukho.rpt_Nhap.rdlc";
             reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("CTPN", chiTiets));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paTenNV", nhanVien));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paNgayTao", phieuNhap.NgayTaoPN.ToString()));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paMaPN", phieuNhap.MaPN));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paTenNCC", tenncc));
+            reportViewerResult.RefreshReport();
         }
     }
 }

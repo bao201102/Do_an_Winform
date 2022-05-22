@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Do_an_Winform.DTO
 {
-    class PhieuNhapHangDTO
+    public class PhieuNhapHangDTO
     {
         private string _MaPN;
         public string MaPN

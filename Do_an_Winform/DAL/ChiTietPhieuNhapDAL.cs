@@ -20,7 +20,15 @@ namespace Do_an_Winform.DAL
             ChiTietPhieuNhap phieuNhap = mapper.Map<ChiTietPhieuNhap>(phieuNhapDTO);
             
             entities.ChiTietPhieuNhaps.Add(phieuNhap);
-            return entities.SaveChanges() > 0 ? true : false;
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public static List<ChiTietPhieuNhapDTO> GetAll(string maPn)
