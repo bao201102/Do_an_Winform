@@ -204,7 +204,7 @@ namespace Do_an_Winform.DAL
 
             var query = (from x in entities.PhieuNhapHangs
                          select x).Count();
-            var count =  "PN" + (query + 1).ToString("000");
+            string count =  "PN" + (query + 1).ToString("000");
             return count;
         }
         // Lấy tất cả 

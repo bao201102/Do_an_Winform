@@ -160,14 +160,13 @@ namespace Do_an_Winform.PL.Thukho
             lblReturn.Font = new Font(lblReturn.Font, FontStyle.Regular);
         }
 
-        public void ChiTietPN()
+        public void ChiTietPN(string count)
         {
             for (int i = 0; i < gridviewNhap.RowCount; i++)
             {
                 ChiTietPhieuNhapDTO chiTiet = new ChiTietPhieuNhapDTO();
                 string tensp = gridviewNhap.Rows[i].Cells[0].Value.ToString();
                 string tennsx = gridviewNhap.Rows[i].Cells[3].Value.ToString();
-                string count = PhieuNhapHangBLL.CountMaPN();
 
                 chiTiet.MaPN = count;
                 chiTiet.MaSP = SanPhamBLL.GetProductEqualsName(tensp).MaSP;
@@ -202,18 +201,17 @@ namespace Do_an_Winform.PL.Thukho
 
             if (PhieuNhapHangBLL.AddPhieuNhap(phieuNhapHangDTO))
             {
-
+                ChiTietPN(count);
             }
-
-            ChiTietPN();
         }
 
         private void btnIn_Click(object sender, EventArgs e)
         {
             NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
+            string count = PhieuNhapHangBLL.CountMaPN();
 
             PhieuNhapHangDTO phieuNhapHangDTO = new PhieuNhapHangDTO();
-            phieuNhapHangDTO.MaPN = PhieuNhapHangBLL.CountMaPN();
+            phieuNhapHangDTO.MaPN = count;
             phieuNhapHangDTO.NgayTaoPN = DatePicker.Value;
             phieuNhapHangDTO.MaNV = emp.MaNV;
             phieuNhapHangDTO.MaNCC = cbbNhaCC.SelectedValue.ToString();
@@ -221,13 +219,11 @@ namespace Do_an_Winform.PL.Thukho
 
             if (PhieuNhapHangBLL.AddPhieuNhap(phieuNhapHangDTO))
             {
-
+                ChiTietPN(count);
             }
 
-            ChiTietPN();
-
             frm_XemBaoCao frm = new frm_XemBaoCao();
-            frm.rpt_Nhap(phieuNhapHangDTO,cbbNhaCC.Text, emp.TenNV);
+            frm.rpt_Nhap(phieuNhapHangDTO, cbbNhaCC.Text, emp.TenNV);
             frm.ShowDialog();
         }
     }
