@@ -304,6 +304,12 @@
     <Compile Include="PL\DangNhap\MessBox.Designer.cs">
       <DependentUpon>MessBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\DangNhap\MessBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\DangNhap\MessBox1.Designer.cs">
+      <DependentUpon>MessBox1.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Nhanvien\frm_Info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,12 +339,6 @@
     </Compile>
     <Compile Include="PL\Nhanvien\UserControlKhachHang.Designer.cs">
       <DependentUpon>UserControlKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\Nhanvien\UserControlLapHDon.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PL\Nhanvien\UserControlLapHDon.Designer.cs">
-      <DependentUpon>UserControlLapHDon.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Nhanvien\UserControlLapHoaDon.cs">
       <SubType>UserControl</SubType>
@@ -496,6 +496,9 @@
     <EmbeddedResource Include="PL\DangNhap\MessBox.resx">
       <DependentUpon>MessBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\DangNhap\MessBox1.resx">
+      <DependentUpon>MessBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_Info.resx">
       <DependentUpon>frm_Info.cs</DependentUpon>
     </EmbeddedResource>
@@ -511,9 +514,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\UserControlKhachHang.resx">
       <DependentUpon>UserControlKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Nhanvien\UserControlLapHDon.resx">
-      <DependentUpon>UserControlLapHDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\UserControlLapHoaDon.resx">
       <DependentUpon>UserControlLapHoaDon.cs</DependentUpon>

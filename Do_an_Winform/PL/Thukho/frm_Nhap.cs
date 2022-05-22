@@ -226,5 +226,10 @@ namespace Do_an_Winform.PL.Thukho
             frm.rpt_Nhap(phieuNhapHangDTO, cbbNhaCC.Text, emp.TenNV);
             frm.ShowDialog();
         }
+
+        private void cbbTenSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

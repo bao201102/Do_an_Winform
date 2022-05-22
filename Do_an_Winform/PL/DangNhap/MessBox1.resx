@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="titlePanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVChTY1hx9dV/YvCoQryY2gpf/QcA/l9T6J8qZh4A
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="lblText.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 30px;font-family: 'Leelawadee UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  </data>
+  <data name="btnOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEYAAAAjCAYAAAApF3xtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVGhD7ZnJTsNADIZ5/yeBNo0KEgixCG700BvdaNqK
+        shSSTJY3MPNPlKhVPL1xSO3Dd8okrT/N2LLnrCxLUtqoGA8qxoOK8aBiPKgYD0fFZEVB811Gj2tDN0tD
+        4Tyl82nSWfD/Ecf9ytB0l5PJ+biBV0z0m9PAfiiAjEnM/lCXCWYJDWYpvX5nbPwtMbD4ZHcIpHAfPDUG
+        84Ruo5TirDjwcCAGUi4XKfWmMqTsM7Rx/+zJORCDnSJRSg3yT0tMnVO4F6TQt/GPP6qc48Sg+kiXUhPa
+        nPOVFpUYlC5kaW6hNHqW0TarxKCuc4ukcvWWVmKGC36BVC4sTkxfj1ELJ4Z7IB0V48GJwZniHkrGiel6
+        1/wfODFooriHUkGVdmLGnxn1tDI1PG9MJQZdJdpvbpE0MKNZ2r7RiQGjrbFNFL9YCmgHHtZVh92IQSN5
+        bdtu7gUphDa31OPORgxAVym1QmG6sIk9gyrwnuRuiielTUDRwU7ZlwJaYgCO1YvNOSc9o5nEbtB/Fxn2
+        toAVUwOLKF3BiSVlnAZcCeFqiIsbHBUjGRXjQcV4UDEeVAxLSX93Tve2E+jdowAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
