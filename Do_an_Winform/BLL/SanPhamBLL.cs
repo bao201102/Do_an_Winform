@@ -65,6 +65,10 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.UpdateQuantityProduct(pn);
         }
+        public static bool UpdateProduct(SanPhamDTO productDTO)
+        {
+            return SanPhamDAL.UpdateProduct(productDTO);
+        }
         public static List<SanPhamDTO> GetProductByMaLoaiWithConditions(string name, string maloai)
         {
             return SanPhamDAL.GetProductByMaLoaiWithConditions(name, maloai);

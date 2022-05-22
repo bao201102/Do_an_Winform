@@ -106,6 +106,7 @@ namespace Do_an_Winform.DAL
                        on sp.MaLoaiSP equals lsp.MaLoaiSP
                        select new
                        {
+                           sp.MaSP,
                            sp.TenSP,
                            sp.SoLuong,
                            sp.DonGia,
@@ -158,6 +159,7 @@ namespace Do_an_Winform.DAL
                         where sp.MaLoaiSP.Contains(maloaisp) && sp.TrangThai == "1"
                         select new
                         {
+                            sp.MaSP,
                             sp.TenSP,
                             sp.SoLuong,
                             sp.DonGia,
@@ -483,6 +485,28 @@ namespace Do_an_Winform.DAL
             sp.SoLuong += pn.SoLuong;
             return entities.SaveChanges() > 0 ? true : false;
         }
+
+        public static bool UpdateProduct(SanPhamDTO productDTO)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            SanPham sp = entities.SanPhams.Where(x => x.MaSP.Equals(productDTO.MaSP)).Single();
+
+            sp.TenSP = productDTO.TenSP;
+            sp.DonGia = productDTO.DonGia;
+            sp.MaLoaiSP = productDTO.MaLoaiSP;
+            sp.MaNhaSX = productDTO.MaNhaSX;
+
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public static List<SanPhamDTO> GetProductByProId(string maSP)
         {
             CHDTEntities1 entities = new CHDTEntities1();

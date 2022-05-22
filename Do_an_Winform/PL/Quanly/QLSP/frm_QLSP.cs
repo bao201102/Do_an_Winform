@@ -28,11 +28,12 @@ namespace Do_an_Winform.PL.Quanly
             cbLoaisp.SelectedIndex = 0;
 
             dgvDSSP.DataSource = SanPhamBLL.GetProduct();
-            dgvDSSP.Columns[0].HeaderText = "Tên sản phẩm";
-            dgvDSSP.Columns[1].Visible = false;
-            dgvDSSP.Columns[2].HeaderText = "Đơn giá";
-            dgvDSSP.Columns[3].HeaderText = "Tên loại";
-            dgvDSSP.Columns[4].HeaderText = "Nhà sản xuất";
+            dgvDSSP.Columns[0].Visible = false;
+            dgvDSSP.Columns[1].HeaderText = "Tên sản phẩm";
+            dgvDSSP.Columns[2].Visible = false;
+            dgvDSSP.Columns[3].HeaderText = "Đơn giá";
+            dgvDSSP.Columns[4].HeaderText = "Tên loại";
+            dgvDSSP.Columns[5].HeaderText = "Nhà sản xuất";
         }
 
         private void cbLoaisp_SelectionChangeCommitted(object sender, EventArgs e)
@@ -59,11 +60,12 @@ namespace Do_an_Winform.PL.Quanly
             try
             {
                 dgvDSSP.DataSource = SanPhamBLL.GetAllProductByName(txtFind.Text);
-                dgvDSSP.Columns[0].HeaderText = "Tên sản phẩm";
-                dgvDSSP.Columns[1].Visible = false;
-                dgvDSSP.Columns[2].HeaderText = "Đơn giá";
-                dgvDSSP.Columns[3].HeaderText = "Tên loại";
-                dgvDSSP.Columns[4].HeaderText = "Nhà sản xuất";
+                dgvDSSP.Columns[0].Visible = false;
+                dgvDSSP.Columns[1].HeaderText = "Tên sản phẩm";
+                dgvDSSP.Columns[2].Visible = false;
+                dgvDSSP.Columns[3].HeaderText = "Đơn giá";
+                dgvDSSP.Columns[4].HeaderText = "Tên loại";
+                dgvDSSP.Columns[5].HeaderText = "Nhà sản xuất";
             }
             catch (Exception)
             {
@@ -74,10 +76,11 @@ namespace Do_an_Winform.PL.Quanly
         private void dgvDSSP_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             frm_Update form = new frm_Update();
-            form.txtTensp.Text = dgvDSSP.CurrentRow.Cells[0].Value.ToString();
-            form.txtDongia.Text = dgvDSSP.CurrentRow.Cells[2].Value.ToString();
-            form.cbLoaisp.SelectedText = dgvDSSP.CurrentRow.Cells[3].Value.ToString();
-            form.cbNSX.SelectedText = dgvDSSP.CurrentRow.Cells[4].Value.ToString();
+            form.masp = dgvDSSP.CurrentRow.Cells[0].Value.ToString();
+            form.txtTensp.Text = dgvDSSP.CurrentRow.Cells[1].Value.ToString();
+            form.txtDongia.Text = dgvDSSP.CurrentRow.Cells[3].Value.ToString();
+            form.cbLoaisp.SelectedText = dgvDSSP.CurrentRow.Cells[4].Value.ToString();
+            form.cbNSX.SelectedText = dgvDSSP.CurrentRow.Cells[5].Value.ToString();
             form.ShowDialog();
         }
     }
