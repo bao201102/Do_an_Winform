@@ -104,6 +104,7 @@ namespace Do_an_Winform.DAL
                        on sp.MaNhaSX equals nsx.MaNhaSX
                        join lsp in entities.LoaiSanPhams
                        on sp.MaLoaiSP equals lsp.MaLoaiSP
+                       where sp.TrangThai == "1"
                        select new
                        {
                            sp.MaSP,
@@ -133,6 +134,7 @@ namespace Do_an_Winform.DAL
                        where sp.TenSP.Contains(tensp) && sp.TrangThai == "1"
                        select new
                        {
+                           sp.MaSP,
                            sp.TenSP,
                            sp.SoLuong,
                            sp.DonGia,
@@ -503,6 +505,26 @@ namespace Do_an_Winform.DAL
             }
             catch (Exception)
             {
+                entities.SaveChanges();
+                return false;
+            }
+        }
+
+        public static bool DeleteProduct(string masp)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            SanPham sp = entities.SanPhams.Where(x => x.MaSP.Equals(masp)).Single();
+
+            sp.TrangThai = "0";
+
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                entities.SaveChanges();
                 return false;
             }
         }

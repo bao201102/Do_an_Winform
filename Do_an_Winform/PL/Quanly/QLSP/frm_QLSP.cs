@@ -82,6 +82,7 @@ namespace Do_an_Winform.PL.Quanly
             form.cbLoaisp.SelectedText = dgvDSSP.CurrentRow.Cells[4].Value.ToString();
             form.cbNSX.SelectedText = dgvDSSP.CurrentRow.Cells[5].Value.ToString();
             form.ShowDialog();
+            dgvDSSP.DataSource = SanPhamBLL.GetProduct();
         }
     }
 }
