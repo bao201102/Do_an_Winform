@@ -30,7 +30,7 @@ namespace Do_an_Winform.PL.Nhanvien
         public UserControlLapHoaDon()
         {
             InitializeComponent();
-            
+            gridview_Load();
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -40,6 +40,11 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void UserControlLapHoaDon_Load(object sender, EventArgs e)
         {
+            listHoaDon = HoaDonBLL.GetAllBill();
+            int count = listHoaDon.Count + 1;
+            string maHD = "HD" + count.ToString("000");
+            txtMaHD.Text = maHD;
+            txtMaHD.Enabled = false;
             try
             {
                 nhanVien = NhanVienBLL.GetEmployee(frm_NVien.taikhoan1.MaNguoiDung);
@@ -56,27 +61,6 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     cbTenSP.Items.Add(sp.TenSP);
                 }
-                
-                txtDonGia.Enabled = false;
-                txtMaSP.Enabled = false;
-                txtLoaiSP.Enabled = false;
-                cbTenSP.Enabled = false;
-                txtSoLuong.Enabled = false;
-                cbTenKH.Enabled = false;
-                rbTichDiem.Enabled = false;
-                txtMaKH.Enabled = true;
-                txtLoaiTV.Enabled = false;
-                rbKhachLe.Checked = true;
-                btnSearch.Visible = false;
-                btnSearchMem.Visible = false;
-                //if (rbThanhVien.Checked)
-                //{
-                //    cbMaKH.Enabled = true;
-                //    txtTenKH.Enabled = true;
-                //    txtLoaiTV.Enabled = true;
-                //    txtSoLuong.Enabled = true;
-
-                //}
                 lblTenNV.Text = nhanVien.TenNV;
                 DateTime curDay = DateTime.Now;
                 lblNgayBan.Text = (new DateTime(curDay.Year, curDay.Month, curDay.Day)).ToString("dd / MM / yyyy");
@@ -88,18 +72,33 @@ namespace Do_an_Winform.PL.Nhanvien
             sp = SanPhamBLL.GetProductByName(cbTenSP.Text);
             try
             {
-                loaisp = LoaiSanPhamBLL.GetProTypeById(sp.MaLoaiSP);
-                nhasx = NhaSanXuatBLL.GetManufacById(sp.MaNhaSX);
-                txtDonGia.Enabled = true;
-                txtMaSP.Enabled = true;
-                txtLoaiSP.Enabled = true;
+                lblPrice2.Text = sp.DonGia.ToString() + "đ";
+                if (txtLoaiTV.Text != "")
+                {
+                    if (txtLoaiTV.Text == "Đồng")
+                    {
+                        lblDiscount2.Text = "5%";
+                    }
+                    else if (txtLoaiTV.Text == "Bạc")
+                    {
+                        lblDiscount2.Text = "8%";
+                    }
+                    else if (txtLoaiTV.Text == "Vàng")
+                    {
+                        lblDiscount2.Text = "10%";
+                    }
+                    else
+                    {
+                        lblDiscount2.Text = "12%";
+                    }
+                }else
+                {
+                    lblDiscount2.Text = "0%";
+                }
                 
-                txtSoLuong.Enabled = true;
-                txtMaSP.Text = sp.MaSP;
-                txtDonGia.Text = sp.DonGia.ToString();
-                txtLoaiSP.Text = loaisp.TenLoaiSP;
-                
-            }catch
+
+            }
+            catch
             {
                 MessageBox.Show("Không tìm thấy sản phẩm. Vui lòng nhập lại");
             }
@@ -112,47 +111,28 @@ namespace Do_an_Winform.PL.Nhanvien
             isShowMemId = !isShowMemId;
             if(isShowMemId)
             {
-                cbTenKH.Enabled = true;
-                txtMaKH.Enabled = false;
-                txtLoaiTV.Enabled = false;
-                txtMaKH.Text = "";
-                txtLoaiTV.Text = "";
-                cbTenKH.Text = "";
-                
-                foreach (KhachHangDTO kh in listKH)
-                {
-                    cbTenKH.Items.Add(kh.TenKH);
-                }
+                txtSDT.Enabled = true;
                 btnSearchMem.Visible = true;
-                rbTichDiem.Enabled = true;
+                txtTenKH.Enabled = false;
+                txtLoaiTV.Enabled = false;
             }
             else
             {
-                cbTenKH.Enabled = false;
-                txtMaKH.Text = "";
-                txtLoaiTV.Text = "";
-                cbTenKH.Text = "";
-                foreach (KhachHangDTO kh in listKH)
-                {
-                    cbTenKH.Items.Remove(kh.TenKH);
-                }
+                txtSDT.Enabled = false;
                 btnSearchMem.Visible = false;
-                rbTichDiem.Enabled = false;
+                txtTenKH.Enabled = true;
+                txtLoaiTV.Enabled = false;
             }
             
             
         }
-
+        //Tìm thành viên
         private void btnSearchMem_Click(object sender, EventArgs e)
         {
             try
             {
-                //txtTenKH.Enabled = true;
-                //txtLoaiTV.Enabled = true;
-                btnSearchMem.Enabled = true;
-                rbTichDiem.Enabled = true;
-                khachHang = KhachHangBLL.GetCustomerByName(cbTenKH.Text);
-                txtMaKH.Text = khachHang.MaKH;
+                khachHang = KhachHangBLL.GetCustomerByPhone(txtSDT.Text);
+                txtTenKH.Text = khachHang.TenKH;
                 loaitv = LoaiThanhVienBLL.GetTypeMemById(khachHang.MaLoaiTVien);
                 txtLoaiTV.Text = loaitv.TenLoaiTVien;
             }
@@ -177,21 +157,12 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void rbKhachLe_CheckedChanged(object sender, EventArgs e)
         {
-            cbTenKH.Enabled = true;
-            txtMaKH.Enabled = false;
-            txtLoaiTV.Enabled = false;
-            txtMaKH.Text = "";
-            cbTenKH.Text = "";
-            txtLoaiTV.Text = "";
-            btnSearchMem.Enabled = true;
+            
         }
-
+        //Thanh toán
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            if(txtMaHD.Text == "")
-            {
-                MessageBox.Show("Chưa có mã hóa đơn. Ấn nút tạo hóa đơn để có mã hóa đơn");
-            }
+            
             if (cbTenSP.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập tên sản phẩm");
@@ -202,77 +173,7 @@ namespace Do_an_Winform.PL.Nhanvien
             }
             else
             {
-                int donGia = int.Parse(txtDonGia.Text);
-                int soLuong = int.Parse(txtSoLuong.Text);
-                int tongCong = donGia * soLuong;
-                lblSum1.Text = tongCong.ToString() + "đ";
-                lblDiscount1.Text = "0%";
-                if (txtLoaiTV.Text != "")
-                {
-                    if (txtLoaiTV.Text == "Đồng")
-                    {
-                        lblDiscount1.Text = "5%";
-                    }
-                    else if (txtLoaiTV.Text == "Bạc")
-                    {
-                        lblDiscount1.Text = "8%";
-                    }
-                    else if (txtLoaiTV.Text == "Vàng")
-                    {
-                        lblDiscount1.Text = "10%";
-                    }
-                    else
-                    {
-                        lblDiscount1.Text = "12%";
-                    }
-                }
-                if (lblDiscount1.Text == "0%")
-                {
-                    lblTotal1.Text = (tongCong).ToString() + "đ";
-                }
-                else
-                {
-                    int discount = int.Parse(TachChuoi(lblDiscount1.Text));
-                    int thanhTien = tongCong - (tongCong * discount / 100);
-                    lblTotal1.Text = (thanhTien).ToString() + "đ";
-                }
-            }
-        }
-
-        private void btnCreateBill_Click(object sender, EventArgs e)
-        {
-            listHoaDon = HoaDonBLL.GetAllBill();
-            int count = listHoaDon.Count + 1;
-            string maHD = "HD" + count.ToString("000");
-            txtMaHD.Text = maHD;
-            cbTenSP.Enabled = true;
-            btnSearch.Visible = true;
-        }
-
-        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (txtMaHD.Text == "")
-            {
-                MessageBox.Show("Chưa có mã hóa đơn. Ấn nút tạo hóa đơn để có mã hóa đơn");
-            }
-            else if (cbTenSP.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập tên sản phẩm");
-            }
-            else if (txtSoLuong.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập số lượng");
-            }else if (lblSum1.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhấn nút thanh toán để thanh toán trước");
-            }else
-            {
-                int total = int.Parse(TachThanhTien(lblTotal1.Text));
+                int total = int.Parse(TachThanhTien(lblTotal2.Text));
                 HoaDonDTO hoaDon = new HoaDonDTO();
                 listHoaDon = HoaDonDAL.GetAllBill();
 
@@ -291,6 +192,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 }
                 else
                 {
+                    
                     hoaDon.MaHD = txtMaHD.Text;
                     DateTime curDay = DateTime.Now;
                     hoaDon.NgayTaoHD = (new DateTime(curDay.Year, curDay.Month, curDay.Day));
@@ -302,13 +204,13 @@ namespace Do_an_Winform.PL.Nhanvien
                     {
                     }
                     hoaDon.MaNV = nhanVien.MaNV;
-                    if (txtMaKH.Text == "")
+                    if (txtTenKH.Text == "")
                     {
                         hoaDon.MaKH = null;
                     }
                     else
                     {
-                        hoaDon.MaKH = txtMaKH.Text;
+                        hoaDon.MaKH = (KhachHangDAL.GetCustomerByPhone(txtSDT.Text)).MaKH;
                     }
                     hoaDon.ThanhTien = total;
                     hoaDon.TrangThai = "1";
@@ -320,16 +222,16 @@ namespace Do_an_Winform.PL.Nhanvien
                     {
                         MessageBox.Show("Có lỗi xảy ra");
                     }
-                    
+
                 }
 
 
                 ChiTietHoaDonDTO chiTietHD = new ChiTietHoaDonDTO();
                 chiTietHD.MaHD = txtMaHD.Text;
-                chiTietHD.MaSP = txtMaSP.Text;
+                chiTietHD.MaSP = (SanPhamBLL.GetProductByName(cbTenSP.Text)).MaSP;
                 int soLuong = int.Parse(txtSoLuong.Text);
                 chiTietHD.SoLuong = soLuong;
-                int thanhTien = int.Parse(TachThanhTien(lblTotal1.Text));
+                int thanhTien = int.Parse(TachThanhTien(lblTotal2.Text));
                 chiTietHD.ThanhTien = thanhTien;
                 chiTietHD.TrangThai = "1";
                 bool result = ChiTietHoaDonBLL.AddNewBillDetail(chiTietHD);
@@ -341,15 +243,19 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     MessageBox.Show("Có lỗi xảy ra");
                 }
-                listCTHD = ChiTietHoaDonBLL.GetAllDetailBillById(txtMaHD.Text);
-                dgvAllDetailBill.DataSource = listCTHD;
-                dgvAllDetailBill.Columns[0].HeaderText = "Mã HD";
-                dgvAllDetailBill.Columns[1].HeaderText = "Mã SP";
-                dgvAllDetailBill.Columns[2].HeaderText = "Số lượng";
-                dgvAllDetailBill.Columns[3].HeaderText = "Thành tiền";
-                dgvAllDetailBill.Columns[4].HeaderText = "Trạng thái";
-                
+
+
             }
+        }
+
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            
         }
         private static string TachThanhTien(string thanhTien)
         {
@@ -401,19 +307,70 @@ namespace Do_an_Winform.PL.Nhanvien
         {
 
         }
+        //Cập nhật thông tin khi số lượng thay đổi
+        private void txtSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int tongCong = (int.Parse(txtSoLuong.Text) * sp.DonGia);
+                lblSum2.Text = tongCong.ToString() + "đ";
+                if (lblDiscount2.Text == "0%")
+                {
+                    lblTotal2.Text = (tongCong).ToString() + "đ";
+                }
+                else
+                {
+                    int discount = int.Parse(TachChuoi(lblDiscount2.Text));
+                    int thanhTien = tongCong - (tongCong * discount / 100);
+                    lblTotal2.Text = (thanhTien).ToString() + "đ";
+                }
+            }
+            catch { }
+        }
 
-        private void btnIn_Click(object sender, EventArgs e)
+        private void btnIn2_Click(object sender, EventArgs e)
         {
             string tenNV = lblTenNV.Text;
             string ngayTao = lblNgayBan.Text;
-            string tenKH = cbTenKH.Text;
+            string tenKH = txtTenKH.Text;
             string loaiTV = txtLoaiTV.Text;
-            if(txtLoaiTV.Text == "")
+            if (txtLoaiTV.Text == "")
             {
                 loaiTV = "Không";
             }
             frm_XemHoaDon frmHD = new frm_XemHoaDon(txtMaHD.Text, tenNV, ngayTao, tenKH, loaiTV);
             frmHD.Show();
+        }
+        private DataTable dataTable = new DataTable();
+        private void gridview_Load()
+        {
+            dataTable.Columns.Add("Tên sản phẩm");
+            dataTable.Columns.Add("Số lượng");
+            dataTable.Columns.Add("Đơn giá");
+            dataTable.Columns.Add("Tên nhà sản xuất");
+            dataTable.Columns.Add("Thành tiền");
+            dgvProduct.DataSource = dataTable;
+        }
+
+        private void btnAdd2_Click(object sender, EventArgs e)
+        {
+            sp = SanPhamDAL.GetProductByName(cbTenSP.Text);
+            nhasx = NhaSanXuatDAL.GetManufacById(sp.MaNhaSX);
+            dataTable.Rows.Add(cbTenSP.Text, txtSoLuong.Text, lblPrice2.Text, nhasx.TenNhaSX, lblTotal2.Text);
+        }
+        int sum;
+        private void dgvProduct_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvProduct.SelectedRows[0].Cells[4].Value = int.Parse(dgvProduct.SelectedRows[0].Cells[1].Value.ToString())
+                * int.Parse(dgvProduct.SelectedRows[0].Cells[2].Value.ToString());
+
+            sum = 0;
+            for (int i = 0; i < dgvProduct.RowCount; i++)
+            {
+                sum += int.Parse(dgvProduct.Rows[i].Cells[4].Value.ToString());
+            }
+            txtSoLuong.Text = dgvProduct.SelectedRows[0].Cells[1].Value.ToString();
+            lblTotal2.Text = sum.ToString();
         }
     }
 }

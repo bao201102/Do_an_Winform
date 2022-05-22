@@ -237,7 +237,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var product = (from sp in entities.SanPhams
-                           where sp.TenSP.Contains(ten) && sp.TrangThai == "1"
+                           where sp.TenSP == ten && sp.TrangThai == "1"
                            select sp).FirstOrDefault();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<SanPham, SanPhamDTO>());
