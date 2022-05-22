@@ -14,50 +14,33 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from pn in data.PhieuNhapHangs
-                          where (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
-                          select new
-                          {
-                              pn.MaPN,
-                              //NgayTaoPN = ((DateTime)pn.NgayTaopn).ToString("dd/MM/yyyy HH:mm"),              
-                              pn.NgayTaoPN,
-                              pn.MaNV,
-                              pn.MaNCC,
-                              pn.ThanhTien
-                          };
-
-            List<PhieuNhapHangDTO> listKQ = new List<PhieuNhapHangDTO>();
-            for (int i = 0; i < truyvan.Count(); i++)
+                        where pn.TrangThai == "1" && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
+                        select pn;
+            List<PhieuNhapHangDTO> listpn = new List<PhieuNhapHangDTO>();
+            foreach (PhieuNhapHang pn in truyvan)
             {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuNhapHang, PhieuNhapHangDTO>());
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
                 var mapper = new Mapper(config);
-                PhieuNhapHangDTO pndto = mapper.Map<PhieuNhapHangDTO>(i);
-                listKQ.Add(pndto);
+                PhieuNhapHangDTO pndto = mapper.Map<PhieuNhapHangDTO>(pn);
+                listpn.Add(pndto);
             }
-            return listKQ;
+            return listpn;
         }
         public static List<PhieuNhapHangDTO> ThongKeTheoMaPN(PhieuNhapHangDTO pnsearch, DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from pn in data.PhieuNhapHangs
-                          where (pn.MaPN == pnsearch.MaPN) && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
-                          select new
-                          {
-                              pn.MaPN,
-                              //NgayTaopn = ((DateTime)pn.NgayTaopn).ToString("dd/MM/yyyy HH:mm"),              
-                              pn.NgayTaoPN,
-                              pn.MaNV,
-                              pn.MaNCC,
-                              pn.ThanhTien
-                          };
-            List<PhieuNhapHangDTO> listKQ = new List<PhieuNhapHangDTO>();
-            for (int i = 0; i < truyvan.Count(); i++)
+                          where (pn.MaPN == pnsearch.MaPN)&& (pn.TrangThai == "1") && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
+                          select pn;
+            List<PhieuNhapHangDTO> listpn = new List<PhieuNhapHangDTO>();
+            foreach (PhieuNhapHang pn in truyvan)
             {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuNhapHang, PhieuNhapHangDTO>());
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
                 var mapper = new Mapper(config);
-                PhieuNhapHangDTO pndto = mapper.Map<PhieuNhapHangDTO>(i);
-                listKQ.Add(pndto);
+                PhieuNhapHangDTO pndto = mapper.Map<PhieuNhapHangDTO>(pn);
+                listpn.Add(pndto);
             }
-            return listKQ;
+            return listpn;
         }
         public static double ThongKeChiPhiTheoTDHT(DateTime today)
         {
@@ -65,8 +48,8 @@ namespace Do_an_Winform.DAL
             var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
 
             CHDTEntities1 data = new CHDTEntities1();
-            var truyvan = from hd in data.HoaDons
-                          where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= today)
+            var truyvan = from hd in data.PhieuNhapHangs
+                          where (hd.NgayTaoPN >= firstDayOfMonth) && (hd.NgayTaoPN <= today) && (hd.TrangThai == "1")
                           select new
                           {
                               hd.ThanhTien
@@ -78,70 +61,88 @@ namespace Do_an_Winform.DAL
             };
             return reusultDT;
         }
-        public static double ThongKeChiPhiTheoQuy(int quyTK)
+        public static double ThongKeChiPhiTheoNam(string namTK)
+        {
+            var firstDayOfMonth = GetLastDayOfMonth("1", namTK);
+            var lastDayOfMonth = GetLastDayOfMonth("12", namTK);
+            CHDTEntities1 data = new CHDTEntities1();
+            var truyvan = from pn in data.PhieuNhapHangs
+                          where (pn.NgayTaoPN >= firstDayOfMonth) && (pn.NgayTaoPN <= lastDayOfMonth) && (pn.TrangThai == "1")
+                          select new
+                          {
+                              pn.ThanhTien
+                          };
+            double reusultDT = 0;
+            foreach (var i in truyvan)
+            {
+                reusultDT += i.ThanhTien;
+            };
+            return reusultDT;
+        }
+        public static double ThongKeChiPhiTheoQuy(string quyTK, string namTK)
         {
             DateTime firstDayOfMonth;
             DateTime lastDayOfMonth;
-            double reusultDT = 0;
-            if (quyTK == 1)
-            {
-                firstDayOfMonth = GetFirstDayOfMonth(1);
-                lastDayOfMonth = GetLastDayOfMonth(3);
-                CHDTEntities1 data = new CHDTEntities1();
-                var truyvan = from hd in data.HoaDons
-                              where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
-                              select new
-                              {
-                                  hd.ThanhTien
-                              };
 
-                foreach (var i in truyvan)
-                {
-                    reusultDT += i.ThanhTien;
-                };
-            }
-            if (quyTK == 2)
+            double reusultDT = 0;
+            if (quyTK == "1")
             {
-                firstDayOfMonth = GetFirstDayOfMonth(4);
-                lastDayOfMonth = GetLastDayOfMonth(6);
+                firstDayOfMonth = GetFirstDayOfMonth("1", namTK);
+                lastDayOfMonth = GetLastDayOfMonth("3", namTK);
                 CHDTEntities1 data = new CHDTEntities1();
-                var truyvan = from hd in data.HoaDons
-                              where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
+                var truyvan = from pn in data.PhieuNhapHangs
+                              where (pn.NgayTaoPN >= firstDayOfMonth) && (pn.NgayTaoPN <= lastDayOfMonth) && (pn.TrangThai == "1")
                               select new
                               {
-                                  hd.ThanhTien
+                                  pn.ThanhTien
                               };
                 foreach (var i in truyvan)
                 {
                     reusultDT += i.ThanhTien;
                 };
             }
-            if (quyTK == 3)
+            if (quyTK == "2")
             {
-                firstDayOfMonth = GetFirstDayOfMonth(7);
-                lastDayOfMonth = GetLastDayOfMonth(9);
+                firstDayOfMonth = GetFirstDayOfMonth("4", namTK);
+                lastDayOfMonth = GetLastDayOfMonth("6", namTK);
                 CHDTEntities1 data = new CHDTEntities1();
-                var truyvan = from hd in data.HoaDons
-                              where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
+                var truyvan = from pn in data.PhieuNhapHangs
+                              where (pn.NgayTaoPN >= firstDayOfMonth) && (pn.NgayTaoPN <= lastDayOfMonth) && (pn.TrangThai == "1")
                               select new
                               {
-                                  hd.ThanhTien
+                                  pn.ThanhTien
                               };
                 foreach (var i in truyvan)
                 {
                     reusultDT += i.ThanhTien;
                 };
             }
-            if (quyTK == 4)
+            if (quyTK == "3")
             {
-                firstDayOfMonth = GetFirstDayOfMonth(10);
-                lastDayOfMonth = GetLastDayOfMonth(12);
+                firstDayOfMonth = GetFirstDayOfMonth("7", namTK);
+                lastDayOfMonth = GetLastDayOfMonth("9", namTK);
                 CHDTEntities1 data = new CHDTEntities1();
-                var truyvan = from hd in data.HoaDons
-                              where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
+                var truyvan = from pn in data.PhieuNhapHangs
+                              where (pn.NgayTaoPN >= firstDayOfMonth) && (pn.NgayTaoPN <= lastDayOfMonth) && (pn.TrangThai == "1")
                               select new
                               {
-                                  hd.ThanhTien
+                                  pn.ThanhTien
+                              };
+                foreach (var i in truyvan)
+                {
+                    reusultDT += i.ThanhTien;
+                };
+            }
+            if (quyTK == "4")
+            {
+                firstDayOfMonth = GetFirstDayOfMonth("10", namTK);
+                lastDayOfMonth = GetLastDayOfMonth("12", namTK);
+                CHDTEntities1 data = new CHDTEntities1();
+                var truyvan = from pn in data.PhieuNhapHangs
+                              where (pn.NgayTaoPN >= firstDayOfMonth) && (pn.NgayTaoPN <= lastDayOfMonth) && (pn.TrangThai == "1")
+                              select new
+                              {
+                                  pn.ThanhTien
                               };
                 foreach (var i in truyvan)
                 {
@@ -151,16 +152,16 @@ namespace Do_an_Winform.DAL
 
             return reusultDT;
         }
-        public static double ThongKeChiPhiTheoThang(int ThangTK)
+        public static double ThongKeChiPhiTheoThang(string thangTK, string namTK)
         {
-            var firstDayOfMonth = GetLastDayOfMonth(ThangTK);
-            var lastDayOfMonth = GetLastDayOfMonth(ThangTK);
+            var firstDayOfMonth = GetLastDayOfMonth(thangTK, namTK);
+            var lastDayOfMonth = GetLastDayOfMonth(thangTK, namTK);
             CHDTEntities1 data = new CHDTEntities1();
-            var truyvan = from hd in data.HoaDons
-                          where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
+            var truyvan = from pn in data.PhieuNhapHangs
+                          where (pn.NgayTaoPN >= firstDayOfMonth) && (pn.NgayTaoPN <= lastDayOfMonth) && (pn.TrangThai == "1")
                           select new
                           {
-                              hd.ThanhTien
+                              pn.ThanhTien
                           };
             double reusultDT = 0;
             foreach (var i in truyvan)
@@ -170,16 +171,20 @@ namespace Do_an_Winform.DAL
             return reusultDT;
         }
         //Hàm lấy ra ngày đầu tiên của tháng
-        public static DateTime GetFirstDayOfMonth(int iMonth)
+        public static DateTime GetFirstDayOfMonth(string strMonth, string strYear)
         {
-            DateTime dtResult = new DateTime(DateTime.Now.Year, iMonth, 1);
+            int iMonth = int.Parse(strMonth);
+            int iYear = int.Parse(strYear);
+            DateTime dtResult = new DateTime(iYear, iMonth, 1);
             dtResult = dtResult.AddDays((-dtResult.Day) + 1);
             return dtResult;
         }
         //Hàm lấy ra ngày cuối cùng của tháng
-        public static DateTime GetLastDayOfMonth(int iMonth)
+        public static DateTime GetLastDayOfMonth(string strMonth, string strYear)
         {
-            DateTime dtResult = new DateTime(DateTime.Now.Year, iMonth, 1);
+            int iMonth = int.Parse(strMonth);
+            int iYear = int.Parse(strYear);
+            DateTime dtResult = new DateTime(iYear, iMonth, 1);
             dtResult = dtResult.AddMonths(1);
             dtResult = dtResult.AddDays(-(dtResult.Day));
             return dtResult;

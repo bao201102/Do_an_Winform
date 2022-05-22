@@ -22,13 +22,25 @@ namespace Do_an_Winform.BLL
         {
             return PhieuNhapHangDAL.ThongKeChiPhiTheoTDHT(today);
         }
-        public static double ThongKeChiPhiTheoQuy(int quyTK)
+        public static double ThongKeChiPhiTheoNam(string namTK)
         {
-            return PhieuNhapHangDAL.ThongKeChiPhiTheoQuy(quyTK);
+            return PhieuNhapHangDAL.ThongKeChiPhiTheoNam(namTK);
         }
-        public static double ThongKeChiPhiTheoThang(int thangTK)
+        public static double ThongKeChiPhiTheoQuy(string quyTK, string namTK)
         {
-            return PhieuNhapHangDAL.ThongKeChiPhiTheoThang(thangTK);
+            return PhieuNhapHangDAL.ThongKeChiPhiTheoQuy(quyTK, namTK);
+        }
+        public static double ThongKeChiPhiTheoThang(string thangTK, string namTK)
+        {
+            return PhieuNhapHangDAL.ThongKeChiPhiTheoThang(thangTK, namTK);
+        }
+        public static DateTime GetFirstDayOfMonth(string iMonth, string iYear)
+        {
+            return PhieuNhapHangDAL.GetFirstDayOfMonth(iMonth, iYear);
+        }
+        public static DateTime GetLastDayOfMonth(string iMonth, string iYear)
+        {
+            return PhieuNhapHangDAL.GetLastDayOfMonth(iMonth, iYear);
         }
         public static string CountMaPN()
         {

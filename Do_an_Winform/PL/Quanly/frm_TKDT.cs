@@ -69,6 +69,7 @@ namespace Do_an_Winform.PL.Quanly
                 cbThangTK.Text = "Tất Cả";
 
                 txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoNam(txtNamTK.Text).ToString();
+                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoNam(txtNamTK.Text).ToString();
             }
             if (cbHTTK.Text == "Quý")
             {
@@ -76,8 +77,8 @@ namespace Do_an_Winform.PL.Quanly
                 cbThangTK.Enabled = false;
                 cbQuyTK.Text = cbQuyTK.SelectedItem.ToString();
                 cbThangTK.Text = "Tất cả";
-
                 txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoQuy(cbQuyTK.SelectedItem.ToString(), txtNamTK.Text).ToString();
+                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoQuy(cbQuyTK.SelectedItem.ToString(), txtNamTK.Text).ToString();
             }
             if (cbHTTK.Text == "Tháng")
             {
@@ -89,8 +90,10 @@ namespace Do_an_Winform.PL.Quanly
                     cbThangTK.Items.AddRange(allmonth);
                 }
                 cbQuyTK.Enabled = false;
-                //txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
+                txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
+                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
             }
+            txtLoiNhuan.Text = (double.Parse(txtDoanhThu.Text) - double.Parse(txtChiPhi.Text)).ToString();
         }
         public int LayQuy(string month)
         {
