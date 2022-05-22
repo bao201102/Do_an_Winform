@@ -15,6 +15,7 @@ namespace Do_an_Winform.PL.Quanly.QLSP
 {
     public partial class frm_Update : Form
     {
+        internal string masp;
         public frm_Update()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace Do_an_Winform.PL.Quanly.QLSP
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            btnClose_Click(sender, e);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -48,6 +49,11 @@ namespace Do_an_Winform.PL.Quanly.QLSP
             {
                 Close();
             }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SanPhamDTO productDTO = new SanPhamDTO();
         }
     }
 }

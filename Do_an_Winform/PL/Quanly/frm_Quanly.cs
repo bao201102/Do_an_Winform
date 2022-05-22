@@ -169,26 +169,20 @@ namespace Do_an_Winform.PL.Quanly
         {
             OpenChildForm(new frm_QLSP());
         }
-
-        //                             Đối tác - Nhân viên
        
         private void btDoiTac_NV_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new frm_DoiTacNV());
+            OpenChildForm(new frm_DoiTacNV());
         }
-
-        //                             Đối tác - Khách hàng
 
         private void btDoiTac_KH_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new frm_DoiTacKH());
+            OpenChildForm(new frm_DoiTacKH());
         }
-
-        //                             Đối tác - nhà cung cấp
 
         private void btDoiTac_NCC_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new frm_DoiTacNCC());
+            OpenChildForm(new frm_DoiTacNCC());
         }
 
         private void btnQLTK_Click(object sender, EventArgs e)
