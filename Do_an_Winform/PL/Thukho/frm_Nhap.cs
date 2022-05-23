@@ -48,6 +48,8 @@ namespace Do_an_Winform.PL.Thukho
             cbbTenSP.ValueMember = "MaSP";
 
             lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
+
+            DatePicker.Value = DateTime.Now;
         }
 
         private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -204,7 +206,8 @@ namespace Do_an_Winform.PL.Thukho
 
             if (PhieuNhapHangBLL.AddPhieuNhap(phieuNhapHangDTO))
             {
-                bunifuSnackbar1.Show(new frm_Thukho(taikhoan), "Bạn đã lưu phiếu nhập vào hệ thống thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                bunifuSnackbar1.Show(new frm_Thukho(taikhoan), "Bạn đã lưu phiếu nhập vào hệ thống thành công",
+                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                 AddChiTiet(count);
             }
         }
@@ -223,6 +226,8 @@ namespace Do_an_Winform.PL.Thukho
 
             if (PhieuNhapHangBLL.AddPhieuNhap(phieuNhapHangDTO))
             {
+                bunifuSnackbar1.Show(new frm_Thukho(taikhoan), "Bạn đã lưu phiếu nhập vào hệ thống thành công", 
+                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                 AddChiTiet(count);
             }
 

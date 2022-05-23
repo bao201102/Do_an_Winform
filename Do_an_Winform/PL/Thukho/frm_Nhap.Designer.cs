@@ -678,7 +678,6 @@ namespace Do_an_Winform.PL.Thukho
             this.cbbTenSP.Name = "cbbTenSP";
             this.cbbTenSP.Size = new System.Drawing.Size(236, 29);
             this.cbbTenSP.TabIndex = 35;
-            this.cbbTenSP.SelectedIndexChanged += new System.EventHandler(this.cbbTenSP_SelectedIndexChanged);
             this.cbbTenSP.SelectionChangeCommitted += new System.EventHandler(this.cbbTenSP_SelectionChangeCommitted);
             this.cbbTenSP.TextChanged += new System.EventHandler(this.cbbTenSP_TextChanged);
             // 

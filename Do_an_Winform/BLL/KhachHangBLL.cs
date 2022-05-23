@@ -35,6 +35,10 @@ namespace Do_an_Winform.BLL
         {
             return KhachHangDAL.GetCustomerByPhone(phone);
         }
+        public static bool UpdateInfoCustomer(KhachHangDTO kh)
+        {
+            return KhachHangDAL.UpdateInfoCustomer(kh);
+        }
 
     }
 }
