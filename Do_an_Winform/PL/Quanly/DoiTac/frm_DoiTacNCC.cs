@@ -19,23 +19,13 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             InitializeComponent();
         }
 
-        private void btTimKiemNCC_Click(object sender, EventArgs e)
+        private void frm_DoiTacNCC_Load(object sender, EventArgs e)
         {
-            string name = txtTimKiemNCC.Text;
-            if (name != "")
-            {
-                List<NhaCungCapDTO> list = NhaCungCapBLL.GetSupplyWithName(name);
-                dgNhaCungCap.DataSource = list;
-            }
-            else
-            {
-                List<NhaCungCapDTO> list = NhaCungCapBLL.GetAllSupply();
-                dgNhaCungCap.DataSource = list;
-            }
+            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupply();
             dgNhaCungCap.ReadOnly = true;
             dgNhaCungCap.AllowUserToResizeColumns = false;
             dgNhaCungCap.AllowUserToResizeRows = false;
-            dgNhaCungCap.Columns[0].HeaderText = "Mã nhà cung cấp";
+            dgNhaCungCap.Columns[0].Visible = false;
             dgNhaCungCap.Columns[1].HeaderText = "Tên nhà cung cấp";
         }
 
@@ -43,11 +33,21 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
         {
             frm_ThemNCC form = new frm_ThemNCC();
             form.ShowDialog();
+            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupply();
         }
 
-        private void dgNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void txtFind_TextChange(object sender, EventArgs e)
         {
-            txtTimKiemNCC.Text = dgNhaCungCap.SelectedCells[0].OwningRow.Cells["TenNCC"].Value.ToString();
+            try
+            {
+                dgNhaCungCap.DataSource = NhaCungCapBLL.GetSupplyWithName(txtFind.Text);
+                dgNhaCungCap.Columns[0].Visible = false;
+                dgNhaCungCap.Columns[1].HeaderText = "Tên nhà cung cấp";
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }
