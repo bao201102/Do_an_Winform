@@ -156,7 +156,7 @@
             this.txtFind.Padding = new System.Windows.Forms.Padding(3);
             this.txtFind.PasswordChar = '\0';
             this.txtFind.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtFind.PlaceholderText = "Tìm kiếm tên khách hàng";
+            this.txtFind.PlaceholderText = "Tìm kiếm tên nhà cung cấp";
             this.txtFind.ReadOnly = false;
             this.txtFind.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtFind.SelectedText = "";
@@ -170,7 +170,7 @@
             this.txtFind.TextMarginBottom = 0;
             this.txtFind.TextMarginLeft = 3;
             this.txtFind.TextMarginTop = 1;
-            this.txtFind.TextPlaceholder = "Tìm kiếm tên khách hàng";
+            this.txtFind.TextPlaceholder = "Tìm kiếm tên nhà cung cấp";
             this.txtFind.UseSystemPasswordChar = false;
             this.txtFind.WordWrap = true;
             this.txtFind.TextChange += new System.EventHandler(this.txtFind_TextChange);
