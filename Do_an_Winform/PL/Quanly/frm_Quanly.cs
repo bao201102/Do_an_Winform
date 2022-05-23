@@ -189,5 +189,20 @@ namespace Do_an_Winform.PL.Quanly
         {
             OpenChildForm(new frm_QLTK());
         }
+
+        private void btnHDNH_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_HDNH());
+        }
+
+        private void btnHDBH_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_HDBH());
+        }
+
+        private void btnQLDoanhThu_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_TKDT());
+        }
     }
 }
