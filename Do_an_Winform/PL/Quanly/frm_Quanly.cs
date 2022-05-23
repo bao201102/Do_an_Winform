@@ -202,6 +202,7 @@ namespace Do_an_Winform.PL.Quanly
 
         private void btnQLDoanhThu_Click(object sender, EventArgs e)
         {
+            //test
             OpenChildForm(new frm_TKDT());
         }
     }
