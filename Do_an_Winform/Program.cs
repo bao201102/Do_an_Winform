@@ -19,11 +19,7 @@ namespace Do_an_Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
-            Application.Run(new frm_HDNH());
-=======
             Application.Run(new frm_DangNhap());
->>>>>>> Stashed changes
         }
     }
 }
