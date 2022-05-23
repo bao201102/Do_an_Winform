@@ -80,6 +80,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnCreateRP.Size = new System.Drawing.Size(100, 50);
             this.btnCreateRP.TabIndex = 19;
             this.btnCreateRP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCreateRP.Click += new System.EventHandler(this.btnCreateRP_Click);
             // 
             // btnInsert
             // 
