@@ -10,7 +10,7 @@ namespace Do_an_Winform.BLL
 {
     public class KhachHangBLL
     {
-        public static List<KhachHangDTO> GetAllCustomer()
+        public static List<object> GetAllCustomer()
         {
             return KhachHangDAL.GetAllCustomer();
         }
@@ -22,9 +22,9 @@ namespace Do_an_Winform.BLL
         {
             return KhachHangDAL.AddNewCustomer(kh);
         }
-        public static List<KhachHangDTO> GetCustomerWithName(string name)
+        public static List<object> GetCustomerByName(string name)
         {
-            return KhachHangDAL.GetCustomerWithName(name);
+            return KhachHangDAL.GetCustomerByName(name);
         }
         public static bool AddCustomer(KhachHangDTO dto)
         {

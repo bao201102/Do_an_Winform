@@ -10,26 +10,32 @@ namespace Do_an_Winform.DAL
 {
     public class KhachHangDAL
     { 
-        public static List<KhachHangDTO> GetAllCustomer()
+        public static List<object> GetAllCustomer()
         {
             CHDTEntities1 entities = new CHDTEntities1();
-            var customers = from kh in entities.KhachHangs
-                            join loaitv in entities.LoaiThanhViens
-                            on kh.MaLoaiTVien equals loaitv.MaLoaiTVien
-                            where kh.TrangThai == "1"
-                            select kh;
-            List<KhachHangDTO> khachHangDTOs = new List<KhachHangDTO>();
-            foreach(KhachHang ctm in customers)
+            List<object> list = new List<object>();
+
+            var query = from kh in entities.KhachHangs
+                        join ltv in entities.LoaiThanhViens
+                        on kh.MaLoaiTVien equals ltv.MaLoaiTVien
+                        where kh.TrangThai == "1"
+                        select new
+                        {
+                            kh.MaKH,
+                            kh.TenKH,
+                            kh.GioiTinh,
+                            kh.Email,
+                            kh.SĐT,
+                            kh.DiaChi,
+                            ltv.TenLoaiTVien,
+                            kh.DiemTichLuy,
+                        };
+
+            foreach (var item in query)
             {
-                if(ctm.TrangThai == "1")
-                {
-                    var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHang, KhachHangDTO>());
-                    var mapper = new Mapper(config);
-                    KhachHangDTO khachhang = mapper.Map<KhachHangDTO>(ctm);
-                    khachHangDTOs.Add(khachhang);
-                }
+                list.Add(item);
             }
-            return khachHangDTOs;
+            return list;
         }
         public static List<KhachHangDTO> GetCusByTxtNameChanged(string txtNameChanged)
         {
@@ -59,19 +65,30 @@ namespace Do_an_Winform.DAL
             entities.KhachHangs.Add(khachHang);
             return entities.SaveChanges() > 0 ? true : false;
         }
-        public static List<KhachHangDTO> GetCustomerWithName(string name)
+        public static List<object> GetCustomerByName(string name)
         {
-            CHDTEntities1 data = new CHDTEntities1();
-            var khachhang = from kh in data.KhachHangs
-                                   where kh.TenKH.Contains(name.Trim().ToLower()) && kh.TrangThai == "1"
-                                   select kh;
-            List<KhachHangDTO> list = new List<KhachHangDTO>();
-            foreach(KhachHang kh in khachhang)
+            CHDTEntities1 entities = new CHDTEntities1();
+            List<object> list = new List<object>();
+
+            var query = from kh in entities.KhachHangs
+                        join ltv in entities.LoaiThanhViens
+                        on kh.MaLoaiTVien equals ltv.MaLoaiTVien
+                        where kh.TenKH.Contains(name) && kh.TrangThai == "1"
+                        select new
+                        {
+                            kh.MaKH,
+                            kh.TenKH,
+                            kh.GioiTinh,
+                            kh.Email,
+                            kh.SĐT,
+                            kh.DiaChi,
+                            kh.LoaiThanhVien,
+                            kh.DiemTichLuy,
+                        };
+
+            foreach (var item in query)
             {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHang, KhachHangDTO>());
-                var mapper = new Mapper(config);
-                KhachHangDTO dto = mapper.Map<KhachHangDTO>(kh);
-                list.Add(dto);
+                list.Add(item);
             }
             return list;
         }

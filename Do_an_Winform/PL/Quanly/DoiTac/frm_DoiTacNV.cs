@@ -19,42 +19,51 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             InitializeComponent();
         }
 
-        private void btTimKiemNhanVien_Click(object sender, EventArgs e)
+        private void frm_DoiTacNV_Load(object sender, EventArgs e)
         {
-            string name = txtTimKiemNhanVien.Text;
-            if (name != "")
-            {
-                List<NhanVienDTO> list = NhanVienBLL.GetEmployeeWithName(name);
-                dgNhanVien.DataSource = list;
-            }
-            else
-            {
-                List<NhanVienDTO> list = NhanVienBLL.GetAllEmployee();
-                dgNhanVien.DataSource = list;
-            }
+            dgNhanVien.DataSource = NhanVienBLL.GetAllEmployee();
+
             dgNhanVien.ReadOnly = true;
             dgNhanVien.AllowUserToResizeColumns = false;
             dgNhanVien.AllowUserToResizeRows = false;
-            dgNhanVien.Columns[0].HeaderText = "Mã nhân viên";
+
+            dgNhanVien.Columns[0].Visible = false;
             dgNhanVien.Columns[1].HeaderText = "Tên nhân viên";
             dgNhanVien.Columns[2].HeaderText = "Giới tính";
             dgNhanVien.Columns[3].HeaderText = "Email";
             dgNhanVien.Columns[4].HeaderText = "Số điện thoại";
             dgNhanVien.Columns[5].HeaderText = "Địa chỉ";
-            dgNhanVien.Columns[6].HeaderText = "Mã loại nhân viên";
-            dgNhanVien.Columns[7].HeaderText = "Mã người dùng";
-            dgNhanVien.Columns[8].HeaderText = "Trạng thái";
+            dgNhanVien.Columns[6].HeaderText = "Loại nhân viên";
+            dgNhanVien.Columns[7].HeaderText = "Tài khoản";
         }
 
         private void btThemNV_Click(object sender, EventArgs e)
         {
             frm_ThemNV form = new frm_ThemNV();
             form.ShowDialog();
+            dgNhanVien.DataSource = NhanVienBLL.GetAllEmployee();
         }
 
-        private void dgNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void txtFind_TextChange(object sender, EventArgs e)
         {
-            txtTimKiemNhanVien.Text = dgNhanVien.SelectedCells[0].OwningRow.Cells["TenNV"].Value.ToString();
+            try
+            {
+                dgNhanVien.DataSource = NhanVienBLL.GetEmployeeByName(txtFind.Text);
+
+                dgNhanVien.Columns[0].Visible = false;
+                dgNhanVien.Columns[1].HeaderText = "Tên nhân viên";
+                dgNhanVien.Columns[2].HeaderText = "Giới tính";
+                dgNhanVien.Columns[3].HeaderText = "Email";
+                dgNhanVien.Columns[4].HeaderText = "Số điện thoại";
+                dgNhanVien.Columns[5].HeaderText = "Địa chỉ";
+                dgNhanVien.Columns[6].HeaderText = "Loại nhân viên";
+                dgNhanVien.Columns[7].HeaderText = "Tài khoản";
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Do_an_Winform.PL.Nhanvien
 {
     public partial class UserControlDKThanhVien : UserControl
     {
-        List<KhachHangDTO> listKH = new List<KhachHangDTO>();
+        List<object> listKH = new List<object>();
         public UserControlDKThanhVien()
         {
             InitializeComponent();

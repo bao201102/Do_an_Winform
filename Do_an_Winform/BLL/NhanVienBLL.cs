@@ -20,12 +20,12 @@ namespace Do_an_Winform.BLL
             return NhanVienDAL.GetEmployeeById(manv);
         }
 
-        public static List<NhanVienDTO> GetEmployeeWithName(string name)
+        public static List<object> GetEmployeeByName(string name)
         {
-            return NhanVienDAL.GetEmployeeWithName(name);
+            return NhanVienDAL.GetEmployeeByName(name);
         }
 
-        public static List<NhanVienDTO> GetAllEmployee()
+        public static List<object> GetAllEmployee()
         {
             return NhanVienDAL.GetAllEmployee();
         }

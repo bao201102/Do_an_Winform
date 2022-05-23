@@ -22,7 +22,7 @@ namespace Do_an_Winform.PL.Nhanvien
         LoaiSanPhamDTO loaisp = new LoaiSanPhamDTO();
         NhaSanXuatDTO nhasx = new NhaSanXuatDTO();
         List<SanPhamDTO> listSP = new List<SanPhamDTO>();
-        List<KhachHangDTO> listKH = new List<KhachHangDTO>();
+        List<object> listKH = new List<object>();
         KhachHangDTO khachHang = new KhachHangDTO();
         LoaiThanhVienDTO loaitv = new LoaiThanhVienDTO();
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();

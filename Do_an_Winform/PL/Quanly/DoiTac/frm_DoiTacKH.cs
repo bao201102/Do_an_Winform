@@ -19,42 +19,50 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             InitializeComponent();
         }
 
-        private void btTimKiemKhachHang_Click(object sender, EventArgs e)
+        private void frm_DoiTacKH_Load(object sender, EventArgs e)
         {
-            string name = txtTimKiemKhachHang.Text;
-            if (name != "")
-            {
-                List<KhachHangDTO> list = KhachHangBLL.GetCustomerWithName(name);
-                dgKhachHang.DataSource = list;
-            }
-            else
-            {
-                List<KhachHangDTO> list = KhachHangBLL.GetAllCustomer();
-                dgKhachHang.DataSource = list;
-            }
+            dgKhachHang.DataSource = KhachHangBLL.GetAllCustomer();
+
             dgKhachHang.ReadOnly = true;
             dgKhachHang.AllowUserToResizeColumns = false;
             dgKhachHang.AllowUserToResizeRows = false;
-            dgKhachHang.Columns[0].HeaderText = "Mã khách hàng";
+
+            dgKhachHang.Columns[0].Visible = false;
             dgKhachHang.Columns[1].HeaderText = "Tên khách hàng";
             dgKhachHang.Columns[2].HeaderText = "Giới tính";
             dgKhachHang.Columns[3].HeaderText = "Email";
             dgKhachHang.Columns[4].HeaderText = "Số điện thoại";
             dgKhachHang.Columns[5].HeaderText = "Địa chỉ";
-            dgKhachHang.Columns[6].HeaderText = "Mã loại thành viên";
+            dgKhachHang.Columns[6].HeaderText = "Loại thành viên";
             dgKhachHang.Columns[7].HeaderText = "Điểm tích lũy";
-            dgKhachHang.Columns[8].HeaderText = "Trạng thái";
         }
 
         private void btThemKH_Click(object sender, EventArgs e)
         {
             frm_ThemKH form = new frm_ThemKH();
             form.ShowDialog();
+            dgKhachHang.DataSource = KhachHangBLL.GetAllCustomer();
         }
 
-        private void dgKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void txtFind_TextChange(object sender, EventArgs e)
         {
-            txtTimKiemKhachHang.Text = dgKhachHang.SelectedCells[0].OwningRow.Cells["TenKH"].Value.ToString();
+            try
+            {
+                dgKhachHang.DataSource = KhachHangBLL.GetCustomerByName(txtFind.Text);
+
+                dgKhachHang.Columns[0].HeaderText = "Tên khách hàng";
+                dgKhachHang.Columns[1].HeaderText = "Giới tính";
+                dgKhachHang.Columns[2].HeaderText = "Email";
+                dgKhachHang.Columns[3].HeaderText = "Số điện thoại";
+                dgKhachHang.Columns[4].HeaderText = "Địa chỉ";
+                dgKhachHang.Columns[5].HeaderText = "Loại thành viên";
+                dgKhachHang.Columns[6].HeaderText = "Điểm tích lũy";
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }
