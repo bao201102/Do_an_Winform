@@ -30,21 +30,23 @@ namespace Do_an_Winform.PL.Quanly
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_HDNH));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.gvHDNH = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.DatePickerEndDay = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnViewReport = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.DatePickerStartDay = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.lblStartDay = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblEndDay = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -54,8 +56,6 @@ namespace Do_an_Winform.PL.Quanly
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSnackbarHDNH = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
-            this.DatePickerEndDay = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.DatePickerStartDay = new Bunifu.UI.WinForms.BunifuDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.gvHDNH)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
@@ -65,9 +65,9 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.gvHDNH.AllowCustomTheming = false;
             this.gvHDNH.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.gvHDNH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.gvHDNH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gvHDNH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -76,14 +76,14 @@ namespace Do_an_Winform.PL.Quanly
             this.gvHDNH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gvHDNH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gvHDNH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvHDNH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvHDNH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gvHDNH.ColumnHeadersHeight = 40;
             this.gvHDNH.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.gvHDNH.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -103,14 +103,14 @@ namespace Do_an_Winform.PL.Quanly
             this.gvHDNH.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gvHDNH.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.gvHDNH.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvHDNH.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvHDNH.DefaultCellStyle = dataGridViewCellStyle3;
             this.gvHDNH.EnableHeadersVisualStyles = false;
             this.gvHDNH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.gvHDNH.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -148,6 +148,34 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(477, 141);
             this.bunifuGradientPanel2.TabIndex = 72;
             // 
+            // DatePickerEndDay
+            // 
+            this.DatePickerEndDay.BackColor = System.Drawing.Color.Transparent;
+            this.DatePickerEndDay.BorderColor = System.Drawing.Color.Silver;
+            this.DatePickerEndDay.BorderRadius = 7;
+            this.DatePickerEndDay.Color = System.Drawing.Color.Silver;
+            this.DatePickerEndDay.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.DatePickerEndDay.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DatePickerEndDay.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.DatePickerEndDay.DisabledColor = System.Drawing.Color.Gray;
+            this.DatePickerEndDay.DisplayWeekNumbers = false;
+            this.DatePickerEndDay.DPHeight = 0;
+            this.DatePickerEndDay.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DatePickerEndDay.FillDatePicker = false;
+            this.DatePickerEndDay.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatePickerEndDay.ForeColor = System.Drawing.Color.Black;
+            this.DatePickerEndDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DatePickerEndDay.Icon = ((System.Drawing.Image)(resources.GetObject("DatePickerEndDay.Icon")));
+            this.DatePickerEndDay.IconColor = System.Drawing.Color.Gray;
+            this.DatePickerEndDay.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.DatePickerEndDay.LeftTextMargin = 5;
+            this.DatePickerEndDay.Location = new System.Drawing.Point(140, 47);
+            this.DatePickerEndDay.MinimumSize = new System.Drawing.Size(4, 32);
+            this.DatePickerEndDay.Name = "DatePickerEndDay";
+            this.DatePickerEndDay.Size = new System.Drawing.Size(220, 34);
+            this.DatePickerEndDay.TabIndex = 81;
+            this.DatePickerEndDay.Value = new System.DateTime(2022, 5, 16, 13, 37, 0, 0);
+            // 
             // btnViewReport
             // 
             this.btnViewReport.ActiveBorderThickness = 1;
@@ -173,6 +201,35 @@ namespace Do_an_Winform.PL.Quanly
             this.btnViewReport.Size = new System.Drawing.Size(136, 52);
             this.btnViewReport.TabIndex = 43;
             this.btnViewReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnViewReport.Click += new System.EventHandler(this.btnViewReport_Click);
+            // 
+            // DatePickerStartDay
+            // 
+            this.DatePickerStartDay.BackColor = System.Drawing.Color.Transparent;
+            this.DatePickerStartDay.BorderColor = System.Drawing.Color.Silver;
+            this.DatePickerStartDay.BorderRadius = 7;
+            this.DatePickerStartDay.Color = System.Drawing.Color.Silver;
+            this.DatePickerStartDay.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.DatePickerStartDay.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DatePickerStartDay.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.DatePickerStartDay.DisabledColor = System.Drawing.Color.Gray;
+            this.DatePickerStartDay.DisplayWeekNumbers = false;
+            this.DatePickerStartDay.DPHeight = 0;
+            this.DatePickerStartDay.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DatePickerStartDay.FillDatePicker = false;
+            this.DatePickerStartDay.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatePickerStartDay.ForeColor = System.Drawing.Color.Black;
+            this.DatePickerStartDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DatePickerStartDay.Icon = ((System.Drawing.Image)(resources.GetObject("DatePickerStartDay.Icon")));
+            this.DatePickerStartDay.IconColor = System.Drawing.Color.Gray;
+            this.DatePickerStartDay.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.DatePickerStartDay.LeftTextMargin = 5;
+            this.DatePickerStartDay.Location = new System.Drawing.Point(140, 5);
+            this.DatePickerStartDay.MinimumSize = new System.Drawing.Size(4, 32);
+            this.DatePickerStartDay.Name = "DatePickerStartDay";
+            this.DatePickerStartDay.Size = new System.Drawing.Size(220, 34);
+            this.DatePickerStartDay.TabIndex = 80;
+            this.DatePickerStartDay.Value = new System.DateTime(2022, 5, 16, 13, 37, 0, 0);
             // 
             // lblStartDay
             // 
@@ -272,26 +329,26 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTongCong.Modified = false;
             this.txtTongCong.Multiline = false;
             this.txtTongCong.Name = "txtTongCong";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtTongCong.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtTongCong.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtTongCong.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtTongCong.OnIdleState = stateProperties12;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTongCong.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtTongCong.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTongCong.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTongCong.OnIdleState = stateProperties4;
             this.txtTongCong.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTongCong.PasswordChar = '\0';
             this.txtTongCong.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -368,26 +425,26 @@ namespace Do_an_Winform.PL.Quanly
             this.txtSearch.Modified = false;
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnIdleState = stateProperties16;
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnIdleState = stateProperties8;
             this.txtSearch.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -497,62 +554,6 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuSnackbarHDNH.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
             this.bunifuSnackbarHDNH.WarningOptions.IconLeftMargin = 12;
             this.bunifuSnackbarHDNH.ZoomCloseIcon = true;
-            // 
-            // DatePickerEndDay
-            // 
-            this.DatePickerEndDay.BackColor = System.Drawing.Color.Transparent;
-            this.DatePickerEndDay.BorderColor = System.Drawing.Color.Silver;
-            this.DatePickerEndDay.BorderRadius = 7;
-            this.DatePickerEndDay.Color = System.Drawing.Color.Silver;
-            this.DatePickerEndDay.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.DatePickerEndDay.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.DatePickerEndDay.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.DatePickerEndDay.DisabledColor = System.Drawing.Color.Gray;
-            this.DatePickerEndDay.DisplayWeekNumbers = false;
-            this.DatePickerEndDay.DPHeight = 0;
-            this.DatePickerEndDay.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DatePickerEndDay.FillDatePicker = false;
-            this.DatePickerEndDay.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatePickerEndDay.ForeColor = System.Drawing.Color.Black;
-            this.DatePickerEndDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DatePickerEndDay.Icon = ((System.Drawing.Image)(resources.GetObject("DatePickerEndDay.Icon")));
-            this.DatePickerEndDay.IconColor = System.Drawing.Color.Gray;
-            this.DatePickerEndDay.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.DatePickerEndDay.LeftTextMargin = 5;
-            this.DatePickerEndDay.Location = new System.Drawing.Point(140, 47);
-            this.DatePickerEndDay.MinimumSize = new System.Drawing.Size(4, 32);
-            this.DatePickerEndDay.Name = "DatePickerEndDay";
-            this.DatePickerEndDay.Size = new System.Drawing.Size(220, 34);
-            this.DatePickerEndDay.TabIndex = 81;
-            this.DatePickerEndDay.Value = new System.DateTime(2022, 5, 16, 13, 37, 0, 0);
-            // 
-            // DatePickerStartDay
-            // 
-            this.DatePickerStartDay.BackColor = System.Drawing.Color.Transparent;
-            this.DatePickerStartDay.BorderColor = System.Drawing.Color.Silver;
-            this.DatePickerStartDay.BorderRadius = 7;
-            this.DatePickerStartDay.Color = System.Drawing.Color.Silver;
-            this.DatePickerStartDay.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.DatePickerStartDay.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.DatePickerStartDay.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.DatePickerStartDay.DisabledColor = System.Drawing.Color.Gray;
-            this.DatePickerStartDay.DisplayWeekNumbers = false;
-            this.DatePickerStartDay.DPHeight = 0;
-            this.DatePickerStartDay.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DatePickerStartDay.FillDatePicker = false;
-            this.DatePickerStartDay.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatePickerStartDay.ForeColor = System.Drawing.Color.Black;
-            this.DatePickerStartDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DatePickerStartDay.Icon = ((System.Drawing.Image)(resources.GetObject("DatePickerStartDay.Icon")));
-            this.DatePickerStartDay.IconColor = System.Drawing.Color.Gray;
-            this.DatePickerStartDay.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.DatePickerStartDay.LeftTextMargin = 5;
-            this.DatePickerStartDay.Location = new System.Drawing.Point(140, 5);
-            this.DatePickerStartDay.MinimumSize = new System.Drawing.Size(4, 32);
-            this.DatePickerStartDay.Name = "DatePickerStartDay";
-            this.DatePickerStartDay.Size = new System.Drawing.Size(220, 34);
-            this.DatePickerStartDay.TabIndex = 80;
-            this.DatePickerStartDay.Value = new System.DateTime(2022, 5, 16, 13, 37, 0, 0);
             // 
             // frm_HDNH
             // 

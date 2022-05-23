@@ -1,6 +1,7 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DAL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.Quanly.BaoCao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace Do_an_Winform.PL.Quanly
 {
     public partial class frm_HDNH : Form
     {
+        DateTime startday, endday;
         List<PhieuNhapHangDTO> listpn;
         public frm_HDNH()
         {
@@ -53,7 +55,6 @@ namespace Do_an_Winform.PL.Quanly
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DateTime startday, endday;
             try
             {
                 startday = DatePickerStartDay.Value;
@@ -96,6 +97,45 @@ namespace Do_an_Winform.PL.Quanly
                 gvHDNH.Columns[4].HeaderText = "Thành tiền";
                 gvHDNH.Columns[5].Visible = false;
                 txtTongCong.Text = PhieuNhapHangBLL.ThongKeTatCaPN(startday, endday).ToString();
+            }
+        }
+
+        private void btnViewReport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                startday = DatePickerStartDay.Value;
+                endday = DatePickerEndDay.Value;
+
+                if (endday <= startday)
+                {
+                    bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                }
+            }
+            catch (Exception)
+            {
+                bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                return;
+            }
+
+            DateTime sday = DatePickerStartDay.Value;
+            DateTime eday = DatePickerEndDay.Value;
+            if (txtSearch.Text.Trim() != "")
+            {
+                startday = DatePickerStartDay.Value;
+                endday = DatePickerEndDay.Value;
+                PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
+                pnsearch.MaPN = txtSearch.Text;
+
+                frm_XemBaoCao frm = new frm_XemBaoCao();
+                frm.rpt_HDNH_MaPN(pnsearch.MaPN, sday, eday);
+                frm.ShowDialog();
+            }
+            else
+            {
+                frm_XemBaoCao frm = new frm_XemBaoCao();
+                frm.rpt_HDNH_TatCaPN(sday, eday);
+                frm.ShowDialog();
             }
         }
     }

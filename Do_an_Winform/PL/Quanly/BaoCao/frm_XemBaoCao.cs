@@ -45,7 +45,7 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             List<HoaDonDTO> listhd = HoaDonBLL.ThongKeTheoMaHD(hdsearch, sDay, eDay);
             reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.BaoCao.rpt_HDBH.rdlc";
             reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("HoaDon_HDBH", listhd));
-            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paHD", mahd));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paMaHD", mahd));
             reportViewerResult.LocalReport.SetParameters(new ReportParameter("paStartDay", sDay.ToString("dd/MM/yyyy HH:mm")));
             reportViewerResult.LocalReport.SetParameters(new ReportParameter("paEndDay", eDay.ToString("dd/MM/yyyy HH:mm")));
             reportViewerResult.RefreshReport();
@@ -56,6 +56,28 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.BaoCao.rpt_HDBH.rdlc";
             reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("HoaDon_HDBH", listhd));
             reportViewerResult.LocalReport.SetParameters(new ReportParameter("paMaHD", "Tất cả"));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paStartDay", sDay.ToString("dd/MM/yyyy HH:mm")));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paEndDay", eDay.ToString("dd/MM/yyyy HH:mm")));
+            reportViewerResult.RefreshReport();
+        }
+        public void rpt_HDNH_MaPN(string mapn, DateTime sDay, DateTime eDay)
+        {
+            PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
+            pnsearch.MaPN = mapn;
+            List<PhieuNhapHangDTO> listpn = PhieuNhapHangBLL.ThongKeTheoMaPN(pnsearch, sDay, eDay);
+            reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.BaoCao.rpt_HDNH.rdlc";
+            reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("PhieuNhapHang_HDNH", listpn));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paMaPN", mapn));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paStartDay", sDay.ToString("dd/MM/yyyy HH:mm")));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paEndDay", eDay.ToString("dd/MM/yyyy HH:mm")));
+            reportViewerResult.RefreshReport();
+        }
+        public void rpt_HDNH_TatCaPN(DateTime sDay, DateTime eDay)
+        {
+            List<PhieuNhapHangDTO> listpn = PhieuNhapHangBLL.ThongKeTatCaPN(sDay, eDay);
+            reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.BaoCao.rpt_HDNH.rdlc";
+            reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("PhieuNhapHang_HDNH", listpn));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paMaPN", "Tất cả"));
             reportViewerResult.LocalReport.SetParameters(new ReportParameter("paStartDay", sDay.ToString("dd/MM/yyyy HH:mm")));
             reportViewerResult.LocalReport.SetParameters(new ReportParameter("paEndDay", eDay.ToString("dd/MM/yyyy HH:mm")));
             reportViewerResult.RefreshReport();
