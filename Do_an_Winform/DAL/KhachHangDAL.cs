@@ -95,6 +95,26 @@ namespace Do_an_Winform.DAL
             KhachHangDTO khachHang = mapper.Map<KhachHangDTO>(cus);
             return khachHang;
         }
+        public static bool UpdateInfoCustomer(KhachHangDTO kh)
+        {
+            CHDTEntities1 entities1 = new CHDTEntities1();
+            var customer = (from ctm in entities1.KhachHangs
+                         where ctm.MaKH == kh.MaKH
+                         select ctm).Single();
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHangDTO, KhachHang>());
+            var mapper = new Mapper(config);
+            KhachHang khachHang = mapper.Map<KhachHang>(customer);
+            khachHang.MaKH = kh.MaKH;
+            khachHang.TenKH = kh.TenKH;
+            khachHang.GioiTinh = kh.GioiTinh;
+            khachHang.Email = kh.Email;
+            khachHang.SĐT = kh.SĐT;
+            khachHang.DiaChi = kh.DiaChi;
+            khachHang.MaLoaiTVien = kh.MaLoaiTVien;
+            khachHang.DiemTichLuy = kh.DiemTichLuy;
+            khachHang.TrangThai = kh.TrangThai;
+            return entities1.SaveChanges() > 0 ? true : false;
+        }
 
     }
 }

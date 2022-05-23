@@ -196,6 +196,28 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     MessageBox.Show("Có lỗi xảy ra");
                 }
+                if(rbThanhVien.Checked == true)
+                {
+                    khachHang = KhachHangDAL.GetCustomerByPhone(txtSDT.Text);
+                    khachHang.DiemTichLuy += 50;
+                    if(khachHang.DiemTichLuy <= 100)
+                    {
+                        khachHang.MaLoaiTVien = "LTV001";
+                    }else if(khachHang.DiemTichLuy > 100 && khachHang.DiemTichLuy <= 200)
+                    {
+                        khachHang.MaLoaiTVien = "LTV002";
+                    }else if(khachHang.DiemTichLuy > 200 && khachHang.DiemTichLuy <= 400)
+                    {
+                        khachHang.MaLoaiTVien = "LTV003";
+                    }else
+                    {
+                        khachHang.MaLoaiTVien = "LTV004";
+                    }
+                    if(KhachHangDAL.UpdateInfoCustomer(new KhachHangDTO(khachHang.MaKH, khachHang.TenKH, khachHang.GioiTinh, khachHang.Email, khachHang.SĐT, khachHang.DiaChi, khachHang.MaLoaiTVien, khachHang.TrangThai, khachHang.DiemTichLuy)))
+                    {
+                        MessageBox.Show("Tích điểm thành công");
+                    }
+                }
             }
         }
         
@@ -307,8 +329,6 @@ namespace Do_an_Winform.PL.Nhanvien
                 }
                 if (count == 0)
                 {
-                    //sum += int.Parse(TachThanhTien(lblTotal2.Text));
-                    //lblTotalBuy.Text = sum.ToString() + "đ";
                     sp = SanPhamDAL.GetProductByName(cbTenSP.Text);
                     nhasx = NhaSanXuatDAL.GetManufacById(sp.MaNhaSX);
                     dataTable.Rows.Add(cbTenSP.Text, txtSL.Text, lblPrice2.Text, nhasx.TenNhaSX, lblTotal2.Text);
@@ -456,7 +476,5 @@ namespace Do_an_Winform.PL.Nhanvien
                 }
             }
         }
-
-        
     }
 }
