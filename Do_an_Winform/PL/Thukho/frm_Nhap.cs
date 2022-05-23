@@ -17,6 +17,7 @@ namespace Do_an_Winform.PL.Thukho
     public partial class frm_Nhap : Form
     {
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+
         public frm_Nhap(TaiKhoanDTO user)
         {
             InitializeComponent();
@@ -70,6 +71,7 @@ namespace Do_an_Winform.PL.Thukho
             }
             catch (Exception)
             {
+
             }
         }
 
@@ -81,6 +83,7 @@ namespace Do_an_Winform.PL.Thukho
             }
             catch (Exception)
             {
+
             }
         }
 
@@ -160,7 +163,7 @@ namespace Do_an_Winform.PL.Thukho
             lblReturn.Font = new Font(lblReturn.Font, FontStyle.Regular);
         }
 
-        public void ChiTietPN(string count)
+        public void AddChiTiet(string count)
         {
             for (int i = 0; i < gridviewNhap.RowCount; i++)
             {
@@ -201,7 +204,8 @@ namespace Do_an_Winform.PL.Thukho
 
             if (PhieuNhapHangBLL.AddPhieuNhap(phieuNhapHangDTO))
             {
-                ChiTietPN(count);
+                bunifuSnackbar1.Show(new frm_Thukho(taikhoan), "Bạn đã lưu phiếu nhập vào hệ thống thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                AddChiTiet(count);
             }
         }
 
@@ -219,7 +223,7 @@ namespace Do_an_Winform.PL.Thukho
 
             if (PhieuNhapHangBLL.AddPhieuNhap(phieuNhapHangDTO))
             {
-                ChiTietPN(count);
+                AddChiTiet(count);
             }
 
             frm_XemBaoCao frm = new frm_XemBaoCao();
