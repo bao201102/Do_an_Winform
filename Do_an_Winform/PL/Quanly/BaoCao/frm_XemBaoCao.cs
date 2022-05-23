@@ -38,5 +38,27 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             reportViewerResult.LocalReport.SetParameters(new ReportParameter("paTenNCC", tenncc));
             reportViewerResult.RefreshReport();
         }
+        public void rpt_HDBH_MaHD(string mahd, DateTime sDay, DateTime eDay)
+        {
+            HoaDonDTO hdsearch = new HoaDonDTO();
+            hdsearch.MaHD = mahd;
+            List<HoaDonDTO> listhd = HoaDonBLL.ThongKeTheoMaHD(hdsearch, sDay, eDay);
+            reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.BaoCao.rpt_HDBH.rdlc";
+            reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("HoaDon_HDBH", listhd));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paHD", mahd));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paStartDay", sDay.ToString("dd/MM/yyyy HH:mm")));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paEndDay", eDay.ToString("dd/MM/yyyy HH:mm")));
+            reportViewerResult.RefreshReport();
+        }
+        public void rpt_HDBH_TatCaHD(DateTime sDay, DateTime eDay)
+        {
+            List<HoaDonDTO> listhd = HoaDonBLL.ThongKeTatCaHD(sDay, eDay);
+            reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.BaoCao.rpt_HDBH.rdlc";
+            reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("HoaDon_HDBH", listhd));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paMaHD", "Tất cả"));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paStartDay", sDay.ToString("dd/MM/yyyy HH:mm")));
+            reportViewerResult.LocalReport.SetParameters(new ReportParameter("paEndDay", eDay.ToString("dd/MM/yyyy HH:mm")));
+            reportViewerResult.RefreshReport();
+        }
     }
 }
