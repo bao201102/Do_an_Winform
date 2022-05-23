@@ -33,12 +33,12 @@ namespace Do_an_Winform.PL.Nhanvien
         {
             InitializeComponent();
             gridview_Load();
-            dgvProduct.MultiSelect = false;
-            dgvProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProduct.Columns[0].ReadOnly = true;
-            dgvProduct.Columns[2].ReadOnly = true;
-            dgvProduct.Columns[3].ReadOnly = true;
-            dgvProduct.Columns[4].ReadOnly = true;
+            dgvInfoProduct.MultiSelect = false;
+            dgvInfoProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvInfoProduct.Columns[0].ReadOnly = true;
+            dgvInfoProduct.Columns[2].ReadOnly = true;
+            dgvInfoProduct.Columns[3].ReadOnly = true;
+            dgvInfoProduct.Columns[4].ReadOnly = true;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -168,17 +168,17 @@ namespace Do_an_Winform.PL.Nhanvien
                     MessageBox.Show("Thêm hóa đơn thành công");
                     int count = 0;
                     
-                    for (int i = 0; i < dgvProduct.RowCount; i++)
+                    for (int i = 0; i < dgvInfoProduct.RowCount; i++)
                     {
                         ChiTietHoaDonDTO chiTietHD = new ChiTietHoaDonDTO();
                         try
                         {
-                            string tenSP = dgvProduct.Rows[i].Cells[0].Value.ToString();
+                            string tenSP = dgvInfoProduct.Rows[i].Cells[0].Value.ToString();
                             chiTietHD.MaHD = txtMaHD.Text;
                             chiTietHD.MaSP = SanPhamBLL.GetProductByName(tenSP).MaSP;
                             chiTietHD.TenSP = tenSP;
-                            chiTietHD.SoLuong = int.Parse(dgvProduct.Rows[i].Cells[1].Value.ToString());
-                            chiTietHD.ThanhTien = int.Parse(TachThanhTien(dgvProduct.Rows[i].Cells[4].Value.ToString()));
+                            chiTietHD.SoLuong = int.Parse(dgvInfoProduct.Rows[i].Cells[1].Value.ToString());
+                            chiTietHD.ThanhTien = int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[4].Value.ToString()));
                             chiTietHD.TrangThai = "1";
                             if (ChiTietHoaDonBLL.AddNewBillDetail(chiTietHD))
                             {
@@ -257,11 +257,12 @@ namespace Do_an_Winform.PL.Nhanvien
             string ngayTao = lblNgayBan.Text;
             string tenKH = txtTenKH.Text;
             string loaiTV = txtLoaiTV.Text;
+            string giamGia = lblDiscount2.Text;
             if (txtLoaiTV.Text == "")
             {
                 loaiTV = "Không";
             }
-            frm_XemHoaDon frmHD = new frm_XemHoaDon(txtMaHD.Text, tenNV, ngayTao, tenKH, loaiTV);
+            frm_XemHoaDon frmHD = new frm_XemHoaDon(txtMaHD.Text, tenNV, ngayTao, tenKH, loaiTV, giamGia);
             frmHD.Show();
         }
         private DataTable dataTable = new DataTable();
@@ -272,37 +273,85 @@ namespace Do_an_Winform.PL.Nhanvien
             dataTable.Columns.Add("Đơn giá");
             dataTable.Columns.Add("Tên nhà sản xuất");
             dataTable.Columns.Add("Thành tiền");
-            dgvProduct.DataSource = dataTable;
+            dgvInfoProduct.DataSource = dataTable;
         }
-        int total = 0;
         private void btnAdd2_Click(object sender, EventArgs e)
         {
-            total += int.Parse(TachThanhTien(lblTotal2.Text));
-            lblTotalBuy.Text = total.ToString() + "đ";
-            sp = SanPhamDAL.GetProductByName(cbTenSP.Text);
-            nhasx = NhaSanXuatDAL.GetManufacById(sp.MaNhaSX);
-            dataTable.Rows.Add(cbTenSP.Text, txtSL.Text, lblPrice2.Text, nhasx.TenNhaSX, lblTotal2.Text);
-        }
-        int sum;
-        private void dgvProduct_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            dgvProduct.SelectedRows[0].Cells[4].Value = int.Parse(dgvProduct.SelectedRows[0].Cells[1].Value.ToString())
-                * int.Parse(TachThanhTien(dgvProduct.SelectedRows[0].Cells[2].Value.ToString())) + "đ";
+            if(txtTenKH.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập thông tin khách hàng");
+            }else if(cbTenSP.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên sản phẩm");
+            }else if(txtSL.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số lượng");
+            }else
+            {
+                int sum = 0;
+                int count = 0;
+                for (int i = 0; i < dgvInfoProduct.RowCount; i++)
+                {
+                    if (cbTenSP.Text == dgvInfoProduct.Rows[i].Cells[0].Value.ToString())
+                    {
+                        count++;
+                        int soLuong = int.Parse(dgvInfoProduct.Rows[i].Cells[1].Value.ToString());
+                        soLuong = soLuong + 1;
+                        dgvInfoProduct.Rows[i].Cells[1].Value = soLuong.ToString();
+                        int donGia = int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[2].Value.ToString()));
+                        int tongCong = soLuong * donGia;
+                        int thanhTien = tongCong - (tongCong * int.Parse(TachChuoi(lblDiscount2.Text)) / 100);
+                        dgvInfoProduct.Rows[i].Cells[4].Value = thanhTien.ToString() + "đ";
+                        break;
+                    }
+                }
+                if (count == 0)
+                {
+                    //sum += int.Parse(TachThanhTien(lblTotal2.Text));
+                    //lblTotalBuy.Text = sum.ToString() + "đ";
+                    sp = SanPhamDAL.GetProductByName(cbTenSP.Text);
+                    nhasx = NhaSanXuatDAL.GetManufacById(sp.MaNhaSX);
+                    dataTable.Rows.Add(cbTenSP.Text, txtSL.Text, lblPrice2.Text, nhasx.TenNhaSX, lblTotal2.Text);
 
-            sum = 0;
-            for (int i = 0; i < dgvProduct.RowCount; i++)
+                }
+                for (int i = 0; i < dgvInfoProduct.RowCount; i++)
+                {
+                    try
+                    {
+                        sum += int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[4].Value.ToString()));
+                    }
+                    catch { }
+
+                }
+                //MessageBox.Show(sum.ToString() + "đ");
+                //txtSL.Text = dgvInfoProduct.SelectedRows[0].Cells[1].Value.ToString();
+                //lblTotal2.Text = sum.ToString() + "đ";
+                lblTotalBuy.Text = sum.ToString() + "đ";
+            }
+        }
+        private void dgvInfoProduct_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            int soLuong = int.Parse(dgvInfoProduct.SelectedRows[0].Cells[1].Value.ToString());
+            int donGia = int.Parse(dgvInfoProduct.SelectedRows[0].Cells[2].Value.ToString());
+            int chietKhau = int.Parse(TachChuoi(lblDiscount2.Text));
+            int tongCong = soLuong * donGia;
+            int thanhTien = tongCong - (tongCong * chietKhau / 100);
+            dgvInfoProduct.SelectedRows[0].Cells[4].Value = thanhTien;
+            int sum = 0;
+            for (int i = 0; i < dgvInfoProduct.RowCount; i++)
             {
                 try
                 {
-                    sum += int.Parse(TachThanhTien(dgvProduct.Rows[i].Cells[4].Value.ToString()));
+                    sum += int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[4].Value.ToString()));
                 }
-                catch {}
-                
+                catch { }
+
             }
-            txtSL.Text = dgvProduct.SelectedRows[0].Cells[1].Value.ToString();
+            txtSL.Text = dgvInfoProduct.SelectedRows[0].Cells[1].Value.ToString();
             lblTotal2.Text = sum.ToString() + "đ";
             lblTotalBuy.Text = sum.ToString() + "đ";
         }
+
         //Cập nhật thông tin khi số lượng thay đổi
         private void txtSL_TextChange(object sender, EventArgs e)
         {
@@ -388,40 +437,26 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnDelete2_Click(object sender, EventArgs e)
         {
-            if (dgvProduct.SelectedRows.Count > 0)
+            int sum = int.Parse(TachThanhTien(lblTotalBuy.Text));
+            if (dgvInfoProduct.SelectedRows.Count > 0)
             {
                 MessBox messBox = new MessBox();
                 bool result = messBox.ShowMess("Bạn có muốn xóa sản phẩm này không ?");
 
                 if (result)
                 {
-                    int thanhtien = int.Parse(TachThanhTien(dgvProduct.SelectedRows[0].Cells[4].Value.ToString()));
-                    total -= thanhtien;
-                    lblTotalBuy.Text = total.ToString() + "đ";
-                    dgvProduct.Rows.RemoveAt(dgvProduct.SelectedRows[0].Index);
+                    try
+                    {
+                        int thanhtien = int.Parse(TachThanhTien(dgvInfoProduct.SelectedRows[0].Cells[4].Value.ToString()));
+                        sum -= thanhtien;
+                        lblTotalBuy.Text = sum.ToString() + "đ";
+                        dgvInfoProduct.Rows.RemoveAt(dgvInfoProduct.SelectedRows[0].Index);
+                    }catch { }
+                    
                 }
             }
         }
 
-        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex == -1)
-            {
-                MessageBox.Show("Chưa có dữ liệu. Vui lòng thêm dữ liệu");
-            }
-            else
-            {
-                DataGridViewRow row = dgvProduct.SelectedRows[0];
-                cbTenSP.Text = row.Cells[0].Value.ToString();
-                txtSL.Text = row.Cells[1].Value.ToString();
-                lblPrice2.Text = row.Cells[2].Value.ToString();
-                lblTotal2.Text = row.Cells[4].Value.ToString();
-            }
-        }
-
-        private void btnEdit2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

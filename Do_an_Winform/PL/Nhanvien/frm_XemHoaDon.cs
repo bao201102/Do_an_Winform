@@ -19,7 +19,8 @@ namespace Do_an_Winform.PL.Nhanvien
         string ngayTao = "";
         string tenKH = "";
         string loaiTV = "";
-        public frm_XemHoaDon(string maHD1, string tenNV1, string ngayTao1, string tenKH1, string loaiTV1)
+        string giamGia = "";
+        public frm_XemHoaDon(string maHD1, string tenNV1, string ngayTao1, string tenKH1, string loaiTV1, string giamGia1)
         {
             InitializeComponent();
             maHD = maHD1;
@@ -27,6 +28,7 @@ namespace Do_an_Winform.PL.Nhanvien
             ngayTao = ngayTao1;
             tenKH = tenKH1;
             loaiTV = loaiTV1;
+            giamGia = giamGia1;
         }
 
         private void frm_XemHoaDon_Load(object sender, EventArgs e)
@@ -45,6 +47,7 @@ namespace Do_an_Winform.PL.Nhanvien
             rptHoaDon.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("NgayTao", ngayTao));
             rptHoaDon.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("TenKH", tenKH));
             rptHoaDon.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("LoaiThanhVien", loaiTV));
+            rptHoaDon.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("GiamGia", giamGia));
         }
     }
 }
