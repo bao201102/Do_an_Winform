@@ -26,12 +26,12 @@ namespace Do_an_Winform.DAL
                            where cthd.TrangThai == "1" && cthd.MaHD == maHD
                            select cthd;
             List<ChiTietHoaDonDTO> CTHDDTOs = new List<ChiTietHoaDonDTO>();
-            foreach (ChiTietHoaDon pro in detailBills)
+            foreach (ChiTietHoaDon detailbill in detailBills)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<ChiTietHoaDon, ChiTietHoaDonDTO>());
                 var mapper = new Mapper(config);
-                ChiTietHoaDonDTO sanpham = mapper.Map<ChiTietHoaDonDTO>(pro);
-                CTHDDTOs.Add(sanpham);
+                ChiTietHoaDonDTO cthd = mapper.Map<ChiTietHoaDonDTO>(detailbill);
+                CTHDDTOs.Add(cthd);
             }
             return CTHDDTOs;
         }

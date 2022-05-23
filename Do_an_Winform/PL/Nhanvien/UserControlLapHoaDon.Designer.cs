@@ -43,6 +43,7 @@
             this.dgvProduct = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.txtMaHD = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnEdit2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblTotalBuy = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblTongMua = new System.Windows.Forms.Label();
             this.txtSL = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -123,6 +124,7 @@
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(719, 591);
             this.dgvProduct.TabIndex = 13;
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             this.dgvProduct.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellEndEdit);
             // 
             // txtMaHD
@@ -210,6 +212,7 @@
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Black;
             this.bunifuPanel3.BorderRadius = 15;
             this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.btnEdit2);
             this.bunifuPanel3.Controls.Add(this.lblTotalBuy);
             this.bunifuPanel3.Controls.Add(this.lblTongMua);
             this.bunifuPanel3.Controls.Add(this.txtSL);
@@ -234,8 +237,34 @@
             this.bunifuPanel3.Location = new System.Drawing.Point(740, 292);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(331, 352);
+            this.bunifuPanel3.Size = new System.Drawing.Size(331, 387);
             this.bunifuPanel3.TabIndex = 39;
+            // 
+            // btnEdit2
+            // 
+            this.btnEdit2.ActiveBorderThickness = 1;
+            this.btnEdit2.ActiveCornerRadius = 20;
+            this.btnEdit2.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEdit2.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnEdit2.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEdit2.BackColor = System.Drawing.Color.White;
+            this.btnEdit2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEdit2.BackgroundImage")));
+            this.btnEdit2.ButtonText = "Cập nhật";
+            this.btnEdit2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit2.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit2.IdleBorderThickness = 1;
+            this.btnEdit2.IdleCornerRadius = 20;
+            this.btnEdit2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnEdit2.IdleForecolor = System.Drawing.Color.Black;
+            this.btnEdit2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnEdit2.Location = new System.Drawing.Point(130, 261);
+            this.btnEdit2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit2.Name = "btnEdit2";
+            this.btnEdit2.Size = new System.Drawing.Size(74, 31);
+            this.btnEdit2.TabIndex = 54;
+            this.btnEdit2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEdit2.Click += new System.EventHandler(this.btnEdit2_Click);
             // 
             // lblTotalBuy
             // 
@@ -358,10 +387,10 @@
             this.btnIn2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnIn2.IdleForecolor = System.Drawing.Color.Black;
             this.btnIn2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnIn2.Location = new System.Drawing.Point(244, 300);
+            this.btnIn2.Location = new System.Drawing.Point(172, 300);
             this.btnIn2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnIn2.Name = "btnIn2";
-            this.btnIn2.Size = new System.Drawing.Size(52, 33);
+            this.btnIn2.Size = new System.Drawing.Size(124, 33);
             this.btnIn2.TabIndex = 47;
             this.btnIn2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIn2.Click += new System.EventHandler(this.btnIn2_Click);
@@ -399,12 +428,13 @@
             this.btnDelete2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnDelete2.IdleForecolor = System.Drawing.Color.Black;
             this.btnDelete2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnDelete2.Location = new System.Drawing.Point(244, 261);
+            this.btnDelete2.Location = new System.Drawing.Point(232, 261);
             this.btnDelete2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete2.Name = "btnDelete2";
-            this.btnDelete2.Size = new System.Drawing.Size(60, 31);
+            this.btnDelete2.Size = new System.Drawing.Size(64, 31);
             this.btnDelete2.TabIndex = 49;
             this.btnDelete2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete2.Click += new System.EventHandler(this.btnDelete2_Click);
             // 
             // lblSum2
             // 
@@ -457,7 +487,7 @@
             this.btnAdd2.Location = new System.Drawing.Point(21, 261);
             this.btnAdd2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd2.Name = "btnAdd2";
-            this.btnAdd2.Size = new System.Drawing.Size(60, 31);
+            this.btnAdd2.Size = new System.Drawing.Size(81, 31);
             this.btnAdd2.TabIndex = 48;
             this.btnAdd2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
@@ -499,7 +529,7 @@
             this.btnThanhToan.Location = new System.Drawing.Point(21, 300);
             this.btnThanhToan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(102, 33);
+            this.btnThanhToan.Size = new System.Drawing.Size(145, 33);
             this.btnThanhToan.TabIndex = 38;
             this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
@@ -659,7 +689,6 @@
             this.txtLoaiTV.Name = "txtLoaiTV";
             this.txtLoaiTV.Size = new System.Drawing.Size(199, 20);
             this.txtLoaiTV.TabIndex = 19;
-            this.txtLoaiTV.TextChanged += new System.EventHandler(this.txtLoaiTV_TextChanged);
             // 
             // label17
             // 
@@ -698,7 +727,6 @@
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(199, 20);
             this.txtTenKH.TabIndex = 17;
-            this.txtTenKH.TextChanged += new System.EventHandler(this.txtTenKH_TextChanged);
             // 
             // rbKhachLe
             // 
@@ -859,5 +887,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtSL;
         private Bunifu.UI.WinForms.BunifuLabel lblTotalBuy;
         private System.Windows.Forms.Label lblTongMua;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnEdit2;
     }
 }

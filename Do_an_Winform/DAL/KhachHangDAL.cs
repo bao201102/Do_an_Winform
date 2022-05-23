@@ -88,7 +88,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             KhachHang cus = (from kh in entities.KhachHangs
-                                where kh.SĐT.Contains(phone) && kh.TrangThai == "1"
+                                where kh.SĐT.Equals(phone) && kh.TrangThai == "1"
                                 select kh).Single();
             var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHang, KhachHangDTO>());
             var mapper = new Mapper(config);

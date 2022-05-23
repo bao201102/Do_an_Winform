@@ -249,7 +249,7 @@ namespace Do_an_Winform.DAL
         public static SanPhamDTO GetProductEqualsName(string ten)
         {
             CHDTEntities1 entities = new CHDTEntities1();
-            var product = (from sp in entities.SanPhams
+            SanPham product = (from sp in entities.SanPhams
                            where sp.TenSP.Equals(ten) && sp.TrangThai == "1"
                            select sp).FirstOrDefault();
 
