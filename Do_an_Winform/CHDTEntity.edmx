@@ -82,6 +82,10 @@
           </Key>
           <Property Name="MaNCC" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="TenNCC" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SDT" Type="char" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+          <Property Name="TrangThai" Type="char" MaxLength="1" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -480,6 +484,10 @@
           <Property Name="MaNCC" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TenNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="PhieuNhapHangs" Relationship="Self.FK_PhieuNhapHang_NhaCungCap" FromRole="NhaCungCap" ToRole="PhieuNhapHang" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -884,6 +892,10 @@
           <EntitySetMapping Name="NhaCungCaps">
             <EntityTypeMapping TypeName="CHDTModel.NhaCungCap">
               <MappingFragment StoreEntitySet="NhaCungCap">
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
                 <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
               </MappingFragment>

@@ -201,11 +201,6 @@
     <Compile Include="BLL\PhieuNhapHangBLL.cs" />
     <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="BLL\TaiKhoanBLL.cs" />
-    <Compile Include="CHDTDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CHDTDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="CHDTEntity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -602,17 +597,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CHDTEntity.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CHDTDataSet.xsc">
-      <DependentUpon>CHDTDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CHDTDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CHDTDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CHDTDataSet.xss">
-      <DependentUpon>CHDTDataSet.xsd</DependentUpon>
-    </None>
     <None Include="CHDTEntity.edmx.diagram">
       <DependentUpon>CHDTEntity.edmx</DependentUpon>
     </None>
