@@ -259,7 +259,7 @@
             this.bunifuToggleSwitch1.AnimationSpeed = 5;
             this.bunifuToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuToggleSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuToggleSwitch1.BackgroundImage")));
-            this.bunifuToggleSwitch1.Checked = true;
+            this.bunifuToggleSwitch1.Checked = false;
             this.bunifuToggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuToggleSwitch1.InnerCirclePadding = 3;
             this.bunifuToggleSwitch1.Location = new System.Drawing.Point(470, 73);
@@ -276,12 +276,12 @@
             toggleState1.BorderThickness = 1;
             toggleState1.BorderThicknessInner = 1;
             this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState1;
-            toggleState2.BackColor = System.Drawing.Color.Empty;
-            toggleState2.BackColorInner = System.Drawing.Color.Empty;
-            toggleState2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(0)))), ((int)(((byte)(140)))));
-            toggleState2.BorderColorInner = System.Drawing.Color.Empty;
-            toggleState2.BorderRadius = 1;
-            toggleState2.BorderRadiusInner = 1;
+            toggleState2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState2.BackColorInner = System.Drawing.Color.White;
+            toggleState2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState2.BorderColorInner = System.Drawing.Color.White;
+            toggleState2.BorderRadius = 15;
+            toggleState2.BorderRadiusInner = 9;
             toggleState2.BorderThickness = 1;
             toggleState2.BorderThicknessInner = 1;
             this.bunifuToggleSwitch1.ToggleStateOff = toggleState2;
@@ -294,7 +294,7 @@
             toggleState3.BorderThickness = 1;
             toggleState3.BorderThicknessInner = 1;
             this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
-            this.bunifuToggleSwitch1.Value = true;
+            this.bunifuToggleSwitch1.Value = false;
             // 
             // titlePanel
             // 
