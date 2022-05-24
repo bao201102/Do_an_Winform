@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.DangNhap;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -62,6 +63,16 @@ namespace Do_an_Winform.PL.Quanly.QLSP
             string maloai = e.Parameters["paMaLoai"].Values[0];
             List<object> products = SanPhamBLL.GetAllProductByCat(maloai);
             e.DataSources.Add(new ReportDataSource("DSSP", products));
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            MessBox messBox = new MessBox();
+            bool result = messBox.ShowMess("Bạn muốn thoát chương trình ?");
+            if (result)
+            {
+                this.Close();
+            }
         }
     }
 }
