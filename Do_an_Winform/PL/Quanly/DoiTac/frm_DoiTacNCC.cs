@@ -21,12 +21,14 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 
         private void frm_DoiTacNCC_Load(object sender, EventArgs e)
         {
-            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupplier();
+            dgNhaCungCap.DataSource = NhaCungCapBLL.GetNhaCungCap();
             dgNhaCungCap.Columns[0].Visible = false;
             dgNhaCungCap.Columns[1].HeaderText = "Tên nhà cung cấp";
             dgNhaCungCap.Columns[2].HeaderText = "Số điện thoại";
             dgNhaCungCap.Columns[3].HeaderText = "Email";
-            dgNhaCungCap.Columns[4].HeaderText = "Dịa chỉ";
+            dgNhaCungCap.Columns[4].HeaderText = "Địa chỉ";
+            dgNhaCungCap.Columns[5].Visible = false;
+
         }
 
         private void btThemNCC_Click(object sender, EventArgs e)
@@ -40,12 +42,13 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
         {
             try
             {
-                dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupplierByName(txtFind.Text);
+                dgNhaCungCap.DataSource = NhaCungCapBLL.GetNhaCungCap();
                 dgNhaCungCap.Columns[0].Visible = false;
                 dgNhaCungCap.Columns[1].HeaderText = "Tên nhà cung cấp";
                 dgNhaCungCap.Columns[2].HeaderText = "Số điện thoại";
                 dgNhaCungCap.Columns[3].HeaderText = "Email";
-                dgNhaCungCap.Columns[4].HeaderText = "Dịa chỉ";
+                dgNhaCungCap.Columns[4].HeaderText = "Địa chỉ";
+                dgNhaCungCap.Columns[5].Visible = false;
             }
             catch (Exception)
             {

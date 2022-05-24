@@ -42,7 +42,6 @@ namespace Do_an_Winform.PL.Nhanvien
                 dgvAllCustomer.Columns[5].HeaderText = "Địa chi";
                 dgvAllCustomer.Columns[6].HeaderText = "Loại thành viên";
                 dgvAllCustomer.Columns[7].HeaderText = "Điểm tích lũy";
-                dgvAllCustomer.Columns[8].Visible = false;
             }
         }
 
@@ -55,15 +54,6 @@ namespace Do_an_Winform.PL.Nhanvien
             //    cbTenKhachHang.Items.Add(kh.TenKH);
             //}
             dgvAllCustomer.DataSource = KhachHangBLL.GetCustomerByName(cbTenKhachHang.Text);
-            dgvAllCustomer.Columns[0].HeaderText = "Mã KH";
-            dgvAllCustomer.Columns[1].HeaderText = "Tên KH";
-            dgvAllCustomer.Columns[2].HeaderText = "Giới tính";
-            dgvAllCustomer.Columns[3].HeaderText = "Email";
-            dgvAllCustomer.Columns[4].HeaderText = "SĐT";
-            dgvAllCustomer.Columns[5].HeaderText = "Địa chi";
-            dgvAllCustomer.Columns[6].HeaderText = "Loại thành viên";
-            dgvAllCustomer.Columns[7].HeaderText = "Điểm tích lũy";
-            dgvAllCustomer.Columns[8].Visible = false;
         }
     }
 }

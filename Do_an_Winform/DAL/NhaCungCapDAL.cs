@@ -14,6 +14,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var ncc = (from cc in entities.NhaCungCaps
+                       where cc.TrangThai == "1"
                         select cc);
 
             List<NhaCungCapDTO> nhaCungCapDTOs = new List<NhaCungCapDTO>();

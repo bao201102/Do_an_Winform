@@ -82,7 +82,7 @@ namespace Do_an_Winform.DAL
                             kh.Email,
                             kh.SĐT,
                             kh.DiaChi,
-                            kh.LoaiThanhVien,
+                            ltv.TenLoaiTVien,
                             kh.DiemTichLuy,
                         };
 

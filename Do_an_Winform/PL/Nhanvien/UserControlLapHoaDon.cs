@@ -352,11 +352,11 @@ namespace Do_an_Winform.PL.Nhanvien
         private void dgvInfoProduct_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             int soLuong = int.Parse(dgvInfoProduct.SelectedRows[0].Cells[1].Value.ToString());
-            int donGia = int.Parse(dgvInfoProduct.SelectedRows[0].Cells[2].Value.ToString());
+            int donGia = int.Parse(TachThanhTien(dgvInfoProduct.SelectedRows[0].Cells[2].Value.ToString()));
             int chietKhau = int.Parse(TachChuoi(lblDiscount2.Text));
             int tongCong = soLuong * donGia;
             int thanhTien = tongCong - (tongCong * chietKhau / 100);
-            dgvInfoProduct.SelectedRows[0].Cells[4].Value = thanhTien;
+            dgvInfoProduct.SelectedRows[0].Cells[4].Value = thanhTien + "đ";
             int sum = 0;
             for (int i = 0; i < dgvInfoProduct.RowCount; i++)
             {
@@ -364,12 +364,15 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     sum += int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[4].Value.ToString()));
                 }
-                catch { }
+                catch(Exception ex) {
+                    MessageBox.Show(ex.ToString());
+                }
 
             }
             txtSL.Text = dgvInfoProduct.SelectedRows[0].Cells[1].Value.ToString();
-            lblTotal2.Text = sum.ToString() + "đ";
+            //lblTotal2.Text = sum.ToString() + "đ";
             lblTotalBuy.Text = sum.ToString() + "đ";
+            MessageBox.Show(sum.ToString() + "đ");
         }
 
         //Cập nhật thông tin khi số lượng thay đổi
