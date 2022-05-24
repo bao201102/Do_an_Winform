@@ -21,28 +21,31 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 
         private void frm_DoiTacNCC_Load(object sender, EventArgs e)
         {
-            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupply();
-            dgNhaCungCap.ReadOnly = true;
-            dgNhaCungCap.AllowUserToResizeColumns = false;
-            dgNhaCungCap.AllowUserToResizeRows = false;
+            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupplier();
             dgNhaCungCap.Columns[0].Visible = false;
             dgNhaCungCap.Columns[1].HeaderText = "Tên nhà cung cấp";
+            dgNhaCungCap.Columns[2].HeaderText = "Số điện thoại";
+            dgNhaCungCap.Columns[3].HeaderText = "Email";
+            dgNhaCungCap.Columns[4].HeaderText = "Dịa chỉ";
         }
 
         private void btThemNCC_Click(object sender, EventArgs e)
         {
             frm_ThemNCC form = new frm_ThemNCC();
             form.ShowDialog();
-            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupply();
+            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupplier();
         }
 
         private void txtFind_TextChange(object sender, EventArgs e)
         {
             try
             {
-                dgNhaCungCap.DataSource = NhaCungCapBLL.GetSupplyWithName(txtFind.Text);
+                dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupplierByName(txtFind.Text);
                 dgNhaCungCap.Columns[0].Visible = false;
                 dgNhaCungCap.Columns[1].HeaderText = "Tên nhà cung cấp";
+                dgNhaCungCap.Columns[2].HeaderText = "Số điện thoại";
+                dgNhaCungCap.Columns[3].HeaderText = "Email";
+                dgNhaCungCap.Columns[4].HeaderText = "Dịa chỉ";
             }
             catch (Exception)
             {
