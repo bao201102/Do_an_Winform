@@ -14,6 +14,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var ncc = (from cc in entities.NhaCungCaps
+                       where cc.TrangThai == "1"
                         select cc);
 
             List<NhaCungCapDTO> nhaCungCapDTOs = new List<NhaCungCapDTO>();
@@ -29,6 +30,7 @@ namespace Do_an_Winform.DAL
             return nhaCungCapDTOs;
 
         }
+
         public static bool AddNCC(NhaCungCapDTO dto)
         {
             CHDTEntities1 data = new CHDTEntities1();
@@ -38,37 +40,51 @@ namespace Do_an_Winform.DAL
             data.NhaCungCaps.Add(ncc);
             return data.SaveChanges() > 0 ? true : false;
         }
-        public static List<NhaCungCapDTO> GetSupplyWithName(string name)
+
+        public static List<object> GetAllSupplierByName(string name)
         {
-            CHDTEntities1 data = new CHDTEntities1();
-            var nhacungcap = from ncc in data.NhaCungCaps
-                              where ncc.TenNCC.Contains(name.Trim().ToLower())
-                              select ncc;
-            List<NhaCungCapDTO> list = new List<NhaCungCapDTO>();
-            foreach(NhaCungCap ncc in nhacungcap)
+            CHDTEntities1 entities = new CHDTEntities1();
+            List<object> list = new List<object>();
+
+            var query = from ncc in entities.NhaCungCaps
+                        where ncc.TenNCC.Equals(name) && ncc.TrangThai == "1"
+                        select new
+                        {
+                            ncc.MaNCC,
+                            ncc.TenNCC,
+                            ncc.SDT,
+                            ncc.Email,
+                            ncc.DiaChi
+                        };
+
+            foreach (var item in query)
             {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
-                var mapper = new Mapper(config);
-                NhaCungCapDTO dto = mapper.Map<NhaCungCapDTO>(ncc);
-                list.Add(dto);
-            }
-            return list;
-        }
-        public static List<NhaCungCapDTO> GetAllSupply()
-        {
-            CHDTEntities1 data = new CHDTEntities1();
-            List<NhaCungCapDTO> list = new List<NhaCungCapDTO>();
-            var nhacungcap = from ncc in data.NhaCungCaps
-                             select ncc;
-            foreach (NhaCungCap ncc in nhacungcap)
-            {
-                NhaCungCapDTO dto = new NhaCungCapDTO();
-                dto.MaNCC = ncc.MaNCC;
-                dto.TenNCC = ncc.TenNCC;
-                list.Add(dto);
+                list.Add(item);
             }
             return list;
         }
 
+        public static List<object> GetAllSupplier()
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            List<object> list = new List<object>();
+
+            var query = from ncc in entities.NhaCungCaps
+                        where ncc.TrangThai == "1"
+                        select new
+                        {
+                            ncc.MaNCC,
+                            ncc.TenNCC,
+                            ncc.SDT,
+                            ncc.Email,
+                            ncc.DiaChi
+                        };
+
+            foreach (var item in query)
+            {
+                list.Add(item);
+            }
+            return list;
+        }
     }
 }

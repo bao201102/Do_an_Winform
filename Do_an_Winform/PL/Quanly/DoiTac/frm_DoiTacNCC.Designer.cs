@@ -127,7 +127,7 @@
             this.txtFind.IconRight = global::Do_an_Winform.Properties.Resources.search;
             this.txtFind.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.Lines = new string[0];
-            this.txtFind.Location = new System.Drawing.Point(267, 30);
+            this.txtFind.Location = new System.Drawing.Point(280, 30);
             this.txtFind.MaxLength = 32767;
             this.txtFind.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFind.Modified = false;
@@ -277,9 +277,9 @@
             this.lblKhachHang.Location = new System.Drawing.Point(32, 35);
             this.lblKhachHang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKhachHang.Name = "lblKhachHang";
-            this.lblKhachHang.Size = new System.Drawing.Size(206, 28);
+            this.lblKhachHang.Size = new System.Drawing.Size(238, 28);
             this.lblKhachHang.TabIndex = 26;
-            this.lblKhachHang.Text = "Danh sách nhân viên";
+            this.lblKhachHang.Text = "Danh sách nhà cung cấp";
             // 
             // bunifuElipse1
             // 
