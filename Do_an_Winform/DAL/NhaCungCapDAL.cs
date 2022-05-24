@@ -90,7 +90,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             NhaCungCap ncc = (from cc in entities.NhaCungCaps
-                       where cc.TrangThai == "1" && cc.MaNCC.Equals(mancc)
+                       where cc.MaNCC.Equals(mancc)
                        select cc).FirstOrDefault();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
