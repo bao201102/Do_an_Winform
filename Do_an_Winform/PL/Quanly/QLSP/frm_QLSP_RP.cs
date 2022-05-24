@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Do_an_Winform.BLL;
+using Do_an_Winform.DTO;
+using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,34 @@ namespace Do_an_Winform.PL.Quanly.QLSP
         public frm_QLSP_RP()
         {
             InitializeComponent();
+        }
+
+        private void frm_QLSP_RP_Load(object sender, EventArgs e)
+        {
+            List<LoaiSanPhamDTO> lsp = LoaiSanPhamBLL.GetAllCat();
+            lsp.RemoveAt(0);
+            cbLoaisp.DataSource = lsp;
+            cbLoaisp.DisplayMember = "TenLoaiSP";
+            cbLoaisp.ValueMember = "MaLoaiSP";
+            cbLoaisp.SelectedIndex = 0;
+
+            this.reportViewerResult.RefreshReport();
+        }
+
+        private void btnXemRP_Click(object sender, EventArgs e)
+        {
+            if (bunifuToggleSwitch1.Checked)
+            {
+                List<object> products = SanPhamBLL.GetAllProductByCat(cbLoaisp.SelectedValue.ToString());
+                reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.QLSP.rpt_DSSP.rdlc";
+                reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("DSSP", products));
+                reportViewerResult.LocalReport.SetParameters(new ReportParameter("paTenLoai", cbLoaisp.SelectedText));
+                reportViewerResult.RefreshReport();
+            }
+            else
+            {
+                
+            }
         }
     }
 }

@@ -194,7 +194,7 @@ namespace Do_an_Winform.PL.Quanly
             this.cbLoaisp.FillDropDown = true;
             this.cbLoaisp.FillIndicator = false;
             this.cbLoaisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLoaisp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cbLoaisp.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaisp.ForeColor = System.Drawing.Color.Black;
             this.cbLoaisp.FormattingEnabled = true;
             this.cbLoaisp.Icon = null;
