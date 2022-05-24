@@ -62,6 +62,7 @@ namespace Do_an_Winform.PL.Thukho
 
             frm_XemPN frm = new frm_XemPN();
             openChildForm(frm);
+            frm.lblMaPN.Text = gridviewDSNhap.CurrentRow.Cells[0].Value.ToString();
             frm.lblTenNV.Text = NhanVienBLL.GetEmployeeById(manv).TenNV.ToString();
             frm.lblDate.Text = gridviewDSNhap.CurrentRow.Cells[1].Value.ToString();
             frm.lblNCC.Text = NhaCungCapBLL.GetNhaCungCapByID(mancc).TenNCC.ToString();
@@ -71,7 +72,8 @@ namespace Do_an_Winform.PL.Thukho
             frm.gridXemPN.Columns[2].HeaderText = "Tên sản phẩm";
             frm.gridXemPN.Columns[3].HeaderText = "Số lượng";
             frm.gridXemPN.Columns[4].Visible = false;
-            frm.gridXemPN.Columns[5].Visible = false;
+            frm.gridXemPN.Columns[5].HeaderText = "Thành tiền";
+            frm.gridXemPN.Columns[6].Visible = false;
         }
     }
 }

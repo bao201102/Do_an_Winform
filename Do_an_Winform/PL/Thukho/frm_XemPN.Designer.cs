@@ -34,14 +34,16 @@ namespace Do_an_Winform.PL.Thukho
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblTenNV = new Bunifu.UI.WinForms.BunifuLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblDate = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblReturn = new System.Windows.Forms.Label();
-            this.gridXemPN = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.lblNCC = new System.Windows.Forms.Label();
+            this.gridXemPN = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.lblDate = new Bunifu.UI.WinForms.BunifuLabel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTenNV = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblReturn = new System.Windows.Forms.Label();
+            this.lblMaPN = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridXemPN)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +59,8 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 15;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.lblMaPN);
+            this.bunifuPanel1.Controls.Add(this.label4);
             this.bunifuPanel1.Controls.Add(this.lblNCC);
             this.bunifuPanel1.Controls.Add(this.gridXemPN);
             this.bunifuPanel1.Controls.Add(this.lblDate);
@@ -64,90 +68,23 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuPanel1.Controls.Add(this.label2);
             this.bunifuPanel1.Controls.Add(this.label3);
             this.bunifuPanel1.Controls.Add(this.lblTenNV);
-            this.bunifuPanel1.Location = new System.Drawing.Point(13, 37);
+            this.bunifuPanel1.Location = new System.Drawing.Point(13, 28);
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1161, 539);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1161, 548);
             this.bunifuPanel1.TabIndex = 0;
             // 
-            // label2
+            // lblNCC
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(52, 98);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ngày tạo";
-            // 
-            // lblTenNV
-            // 
-            this.lblTenNV.AllowParentOverrides = false;
-            this.lblTenNV.AutoEllipsis = false;
-            this.lblTenNV.AutoSize = false;
-            this.lblTenNV.CursorType = null;
-            this.lblTenNV.Font = new System.Drawing.Font("Leelawadee UI", 12F);
-            this.lblTenNV.Location = new System.Drawing.Point(195, 27);
-            this.lblTenNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTenNV.Size = new System.Drawing.Size(212, 21);
-            this.lblTenNV.TabIndex = 5;
-            this.lblTenNV.Text = "Nguyễn ngọc bảo";
-            this.lblTenNV.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblTenNV.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(52, 27);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nhân viên";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(637, 27);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 21);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Nhà cung cấp";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AllowParentOverrides = false;
-            this.lblDate.AutoEllipsis = false;
-            this.lblDate.AutoSize = false;
-            this.lblDate.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblDate.Font = new System.Drawing.Font("Leelawadee UI", 12F);
-            this.lblDate.Location = new System.Drawing.Point(195, 98);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDate.Size = new System.Drawing.Size(212, 21);
-            this.lblDate.TabIndex = 6;
-            this.lblDate.Text = "bunifuLabel1";
-            this.lblDate.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblReturn
-            // 
-            this.lblReturn.AutoSize = true;
-            this.lblReturn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblReturn.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturn.Location = new System.Drawing.Point(16, 9);
-            this.lblReturn.Name = "lblReturn";
-            this.lblReturn.Size = new System.Drawing.Size(74, 23);
-            this.lblReturn.TabIndex = 39;
-            this.lblReturn.Text = "< Trở lại";
+            this.lblNCC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNCC.AutoSize = true;
+            this.lblNCC.BackColor = System.Drawing.Color.Transparent;
+            this.lblNCC.Location = new System.Drawing.Point(815, 98);
+            this.lblNCC.Name = "lblNCC";
+            this.lblNCC.Size = new System.Drawing.Size(52, 21);
+            this.lblNCC.TabIndex = 8;
+            this.lblNCC.Text = "label1";
             // 
             // gridXemPN
             // 
@@ -157,6 +94,9 @@ namespace Do_an_Winform.PL.Thukho
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.gridXemPN.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridXemPN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridXemPN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridXemPN.BackgroundColor = System.Drawing.Color.White;
             this.gridXemPN.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -164,13 +104,13 @@ namespace Do_an_Winform.PL.Thukho
             this.gridXemPN.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridXemPN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridXemPN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridXemPN.ColumnHeadersHeight = 40;
             this.gridXemPN.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.gridXemPN.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.gridXemPN.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -191,7 +131,7 @@ namespace Do_an_Winform.PL.Thukho
             this.gridXemPN.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -208,20 +148,114 @@ namespace Do_an_Winform.PL.Thukho
             this.gridXemPN.RowHeadersVisible = false;
             this.gridXemPN.RowTemplate.Height = 40;
             this.gridXemPN.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridXemPN.Size = new System.Drawing.Size(1112, 337);
+            this.gridXemPN.Size = new System.Drawing.Size(1112, 346);
             this.gridXemPN.TabIndex = 7;
             this.gridXemPN.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // lblNCC
+            // lblDate
             // 
-            this.lblNCC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNCC.AutoSize = true;
-            this.lblNCC.BackColor = System.Drawing.Color.Transparent;
-            this.lblNCC.Location = new System.Drawing.Point(806, 27);
-            this.lblNCC.Name = "lblNCC";
-            this.lblNCC.Size = new System.Drawing.Size(52, 21);
-            this.lblNCC.TabIndex = 8;
-            this.lblNCC.Text = "label1";
+            this.lblDate.AllowParentOverrides = false;
+            this.lblDate.AutoEllipsis = false;
+            this.lblDate.AutoSize = false;
+            this.lblDate.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblDate.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblDate.Font = new System.Drawing.Font("Leelawadee UI", 12F);
+            this.lblDate.Location = new System.Drawing.Point(195, 98);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDate.Size = new System.Drawing.Size(212, 21);
+            this.lblDate.TabIndex = 6;
+            this.lblDate.Text = "bunifuLabel1";
+            this.lblDate.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Location = new System.Drawing.Point(646, 98);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(105, 21);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Nhà cung cấp";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(52, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ngày tạo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(52, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 21);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nhân viên";
+            // 
+            // lblTenNV
+            // 
+            this.lblTenNV.AllowParentOverrides = false;
+            this.lblTenNV.AutoEllipsis = false;
+            this.lblTenNV.AutoSize = false;
+            this.lblTenNV.CursorType = null;
+            this.lblTenNV.Font = new System.Drawing.Font("Leelawadee UI", 12F);
+            this.lblTenNV.Location = new System.Drawing.Point(195, 27);
+            this.lblTenNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTenNV.Size = new System.Drawing.Size(212, 21);
+            this.lblTenNV.TabIndex = 5;
+            this.lblTenNV.Text = "Nguyễn ngọc bảo";
+            this.lblTenNV.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTenNV.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblReturn
+            // 
+            this.lblReturn.AutoSize = true;
+            this.lblReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblReturn.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReturn.Location = new System.Drawing.Point(12, 0);
+            this.lblReturn.Name = "lblReturn";
+            this.lblReturn.Size = new System.Drawing.Size(74, 23);
+            this.lblReturn.TabIndex = 39;
+            this.lblReturn.Text = "< Trở lại";
+            this.lblReturn.Click += new System.EventHandler(this.lblReturn_Click);
+            this.lblReturn.MouseLeave += new System.EventHandler(this.lblReturn_MouseLeave);
+            this.lblReturn.MouseHover += new System.EventHandler(this.lblReturn_MouseHover);
+            // 
+            // lblMaPN
+            // 
+            this.lblMaPN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMaPN.AutoSize = true;
+            this.lblMaPN.BackColor = System.Drawing.Color.Transparent;
+            this.lblMaPN.Location = new System.Drawing.Point(815, 27);
+            this.lblMaPN.Name = "lblMaPN";
+            this.lblMaPN.Size = new System.Drawing.Size(52, 21);
+            this.lblMaPN.TabIndex = 10;
+            this.lblMaPN.Text = "label1";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(646, 27);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 21);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Mã phiếu nhập";
             // 
             // frm_XemPN
             // 
@@ -253,5 +287,7 @@ namespace Do_an_Winform.PL.Thukho
         internal Bunifu.UI.WinForms.BunifuLabel lblDate;
         internal Bunifu.UI.WinForms.BunifuDataGridView gridXemPN;
         internal System.Windows.Forms.Label lblNCC;
+        internal System.Windows.Forms.Label lblMaPN;
+        private System.Windows.Forms.Label label4;
     }
 }

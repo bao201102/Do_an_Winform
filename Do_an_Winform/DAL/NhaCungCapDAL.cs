@@ -89,9 +89,9 @@ namespace Do_an_Winform.DAL
         public static NhaCungCapDTO GetNhaCungCapByID(string mancc)
         {
             CHDTEntities1 entities = new CHDTEntities1();
-            var ncc = (from cc in entities.NhaCungCaps
+            NhaCungCap ncc = (from cc in entities.NhaCungCaps
                        where cc.TrangThai == "1" && cc.MaNCC.Equals(mancc)
-                       select cc);
+                       select cc).FirstOrDefault();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
             var mapper = new Mapper(config);

@@ -18,16 +18,19 @@ namespace Do_an_Winform.PL.Thukho
         public frm_TonKho()
         {
             InitializeComponent();
+            gridviewStock.AllowUserToResizeColumns = false;
+            gridviewStock.AllowUserToResizeRows = false;
         }
 
         private void frm_TonKho_Load(object sender, EventArgs e)
-        {           
+        {
             gridviewStock.DataSource = SanPhamBLL.GetProduct();
-            gridviewStock.Columns[0].HeaderText = "Tên sản phẩm";
-            gridviewStock.Columns[1].HeaderText = "Số lượng";
-            gridviewStock.Columns[2].HeaderText = "Đơn giá";
-            gridviewStock.Columns[3].HeaderText = "Tên loại";
-            gridviewStock.Columns[4].HeaderText = "Nhà sản xuất";
+            gridviewStock.Columns[0].Visible = false;
+            gridviewStock.Columns[1].HeaderText = "Tên sản phẩm";
+            gridviewStock.Columns[2].HeaderText = "Số lượng";
+            gridviewStock.Columns[3].HeaderText = "Đơn giá";
+            gridviewStock.Columns[4].HeaderText = "Tên loại";
+            gridviewStock.Columns[5].HeaderText = "Nhà sản xuất";
         }
 
         private void txtFind_TextChange(object sender, EventArgs e)
@@ -35,16 +38,17 @@ namespace Do_an_Winform.PL.Thukho
             try
             {
                 gridviewStock.DataSource = SanPhamBLL.GetAllProductByName(txtFind.Text);
-                gridviewStock.Columns[0].HeaderText = "Tên sản phẩm";
-                gridviewStock.Columns[1].HeaderText = "Số lượng";
-                gridviewStock.Columns[2].HeaderText = "Đơn giá";
-                gridviewStock.Columns[3].HeaderText = "Tên loại";
-                gridviewStock.Columns[4].HeaderText = "Nhà sản xuất";
+                gridviewStock.Columns[0].Visible = false;
+                gridviewStock.Columns[1].HeaderText = "Tên sản phẩm";
+                gridviewStock.Columns[2].HeaderText = "Số lượng";
+                gridviewStock.Columns[3].HeaderText = "Đơn giá";
+                gridviewStock.Columns[4].HeaderText = "Tên loại";
+                gridviewStock.Columns[5].HeaderText = "Nhà sản xuất";
             }
             catch (Exception)
             {
 
-            }          
+            }
         }
     }
 }

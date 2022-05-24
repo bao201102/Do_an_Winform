@@ -15,6 +15,24 @@ namespace Do_an_Winform.PL.Thukho
         public frm_XemPN()
         {
             InitializeComponent();
+            gridXemPN.AllowUserToResizeColumns = false;
+            gridXemPN.AllowUserToResizeRows = false;
+        }
+
+        private void lblReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Parent = null;
+        }
+
+        private void lblReturn_MouseHover(object sender, EventArgs e)
+        {
+            lblReturn.Font = new Font(lblReturn.Font, FontStyle.Underline);
+        }
+
+        private void lblReturn_MouseLeave(object sender, EventArgs e)
+        {
+            lblReturn.Font = new Font(lblReturn.Font, FontStyle.Regular);
         }
     }
 }

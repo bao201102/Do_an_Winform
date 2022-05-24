@@ -16,11 +16,11 @@ namespace Do_an_Winform
     {
         public string MaPN { get; set; }
         public string MaSP { get; set; }
+        public string TenSP { get; set; }
         public int SoLuong { get; set; }
         public string MaNhaSX { get; set; }
         public int ThanhTien { get; set; }
         public string TrangThai { get; set; }
-        public string TenSP { get; set; }
     
         public virtual NhaSanXuat NhaSanXuat { get; set; }
         public virtual PhieuNhapHang PhieuNhapHang { get; set; }
