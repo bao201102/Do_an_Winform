@@ -574,7 +574,9 @@
     <EmbeddedResource Include="PL\Quanly\QLSP\frm_Update.resx">
       <DependentUpon>frm_Update.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\QLSP\rpt_DSSP_Group.rdlc" />
     <EmbeddedResource Include="PL\Quanly\QLSP\rpt_DSSP.rdlc" />
+    <EmbeddedResource Include="PL\Quanly\QLSP\rpt_SubDSSP.rdlc" />
     <EmbeddedResource Include="PL\Quanly\QLTK\frm_QLTK.resx">
       <DependentUpon>frm_QLTK.cs</DependentUpon>
     </EmbeddedResource>

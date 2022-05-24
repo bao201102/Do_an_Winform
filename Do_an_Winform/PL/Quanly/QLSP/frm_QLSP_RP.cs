@@ -34,18 +34,34 @@ namespace Do_an_Winform.PL.Quanly.QLSP
 
         private void btnXemRP_Click(object sender, EventArgs e)
         {
-            if (bunifuToggleSwitch1.Checked)
+            if (bunifuToggleSwitch1.Checked == true)
             {
+                reportViewerResult.RefreshReport();
+                reportViewerResult.LocalReport.DataSources.Clear();
                 List<object> products = SanPhamBLL.GetAllProductByCat(cbLoaisp.SelectedValue.ToString());
-                reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.QLSP.rpt_DSSP.rdlc";
+                reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.QLSP.rpt_DSSP.rdlc";
                 reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("DSSP", products));
-                reportViewerResult.LocalReport.SetParameters(new ReportParameter("paTenLoai", cbLoaisp.SelectedText));
+                reportViewerResult.LocalReport.SetParameters(new ReportParameter("paTenLoai", cbLoaisp.Text));
                 reportViewerResult.RefreshReport();
             }
             else
             {
-                
+                reportViewerResult.RefreshReport();
+                reportViewerResult.LocalReport.DataSources.Clear();
+                List<LoaiSanPhamDTO> lsp = LoaiSanPhamBLL.GetAllCat();
+                lsp.RemoveAt(0);
+                reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.QLSP.rpt_DSSP_Group.rdlc";
+                reportViewerResult.LocalReport.SubreportProcessing += LocalReport_SubreportProcessing;
+                reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("LoaiSP", lsp));
+                reportViewerResult.RefreshReport();
             }
+        }
+
+        private void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
+        {
+            string maloai = e.Parameters["paMaLoai"].Values[0];
+            List<object> products = SanPhamBLL.GetAllProductByCat(maloai);
+            e.DataSources.Add(new ReportDataSource("DSSP", products));
         }
     }
 }
