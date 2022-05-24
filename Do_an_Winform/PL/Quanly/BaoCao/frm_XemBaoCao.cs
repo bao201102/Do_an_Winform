@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.DangNhap;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -81,6 +82,16 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             reportViewerResult.LocalReport.SetParameters(new ReportParameter("paStartDay", sDay.ToString("dd/MM/yyyy HH:mm")));
             reportViewerResult.LocalReport.SetParameters(new ReportParameter("paEndDay", eDay.ToString("dd/MM/yyyy HH:mm")));
             reportViewerResult.RefreshReport();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            MessBox messBox = new MessBox();
+            bool result = messBox.ShowMess("Bạn muốn thoát chương trình ?");
+            if (result)
+            {
+                this.Close();
+            }
         }
     }
 }

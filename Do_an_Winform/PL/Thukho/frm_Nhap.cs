@@ -210,6 +210,8 @@ namespace Do_an_Winform.PL.Thukho
                     Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                 AddChiTiet(count);
             }
+
+            lblReturn_Click(sender, e);
         }
 
         private void btnIn_Click(object sender, EventArgs e)
@@ -234,11 +236,8 @@ namespace Do_an_Winform.PL.Thukho
             frm_XemBaoCao frm = new frm_XemBaoCao();
             frm.rpt_Nhap(phieuNhapHangDTO, cbbNhaCC.Text, emp.TenNV);
             frm.ShowDialog();
-        }
 
-        private void cbbTenSP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            lblReturn_Click(sender, e);
         }
     }
 }

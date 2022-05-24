@@ -671,6 +671,7 @@
       <LastGenOutput>CHDTEntity.cs</LastGenOutput>
     </Content>
     <None Include="Resources\bill.png" />
+    <None Include="Resources\sync.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

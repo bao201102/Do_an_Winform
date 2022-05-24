@@ -31,6 +31,11 @@ namespace Do_an_Winform.PL.Thukho
             gridviewStock.Columns[3].HeaderText = "Đơn giá";
             gridviewStock.Columns[4].HeaderText = "Tên loại";
             gridviewStock.Columns[5].HeaderText = "Nhà sản xuất";
+
+            cbbLoaiSP.DataSource = LoaiSanPhamBLL.GetAllCat();
+            cbbLoaiSP.DisplayMember = "TenLoaiSP";
+            cbbLoaiSP.ValueMember = "MaLoaiSP";
+            cbbLoaiSP.SelectedIndex = 0;
         }
 
         private void txtFind_TextChange(object sender, EventArgs e)
@@ -48,6 +53,18 @@ namespace Do_an_Winform.PL.Thukho
             catch (Exception)
             {
 
+            }
+        }
+
+        private void cbbLoaiSP_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cbbLoaiSP.SelectedIndex == 0)
+            {
+                gridviewStock.DataSource = SanPhamBLL.GetProduct();
+            }
+            else
+            {
+                gridviewStock.DataSource = SanPhamBLL.GetAllProductByCat(cbbLoaiSP.SelectedValue.ToString());
             }
         }
     }

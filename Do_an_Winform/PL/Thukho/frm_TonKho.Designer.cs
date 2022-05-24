@@ -41,6 +41,7 @@ namespace Do_an_Winform.PL.Thukho
             this.txtFind = new Bunifu.UI.WinForms.BunifuTextBox();
             this.gridviewStock = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cbbLoaiSP = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewStock)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +57,7 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 15;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.cbbLoaiSP);
             this.bunifuPanel1.Controls.Add(this.txtFind);
             this.bunifuPanel1.Controls.Add(this.gridviewStock);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
@@ -96,7 +98,7 @@ namespace Do_an_Winform.PL.Thukho
             this.txtFind.IconRight = global::Do_an_Winform.Properties.Resources.search;
             this.txtFind.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.Lines = new string[0];
-            this.txtFind.Location = new System.Drawing.Point(318, 15);
+            this.txtFind.Location = new System.Drawing.Point(226, 18);
             this.txtFind.MaxLength = 32767;
             this.txtFind.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFind.Modified = false;
@@ -132,7 +134,7 @@ namespace Do_an_Winform.PL.Thukho
             this.txtFind.SelectionLength = 0;
             this.txtFind.SelectionStart = 0;
             this.txtFind.ShortcutsEnabled = true;
-            this.txtFind.Size = new System.Drawing.Size(506, 44);
+            this.txtFind.Size = new System.Drawing.Size(511, 40);
             this.txtFind.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtFind.TabIndex = 3;
             this.txtFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -156,7 +158,7 @@ namespace Do_an_Winform.PL.Thukho
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridviewStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridviewStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gridviewStock.BackgroundColor = System.Drawing.Color.White;
             this.gridviewStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridviewStock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridviewStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -228,6 +230,51 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // cbbLoaiSP
+            // 
+            this.cbbLoaiSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbLoaiSP.BackColor = System.Drawing.Color.Transparent;
+            this.cbbLoaiSP.BackgroundColor = System.Drawing.Color.White;
+            this.cbbLoaiSP.BorderColor = System.Drawing.Color.Silver;
+            this.cbbLoaiSP.BorderRadius = 8;
+            this.cbbLoaiSP.Color = System.Drawing.Color.Silver;
+            this.cbbLoaiSP.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cbbLoaiSP.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cbbLoaiSP.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cbbLoaiSP.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cbbLoaiSP.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cbbLoaiSP.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.cbbLoaiSP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbLoaiSP.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.cbbLoaiSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLoaiSP.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cbbLoaiSP.FillDropDown = true;
+            this.cbbLoaiSP.FillIndicator = false;
+            this.cbbLoaiSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbLoaiSP.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoaiSP.ForeColor = System.Drawing.Color.Black;
+            this.cbbLoaiSP.FormattingEnabled = true;
+            this.cbbLoaiSP.Icon = null;
+            this.cbbLoaiSP.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cbbLoaiSP.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.cbbLoaiSP.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cbbLoaiSP.IndicatorThickness = 2;
+            this.cbbLoaiSP.IsDropdownOpened = false;
+            this.cbbLoaiSP.ItemBackColor = System.Drawing.Color.White;
+            this.cbbLoaiSP.ItemBorderColor = System.Drawing.Color.White;
+            this.cbbLoaiSP.ItemForeColor = System.Drawing.Color.Black;
+            this.cbbLoaiSP.ItemHeight = 30;
+            this.cbbLoaiSP.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cbbLoaiSP.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cbbLoaiSP.ItemTopMargin = 3;
+            this.cbbLoaiSP.Location = new System.Drawing.Point(801, 21);
+            this.cbbLoaiSP.Name = "cbbLoaiSP";
+            this.cbbLoaiSP.Size = new System.Drawing.Size(228, 36);
+            this.cbbLoaiSP.TabIndex = 4;
+            this.cbbLoaiSP.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cbbLoaiSP.TextLeftMargin = 5;
+            this.cbbLoaiSP.SelectionChangeCommitted += new System.EventHandler(this.cbbLoaiSP_SelectionChangeCommitted);
+            // 
             // frm_TonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -252,5 +299,6 @@ namespace Do_an_Winform.PL.Thukho
         private Bunifu.UI.WinForms.BunifuDataGridView gridviewStock;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuTextBox txtFind;
+        private Bunifu.UI.WinForms.BunifuDropdown cbbLoaiSP;
     }
 }

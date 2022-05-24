@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Bunifu.UI.WinForms.BunifuButton.BunifuButton;
 
 namespace Do_an_Winform.PL.Thukho
 {
@@ -74,6 +75,17 @@ namespace Do_an_Winform.PL.Thukho
             frm.gridXemPN.Columns[4].Visible = false;
             frm.gridXemPN.Columns[5].HeaderText = "Thành tiền";
             frm.gridXemPN.Columns[6].Visible = false;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            gridviewDSNhap.DataSource = PhieuNhapHangBLL.GetAll();
+            gridviewDSNhap.Columns[0].HeaderText = "Mã phiếu nhập";
+            gridviewDSNhap.Columns[1].HeaderText = "Ngày tạo PN";
+            gridviewDSNhap.Columns[2].HeaderText = "Mã nhân viên";
+            gridviewDSNhap.Columns[3].HeaderText = "Mã nhà cung cấp";
+            gridviewDSNhap.Columns[4].HeaderText = "Thành tiền";
+            gridviewDSNhap.Columns[5].Visible = false;
         }
     }
 }
