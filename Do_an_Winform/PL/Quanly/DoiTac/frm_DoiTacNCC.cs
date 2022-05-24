@@ -35,7 +35,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
         {
             frm_ThemNCC form = new frm_ThemNCC();
             form.ShowDialog();
-            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupplier();
+            dgNhaCungCap.DataSource = NhaCungCapBLL.GetNhaCungCap();
         }
 
         private void txtFind_TextChange(object sender, EventArgs e)

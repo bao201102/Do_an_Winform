@@ -34,6 +34,7 @@
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuHorizontalBarChart1 = new Bunifu.Charts.WinForms.ChartTypes.BunifuHorizontalBarChart(this.components);
             this.bunifuChartCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -128,12 +129,38 @@
             this.bunifuChartCanvas1.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuChartCanvas1.YAxesZeroLineWidth = 1;
             // 
+            // bunifuDatePicker1
+            // 
+            this.bunifuDatePicker1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker1.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuDatePicker1.BorderRadius = 1;
+            this.bunifuDatePicker1.Color = System.Drawing.Color.Silver;
+            this.bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.bunifuDatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatePicker1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker1.DisplayWeekNumbers = false;
+            this.bunifuDatePicker1.DPHeight = 0;
+            this.bunifuDatePicker1.FillDatePicker = false;
+            this.bunifuDatePicker1.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDatePicker1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker1.Icon")));
+            this.bunifuDatePicker1.IconColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatePicker1.LeftTextMargin = 5;
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(384, 77);
+            this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(0, 32);
+            this.bunifuDatePicker1.Name = "bunifuDatePicker1";
+            this.bunifuDatePicker1.Size = new System.Drawing.Size(220, 32);
+            this.bunifuDatePicker1.TabIndex = 17;
+            this.bunifuDatePicker1.Value = new System.DateTime(2022, 5, 24, 19, 0, 0, 0);
+            // 
             // frm_QLBC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1312, 805);
+            this.Controls.Add(this.bunifuDatePicker1);
             this.Controls.Add(this.bunifuChartCanvas1);
             this.Controls.Add(this.bunifuLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -151,5 +178,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuHorizontalBarChart bunifuHorizontalBarChart1;
         private Bunifu.Charts.WinForms.BunifuChartCanvas bunifuChartCanvas1;
+        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
     }
 }

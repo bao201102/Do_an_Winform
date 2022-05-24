@@ -23,7 +23,7 @@ namespace Do_an_Winform.PL.Quanly.QLBC
             List<string> y_AxisLabels = new List<string>();
             List<double> horizontalBarData = new List<double>();
 
-            foreach (var productData in SanPhamBLL.GetTopProduct().OrderByDescending(x => x.Value))
+            foreach (var productData in SanPhamBLL.GetTopProduct(bunifuDatePicker1.Value).OrderByDescending(x => x.Value))
             {
                 y_AxisLabels.Add(productData.Key);
                 horizontalBarData.Add(productData.Value);
