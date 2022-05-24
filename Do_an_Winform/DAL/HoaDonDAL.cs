@@ -71,14 +71,14 @@ namespace Do_an_Winform.DAL
         public static HoaDonDTO LayTheoMaHD (string mahd)
         {
             CHDTEntities1 entities = new CHDTEntities1();
-            var bill = (from hd in entities.HoaDons
-                        where hd.TrangThai == "1"
-                        select hd).Single();
+            HoaDon truyvan = (from hd in entities.HoaDons
+                              where hd.MaHD == mahd && hd.TrangThai == "1"
+                              select hd).SingleOrDefault();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
             var mapper = new Mapper(config);
-            HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
-            return hoadon;
+            HoaDonDTO hdon = mapper.Map<HoaDonDTO>(truyvan);
+            return hdon;
         }
         public static double DoanhThuTatCaHD(DateTime startday, DateTime endday)
         {

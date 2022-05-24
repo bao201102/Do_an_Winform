@@ -44,14 +44,15 @@ namespace Do_an_Winform.DAL
         }
         public static PhieuNhapHangDTO LayTheoMaPN(string mapn)
         {
-            CHDTEntities1 data = new CHDTEntities1();
-            var truyvan = (from pn in data.PhieuNhapHangs
-                          where (pn.MaPN == mapn) && (pn.TrangThai == "1")
-                          select pn).Single();
+            CHDTEntities1 entities = new CHDTEntities1();
+            PhieuNhapHang truyvan = (from pn in entities.PhieuNhapHangs
+                              where pn.MaPN == mapn && pn.TrangThai == "1"
+                              select pn).SingleOrDefault();
+
             var config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuNhapHang, PhieuNhapHangDTO>());
             var mapper = new Mapper(config);
-            PhieuNhapHangDTO phieunhap = mapper.Map<PhieuNhapHangDTO>(truyvan);
-            return phieunhap;
+            PhieuNhapHangDTO pnhap = mapper.Map<PhieuNhapHangDTO>(truyvan);
+            return pnhap;
         }
         public static double ChiPhiTatCaPN(DateTime startday, DateTime endday)
         {
