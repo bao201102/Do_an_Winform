@@ -122,13 +122,10 @@ namespace Do_an_Winform.PL.Quanly
             DateTime eday = DatePickerEndDay.Value;
             if (txtSearch.Text.Trim() != "")
             {
-                startday = DatePickerStartDay.Value;
-                endday = DatePickerEndDay.Value;
-                PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
-                pnsearch.MaPN = txtSearch.Text;
-
+                PhieuNhapHangDTO hd = PhieuNhapHangBLL.LayTheoMaPN(txtSearch.Text);
+                hd.MaPN = txtSearch.ToString();
                 frm_XemBaoCao frm = new frm_XemBaoCao();
-                frm.rpt_HDNH_MaPN(pnsearch.MaPN, sday, eday);
+                frm.rpt_HDNH_MaPN(hd.MaPN, hd.NgayTaoPN, DateTime.Today);
                 frm.ShowDialog();
             }
             else

@@ -68,6 +68,18 @@ namespace Do_an_Winform.DAL
             }
             return hoaDonDTOs;
         }
+        public static HoaDonDTO LayTheoMaHD (string mahd)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var bill = (from hd in entities.HoaDons
+                        where hd.TrangThai == "1"
+                        select hd).Single();
+
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
+            var mapper = new Mapper(config);
+            HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
+            return hoadon;
+        }
         public static double DoanhThuTatCaHD(DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
