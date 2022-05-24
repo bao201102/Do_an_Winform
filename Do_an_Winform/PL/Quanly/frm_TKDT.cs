@@ -28,6 +28,8 @@ namespace Do_an_Winform.PL.Quanly
             cbQuyTK.SelectedItem = LayQuy(today.Month.ToString()).ToString();
             cbThangTK.SelectedItem = today.Month;
             txtDoanhThu.Text = HoaDonDAL.ThongKeDoanhThuTheoTDHT(today).ToString();
+            txtChiPhi.Text = PhieuNhapHangDAL.ThongKeChiPhiTheoTDHT(today).ToString();
+            txtLoiNhuan.Text = (double.Parse(txtDoanhThu.Text) - double.Parse(txtChiPhi.Text)).ToString();
         }
         private void cbQuyTK_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -67,6 +69,52 @@ namespace Do_an_Winform.PL.Quanly
 
                 cbThangTK.Enabled = false;
                 cbThangTK.Text = "Tất Cả";
+            }
+            if (cbHTTK.Text == "Quý")
+            {
+                cbQuyTK.Enabled = true;
+                cbThangTK.Enabled = false;
+                cbQuyTK.Items.Remove("Tất cả");
+                cbQuyTK.Items.Clear();
+                object[] quy = new object[] { 1, 2, 3, 4};
+                cbQuyTK.Items.AddRange(quy);
+                cbThangTK.Text = "Tất cả";
+            }
+            if (cbHTTK.Text == "Tháng")
+            {
+                cbThangTK.Enabled = true;
+                cbQuyTK.Enabled = false;
+                cbQuyTK.Text = "";
+                if (cbQuyTK.Text == "")
+                {
+                    cbThangTK.Items.Clear();
+                    object[] allmonth = new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+                    cbThangTK.Items.AddRange(allmonth);
+                }
+            }
+        }
+        public int LayQuy(string month)
+        {
+            if (month == "1" || month == "2" || month == "3") return 1;
+            else if (month == "4" || month == "5" || month == "6") return 2;
+            else if (month == "7" || month == "8" || month == "9") return 3;
+            else if (month == "10" || month == "11" || month == "12") return 4;
+            return 0;
+        }
+        private void btnViewReport_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnTK_Click(object sender, EventArgs e)
+        {
+            //THỐNG KÊ
+            if (cbHTTK.Text == "Năm")
+            {
+                cbQuyTK.Enabled = false;
+                cbQuyTK.Text = "Tất Cả";
+
+                cbThangTK.Enabled = false;
+                cbThangTK.Text = "Tất Cả";
 
                 txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoNam(txtNamTK.Text).ToString();
                 txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoNam(txtNamTK.Text).ToString();
@@ -75,7 +123,6 @@ namespace Do_an_Winform.PL.Quanly
             {
                 cbQuyTK.Items.Remove("Tất cả");
                 cbThangTK.Enabled = false;
-                cbQuyTK.Text = cbQuyTK.SelectedItem.ToString();
                 cbThangTK.Text = "Tất cả";
                 txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoQuy(cbQuyTK.SelectedItem.ToString(), txtNamTK.Text).ToString();
                 txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoQuy(cbQuyTK.SelectedItem.ToString(), txtNamTK.Text).ToString();
@@ -94,21 +141,8 @@ namespace Do_an_Winform.PL.Quanly
                 txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
             }
             txtLoiNhuan.Text = (double.Parse(txtDoanhThu.Text) - double.Parse(txtChiPhi.Text)).ToString();
-        }
-        public int LayQuy(string month)
-        {
-            if (month == "1" || month == "2" || month == "3") return 1;
-            else if (month == "4" || month == "5" || month == "6") return 2;
-            else if (month == "7" || month == "8" || month == "9") return 3;
-            else if (month == "10" || month == "11" || month == "12") return 4;
-            return 0;
-        }
-        private void btnViewReport_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void btnTK_Click(object sender, EventArgs e)
-        {
+            // VẼ BIỂU ĐỒ
             //Doanh Thu
             /*List<double> profitDataList = new List<double>();
             for (int i = 1; i <= 12; i++)
