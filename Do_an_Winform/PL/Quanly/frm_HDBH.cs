@@ -2,7 +2,6 @@
 using Do_an_Winform.DAL;
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.Quanly.BaoCao;
-//using Do_an_Winform.PL.Quanly.BaoCao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
