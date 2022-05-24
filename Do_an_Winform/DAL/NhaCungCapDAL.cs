@@ -64,33 +64,11 @@ namespace Do_an_Winform.DAL
             return list;
         }
 
-        public static List<object> GetAllSupplier()
-        {
-            CHDTEntities1 entities = new CHDTEntities1();
-            List<object> list = new List<object>();
-
-            var query = from ncc in entities.NhaCungCaps
-                        where ncc.TrangThai == "1"
-                        select new
-                        {
-                            ncc.MaNCC,
-                            ncc.TenNCC,
-                            ncc.SDT,
-                            ncc.Email,
-                            ncc.DiaChi
-                        };
-
-            foreach (var item in query)
-            {
-                list.Add(item);
-            }
-            return list;
-        }
         public static NhaCungCapDTO GetNhaCungCapByID(string mancc)
         {
             CHDTEntities1 entities = new CHDTEntities1();
             NhaCungCap ncc = (from cc in entities.NhaCungCaps
-                       where cc.TrangThai == "1" && cc.MaNCC.Equals(mancc)
+                       where cc.MaNCC.Equals(mancc)
                        select cc).FirstOrDefault();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
