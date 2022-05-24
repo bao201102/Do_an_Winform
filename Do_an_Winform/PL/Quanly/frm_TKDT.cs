@@ -62,46 +62,37 @@ namespace Do_an_Winform.PL.Quanly
         }
         private void cbHTTK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbHTTK.Text != "")
+            if (cbHTTK.Text == "Năm")
             {
-                if (cbHTTK.Text == "Năm")
-                {
-                    cbQuyTK.Enabled = false;
-                    cbQuyTK.Text = "Tất Cả";
+                cbQuyTK.Enabled = false;
+                cbQuyTK.Text = "Tất Cả";
 
-                    cbThangTK.Enabled = false;
-                    cbThangTK.Text = "Tất Cả";
-                }
-                if (cbHTTK.Text == "Quý")
-                {
-                    cbQuyTK.Enabled = true;
-                    cbThangTK.Enabled = false;
-                    cbQuyTK.Items.Remove("Tất cả");
-                    cbQuyTK.Items.Clear();
-                    object[] quy = new object[] { 1, 2, 3, 4 };
-                    cbQuyTK.Items.AddRange(quy);
-                    cbThangTK.Text = "Tất cả";
-                }
-                if (cbHTTK.Text == "Tháng" || cbHTTK.Text == "")
-                {
-                    cbThangTK.Text = "";
-                    cbThangTK.Items.Remove("Tất cả");
-                    cbThangTK.Enabled = true;
-                    cbQuyTK.Enabled = false;
-                    cbQuyTK.Text = "";
-                    if (cbQuyTK.Text == "")
-                    {
-                        cbThangTK.Items.Clear();
-                        object[] allmonth = new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-                        cbThangTK.Items.AddRange(allmonth);
-                    }
-                }
+                cbThangTK.Enabled = false;
+                cbThangTK.Text = "Tất Cả";
             }
-            else
+            if (cbHTTK.Text == "Quý")
             {
-                txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
-                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
-                txtLoiNhuan.Text = (double.Parse(txtDoanhThu.Text) - double.Parse(txtChiPhi.Text)).ToString();
+                cbQuyTK.Enabled = true;
+                cbThangTK.Enabled = false;
+                cbQuyTK.Items.Remove("Tất cả");
+                cbQuyTK.Items.Clear();
+                object[] quy = new object[] { 1, 2, 3, 4 };
+                cbQuyTK.Items.AddRange(quy);
+                cbThangTK.Text = "Tất cả";
+            }
+            if (cbHTTK.Text == "Tháng" || cbHTTK.Text == "")
+            {
+                cbThangTK.Text = "";
+                cbThangTK.Items.Remove("Tất cả");
+                cbThangTK.Enabled = true;
+                cbQuyTK.Enabled = false;
+                cbQuyTK.Text = "";
+                if (cbQuyTK.Text == "")
+                {
+                    cbThangTK.Items.Clear();
+                    object[] allmonth = new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+                    cbThangTK.Items.AddRange(allmonth);
+                }
             }
         }
         public int LayQuy(string month)
@@ -119,6 +110,10 @@ namespace Do_an_Winform.PL.Quanly
         private void btnTK_Click(object sender, EventArgs e)
         {
             //THỐNG KÊ
+            if(cbHTTK.Text == "")
+            {
+                    bunifuSnackbarTKDT.Show(this, "Vui lòng chọn hình thức thống kê \nThử lại", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+            }
             if (cbHTTK.Text == "Năm")
             {
                 txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoNam(txtNamTK.Text).ToString();
