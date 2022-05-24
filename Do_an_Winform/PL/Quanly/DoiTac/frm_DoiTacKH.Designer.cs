@@ -42,9 +42,9 @@
             this.lblKhachHang = new System.Windows.Forms.Label();
             this.dgKhachHang = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btThemKH = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.txtFind = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnCreateRP = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,11 +175,6 @@
             this.btThemKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btThemKH.Click += new System.EventHandler(this.btThemKH_Click);
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // txtFind
             // 
             this.txtFind.AcceptsReturn = false;
@@ -285,6 +280,12 @@
             this.btnCreateRP.Size = new System.Drawing.Size(100, 50);
             this.btnCreateRP.TabIndex = 20;
             this.btnCreateRP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCreateRP.Click += new System.EventHandler(this.btnCreateRP_Click);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // frm_DoiTacKH
             // 

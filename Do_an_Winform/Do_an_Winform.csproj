@@ -353,6 +353,24 @@
     <Compile Include="PL\Quanly\BaoCao\frm_XemBaoCao.Designer.cs">
       <DependentUpon>frm_XemBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoNCC.Designer.cs">
+      <DependentUpon>frm_BaoCaoNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoKH.Designer.cs">
+      <DependentUpon>frm_BaoCaoKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoNV.Designer.cs">
+      <DependentUpon>frm_BaoCaoNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\DoiTac\frm_DoiTacKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -541,6 +559,15 @@
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDBH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDNH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_TKDT.rdlc" />
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_BaoCaoNCC.resx">
+      <DependentUpon>frm_BaoCaoNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_BaoCaoKH.resx">
+      <DependentUpon>frm_BaoCaoKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_BaoCaoNV.resx">
+      <DependentUpon>frm_BaoCaoNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacKH.resx">
       <DependentUpon>frm_DoiTacKH.cs</DependentUpon>
     </EmbeddedResource>
@@ -559,6 +586,9 @@
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_ThemNV.resx">
       <DependentUpon>frm_ThemNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\ReportKH.rdlc" />
+    <EmbeddedResource Include="PL\Quanly\DoiTac\ReportNCC.rdlc" />
+    <EmbeddedResource Include="PL\Quanly\DoiTac\ReportNV.rdlc" />
     <EmbeddedResource Include="PL\Quanly\frm_HDBH.resx">
       <DependentUpon>frm_HDBH.cs</DependentUpon>
     </EmbeddedResource>
@@ -622,6 +652,9 @@
       <DependentUpon>CHDTEntity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CHDTEntities1.datasource" />
+    <None Include="Properties\DataSources\ChiTietHoaDon.datasource" />
+    <None Include="Properties\DataSources\ChiTietPhieuNhap.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.ChiTietHoaDonDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.ChiTietPhieuNhapDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.HoaDonDTO.datasource" />
@@ -635,6 +668,20 @@
     <None Include="Properties\DataSources\Do_an_Winform.DTO.PhieuNhapHangDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.SanPhamDTO.datasource" />
     <None Include="Properties\DataSources\Do_an_Winform.DTO.TaiKhoanDTO.datasource" />
+    <None Include="Properties\DataSources\frm_Thukho.datasource" />
+    <None Include="Properties\DataSources\HoaDon.datasource" />
+    <None Include="Properties\DataSources\KhachHang.datasource" />
+    <None Include="Properties\DataSources\LoaiNhanVien.datasource" />
+    <None Include="Properties\DataSources\LoaiSanPham.datasource" />
+    <None Include="Properties\DataSources\LoaiThanhVien.datasource" />
+    <None Include="Properties\DataSources\NhaCungCap.datasource" />
+    <None Include="Properties\DataSources\NhanVien.datasource" />
+    <None Include="Properties\DataSources\NhaSanXuat.datasource" />
+    <None Include="Properties\DataSources\PhieuNhapHang.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\SanPham.datasource" />
+    <None Include="Properties\DataSources\sysdiagram.datasource" />
+    <None Include="Properties\DataSources\TaiKhoan.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

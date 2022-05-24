@@ -39,6 +39,9 @@ namespace Do_an_Winform.BLL
         {
             return KhachHangDAL.UpdateInfoCustomer(kh);
         }
-
+        public static List<KhachHangDTO> LayTatCaKhachHang()
+        {
+            return KhachHangDAL.LayTatCaKhachHang();
+        }
     }
 }

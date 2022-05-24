@@ -55,5 +55,11 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 
             }
         }
+
+        private void btnCreateRP_Click(object sender, EventArgs e)
+        {
+            frm_BaoCaoNCC form = new frm_BaoCaoNCC();
+            form.ShowDialog();
+        }
     }
 }
