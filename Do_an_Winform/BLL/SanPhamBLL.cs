@@ -44,51 +44,71 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetAllProductByCat(maloaisp);
         }
+
         public static List<object> GetProductByManufacId(string maNhaSX)
         {
             return SanPhamDAL.GetProductByManufacId(maNhaSX);
         }
+
         public static List<object> GetProductByCondition(string maNhaSX, int minprice, int maxprice, string maLoaiSP)
         {
             
             return SanPhamDAL.GetProductByCondition(maNhaSX, minprice, maxprice, maLoaiSP);
         }
+
         public static bool InsertProduct(SanPhamDTO product)
         {
             return SanPhamDAL.InsertProdut(product);
         }
+
         public static SanPhamDTO GetProductEqualsName(string ten)
         {
             return SanPhamDAL.GetProductEqualsName(ten);
         }
+
         public static bool UpdateQuantityProduct(ChiTietPhieuNhapDTO pn)
         {
             return SanPhamDAL.UpdateQuantityProduct(pn);
         }
+
         public static bool UpdateProduct(SanPhamDTO productDTO)
         {
             return SanPhamDAL.UpdateProduct(productDTO);
         }
+
         public static bool DeleteProduct(string masp)
         {
             return SanPhamDAL.DeleteProduct(masp);
         }
+
         public static List<SanPhamDTO> GetProductByMaLoaiWithConditions(string name, string maloai)
         {
             return SanPhamDAL.GetProductByMaLoaiWithConditions(name, maloai);
         }
+
         public static List<SanPhamDTO> GetAllProductWithConditions(string name)
         {
             return SanPhamDAL.GetAllProductWithConditions(name);
         }
+
         public static List<SanPhamDTO> GetProductByProId(string maSP)
         {
             return SanPhamDAL.GetProductByProId(maSP);
         }
 
-        public static Dictionary<string, double> GetTopProduct(DateTime time)
+        public static Dictionary<string, double> GetTopProductByDay(DateTime time)
         {
-            return SanPhamDAL.GetTopProductName(time);
+            return SanPhamDAL.GetTopProductByDay(time);
+        }
+
+        public static Dictionary<string, double> GetTopProductByMonth(DateTime time)
+        {
+            return SanPhamDAL.GetTopProductByMonth(time);
+        }
+
+        public static Dictionary<string, double> GetTopProductByYear(DateTime time)
+        {
+            return SanPhamDAL.GetTopProductByYear(time);
         }
     }
 }

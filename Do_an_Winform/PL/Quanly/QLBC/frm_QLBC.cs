@@ -17,20 +17,56 @@ namespace Do_an_Winform.PL.Quanly.QLBC
         {
             InitializeComponent();
         }
-
-        private void frm_QLBC_Load(object sender, EventArgs e)
+        
+        private void chart_Load(Dictionary<string, double> data)
         {
+            bunifuChartCanvas1.Clear();
+            bunifuHorizontalBarChart1.Data.Clear();
+
             List<string> y_AxisLabels = new List<string>();
             List<double> horizontalBarData = new List<double>();
 
-            foreach (var productData in SanPhamBLL.GetTopProduct(bunifuDatePicker1.Value).OrderByDescending(x => x.Value))
+            foreach (var productData in data.OrderByDescending(x => x.Value))
             {
-                y_AxisLabels.Add(productData.Key);
-                horizontalBarData.Add(productData.Value);
+                if (productData.Value > 0)
+                {
+                    y_AxisLabels.Add(productData.Key);
+                    horizontalBarData.Add(productData.Value);
+                }            
             }
 
             bunifuChartCanvas1.Labels = y_AxisLabels.ToArray();
             bunifuHorizontalBarChart1.Data = horizontalBarData;
+
+            bunifuChartCanvas1.Update();
+            bunifuChartCanvas1.Refresh();
+        }
+
+        private void frm_QLBC_Load(object sender, EventArgs e)
+        {
+            cbDate.SelectedIndex = 0;
+            chart_Load(SanPhamBLL.GetTopProductByYear(bunifuDatePicker1.Value));
+        }
+
+        private void cbLoaisp_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cbDate.SelectedIndex == 0)
+            {           
+                chart_Load(SanPhamBLL.GetTopProductByDay(bunifuDatePicker1.Value));
+            }
+            else if (cbDate.SelectedIndex == 1)
+            {
+                chart_Load(SanPhamBLL.GetTopProductByMonth(bunifuDatePicker1.Value));
+            }
+            else
+            {
+                chart_Load(SanPhamBLL.GetTopProductByYear(bunifuDatePicker1.Value));
+            }
+        }
+
+        private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            cbLoaisp_SelectionChangeCommitted(sender, e);
         }
     }
 }
