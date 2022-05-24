@@ -36,7 +36,7 @@ namespace Do_an_Winform.PL.Quanly
             object[] month2quarter = new object[] { 4, 5, 6, "Tất cả" };
             object[] month3quarter = new object[] { 7, 8, 9, "Tất cả" };
             object[] month4quarter = new object[] { 10, 11, 12, "Tất cả" };
-            object[] allmonth = new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+            object[] allmonth = new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
             if (cbQuyTK.SelectedItem == "1")
             {
                 cbThangTK.Items.AddRange(month1quarter);
@@ -60,7 +60,7 @@ namespace Do_an_Winform.PL.Quanly
         }
         private void cbHTTK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbHTTK.Text == "Năm")
+            if (cbHTTK.Text == "Năm")
             {
                 cbQuyTK.Enabled = false;
                 cbQuyTK.Text = "Tất Cả";
@@ -83,7 +83,7 @@ namespace Do_an_Winform.PL.Quanly
             if (cbHTTK.Text == "Tháng")
             {
                 cbQuyTK.Text = "";
-                if(cbQuyTK.Text == "")
+                if (cbQuyTK.Text == "")
                 {
                     cbThangTK.Items.Clear();
                     object[] allmonth = new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
@@ -109,7 +109,51 @@ namespace Do_an_Winform.PL.Quanly
         }
         private void btnTK_Click(object sender, EventArgs e)
         {
+            //Doanh Thu
+            /*List<double> profitDataList = new List<double>();
+            for (int i = 1; i <= 12; i++)
+            {
+                profitDataList.Add(HoaDonBLL.ThongKeDoanhThuTheoThang($"{i}", txtNamTK.Text));
+            }
+            barChartDT.Data = profitDataList;
+            barChartDT.TargetCanvas = chartCanvasTKDT;
+            List<Color> profitColors = new List<Color>();
+            for (int i = 0; i < profitDataList.Count; i++)
+            {
+                profitColors.Add(Color.FromArgb(80, 120, 60));
+            }
+            barChartDT.BackgroundColor = profitColors;*/
 
+            //Chi Phí
+            /*List<double> expenseDataList = new List<double>();
+            for (int i = 1; i <= 12; i++)
+            {
+                expenseDataList.Add(PhieuNhapHangBLL.ThongKeChiPhiTheoThang($"{i}", txtNamTK.Text));
+            }
+            barChartCP.Data = expenseDataList;
+            barChartCP.TargetCanvas = chartCanvasTKDT;
+            List<Color> expenseColors = new List<Color>();
+            for (int i = 0; i < profitDataList.Count; i++)
+            {
+                expenseColors.Add(Color.FromArgb(10, 110, 60));
+            }
+            barChartCP.BackgroundColor = expenseColors;*/
+
+            //Lợi Nhuận
+            /*List<double> salesDataList = new List<double>();
+            for (int i = 1; i <= 12; i++)
+            {
+                salesDataList.Add(HoaDonBLL.ThongKeDoanhThuTheoThang($"{i}", txtNamTK.Text) - PhieuNhapHangBLL.ThongKeChiPhiTheoThang($"{i}", txtNamTK.Text));
+            }
+            barChartLN.Data = salesDataList;
+            barChartLN.TargetCanvas = chartCanvasTKDT;
+
+            List<Color> salesColors = new List<Color>();
+            for (int i = 0; i < profitDataList.Count; i++)
+            {
+                salesColors.Add(Color.FromArgb(40, 160, 120));
+            }
+            barChartLN.BackgroundColor = salesColors;*/
         }
     }
 }
