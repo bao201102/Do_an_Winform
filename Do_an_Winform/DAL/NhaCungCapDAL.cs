@@ -15,17 +15,17 @@ namespace Do_an_Winform.DAL
             CHDTEntities1 entities = new CHDTEntities1();
             var ncc = (from cc in entities.NhaCungCaps
                        where cc.TrangThai == "1"
-                        select cc);
+                       select cc);
 
             List<NhaCungCapDTO> nhaCungCapDTOs = new List<NhaCungCapDTO>();
             foreach (NhaCungCap item in ncc)
             {
-                
-                    var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
-                    var mapper = new Mapper(config);
-                    NhaCungCapDTO nhaCungCap = mapper.Map<NhaCungCapDTO>(item);
-                    nhaCungCapDTOs.Add(nhaCungCap);
-                
+
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
+                var mapper = new Mapper(config);
+                NhaCungCapDTO nhaCungCap = mapper.Map<NhaCungCapDTO>(item);
+                nhaCungCapDTOs.Add(nhaCungCap);
+
             }
             return nhaCungCapDTOs;
 
@@ -85,6 +85,20 @@ namespace Do_an_Winform.DAL
                 list.Add(item);
             }
             return list;
+        }
+        public static NhaCungCapDTO GetNhaCungCapByID(string mancc)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var ncc = (from cc in entities.NhaCungCaps
+                       where cc.TrangThai == "1" && cc.MaNCC.Equals(mancc)
+                       select cc);
+
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
+            var mapper = new Mapper(config);
+            NhaCungCapDTO nhaCungCap = mapper.Map<NhaCungCapDTO>(ncc);
+
+            return nhaCungCap;
+
         }
     }
 }

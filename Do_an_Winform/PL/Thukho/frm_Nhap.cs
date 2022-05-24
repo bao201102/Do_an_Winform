@@ -17,7 +17,7 @@ namespace Do_an_Winform.PL.Thukho
     public partial class frm_Nhap : Form
     {
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
-
+        
         public frm_Nhap(TaiKhoanDTO user)
         {
             InitializeComponent();
@@ -47,7 +47,7 @@ namespace Do_an_Winform.PL.Thukho
             cbbTenSP.DisplayMember = "TenSP";
             cbbTenSP.ValueMember = "MaSP";
 
-            lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
+            lblDongia.Text = (SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia * 0.9).ToString();
 
             DatePicker.Value = DateTime.Now;
         }
@@ -60,7 +60,7 @@ namespace Do_an_Winform.PL.Thukho
 
         private void cbbTenSP_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
+            lblDongia.Text = (SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia * 0.9).ToString();
             txtSoLuong.Text = "";
         }
 
@@ -68,7 +68,7 @@ namespace Do_an_Winform.PL.Thukho
         {
             try
             {
-                lblDongia.Text = SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia.ToString();
+                lblDongia.Text = (SanPhamBLL.GetProductByName(cbbTenSP.Text.ToString()).DonGia * 0.9).ToString();
                 txtSoLuong.Text = "";
             }
             catch (Exception)

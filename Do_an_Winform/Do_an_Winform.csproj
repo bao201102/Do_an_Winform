@@ -467,6 +467,12 @@
     <Compile Include="PL\Thukho\frm_TonKho.Designer.cs">
       <DependentUpon>frm_TonKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Thukho\frm_XemPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Thukho\frm_XemPN.Designer.cs">
+      <DependentUpon>frm_XemPN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -586,6 +592,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_TonKho.resx">
       <DependentUpon>frm_TonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Thukho\frm_XemPN.resx">
+      <DependentUpon>frm_XemPN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\rpt_Nhap.rdlc" />
     <EmbeddedResource Include="Properties\licenses.licx" />

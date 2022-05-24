@@ -29,7 +29,7 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
 
         public void rpt_Nhap(PhieuNhapHangDTO phieuNhap, string tenncc,string nhanVien)
         {
-            List<ChiTietPhieuNhapDTO> chiTiets = ChiTietPhieuNhapBLL.GetAll(phieuNhap.MaPN);
+            List<ChiTietPhieuNhapDTO> chiTiets = ChiTietPhieuNhapBLL.GetAllByID(phieuNhap.MaPN);
             reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Thukho.rpt_Nhap.rdlc";
             reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("CTPN", chiTiets));
             reportViewerResult.LocalReport.SetParameters(new ReportParameter("paTenNV", nhanVien));

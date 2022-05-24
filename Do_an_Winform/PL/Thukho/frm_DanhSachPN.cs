@@ -14,7 +14,7 @@ namespace Do_an_Winform.PL.Thukho
 {
     public partial class frm_DanhSachPN : Form
     {
-    TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+        TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         public frm_DanhSachPN(TaiKhoanDTO user)
         {
             InitializeComponent();
@@ -56,7 +56,22 @@ namespace Do_an_Winform.PL.Thukho
 
         private void gridviewDSNhap_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            string manv = gridviewDSNhap.CurrentRow.Cells[2].Value.ToString();
+            string mancc = gridviewDSNhap.CurrentRow.Cells[3].Value.ToString();
+            string mapn = gridviewDSNhap.CurrentRow.Cells[0].Value.ToString();
 
+            frm_XemPN frm = new frm_XemPN();
+            openChildForm(frm);
+            frm.lblTenNV.Text = NhanVienBLL.GetEmployeeById(manv).TenNV.ToString();
+            frm.lblDate.Text = gridviewDSNhap.CurrentRow.Cells[1].Value.ToString();
+            frm.lblNCC.Text = NhaCungCapBLL.GetNhaCungCapByID(mancc).TenNCC.ToString();
+            frm.gridXemPN.DataSource = ChiTietPhieuNhapBLL.GetAllByID(mapn);
+            frm.gridXemPN.Columns[0].Visible = false;
+            frm.gridXemPN.Columns[1].HeaderText = "Mã sản phẩm";
+            frm.gridXemPN.Columns[2].HeaderText = "Tên sản phẩm";
+            frm.gridXemPN.Columns[3].HeaderText = "Số lượng";
+            frm.gridXemPN.Columns[4].Visible = false;
+            frm.gridXemPN.Columns[5].Visible = false;
         }
     }
 }

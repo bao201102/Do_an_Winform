@@ -25,7 +25,7 @@ namespace Do_an_Winform.DAL
 
         }
 
-        public static List<ChiTietPhieuNhapDTO> GetAll(string maPn)
+        public static List<ChiTietPhieuNhapDTO> GetAllByID(string maPn)
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var query = from pn in entities.ChiTietPhieuNhaps
