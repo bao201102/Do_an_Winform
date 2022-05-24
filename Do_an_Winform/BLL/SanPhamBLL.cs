@@ -85,5 +85,10 @@ namespace Do_an_Winform.BLL
         {
             return SanPhamDAL.GetProductByProId(maSP);
         }
+
+        public static Dictionary<string, double> GetTopProduct()
+        {
+            return SanPhamDAL.GetTopProductName();
+        }
     }
 }
