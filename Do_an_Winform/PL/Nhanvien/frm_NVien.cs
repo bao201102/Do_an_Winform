@@ -120,7 +120,7 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnLapHD_Click(object sender, EventArgs e)
         {
-            openChildUsercontrol(new UserControlLapHoaDon());
+            openChildForm(new frm_DSHoaDon(taikhoan));
         }
 
         private void btnDKTV_Click(object sender, EventArgs e)

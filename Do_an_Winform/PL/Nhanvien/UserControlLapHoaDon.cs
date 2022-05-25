@@ -57,7 +57,7 @@ namespace Do_an_Winform.PL.Nhanvien
             txtLoaiTV.Enabled = false;
             try
             {
-                nhanVien = NhanVienBLL.GetEmployee(frm_NVien.taikhoan1.MaNguoiDung);
+                nhanVien = NhanVienBLL.GetEmployee(frm_DSHoaDon.taiKhoan.MaNguoiDung);
             }
             catch (Exception)
             {
@@ -147,7 +147,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 hoaDon.NgayTaoHD = (new DateTime(curDay.Year, curDay.Month, curDay.Day));
                 try
                 {
-                    nhanVien = NhanVienBLL.GetEmployee(frm_NVien.taikhoan1.MaNguoiDung);
+                    nhanVien = NhanVienBLL.GetEmployee(frm_DSHoaDon.taiKhoan.MaNguoiDung);
                 }
                 catch (Exception)
                 {
@@ -275,6 +275,99 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnIn2_Click(object sender, EventArgs e)
         {
+            if (cbTenSP.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên sản phẩm");
+            }
+            else if (txtSL.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số lượng");
+            }
+            else
+            {
+                int totalBuy = int.Parse(TachThanhTien(lblTotalBuy.Text));
+                HoaDonDTO hoaDon = new HoaDonDTO();
+                listHoaDon = HoaDonDAL.GetAllBill();
+                hoaDon.MaHD = txtMaHD.Text;
+                DateTime curDay = DateTime.Now;
+                hoaDon.NgayTaoHD = (new DateTime(curDay.Year, curDay.Month, curDay.Day));
+                try
+                {
+                    nhanVien = NhanVienBLL.GetEmployee(frm_DSHoaDon.taiKhoan.MaNguoiDung);
+                }
+                catch (Exception)
+                {
+                }
+                hoaDon.MaNV = nhanVien.MaNV;
+                if (txtSDT.Text == "")
+                {
+                    hoaDon.MaKH = null;
+                }
+                else
+                {
+                    hoaDon.MaKH = (KhachHangDAL.GetCustomerByPhone(txtSDT.Text)).MaKH;
+                }
+                hoaDon.ThanhTien = totalBuy;
+                hoaDon.TrangThai = "1";
+                if (HoaDonDAL.AddNewBill(hoaDon))
+                {
+                    MessageBox.Show("Thêm hóa đơn thành công");
+                    int count = 0;
+
+                    for (int i = 0; i < dgvInfoProduct.RowCount; i++)
+                    {
+                        ChiTietHoaDonDTO chiTietHD = new ChiTietHoaDonDTO();
+                        try
+                        {
+                            string tenSP = dgvInfoProduct.Rows[i].Cells[0].Value.ToString();
+                            chiTietHD.MaHD = txtMaHD.Text;
+                            chiTietHD.MaSP = SanPhamBLL.GetProductByName(tenSP).MaSP;
+                            chiTietHD.TenSP = tenSP;
+                            chiTietHD.SoLuong = int.Parse(dgvInfoProduct.Rows[i].Cells[1].Value.ToString());
+                            chiTietHD.ThanhTien = int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[4].Value.ToString()));
+                            chiTietHD.TrangThai = "1";
+                            if (ChiTietHoaDonBLL.AddNewBillDetail(chiTietHD))
+                            {
+                                count++;
+                            }
+                        }
+                        catch { }
+                    }
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Thêm chi tiết hóa đơn thành công");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi xảy ra");
+                }
+                if (rbThanhVien.Checked == true)
+                {
+                    khachHang = KhachHangDAL.GetCustomerByPhone(txtSDT.Text);
+                    khachHang.DiemTichLuy += 50;
+                    if (khachHang.DiemTichLuy <= 100)
+                    {
+                        khachHang.MaLoaiTVien = "LTV001";
+                    }
+                    else if (khachHang.DiemTichLuy > 100 && khachHang.DiemTichLuy <= 200)
+                    {
+                        khachHang.MaLoaiTVien = "LTV002";
+                    }
+                    else if (khachHang.DiemTichLuy > 200 && khachHang.DiemTichLuy <= 400)
+                    {
+                        khachHang.MaLoaiTVien = "LTV003";
+                    }
+                    else
+                    {
+                        khachHang.MaLoaiTVien = "LTV004";
+                    }
+                    if (KhachHangDAL.UpdateInfoCustomer(new KhachHangDTO(khachHang.MaKH, khachHang.TenKH, khachHang.GioiTinh, khachHang.Email, khachHang.SĐT, khachHang.DiaChi, khachHang.MaLoaiTVien, khachHang.TrangThai, khachHang.DiemTichLuy)))
+                    {
+                        MessageBox.Show("Tích điểm thành công");
+                    }
+                }
+            }
             string tenNV = lblTenNV.Text;
             string ngayTao = lblNgayBan.Text;
             string tenKH = txtTenKH.Text;
@@ -478,6 +571,12 @@ namespace Do_an_Winform.PL.Nhanvien
                     
                 }
             }
+        }
+
+        private void lblReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Parent = null;
         }
     }
 }

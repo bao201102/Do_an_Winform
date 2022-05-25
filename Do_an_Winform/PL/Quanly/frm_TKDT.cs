@@ -103,10 +103,6 @@ namespace Do_an_Winform.PL.Quanly
             else if (month == "10" || month == "11" || month == "12") return 4;
             return 0;
         }
-        private void btnViewReport_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnTK_Click(object sender, EventArgs e)
         {
             //THỐNG KÊ

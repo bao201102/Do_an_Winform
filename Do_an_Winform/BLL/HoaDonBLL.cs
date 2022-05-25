@@ -70,9 +70,9 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.EditBill(hd);
         }
-        public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
+        public static List<HoaDonDTO> GetAllBillById(string maHD)
         {
-            return HoaDonDAL.GetRevenueByMonth(time);
+            return HoaDonDAL.GetAllBillById(maHD);
         }
     }
 }
