@@ -108,7 +108,7 @@ namespace Do_an_Winform.PL.Thukho
             NhaSanXuatDTO nsx = NhaSanXuatBLL.GetManufacById(spById.MaNhaSX);
             if (txtSoLuong.Text == "")
             {
-                bunifuSnackbar1.Show(this, "Chưa nhập số lượng. Vui lòng thử lại!", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                bunifuSnackbar1.Show(new frm_Thukho(taikhoan), "Chưa nhập số lượng. Vui lòng thử lại!", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
             }
             else
             {

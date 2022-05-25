@@ -14,7 +14,6 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 {
     public partial class frm_DoiTacNCC : Form
     {
-        string info;
         public frm_DoiTacNCC()
         {
             InitializeComponent();
