@@ -28,7 +28,7 @@ namespace Do_an_Winform.PL.Thukho
             gridviewStock.Columns[0].Visible = false;
             gridviewStock.Columns[1].HeaderText = "Tên sản phẩm";
             gridviewStock.Columns[2].HeaderText = "Số lượng";
-            gridviewStock.Columns[3].HeaderText = "Đơn giá";
+            gridviewStock.Columns[3].Visible = false;
             gridviewStock.Columns[4].HeaderText = "Tên loại";
             gridviewStock.Columns[5].HeaderText = "Nhà sản xuất";
 
@@ -46,7 +46,7 @@ namespace Do_an_Winform.PL.Thukho
                 gridviewStock.Columns[0].Visible = false;
                 gridviewStock.Columns[1].HeaderText = "Tên sản phẩm";
                 gridviewStock.Columns[2].HeaderText = "Số lượng";
-                gridviewStock.Columns[3].HeaderText = "Đơn giá";
+                gridviewStock.Columns[3].Visible = false;
                 gridviewStock.Columns[4].HeaderText = "Tên loại";
                 gridviewStock.Columns[5].HeaderText = "Nhà sản xuất";
             }

@@ -208,7 +208,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTongCong.IconRight = null;
             this.txtTongCong.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTongCong.Lines = new string[0];
-            this.txtTongCong.Location = new System.Drawing.Point(925, 195);
+            this.txtTongCong.Location = new System.Drawing.Point(919, 195);
             this.txtTongCong.Margin = new System.Windows.Forms.Padding(2);
             this.txtTongCong.MaxLength = 32767;
             this.txtTongCong.MinimumSize = new System.Drawing.Size(1, 1);
@@ -245,7 +245,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTongCong.SelectionLength = 0;
             this.txtTongCong.SelectionStart = 0;
             this.txtTongCong.ShortcutsEnabled = true;
-            this.txtTongCong.Size = new System.Drawing.Size(246, 41);
+            this.txtTongCong.Size = new System.Drawing.Size(252, 41);
             this.txtTongCong.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTongCong.TabIndex = 76;
             this.txtTongCong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -318,6 +318,7 @@ namespace Do_an_Winform.PL.Quanly
             this.DatePickerEndDay.BackColor = System.Drawing.Color.Transparent;
             this.DatePickerEndDay.BorderColor = System.Drawing.Color.Silver;
             this.DatePickerEndDay.BorderRadius = 7;
+            this.DatePickerEndDay.CalendarFont = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DatePickerEndDay.Color = System.Drawing.Color.Silver;
             this.DatePickerEndDay.CustomFormat = "dd/MM/yyyy HH:mm";
             this.DatePickerEndDay.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
@@ -334,7 +335,7 @@ namespace Do_an_Winform.PL.Quanly
             this.DatePickerEndDay.IconColor = System.Drawing.Color.Gray;
             this.DatePickerEndDay.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.DatePickerEndDay.LeftTextMargin = 5;
-            this.DatePickerEndDay.Location = new System.Drawing.Point(117, 48);
+            this.DatePickerEndDay.Location = new System.Drawing.Point(118, 48);
             this.DatePickerEndDay.Margin = new System.Windows.Forms.Padding(2);
             this.DatePickerEndDay.MinimumSize = new System.Drawing.Size(4, 32);
             this.DatePickerEndDay.Name = "DatePickerEndDay";
@@ -347,6 +348,7 @@ namespace Do_an_Winform.PL.Quanly
             this.DatePickerStartDay.BackColor = System.Drawing.Color.Transparent;
             this.DatePickerStartDay.BorderColor = System.Drawing.Color.Silver;
             this.DatePickerStartDay.BorderRadius = 7;
+            this.DatePickerStartDay.CalendarFont = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DatePickerStartDay.Color = System.Drawing.Color.Silver;
             this.DatePickerStartDay.CustomFormat = "dd/MM/yyyy HH:mm";
             this.DatePickerStartDay.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
@@ -363,7 +365,7 @@ namespace Do_an_Winform.PL.Quanly
             this.DatePickerStartDay.IconColor = System.Drawing.Color.Gray;
             this.DatePickerStartDay.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.DatePickerStartDay.LeftTextMargin = 5;
-            this.DatePickerStartDay.Location = new System.Drawing.Point(117, 9);
+            this.DatePickerStartDay.Location = new System.Drawing.Point(118, 9);
             this.DatePickerStartDay.Margin = new System.Windows.Forms.Padding(2);
             this.DatePickerStartDay.MinimumSize = new System.Drawing.Size(4, 32);
             this.DatePickerStartDay.Name = "DatePickerStartDay";
@@ -379,7 +381,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnViewReport.ActiveForecolor = System.Drawing.Color.Black;
             this.btnViewReport.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnViewReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewReport.BackColor = System.Drawing.Color.White;
+            this.btnViewReport.BackColor = System.Drawing.SystemColors.Control;
             this.btnViewReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewReport.BackgroundImage")));
             this.btnViewReport.ButtonText = "Xem báo cáo";
             this.btnViewReport.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -402,11 +404,11 @@ namespace Do_an_Winform.PL.Quanly
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 17);
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 15);
             this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(91, 17);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(102, 20);
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "Ngày bắt đầu:";
             // 
@@ -416,11 +418,11 @@ namespace Do_an_Winform.PL.Quanly
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(12, 57);
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(12, 55);
             this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(95, 17);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(107, 20);
             this.bunifuCustomLabel2.TabIndex = 2;
             this.bunifuCustomLabel2.Text = "Ngày kết thúc: ";
             // 

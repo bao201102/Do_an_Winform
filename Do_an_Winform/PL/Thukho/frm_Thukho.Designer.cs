@@ -122,7 +122,7 @@ namespace Do_an_Winform
             this.functionPanel.Location = new System.Drawing.Point(0, 236);
             this.functionPanel.Name = "functionPanel";
             this.functionPanel.Quality = 10;
-            this.functionPanel.Size = new System.Drawing.Size(250, 292);
+            this.functionPanel.Size = new System.Drawing.Size(250, 236);
             this.functionPanel.TabIndex = 12;
             // 
             // btnXuat
