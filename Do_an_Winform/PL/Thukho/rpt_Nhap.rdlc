@@ -85,41 +85,6 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Textbox Name="Textbox1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>PHIẾU NHẬP HÀNG</Value>
-                    <Style>
-                      <FontFamily>Leelawadee UI</FontFamily>
-                      <FontSize>18pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                      <Color>Teal</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.29042in</Top>
-            <Height>0.41667in</Height>
-            <Width>9.08208in</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox2">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -139,10 +104,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>1.23833in</Top>
-            <Left>0.35292in</Left>
+            <Left>0.46292in</Left>
             <Height>0.28125in</Height>
             <Width>1.22917in</Width>
-            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -172,10 +136,10 @@
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
             <Top>1.655in</Top>
-            <Left>0.35292in</Left>
+            <Left>0.46292in</Left>
             <Height>0.28125in</Height>
             <Width>1.22917in</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -205,10 +169,10 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>0.77653in</Top>
-            <Left>3.42188in</Left>
+            <Left>3.32355in</Left>
             <Height>0.28125in</Height>
             <Width>0.89583in</Width>
-            <ZIndex>3</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -238,10 +202,10 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>1.23833in</Top>
-            <Left>5.63021in</Left>
+            <Left>6.51501in</Left>
             <Height>0.28125in</Height>
             <Width>1.23958in</Width>
-            <ZIndex>4</ZIndex>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -256,21 +220,21 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.28472in</Width>
+                  <Width>1.7066in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.41319in</Width>
+                  <Width>3.83507in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.46479in</Width>
+                  <Width>1.88667in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.05604in</Width>
+                  <Width>2.47792in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.28646in</Height>
+                  <Height>0.46743in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -401,7 +365,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.28646in</Height>
+                  <Height>0.46743in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -532,7 +496,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.43097in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -657,10 +621,9 @@
             </TablixRowHierarchy>
             <DataSetName>CTPN</DataSetName>
             <Top>2.55083in</Top>
-            <Left>0.42236in</Left>
-            <Height>0.82292in</Height>
-            <Width>8.21874in</Width>
-            <ZIndex>5</ZIndex>
+            <Height>1.36584in</Height>
+            <Width>9.90625in</Width>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -688,10 +651,10 @@
             </Paragraphs>
             <rd:DefaultName>paTenNV</rd:DefaultName>
             <Top>1.23833in</Top>
-            <Left>1.95708in</Left>
+            <Left>2.11917in</Left>
             <Height>0.28125in</Height>
             <Width>2.91667in</Width>
-            <ZIndex>6</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -721,10 +684,10 @@
             </Paragraphs>
             <rd:DefaultName>paTenNCC</rd:DefaultName>
             <Top>1.655in</Top>
-            <Left>1.95708in</Left>
+            <Left>2.11917in</Left>
             <Height>0.28125in</Height>
             <Width>4.62798in</Width>
-            <ZIndex>7</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -754,10 +717,10 @@
             </Paragraphs>
             <rd:DefaultName>paMaPN</rd:DefaultName>
             <Top>1.23833in</Top>
-            <Left>7.03in</Left>
+            <Left>7.9148in</Left>
             <Height>0.28125in</Height>
             <Width>1.41667in</Width>
-            <ZIndex>8</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -787,9 +750,45 @@
             </Paragraphs>
             <rd:DefaultName>paNgayTao</rd:DefaultName>
             <Top>0.77653in</Top>
-            <Left>4.44667in</Left>
+            <Left>4.40042in</Left>
             <Height>0.28125in</Height>
             <Width>3.35417in</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>PHIẾU NHẬP HÀNG</Value>
+                    <Style>
+                      <FontFamily>Leelawadee UI</FontFamily>
+                      <FontSize>18pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>Teal</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.20833in</Top>
+            <Height>0.41667in</Height>
+            <Width>9.90625in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -805,7 +804,7 @@
         <Height>3.91667in</Height>
         <Style />
       </Body>
-      <Width>9.08208in</Width>
+      <Width>9.90625in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>

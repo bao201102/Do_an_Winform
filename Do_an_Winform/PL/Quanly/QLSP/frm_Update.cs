@@ -44,7 +44,7 @@ namespace Do_an_Winform.PL.Quanly.QLSP
         private void btnClose_Click(object sender, EventArgs e)
         {
             MessBox messBox = new MessBox();
-            bool result = messBox.ShowMess("Bạn có muốn hủy thêm sản phẩm mới ?");
+            bool result = messBox.ShowMess("Bạn có muốn hủy cập nhật thông tin sản phẩm ?");
             if (result)
             {
                 Close();
