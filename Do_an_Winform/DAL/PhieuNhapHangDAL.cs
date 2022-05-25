@@ -289,7 +289,7 @@ namespace Do_an_Winform.DAL
             return phieuNhaps;
         }
 
-        public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
+        public static Dictionary<int, double> GetCostByMonth(DateTime time)
         {
             CHDTEntities1 entities = new CHDTEntities1();
 
