@@ -46,7 +46,7 @@ namespace Do_an_Winform.PL.DangNhap
             else
             {
                 TaiKhoan user = new TaiKhoan();
-                user.TaiKhoan1 = txtUsername._TextBox.Text.Trim();
+                user.UserName = txtUsername._TextBox.Text.Trim();
                 user.MatKhau = txtPassword._TextBox.Text.Trim();
                 if (TaiKhoanBLL.GetUser(user) != null)
                 {

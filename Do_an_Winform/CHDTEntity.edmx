@@ -146,7 +146,7 @@
             <PropertyRef Name="MaNguoiDung" />
           </Key>
           <Property Name="MaNguoiDung" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="TaiKhoan" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MatKhau" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MaLoaiNV" Type="nvarchar" MaxLength="10" />
         </EntityType>
@@ -408,7 +408,6 @@
           <EntitySet Name="PhieuNhapHangs" EntityType="CHDTModel.PhieuNhapHang" />
           <EntitySet Name="SanPhams" EntityType="CHDTModel.SanPham" />
           <EntitySet Name="sysdiagrams" EntityType="CHDTModel.sysdiagram" />
-          <EntitySet Name="TaiKhoans" EntityType="CHDTModel.TaiKhoan" />
           <AssociationSet Name="FK_ChiTietHoaDon_HoaDon" Association="CHDTModel.FK_ChiTietHoaDon_HoaDon">
             <End Role="HoaDon" EntitySet="HoaDons" />
             <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
@@ -437,10 +436,6 @@
             <End Role="LoaiThanhVien" EntitySet="LoaiThanhViens" />
             <End Role="KhachHang" EntitySet="KhachHangs" />
           </AssociationSet>
-          <AssociationSet Name="FK__DangNhap__MaLoai__398D8EEE" Association="CHDTModel.FK__DangNhap__MaLoai__398D8EEE">
-            <End Role="LoaiNhanVien" EntitySet="LoaiNhanViens" />
-            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-          </AssociationSet>
           <AssociationSet Name="FK__NhanVien__MaLoai__3E52440B" Association="CHDTModel.FK__NhanVien__MaLoai__3E52440B">
             <End Role="LoaiNhanVien" EntitySet="LoaiNhanViens" />
             <End Role="NhanVien" EntitySet="NhanViens" />
@@ -453,10 +448,6 @@
             <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
             <End Role="PhieuNhapHang" EntitySet="PhieuNhapHangs" />
           </AssociationSet>
-          <AssociationSet Name="FK__NhanVien__MaNguo__3F466844" Association="CHDTModel.FK__NhanVien__MaNguo__3F466844">
-            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-            <End Role="NhanVien" EntitySet="NhanViens" />
-          </AssociationSet>
           <AssociationSet Name="FK__PhieuNhapH__MaNV__4316F928" Association="CHDTModel.FK__PhieuNhapH__MaNV__4316F928">
             <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="PhieuNhapHang" EntitySet="PhieuNhapHangs" />
@@ -464,6 +455,15 @@
           <AssociationSet Name="FK__SanPham__MaNhaSX__48CFD27E" Association="CHDTModel.FK__SanPham__MaNhaSX__48CFD27E">
             <End Role="NhaSanXuat" EntitySet="NhaSanXuats" />
             <End Role="SanPham" EntitySet="SanPhams" />
+          </AssociationSet>
+          <EntitySet Name="TaiKhoans" EntityType="CHDTModel.TaiKhoan" />
+          <AssociationSet Name="FK__DangNhap__MaLoai__398D8EEE" Association="CHDTModel.FK__DangNhap__MaLoai__398D8EEE">
+            <End Role="LoaiNhanVien" EntitySet="LoaiNhanViens" />
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NhanVien__MaNguo__3F466844" Association="CHDTModel.FK__NhanVien__MaNguo__3F466844">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="NhanVien" EntitySet="NhanViens" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="ChiTietHoaDon">
@@ -530,8 +530,8 @@
           </Key>
           <Property Name="MaLoaiNV" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="TenLoaiNV" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="TaiKhoans" Relationship="CHDTModel.FK__DangNhap__MaLoai__398D8EEE" FromRole="LoaiNhanVien" ToRole="TaiKhoan" />
           <NavigationProperty Name="NhanViens" Relationship="CHDTModel.FK__NhanVien__MaLoai__3E52440B" FromRole="LoaiNhanVien" ToRole="NhanVien" />
+          <NavigationProperty Name="TaiKhoans" Relationship="CHDTModel.FK__DangNhap__MaLoai__398D8EEE" FromRole="LoaiNhanVien" ToRole="TaiKhoan" />
         </EntityType>
         <EntityType Name="LoaiSanPham">
           <Key>
@@ -576,8 +576,8 @@
           <Property Name="TrangThai" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="HoaDons" Relationship="CHDTModel.FK_HoaDon_NhanVien" FromRole="NhanVien" ToRole="HoaDon" />
           <NavigationProperty Name="LoaiNhanVien" Relationship="CHDTModel.FK__NhanVien__MaLoai__3E52440B" FromRole="NhanVien" ToRole="LoaiNhanVien" />
-          <NavigationProperty Name="TaiKhoan" Relationship="CHDTModel.FK__NhanVien__MaNguo__3F466844" FromRole="NhanVien" ToRole="TaiKhoan" />
           <NavigationProperty Name="PhieuNhapHangs" Relationship="CHDTModel.FK__PhieuNhapH__MaNV__4316F928" FromRole="NhanVien" ToRole="PhieuNhapHang" />
+          <NavigationProperty Name="TaiKhoan" Relationship="CHDTModel.FK__NhanVien__MaNguo__3F466844" FromRole="NhanVien" ToRole="TaiKhoan" />
         </EntityType>
         <EntityType Name="NhaSanXuat">
           <Key>
@@ -627,17 +627,6 @@
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="TaiKhoan">
-          <Key>
-            <PropertyRef Name="MaNguoiDung" />
-          </Key>
-          <Property Name="MaNguoiDung" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="TaiKhoan1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MaLoaiNV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="LoaiNhanVien" Relationship="CHDTModel.FK__DangNhap__MaLoai__398D8EEE" FromRole="TaiKhoan" ToRole="LoaiNhanVien" />
-          <NavigationProperty Name="NhanViens" Relationship="CHDTModel.FK__NhanVien__MaNguo__3F466844" FromRole="TaiKhoan" ToRole="NhanVien" />
         </EntityType>
         <Association Name="FK_ChiTietHoaDon_HoaDon">
           <End Type="CHDTModel.HoaDon" Role="HoaDon" Multiplicity="1" />
@@ -723,18 +712,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DangNhap__MaLoai__398D8EEE">
-          <End Type="CHDTModel.LoaiNhanVien" Role="LoaiNhanVien" Multiplicity="0..1" />
-          <End Type="CHDTModel.TaiKhoan" Role="TaiKhoan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LoaiNhanVien">
-              <PropertyRef Name="MaLoaiNV" />
-            </Principal>
-            <Dependent Role="TaiKhoan">
-              <PropertyRef Name="MaLoaiNV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__NhanVien__MaLoai__3E52440B">
           <End Type="CHDTModel.LoaiNhanVien" Role="LoaiNhanVien" Multiplicity="1" />
           <End Type="CHDTModel.NhanVien" Role="NhanVien" Multiplicity="*" />
@@ -771,18 +748,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NhanVien__MaNguo__3F466844">
-          <End Type="CHDTModel.TaiKhoan" Role="TaiKhoan" Multiplicity="1" />
-          <End Type="CHDTModel.NhanVien" Role="NhanVien" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TaiKhoan">
-              <PropertyRef Name="MaNguoiDung" />
-            </Principal>
-            <Dependent Role="NhanVien">
-              <PropertyRef Name="MaNguoiDung" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__PhieuNhapH__MaNV__4316F928">
           <End Type="CHDTModel.NhanVien" Role="NhanVien" Multiplicity="1" />
           <End Type="CHDTModel.PhieuNhapHang" Role="PhieuNhapHang" Multiplicity="*" />
@@ -804,6 +769,41 @@
             </Principal>
             <Dependent Role="SanPham">
               <PropertyRef Name="MaNhaSX" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="MaNguoiDung" />
+          </Key>
+          <Property Name="MaNguoiDung" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaLoaiNV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LoaiNhanVien" Relationship="CHDTModel.FK__DangNhap__MaLoai__398D8EEE" FromRole="TaiKhoan" ToRole="LoaiNhanVien" />
+          <NavigationProperty Name="NhanViens" Relationship="CHDTModel.FK__NhanVien__MaNguo__3F466844" FromRole="TaiKhoan" ToRole="NhanVien" />
+        </EntityType>
+        <Association Name="FK__DangNhap__MaLoai__398D8EEE">
+          <End Type="CHDTModel.LoaiNhanVien" Role="LoaiNhanVien" Multiplicity="0..1" />
+          <End Type="CHDTModel.TaiKhoan" Role="TaiKhoan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiNhanVien">
+              <PropertyRef Name="MaLoaiNV" />
+            </Principal>
+            <Dependent Role="TaiKhoan">
+              <PropertyRef Name="MaLoaiNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NhanVien__MaNguo__3F466844">
+          <End Type="CHDTModel.TaiKhoan" Role="TaiKhoan" Multiplicity="1" />
+          <End Type="CHDTModel.NhanVien" Role="NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="MaNguoiDung" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="MaNguoiDung" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -965,7 +965,7 @@
               <MappingFragment StoreEntitySet="TaiKhoan">
                 <ScalarProperty Name="MaLoaiNV" ColumnName="MaLoaiNV" />
                 <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-                <ScalarProperty Name="TaiKhoan1" ColumnName="TaiKhoan" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="MaNguoiDung" ColumnName="MaNguoiDung" />
               </MappingFragment>
             </EntityTypeMapping>

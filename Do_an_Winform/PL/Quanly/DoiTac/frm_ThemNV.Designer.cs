@@ -43,6 +43,8 @@
             this.cbGioiTinhNV = new System.Windows.Forms.ComboBox();
             this.cbMaLoaiNV = new System.Windows.Forms.ComboBox();
             this.btLuuNV = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtMaNguoiDung = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -126,7 +128,7 @@
             // 
             this.txtMaNV.BackColor = System.Drawing.Color.White;
             this.txtMaNV.Location = new System.Drawing.Point(157, 39);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(119, 20);
             this.txtMaNV.TabIndex = 7;
@@ -135,7 +137,7 @@
             // 
             this.txtTenNV.BackColor = System.Drawing.Color.White;
             this.txtTenNV.Location = new System.Drawing.Point(157, 80);
-            this.txtTenNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(217, 20);
             this.txtTenNV.TabIndex = 8;
@@ -144,7 +146,7 @@
             // 
             this.txtEmailNV.BackColor = System.Drawing.Color.White;
             this.txtEmailNV.Location = new System.Drawing.Point(157, 122);
-            this.txtEmailNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailNV.Name = "txtEmailNV";
             this.txtEmailNV.Size = new System.Drawing.Size(168, 20);
             this.txtEmailNV.TabIndex = 9;
@@ -153,7 +155,7 @@
             // 
             this.txtDiaChiNV.BackColor = System.Drawing.Color.White;
             this.txtDiaChiNV.Location = new System.Drawing.Point(157, 161);
-            this.txtDiaChiNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChiNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChiNV.Name = "txtDiaChiNV";
             this.txtDiaChiNV.Size = new System.Drawing.Size(217, 20);
             this.txtDiaChiNV.TabIndex = 10;
@@ -162,7 +164,7 @@
             // 
             this.txtSDTNV.BackColor = System.Drawing.Color.White;
             this.txtSDTNV.Location = new System.Drawing.Point(157, 242);
-            this.txtSDTNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDTNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDTNV.Name = "txtSDTNV";
             this.txtSDTNV.Size = new System.Drawing.Size(168, 20);
             this.txtSDTNV.TabIndex = 11;
@@ -175,7 +177,7 @@
             "Nam",
             "Nữ"});
             this.cbGioiTinhNV.Location = new System.Drawing.Point(157, 199);
-            this.cbGioiTinhNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGioiTinhNV.Margin = new System.Windows.Forms.Padding(2);
             this.cbGioiTinhNV.Name = "cbGioiTinhNV";
             this.cbGioiTinhNV.Size = new System.Drawing.Size(119, 21);
             this.cbGioiTinhNV.TabIndex = 12;
@@ -189,7 +191,7 @@
             "LNV002",
             "LNV003"});
             this.cbMaLoaiNV.Location = new System.Drawing.Point(157, 281);
-            this.cbMaLoaiNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbMaLoaiNV.Margin = new System.Windows.Forms.Padding(2);
             this.cbMaLoaiNV.Name = "cbMaLoaiNV";
             this.cbMaLoaiNV.Size = new System.Drawing.Size(119, 21);
             this.cbMaLoaiNV.TabIndex = 13;
@@ -199,8 +201,8 @@
             this.btLuuNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btLuuNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuuNV.ForeColor = System.Drawing.SystemColors.Control;
-            this.btLuuNV.Location = new System.Drawing.Point(100, 321);
-            this.btLuuNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btLuuNV.Location = new System.Drawing.Point(99, 397);
+            this.btLuuNV.Margin = new System.Windows.Forms.Padding(2);
             this.btLuuNV.Name = "btLuuNV";
             this.btLuuNV.Size = new System.Drawing.Size(201, 40);
             this.btLuuNV.TabIndex = 14;
@@ -208,12 +210,34 @@
             this.btLuuNV.UseVisualStyleBackColor = false;
             this.btLuuNV.Click += new System.EventHandler(this.btLuu_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(23, 329);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 17);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Mã người dùng";
+            // 
+            // txtMaNguoiDung
+            // 
+            this.txtMaNguoiDung.BackColor = System.Drawing.Color.White;
+            this.txtMaNguoiDung.Location = new System.Drawing.Point(157, 326);
+            this.txtMaNguoiDung.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaNguoiDung.Name = "txtMaNguoiDung";
+            this.txtMaNguoiDung.Size = new System.Drawing.Size(119, 20);
+            this.txtMaNguoiDung.TabIndex = 21;
+            // 
             // frm_ThemNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(397, 370);
+            this.ClientSize = new System.Drawing.Size(397, 448);
+            this.Controls.Add(this.txtMaNguoiDung);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btLuuNV);
             this.Controls.Add(this.cbMaLoaiNV);
             this.Controls.Add(this.cbGioiTinhNV);
@@ -230,7 +254,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_ThemNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thêm thông tin nhân viên";
@@ -258,5 +282,7 @@
         private System.Windows.Forms.ComboBox cbGioiTinhNV;
         private System.Windows.Forms.ComboBox cbMaLoaiNV;
         private System.Windows.Forms.Button btLuuNV;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtMaNguoiDung;
     }
 }

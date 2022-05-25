@@ -21,7 +21,7 @@ namespace Do_an_Winform
         }
     
         public string MaNguoiDung { get; set; }
-        public string TaiKhoan1 { get; set; }
+        public string UserName { get; set; }
         public string MatKhau { get; set; }
         public string MaLoaiNV { get; set; }
     

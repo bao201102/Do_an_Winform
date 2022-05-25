@@ -14,5 +14,9 @@ namespace Do_an_Winform.BLL
         {
             return TaiKhoanDAL.GetUser(account);
         }
+        public static bool AddAccount(TaiKhoanDTO dto)
+        {
+            return TaiKhoanDAL.AddAccount(dto);
+        }
     }
 }
