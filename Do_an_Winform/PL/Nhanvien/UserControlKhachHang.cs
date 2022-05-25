@@ -19,6 +19,8 @@ namespace Do_an_Winform.PL.Nhanvien
         public UserControlKhachHang()
         {
             InitializeComponent();
+            dgvAllCustomer.AllowUserToResizeColumns = false;
+            dgvAllCustomer.AllowUserToResizeRows = false;
             dgvAllCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAllCustomer.ReadOnly = true;
         }

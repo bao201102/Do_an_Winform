@@ -470,7 +470,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!ThanhTien.Value</Value>
+                                  <Value>=string.Format("{0:#,##0} VNĐ",Fields!ThanhTien.Value)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -571,7 +571,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=SUM(Fields!ThanhTien.Value)</Value>
+                                  <Value>=SUM(string.Format("{0:#,##0} VNĐ",Fields!ThanhTien.Value))</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -621,8 +621,8 @@
             </TablixRowHierarchy>
             <DataSetName>CTPN</DataSetName>
             <Top>2.55083in</Top>
-            <Height>1.36584in</Height>
-            <Width>9.90625in</Width>
+            <Height>1.36583in</Height>
+            <Width>9.90626in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -804,7 +804,7 @@
         <Height>3.91667in</Height>
         <Style />
       </Body>
-      <Width>9.90625in</Width>
+      <Width>9.90626in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>

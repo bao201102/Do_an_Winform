@@ -950,10 +950,10 @@ namespace Do_an_Winform.PL.Thukho
             this.DatePicker.IconColor = System.Drawing.Color.Gray;
             this.DatePicker.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.DatePicker.LeftTextMargin = 5;
-            this.DatePicker.Location = new System.Drawing.Point(166, 72);
+            this.DatePicker.Location = new System.Drawing.Point(132, 72);
             this.DatePicker.MinimumSize = new System.Drawing.Size(4, 32);
             this.DatePicker.Name = "DatePicker";
-            this.DatePicker.Size = new System.Drawing.Size(220, 32);
+            this.DatePicker.Size = new System.Drawing.Size(254, 32);
             this.DatePicker.TabIndex = 6;
             this.DatePicker.Value = new System.DateTime(2022, 5, 16, 13, 37, 0, 0);
             // 
