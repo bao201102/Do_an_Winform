@@ -22,6 +22,10 @@ namespace Do_an_Winform.BLL
         {
             return PhieuNhapHangDAL.LayTheoMaPN(pnsearch);
         }
+        public static List<object> LayTatCaMaPN()
+        {
+            return PhieuNhapHangDAL.LayTatCaMaPN();
+        }
         public static double ChiPhiTatCaPN(DateTime startday, DateTime endday)
         {
             return PhieuNhapHangDAL.ChiPhiTatCaPN(startday, endday);

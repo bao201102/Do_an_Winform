@@ -54,6 +54,19 @@ namespace Do_an_Winform.DAL
             PhieuNhapHangDTO pnhap = mapper.Map<PhieuNhapHangDTO>(truyvan);
             return pnhap;
         }
+        public static List<object> LayTatCaMaPN()
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            List<object> list = new List<object>();
+            var truyvan = from pn in data.PhieuNhapHangs
+                          where pn.TrangThai == "1"
+                          select pn.MaPN;
+            foreach (var item in truyvan)
+            {
+                list.Add(item);
+            }
+            return list;
+        }
         public static double ChiPhiTatCaPN(DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
