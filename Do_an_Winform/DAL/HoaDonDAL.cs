@@ -40,12 +40,8 @@ namespace Do_an_Winform.DAL
             CHDTEntities1 data = new CHDTEntities1();
             List<object> list = new List<object>();
             var truyvan = from hd in data.HoaDons
-                        where hd.TrangThai == "1"
-                        select new
-                        {
-                            hd.MaHD
-                        };
-
+                          where hd.TrangThai == "1"
+                          select hd.MaHD;
             foreach (var item in truyvan)
             {
                 list.Add(item);
