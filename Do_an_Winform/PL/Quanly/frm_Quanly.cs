@@ -3,7 +3,6 @@ using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
 using Do_an_Winform.PL.Quanly.DoiTac;
 using Do_an_Winform.PL.Quanly.QLBC;
-using Do_an_Winform.PL.Quanly.QLTK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,18 +106,6 @@ namespace Do_an_Winform.PL.Quanly
             }
         }
 
-        private void btnQLDT_Click(object sender, EventArgs e)
-        {
-            if (subdoitacPanel.Visible == false)
-            {
-                subdoitacPanel.Visible = true;
-            }
-            else
-            {
-                subdoitacPanel.Visible = false;
-            }
-        }
-
         private void btnQLHD_Click(object sender, EventArgs e)
         {
             if (subhoadonPanel.Visible == false)
@@ -186,11 +173,6 @@ namespace Do_an_Winform.PL.Quanly
             OpenChildForm(new frm_DoiTacNCC());
         }
 
-        private void btnQLTK_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frm_QLTK());
-        }
-
         private void btnHDN_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frm_HDNH());
@@ -201,14 +183,31 @@ namespace Do_an_Winform.PL.Quanly
             OpenChildForm(new frm_HDBH());
         }
 
-        private void btnQLDoanhThu_Click(object sender, EventArgs e)
+        private void btnQLBC_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_QLBC());
+        }
+
+        private void btnTongquan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQLDoanhThu_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new frm_TKDT());
         }
 
-        private void btnQLBC_Click(object sender, EventArgs e)
+        private void btnQLDoiTac_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frm_QLBC());
+            if (subdoitacPanel.Visible == false)
+            {
+                subdoitacPanel.Visible = true;
+            }
+            else
+            {
+                subdoitacPanel.Visible = false;
+            }
         }
     }
 }

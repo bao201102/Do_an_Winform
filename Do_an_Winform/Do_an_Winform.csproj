@@ -443,11 +443,11 @@
     <Compile Include="PL\Quanly\QLSP\frm_Update.Designer.cs">
       <DependentUpon>frm_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Quanly\QLTK\frm_QLTK.cs">
+    <Compile Include="PL\Quanly\QLTQ\frm_QLTQ.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Quanly\QLTK\frm_QLTK.Designer.cs">
-      <DependentUpon>frm_QLTK.cs</DependentUpon>
+    <Compile Include="PL\Quanly\QLTQ\frm_QLTQ.Designer.cs">
+      <DependentUpon>frm_QLTQ.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Thukho\frm_DanhSachPN.cs">
       <SubType>Form</SubType>
@@ -598,8 +598,8 @@
     <EmbeddedResource Include="PL\Quanly\QLSP\rpt_DSSP_Group.rdlc" />
     <EmbeddedResource Include="PL\Quanly\QLSP\rpt_DSSP.rdlc" />
     <EmbeddedResource Include="PL\Quanly\QLSP\rpt_SubDSSP.rdlc" />
-    <EmbeddedResource Include="PL\Quanly\QLTK\frm_QLTK.resx">
-      <DependentUpon>frm_QLTK.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Quanly\QLTQ\frm_QLTQ.resx">
+      <DependentUpon>frm_QLTQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_DanhSachPN.resx">
       <DependentUpon>frm_DanhSachPN.cs</DependentUpon>
