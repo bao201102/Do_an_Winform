@@ -1,6 +1,6 @@
 ﻿namespace Do_an_Winform.PL.Quanly.DoiTac
 {
-    partial class frm_BaoCaoKH
+    partial class frm_BaoCaoDoiTac
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.rptBaoCaoKH = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rptBaoCao = new Microsoft.Reporting.WinForms.ReportViewer();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // rptBaoCaoKH
+            // rptBaoCao
             // 
-            this.rptBaoCaoKH.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.DoiTac.ReportKH.rdlc";
-            this.rptBaoCaoKH.Location = new System.Drawing.Point(3, 1);
-            this.rptBaoCaoKH.Name = "rptBaoCaoKH";
-            this.rptBaoCaoKH.ServerReport.BearerToken = null;
-            this.rptBaoCaoKH.Size = new System.Drawing.Size(795, 449);
-            this.rptBaoCaoKH.TabIndex = 0;
-            this.rptBaoCaoKH.Load += new System.EventHandler(this.rptBaoCaoKH_Load);
+            this.rptBaoCao.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.DoiTac.ReportNV.rdlc";
+            this.rptBaoCao.Location = new System.Drawing.Point(3, 1);
+            this.rptBaoCao.Name = "rptBaoCao";
+            this.rptBaoCao.ServerReport.BearerToken = null;
+            this.rptBaoCao.Size = new System.Drawing.Size(795, 449);
+            this.rptBaoCao.TabIndex = 0;
+            this.rptBaoCao.Load += new System.EventHandler(this.rptBaoCaoNV_Load);
             // 
             // nhanVienBindingSource
             // 
             this.nhanVienBindingSource.DataSource = typeof(Do_an_Winform.NhanVien);
             // 
-            // frm_BaoCaoKH
+            // frm_BaoCaoDoiTac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.rptBaoCaoKH);
-            this.Name = "frm_BaoCaoKH";
+            this.Controls.Add(this.rptBaoCao);
+            this.Name = "frm_BaoCaoDoiTac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frm_BaoCaoNV";
-            this.Load += new System.EventHandler(this.frm_BaoCaoKH_Load);
+            this.Text = "frm_BaoCaoDoiTac";
+            this.Load += new System.EventHandler(this.frm_BaoCaoNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -65,7 +65,7 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer rptBaoCaoKH;
+        private Microsoft.Reporting.WinForms.ReportViewer rptBaoCao;
         private System.Windows.Forms.BindingSource nhanVienBindingSource;
     }
 }

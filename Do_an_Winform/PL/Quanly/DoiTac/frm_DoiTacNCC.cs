@@ -14,6 +14,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 {
     public partial class frm_DoiTacNCC : Form
     {
+        string info;
         public frm_DoiTacNCC()
         {
             InitializeComponent();
@@ -58,7 +59,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 
         private void btnCreateRP_Click(object sender, EventArgs e)
         {
-            frm_BaoCaoNCC form = new frm_BaoCaoNCC();
+            frm_BaoCaoDoiTac form = new frm_BaoCaoDoiTac("3");
             form.ShowDialog();
         }
     }
