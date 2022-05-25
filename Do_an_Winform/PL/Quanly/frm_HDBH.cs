@@ -25,19 +25,21 @@ namespace Do_an_Winform.PL.Quanly
             gvHDBH.AllowUserToResizeRows = false;
             gvHDBH.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gvHDBH.ReadOnly = true;
-            //auto complete
-            txtSearch.AutoCompleteSource = AutoCompleteSource.AllSystemSources;
             txtSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-
-            AutoCompleteStringCollection automahd = new AutoCompleteStringCollection();
-            List<string> listmahd = HoaDonBLL.LayTatCaMaHD();
-            foreach (var i in listmahd)
-            {
-                automahd.Add(i);
-            }
+            txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
         private void frm_HDBH_Load(object sender, EventArgs e)
         {
+            //auto complete
+            List<object> listmahd = HoaDonBLL.LayTatCaMaHD();
+            AutoCompleteStringCollection automahd = new AutoCompleteStringCollection();
+            foreach (object i in listmahd)
+            {
+                //automahd.Add(i.ToString());
+                MessageBox.Show(i.ToString());
+            }
+            txtSearch.AutoCompleteCustomSource = automahd;
+
             //load Date
             DatePickerStartDay.Value = System.DateTime.Now;
             DatePickerEndDay.Value = System.DateTime.Now;

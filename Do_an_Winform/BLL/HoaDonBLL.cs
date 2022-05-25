@@ -26,7 +26,7 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.LayTheoMaHD(hdsearch);
         }
-        public static List<string> LayTatCaMaHD()
+        public static List<object> LayTatCaMaHD()
         {
             return HoaDonDAL.LayTatCaMaHD();
         }

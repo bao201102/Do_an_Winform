@@ -35,24 +35,22 @@ namespace Do_an_Winform.DAL
             }
             return hoaDonDTOs;
         }
-        public static List<string> LayTatCaMaHD()
+        public static List<object> LayTatCaMaHD()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
-            var truyvan = from hd in entities.HoaDons
-                         where hd.TrangThai == "1"
-                         select new
-                         {
-                             hd.MaHD
-                         };
-            List<string> listmahd = new List<string>();
-            for (int i = 0; i < truyvan.Count(); i++)
+            CHDTEntities1 data = new CHDTEntities1();
+            List<object> list = new List<object>();
+            var truyvan = from hd in data.HoaDons
+                        where hd.TrangThai == "1"
+                        select new
+                        {
+                            hd.MaHD
+                        };
+
+            foreach (var item in truyvan)
             {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, string>());
-                var mapper = new Mapper(config);
-                string mhd = mapper.Map<string>(truyvan);
-                listmahd.Add(mhd);
-            }   
-            return listmahd;
+                list.Add(item);
+            }
+            return list;
         }
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {
