@@ -52,7 +52,7 @@ namespace Do_an_Winform.DAL
                             nv.SĐT,
                             nv.DiaChi,
                             lnv.TenLoaiNV,
-                            tk.TaiKhoan1,
+                            tk.UserName,
                         };
 
             foreach (var item in query)
@@ -82,7 +82,7 @@ namespace Do_an_Winform.DAL
                             nv.SĐT,
                             nv.DiaChi,
                             lnv.TenLoaiNV,
-                            tk.TaiKhoan1,
+                            tk.UserName,
                         };
 
             foreach (var item in query)

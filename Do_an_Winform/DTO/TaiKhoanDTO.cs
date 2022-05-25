@@ -15,11 +15,11 @@ namespace Do_an_Winform.DTO
 			set { _MaNguoiDung = value; }
 		}
 
-		private string _TaiKhoan;
-		public string TaiKhoan
+		private string _UserName;
+		public string UserName
 		{
-			get { return _TaiKhoan; }
-			set { _TaiKhoan = value; }
+			get { return _UserName; }
+			set { _UserName = value; }
 		}
 
 		private string _MatKhau;
@@ -39,14 +39,14 @@ namespace Do_an_Winform.DTO
 		public TaiKhoanDTO()
 		{
 			this.MaNguoiDung = "";
-			this.TaiKhoan = "";
+			this.UserName = "";
 			this.MatKhau = "";
 			this.MaLoaiNV = "";
 		}
-		public TaiKhoanDTO(string MaNguoiDung_, string TaiKhoan_, string MatKhau_, string MaLoaiNV_)
+		public TaiKhoanDTO(string MaNguoiDung_, string UserName_, string MatKhau_, string MaLoaiNV_)
 		{
 			this.MaNguoiDung = MaNguoiDung_;
-			this.TaiKhoan = TaiKhoan_;
+			this.UserName = UserName_;
 			this.MatKhau = MatKhau_;
 			this.MaLoaiNV = MaLoaiNV_;
 		}

@@ -15,7 +15,7 @@ namespace Do_an_Winform.DAL
 
             CHDTEntities1 entities = new CHDTEntities1();
             TaiKhoan user = (from us in entities.TaiKhoans
-                             where us.TaiKhoan1 == account.TaiKhoan1 && us.MatKhau == account.MatKhau
+                             where us.UserName == account.UserName && us.MatKhau == account.MatKhau
                              select us).SingleOrDefault();
 
             if (user != null)

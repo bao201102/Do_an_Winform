@@ -30,10 +30,10 @@
         <AssociationConnector Association="CHDTModel.FK_PhieuNhapHang_NhaCungCap" />
         <AssociationConnector Association="CHDTModel.FK__PhieuNhapH__MaNV__4316F928" />
         <AssociationConnector Association="CHDTModel.FK__SanPham__MaNhaSX__48CFD27E" />
-        <EntityTypeShape EntityType="CHDTModel.TaiKhoan" Width="1.5" PointX="3.75" PointY="22.125" />
+        <EntityTypeShape EntityType="CHDTModel.TaiKhoan" Width="1.5" PointX="3.75" PointY="23.75" />
         <AssociationConnector Association="CHDTModel.FK__DangNhap__MaLoai__398D8EEE" />
         <AssociationConnector Association="CHDTModel.FK__NhanVien__MaNguo__3F466844" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
