@@ -546,7 +546,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDBH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDNH.rdlc" />
-    <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_TKDT.rdlc" />
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_BaoCaoDoiTac.resx">
       <DependentUpon>frm_BaoCaoDoiTac.cs</DependentUpon>
     </EmbeddedResource>
