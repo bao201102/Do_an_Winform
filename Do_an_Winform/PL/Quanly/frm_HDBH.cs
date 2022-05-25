@@ -23,6 +23,16 @@ namespace Do_an_Winform.PL.Quanly
             InitializeComponent();
             gvHDBH.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gvHDBH.ReadOnly = true;
+            //auto complete
+            txtSearch.AutoCompleteSource = AutoCompleteSource.AllSystemSources;
+            txtSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+
+            AutoCompleteStringCollection automahd = new AutoCompleteStringCollection();
+            List<string> listmahd = HoaDonBLL.LayTatCaMaHD();
+            foreach (var i in listmahd)
+            {
+                automahd.Add(i);
+            }
         }
         private void frm_HDBH_Load(object sender, EventArgs e)
         {
@@ -63,7 +73,7 @@ namespace Do_an_Winform.PL.Quanly
                 startday = DatePickerStartDay.Value;
                 endday = DatePickerEndDay.Value;
 
-                if (endday <= startday)
+                if (endday < startday)
                 {
                     bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
@@ -104,6 +114,63 @@ namespace Do_an_Winform.PL.Quanly
                 txtTongCong.Text = HoaDonBLL.DoanhThuTatCaHD(startday, endday).ToString();
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                startday = DatePickerStartDay.Value;
+                endday = DatePickerEndDay.Value;
+
+                if (endday < startday)
+                {
+                    bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                }
+            }
+            catch (Exception)
+            {
+                bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                return;
+            }
+
+            //Kiểm tra txtSearch có phải là số hay không?
+            int Result; 
+            bool isSuccess; 
+
+            isSuccess = int.TryParse(txtSearch.Text, out Result);
+            if(isSuccess == true)
+            {
+                int mahd = int.Parse(txtSearch.Text);
+                string s = "HD" + mahd.ToString("000");
+                HoaDonDTO hdsearch = new HoaDonDTO();
+                hdsearch.MaHD = s;
+                listhd = HoaDonBLL.ThongKeTheoMaHD(hdsearch, startday, endday);
+                gvHDBH.DataSource = listhd;
+                gvHDBH.Columns[0].HeaderText = "Mã HD";
+                gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
+                gvHDBH.Columns[2].HeaderText = "Mã NV";
+                gvHDBH.Columns[3].HeaderText = "Mã KH";
+                gvHDBH.Columns[4].HeaderText = "Thành tiền";
+                gvHDBH.Columns[5].Visible = false;
+                txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
+            }
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            HoaDonDTO hdsearch = new HoaDonDTO();
+            hdsearch.MaHD = txtSearch.Text;
+            listhd = HoaDonBLL.ThongKeTheoMaHD(hdsearch, startday, endday);
+            gvHDBH.DataSource = listhd;
+            gvHDBH.Columns[0].HeaderText = "Mã HD";
+            gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
+            gvHDBH.Columns[2].HeaderText = "Mã NV";
+            gvHDBH.Columns[3].HeaderText = "Mã KH";
+            gvHDBH.Columns[4].HeaderText = "Thành tiền";
+            gvHDBH.Columns[5].Visible = false;
+            txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
+        }
+
         private void btnViewReport_Click(object sender, EventArgs e)
         {
             try
@@ -128,6 +195,5 @@ namespace Do_an_Winform.PL.Quanly
             frm.rpt_HDBH_TatCaHD(sday, eday);
             frm.ShowDialog();
         }
-
     }
 }

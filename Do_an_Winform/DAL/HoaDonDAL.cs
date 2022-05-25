@@ -19,7 +19,6 @@ namespace Do_an_Winform.DAL
             data.HoaDons.Add(hoaDon);
             return data.SaveChanges() > 0 ? true : false;
         }
-        //Hàm lấy tất cả hóa đơn
         public static List<HoaDonDTO> GetAllBill()
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -35,6 +34,25 @@ namespace Do_an_Winform.DAL
                 hoaDonDTOs.Add(hoadon);
             }
             return hoaDonDTOs;
+        }
+        public static List<string> LayTatCaMaHD()
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var truyvan = from hd in entities.HoaDons
+                         where hd.TrangThai == "1"
+                         select new
+                         {
+                             hd.MaHD
+                         };
+            List<string> listmahd = new List<string>();
+            for (int i = 0; i < truyvan.Count(); i++)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, string>());
+                var mapper = new Mapper(config);
+                string mhd = mapper.Map<string>(truyvan);
+                listmahd.Add(mhd);
+            }   
+            return listmahd;
         }
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {
