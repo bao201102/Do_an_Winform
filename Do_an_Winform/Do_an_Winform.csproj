@@ -546,7 +546,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDBH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDNH.rdlc" />
-    <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_TKDT.rdlc" />
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_BaoCaoDoiTac.resx">
       <DependentUpon>frm_BaoCaoDoiTac.cs</DependentUpon>
     </EmbeddedResource>
@@ -710,6 +709,7 @@
     </Content>
     <None Include="Resources\bill.png" />
     <None Include="Resources\sync.png" />
+    <None Include="Resources\search_white.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
