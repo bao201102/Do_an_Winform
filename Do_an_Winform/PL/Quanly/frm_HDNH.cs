@@ -23,6 +23,8 @@ namespace Do_an_Winform.PL.Quanly
             InitializeComponent();
             gvHDNH.AllowUserToResizeColumns = false;
             gvHDNH.AllowUserToResizeRows = false;
+            txtSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
         private void txtSearch_Enter(object sender, EventArgs e)
         {
@@ -42,6 +44,17 @@ namespace Do_an_Winform.PL.Quanly
         }
         private void frm_HDNH_Load(object sender, EventArgs e)
         {
+            //auto complete
+            List<object> listmapn = PhieuNhapHangBLL.LayTatCaMaPN();
+            AutoCompleteStringCollection automapn = new AutoCompleteStringCollection();
+            foreach (object i in listmapn)
+            {
+                automapn.Add(i.ToString());
+                //MessageBox.Show(i.ToString());
+            }
+            txtSearch.AutoCompleteCustomSource = automapn;
+            
+            //load date
             DatePickerStartDay.Value = System.DateTime.Now;
             DatePickerEndDay.Value = System.DateTime.Now;
 
@@ -62,7 +75,7 @@ namespace Do_an_Winform.PL.Quanly
                 startday = DatePickerStartDay.Value;
                 endday = DatePickerEndDay.Value;
 
-                if (endday <= startday)
+                if (endday < startday)
                 {
                     bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
@@ -101,7 +114,60 @@ namespace Do_an_Winform.PL.Quanly
                 txtTongCong.Text = PhieuNhapHangBLL.ThongKeTatCaPN(startday, endday).ToString();
             }
         }
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                startday = DatePickerStartDay.Value;
+                endday = DatePickerEndDay.Value;
 
+                if (endday < startday)
+                {
+                    bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                }
+            }
+            catch (Exception)
+            {
+                bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                return;
+            }
+
+            //Kiểm tra txtSearch có phải là số hay không?
+            int Result;
+            bool isSuccess;
+
+            isSuccess = int.TryParse(txtSearch.Text, out Result);
+            if (isSuccess == true)
+            {
+                int mapn = int.Parse(txtSearch.Text);
+                string s = "HD" + mapn.ToString("000");
+                PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
+                pnsearch.MaPN = s;
+                listpn = PhieuNhapHangBLL.ThongKeTheoMaPN(pnsearch, startday, endday);
+                gvHDNH.DataSource = listpn;
+                gvHDNH.Columns[0].HeaderText = "Mã HD";
+                gvHDNH.Columns[1].HeaderText = "Ngày lập HD";
+                gvHDNH.Columns[2].HeaderText = "Mã NV";
+                gvHDNH.Columns[3].HeaderText = "Mã KH";
+                gvHDNH.Columns[4].HeaderText = "Thành tiền";
+                gvHDNH.Columns[5].Visible = false;
+                txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();
+            }
+        }
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
+            pnsearch.MaPN = txtSearch.Text;
+            listpn = PhieuNhapHangBLL.ThongKeTheoMaPN(pnsearch, startday, endday);
+            gvHDNH.DataSource = listpn;
+            gvHDNH.Columns[0].HeaderText = "Mã HD";
+            gvHDNH.Columns[1].HeaderText = "Ngày lập HD";
+            gvHDNH.Columns[2].HeaderText = "Mã NV";
+            gvHDNH.Columns[3].HeaderText = "Mã KH";
+            gvHDNH.Columns[4].HeaderText = "Thành tiền";
+            gvHDNH.Columns[5].Visible = false;
+            txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();
+        }
         private void btnViewReport_Click(object sender, EventArgs e)
         {
             try

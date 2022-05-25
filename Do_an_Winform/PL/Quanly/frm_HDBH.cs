@@ -118,7 +118,6 @@ namespace Do_an_Winform.PL.Quanly
                 txtTongCong.Text = HoaDonBLL.DoanhThuTatCaHD(startday, endday).ToString();
             }
         }
-
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             try
@@ -159,7 +158,6 @@ namespace Do_an_Winform.PL.Quanly
                 txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
             }
         }
-
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             HoaDonDTO hdsearch = new HoaDonDTO();
@@ -174,7 +172,6 @@ namespace Do_an_Winform.PL.Quanly
             gvHDBH.Columns[5].Visible = false;
             txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
         }
-
         private void btnViewReport_Click(object sender, EventArgs e)
         {
             try

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Do_an_Winform.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
 
         private void frm_QLTQ_Load(object sender, EventArgs e)
         {
-
+            chartCanvasDT.Clear();
+            barChartDT.Data.Clear();
         }
     }
 }

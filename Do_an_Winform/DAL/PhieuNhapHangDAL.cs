@@ -14,8 +14,8 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from pn in data.PhieuNhapHangs
-                        where pn.TrangThai == "1" && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
-                        select pn;
+                          where pn.TrangThai == "1" && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
+                          select pn;
             List<PhieuNhapHangDTO> listpn = new List<PhieuNhapHangDTO>();
             foreach (PhieuNhapHang pn in truyvan)
             {
@@ -30,7 +30,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from pn in data.PhieuNhapHangs
-                          where (pn.MaPN == pnsearch.MaPN)&& (pn.TrangThai == "1") && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
+                          where (pn.MaPN == pnsearch.MaPN) && (pn.TrangThai == "1") && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
                           select pn;
             List<PhieuNhapHangDTO> listpn = new List<PhieuNhapHangDTO>();
             foreach (PhieuNhapHang pn in truyvan)
@@ -46,13 +46,26 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             PhieuNhapHang truyvan = (from pn in entities.PhieuNhapHangs
-                              where pn.MaPN == mapn && pn.TrangThai == "1"
-                              select pn).SingleOrDefault();
+                                     where pn.MaPN == mapn && pn.TrangThai == "1"
+                                     select pn).SingleOrDefault();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuNhapHang, PhieuNhapHangDTO>());
             var mapper = new Mapper(config);
             PhieuNhapHangDTO pnhap = mapper.Map<PhieuNhapHangDTO>(truyvan);
             return pnhap;
+        }
+        public static List<object> LayTatCaMaPN()
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            List<object> list = new List<object>();
+            var truyvan = from pn in data.PhieuNhapHangs
+                          where pn.TrangThai == "1"
+                          select pn.MaPN;
+            foreach (var item in truyvan)
+            {
+                list.Add(item);
+            }
+            return list;
         }
         public static double ChiPhiTatCaPN(DateTime startday, DateTime endday)
         {
@@ -75,7 +88,7 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from pn in data.PhieuNhapHangs
-                          where (pn.MaPN ==pnsearch.MaPN) && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday) && (pn.TrangThai == "1")
+                          where (pn.MaPN == pnsearch.MaPN) && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday) && (pn.TrangThai == "1")
                           select new
                           {
                               pn.ThanhTien
@@ -255,7 +268,7 @@ namespace Do_an_Winform.DAL
 
             var query = (from x in entities.PhieuNhapHangs
                          select x).Count();
-            string count =  "PN" + (query + 1).ToString("000");
+            string count = "PN" + (query + 1).ToString("000");
             return count;
         }
         // Lấy tất cả 
@@ -263,8 +276,8 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var query = from pn in entities.PhieuNhapHangs
-                           where pn.TrangThai == "1"
-                           select pn;
+                        where pn.TrangThai == "1"
+                        select pn;
             List<PhieuNhapHangDTO> phieuNhaps = new List<PhieuNhapHangDTO>();
             foreach (PhieuNhapHang item in query)
             {
@@ -274,6 +287,27 @@ namespace Do_an_Winform.DAL
                 phieuNhaps.Add(phieuNhap);
             }
             return phieuNhaps;
+        }
+
+        public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = from hd in entities.HoaDons
+                        where hd.TrangThai == "1" && hd.NgayTaoHD.Day.Equals(time.Day) && hd.NgayTaoHD.Month.Equals(time.Month) && hd.NgayTaoHD.Year.Equals(time.Year)
+                        group hd by hd.NgayTaoHD.Day into table
+                        select new
+                        {
+                            Key = table.Key,
+                            Value = table.Sum(t => t.ThanhTien)
+                         };
+
+            Dictionary<int, double> list = new Dictionary<int, double>();
+            foreach (var item in query)
+            {
+                list.Add(item.Key, item.Value);
+            }
+            return list;
         }
     }
 }

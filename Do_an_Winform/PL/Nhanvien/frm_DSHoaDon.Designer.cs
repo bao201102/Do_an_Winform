@@ -1,7 +1,6 @@
-﻿
-namespace Do_an_Winform.PL.Thukho
+﻿namespace Do_an_Winform.PL.Nhanvien
 {
-    partial class frm_DanhSachPN
+    partial class frm_DSHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +28,19 @@ namespace Do_an_Winform.PL.Thukho
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DanhSachPN));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DSHoaDon));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnRefresh = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnTaoDon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.gridviewDSNhap = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.gridviewDSHoaDon = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewDSNhap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewDSHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -54,16 +53,15 @@ namespace Do_an_Winform.PL.Thukho
             this.mainPanel.BorderThickness = 1;
             this.mainPanel.Controls.Add(this.btnRefresh);
             this.mainPanel.Controls.Add(this.btnTaoDon);
-            this.mainPanel.Controls.Add(this.gridviewDSNhap);
+            this.mainPanel.Controls.Add(this.gridviewDSHoaDon);
             this.mainPanel.Controls.Add(this.bunifuLabel1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.ShowBorders = true;
-            this.mainPanel.Size = new System.Drawing.Size(1222, 528);
-            this.mainPanel.TabIndex = 1;
-            //this.mainPanel.Click += new System.EventHandler(this.mainPanel_Click);
+            this.mainPanel.Size = new System.Drawing.Size(1089, 522);
+            this.mainPanel.TabIndex = 2;
             // 
             // btnRefresh
             // 
@@ -85,11 +83,11 @@ namespace Do_an_Winform.PL.Thukho
             this.btnRefresh.ColorContrastOnClick = 45;
             this.btnRefresh.ColorContrastOnHover = 45;
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = false;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = false;
-            borderEdges1.TopRight = true;
-            this.btnRefresh.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = false;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = false;
+            borderEdges3.TopRight = true;
+            this.btnRefresh.CustomizableEdges = borderEdges3;
             this.btnRefresh.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnRefresh.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnRefresh.DisabledFillColor = System.Drawing.Color.Empty;
@@ -115,7 +113,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnRefresh.IdleIconLeftImage = null;
             this.btnRefresh.IdleIconRightImage = global::Do_an_Winform.Properties.Resources.sync;
             this.btnRefresh.IndicateFocus = false;
-            this.btnRefresh.Location = new System.Drawing.Point(988, 31);
+            this.btnRefresh.Location = new System.Drawing.Point(888, 31);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnRefresh.OnDisabledState.BorderRadius = 45;
@@ -149,14 +147,14 @@ namespace Do_an_Winform.PL.Thukho
             this.btnRefresh.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.OnPressedState.IconLeftImage = null;
             this.btnRefresh.OnPressedState.IconRightImage = null;
-            this.btnRefresh.Size = new System.Drawing.Size(181, 45);
+            this.btnRefresh.Size = new System.Drawing.Size(140, 45);
             this.btnRefresh.TabIndex = 5;
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRefresh.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRefresh.TextMarginLeft = 0;
             this.btnRefresh.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnRefresh.UseDefaultRadiusAndThickness = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
             // 
             // btnTaoDon
             // 
@@ -173,16 +171,16 @@ namespace Do_an_Winform.PL.Thukho
             this.btnTaoDon.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btnTaoDon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTaoDon.BackgroundImage")));
             this.btnTaoDon.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnTaoDon.ButtonText = "Tạo đơn nhập hàng";
+            this.btnTaoDon.ButtonText = "Tạo hóa đơn";
             this.btnTaoDon.ButtonTextMarginLeft = 0;
             this.btnTaoDon.ColorContrastOnClick = 45;
             this.btnTaoDon.ColorContrastOnHover = 45;
             this.btnTaoDon.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = false;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = false;
-            this.btnTaoDon.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = false;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = false;
+            this.btnTaoDon.CustomizableEdges = borderEdges4;
             this.btnTaoDon.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnTaoDon.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnTaoDon.DisabledFillColor = System.Drawing.Color.Empty;
@@ -208,7 +206,7 @@ namespace Do_an_Winform.PL.Thukho
             this.btnTaoDon.IdleIconLeftImage = global::Do_an_Winform.Properties.Resources.plus;
             this.btnTaoDon.IdleIconRightImage = null;
             this.btnTaoDon.IndicateFocus = false;
-            this.btnTaoDon.Location = new System.Drawing.Point(801, 31);
+            this.btnTaoDon.Location = new System.Drawing.Point(735, 31);
             this.btnTaoDon.Name = "btnTaoDon";
             this.btnTaoDon.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnTaoDon.OnDisabledState.BorderRadius = 45;
@@ -242,82 +240,81 @@ namespace Do_an_Winform.PL.Thukho
             this.btnTaoDon.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnTaoDon.OnPressedState.IconLeftImage = null;
             this.btnTaoDon.OnPressedState.IconRightImage = null;
-            this.btnTaoDon.Size = new System.Drawing.Size(181, 45);
+            this.btnTaoDon.Size = new System.Drawing.Size(135, 45);
             this.btnTaoDon.TabIndex = 4;
             this.btnTaoDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTaoDon.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTaoDon.TextMarginLeft = 0;
             this.btnTaoDon.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnTaoDon.UseDefaultRadiusAndThickness = true;
-            this.btnTaoDon.Click += new System.EventHandler(this.btnTaoDon_Click);
+            this.btnTaoDon.Click += new System.EventHandler(this.btnTaoDon_Click_1);
             // 
-            // gridviewDSNhap
+            // gridviewDSHoaDon
             // 
-            this.gridviewDSNhap.AllowCustomTheming = false;
-            this.gridviewDSNhap.AllowUserToAddRows = false;
-            this.gridviewDSNhap.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.gridviewDSNhap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridviewDSNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridviewDSHoaDon.AllowCustomTheming = false;
+            this.gridviewDSHoaDon.AllowUserToAddRows = false;
+            this.gridviewDSHoaDon.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.gridviewDSHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridviewDSHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridviewDSNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridviewDSNhap.BackgroundColor = System.Drawing.Color.White;
-            this.gridviewDSNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridviewDSNhap.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridviewDSNhap.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewDSNhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridviewDSNhap.ColumnHeadersHeight = 40;
-            this.gridviewDSNhap.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.gridviewDSNhap.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.gridviewDSNhap.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.gridviewDSNhap.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.gridviewDSNhap.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.gridviewDSNhap.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.gridviewDSNhap.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gridviewDSNhap.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.gridviewDSNhap.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.gridviewDSNhap.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gridviewDSNhap.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.gridviewDSNhap.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.gridviewDSNhap.CurrentTheme.Name = null;
-            this.gridviewDSNhap.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewDSNhap.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.gridviewDSNhap.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.gridviewDSNhap.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.gridviewDSNhap.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridviewDSNhap.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridviewDSNhap.EnableHeadersVisualStyles = false;
-            this.gridviewDSNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.gridviewDSNhap.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.gridviewDSNhap.HeaderBgColor = System.Drawing.Color.Empty;
-            this.gridviewDSNhap.HeaderForeColor = System.Drawing.Color.White;
-            this.gridviewDSNhap.Location = new System.Drawing.Point(12, 112);
-            this.gridviewDSNhap.Name = "gridviewDSNhap";
-            this.gridviewDSNhap.ReadOnly = true;
-            this.gridviewDSNhap.RowHeadersVisible = false;
-            this.gridviewDSNhap.RowTemplate.Height = 40;
-            this.gridviewDSNhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridviewDSNhap.Size = new System.Drawing.Size(1196, 401);
-            this.gridviewDSNhap.TabIndex = 2;
-            this.gridviewDSNhap.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            //this.gridviewDSNhap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewDSNhap_CellContentClick);
-            this.gridviewDSNhap.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewDSNhap_CellDoubleClick);
+            this.gridviewDSHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridviewDSHoaDon.BackgroundColor = System.Drawing.Color.White;
+            this.gridviewDSHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridviewDSHoaDon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridviewDSHoaDon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridviewDSHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.gridviewDSHoaDon.ColumnHeadersHeight = 40;
+            this.gridviewDSHoaDon.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gridviewDSHoaDon.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.gridviewDSHoaDon.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.gridviewDSHoaDon.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.gridviewDSHoaDon.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridviewDSHoaDon.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.gridviewDSHoaDon.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.gridviewDSHoaDon.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.gridviewDSHoaDon.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.gridviewDSHoaDon.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gridviewDSHoaDon.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.gridviewDSHoaDon.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.gridviewDSHoaDon.CurrentTheme.Name = null;
+            this.gridviewDSHoaDon.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridviewDSHoaDon.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.gridviewDSHoaDon.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.gridviewDSHoaDon.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.gridviewDSHoaDon.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridviewDSHoaDon.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gridviewDSHoaDon.EnableHeadersVisualStyles = false;
+            this.gridviewDSHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.gridviewDSHoaDon.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.gridviewDSHoaDon.HeaderBgColor = System.Drawing.Color.Empty;
+            this.gridviewDSHoaDon.HeaderForeColor = System.Drawing.Color.White;
+            this.gridviewDSHoaDon.Location = new System.Drawing.Point(12, 112);
+            this.gridviewDSHoaDon.Name = "gridviewDSHoaDon";
+            this.gridviewDSHoaDon.ReadOnly = true;
+            this.gridviewDSHoaDon.RowHeadersVisible = false;
+            this.gridviewDSHoaDon.RowTemplate.Height = 40;
+            this.gridviewDSHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridviewDSHoaDon.Size = new System.Drawing.Size(1063, 395);
+            this.gridviewDSHoaDon.TabIndex = 2;
+            this.gridviewDSHoaDon.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.gridviewDSHoaDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewDSHoaDon_CellDoubleClick_1);
             // 
             // bunifuLabel1
             // 
@@ -331,26 +328,24 @@ namespace Do_an_Winform.PL.Thukho
             this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(316, 33);
+            this.bunifuLabel1.Size = new System.Drawing.Size(218, 33);
             this.bunifuLabel1.TabIndex = 1;
-            this.bunifuLabel1.Text = "Danh sách phiếu nhập hàng";
+            this.bunifuLabel1.Text = "Danh sách hóa đơn";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            //this.bunifuLabel1.Click += new System.EventHandler(this.bunifuLabel1_Click);
             // 
-            // frm_DanhSachPN
+            // frm_DSHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 528);
+            this.ClientSize = new System.Drawing.Size(1089, 522);
             this.Controls.Add(this.mainPanel);
-            this.Name = "frm_DanhSachPN";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_DanhSachPN";
-            this.Load += new System.EventHandler(this.frm_DanhSachPN_Load);
+            this.Name = "frm_DSHoaDon";
+            this.Text = "frm_DSHoaDon";
+            this.Load += new System.EventHandler(this.frm_DSHoaDon_Load_1);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewDSNhap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewDSHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,9 +353,9 @@ namespace Do_an_Winform.PL.Thukho
         #endregion
 
         private Bunifu.UI.WinForms.BunifuPanel mainPanel;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTaoDon;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        public Bunifu.UI.WinForms.BunifuDataGridView gridviewDSNhap;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnRefresh;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTaoDon;
+        public Bunifu.UI.WinForms.BunifuDataGridView gridviewDSHoaDon;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }

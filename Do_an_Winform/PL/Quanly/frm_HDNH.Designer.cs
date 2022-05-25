@@ -124,7 +124,7 @@ namespace Do_an_Winform.PL.Quanly
             this.gvHDNH.RowHeadersWidth = 51;
             this.gvHDNH.RowTemplate.Height = 40;
             this.gvHDNH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvHDNH.Size = new System.Drawing.Size(1161, 208);
+            this.gvHDNH.Size = new System.Drawing.Size(1548, 256);
             this.gvHDNH.TabIndex = 2;
             this.gvHDNH.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -146,7 +146,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(358, 134);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(477, 165);
             this.bunifuGradientPanel2.TabIndex = 72;
             // 
             // DatePickerEndDay
@@ -175,7 +175,7 @@ namespace Do_an_Winform.PL.Quanly
             this.DatePickerEndDay.Margin = new System.Windows.Forms.Padding(2);
             this.DatePickerEndDay.MinimumSize = new System.Drawing.Size(4, 32);
             this.DatePickerEndDay.Name = "DatePickerEndDay";
-            this.DatePickerEndDay.Size = new System.Drawing.Size(196, 32);
+            this.DatePickerEndDay.Size = new System.Drawing.Size(260, 34);
             this.DatePickerEndDay.TabIndex = 81;
             this.DatePickerEndDay.Value = new System.DateTime(2022, 5, 16, 13, 37, 0, 0);
             // 
@@ -201,7 +201,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnViewReport.Location = new System.Drawing.Point(241, 86);
             this.btnViewReport.Margin = new System.Windows.Forms.Padding(5);
             this.btnViewReport.Name = "btnViewReport";
-            this.btnViewReport.Size = new System.Drawing.Size(111, 42);
+            this.btnViewReport.Size = new System.Drawing.Size(148, 52);
             this.btnViewReport.TabIndex = 43;
             this.btnViewReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnViewReport.Click += new System.EventHandler(this.btnViewReport_Click);
@@ -232,7 +232,7 @@ namespace Do_an_Winform.PL.Quanly
             this.DatePickerStartDay.Margin = new System.Windows.Forms.Padding(2);
             this.DatePickerStartDay.MinimumSize = new System.Drawing.Size(4, 32);
             this.DatePickerStartDay.Name = "DatePickerStartDay";
-            this.DatePickerStartDay.Size = new System.Drawing.Size(196, 32);
+            this.DatePickerStartDay.Size = new System.Drawing.Size(260, 34);
             this.DatePickerStartDay.TabIndex = 80;
             this.DatePickerStartDay.Value = new System.DateTime(2022, 5, 16, 13, 37, 0, 0);
             // 
@@ -278,11 +278,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel1.Controls.Add(this.txtSearch);
             this.bunifuPanel1.Controls.Add(this.gvHDNH);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(12, 13);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuPanel1.Location = new System.Drawing.Point(16, 16);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1190, 486);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1587, 598);
             this.bunifuPanel1.TabIndex = 71;
             // 
             // btnSearch
@@ -443,7 +443,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtTongCong.SelectionLength = 0;
             this.txtTongCong.SelectionStart = 0;
             this.txtTongCong.ShortcutsEnabled = true;
-            this.txtTongCong.Size = new System.Drawing.Size(263, 41);
+            this.txtTongCong.Size = new System.Drawing.Size(351, 50);
             this.txtTongCong.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTongCong.TabIndex = 78;
             this.txtTongCong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -466,7 +466,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(76, 21);
+            this.bunifuLabel3.Size = new System.Drawing.Size(98, 28);
             this.bunifuLabel3.TabIndex = 77;
             this.bunifuLabel3.Text = "Tổng cộng: ";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -539,7 +539,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(321, 40);
+            this.txtSearch.Size = new System.Drawing.Size(428, 49);
             this.txtSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearch.TabIndex = 3;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -549,6 +549,8 @@ namespace Do_an_Winform.PL.Quanly
             this.txtSearch.TextPlaceholder = "Tìm kiếm mã hóa đơn";
             this.txtSearch.UseSystemPasswordChar = false;
             this.txtSearch.WordWrap = true;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
@@ -560,11 +562,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(27, 37);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuLabel1.Location = new System.Drawing.Point(36, 46);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(237, 33);
+            this.bunifuLabel1.Size = new System.Drawing.Size(293, 41);
             this.bunifuLabel1.TabIndex = 1;
             this.bunifuLabel1.Text = "Hóa Đơn Nhập Hàng";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -641,9 +643,9 @@ namespace Do_an_Winform.PL.Quanly
             // 
             // frm_HDNH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 512);
+            this.ClientSize = new System.Drawing.Size(1619, 630);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);

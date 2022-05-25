@@ -70,5 +70,9 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.EditBill(hd);
         }
+        public static List<HoaDonDTO> GetAllBillById(string maHD)
+        {
+            return HoaDonDAL.GetAllBillById(maHD);
+        }
     }
 }
