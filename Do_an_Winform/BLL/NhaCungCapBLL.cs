@@ -29,5 +29,9 @@ namespace Do_an_Winform.BLL
         {
             return NhaCungCapDAL.GetNhaCungCapByID(mancc);
         }
+        public static int CountSupply()
+        {
+            return NhaCungCapDAL.CountSupply();
+        }
     }
 }

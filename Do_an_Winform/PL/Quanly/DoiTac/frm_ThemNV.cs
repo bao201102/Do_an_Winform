@@ -24,7 +24,7 @@ namespace Do_an_Winform.PL.Quanly
         private void btLuu_Click(object sender, EventArgs e)
         {
             NhanVienDTO nv = new NhanVienDTO();
-            nv.MaNV = txtMaNV.Text;
+            nv.MaNV = "NV" + NhanVienBLL.CountEmployee().ToString("000");
             nv.TenNV = txtTenNV.Text;
             nv.Email = txtEmailNV.Text;
             nv.DiaChi = txtDiaChiNV.Text;
@@ -40,6 +40,8 @@ namespace Do_an_Winform.PL.Quanly
 
         private void frm_Them_Load(object sender, EventArgs e)
         {
+            txtMaNV.ReadOnly = true;
+            txtMaNV.Text = "NV" + NhanVienBLL.CountEmployee().ToString("000");
             cbGioiTinhNV.Text = "Nam";
             cbMaLoaiNV.Text = "LNV001";
         }

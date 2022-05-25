@@ -140,7 +140,13 @@ namespace Do_an_Winform.DAL
             }
             return list;
         }
-
+        public static int CountEmployee()
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            var nhanvien = (from nv in data.NhanViens
+                           select nv).Count();
+            return nhanvien + 1;
+        }
     }
 
 }
