@@ -87,7 +87,8 @@ namespace Do_an_Winform.PL.Quanly
 
         private void btnCreateRP_Click(object sender, EventArgs e)
         {
-
+            frm_QLSP_RP form = new frm_QLSP_RP();
+            form.ShowDialog();
         }
     }
 }

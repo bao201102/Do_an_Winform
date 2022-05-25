@@ -41,7 +41,7 @@
             this.btLuuNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuuNCC.ForeColor = System.Drawing.SystemColors.Control;
             this.btLuuNCC.Location = new System.Drawing.Point(138, 189);
-            this.btLuuNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btLuuNCC.Margin = new System.Windows.Forms.Padding(2);
             this.btLuuNCC.Name = "btLuuNCC";
             this.btLuuNCC.Size = new System.Drawing.Size(201, 40);
             this.btLuuNCC.TabIndex = 14;
@@ -76,7 +76,7 @@
             // txtMaNCC
             // 
             this.txtMaNCC.Location = new System.Drawing.Point(177, 49);
-            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNCC.Name = "txtMaNCC";
             this.txtMaNCC.Size = new System.Drawing.Size(151, 20);
             this.txtMaNCC.TabIndex = 17;
@@ -84,7 +84,7 @@
             // txtTenNCC
             // 
             this.txtTenNCC.Location = new System.Drawing.Point(177, 125);
-            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.Size = new System.Drawing.Size(278, 20);
             this.txtTenNCC.TabIndex = 18;
@@ -101,11 +101,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btLuuNCC);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_ThemNCC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thêm thông tin nhà cung cấp";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_ThemNCC_FormClosing_1);
+            this.Load += new System.EventHandler(this.frm_ThemNCC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

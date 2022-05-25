@@ -43,5 +43,9 @@ namespace Do_an_Winform.BLL
         {
             return KhachHangDAL.LayTatCaKhachHang();
         }
+        public static int CountCustomer()
+        {
+            return KhachHangDAL.CountCustomer();
+        }
     }
 }
