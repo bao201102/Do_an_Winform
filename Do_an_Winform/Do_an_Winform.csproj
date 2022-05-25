@@ -395,6 +395,12 @@
     <Compile Include="PL\Quanly\DoiTac\frm_ThemNV.Designer.cs">
       <DependentUpon>frm_ThemNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_TaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\DoiTac\frm_TaoTaiKhoan.Designer.cs">
+      <DependentUpon>frm_TaoTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\frm_HDBH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -570,6 +576,9 @@
     <EmbeddedResource Include="PL\Quanly\DoiTac\ReportKH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\DoiTac\ReportNCC.rdlc" />
     <EmbeddedResource Include="PL\Quanly\DoiTac\ReportNV.rdlc" />
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_TaoTaiKhoan.resx">
+      <DependentUpon>frm_TaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\frm_HDBH.resx">
       <DependentUpon>frm_HDBH.cs</DependentUpon>
     </EmbeddedResource>
@@ -709,6 +718,7 @@
     </Content>
     <None Include="Resources\bill.png" />
     <None Include="Resources\sync.png" />
+    <None Include="Resources\search_white.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

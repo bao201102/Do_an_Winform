@@ -39,7 +39,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 
         private void btThemNV_Click(object sender, EventArgs e)
         {
-            frm_ThemNV form = new frm_ThemNV();
+            frm_TaoTaiKhoan form = new frm_TaoTaiKhoan();
             form.ShowDialog();
             dgNhanVien.DataSource = NhanVienBLL.GetAllEmployee();
         }
