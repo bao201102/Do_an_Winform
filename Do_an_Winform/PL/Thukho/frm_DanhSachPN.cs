@@ -20,6 +20,8 @@ namespace Do_an_Winform.PL.Thukho
         {
             InitializeComponent();
             taikhoan = user;
+            gridviewDSNhap.AllowUserToResizeColumns = false;
+            gridviewDSNhap.AllowUserToResizeRows = false;
         }
 
         private Form activeForm = null;

@@ -21,6 +21,8 @@ namespace Do_an_Winform.PL.Quanly
         public frm_HDNH()
         {
             InitializeComponent();
+            gvHDNH.AllowUserToResizeColumns = false;
+            gvHDNH.AllowUserToResizeRows = false;
         }
         private void txtSearch_Enter(object sender, EventArgs e)
         {
