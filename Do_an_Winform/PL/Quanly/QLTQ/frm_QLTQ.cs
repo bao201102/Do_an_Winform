@@ -16,5 +16,10 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
         {
             InitializeComponent();
         }
+
+        private void frm_QLTQ_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -3,6 +3,7 @@ using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
 using Do_an_Winform.PL.Quanly.DoiTac;
 using Do_an_Winform.PL.Quanly.QLBC;
+using Do_an_Winform.PL.Quanly.QLTQ;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -190,7 +191,7 @@ namespace Do_an_Winform.PL.Quanly
 
         private void btnTongquan_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new frm_QLTQ());
         }
 
         private void btnQLDoanhThu_Click_1(object sender, EventArgs e)
