@@ -30,9 +30,9 @@ namespace Do_an_Winform.BLL
             return NhanVienDAL.GetAllEmployee();
         }
 
-        public static bool AddEmployee(NhanVienDTO dto)
+        public static bool AddEmployee(NhanVienDTO nvDTO)
         {
-            return NhanVienDAL.AddEmployee(dto);
+            return NhanVienDAL.AddEmployee(nvDTO);
         }
 
         public static bool UpdateEmployee(NhanVienDTO empDTO)

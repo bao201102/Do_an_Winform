@@ -18,6 +18,7 @@
         <EntityTypeShape EntityType="CHDTModel.PhieuNhapHang" Width="1.5" PointX="0.75" PointY="12.5" />
         <EntityTypeShape EntityType="CHDTModel.SanPham" Width="1.5" PointX="6" PointY="4.5" />
         <EntityTypeShape EntityType="CHDTModel.sysdiagram" Width="1.5" PointX="8.75" PointY="8.25" />
+        <EntityTypeShape EntityType="CHDTModel.TaiKhoan" Width="1.5" PointX="1.5" PointY="21" IsExpanded="true" />
         <AssociationConnector Association="CHDTModel.FK_ChiTietHoaDon_HoaDon" />
         <AssociationConnector Association="CHDTModel.FK_ChiTietHoaDon_SanPham" />
         <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_NhaSanXuat" />

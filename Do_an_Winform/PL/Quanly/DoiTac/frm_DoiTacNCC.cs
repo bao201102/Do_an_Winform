@@ -17,11 +17,16 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
         public frm_DoiTacNCC()
         {
             InitializeComponent();
+            Refresh();
         }
 
         private void frm_DoiTacNCC_Load(object sender, EventArgs e)
         {
             dgNhaCungCap.DataSource = NhaCungCapBLL.GetNhaCungCap();
+            dgNhaCungCap.ReadOnly = true;
+            dgNhaCungCap.AllowUserToResizeColumns = false;
+            dgNhaCungCap.AllowUserToResizeRows = false;
+
             dgNhaCungCap.Columns[0].Visible = false;
             dgNhaCungCap.Columns[1].HeaderText = "Tên nhà cung cấp";
             dgNhaCungCap.Columns[2].HeaderText = "Số điện thoại";
