@@ -74,5 +74,9 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.GetAllBillById(maHD);
         }
+        public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
+        {
+            return HoaDonDAL.GetRevenueByMonth(time);
+        }
     }
 }

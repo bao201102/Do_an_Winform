@@ -35,7 +35,7 @@ namespace Do_an_Winform.DAL
             }
             return hoaDonDTOs;
         }
-<<<<<<< Updated upstream
+
         public static List<object> LayTatCaMaHD()
         {
             CHDTEntities1 data = new CHDTEntities1();
@@ -48,7 +48,8 @@ namespace Do_an_Winform.DAL
                 list.Add(item);
             }
             return list;
-=======
+        }
+
         public static List<HoaDonDTO> GetAllBillById(string maHD)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -64,7 +65,6 @@ namespace Do_an_Winform.DAL
                 hoaDonDTOs.Add(hoadon);
             }
             return hoaDonDTOs;
->>>>>>> Stashed changes
         }
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {
@@ -307,6 +307,26 @@ namespace Do_an_Winform.DAL
             hoaDon.MaKH = hd.MaKH;
             hoaDon.ThanhTien = hd.ThanhTien;
             return entities1.SaveChanges() > 0 ? true : false;
+        }
+        public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = from hd in entities.HoaDons
+                        where hd.TrangThai == "1" && hd.NgayTaoHD.Year.Equals(time.Year)
+                        group hd by hd.NgayTaoHD into table
+                        select new
+                        {
+                            Key = table.Key,
+                            Value = table.Sum(t => t.ThanhTien)
+                        };
+
+            Dictionary<int, double> list = new Dictionary<int, double>();
+            foreach (var item in query)
+            {
+                list.Add(item.Key.Month, item.Value);
+            }
+            return list;
         }
     }
 }
