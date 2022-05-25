@@ -353,23 +353,11 @@
     <Compile Include="PL\Quanly\BaoCao\frm_XemBaoCao.Designer.cs">
       <DependentUpon>frm_XemBaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoNCC.cs">
+    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoDoiTac.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoNCC.Designer.cs">
-      <DependentUpon>frm_BaoCaoNCC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoKH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoKH.Designer.cs">
-      <DependentUpon>frm_BaoCaoKH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoNV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoNV.Designer.cs">
-      <DependentUpon>frm_BaoCaoNV.cs</DependentUpon>
+    <Compile Include="PL\Quanly\DoiTac\frm_BaoCaoDoiTac.Designer.cs">
+      <DependentUpon>frm_BaoCaoDoiTac.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Quanly\DoiTac\frm_DoiTacKH.cs">
       <SubType>Form</SubType>
@@ -455,11 +443,11 @@
     <Compile Include="PL\Quanly\QLSP\frm_Update.Designer.cs">
       <DependentUpon>frm_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Quanly\QLTK\frm_QLTK.cs">
+    <Compile Include="PL\Quanly\QLTQ\frm_QLTQ.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Quanly\QLTK\frm_QLTK.Designer.cs">
-      <DependentUpon>frm_QLTK.cs</DependentUpon>
+    <Compile Include="PL\Quanly\QLTQ\frm_QLTQ.Designer.cs">
+      <DependentUpon>frm_QLTQ.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Thukho\frm_DanhSachPN.cs">
       <SubType>Form</SubType>
@@ -559,14 +547,8 @@
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDBH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_HDNH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\BaoCao\rpt_TKDT.rdlc" />
-    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_BaoCaoNCC.resx">
-      <DependentUpon>frm_BaoCaoNCC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_BaoCaoKH.resx">
-      <DependentUpon>frm_BaoCaoKH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_BaoCaoNV.resx">
-      <DependentUpon>frm_BaoCaoNV.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Quanly\DoiTac\frm_BaoCaoDoiTac.resx">
+      <DependentUpon>frm_BaoCaoDoiTac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\DoiTac\frm_DoiTacKH.resx">
       <DependentUpon>frm_DoiTacKH.cs</DependentUpon>
@@ -616,8 +598,8 @@
     <EmbeddedResource Include="PL\Quanly\QLSP\rpt_DSSP_Group.rdlc" />
     <EmbeddedResource Include="PL\Quanly\QLSP\rpt_DSSP.rdlc" />
     <EmbeddedResource Include="PL\Quanly\QLSP\rpt_SubDSSP.rdlc" />
-    <EmbeddedResource Include="PL\Quanly\QLTK\frm_QLTK.resx">
-      <DependentUpon>frm_QLTK.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Quanly\QLTQ\frm_QLTQ.resx">
+      <DependentUpon>frm_QLTQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Thukho\frm_DanhSachPN.resx">
       <DependentUpon>frm_DanhSachPN.cs</DependentUpon>

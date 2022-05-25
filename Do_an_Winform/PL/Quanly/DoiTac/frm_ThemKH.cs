@@ -22,7 +22,7 @@ namespace Do_an_Winform.PL.Quanly
         private void btLuu_Click(object sender, EventArgs e)
         {
             KhachHangDTO kh = new KhachHangDTO();
-            kh.MaKH = txtMaKH.Text;
+            kh.MaKH = "KH" + KhachHangBLL.CountCustomer().ToString("000");
             kh.TenKH = txtTenKH.Text;
             kh.Email = txtEmailKH.Text;
             kh.DiaChi = txtDiaChiKH.Text;
@@ -39,6 +39,8 @@ namespace Do_an_Winform.PL.Quanly
 
         private void frm_Them_Load(object sender, EventArgs e)
         {
+            txtMaKH.ReadOnly = true;
+            txtMaKH.Text = "KH" + KhachHangBLL.CountCustomer().ToString("000");
             cbGioiTinhKH.Text = "Nam";
             cbMaLoaiTV.Text = "LTV001";
         }

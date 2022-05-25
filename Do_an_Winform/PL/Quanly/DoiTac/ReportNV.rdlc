@@ -2,60 +2,28 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Textbox Name="Textbox1">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>                 Báo cáo thông tin nhân viên</Value>
-                <Style>
-                  <FontSize>18pt</FontSize>
-                  <Color>Teal</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.34078cm</Top>
-        <Left>3.67453cm</Left>
-        <Height>0.97042cm</Height>
-        <Width>16.02021cm</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Tablix Name="Tablix3">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.68376cm</Width>
+              <Width>5.03237cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.68376cm</Width>
+              <Width>3.41842cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.68376cm</Width>
+              <Width>6.64633cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.68376cm</Width>
+              <Width>5.03237cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.68376cm</Width>
+              <Width>5.03238cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6926cm</Height>
+              <Height>0.97041cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -225,7 +193,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6926cm</Height>
+              <Height>0.97041cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -402,21 +370,55 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.66912cm</Top>
-        <Left>0.02328cm</Left>
-        <Height>1.3852cm</Height>
-        <Width>23.4188cm</Width>
-        <ZIndex>1</ZIndex>
+        <Height>1.94083cm</Height>
+        <Width>25.16188cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>DANH SÁCH NHÂN VIÊN</Value>
+                <Style>
+                  <FontFamily>Leelawadee UI</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>Teal</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.18229in</Top>
+        <Height>0.41667in</Height>
+        <Width>9.90625in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.86458in</Height>
+    <Height>1.81494in</Height>
     <Style />
   </Body>
-  <Width>9.22917in</Width>
+  <Width>9.90625in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

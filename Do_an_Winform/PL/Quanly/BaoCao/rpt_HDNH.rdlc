@@ -53,27 +53,27 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.05611in</Width>
+                  <Width>1.65104in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.05611in</Width>
+                  <Width>1.65104in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.05611in</Width>
+                  <Width>1.65104in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.05611in</Width>
+                  <Width>1.65104in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.05611in</Width>
+                  <Width>1.65104in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.05611in</Width>
+                  <Width>1.65104in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.41782in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -258,7 +258,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.41782in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -443,7 +443,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.41782in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -654,9 +654,8 @@
             </TablixRowHierarchy>
             <DataSetName>PhieuNhapHang_HDNH</DataSetName>
             <Top>0.06944in</Top>
-            <Left>0.16333in</Left>
-            <Height>0.75in</Height>
-            <Width>6.33666in</Width>
+            <Height>1.25347in</Height>
+            <Width>9.90624in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -664,50 +663,16 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>0.81944in</Height>
+        <Height>1.39236in</Height>
         <Style />
       </Body>
-      <Width>6.655in</Width>
+      <Width>9.90625in</Width>
       <Page>
         <PageHeader>
-          <Height>1.15in</Height>
+          <Height>1.92083in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>THỐNG KÊ HÓA ĐƠN NHẬP HÀNG</Value>
-                      <Style>
-                        <FontSize>15pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>Teal</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.13833in</Top>
-              <Height>0.275in</Height>
-              <Width>6.655in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="Textbox2">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -723,11 +688,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.57638in</Top>
-              <Left>4.16999in</Left>
+              <Top>0.88195in</Top>
+              <Left>5.79562in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
-              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -753,11 +717,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox6</rd:DefaultName>
-              <Top>0.89584in</Top>
-              <Left>4.16999in</Left>
+              <Top>1.20141in</Top>
+              <Left>5.79562in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -783,11 +747,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>paStartDay</rd:DefaultName>
-              <Top>0.59027in</Top>
-              <Left>5.21166in</Left>
+              <Top>0.89584in</Top>
+              <Left>6.83728in</Left>
               <Height>0.25in</Height>
               <Width>1.28833in</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -813,11 +777,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>paEndDay</rd:DefaultName>
-              <Top>0.89584in</Top>
-              <Left>5.16999in</Left>
+              <Top>1.20141in</Top>
+              <Left>6.79562in</Left>
               <Height>0.25in</Height>
               <Width>1.33in</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -843,10 +807,46 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox12</rd:DefaultName>
-              <Top>0.46889in</Top>
-              <Left>0.11333in</Left>
+              <Top>0.85223in</Top>
+              <Left>1.65104in</Left>
               <Height>0.27972in</Height>
               <Width>1.85in</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>THỐNG KÊ HÓA ĐƠN NHẬP HÀNG</Value>
+                      <Style>
+                        <FontFamily>Leelawadee UI</FontFamily>
+                        <FontSize>18pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>Teal</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox1</rd:DefaultName>
+              <Top>0.24167in</Top>
+              <Height>0.41667in</Height>
+              <Width>9.90625in</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
@@ -866,7 +866,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>0.36889in</Height>
+          <Height>0.74389in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -885,8 +885,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox14</rd:DefaultName>
-              <Top>0.05556in</Top>
-              <Left>2.605in</Left>
+              <Top>0.36889in</Top>
+              <Left>4.30729in</Left>
               <Height>0.25in</Height>
               <Width>1.34167in</Width>
               <Style>

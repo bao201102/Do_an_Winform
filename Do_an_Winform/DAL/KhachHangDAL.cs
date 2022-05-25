@@ -150,5 +150,12 @@ namespace Do_an_Winform.DAL
             }
             return khachHangDTOs;
         }
+        public static int CountCustomer()
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            var khachhang = (from kh in data.KhachHangs
+                            select kh).Count();
+            return khachhang + 1;
+        }
     }
 }

@@ -23,13 +23,13 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
 
         private void frm_XemBaoCao_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.None;
             this.reportViewerResult.RefreshReport();
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         public void rpt_Nhap(PhieuNhapHangDTO phieuNhap, string tenncc,string nhanVien)
         {
+            lblBaocao.Text = "In phiếu nhập";
             List<ChiTietPhieuNhapDTO> chiTiets = ChiTietPhieuNhapBLL.GetAllByID(phieuNhap.MaPN);
             reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Thukho.rpt_Nhap.rdlc";
             reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("CTPN", chiTiets));
@@ -43,6 +43,7 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
         //Report HDBH
         public void rpt_HDBH_TatCaHD(DateTime sDay, DateTime eDay)
         {
+            lblBaocao.Text = "Báo cáo hóa đơn bán hàng";
             List<HoaDonDTO> listhd = HoaDonBLL.ThongKeTatCaHD(sDay, eDay);
             reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.BaoCao.rpt_HDBH.rdlc";
             reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("HoaDon_HDBH", listhd));
@@ -54,6 +55,7 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
         //Report HDNH
         public void rpt_HDNH_TatCaPN(DateTime sDay, DateTime eDay)
         {
+            lblBaocao.Text = "Báo cáo hóa đơn nhập hàng";
             List<PhieuNhapHangDTO> listpn = PhieuNhapHangBLL.ThongKeTatCaPN(sDay, eDay);
             reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.BaoCao.rpt_HDNH.rdlc";
             reportViewerResult.LocalReport.DataSources.Add(new ReportDataSource("PhieuNhapHang_HDNH", listpn));
