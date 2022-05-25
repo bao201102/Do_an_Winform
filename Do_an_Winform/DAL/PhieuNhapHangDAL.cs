@@ -21,8 +21,8 @@ namespace Do_an_Winform.DAL
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
                 var mapper = new Mapper(config);
-                PhieuNhapHangDTO pndto = mapper.Map<PhieuNhapHangDTO>(pn);
-                listpn.Add(pndto);
+                PhieuNhapHangDTO phieunhap = mapper.Map<PhieuNhapHangDTO>(pn);
+                listpn.Add(phieunhap);
             }
             return listpn;
         }
