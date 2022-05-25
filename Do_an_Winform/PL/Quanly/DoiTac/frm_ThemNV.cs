@@ -31,17 +31,21 @@ namespace Do_an_Winform.PL.Quanly
             nv.SĐT = txtSDTNV.Text;
             nv.GioiTinh = cbGioiTinhNV.Text;
             nv.MaLoaiNV = cbMaLoaiNV.Text;
+            nv.MaNguoiDung = "US" + NhanVienBLL.CountEmployee().ToString("000");
             nv.TrangThai = "1";
             if (NhanVienBLL.AddEmployee(nv))
             {
                 MessageBox.Show("Thêm nhân viên thành công");
             }
+            
         }
 
         private void frm_Them_Load(object sender, EventArgs e)
         {
             txtMaNV.ReadOnly = true;
             txtMaNV.Text = "NV" + NhanVienBLL.CountEmployee().ToString("000");
+            txtMaNguoiDung.ReadOnly = true;
+            txtMaNguoiDung.Text = "US" + NhanVienBLL.CountEmployee().ToString("000");
             cbGioiTinhNV.Text = "Nam";
             cbMaLoaiNV.Text = "LNV001";
         }
@@ -54,7 +58,5 @@ namespace Do_an_Winform.PL.Quanly
             this.Hide();
             
         }
-
-        
     }
 }

@@ -30,5 +30,40 @@ namespace Do_an_Winform.DAL
                 return null;
             }
         }
+        public static bool AddAccount(TaiKhoanDTO dto)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = (from x in entities.TaiKhoans
+                         select x).Count();
+            dto.MaNguoiDung = "US" + (query + 1).ToString("000");
+
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<TaiKhoanDTO, TaiKhoan>());
+            var mapper = new Mapper(config);
+            TaiKhoan tk = mapper.Map<TaiKhoan>(dto);
+            entities.TaiKhoans.Add(tk);
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting
+                        // the current instance as InnerException
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
+        }
     }
 }

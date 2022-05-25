@@ -91,12 +91,12 @@ namespace Do_an_Winform.DAL
             }
             return list;
         }
-        public static bool AddEmployee(NhanVienDTO dto)
+        public static bool AddEmployee(NhanVienDTO nvDTO)
         {
             CHDTEntities1 data = new CHDTEntities1();
             var config = new MapperConfiguration(cfg => cfg.CreateMap<NhanVienDTO, NhanVien>());
             var mapper = new Mapper(config);
-            NhanVien nv = mapper.Map<NhanVien>(dto);
+            NhanVien nv = mapper.Map<NhanVien>(nvDTO);
             data.NhanViens.Add(nv);
             return data.SaveChanges() > 0 ? true : false;
         }

@@ -24,6 +24,10 @@ namespace Do_an_Winform.PL.Quanly
             NhaCungCapDTO ncc = new NhaCungCapDTO();
             ncc.MaNCC = "NCC" + NhaCungCapBLL.CountSupply().ToString("000");
             ncc.TenNCC = txtTenNCC.Text;
+            ncc.SDT = txtSDT.Text;
+            ncc.Email= txtEmail.Text;
+            ncc.DiaChi = txtDiaChi.Text;
+            ncc.TrangThai = "1";
             if (NhaCungCapBLL.AddNCC(ncc))
             {
                 MessageBox.Show("Thêm nhà cung cấp thành công", "Thông báo", MessageBoxButtons.OK);
