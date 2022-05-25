@@ -364,6 +364,22 @@
         KjTdcSTF+iIAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="bunifuLabel11.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Leelawadee UI'; font-size: 12.75pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="bunifuDatePicker1.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGCSURBVFhH7ZbvTcMwEMWD2IBGSCzARz7ymQEYhg1gAtQ2
+        SyD2AYlUXYAlQp51z72c7dSJEyQkftJJued3vmvt/qksbx/fHULSyZTW/w/w+wNsr493uij2nBupevRA
+        HoUmxP7q6z72nBtj9dIuRJsQKJzTnJGql3Yh1rhWSLuQmHmNkHYhMfMaIe1CzhoK+XsDMC/VSUr3WAPz
+        Up2kdI81MC/Vs7GFerMSPZvZhQma+ni72xxe9FAIaFgT2wkaJJ1NV3UXu7p90k1jAQ+8UhYOoM05OsCG
+        dr2p28fX+vMGgWe77oeg4JIebcrRgX7lzebwIHIA1uhDjRMpuKSHea6Oc6Wmm1sf0UO4O2GNzHN1feFE
+        csQ0wrV93T6PGnNgPc5ZJMfYvvpOeON71V3K+iRYj8smkoO6pAPg9et8mBqy19kBbGBtMID+UzolXJce
+        5qkjsIG1wRGUkrqEY9DvLmEpqY9hiuBjuARFX0RLUPRVvBTYUL8TqYBn8eYanGv+z3FV/QDlws0ZzMLi
+        fwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Leelawadee UI'; font-size: 15pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(168, 213, 234); text-align: left; }</value>
   </data>
