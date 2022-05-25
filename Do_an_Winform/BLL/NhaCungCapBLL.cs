@@ -14,18 +14,17 @@ namespace Do_an_Winform.BLL
         {
             return NhaCungCapDAL.GetNhaCungCap();
         }
+
         public static bool AddNCC(NhaCungCapDTO dto)
         {
             return NhaCungCapDAL.AddNCC(dto);
         }
+
         public static List<object> GetAllSupplierByName(string name)
         {
             return NhaCungCapDAL.GetAllSupplierByName(name);
         }
-        public static List<object> GetAllSupplier()
-        {
-            return NhaCungCapDAL.GetAllSupplier();
-        }
+
         public static NhaCungCapDTO GetNhaCungCapByID(string mancc)
         {
             return NhaCungCapDAL.GetNhaCungCapByID(mancc);

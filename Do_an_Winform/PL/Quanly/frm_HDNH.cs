@@ -107,7 +107,7 @@ namespace Do_an_Winform.PL.Quanly
                 startday = DatePickerStartDay.Value;
                 endday = DatePickerEndDay.Value;
 
-                if (endday <= startday)
+                if (endday < startday)
                 {
                     bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
@@ -120,23 +120,9 @@ namespace Do_an_Winform.PL.Quanly
 
             DateTime sday = DatePickerStartDay.Value;
             DateTime eday = DatePickerEndDay.Value;
-            if (txtSearch.Text.Trim() != "")
-            {
-                startday = DatePickerStartDay.Value;
-                endday = DatePickerEndDay.Value;
-                PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
-                pnsearch.MaPN = txtSearch.Text;
-
-                frm_XemBaoCao frm = new frm_XemBaoCao();
-                frm.rpt_HDNH_MaPN(pnsearch.MaPN, sday, eday);
-                frm.ShowDialog();
-            }
-            else
-            {
-                frm_XemBaoCao frm = new frm_XemBaoCao();
-                frm.rpt_HDNH_TatCaPN(sday, eday);
-                frm.ShowDialog();
-            }
+            frm_XemBaoCao frm = new frm_XemBaoCao();
+            frm.rpt_HDNH_TatCaPN(sday, eday);
+            frm.ShowDialog();
         }
     }
 }

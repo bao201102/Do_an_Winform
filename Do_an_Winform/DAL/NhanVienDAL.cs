@@ -61,6 +61,7 @@ namespace Do_an_Winform.DAL
             }
             return list;
         }
+
         public static List<object> GetAllEmployee()
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -120,6 +121,24 @@ namespace Do_an_Winform.DAL
             {
                 return false;
             }
+        }
+        public static List<NhanVienDTO> LayTatCaNhanVien()
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            List<NhanVienDTO> list = new List<NhanVienDTO>();
+            var nhanvien = from nv in entities.NhanViens
+                           select nv;
+            foreach (NhanVien nv in nhanvien)
+            {
+                NhanVienDTO dto = new NhanVienDTO();
+                dto.TenNV = nv.TenNV;
+                dto.GioiTinh = nv.GioiTinh;
+                dto.Email = nv.Email;
+                dto.SĐT = nv.SĐT;
+                dto.DiaChi = nv.DiaChi;
+                list.Add(dto);
+            }
+            return list;
         }
 
     }

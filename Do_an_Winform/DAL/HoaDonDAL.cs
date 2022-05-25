@@ -38,19 +38,19 @@ namespace Do_an_Winform.DAL
         }
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
-            var bills = from hd in entities.HoaDons
+            CHDTEntities1 data = new CHDTEntities1();
+            var truyvan = from hd in data.HoaDons
                         where hd.TrangThai == "1" && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
                         select hd;
-            List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
-            foreach (HoaDon bill in bills)
+            List<HoaDonDTO> listhd = new List<HoaDonDTO>();
+            foreach (HoaDon hd in truyvan)
             {
                 var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
                 var mapper = new Mapper(config);
-                HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
-                hoaDonDTOs.Add(hoadon);
+                HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(hd);
+                listhd.Add(hoadon);
             }
-            return hoaDonDTOs;
+            return listhd;
         }
         public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
         {
@@ -67,6 +67,18 @@ namespace Do_an_Winform.DAL
                 hoaDonDTOs.Add(hoadon);
             }
             return hoaDonDTOs;
+        }
+        public static HoaDonDTO LayTheoMaHD (string mahd)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            HoaDon truyvan = (from hd in entities.HoaDons
+                              where hd.MaHD == mahd && hd.TrangThai == "1"
+                              select hd).SingleOrDefault();
+
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
+            var mapper = new Mapper(config);
+            HoaDonDTO hdon = mapper.Map<HoaDonDTO>(truyvan);
+            return hdon;
         }
         public static double DoanhThuTatCaHD(DateTime startday, DateTime endday)
         {

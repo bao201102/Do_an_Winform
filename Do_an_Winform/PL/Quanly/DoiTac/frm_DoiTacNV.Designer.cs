@@ -95,6 +95,7 @@
             this.btnCreateRP.Size = new System.Drawing.Size(100, 50);
             this.btnCreateRP.TabIndex = 25;
             this.btnCreateRP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCreateRP.Click += new System.EventHandler(this.btnCreateRP_Click);
             // 
             // txtFind
             // 

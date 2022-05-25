@@ -39,5 +39,9 @@ namespace Do_an_Winform.BLL
         {
             return NhanVienDAL.UpdateEmployee(empDTO);
         }
+        public static List<NhanVienDTO> LayTatCaNhanVien()
+        {
+            return NhanVienDAL.LayTatCaNhanVien();
+        }
     }
 }

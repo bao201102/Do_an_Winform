@@ -1,6 +1,7 @@
 ﻿using Do_an_Winform.PL.DangNhap;
 using Do_an_Winform.PL.Nhanvien;
 using Do_an_Winform.PL.Quanly;
+using Do_an_Winform.PL.Quanly.QLBC;
 using Do_an_Winform.PL.Quanly.QLSP;
 using System;
 using System.Collections.Generic;

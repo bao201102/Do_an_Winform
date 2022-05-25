@@ -2,6 +2,7 @@
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
 using Do_an_Winform.PL.Quanly.DoiTac;
+using Do_an_Winform.PL.Quanly.QLBC;
 using Do_an_Winform.PL.Quanly.QLTK;
 using System;
 using System.Collections.Generic;
@@ -203,6 +204,11 @@ namespace Do_an_Winform.PL.Quanly
         private void btnQLDoanhThu_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frm_TKDT());
+        }
+
+        private void btnQLBC_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_QLBC());
         }
     }
 }

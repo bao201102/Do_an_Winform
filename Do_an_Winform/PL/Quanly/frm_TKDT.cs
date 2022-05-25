@@ -27,7 +27,9 @@ namespace Do_an_Winform.PL.Quanly
             txtNamTK.Text = DateTime.Now.ToString("yyyy");
             cbQuyTK.SelectedItem = LayQuy(today.Month.ToString()).ToString();
             cbThangTK.SelectedItem = today.Month;
-            txtDoanhThu.Text = HoaDonDAL.ThongKeDoanhThuTheoTDHT(today).ToString();
+            txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoTDHT(today).ToString();
+            txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoTDHT(today).ToString();
+            txtLoiNhuan.Text = (double.Parse(txtDoanhThu.Text) - double.Parse(txtChiPhi.Text)).ToString();
         }
         private void cbQuyTK_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -67,21 +69,23 @@ namespace Do_an_Winform.PL.Quanly
 
                 cbThangTK.Enabled = false;
                 cbThangTK.Text = "Tất Cả";
-
-                txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoNam(txtNamTK.Text).ToString();
-                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoNam(txtNamTK.Text).ToString();
             }
             if (cbHTTK.Text == "Quý")
             {
-                cbQuyTK.Items.Remove("Tất cả");
+                cbQuyTK.Enabled = true;
                 cbThangTK.Enabled = false;
-                cbQuyTK.Text = cbQuyTK.SelectedItem.ToString();
+                cbQuyTK.Items.Remove("Tất cả");
+                cbQuyTK.Items.Clear();
+                object[] quy = new object[] { 1, 2, 3, 4 };
+                cbQuyTK.Items.AddRange(quy);
                 cbThangTK.Text = "Tất cả";
-                txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoQuy(cbQuyTK.SelectedItem.ToString(), txtNamTK.Text).ToString();
-                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoQuy(cbQuyTK.SelectedItem.ToString(), txtNamTK.Text).ToString();
             }
-            if (cbHTTK.Text == "Tháng")
+            if (cbHTTK.Text == "Tháng" || cbHTTK.Text == "")
             {
+                cbThangTK.Text = "";
+                cbThangTK.Items.Remove("Tất cả");
+                cbThangTK.Enabled = true;
+                cbQuyTK.Enabled = false;
                 cbQuyTK.Text = "";
                 if (cbQuyTK.Text == "")
                 {
@@ -89,11 +93,7 @@ namespace Do_an_Winform.PL.Quanly
                     object[] allmonth = new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
                     cbThangTK.Items.AddRange(allmonth);
                 }
-                cbQuyTK.Enabled = false;
-                txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
-                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
             }
-            txtLoiNhuan.Text = (double.Parse(txtDoanhThu.Text) - double.Parse(txtChiPhi.Text)).ToString();
         }
         public int LayQuy(string month)
         {
@@ -109,6 +109,30 @@ namespace Do_an_Winform.PL.Quanly
         }
         private void btnTK_Click(object sender, EventArgs e)
         {
+            //THỐNG KÊ
+            if(cbHTTK.Text == "")
+            {
+                    bunifuSnackbarTKDT.Show(this, "Vui lòng chọn hình thức thống kê \nThử lại", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+            }
+            if (cbHTTK.Text == "Năm")
+            {
+                txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoNam(txtNamTK.Text).ToString();
+                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoNam(txtNamTK.Text).ToString();
+            }
+            if (cbHTTK.Text == "Quý")
+            {
+                txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoQuy(cbQuyTK.SelectedItem.ToString(), txtNamTK.Text).ToString();
+                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoQuy(cbQuyTK.SelectedItem.ToString(), txtNamTK.Text).ToString();
+            }
+            if (cbHTTK.Text == "Tháng")
+            {
+                cbQuyTK.Enabled = false;
+                txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
+                txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoThang(cbThangTK.Text, txtNamTK.Text).ToString();
+            }
+            txtLoiNhuan.Text = (double.Parse(txtDoanhThu.Text) - double.Parse(txtChiPhi.Text)).ToString();
+
+            // VẼ BIỂU ĐỒ
             //Doanh Thu
             /*List<double> profitDataList = new List<double>();
             for (int i = 1; i <= 12; i++)

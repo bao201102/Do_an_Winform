@@ -308,9 +308,9 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuLabel1.Location = new System.Drawing.Point(35, 35);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(192, 28);
+            this.bunifuLabel1.Size = new System.Drawing.Size(167, 28);
             this.bunifuLabel1.TabIndex = 14;
-            this.bunifuLabel1.Text = "Danh sách sản phẩm";
+            this.bunifuLabel1.Text = "Quản lý sản phẩm";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

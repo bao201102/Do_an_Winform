@@ -132,6 +132,23 @@ namespace Do_an_Winform.DAL
             khachHang.TrangThai = kh.TrangThai;
             return entities1.SaveChanges() > 0 ? true : false;
         }
-
+        public static List<KhachHangDTO> LayTatCaKhachHang()
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var customers = from kh in entities.KhachHangs
+                            select kh;
+            List<KhachHangDTO> khachHangDTOs = new List<KhachHangDTO>();
+            foreach (KhachHang ctm in customers)
+            {
+                if (ctm.TrangThai == "1")
+                {
+                    var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHang, KhachHangDTO>());
+                    var mapper = new Mapper(config);
+                    KhachHangDTO khachhang = mapper.Map<KhachHangDTO>(ctm);
+                    khachHangDTOs.Add(khachhang);
+                }
+            }
+            return khachHangDTOs;
+        }
     }
 }

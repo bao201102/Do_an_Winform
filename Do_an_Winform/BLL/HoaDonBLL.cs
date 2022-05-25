@@ -22,6 +22,10 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.ThongKeTheoMaHD(hdsearch, startday, endday);
         }
+        public static HoaDonDTO LayTheoMaHD(string hdsearch)
+        {
+            return HoaDonDAL.LayTheoMaHD(hdsearch);
+        }
         public static double DoanhThuTatCaHD(DateTime startday, DateTime endday)
         {
             return HoaDonDAL.DoanhThuTatCaHD(startday, endday);
