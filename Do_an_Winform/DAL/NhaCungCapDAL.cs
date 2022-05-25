@@ -78,6 +78,12 @@ namespace Do_an_Winform.DAL
             return nhaCungCap;
 
         }
-
+        public static int CountSupply()
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            var nhacungcap = (from ncc in data.NhaCungCaps
+                            select ncc).Count();
+            return nhacungcap + 1;
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace Do_an_Winform.PL.Quanly
         private void btLuu_Click(object sender, EventArgs e)
         {
             NhaCungCapDTO ncc = new NhaCungCapDTO();
-            ncc.MaNCC = txtMaNCC.Text;
+            ncc.MaNCC = "NCC" + NhaCungCapBLL.CountSupply().ToString("000");
             ncc.TenNCC = txtTenNCC.Text;
             if (NhaCungCapBLL.AddNCC(ncc))
             {
@@ -37,6 +37,12 @@ namespace Do_an_Winform.PL.Quanly
             Form frm = Application.OpenForms["frm_Quanly"];
             frm.Show();
             this.Hide();
+        }
+
+        private void frm_ThemNCC_Load(object sender, EventArgs e)
+        {
+            txtMaNCC.ReadOnly = true;
+            txtMaNCC.Text = "NCC" + NhaCungCapBLL.CountSupply().ToString("000");
         }
     }
 }

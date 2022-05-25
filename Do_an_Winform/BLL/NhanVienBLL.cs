@@ -43,5 +43,9 @@ namespace Do_an_Winform.BLL
         {
             return NhanVienDAL.LayTatCaNhanVien();
         }
+        public static int CountEmployee()
+        {
+            return NhanVienDAL.CountEmployee();
+        }
     }
 }
