@@ -23,6 +23,8 @@ namespace Do_an_Winform.PL.Quanly
             InitializeComponent();
             gvHDNH.AllowUserToResizeColumns = false;
             gvHDNH.AllowUserToResizeRows = false;
+            txtSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
         private void txtSearch_Enter(object sender, EventArgs e)
         {
@@ -38,8 +40,6 @@ namespace Do_an_Winform.PL.Quanly
             {
                 txtSearch.Text = "Tìm kiếm mã hóa đơn";
                 txtSearch.ForeColor = Color.Silver;
-                txtSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
             }
         }
         private void frm_HDNH_Load(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace Do_an_Winform.PL.Quanly
                 startday = DatePickerStartDay.Value;
                 endday = DatePickerEndDay.Value;
 
-                if (endday <= startday)
+                if (endday < startday)
                 {
                     bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
@@ -114,7 +114,6 @@ namespace Do_an_Winform.PL.Quanly
                 txtTongCong.Text = PhieuNhapHangBLL.ThongKeTatCaPN(startday, endday).ToString();
             }
         }
-
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             try
@@ -155,7 +154,6 @@ namespace Do_an_Winform.PL.Quanly
                 txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();
             }
         }
-
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
@@ -170,7 +168,6 @@ namespace Do_an_Winform.PL.Quanly
             gvHDNH.Columns[5].Visible = false;
             txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();
         }
-
         private void btnViewReport_Click(object sender, EventArgs e)
         {
             try

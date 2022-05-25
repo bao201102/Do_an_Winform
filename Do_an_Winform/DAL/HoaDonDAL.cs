@@ -255,7 +255,6 @@ namespace Do_an_Winform.DAL
             };
             return reusultDT;
         }
-
         //Hàm lấy ra ngày đầu tiên của tháng
         public static DateTime GetFirstDayOfMonth(string strMonth, string strYear)
         {
