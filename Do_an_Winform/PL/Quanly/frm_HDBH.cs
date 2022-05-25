@@ -33,8 +33,8 @@ namespace Do_an_Winform.PL.Quanly
             AutoCompleteStringCollection automahd = new AutoCompleteStringCollection();
             foreach (object i in listmahd)
             {
-                //automahd.Add(i.ToString());
-                MessageBox.Show(i.ToString());
+                automahd.Add(i.ToString());
+                //MessageBox.Show(i.ToString());
             }
             txtSearch.AutoCompleteCustomSource = automahd;
 
