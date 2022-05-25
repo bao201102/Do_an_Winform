@@ -35,6 +35,7 @@ namespace Do_an_Winform.DAL
             }
             return hoaDonDTOs;
         }
+<<<<<<< Updated upstream
         public static List<object> LayTatCaMaHD()
         {
             CHDTEntities1 data = new CHDTEntities1();
@@ -47,6 +48,23 @@ namespace Do_an_Winform.DAL
                 list.Add(item);
             }
             return list;
+=======
+        public static List<HoaDonDTO> GetAllBillById(string maHD)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var bills = from hd in entities.HoaDons
+                        where hd.TrangThai == "1" && hd.MaHD == maHD
+                        select hd;
+            List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
+            foreach (HoaDon bill in bills)
+            {
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
+                var mapper = new Mapper(config);
+                HoaDonDTO hoadon = mapper.Map<HoaDonDTO>(bill);
+                hoaDonDTOs.Add(hoadon);
+            }
+            return hoaDonDTOs;
+>>>>>>> Stashed changes
         }
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {

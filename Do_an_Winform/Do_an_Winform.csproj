@@ -305,6 +305,12 @@
     <Compile Include="PL\DangNhap\MessBox1.Designer.cs">
       <DependentUpon>MessBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Nhanvien\frm_DSHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Nhanvien\frm_DSHoaDon.Designer.cs">
+      <DependentUpon>frm_DSHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Nhanvien\frm_Info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +322,12 @@
     </Compile>
     <Compile Include="PL\Nhanvien\frm_NVien.Designer.cs">
       <DependentUpon>frm_NVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Nhanvien\frm_XemHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Nhanvien\frm_XemHD.Designer.cs">
+      <DependentUpon>frm_XemHD.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Nhanvien\frm_XemHoaDon.cs">
       <SubType>Form</SubType>
@@ -524,11 +536,17 @@
     <EmbeddedResource Include="PL\DangNhap\MessBox1.resx">
       <DependentUpon>MessBox1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\frm_DSHoaDon.resx">
+      <DependentUpon>frm_DSHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_Info.resx">
       <DependentUpon>frm_Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_NVien.resx">
       <DependentUpon>frm_NVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\frm_XemHD.resx">
+      <DependentUpon>frm_XemHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_XemHoaDon.resx">
       <DependentUpon>frm_XemHoaDon.cs</DependentUpon>
