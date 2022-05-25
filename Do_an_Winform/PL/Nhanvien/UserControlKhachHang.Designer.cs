@@ -48,7 +48,7 @@
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
             this.lbl1.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.lbl1.Location = new System.Drawing.Point(361, 46);
+            this.lbl1.Location = new System.Drawing.Point(401, 50);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(326, 32);
             this.lbl1.TabIndex = 1;
@@ -56,15 +56,13 @@
             // 
             // cbTenKhachHang
             // 
-            this.cbTenKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbTenKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbTenKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbTenKhachHang.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenKhachHang.FormattingEnabled = true;
             this.cbTenKhachHang.Location = new System.Drawing.Point(345, 134);
             this.cbTenKhachHang.Name = "cbTenKhachHang";
-            this.cbTenKhachHang.Size = new System.Drawing.Size(429, 29);
+            this.cbTenKhachHang.Size = new System.Drawing.Size(301, 29);
             this.cbTenKhachHang.TabIndex = 2;
             this.cbTenKhachHang.TextChanged += new System.EventHandler(this.cbTenKhachHang_TextChanged);
             // 
@@ -103,7 +101,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAllCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAllCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllCustomer.ColumnHeadersHeight = 40;
             this.dgvAllCustomer.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvAllCustomer.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvAllCustomer.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -141,7 +139,7 @@
             this.dgvAllCustomer.RowHeadersVisible = false;
             this.dgvAllCustomer.RowTemplate.Height = 40;
             this.dgvAllCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAllCustomer.Size = new System.Drawing.Size(1011, 316);
+            this.dgvAllCustomer.Size = new System.Drawing.Size(1088, 341);
             this.dgvAllCustomer.TabIndex = 6;
             this.dgvAllCustomer.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -163,7 +161,7 @@
             this.bunifuPanel1.Location = new System.Drawing.Point(3, 3);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1039, 554);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1116, 579);
             this.bunifuPanel1.TabIndex = 7;
             // 
             // UserControlKhachHang
@@ -173,7 +171,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "UserControlKhachHang";
-            this.Size = new System.Drawing.Size(1045, 560);
+            this.Size = new System.Drawing.Size(1122, 585);
             this.Load += new System.EventHandler(this.UserControlKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomer)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);

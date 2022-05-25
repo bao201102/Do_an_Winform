@@ -59,15 +59,18 @@
             this.txtDiaChi = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtSDT = new Bunifu.UI.WinForms.BunifuTextBox();
             this.cbGioiTinh = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl1
             // 
             this.lbl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
             this.lbl1.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.lbl1.Location = new System.Drawing.Point(512, 46);
+            this.lbl1.Location = new System.Drawing.Point(434, 46);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(284, 30);
             this.lbl1.TabIndex = 2;
@@ -77,8 +80,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(161, 150);
+            this.label1.Location = new System.Drawing.Point(88, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 3;
@@ -93,8 +97,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(786, 154);
+            this.label2.Location = new System.Drawing.Point(692, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 21);
             this.label2.TabIndex = 7;
@@ -104,8 +109,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(161, 252);
+            this.label3.Location = new System.Drawing.Point(88, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 21);
             this.label3.TabIndex = 9;
@@ -115,8 +121,9 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(797, 354);
+            this.label4.Location = new System.Drawing.Point(715, 335);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 21);
             this.label4.TabIndex = 12;
@@ -126,8 +133,9 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(161, 354);
+            this.label5.Location = new System.Drawing.Point(88, 335);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 21);
             this.label5.TabIndex = 13;
@@ -141,7 +149,7 @@
             this.btnAddMem.ActiveForecolor = System.Drawing.Color.Black;
             this.btnAddMem.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAddMem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddMem.BackColor = System.Drawing.Color.White;
+            this.btnAddMem.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddMem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddMem.BackgroundImage")));
             this.btnAddMem.ButtonText = "Tạo thẻ thành viên";
             this.btnAddMem.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -152,7 +160,7 @@
             this.btnAddMem.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnAddMem.IdleForecolor = System.Drawing.Color.Black;
             this.btnAddMem.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnAddMem.Location = new System.Drawing.Point(572, 466);
+            this.btnAddMem.Location = new System.Drawing.Point(495, 421);
             this.btnAddMem.Margin = new System.Windows.Forms.Padding(5);
             this.btnAddMem.Name = "btnAddMem";
             this.btnAddMem.Size = new System.Drawing.Size(180, 50);
@@ -189,7 +197,7 @@
             this.txtHoTen.IconRight = null;
             this.txtHoTen.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHoTen.Lines = new string[0];
-            this.txtHoTen.Location = new System.Drawing.Point(254, 147);
+            this.txtHoTen.Location = new System.Drawing.Point(181, 131);
             this.txtHoTen.MaxLength = 32767;
             this.txtHoTen.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtHoTen.Modified = false;
@@ -265,7 +273,7 @@
             this.txtEmail.IconRight = null;
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(254, 247);
+            this.txtEmail.Location = new System.Drawing.Point(181, 230);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEmail.Modified = false;
@@ -341,7 +349,7 @@
             this.txtDiaChi.IconRight = null;
             this.txtDiaChi.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiaChi.Lines = new string[0];
-            this.txtDiaChi.Location = new System.Drawing.Point(254, 347);
+            this.txtDiaChi.Location = new System.Drawing.Point(181, 329);
             this.txtDiaChi.MaxLength = 32767;
             this.txtDiaChi.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDiaChi.Modified = false;
@@ -417,7 +425,7 @@
             this.txtSDT.IconRight = null;
             this.txtSDT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSDT.Lines = new string[0];
-            this.txtSDT.Location = new System.Drawing.Point(878, 347);
+            this.txtSDT.Location = new System.Drawing.Point(796, 323);
             this.txtSDT.MaxLength = 32767;
             this.txtSDT.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSDT.Modified = false;
@@ -502,35 +510,55 @@
             this.cbGioiTinh.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cbGioiTinh.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cbGioiTinh.ItemTopMargin = 3;
-            this.cbGioiTinh.Location = new System.Drawing.Point(878, 148);
+            this.cbGioiTinh.Location = new System.Drawing.Point(796, 132);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(260, 32);
             this.cbGioiTinh.TabIndex = 37;
+            this.cbGioiTinh.Text = null;
             this.cbGioiTinh.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cbGioiTinh.TextLeftMargin = 5;
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 10;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.lbl1);
+            this.bunifuPanel1.Controls.Add(this.btnAddMem);
+            this.bunifuPanel1.Controls.Add(this.txtEmail);
+            this.bunifuPanel1.Controls.Add(this.txtDiaChi);
+            this.bunifuPanel1.Controls.Add(this.txtSDT);
+            this.bunifuPanel1.Controls.Add(this.cbGioiTinh);
+            this.bunifuPanel1.Controls.Add(this.label2);
+            this.bunifuPanel1.Controls.Add(this.txtHoTen);
+            this.bunifuPanel1.Controls.Add(this.label1);
+            this.bunifuPanel1.Controls.Add(this.label3);
+            this.bunifuPanel1.Controls.Add(this.label5);
+            this.bunifuPanel1.Controls.Add(this.label4);
+            this.bunifuPanel1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(1144, 521);
+            this.bunifuPanel1.TabIndex = 38;
             // 
             // UserControlDKThanhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.cbGioiTinh);
-            this.Controls.Add(this.txtSDT);
-            this.Controls.Add(this.txtDiaChi);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtHoTen);
-            this.Controls.Add(this.btnAddMem);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbl1);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.bunifuPanel1);
             this.Name = "UserControlDKThanhVien";
-            this.Size = new System.Drawing.Size(1290, 567);
+            this.Size = new System.Drawing.Size(1150, 527);
             this.Load += new System.EventHandler(this.UserControlDKThanhVien_Load);
+            this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -549,5 +577,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtDiaChi;
         private Bunifu.UI.WinForms.BunifuTextBox txtSDT;
         private Bunifu.UI.WinForms.BunifuDropdown cbGioiTinh;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
     }
 }

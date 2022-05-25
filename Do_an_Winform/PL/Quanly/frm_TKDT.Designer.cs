@@ -98,11 +98,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel1.Controls.Add(this.bunifuPanel2);
             this.bunifuPanel1.Controls.Add(this.bunifuPanel3);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(12, 13);
+            this.bunifuPanel1.Location = new System.Drawing.Point(3, 3);
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1246, 540);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1263, 559);
             this.bunifuPanel1.TabIndex = 72;
             // 
             // chartCanvasTKDT
@@ -133,7 +133,7 @@ namespace Do_an_Winform.PL.Quanly
             this.chartCanvasTKDT.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
             this.chartCanvasTKDT.LegendRevese = false;
             this.chartCanvasTKDT.LegendRTL = false;
-            this.chartCanvasTKDT.Location = new System.Drawing.Point(191, 314);
+            this.chartCanvasTKDT.Location = new System.Drawing.Point(199, 323);
             this.chartCanvasTKDT.Name = "chartCanvasTKDT";
             this.chartCanvasTKDT.Padding = new System.Windows.Forms.Padding(3);
             this.chartCanvasTKDT.ShowXAxis = true;
@@ -188,7 +188,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(865, 17);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(882, 17);
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
@@ -251,7 +251,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel2.Controls.Add(this.label3);
             this.bunifuPanel2.Controls.Add(this.label4);
             this.bunifuPanel2.Controls.Add(this.ChiPhi);
-            this.bunifuPanel2.Location = new System.Drawing.Point(681, 90);
+            this.bunifuPanel2.Location = new System.Drawing.Point(698, 90);
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
