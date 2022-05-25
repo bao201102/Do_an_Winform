@@ -22,7 +22,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
         private void btTaoTK_Click(object sender, EventArgs e)
         {
             TaiKhoanDTO tk = new TaiKhoanDTO();
-            tk.TaiKhoan = txtTaiKhoan.Text;
+            tk.UserName = txtTaiKhoan.Text;
             tk.MatKhau = txtMatKhau.Text;
             tk.MaLoaiNV = cbMaLoaiNV.Text;
             if (TaiKhoanBLL.AddAccount(tk))
