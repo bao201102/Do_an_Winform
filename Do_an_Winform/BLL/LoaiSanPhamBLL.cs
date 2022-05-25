@@ -19,5 +19,20 @@ namespace Do_an_Winform.BLL
         {
             return LoaiSanPhamDAL.GetAllCat();
         }
+
+        public static Dictionary<string, double> GetTopProductCatByDay(DateTime time)
+        {
+            return LoaiSanPhamDAL.GetTopProductCatByDay(time);
+        }
+
+        public static Dictionary<string, double> GetTopProductCatByMonth(DateTime time)
+        {
+            return LoaiSanPhamDAL.GetTopProductCatByMonth(time);
+        }
+
+        public static Dictionary<string, double> GetTopProductCatByYear(DateTime time)
+        {
+            return LoaiSanPhamDAL.GetTopProductCatByYear(time);
+        }
     }
 }

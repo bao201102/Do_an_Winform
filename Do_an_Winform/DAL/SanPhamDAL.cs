@@ -580,7 +580,7 @@ namespace Do_an_Winform.DAL
 
 
             Dictionary<string, double> list = new Dictionary<string, double>();
-            foreach (var item in query2.Take(5))
+            foreach (var item in query2.OrderByDescending(t => t.Value).Take(5))
             {
                 list.Add(item.Key, item.Value);
             }
@@ -616,7 +616,7 @@ namespace Do_an_Winform.DAL
 
 
             Dictionary<string, double> list = new Dictionary<string, double>();
-            foreach (var item in query2.Take(5))
+            foreach (var item in query2.OrderByDescending(t => t.Value).Take(5))
             {
                 list.Add(item.Key, item.Value);
             }
@@ -652,7 +652,7 @@ namespace Do_an_Winform.DAL
 
 
             Dictionary<string, double> list = new Dictionary<string, double>();
-            foreach (var item in query2.Take(5))
+            foreach (var item in query2.OrderByDescending(t => t.Value).Take(5))
             {
                 list.Add(item.Key, item.Value);
             }

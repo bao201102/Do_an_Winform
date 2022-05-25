@@ -17,11 +17,35 @@ namespace Do_an_Winform.PL.Quanly.QLBC
         {
             InitializeComponent();
         }
-        
-        private void chart_Load(Dictionary<string, double> data)
+
+        private void chartCat_Load(Dictionary<string, double> data)
         {
-            bunifuChartCanvas1.Clear();
-            bunifuHorizontalBarChart1.Data.Clear();
+            chartCanvasCat.Clear();
+            horizontalBarChartCat.Data.Clear();
+
+            List<string> y_AxisLabels = new List<string>();
+            List<double> horizontalBarData = new List<double>();
+
+            foreach (var productData in data.OrderByDescending(x => x.Value))
+            {
+                if (productData.Value > 0)
+                {
+                    y_AxisLabels.Add(productData.Key);
+                    horizontalBarData.Add(productData.Value);
+                }
+            }
+
+            chartCanvasCat.Labels = y_AxisLabels.ToArray();
+            horizontalBarChartCat.Data = horizontalBarData;
+
+            chartCanvasCat.Update();
+            chartCanvasCat.Refresh();
+        }
+
+        private void chartProduct_Load(Dictionary<string, double> data)
+        {
+            chartCanvasProduct.Clear();
+            horizontalBarChartProduct.Data.Clear();
 
             List<string> y_AxisLabels = new List<string>();
             List<double> horizontalBarData = new List<double>();
@@ -35,32 +59,36 @@ namespace Do_an_Winform.PL.Quanly.QLBC
                 }            
             }
 
-            bunifuChartCanvas1.Labels = y_AxisLabels.ToArray();
-            bunifuHorizontalBarChart1.Data = horizontalBarData;
+            chartCanvasProduct.Labels = y_AxisLabels.ToArray();
+            horizontalBarChartProduct.Data = horizontalBarData;
 
-            bunifuChartCanvas1.Update();
-            bunifuChartCanvas1.Refresh();
+            chartCanvasProduct.Update();
+            chartCanvasProduct.Refresh();
         }
 
         private void frm_QLBC_Load(object sender, EventArgs e)
         {
             cbDate.SelectedIndex = 0;
-            chart_Load(SanPhamBLL.GetTopProductByYear(bunifuDatePicker1.Value));
+            chartProduct_Load(SanPhamBLL.GetTopProductByDay(bunifuDatePicker1.Value));
+            chartCat_Load(LoaiSanPhamBLL.GetTopProductCatByDay(bunifuDatePicker1.Value));
         }
 
         private void cbLoaisp_SelectionChangeCommitted(object sender, EventArgs e)
         {
             if (cbDate.SelectedIndex == 0)
             {           
-                chart_Load(SanPhamBLL.GetTopProductByDay(bunifuDatePicker1.Value));
+                chartProduct_Load(SanPhamBLL.GetTopProductByDay(bunifuDatePicker1.Value));
+                chartCat_Load(LoaiSanPhamBLL.GetTopProductCatByDay(bunifuDatePicker1.Value));
             }
             else if (cbDate.SelectedIndex == 1)
             {
-                chart_Load(SanPhamBLL.GetTopProductByMonth(bunifuDatePicker1.Value));
+                chartProduct_Load(SanPhamBLL.GetTopProductByMonth(bunifuDatePicker1.Value));
+                chartCat_Load(LoaiSanPhamBLL.GetTopProductCatByMonth(bunifuDatePicker1.Value));
             }
             else
             {
-                chart_Load(SanPhamBLL.GetTopProductByYear(bunifuDatePicker1.Value));
+                chartProduct_Load(SanPhamBLL.GetTopProductByYear(bunifuDatePicker1.Value));
+                chartCat_Load(LoaiSanPhamBLL.GetTopProductCatByYear(bunifuDatePicker1.Value));
             }
         }
 
