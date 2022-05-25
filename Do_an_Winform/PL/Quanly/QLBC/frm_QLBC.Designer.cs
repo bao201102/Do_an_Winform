@@ -37,10 +37,12 @@
             this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.cbDate = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.chartCanvasCat = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.horizontalBarChartCat = new Bunifu.Charts.WinForms.ChartTypes.BunifuHorizontalBarChart(this.components);
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.chartCanvasCat = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -80,28 +82,26 @@
             // 
             // chartCanvasProduct
             // 
-            this.chartCanvasProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.chartCanvasProduct.AnimationDuration = 1000;
             this.chartCanvasProduct.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.chartCanvasProduct.BackColor = System.Drawing.Color.White;
             this.chartCanvasProduct.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.chartCanvasProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartCanvasProduct.ForeColor = System.Drawing.SystemColors.ControlText;
             this.chartCanvasProduct.Labels = null;
             this.chartCanvasProduct.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center;
             this.chartCanvasProduct.LegendDisplay = true;
-            this.chartCanvasProduct.LegendFont = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartCanvasProduct.LegendFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chartCanvasProduct.LegendForeColor = System.Drawing.Color.DarkGray;
             this.chartCanvasProduct.LegendFullWidth = true;
             this.chartCanvasProduct.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
             this.chartCanvasProduct.LegendRevese = false;
             this.chartCanvasProduct.LegendRTL = false;
-            this.chartCanvasProduct.Location = new System.Drawing.Point(1, 172);
+            this.chartCanvasProduct.Location = new System.Drawing.Point(3, 3);
             this.chartCanvasProduct.Name = "chartCanvasProduct";
             this.chartCanvasProduct.ShowXAxis = true;
             this.chartCanvasProduct.ShowYAxis = true;
-            this.chartCanvasProduct.Size = new System.Drawing.Size(658, 490);
+            this.chartCanvasProduct.Size = new System.Drawing.Size(638, 442);
             this.chartCanvasProduct.TabIndex = 16;
             this.chartCanvasProduct.Title = "";
             this.chartCanvasProduct.TitleLineHeight = 1.2D;
@@ -141,6 +141,7 @@
             // 
             // bunifuDatePicker1
             // 
+            this.bunifuDatePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDatePicker1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDatePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.bunifuDatePicker1.BorderRadius = 10;
@@ -219,6 +220,7 @@
             // bunifuLabel2
             // 
             this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
@@ -233,27 +235,77 @@
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // horizontalBarChartCat
+            // 
+            this.horizontalBarChartCat.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("horizontalBarChartCat.BackgroundColor")));
+            this.horizontalBarChartCat.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("horizontalBarChartCat.BorderColor")));
+            this.horizontalBarChartCat.BorderSkipped = null;
+            this.horizontalBarChartCat.BorderWidth = 0;
+            this.horizontalBarChartCat.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("horizontalBarChartCat.Data")));
+            this.horizontalBarChartCat.HoverBackgroundColor = System.Drawing.Color.Empty;
+            this.horizontalBarChartCat.HoverBorderColor = System.Drawing.Color.Empty;
+            this.horizontalBarChartCat.HoverBorderWidth = 0;
+            this.horizontalBarChartCat.Label = "Số lượng bán ra";
+            this.horizontalBarChartCat.TargetCanvas = this.chartCanvasCat;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bunifuLabel4.Location = new System.Drawing.Point(810, 465);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(312, 28);
+            this.bunifuLabel4.TabIndex = 22;
+            this.bunifuLabel4.Text = "Biểu đồ top 5 danh mục bán chạy";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bunifuLabel3.Location = new System.Drawing.Point(167, 465);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(310, 28);
+            this.bunifuLabel3.TabIndex = 21;
+            this.bunifuLabel3.Text = "Biểu đồ top 5 sản phẩm bán chạy";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // chartCanvasCat
             // 
             this.chartCanvasCat.AnimationDuration = 1000;
             this.chartCanvasCat.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.chartCanvasCat.BackColor = System.Drawing.Color.White;
             this.chartCanvasCat.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.chartCanvasCat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartCanvasCat.Labels = null;
             this.chartCanvasCat.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center;
             this.chartCanvasCat.LegendDisplay = true;
-            this.chartCanvasCat.LegendFont = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartCanvasCat.LegendFont = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chartCanvasCat.LegendForeColor = System.Drawing.Color.DarkGray;
             this.chartCanvasCat.LegendFullWidth = true;
             this.chartCanvasCat.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
             this.chartCanvasCat.LegendRevese = false;
             this.chartCanvasCat.LegendRTL = false;
-            this.chartCanvasCat.Location = new System.Drawing.Point(665, 172);
+            this.chartCanvasCat.Location = new System.Drawing.Point(647, 3);
             this.chartCanvasCat.Name = "chartCanvasCat";
             this.chartCanvasCat.ShowXAxis = true;
             this.chartCanvasCat.ShowYAxis = true;
-            this.chartCanvasCat.Size = new System.Drawing.Size(645, 490);
-            this.chartCanvasCat.TabIndex = 20;
+            this.chartCanvasCat.Size = new System.Drawing.Size(638, 442);
+            this.chartCanvasCat.TabIndex = 23;
             this.chartCanvasCat.Title = "";
             this.chartCanvasCat.TitleLineHeight = 1.2D;
             this.chartCanvasCat.TitlePadding = 10;
@@ -290,52 +342,24 @@
             this.chartCanvasCat.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.chartCanvasCat.YAxesZeroLineWidth = 1;
             // 
-            // horizontalBarChartCat
+            // tableLayoutPanel1
             // 
-            this.horizontalBarChartCat.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("horizontalBarChartCat.BackgroundColor")));
-            this.horizontalBarChartCat.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("horizontalBarChartCat.BorderColor")));
-            this.horizontalBarChartCat.BorderSkipped = null;
-            this.horizontalBarChartCat.BorderWidth = 0;
-            this.horizontalBarChartCat.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("horizontalBarChartCat.Data")));
-            this.horizontalBarChartCat.HoverBackgroundColor = System.Drawing.Color.Empty;
-            this.horizontalBarChartCat.HoverBorderColor = System.Drawing.Color.Empty;
-            this.horizontalBarChartCat.HoverBorderWidth = 0;
-            this.horizontalBarChartCat.Label = "Số lượng bán ra";
-            this.horizontalBarChartCat.TargetCanvas = this.chartCanvasCat;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel3.Location = new System.Drawing.Point(189, 695);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(310, 28);
-            this.bunifuLabel3.TabIndex = 21;
-            this.bunifuLabel3.Text = "Biểu đồ top 5 sản phẩm bán chạy";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel4.Location = new System.Drawing.Point(831, 695);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(312, 28);
-            this.bunifuLabel4.TabIndex = 22;
-            this.bunifuLabel4.Text = "Biểu đồ top 5 danh mục bán chạy";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.chartCanvasCat, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.bunifuLabel3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.chartCanvasProduct, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.bunifuLabel4, 1, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 295);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1288, 511);
+            this.tableLayoutPanel1.TabIndex = 24;
             // 
             // frm_QLBC
             // 
@@ -343,19 +367,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1312, 805);
-            this.Controls.Add(this.bunifuLabel4);
-            this.Controls.Add(this.bunifuLabel3);
-            this.Controls.Add(this.chartCanvasCat);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.cbDate);
             this.Controls.Add(this.bunifuDatePicker1);
-            this.Controls.Add(this.chartCanvasProduct);
             this.Controls.Add(this.bunifuLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_QLBC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_QLBC";
             this.Load += new System.EventHandler(this.frm_QLBC_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,9 +393,10 @@
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
         private Bunifu.UI.WinForms.BunifuDropdown cbDate;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.Charts.WinForms.BunifuChartCanvas chartCanvasCat;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuHorizontalBarChart horizontalBarChartCat;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Bunifu.Charts.WinForms.BunifuChartCanvas chartCanvasCat;
     }
 }
