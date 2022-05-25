@@ -21,6 +21,8 @@ namespace Do_an_Winform.PL.Quanly
         public frm_HDBH()
         {
             InitializeComponent();
+            gvHDBH.AllowUserToResizeColumns = false;
+            gvHDBH.AllowUserToResizeRows = false;
             gvHDBH.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gvHDBH.ReadOnly = true;
             txtSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
