@@ -57,5 +57,11 @@ namespace Do_an_Winform.PL.Nhanvien
             //}
             dgvAllCustomer.DataSource = KhachHangBLL.GetCustomerByName(cbTenKhachHang.Text);
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frm_DKThanhVien frm = new frm_DKThanhVien();
+            frm.ShowDialog();
+        }
     }
 }

@@ -531,6 +531,7 @@
             this.btnSave.Size = new System.Drawing.Size(100, 50);
             this.btnSave.TabIndex = 42;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frm_Insert
             // 

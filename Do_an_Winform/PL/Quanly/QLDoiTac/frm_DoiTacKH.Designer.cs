@@ -73,12 +73,12 @@
             // 
             this.lblKhachHang.AutoSize = true;
             this.Transition.SetDecoration(this.lblKhachHang, BunifuAnimatorNS.DecorationType.None);
-            this.lblKhachHang.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold);
+            this.lblKhachHang.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.lblKhachHang.Location = new System.Drawing.Point(35, 35);
             this.lblKhachHang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKhachHang.Name = "lblKhachHang";
-            this.lblKhachHang.Size = new System.Drawing.Size(222, 28);
+            this.lblKhachHang.Size = new System.Drawing.Size(268, 32);
             this.lblKhachHang.TabIndex = 1;
             this.lblKhachHang.Text = "Danh sách khách hàng";
             // 
@@ -206,7 +206,7 @@
             this.txtFind.IconRight = global::Do_an_Winform.Properties.Resources.search;
             this.txtFind.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.Lines = new string[0];
-            this.txtFind.Location = new System.Drawing.Point(270, 30);
+            this.txtFind.Location = new System.Drawing.Point(308, 31);
             this.txtFind.MaxLength = 32767;
             this.txtFind.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFind.Modified = false;

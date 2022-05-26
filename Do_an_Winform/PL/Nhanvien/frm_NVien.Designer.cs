@@ -43,7 +43,6 @@
             this.btnLapHD = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKhachHang = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSanPham = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnDKTV = new Bunifu.Framework.UI.BunifuFlatButton();
             this.subuserPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnInfo = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -125,7 +124,6 @@
             this.titlePanel.Quality = 10;
             this.titlePanel.Size = new System.Drawing.Size(965, 38);
             this.titlePanel.TabIndex = 4;
-            this.titlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.titlePanel_Paint);
             // 
             // btnMaximize
             // 
@@ -202,7 +200,6 @@
             this.functionPanel.Controls.Add(this.btnLapHD);
             this.functionPanel.Controls.Add(this.btnKhachHang);
             this.functionPanel.Controls.Add(this.btnSanPham);
-            this.functionPanel.Controls.Add(this.btnDKTV);
             this.Transition.SetDecoration(this.functionPanel, BunifuAnimatorNS.DecorationType.None);
             this.functionPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.functionPanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
@@ -212,7 +209,7 @@
             this.functionPanel.Location = new System.Drawing.Point(0, 236);
             this.functionPanel.Name = "functionPanel";
             this.functionPanel.Quality = 10;
-            this.functionPanel.Size = new System.Drawing.Size(250, 292);
+            this.functionPanel.Size = new System.Drawing.Size(250, 197);
             this.functionPanel.TabIndex = 12;
             // 
             // btnLapHD
@@ -325,43 +322,6 @@
             this.btnSanPham.Textcolor = System.Drawing.Color.Transparent;
             this.btnSanPham.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
-            // 
-            // btnDKTV
-            // 
-            this.btnDKTV.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(228)))));
-            this.btnDKTV.BackColor = System.Drawing.Color.Transparent;
-            this.btnDKTV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDKTV.BorderRadius = 0;
-            this.btnDKTV.ButtonText = "Đăng kí thành viên";
-            this.btnDKTV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Transition.SetDecoration(this.btnDKTV, BunifuAnimatorNS.DecorationType.None);
-            this.btnDKTV.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDKTV.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDKTV.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDKTV.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDKTV.Iconimage")));
-            this.btnDKTV.Iconimage_right = null;
-            this.btnDKTV.Iconimage_right_Selected = null;
-            this.btnDKTV.Iconimage_Selected = null;
-            this.btnDKTV.IconMarginLeft = 12;
-            this.btnDKTV.IconMarginRight = 0;
-            this.btnDKTV.IconRightVisible = false;
-            this.btnDKTV.IconRightZoom = 0D;
-            this.btnDKTV.IconVisible = true;
-            this.btnDKTV.IconZoom = 60D;
-            this.btnDKTV.IsTab = false;
-            this.btnDKTV.Location = new System.Drawing.Point(0, 168);
-            this.btnDKTV.Name = "btnDKTV";
-            this.btnDKTV.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnDKTV.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.btnDKTV.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDKTV.selected = false;
-            this.btnDKTV.Size = new System.Drawing.Size(250, 48);
-            this.btnDKTV.TabIndex = 5;
-            this.btnDKTV.Text = "Đăng kí thành viên";
-            this.btnDKTV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDKTV.Textcolor = System.Drawing.Color.Transparent;
-            this.btnDKTV.TextFont = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDKTV.Click += new System.EventHandler(this.btnDKTV_Click);
             // 
             // subuserPanel
             // 
@@ -583,7 +543,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnLapHD;
         private Bunifu.Framework.UI.BunifuFlatButton btnKhachHang;
         private Bunifu.Framework.UI.BunifuFlatButton btnSanPham;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDKTV;
         private Bunifu.Framework.UI.BunifuGradientPanel subuserPanel;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogout;
         private Bunifu.Framework.UI.BunifuFlatButton btnInfo;

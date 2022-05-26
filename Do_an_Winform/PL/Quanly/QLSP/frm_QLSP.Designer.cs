@@ -249,7 +249,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtFind.IconRight = global::Do_an_Winform.Properties.Resources.search;
             this.txtFind.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.Lines = new string[0];
-            this.txtFind.Location = new System.Drawing.Point(255, 30);
+            this.txtFind.Location = new System.Drawing.Point(260, 30);
             this.txtFind.MaxLength = 32767;
             this.txtFind.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFind.Modified = false;
@@ -285,7 +285,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtFind.SelectionLength = 0;
             this.txtFind.SelectionStart = 0;
             this.txtFind.ShortcutsEnabled = true;
-            this.txtFind.Size = new System.Drawing.Size(506, 44);
+            this.txtFind.Size = new System.Drawing.Size(501, 44);
             this.txtFind.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtFind.TabIndex = 15;
             this.txtFind.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -303,12 +303,12 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.bunifuLabel1.Location = new System.Drawing.Point(35, 35);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(167, 28);
+            this.bunifuLabel1.Size = new System.Drawing.Size(205, 32);
             this.bunifuLabel1.TabIndex = 14;
             this.bunifuLabel1.Text = "Quản lý sản phẩm";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

@@ -38,9 +38,9 @@
             this.cbDate = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.horizontalBarChartCat = new Bunifu.Charts.WinForms.ChartTypes.BunifuHorizontalBarChart(this.components);
+            this.chartCanvasCat = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.chartCanvasCat = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,12 +56,12 @@
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.bunifuLabel1.Location = new System.Drawing.Point(35, 35);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(161, 28);
+            this.bunifuLabel1.Size = new System.Drawing.Size(197, 32);
             this.bunifuLabel1.TabIndex = 15;
             this.bunifuLabel1.Text = "Quản lý bán chạy";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -101,7 +101,7 @@
             this.chartCanvasProduct.Name = "chartCanvasProduct";
             this.chartCanvasProduct.ShowXAxis = true;
             this.chartCanvasProduct.ShowYAxis = true;
-            this.chartCanvasProduct.Size = new System.Drawing.Size(638, 442);
+            this.chartCanvasProduct.Size = new System.Drawing.Size(647, 487);
             this.chartCanvasProduct.TabIndex = 16;
             this.chartCanvasProduct.Title = "";
             this.chartCanvasProduct.TitleLineHeight = 1.2D;
@@ -248,42 +248,6 @@
             this.horizontalBarChartCat.Label = "Số lượng bán ra";
             this.horizontalBarChartCat.TargetCanvas = this.chartCanvasCat;
             // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel4.Location = new System.Drawing.Point(810, 465);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(312, 28);
-            this.bunifuLabel4.TabIndex = 22;
-            this.bunifuLabel4.Text = "Biểu đồ top 5 danh mục bán chạy";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bunifuLabel3.Location = new System.Drawing.Point(167, 465);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(310, 28);
-            this.bunifuLabel3.TabIndex = 21;
-            this.bunifuLabel3.Text = "Biểu đồ top 5 sản phẩm bán chạy";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // chartCanvasCat
             // 
             this.chartCanvasCat.AnimationDuration = 1000;
@@ -300,11 +264,11 @@
             this.chartCanvasCat.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
             this.chartCanvasCat.LegendRevese = false;
             this.chartCanvasCat.LegendRTL = false;
-            this.chartCanvasCat.Location = new System.Drawing.Point(647, 3);
+            this.chartCanvasCat.Location = new System.Drawing.Point(656, 3);
             this.chartCanvasCat.Name = "chartCanvasCat";
             this.chartCanvasCat.ShowXAxis = true;
             this.chartCanvasCat.ShowYAxis = true;
-            this.chartCanvasCat.Size = new System.Drawing.Size(638, 442);
+            this.chartCanvasCat.Size = new System.Drawing.Size(648, 487);
             this.chartCanvasCat.TabIndex = 23;
             this.chartCanvasCat.Title = "";
             this.chartCanvasCat.TitleLineHeight = 1.2D;
@@ -342,6 +306,42 @@
             this.chartCanvasCat.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.chartCanvasCat.YAxesZeroLineWidth = 1;
             // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bunifuLabel4.Location = new System.Drawing.Point(824, 510);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(312, 28);
+            this.bunifuLabel4.TabIndex = 22;
+            this.bunifuLabel4.Text = "Biểu đồ top 5 danh mục bán chạy";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bunifuLabel3.Location = new System.Drawing.Point(171, 510);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(310, 28);
+            this.bunifuLabel3.TabIndex = 21;
+            this.bunifuLabel3.Text = "Biểu đồ top 5 sản phẩm bán chạy";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -353,12 +353,12 @@
             this.tableLayoutPanel1.Controls.Add(this.bunifuLabel3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.chartCanvasProduct, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.bunifuLabel4, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 295);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 250);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1288, 511);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1307, 556);
             this.tableLayoutPanel1.TabIndex = 24;
             // 
             // frm_QLBC
