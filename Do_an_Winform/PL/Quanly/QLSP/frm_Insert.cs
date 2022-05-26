@@ -45,11 +45,6 @@ namespace Do_an_Winform.PL.Quanly.QLSP
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            btnClose_Click(sender, e);
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtTensp.Text == "" || txtDongia.Text == "")
@@ -77,6 +72,11 @@ namespace Do_an_Winform.PL.Quanly.QLSP
                     }
                 }
             }            
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnClose_Click(sender, e);
         }
     }
 }

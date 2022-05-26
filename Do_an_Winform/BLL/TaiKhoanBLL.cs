@@ -18,5 +18,13 @@ namespace Do_an_Winform.BLL
         {
             return TaiKhoanDAL.AddAccount(dto);
         }
+        public static List<TaiKhoanDTO> GetMaLoaiNV(string maloai)
+        {
+            return TaiKhoanDAL.GetMaLoaiNV(maloai);
+        }
+        public static bool RemoveAccount(TaiKhoanDTO dto, string manguoidung)
+        {
+            return TaiKhoanDAL.RemoveAccount(dto,manguoidung);
+        }
     }
 }
