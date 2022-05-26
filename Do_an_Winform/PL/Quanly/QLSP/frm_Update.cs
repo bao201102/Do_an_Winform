@@ -44,7 +44,7 @@ namespace Do_an_Winform.PL.Quanly.QLSP
         private void btnClose_Click(object sender, EventArgs e)
         {
             MessBox messBox = new MessBox();
-            bool result = messBox.ShowMess("Bạn có muốn hủy cập nhật thông tin sản phẩm ?");
+            bool result = messBox.ShowMess("Bạn muốn hủy cập nhật thông tin sản phẩm ?");
             if (result)
             {
                 Close();
@@ -67,7 +67,7 @@ namespace Do_an_Winform.PL.Quanly.QLSP
             else
             {    
                 MessBox messBox = new MessBox();
-                bool result = messBox.ShowMess("Bạn có muốn sửa thông tin sản phẩm không ?");
+                bool result = messBox.ShowMess("Bạn muốn sửa thông tin sản phẩm ?");
                 if (result)
                 {
                     if (SanPhamBLL.UpdateProduct(productDTO))
@@ -82,7 +82,7 @@ namespace Do_an_Winform.PL.Quanly.QLSP
         private void btnDelete_Click(object sender, EventArgs e)
         {
             MessBox messBox = new MessBox();
-            bool result = messBox.ShowMess("Bạn có muốn xóa thông tin sản phẩm không ?");
+            bool result = messBox.ShowMess("Bạn muốn xóa thông tin sản phẩm ?");
             if (result)
             {
                 if (SanPhamBLL.DeleteProduct(masp))
