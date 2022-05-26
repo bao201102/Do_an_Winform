@@ -94,7 +94,7 @@
             this.cbLoaisp.FillDropDown = true;
             this.cbLoaisp.FillIndicator = false;
             this.cbLoaisp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLoaisp.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaisp.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaisp.ForeColor = System.Drawing.Color.Black;
             this.cbLoaisp.FormattingEnabled = true;
             this.cbLoaisp.Icon = null;
@@ -202,7 +202,7 @@
             this.cbNSX.FillDropDown = true;
             this.cbNSX.FillIndicator = false;
             this.cbNSX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbNSX.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNSX.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNSX.ForeColor = System.Drawing.Color.Black;
             this.cbNSX.FormattingEnabled = true;
             this.cbNSX.Icon = null;
@@ -349,7 +349,7 @@
             this.txtDongia.BorderThickness = 1;
             this.txtDongia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtDongia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDongia.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDongia.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDongia.DefaultText = "";
             this.txtDongia.FillColor = System.Drawing.Color.White;
             this.txtDongia.HideSelection = true;
@@ -424,7 +424,7 @@
             this.txtTensp.BorderThickness = 1;
             this.txtTensp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTensp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTensp.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTensp.DefaultFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTensp.DefaultText = "";
             this.txtTensp.FillColor = System.Drawing.Color.White;
             this.txtTensp.HideSelection = true;
