@@ -30,7 +30,25 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void slideBtn_Click(object sender, EventArgs e)
         {
-
+            if (sidemenu.Width == 55)
+            {
+                Transition.HideSync(sidemenu, false, BunifuAnimatorNS.Animation.HorizSlide);
+                sidemenu.Visible = false;
+                sidemenu.Width = 250;
+                mainPanel.Location = new Point(260, 45);
+                mainPanel.Width -= 195;
+                Transition.ShowSync(sidemenu, false, BunifuAnimatorNS.Animation.HorizSlide);
+            }
+            else
+            {
+                Transition.HideSync(sidemenu, false, BunifuAnimatorNS.Animation.HorizSlide);
+                sidemenu.Visible = false;
+                sidemenu.Width = 55;
+                mainPanel.Location = new Point(65, 45);
+                subuserPanel.Visible = false;
+                mainPanel.Width += 195;
+                Transition.ShowSync(sidemenu, false, BunifuAnimatorNS.Animation.HorizSlide);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -62,7 +80,14 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void userBtn_Click(object sender, EventArgs e)
         {
-
+            if (subuserPanel.Visible == false)
+            {
+                subuserPanel.Visible = true;
+            }
+            else
+            {
+                subuserPanel.Visible = false;
+            }
         }
 
         private void frm_NVien_Load(object sender, EventArgs e)
