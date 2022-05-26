@@ -311,12 +311,6 @@
     <Compile Include="PL\Nhanvien\frm_DSHoaDon.Designer.cs">
       <DependentUpon>frm_DSHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Nhanvien\frm_Info.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Nhanvien\frm_Info.Designer.cs">
-      <DependentUpon>frm_Info.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\Nhanvien\frm_NVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -538,9 +532,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_DSHoaDon.resx">
       <DependentUpon>frm_DSHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Nhanvien\frm_Info.resx">
-      <DependentUpon>frm_Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_NVien.resx">
       <DependentUpon>frm_NVien.cs</DependentUpon>

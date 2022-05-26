@@ -19,6 +19,9 @@ namespace Do_an_Winform.PL.Nhanvien
             InitializeComponent();
             tennv = tennv1;
             ngayTao = ngayTao1;
+
+            gridXemHD.AllowUserToResizeColumns = false;
+            gridXemHD.AllowUserToResizeRows = false;
         }
 
         private void frm_XemHD_Load(object sender, EventArgs e)

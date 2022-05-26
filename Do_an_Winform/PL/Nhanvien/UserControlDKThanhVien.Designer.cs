@@ -149,7 +149,7 @@
             this.btnAddMem.ActiveForecolor = System.Drawing.Color.Black;
             this.btnAddMem.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAddMem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddMem.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddMem.BackColor = System.Drawing.Color.White;
             this.btnAddMem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddMem.BackgroundImage")));
             this.btnAddMem.ButtonText = "Tạo thẻ thành viên";
             this.btnAddMem.Cursor = System.Windows.Forms.Cursors.Hand;

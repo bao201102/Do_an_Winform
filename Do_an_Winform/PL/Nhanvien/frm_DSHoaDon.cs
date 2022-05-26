@@ -19,6 +19,8 @@ namespace Do_an_Winform.PL.Nhanvien
         {
             InitializeComponent();
             taiKhoan = user;
+            gridviewDSHoaDon.AllowUserToResizeColumns = false;
+            gridviewDSHoaDon.AllowUserToResizeRows = false;
         }
         private UserControl activeUC = null;
         private void openChildUserControl(UserControl userControl)
