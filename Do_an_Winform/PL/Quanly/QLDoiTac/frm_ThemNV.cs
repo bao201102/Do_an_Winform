@@ -15,10 +15,14 @@ using System.Windows.Forms;
 namespace Do_an_Winform.PL.Quanly
 {
     public partial class frm_ThemNV : Form
-    { 
-        public frm_ThemNV()
+    {
+        int number;
+        TaiKhoanDTO dto;
+        public frm_ThemNV(int index, TaiKhoanDTO tk)
         {
             InitializeComponent();
+            number = index;
+            dto = tk;
         }
 
         private void btLuu_Click(object sender, EventArgs e)
@@ -30,12 +34,12 @@ namespace Do_an_Winform.PL.Quanly
             nv.DiaChi = txtDiaChiNV.Text;
             nv.SĐT = txtSDTNV.Text;
             nv.GioiTinh = cbGioiTinhNV.Text;
-            nv.MaLoaiNV = cbMaLoaiNV.Text;
+            nv.MaLoaiNV = cbMaLoaiNV.SelectedValue.ToString();
             nv.MaNguoiDung = "US" + NhanVienBLL.CountEmployee().ToString("000");
             nv.TrangThai = "1";
             if (NhanVienBLL.AddEmployee(nv))
             {
-                MessageBox.Show("Thêm nhân viên thành công");
+                MessageBox.Show("Tạo tài khoản thành công","Chúc mừng");
             }
             
         }
@@ -47,16 +51,27 @@ namespace Do_an_Winform.PL.Quanly
             txtMaNguoiDung.ReadOnly = true;
             txtMaNguoiDung.Text = "US" + NhanVienBLL.CountEmployee().ToString("000");
             cbGioiTinhNV.Text = "Nam";
-            cbMaLoaiNV.Text = "LNV001";
+            cbMaLoaiNV.Enabled = false;
+            cbMaLoaiNV.DataSource = LoaiNhanVienBLL.GetAllEmpType();
+            cbMaLoaiNV.DisplayMember = "TenLoaiNV";
+            cbMaLoaiNV.ValueMember = "MaLoaiNV";
+            cbMaLoaiNV.SelectedIndex = number;
         }
 
-        private void frm_ThemNV_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn đã hủy thao tác thêm", "Thông báo", MessageBoxButtons.OK);
-            Form frm = Application.OpenForms["frm_Quanly"];
-            frm.Show();
-            this.Hide();
-            
+            if (MessageBox.Show("Nếu bạn đóng, tài khoản sẽ không được tạo", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (TaiKhoanBLL.RemoveAccount(dto, "US" + NhanVienBLL.CountEmployee().ToString("000")))
+                {
+                    MessageBox.Show("Tạo tài khoản thất bại", "Thông báo");
+                }
+                this.Close();
+            }
+            else if (DialogResult == DialogResult.No)
+            {
+                this.Refresh();
+            }
         }
     }
 }

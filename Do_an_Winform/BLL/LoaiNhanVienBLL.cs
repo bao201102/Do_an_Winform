@@ -14,5 +14,9 @@ namespace Do_an_Winform.BLL
         {
             return LoaiNhanVienDAL.GetEmpType(maLoaiNV);
         }
+        public static List<LoaiNhanVienDTO> GetAllEmpType()
+        {
+            return LoaiNhanVienDAL.GetAllEmpType();
+        }
     }
 }

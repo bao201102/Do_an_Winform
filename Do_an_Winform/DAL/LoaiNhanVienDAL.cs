@@ -21,5 +21,20 @@ namespace Do_an_Winform.DAL
             LoaiNhanVienDTO loaiNV = mapper.Map<LoaiNhanVienDTO>(empType);
             return loaiNV;
         }
+        public static List<LoaiNhanVienDTO> GetAllEmpType()
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            List<LoaiNhanVienDTO> list = new List<LoaiNhanVienDTO>();
+            var empType = from lnv in entities.LoaiNhanViens
+                                    select lnv;
+            foreach (LoaiNhanVien lnv in empType)
+            {
+                LoaiNhanVienDTO dto = new LoaiNhanVienDTO();
+                dto.MaLoaiNV = lnv.MaLoaiNV;
+                dto.TenLoaiNV = lnv.TenLoaiNV;
+                list.Add(dto);
+            }
+            return list;
+        }
     }
 }
