@@ -363,10 +363,48 @@ namespace Do_an_Winform.DAL
             return list;
         }
 
-        public int CountBillThisMonth(DateTime time)
+        public static int CountBillThisMonth(DateTime time)
         {
             CHDTEntities1 entities = new CHDTEntities1();
-            return 0;
+
+            var query = from hd in entities.HoaDons
+                        where hd.TrangThai == "1" && hd.NgayTaoHD.Month.Equals(time.Month) && hd.NgayTaoHD.Year.Equals(time.Year)
+                        select hd;
+
+            return query.Count();
+        }
+
+        public static int CountBillThisYear(DateTime time)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = from hd in entities.HoaDons
+                        where hd.TrangThai == "1" && hd.NgayTaoHD.Year.Equals(time.Year)
+                        select hd;
+
+            return query.Count();
+        }
+
+        public static int CountRejectedBillThisMonth(DateTime time)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = from hd in entities.HoaDons
+                        where hd.TrangThai == "0" && hd.NgayTaoHD.Month.Equals(time.Month) && hd.NgayTaoHD.Year.Equals(time.Year)
+                        select hd;
+
+            return query.Count();
+        }
+
+        public static int CountRejectedBillThisYear(DateTime time)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = from hd in entities.HoaDons
+                        where hd.TrangThai == "0" && hd.NgayTaoHD.Year.Equals(time.Year)
+                        select hd;
+
+            return query.Count();
         }
     }
 }

@@ -66,6 +66,8 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
             chartDT_Load(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
             GetSumRevenue(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
             GetSumCost(PhieuNhapHangBLL.GetCostByThisMonth(DateTime.Now));
+            lblDaBan.Text = HoaDonBLL.CountBillThisMonth(DateTime.Now).ToString();
+            lblDaHuy.Text = HoaDonBLL.CountRejectedBillThisMonth(DateTime.Now).ToString();
         }
 
         private void cbDate_SelectionChangeCommitted(object sender, EventArgs e)
@@ -75,12 +77,16 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
                 chartDT_Load(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
                 GetSumRevenue(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
                 GetSumCost(PhieuNhapHangBLL.GetCostByThisMonth(DateTime.Now));
+                lblDaBan.Text = HoaDonBLL.CountBillThisMonth(DateTime.Now).ToString();
+                lblDaHuy.Text = HoaDonBLL.CountRejectedBillThisMonth(DateTime.Now).ToString();
             }
             else
             {
                 chartDT_Load(HoaDonBLL.GetRevenueByThisYear(DateTime.Now));
                 GetSumRevenue(HoaDonBLL.GetRevenueByThisYear(DateTime.Now));
                 GetSumCost(PhieuNhapHangBLL.GetCostByThisYear(DateTime.Now));
+                lblDaBan.Text = HoaDonBLL.CountBillThisYear(DateTime.Now).ToString();
+                lblDaHuy.Text = HoaDonBLL.CountRejectedBillThisYear(DateTime.Now).ToString();
             }
         }
 
