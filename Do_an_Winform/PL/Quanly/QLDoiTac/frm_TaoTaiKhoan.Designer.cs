@@ -345,6 +345,7 @@
             this.txtSDT.TextPlaceholder = "Nhập số điện thoại";
             this.txtSDT.UseSystemPasswordChar = false;
             this.txtSDT.WordWrap = true;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // bunifuLabel5
             // 
@@ -897,7 +898,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 433F));
             this.tableLayoutPanel1.Controls.Add(this.bunifuPanel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.bunifuPanel6, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.bunifuPanel4, 1, 0);
@@ -1138,7 +1139,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 438F));
             this.tableLayoutPanel2.Controls.Add(this.bunifuPanel7, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.bunifuPanel10, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.bunifuPanel11, 0, 1);
@@ -1244,6 +1245,8 @@
             this.lblReturn.TabIndex = 39;
             this.lblReturn.Text = "< Trở lại";
             this.lblReturn.Click += new System.EventHandler(this.lblReturn_Click);
+            this.lblReturn.MouseLeave += new System.EventHandler(this.lblReturn_MouseLeave);
+            this.lblReturn.MouseHover += new System.EventHandler(this.lblReturn_MouseHover);
             // 
             // tableLayoutPanel3
             // 

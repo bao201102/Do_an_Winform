@@ -78,8 +78,8 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
             dgvDSSP.DataSource = SanPhamBLL.GetOutOfStockProduct(int.Parse(txtSL.Text));
             dgvDSSP.Columns[0].Visible = false;
             dgvDSSP.Columns[1].HeaderText = "Tên sản phẩm";
-            dgvDSSP.Columns[2].HeaderText = "Đơn giá";
-            dgvDSSP.Columns[3].HeaderText = "Số lượng";
+            dgvDSSP.Columns[2].HeaderText = "Số lượng";
+            dgvDSSP.Columns[3].HeaderText = "Đơn giá";
             dgvDSSP.Columns[4].HeaderText = "Loại sản phẩm";
         }
 
@@ -123,6 +123,12 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
             {
 
             }
+        }
+
+        private void txtSL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

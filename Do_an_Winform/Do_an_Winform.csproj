@@ -389,12 +389,6 @@
     <Compile Include="PL\Quanly\QLDoiTac\frm_ThemNCC.Designer.cs">
       <DependentUpon>frm_ThemNCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Quanly\QLDoiTac\frm_ThemNV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Quanly\QLDoiTac\frm_ThemNV.Designer.cs">
-      <DependentUpon>frm_ThemNV.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\Quanly\QLHD\frm_HDBH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -560,9 +554,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\QLDoiTac\frm_ThemNCC.resx">
       <DependentUpon>frm_ThemNCC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\QLDoiTac\frm_ThemNV.resx">
-      <DependentUpon>frm_ThemNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\QLDoiTac\ReportKH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\QLDoiTac\ReportNCC.rdlc" />

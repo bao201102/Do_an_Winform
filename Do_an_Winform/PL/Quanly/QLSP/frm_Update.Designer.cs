@@ -312,6 +312,7 @@
             this.txtDongia.TextPlaceholder = "";
             this.txtDongia.UseSystemPasswordChar = false;
             this.txtDongia.WordWrap = true;
+            this.txtDongia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDongia_KeyPress);
             // 
             // btnSave
             // 

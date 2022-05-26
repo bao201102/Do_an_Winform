@@ -284,6 +284,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtNamTK.TextPlaceholder = "";
             this.txtNamTK.UseSystemPasswordChar = false;
             this.txtNamTK.WordWrap = true;
+            this.txtNamTK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNamTK_KeyPress);
             // 
             // cbQuyTK
             // 

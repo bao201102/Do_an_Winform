@@ -55,6 +55,7 @@ namespace Do_an_Winform.PL.Quanly.QLDoiTac
                         nhanvien.Email = txtEmail.Text;
                         nhanvien.DiaChi = txtDiachi.Text;
                         nhanvien.GioiTinh = cbGender.Text;
+                        nhanvien.SĐT = txtSDT.Text;
                         nhanvien.MaLoaiNV = cbLoaitk.SelectedValue.ToString();
                         nhanvien.MaNguoiDung = TaiKhoanBLL.GetUserId(txtUsername.Text);
                         if (NhanVienBLL.AddEmployee(nhanvien))
@@ -89,6 +90,22 @@ namespace Do_an_Winform.PL.Quanly.QLDoiTac
         {
             this.Hide();
             this.Parent = null;
+        }
+
+        private void lblReturn_MouseHover(object sender, EventArgs e)
+        {
+            lblReturn.Font = new Font(lblReturn.Font, FontStyle.Underline);
+        }
+
+        private void lblReturn_MouseLeave(object sender, EventArgs e)
+        {
+            lblReturn.Font = new Font(lblReturn.Font, FontStyle.Regular);
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
