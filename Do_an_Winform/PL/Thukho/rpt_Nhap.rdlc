@@ -246,7 +246,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>STT</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -279,7 +282,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Tên sản phẩm</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -310,7 +316,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Số lượng</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -343,7 +352,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Thành tiền</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -381,7 +393,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=RowNumber(Nothing)</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -413,7 +428,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TenSP.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -443,7 +461,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!SoLuong.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -475,7 +496,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=string.Format("{0:#,##0} VNĐ",Fields!ThanhTien.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -512,7 +536,11 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Tổng cộng</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -544,7 +572,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=SUM(Fields!SoLuong.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -576,7 +607,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=SUM(string.Format("{0:#,##0} VNĐ",Fields!ThanhTien.Value))</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -625,7 +659,7 @@
             </TablixRowHierarchy>
             <DataSetName>CTPN</DataSetName>
             <Top>2.55083in</Top>
-            <Height>1.07416in</Height>
+            <Height>1.07417in</Height>
             <Width>9.90626in</Width>
             <ZIndex>4</ZIndex>
             <Style>
@@ -792,7 +826,7 @@
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.20833in</Top>
             <Height>0.41667in</Height>
-            <Width>9.90625in</Width>
+            <Width>9.90626in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
