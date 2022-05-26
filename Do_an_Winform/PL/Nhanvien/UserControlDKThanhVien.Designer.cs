@@ -48,19 +48,23 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAddMem = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtHoTen = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtEmail = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtDiaChi = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtSDT = new Bunifu.UI.WinForms.BunifuTextBox();
             this.cbGioiTinh = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel1.SuspendLayout();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.titlePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAddMem = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.titlePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl1
@@ -70,103 +74,76 @@
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
             this.lbl1.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.lbl1.Location = new System.Drawing.Point(434, 46);
+            this.lbl1.Location = new System.Drawing.Point(31, 64);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(284, 30);
+            this.lbl1.Size = new System.Drawing.Size(239, 30);
             this.lbl1.TabIndex = 2;
-            this.lbl1.Text = "ĐĂNG KÍ THẺ THÀNH VIÊN";
+            this.lbl1.Text = "Đăng kí thẻ thành viên";
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 137);
+            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(121, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 21);
+            this.label1.Size = new System.Drawing.Size(83, 21);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Họ và tên:";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.label1.Text = "Họ và tên";
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(692, 137);
+            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label2.Location = new System.Drawing.Point(509, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 21);
+            this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Giới tính:";
+            this.label2.Text = "Giới tính";
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(88, 236);
+            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(32, 244);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 21);
+            this.label3.Size = new System.Drawing.Size(53, 21);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Email:";
+            this.label3.Text = "Email";
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(715, 335);
+            this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label4.Location = new System.Drawing.Point(483, 277);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 21);
+            this.label4.Size = new System.Drawing.Size(40, 21);
             this.label4.TabIndex = 12;
-            this.label4.Text = "SĐT:";
+            this.label4.Text = "SĐT";
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(88, 335);
+            this.label5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Location = new System.Drawing.Point(32, 303);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 21);
+            this.label5.Size = new System.Drawing.Size(63, 21);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Địa chỉ:";
-            // 
-            // btnAddMem
-            // 
-            this.btnAddMem.ActiveBorderThickness = 1;
-            this.btnAddMem.ActiveCornerRadius = 20;
-            this.btnAddMem.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAddMem.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnAddMem.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAddMem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddMem.BackColor = System.Drawing.Color.White;
-            this.btnAddMem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddMem.BackgroundImage")));
-            this.btnAddMem.ButtonText = "Tạo thẻ thành viên";
-            this.btnAddMem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddMem.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMem.ForeColor = System.Drawing.Color.Black;
-            this.btnAddMem.IdleBorderThickness = 1;
-            this.btnAddMem.IdleCornerRadius = 20;
-            this.btnAddMem.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnAddMem.IdleForecolor = System.Drawing.Color.Black;
-            this.btnAddMem.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnAddMem.Location = new System.Drawing.Point(495, 421);
-            this.btnAddMem.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAddMem.Name = "btnAddMem";
-            this.btnAddMem.Size = new System.Drawing.Size(180, 50);
-            this.btnAddMem.TabIndex = 32;
-            this.btnAddMem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddMem.Click += new System.EventHandler(this.btnAddMem_Click);
+            this.label5.Text = "Địa chỉ";
             // 
             // txtHoTen
             // 
@@ -197,7 +174,7 @@
             this.txtHoTen.IconRight = null;
             this.txtHoTen.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHoTen.Lines = new string[0];
-            this.txtHoTen.Location = new System.Drawing.Point(181, 131);
+            this.txtHoTen.Location = new System.Drawing.Point(125, 189);
             this.txtHoTen.MaxLength = 32767;
             this.txtHoTen.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtHoTen.Modified = false;
@@ -273,7 +250,7 @@
             this.txtEmail.IconRight = null;
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(181, 230);
+            this.txtEmail.Location = new System.Drawing.Point(125, 238);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEmail.Modified = false;
@@ -349,7 +326,7 @@
             this.txtDiaChi.IconRight = null;
             this.txtDiaChi.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiaChi.Lines = new string[0];
-            this.txtDiaChi.Location = new System.Drawing.Point(181, 329);
+            this.txtDiaChi.Location = new System.Drawing.Point(125, 297);
             this.txtDiaChi.MaxLength = 32767;
             this.txtDiaChi.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDiaChi.Modified = false;
@@ -425,7 +402,7 @@
             this.txtSDT.IconRight = null;
             this.txtSDT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSDT.Lines = new string[0];
-            this.txtSDT.Location = new System.Drawing.Point(796, 323);
+            this.txtSDT.Location = new System.Drawing.Point(564, 265);
             this.txtSDT.MaxLength = 32767;
             this.txtSDT.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSDT.Modified = false;
@@ -510,7 +487,7 @@
             this.cbGioiTinh.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cbGioiTinh.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cbGioiTinh.ItemTopMargin = 3;
-            this.cbGioiTinh.Location = new System.Drawing.Point(796, 132);
+            this.cbGioiTinh.Location = new System.Drawing.Point(613, 218);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(260, 32);
             this.cbGioiTinh.TabIndex = 37;
@@ -518,47 +495,187 @@
             this.cbGioiTinh.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cbGioiTinh.TextLeftMargin = 5;
             // 
-            // bunifuPanel1
+            // bunifuElipse1
             // 
-            this.bunifuPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 10;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.lbl1);
-            this.bunifuPanel1.Controls.Add(this.btnAddMem);
-            this.bunifuPanel1.Controls.Add(this.txtEmail);
-            this.bunifuPanel1.Controls.Add(this.txtDiaChi);
-            this.bunifuPanel1.Controls.Add(this.txtSDT);
-            this.bunifuPanel1.Controls.Add(this.cbGioiTinh);
-            this.bunifuPanel1.Controls.Add(this.label2);
-            this.bunifuPanel1.Controls.Add(this.txtHoTen);
-            this.bunifuPanel1.Controls.Add(this.label1);
-            this.bunifuPanel1.Controls.Add(this.label3);
-            this.bunifuPanel1.Controls.Add(this.label5);
-            this.bunifuPanel1.Controls.Add(this.label4);
-            this.bunifuPanel1.Location = new System.Drawing.Point(3, 3);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1144, 521);
-            this.bunifuPanel1.TabIndex = 38;
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // titlePanel
+            // 
+            this.titlePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titlePanel.BackgroundImage")));
+            this.titlePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.titlePanel.Controls.Add(this.btnClose);
+            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlePanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.Location = new System.Drawing.Point(0, 0);
+            this.titlePanel.Name = "titlePanel";
+            this.titlePanel.Quality = 10;
+            this.titlePanel.Size = new System.Drawing.Size(900, 31);
+            this.titlePanel.TabIndex = 39;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = global::Do_an_Winform.Properties.Resources.crossed;
+            this.btnClose.ImageActive = null;
+            this.btnClose.Location = new System.Drawing.Point(867, 6);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(21, 22);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnClose.TabIndex = 2;
+            this.btnClose.TabStop = false;
+            this.btnClose.Zoom = 10;
+            // 
+            // bunifuSnackbar1
+            // 
+            this.bunifuSnackbar1.AllowDragging = false;
+            this.bunifuSnackbar1.AllowMultipleViews = false;
+            this.bunifuSnackbar1.ClickToClose = false;
+            this.bunifuSnackbar1.DoubleClickToClose = false;
+            this.bunifuSnackbar1.DurationAfterIdle = 3000;
+            this.bunifuSnackbar1.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.ErrorOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bunifuSnackbar1.ErrorOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.FadeCloseIcon = true;
+            this.bunifuSnackbar1.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bunifuSnackbar1.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.InformationOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bunifuSnackbar1.InformationOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.Margin = 10;
+            this.bunifuSnackbar1.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.MaximumViews = 7;
+            this.bunifuSnackbar1.MessageRightMargin = 15;
+            this.bunifuSnackbar1.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.ShowBorders = true;
+            this.bunifuSnackbar1.ShowCloseIcon = true;
+            this.bunifuSnackbar1.ShowIcon = true;
+            this.bunifuSnackbar1.ShowShadows = true;
+            this.bunifuSnackbar1.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.SuccessOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bunifuSnackbar1.SuccessOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ViewsMargin = 7;
+            this.bunifuSnackbar1.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.WarningOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ZoomCloseIcon = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.ActiveBorderThickness = 1;
+            this.btnCancel.ActiveCornerRadius = 20;
+            this.btnCancel.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.btnCancel.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCancel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.ButtonText = "Hủy";
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.IdleBorderThickness = 1;
+            this.btnCancel.IdleCornerRadius = 20;
+            this.btnCancel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.btnCancel.IdleForecolor = System.Drawing.Color.White;
+            this.btnCancel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.btnCancel.Location = new System.Drawing.Point(773, 462);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 50);
+            this.btnCancel.TabIndex = 45;
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnAddMem
+            // 
+            this.btnAddMem.ActiveBorderThickness = 1;
+            this.btnAddMem.ActiveCornerRadius = 20;
+            this.btnAddMem.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnAddMem.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAddMem.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(68)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnAddMem.BackColor = System.Drawing.Color.White;
+            this.btnAddMem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddMem.BackgroundImage")));
+            this.btnAddMem.ButtonText = "Lưu";
+            this.btnAddMem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddMem.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMem.ForeColor = System.Drawing.Color.White;
+            this.btnAddMem.IdleBorderThickness = 1;
+            this.btnAddMem.IdleCornerRadius = 20;
+            this.btnAddMem.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnAddMem.IdleForecolor = System.Drawing.Color.White;
+            this.btnAddMem.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnAddMem.Location = new System.Drawing.Point(665, 462);
+            this.btnAddMem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddMem.Name = "btnAddMem";
+            this.btnAddMem.Size = new System.Drawing.Size(100, 50);
+            this.btnAddMem.TabIndex = 44;
+            this.btnAddMem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddMem.Click += new System.EventHandler(this.btnAddMem_Click);
             // 
             // UserControlDKThanhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.bunifuPanel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnAddMem);
+            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.txtDiaChi);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.titlePanel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtHoTen);
+            this.Controls.Add(this.cbGioiTinh);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Name = "UserControlDKThanhVien";
-            this.Size = new System.Drawing.Size(1150, 527);
+            this.Size = new System.Drawing.Size(900, 530);
             this.Load += new System.EventHandler(this.UserControlDKThanhVien_Load);
-            this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
+            this.titlePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -566,17 +683,20 @@
 
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnAddMem;
         private Bunifu.UI.WinForms.BunifuTextBox txtHoTen;
         private Bunifu.UI.WinForms.BunifuTextBox txtEmail;
         private Bunifu.UI.WinForms.BunifuTextBox txtDiaChi;
         private Bunifu.UI.WinForms.BunifuTextBox txtSDT;
         private Bunifu.UI.WinForms.BunifuDropdown cbGioiTinh;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuGradientPanel titlePanel;
+        private Bunifu.Framework.UI.BunifuImageButton btnClose;
+        private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnCancel;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAddMem;
     }
 }
