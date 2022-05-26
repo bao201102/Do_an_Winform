@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ThemNV));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +47,12 @@
             this.btLuuNV = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtMaNguoiDung = new System.Windows.Forms.TextBox();
+            this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.titlePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
+            this.titlePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -167,7 +175,7 @@
             this.txtSDTNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDTNV.Name = "txtSDTNV";
             this.txtSDTNV.Size = new System.Drawing.Size(168, 20);
-            this.txtSDTNV.TabIndex = 11;
+            this.txtSDTNV.TabIndex = 12;
             // 
             // cbGioiTinhNV
             // 
@@ -180,16 +188,12 @@
             this.cbGioiTinhNV.Margin = new System.Windows.Forms.Padding(2);
             this.cbGioiTinhNV.Name = "cbGioiTinhNV";
             this.cbGioiTinhNV.Size = new System.Drawing.Size(119, 21);
-            this.cbGioiTinhNV.TabIndex = 12;
+            this.cbGioiTinhNV.TabIndex = 11;
             // 
             // cbMaLoaiNV
             // 
             this.cbMaLoaiNV.BackColor = System.Drawing.Color.White;
             this.cbMaLoaiNV.FormattingEnabled = true;
-            this.cbMaLoaiNV.Items.AddRange(new object[] {
-            "LNV001",
-            "LNV002",
-            "LNV003"});
             this.cbMaLoaiNV.Location = new System.Drawing.Point(157, 281);
             this.cbMaLoaiNV.Margin = new System.Windows.Forms.Padding(2);
             this.cbMaLoaiNV.Name = "cbMaLoaiNV";
@@ -205,7 +209,7 @@
             this.btLuuNV.Margin = new System.Windows.Forms.Padding(2);
             this.btLuuNV.Name = "btLuuNV";
             this.btLuuNV.Size = new System.Drawing.Size(201, 40);
-            this.btLuuNV.TabIndex = 14;
+            this.btLuuNV.TabIndex = 15;
             this.btLuuNV.Text = "Lưu";
             this.btLuuNV.UseVisualStyleBackColor = false;
             this.btLuuNV.Click += new System.EventHandler(this.btLuu_Click);
@@ -228,7 +232,112 @@
             this.txtMaNguoiDung.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNguoiDung.Name = "txtMaNguoiDung";
             this.txtMaNguoiDung.Size = new System.Drawing.Size(119, 20);
-            this.txtMaNguoiDung.TabIndex = 21;
+            this.txtMaNguoiDung.TabIndex = 14;
+            // 
+            // bunifuSnackbar1
+            // 
+            this.bunifuSnackbar1.AllowDragging = false;
+            this.bunifuSnackbar1.AllowMultipleViews = false;
+            this.bunifuSnackbar1.ClickToClose = false;
+            this.bunifuSnackbar1.DoubleClickToClose = false;
+            this.bunifuSnackbar1.DurationAfterIdle = 3000;
+            this.bunifuSnackbar1.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.ErrorOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bunifuSnackbar1.ErrorOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.FadeCloseIcon = true;
+            this.bunifuSnackbar1.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bunifuSnackbar1.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.InformationOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bunifuSnackbar1.InformationOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.Margin = 10;
+            this.bunifuSnackbar1.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.MaximumViews = 7;
+            this.bunifuSnackbar1.MessageRightMargin = 15;
+            this.bunifuSnackbar1.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.ShowBorders = true;
+            this.bunifuSnackbar1.ShowCloseIcon = true;
+            this.bunifuSnackbar1.ShowIcon = true;
+            this.bunifuSnackbar1.ShowShadows = true;
+            this.bunifuSnackbar1.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.SuccessOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bunifuSnackbar1.SuccessOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ViewsMargin = 7;
+            this.bunifuSnackbar1.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.ActionBorderRadius = 20;
+            this.bunifuSnackbar1.WarningOptions.ActionFont = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.CloseIconColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSnackbar1.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ZoomCloseIcon = true;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // titlePanel
+            // 
+            this.titlePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titlePanel.BackgroundImage")));
+            this.titlePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.titlePanel.Controls.Add(this.btnClose);
+            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlePanel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.titlePanel.GradientTopRight = System.Drawing.Color.White;
+            this.titlePanel.Location = new System.Drawing.Point(0, 0);
+            this.titlePanel.Name = "titlePanel";
+            this.titlePanel.Quality = 10;
+            this.titlePanel.Size = new System.Drawing.Size(397, 38);
+            this.titlePanel.TabIndex = 62;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = global::Do_an_Winform.Properties.Resources.crossed;
+            this.btnClose.ImageActive = null;
+            this.btnClose.Location = new System.Drawing.Point(364, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(21, 22);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnClose.TabIndex = 2;
+            this.btnClose.TabStop = false;
+            this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frm_ThemNV
             // 
@@ -236,6 +345,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(397, 448);
+            this.Controls.Add(this.titlePanel);
             this.Controls.Add(this.txtMaNguoiDung);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btLuuNV);
@@ -254,12 +364,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_ThemNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Thêm thông tin nhân viên";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_ThemNV_FormClosing);
+            this.Text = "Cập nhật thông tin nhân viên";
             this.Load += new System.EventHandler(this.frm_Them_Load);
+            this.titlePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +396,9 @@
         private System.Windows.Forms.Button btLuuNV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMaNguoiDung;
+        private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuGradientPanel titlePanel;
+        private Bunifu.Framework.UI.BunifuImageButton btnClose;
     }
 }

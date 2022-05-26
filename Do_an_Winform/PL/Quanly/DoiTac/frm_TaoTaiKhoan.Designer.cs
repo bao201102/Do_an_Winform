@@ -83,7 +83,7 @@
             this.btTaoTK.Location = new System.Drawing.Point(94, 170);
             this.btTaoTK.Name = "btTaoTK";
             this.btTaoTK.Size = new System.Drawing.Size(176, 37);
-            this.btTaoTK.TabIndex = 25;
+            this.btTaoTK.TabIndex = 26;
             this.btTaoTK.Text = "Tạo tài khoản";
             this.btTaoTK.UseVisualStyleBackColor = true;
             this.btTaoTK.Click += new System.EventHandler(this.btTaoTK_Click);
@@ -92,15 +92,11 @@
             // 
             this.cbMaLoaiNV.BackColor = System.Drawing.Color.White;
             this.cbMaLoaiNV.FormattingEnabled = true;
-            this.cbMaLoaiNV.Items.AddRange(new object[] {
-            "LNV001",
-            "LNV002",
-            "LNV003"});
             this.cbMaLoaiNV.Location = new System.Drawing.Point(169, 116);
             this.cbMaLoaiNV.Margin = new System.Windows.Forms.Padding(2);
             this.cbMaLoaiNV.Name = "cbMaLoaiNV";
             this.cbMaLoaiNV.Size = new System.Drawing.Size(119, 21);
-            this.cbMaLoaiNV.TabIndex = 26;
+            this.cbMaLoaiNV.TabIndex = 25;
             // 
             // label7
             // 
@@ -113,7 +109,7 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "Mã loại nhân viên";
             // 
-            // TaoTaiKhoan
+            // frm_TaoTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +121,8 @@
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Name = "TaoTaiKhoan";
+            this.Name = "frm_TaoTaiKhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tạo tài khoản";
             this.Load += new System.EventHandler(this.TaoTaiKhoan_Load);
             this.ResumeLayout(false);

@@ -14,6 +14,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 {
     public partial class frm_TaoTaiKhoan : Form
     {
+        TaiKhoanDTO tk = new TaiKhoanDTO();
         public frm_TaoTaiKhoan()
         {
             InitializeComponent();
@@ -21,22 +22,24 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 
         private void btTaoTK_Click(object sender, EventArgs e)
         {
-            TaiKhoanDTO tk = new TaiKhoanDTO();
             tk.UserName = txtTaiKhoan.Text;
             tk.MatKhau = txtMatKhau.Text;
-            tk.MaLoaiNV = cbMaLoaiNV.Text;
+            tk.MaLoaiNV = cbMaLoaiNV.SelectedValue.ToString();
             if (TaiKhoanBLL.AddAccount(tk))
             {
-                MessageBox.Show("Thêm tài khoản thành công");
-                frm_ThemNV form = new frm_ThemNV();
+                MessageBox.Show("Cập nhật thông tin để hoàn tất tạo tài khoản","Thông báo");
+                frm_ThemNV form = new frm_ThemNV(cbMaLoaiNV.SelectedIndex,tk);
                 form.ShowDialog();
-                this.Hide();
+                this.Close();
             }
         }
 
         private void TaoTaiKhoan_Load(object sender, EventArgs e)
         {
-            cbMaLoaiNV.Text = "LNV001";
+            cbMaLoaiNV.DataSource = LoaiNhanVienBLL.GetAllEmpType();
+            cbMaLoaiNV.ValueMember = "MaLoaiNV";
+            cbMaLoaiNV.DisplayMember = "TenLoaiNV";
+            cbMaLoaiNV.SelectedIndex = 0;
         }
     }
 }

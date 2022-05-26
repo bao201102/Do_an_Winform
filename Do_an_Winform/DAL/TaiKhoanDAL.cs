@@ -65,5 +65,31 @@ namespace Do_an_Winform.DAL
                 throw raise;
             }
         }
+        public static List<TaiKhoanDTO> GetMaLoaiNV(string maloai)
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            List<TaiKhoanDTO> list = new List<TaiKhoanDTO>();
+            var query = from tk in data.TaiKhoans
+                        where tk.MaLoaiNV == maloai
+                        select tk;
+            foreach (TaiKhoan tk in query)
+            {
+                TaiKhoanDTO dto = new TaiKhoanDTO();
+                dto.MaLoaiNV = tk.MaLoaiNV;
+                list.Add(dto);
+            }
+            return list;
+        }
+        public static bool RemoveAccount(TaiKhoanDTO dto, string manguoidung)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            TaiKhoan query = (from tk in entities.TaiKhoans
+                              where tk.MaNguoiDung == manguoidung
+                             select tk).Single();
+
+            entities.TaiKhoans.Remove(query);
+            return entities.SaveChanges() > 0 ? true : false;
+        }
     }
 }
