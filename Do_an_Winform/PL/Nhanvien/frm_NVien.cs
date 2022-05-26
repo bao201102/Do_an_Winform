@@ -19,17 +19,13 @@ namespace Do_an_Winform.PL.Nhanvien
         NhanVienDTO nhanvien = new NhanVienDTO();
         LoaiNhanVienDTO loaiNV = new LoaiNhanVienDTO();
         public static TaiKhoanDTO taikhoan1 = new TaiKhoanDTO();
+
         public frm_NVien(TaiKhoanDTO user)
         {
             InitializeComponent();
             this.Width = 1600;
             this.Height = 900;
             taikhoan = user;
-        }
-
-        private void titlePanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void slideBtn_Click(object sender, EventArgs e)
@@ -106,8 +102,6 @@ namespace Do_an_Winform.PL.Nhanvien
             taikhoan1 = taikhoan;
         }
         
-        
-
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
             openChildUsercontrol(new UserControlKhachHang());
@@ -127,6 +121,7 @@ namespace Do_an_Winform.PL.Nhanvien
         {
             openChildForm(new frm_Thongtin(nhanvien, loaiNV, this));
         }
+
         private Form activeForm = null;
         private UserControl activeUserControl = null;
         private void openChildUsercontrol(UserControl userControl)
@@ -142,6 +137,7 @@ namespace Do_an_Winform.PL.Nhanvien
             userControl.BringToFront();
             userControl.Show();
         }
+
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)

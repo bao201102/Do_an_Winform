@@ -124,7 +124,6 @@
             this.titlePanel.Quality = 10;
             this.titlePanel.Size = new System.Drawing.Size(965, 38);
             this.titlePanel.TabIndex = 4;
-            this.titlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.titlePanel_Paint);
             // 
             // btnMaximize
             // 
