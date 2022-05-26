@@ -9,7 +9,7 @@ using Do_an_Winform.DTO;
 namespace Do_an_Winform.DAL
 {
     public class HoaDonDAL
-    {      
+    {
         public static bool AddNewBill(HoaDonDTO hd)
         {
             CHDTEntities1 data = new CHDTEntities1();
@@ -19,6 +19,7 @@ namespace Do_an_Winform.DAL
             data.HoaDons.Add(hoaDon);
             return data.SaveChanges() > 0 ? true : false;
         }
+
         public static List<HoaDonDTO> GetAllBill()
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -66,12 +67,13 @@ namespace Do_an_Winform.DAL
             }
             return hoaDonDTOs;
         }
+
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
-                        where hd.TrangThai == "1" && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
-                        select hd;
+                          where hd.TrangThai == "1" && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
+                          select hd;
             List<HoaDonDTO> listhd = new List<HoaDonDTO>();
             foreach (HoaDon hd in truyvan)
             {
@@ -82,6 +84,7 @@ namespace Do_an_Winform.DAL
             }
             return listhd;
         }
+
         public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -98,7 +101,8 @@ namespace Do_an_Winform.DAL
             }
             return hoaDonDTOs;
         }
-        public static HoaDonDTO LayTheoMaHD (string mahd)
+
+        public static HoaDonDTO LayTheoMaHD(string mahd)
         {
             CHDTEntities1 entities = new CHDTEntities1();
             HoaDon truyvan = (from hd in entities.HoaDons
@@ -110,13 +114,14 @@ namespace Do_an_Winform.DAL
             HoaDonDTO hdon = mapper.Map<HoaDonDTO>(truyvan);
             return hdon;
         }
+
         public static double DoanhThuTatCaHD(DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
                           where (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday) && (hd.TrangThai == "1")
                           select new
-                          {                             
+                          {
                               hd.ThanhTien
                           };
 
@@ -127,6 +132,7 @@ namespace Do_an_Winform.DAL
             };
             return reusultDT;
         }
+
         public static double DoanhThuTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
         {
             CHDTEntities1 data = new CHDTEntities1();
@@ -144,6 +150,7 @@ namespace Do_an_Winform.DAL
             };
             return reusultDT;
         }
+
         public static double ThongKeDoanhThuTheoTDHT(DateTime today)
         {
             DateTime date = DateTime.Now;
@@ -151,18 +158,19 @@ namespace Do_an_Winform.DAL
 
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
-                           where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= today) && (hd.TrangThai == "1")
+                          where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= today) && (hd.TrangThai == "1")
                           select new
-                           {
-                               hd.ThanhTien
-                           };
+                          {
+                              hd.ThanhTien
+                          };
             double reusultDT = 0;
-            foreach(var i in truyvan)
+            foreach (var i in truyvan)
             {
                 reusultDT += i.ThanhTien;
             };
             return reusultDT;
         }
+
         public static double ThongKeDoanhThuTheoNam(string namTK)
         {
             var firstDayOfMonth = GetLastDayOfMonth("1", namTK);
@@ -181,6 +189,7 @@ namespace Do_an_Winform.DAL
             };
             return reusultDT;
         }
+
         public static double ThongKeDoanhThuTheoQuy(string quyTK, string namTK)
         {
             DateTime firstDayOfMonth;
@@ -204,7 +213,7 @@ namespace Do_an_Winform.DAL
                     reusultDT += i.ThanhTien;
                 };
             }
-            if(quyTK == "2")
+            if (quyTK == "2")
             {
                 firstDayOfMonth = GetFirstDayOfMonth("4", namTK);
                 lastDayOfMonth = GetLastDayOfMonth("6", namTK);
@@ -236,7 +245,7 @@ namespace Do_an_Winform.DAL
                     reusultDT += i.ThanhTien;
                 };
             }
-            if(quyTK == "4")
+            if (quyTK == "4")
             {
                 firstDayOfMonth = GetFirstDayOfMonth("10", namTK);
                 lastDayOfMonth = GetLastDayOfMonth("12", namTK);
@@ -252,9 +261,10 @@ namespace Do_an_Winform.DAL
                     reusultDT += i.ThanhTien;
                 };
             }
-            
+
             return reusultDT;
         }
+
         public static double ThongKeDoanhThuTheoThang(string thangTK, string namTK)
         {
             DateTime firstDayOfMonth = GetLastDayOfMonth(thangTK, namTK);
@@ -272,6 +282,7 @@ namespace Do_an_Winform.DAL
             };
             return reusultDT;
         }
+
         //Hàm lấy ra ngày đầu tiên của tháng
         public static DateTime GetFirstDayOfMonth(string strMonth, string strYear)
         {
@@ -281,6 +292,7 @@ namespace Do_an_Winform.DAL
             dtResult = dtResult.AddDays((-dtResult.Day) + 1);
             return dtResult;
         }
+
         //Hàm lấy ra ngày cuối cùng của tháng
         public static DateTime GetLastDayOfMonth(string strMonth, string strYear)
         {
@@ -291,6 +303,7 @@ namespace Do_an_Winform.DAL
             dtResult = dtResult.AddDays(-(dtResult.Day));
             return dtResult;
         }
+
         public static bool EditBill(HoaDonDTO hd)
         {
             CHDTEntities1 entities1 = new CHDTEntities1();
@@ -307,13 +320,14 @@ namespace Do_an_Winform.DAL
             hoaDon.ThanhTien = hd.ThanhTien;
             return entities1.SaveChanges() > 0 ? true : false;
         }
-        public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
+
+        public static Dictionary<int, double> GetRevenueByDay(DateTime time)
         {
             CHDTEntities1 entities = new CHDTEntities1();
 
             var query = from hd in entities.HoaDons
-                        where hd.TrangThai == "1" && hd.NgayTaoHD.Year.Equals(time.Year)
-                        group hd by hd.NgayTaoHD into table
+                        where hd.TrangThai == "1" && hd.NgayTaoHD.Month.Equals(time.Month) && hd.NgayTaoHD.Year.Equals(time.Year)
+                        group hd by hd.NgayTaoHD.Day into table
                         select new
                         {
                             Key = table.Key,
@@ -321,9 +335,51 @@ namespace Do_an_Winform.DAL
                         };
 
             Dictionary<int, double> list = new Dictionary<int, double>();
-            foreach (var item in query)
+            foreach (var item in query.OrderBy(t => t.Key))
             {
-                list.Add(item.Key.Month, item.Value);
+                list.Add(item.Key, item.Value);
+            }
+            return list;
+        }
+
+        public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = from hd in entities.HoaDons
+                        where hd.TrangThai == "1" && hd.NgayTaoHD.Year.Equals(time.Year)
+                        group hd by hd.NgayTaoHD.Month into table
+                        select new
+                        {
+                            Key = table.Key,
+                            Value = table.Sum(t => t.ThanhTien)
+                        };
+
+            Dictionary<int, double> list = new Dictionary<int, double>();
+            foreach (var item in query.OrderBy(t => t.Key))
+            {
+                list.Add(item.Key, item.Value);
+            }
+            return list;
+        }
+
+        public static Dictionary<int, double> GetRevenueByYear(DateTime time)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = from hd in entities.HoaDons
+                        where hd.TrangThai == "1"
+                        group hd by hd.NgayTaoHD.Year into table
+                        select new
+                        {
+                            Key = table.Key,
+                            Value = table.Sum(t => t.ThanhTien)
+                        };
+
+            Dictionary<int, double> list = new Dictionary<int, double>();
+            foreach (var item in query.OrderBy(t => t.Key))
+            {
+                list.Add(item.Key, item.Value);
             }
             return list;
         }

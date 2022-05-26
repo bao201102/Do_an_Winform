@@ -20,16 +20,15 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
 
         private void chartDT_Load(Dictionary<int, double> data)
         {
-            //chartCanvasDT.Clear();
-            //barChartDT.Data.Clear();
+            chartCanvasDT.Clear();
+            barChartDT.Data.Clear();
 
             List<string> x_AxisLabels = new List<string>();
             List<double> y_AxisLabels = new List<double>();
 
             foreach (var item in data)
             {
-                string name = "" + item.Key;
-                
+                string name = "" + item.Key; 
                 x_AxisLabels.Add(name);
                 y_AxisLabels.Add(item.Value);
             }
@@ -44,7 +43,25 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
         private void frm_QLTQ_Load(object sender, EventArgs e)
         {
             bunifuDatePicker1.Value = DateTime.Now;
-            chartDT_Load(HoaDonBLL.GetRevenueByMonth(bunifuDatePicker1.Value));
+            cbDate.SelectedIndex = 0;
+            chartDT_Load(HoaDonBLL.GetRevenueByYear(bunifuDatePicker1.Value));
+        }
+
+        private void cbDate_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cbDate.SelectedIndex == 0)
+            {
+                chartDT_Load(HoaDonBLL.GetRevenueByDay(bunifuDatePicker1.Value));
+            }
+            else
+            {
+                chartDT_Load(HoaDonBLL.GetRevenueByMonth(bunifuDatePicker1.Value));
+            }
+        }
+
+        private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            cbDate_SelectionChangeCommitted(sender, e);
         }
     }
 }

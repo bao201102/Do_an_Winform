@@ -68,6 +68,7 @@ namespace Do_an_Winform.PL.Quanly.QLBC
 
         private void frm_QLBC_Load(object sender, EventArgs e)
         {
+            bunifuDatePicker1.Value = DateTime.Now;
             cbDate.SelectedIndex = 0;
             chartProduct_Load(SanPhamBLL.GetTopProductByDay(bunifuDatePicker1.Value));
             chartCat_Load(LoaiSanPhamBLL.GetTopProductCatByDay(bunifuDatePicker1.Value));

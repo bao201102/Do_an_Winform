@@ -14,69 +14,95 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.AddNewBill(hoaDon);
         }
+
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {
             return HoaDonDAL.ThongKeTatCaHD(startday, endday);
         }
+
         public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
         {
             return HoaDonDAL.ThongKeTheoMaHD(hdsearch, startday, endday);
         }
+
         public static HoaDonDTO LayTheoMaHD(string hdsearch)
         {
             return HoaDonDAL.LayTheoMaHD(hdsearch);
         }
+
         public static List<object> LayTatCaMaHD()
         {
             return HoaDonDAL.LayTatCaMaHD();
         }
+
         public static double DoanhThuTatCaHD(DateTime startday, DateTime endday)
         {
             return HoaDonDAL.DoanhThuTatCaHD(startday, endday);
         }
+
         public static double DoanhThuTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
         {
             return HoaDonDAL.DoanhThuTheoMaHD(hdsearch, startday, endday);
         }
+
         public static double ThongKeDoanhThuTheoTDHT(DateTime today)
         {
             return HoaDonDAL.ThongKeDoanhThuTheoTDHT(today);
         }
+
         public static double ThongKeDoanhThuTheoNam(string namTK)
         {
             return HoaDonDAL.ThongKeDoanhThuTheoNam(namTK);
         }
+
         public static double ThongKeDoanhThuTheoQuy(string quyTK, string namTK)
         {
             return HoaDonDAL.ThongKeDoanhThuTheoQuy(quyTK, namTK);
         }
+
         public static double ThongKeDoanhThuTheoThang(string thangTK, string namTK)
         {
             return HoaDonDAL.ThongKeDoanhThuTheoThang(thangTK, namTK);
         }
+
         public static DateTime GetFirstDayOfMonth(string iMonth, string iYear)
         {
             return HoaDonDAL.GetFirstDayOfMonth(iMonth, iYear);
         }
+
         public static DateTime GetLastDayOfMonth(string iMonth, string iYear)
         {
             return HoaDonDAL.GetLastDayOfMonth(iMonth, iYear);
         }
+
         public static List<HoaDonDTO> GetAllBill()
         {
             return HoaDonDAL.GetAllBill();
         }
+
         public static bool EditBill(HoaDonDTO hd)
         {
             return HoaDonDAL.EditBill(hd);
         }
+
         public static List<HoaDonDTO> GetAllBillById(string maHD)
         {
             return HoaDonDAL.GetAllBillById(maHD);
         }
+
+        public static Dictionary<int, double> GetRevenueByDay(DateTime time)
+        {
+            return HoaDonDAL.GetRevenueByDay(time);
+        }
+
         public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
         {
             return HoaDonDAL.GetRevenueByMonth(time);
+        }
+
+        public static Dictionary<int, double> GetRevenueByYear(DateTime time)
+        {
+            return HoaDonDAL.GetRevenueByYear(time);
         }
     }
 }
