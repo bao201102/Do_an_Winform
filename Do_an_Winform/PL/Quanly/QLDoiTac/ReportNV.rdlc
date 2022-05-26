@@ -36,6 +36,8 @@
                             <TextRun>
                               <Value>Tên nhân viên</Value>
                               <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -69,6 +71,8 @@
                             <TextRun>
                               <Value>Giới tính</Value>
                               <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -102,6 +106,8 @@
                             <TextRun>
                               <Value>Email</Value>
                               <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -135,6 +141,8 @@
                             <TextRun>
                               <Value>SĐT</Value>
                               <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -168,6 +176,8 @@
                             <TextRun>
                               <Value>Địa chỉ</Value>
                               <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -205,7 +215,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TenNV.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -235,7 +248,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!GioiTinh.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -265,7 +281,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Email.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -295,7 +314,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!SĐT.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -325,7 +347,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!DiaChi.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Leelawadee UI</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -370,8 +395,8 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.66912cm</Top>
-        <Height>1.94083cm</Height>
-        <Width>25.16188cm</Width>
+        <Height>1.94082cm</Height>
+        <Width>25.16187cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

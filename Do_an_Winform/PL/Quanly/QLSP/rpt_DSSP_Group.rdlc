@@ -82,6 +82,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -102,6 +103,8 @@
                         <Border>
                           <Style>None</Style>
                         </Border>
+                        <FontFamily>Leelawadee UI</FontFamily>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </Subreport>
                   </CellContents>
@@ -128,7 +131,7 @@
         </TablixRowHierarchy>
         <DataSetName>LoaiSP</DataSetName>
         <Top>2.11349cm</Top>
-        <Height>2.91979cm</Height>
+        <Height>2.9198cm</Height>
         <Width>25.16188cm</Width>
         <ZIndex>1</ZIndex>
         <Style>

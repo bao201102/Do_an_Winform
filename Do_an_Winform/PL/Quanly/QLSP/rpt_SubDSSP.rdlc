@@ -81,7 +81,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Tên sản phẩm</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -111,10 +114,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Đơn giá</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox4</rd:DefaultName>
@@ -146,7 +154,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TenSP.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -175,11 +186,16 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!DonGia.Value</Value>
-                                  <Style />
+                                  <Value>=string.Format("{0:#,##0} VNĐ",Fields!DonGia.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DonGia</rd:DefaultName>

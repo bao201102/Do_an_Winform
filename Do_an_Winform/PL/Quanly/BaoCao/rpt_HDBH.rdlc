@@ -89,10 +89,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>STT</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -119,7 +124,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Ngay Tao HD</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -149,7 +157,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Ma HD</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -179,7 +190,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Ma NV</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -209,7 +223,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Ma KH</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -239,10 +256,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Thanh Tien</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox20</rd:DefaultName>
@@ -274,10 +296,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=RowNumber(Nothing)</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox10</rd:DefaultName>
@@ -304,7 +331,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!NgayTaoHD.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -334,7 +364,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!MaHD.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -364,7 +397,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!MaNV.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -394,7 +430,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!MaKH.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -424,10 +463,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>= String.Format("{0:#,##0} VNĐ", Fields!ThanhTien.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ThanhTien</rd:DefaultName>
@@ -458,8 +502,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
-                                  <Style />
+                                  <Value>Tổng cộng</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -477,128 +524,13 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <ColSpan>5</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox23">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox23</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox24">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox24</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox25">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox25</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox26">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Tổng cộng:</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox26</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox27">
@@ -609,10 +541,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>= String.Format("{0:#,##0} VNĐ", sum(Fields!ThanhTien.Value))</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Leelawadee UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox27</rd:DefaultName>
@@ -658,7 +595,7 @@
             </TablixRowHierarchy>
             <DataSetName>HoaDon_HDBH</DataSetName>
             <Top>0.05556in</Top>
-            <Height>1.21458in</Height>
+            <Height>1.21459in</Height>
             <Width>9.90624in</Width>
             <Style>
               <Border>
@@ -685,7 +622,10 @@
                   <TextRuns>
                     <TextRun>
                       <Value>="Ngày lập: " &amp;Today()</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Leelawadee UI</FontFamily>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -714,16 +654,19 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Từ ngày:</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Leelawadee UI</FontFamily>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.85834in</Top>
+              <Top>0.82709in</Top>
               <Left>6.01646in</Left>
-              <Height>0.25in</Height>
+              <Height>0.28125in</Height>
               <Width>1in</Width>
               <ZIndex>1</ZIndex>
               <Style>
@@ -744,7 +687,10 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Đến ngày:</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Leelawadee UI</FontFamily>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -753,7 +699,7 @@
               <rd:DefaultName>Textbox6</rd:DefaultName>
               <Top>1.17779in</Top>
               <Left>6.01646in</Left>
-              <Height>0.25in</Height>
+              <Height>0.28125in</Height>
               <Width>1in</Width>
               <ZIndex>2</ZIndex>
               <Style>
@@ -774,16 +720,19 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Parameters!paStartDay.Value</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Leelawadee UI</FontFamily>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>paStartDay</rd:DefaultName>
-              <Top>0.85834in</Top>
-              <Left>7.01646in</Left>
-              <Height>0.25in</Height>
+              <Top>0.82709in</Top>
+              <Left>7.0859in</Left>
+              <Height>0.28125in</Height>
               <Width>1.37833in</Width>
               <ZIndex>3</ZIndex>
               <Style>
@@ -804,7 +753,10 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Parameters!paEndDay.Value</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Leelawadee UI</FontFamily>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -812,8 +764,8 @@
               </Paragraphs>
               <rd:DefaultName>paEndDay</rd:DefaultName>
               <Top>1.17779in</Top>
-              <Left>7.01646in</Left>
-              <Height>0.25in</Height>
+              <Left>7.0859in</Left>
+              <Height>0.28125in</Height>
               <Width>1.37833in</Width>
               <ZIndex>4</ZIndex>
               <Style>
@@ -882,16 +834,19 @@
                   <TextRuns>
                     <TextRun>
                       <Value>="Trang " &amp; Globals!PageNumber &amp; "/" &amp;Globals!TotalPages</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Leelawadee UI</FontFamily>
+                        <FontSize>12pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox14</rd:DefaultName>
-              <Top>0.38333in</Top>
+              <Top>0.33125in</Top>
               <Left>4.28645in</Left>
-              <Height>0.25in</Height>
+              <Height>0.30208in</Height>
               <Width>1.34167in</Width>
               <Style>
                 <Border>
