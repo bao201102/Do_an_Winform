@@ -41,7 +41,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     if (KhachHangBLL.AddNewCustomer(khachHang))
                     {
-                        bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Bạn đã thêm sản phẩm mới thành công", 
+                        bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Bạn đã thêm khách hàng mới thành công", 
                             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                         Close();
                     }
@@ -87,6 +87,12 @@ namespace Do_an_Winform.PL.Nhanvien
         private void btnCancel_Click(object sender, EventArgs e)
         {
             btnClose_Click(sender, e);
+        }
+
+        private void frm_DKThanhVien_Load(object sender, EventArgs e)
+        {
+            cbGioiTinh.Items.Add("Nam");
+            cbGioiTinh.Items.Add("Nữ");
         }
     }
 }

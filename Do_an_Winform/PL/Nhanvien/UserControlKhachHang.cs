@@ -63,5 +63,18 @@ namespace Do_an_Winform.PL.Nhanvien
             frm_DKThanhVien frm = new frm_DKThanhVien();
             frm.ShowDialog();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            dgvAllCustomer.DataSource = KhachHangBLL.GetAllCustomer();
+            dgvAllCustomer.Columns[0].HeaderText = "Mã KH";
+            dgvAllCustomer.Columns[1].HeaderText = "Tên KH";
+            dgvAllCustomer.Columns[2].HeaderText = "Giới tính";
+            dgvAllCustomer.Columns[3].HeaderText = "Email";
+            dgvAllCustomer.Columns[4].HeaderText = "SĐT";
+            dgvAllCustomer.Columns[5].HeaderText = "Địa chi";
+            dgvAllCustomer.Columns[6].HeaderText = "Loại thành viên";
+            dgvAllCustomer.Columns[7].HeaderText = "Điểm tích lũy";
+        }
     }
 }
