@@ -702,6 +702,9 @@
     <None Include="Resources\import.png" />
     <None Include="Resources\employees.png" />
     <None Include="Resources\box.png" />
+    <None Include="Resources\best seller.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\revenue.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
