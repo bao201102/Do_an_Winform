@@ -60,8 +60,8 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            UserControlDKThanhVien user = new UserControlDKThanhVien();
-            user.Show();
+            frm_DKThanhVien frm = new frm_DKThanhVien();
+            frm.ShowDialog();
         }
     }
 }

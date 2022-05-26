@@ -13,36 +13,20 @@ using System.Windows.Forms;
 
 namespace Do_an_Winform.PL.Nhanvien
 {
-    public partial class UserControlDKThanhVien : UserControl
+    public partial class frm_DKThanhVien : Form
     {
-        TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         List<object> listKH = new List<object>();
-        public UserControlDKThanhVien()
+        TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+        public frm_DKThanhVien()
         {
             InitializeComponent();
         }
 
         private void btnAddMem_Click(object sender, EventArgs e)
         {
-            if (txtHoTen.Text == "")
+            if (txtHoTen.Text == ""|| cbGioiTinh.Text == ""|| txtEmail.Text == ""|| txtSDT.Text == ""|| txtDiaChi.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập họ tên");
-            }
-            else if (cbGioiTinh.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập giới tính");
-            }
-            else if (txtEmail.Text == "")
-            {
-                MessageBox.Show("Vui lòng email");
-            }
-            else if (txtSDT.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập số điện thoại");
-            }
-            else if (txtDiaChi.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập địa chỉ");
+                bunifuSnackbar1.Show(this, "Vui lòng nhập đủ thông tin vào ô trống", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
             }
             else
             {
@@ -57,13 +41,15 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     if (KhachHangBLL.AddNewCustomer(khachHang))
                     {
-                        bunifuSnackbar1.Show(new frm_NVien(taikhoan),"Bạn đã thêm sản phẩm mới thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
-                        //Close();
+                        bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Bạn đã thêm sản phẩm mới thành công", 
+                            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                        Close();
                     }
                 }
 
             }
         }
+
         public static string CreateId(List<KhachHangDTO> listKH)
         {
             string maKH = "";
@@ -82,11 +68,6 @@ namespace Do_an_Winform.PL.Nhanvien
             return maKH;
         }
 
-        private void UserControlDKThanhVien_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -99,7 +80,7 @@ namespace Do_an_Winform.PL.Nhanvien
             bool result = messBox.ShowMess("Bạn có muốn hủy thêm thành viên ?");
             if (result)
             {
-                //this.Close();
+                Close();
             }
         }
 

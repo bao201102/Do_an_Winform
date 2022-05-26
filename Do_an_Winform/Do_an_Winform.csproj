@@ -305,6 +305,12 @@
     <Compile Include="PL\DangNhap\MessBox1.Designer.cs">
       <DependentUpon>MessBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Nhanvien\frm_DKThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Nhanvien\frm_DKThanhVien.Designer.cs">
+      <DependentUpon>frm_DKThanhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Nhanvien\frm_DSHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,12 +328,6 @@
     </Compile>
     <Compile Include="PL\Nhanvien\frm_XemHD.Designer.cs">
       <DependentUpon>frm_XemHD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\Nhanvien\UserControlDKThanhVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PL\Nhanvien\UserControlDKThanhVien.Designer.cs">
-      <DependentUpon>UserControlDKThanhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Nhanvien\UserControlKhachHang.cs">
       <SubType>UserControl</SubType>
@@ -524,6 +524,9 @@
     <EmbeddedResource Include="PL\DangNhap\MessBox1.resx">
       <DependentUpon>MessBox1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\frm_DKThanhVien.resx">
+      <DependentUpon>frm_DKThanhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\frm_DSHoaDon.resx">
       <DependentUpon>frm_DSHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -531,9 +534,6 @@
       <DependentUpon>frm_NVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\rpt_HoaDon.rdlc" />
-    <EmbeddedResource Include="PL\Nhanvien\UserControlDKThanhVien.resx">
-      <DependentUpon>UserControlDKThanhVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\UserControlKhachHang.resx">
       <DependentUpon>UserControlKhachHang.cs</DependentUpon>
     </EmbeddedResource>
