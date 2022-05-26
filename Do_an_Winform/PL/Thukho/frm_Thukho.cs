@@ -123,7 +123,7 @@ namespace Do_an_Winform
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_Thongtin(nhanvien, loainhanvien, this));
+            openChildForm(new frm_Thongtin(nhanvien, loainhanvien, this, taikhoan));
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
