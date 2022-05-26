@@ -30,6 +30,23 @@ namespace Do_an_Winform.DAL
                 return null;
             }
         }
+
+        public static List<TaiKhoanDTO> GetMaLoaiNV(string maloai)
+        {
+            CHDTEntities1 data = new CHDTEntities1();
+            List<TaiKhoanDTO> list = new List<TaiKhoanDTO>();
+            var query = from tk in data.TaiKhoans
+                        where tk.MaLoaiNV == maloai
+                        select tk;
+            foreach (TaiKhoan tk in query)
+            {
+                TaiKhoanDTO dto = new TaiKhoanDTO();
+                dto.MaLoaiNV = tk.MaLoaiNV;
+                list.Add(dto);
+            }
+            return list;
+        }
+
         public static bool AddAccount(TaiKhoanDTO dto)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -49,36 +66,8 @@ namespace Do_an_Winform.DAL
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
             {
-                Exception raise = dbEx;
-                foreach (var validationErrors in dbEx.EntityValidationErrors)
-                {
-                    foreach (var validationError in validationErrors.ValidationErrors)
-                    {
-                        string message = string.Format("{0}:{1}",
-                            validationErrors.Entry.Entity.ToString(),
-                            validationError.ErrorMessage);
-                        // raise a new exception nesting
-                        // the current instance as InnerException
-                        raise = new InvalidOperationException(message, raise);
-                    }
-                }
-                throw raise;
+                return false;
             }
-        }
-        public static List<TaiKhoanDTO> GetMaLoaiNV(string maloai)
-        {
-            CHDTEntities1 data = new CHDTEntities1();
-            List<TaiKhoanDTO> list = new List<TaiKhoanDTO>();
-            var query = from tk in data.TaiKhoans
-                        where tk.MaLoaiNV == maloai
-                        select tk;
-            foreach (TaiKhoan tk in query)
-            {
-                TaiKhoanDTO dto = new TaiKhoanDTO();
-                dto.MaLoaiNV = tk.MaLoaiNV;
-                list.Add(dto);
-            }
-            return list;
         }
 
         public static bool RemoveAccount(TaiKhoanDTO dto, string manguoidung)
@@ -91,6 +80,25 @@ namespace Do_an_Winform.DAL
 
             entities.TaiKhoans.Remove(query);
             return entities.SaveChanges() > 0 ? true : false;
+        }
+
+        public static bool UpdatePassword(TaiKhoanDTO dto)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            TaiKhoan tk = entities.TaiKhoans.Where(x => x.MaNguoiDung.Equals(dto.MaNguoiDung)).Single();
+
+            tk.MatKhau = dto.MatKhau;
+
+            entities.SaveChanges();
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public static string GetUserId(string username)

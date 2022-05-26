@@ -34,5 +34,10 @@ namespace Do_an_Winform.BLL
         {
             return TaiKhoanDAL.GetUserId(username);
         }
+
+        public static bool UpdatePassword(TaiKhoanDTO dto)
+        {
+            return TaiKhoanDAL.UpdatePassword(dto);
+        }
     }
 }

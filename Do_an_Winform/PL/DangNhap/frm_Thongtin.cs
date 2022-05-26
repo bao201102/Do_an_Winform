@@ -18,12 +18,15 @@ namespace Do_an_Winform.PL.DangNhap
         NhanVienDTO emp = new NhanVienDTO();
         LoaiNhanVienDTO empType = new LoaiNhanVienDTO();
         Form mainform = new Form();
-        public frm_Thongtin(NhanVienDTO nhanvien, LoaiNhanVienDTO loainhanvien, Form form)
+        TaiKhoanDTO user = new TaiKhoanDTO();
+
+        public frm_Thongtin(NhanVienDTO nhanvien, LoaiNhanVienDTO loainhanvien, Form form, TaiKhoanDTO taikhoan)
         {
             InitializeComponent();
             emp = nhanvien;
             empType = loainhanvien;
             mainform = form;
+            user = taikhoan;
         }
 
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
@@ -79,6 +82,31 @@ namespace Do_an_Winform.PL.DangNhap
                         bunifuSnackbar1.Show(mainform, "Bạn đã lưu thông tin mới thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                         employee_LoadData();
                     }
+                }
+            }
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "" || txtNewpass1.Text == "" || txtNewpass2.Text == "")
+            {
+                bunifuSnackbar1.Show(mainform, "Vui lòng nhập đủ thông tin vào ô trống", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+            }
+            else
+            {
+                if (txtNewpass1.Text == txtNewpass2.Text)
+                {
+                    TaiKhoanDTO tkDTO = new TaiKhoanDTO();
+                    tkDTO.MaNguoiDung = user.MaNguoiDung;
+                    tkDTO.MatKhau = txtNewpass1.Text;
+                    if (TaiKhoanBLL.UpdatePassword(tkDTO))
+                    {
+                        bunifuSnackbar1.Show(mainform, "Bạn đã sửa mật khẩu thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                    }
+                }
+                else
+                {
+                    bunifuSnackbar1.Show(mainform, "Mật khẩu nhập lại không trùng khớp", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                 }
             }
         }

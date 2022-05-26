@@ -32,6 +32,7 @@ namespace Do_an_Winform.DAL
             NhanVienDTO empDTO = mapper.Map<NhanVienDTO>(emp);
             return empDTO;
         }
+
         public static List<object> GetEmployeeByName(string name)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -91,6 +92,7 @@ namespace Do_an_Winform.DAL
             }
             return list;
         }
+
         public static bool AddEmployee(NhanVienDTO nvDTO)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -151,6 +153,7 @@ namespace Do_an_Winform.DAL
                 return false;
             }
         }
+
         public static List<NhanVienDTO> LayTatCaNhanVien()
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -169,6 +172,7 @@ namespace Do_an_Winform.DAL
             }
             return list;
         }
+
         public static int CountEmployee()
         {
             CHDTEntities1 data = new CHDTEntities1();
