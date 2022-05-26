@@ -110,7 +110,8 @@ namespace Do_an_Winform.PL.Quanly
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -118,11 +119,11 @@ namespace Do_an_Winform.PL.Quanly
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.61081F));
             this.tableLayoutPanel1.Controls.Add(this.bunifuPanel4, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.chartCanvasTKDT, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 109);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 189);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1277, 709);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1277, 629);
             this.tableLayoutPanel1.TabIndex = 79;
             // 
             // bunifuPanel4
@@ -139,7 +140,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel4.Location = new System.Drawing.Point(3, 3);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(496, 703);
+            this.bunifuPanel4.Size = new System.Drawing.Size(496, 623);
             this.bunifuPanel4.TabIndex = 80;
             // 
             // bunifuPanel3
@@ -391,7 +392,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel2.Controls.Add(this.label4);
             this.bunifuPanel2.Controls.Add(this.label3);
             this.bunifuPanel2.Controls.Add(this.ChiPhi);
-            this.bunifuPanel2.Location = new System.Drawing.Point(38, 368);
+            this.bunifuPanel2.Location = new System.Drawing.Point(38, 328);
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = false;
@@ -747,7 +748,7 @@ namespace Do_an_Winform.PL.Quanly
             this.chartCanvasTKDT.Padding = new System.Windows.Forms.Padding(3);
             this.chartCanvasTKDT.ShowXAxis = true;
             this.chartCanvasTKDT.ShowYAxis = true;
-            this.chartCanvasTKDT.Size = new System.Drawing.Size(767, 701);
+            this.chartCanvasTKDT.Size = new System.Drawing.Size(767, 621);
             this.chartCanvasTKDT.TabIndex = 78;
             this.chartCanvasTKDT.Title = "";
             this.chartCanvasTKDT.TitleLineHeight = 1.2D;
@@ -797,7 +798,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(940, 17);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(936, 80);
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
@@ -850,8 +851,8 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(49, 21);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(35, 35);
             this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
