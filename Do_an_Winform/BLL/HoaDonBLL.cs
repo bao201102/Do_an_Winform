@@ -90,19 +90,15 @@ namespace Do_an_Winform.BLL
             return HoaDonDAL.GetAllBillById(maHD);
         }
 
-        public static Dictionary<int, double> GetRevenueByDay(DateTime time)
+        public static Dictionary<int, double> GetRevenueByThisMonth(DateTime time)
         {
-            return HoaDonDAL.GetRevenueByDay(time);
+            return HoaDonDAL.GetRevenueByThisMonth(time);
         }
 
-        public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
+        public static Dictionary<int, double> GetRevenueByThisYear(DateTime time)
         {
-            return HoaDonDAL.GetRevenueByMonth(time);
+            return HoaDonDAL.GetRevenueByThisYear(time);
         }
 
-        public static Dictionary<int, double> GetRevenueByYear(DateTime time)
-        {
-            return HoaDonDAL.GetRevenueByYear(time);
-        }
     }
 }

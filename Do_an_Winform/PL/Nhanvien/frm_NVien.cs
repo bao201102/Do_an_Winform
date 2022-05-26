@@ -166,11 +166,13 @@ namespace Do_an_Winform.PL.Nhanvien
         private void btnLogout_Click(object sender, EventArgs e)
         {
             MessBox messBox = new MessBox();
-            bool result = messBox.ShowMess("Bạn có muốn đăng xuất ?");
+            bool result = messBox.ShowMess("Bạn muốn đăng xuất ?");
             if (result)
             {
-                frm_DangNhap frmLogin = new frm_DangNhap();
-                frmLogin.Show();
+                frm_DangNhap loginform = new frm_DangNhap();
+                this.Hide();
+                loginform.ShowDialog();
+                this.Close();
             }
         }
     }

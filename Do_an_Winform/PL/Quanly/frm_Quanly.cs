@@ -38,6 +38,7 @@ namespace Do_an_Winform.PL.Quanly
             nhanvien = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
             loainhanvien = LoaiNhanVienBLL.GetEmpType(nhanvien.MaLoaiNV);
             userBtn.Text = nhanvien.TenNV;
+            OpenChildForm(new frm_QLTQ());
             
         }
 

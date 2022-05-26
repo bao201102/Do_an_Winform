@@ -321,7 +321,7 @@ namespace Do_an_Winform.DAL
             return entities1.SaveChanges() > 0 ? true : false;
         }
 
-        public static Dictionary<int, double> GetRevenueByDay(DateTime time)
+        public static Dictionary<int, double> GetRevenueByThisMonth(DateTime time)
         {
             CHDTEntities1 entities = new CHDTEntities1();
 
@@ -342,7 +342,7 @@ namespace Do_an_Winform.DAL
             return list;
         }
 
-        public static Dictionary<int, double> GetRevenueByMonth(DateTime time)
+        public static Dictionary<int, double> GetRevenueByThisYear(DateTime time)
         {
             CHDTEntities1 entities = new CHDTEntities1();
 

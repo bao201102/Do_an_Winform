@@ -18,6 +18,16 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
             InitializeComponent();
         }
 
+        private void GetSumRevenue(Dictionary<int, double> revenue)
+        {
+            double sum = 0;
+            foreach (KeyValuePair<int,double> item in revenue)
+            {
+                sum += item.Value;
+            }
+            lblDT.Text = String.Format("{0:0,0}", sum);
+        }
+
         private void chartDT_Load(Dictionary<int, double> data)
         {
             chartCanvasDT.Clear();
@@ -42,20 +52,22 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
 
         private void frm_QLTQ_Load(object sender, EventArgs e)
         {
-            bunifuDatePicker1.Value = DateTime.Now;
             cbDate.SelectedIndex = 0;
-            chartDT_Load(HoaDonBLL.GetRevenueByYear(bunifuDatePicker1.Value));
+            chartDT_Load(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
+            GetSumRevenue(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
         }
 
         private void cbDate_SelectionChangeCommitted(object sender, EventArgs e)
         {
             if (cbDate.SelectedIndex == 0)
             {
-                chartDT_Load(HoaDonBLL.GetRevenueByDay(bunifuDatePicker1.Value));
+                chartDT_Load(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
+                GetSumRevenue(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
             }
             else
             {
-                chartDT_Load(HoaDonBLL.GetRevenueByMonth(bunifuDatePicker1.Value));
+                chartDT_Load(HoaDonBLL.GetRevenueByThisYear(DateTime.Now));
+                GetSumRevenue(HoaDonBLL.GetRevenueByThisYear(DateTime.Now));
             }
         }
 
