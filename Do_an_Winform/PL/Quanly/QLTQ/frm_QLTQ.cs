@@ -18,6 +18,16 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
             InitializeComponent();
         }
 
+        private void GetSumCost(Dictionary<int, double> cost)
+        {
+            double sum = 0;
+            foreach (KeyValuePair<int, double> item in cost)
+            {
+                sum += item.Value;
+            }
+            lblCP.Text = String.Format("{0:0,0}", sum);
+        }
+
         private void GetSumRevenue(Dictionary<int, double> revenue)
         {
             double sum = 0;
@@ -55,6 +65,7 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
             cbDate.SelectedIndex = 0;
             chartDT_Load(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
             GetSumRevenue(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
+            GetSumCost(PhieuNhapHangBLL.GetCostByThisMonth(DateTime.Now));
         }
 
         private void cbDate_SelectionChangeCommitted(object sender, EventArgs e)
@@ -63,11 +74,13 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
             {
                 chartDT_Load(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
                 GetSumRevenue(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
+                GetSumCost(PhieuNhapHangBLL.GetCostByThisMonth(DateTime.Now));
             }
             else
             {
                 chartDT_Load(HoaDonBLL.GetRevenueByThisYear(DateTime.Now));
                 GetSumRevenue(HoaDonBLL.GetRevenueByThisYear(DateTime.Now));
+                GetSumCost(PhieuNhapHangBLL.GetCostByThisYear(DateTime.Now));
             }
         }
 

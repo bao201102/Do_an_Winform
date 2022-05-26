@@ -3,6 +3,7 @@ using Do_an_Winform.PL.Nhanvien;
 using Do_an_Winform.PL.Quanly;
 using Do_an_Winform.PL.Quanly.QLBC;
 using Do_an_Winform.PL.Quanly.QLSP;
+using Do_an_Winform.PL.Quanly.QLTQ;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace Do_an_Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_DangNhap());
+            Application.Run(new frm_QLTQ());
         }
     }
 }

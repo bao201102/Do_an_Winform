@@ -363,25 +363,10 @@ namespace Do_an_Winform.DAL
             return list;
         }
 
-        public static Dictionary<int, double> GetRevenueByYear(DateTime time)
+        public int CountBillThisMonth(DateTime time)
         {
             CHDTEntities1 entities = new CHDTEntities1();
-
-            var query = from hd in entities.HoaDons
-                        where hd.TrangThai == "1"
-                        group hd by hd.NgayTaoHD.Year into table
-                        select new
-                        {
-                            Key = table.Key,
-                            Value = table.Sum(t => t.ThanhTien)
-                        };
-
-            Dictionary<int, double> list = new Dictionary<int, double>();
-            foreach (var item in query.OrderBy(t => t.Key))
-            {
-                list.Add(item.Key, item.Value);
-            }
-            return list;
+            return 0;
         }
     }
 }
