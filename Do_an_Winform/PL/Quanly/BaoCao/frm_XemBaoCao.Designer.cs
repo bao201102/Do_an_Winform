@@ -86,14 +86,14 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             this.lblBaocao.AutoEllipsis = false;
             this.lblBaocao.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblBaocao.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblBaocao.Font = new System.Drawing.Font("Leelawadee UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaocao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.lblBaocao.Location = new System.Drawing.Point(28, 65);
+            this.lblBaocao.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaocao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.lblBaocao.Location = new System.Drawing.Point(432, 62);
             this.lblBaocao.Name = "lblBaocao";
             this.lblBaocao.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBaocao.Size = new System.Drawing.Size(74, 28);
+            this.lblBaocao.Size = new System.Drawing.Size(93, 32);
             this.lblBaocao.TabIndex = 63;
-            this.lblBaocao.Text = "Báo cáo";
+            this.lblBaocao.Text = "Báo Cáo";
             this.lblBaocao.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblBaocao.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

@@ -100,5 +100,24 @@ namespace Do_an_Winform.BLL
             return HoaDonDAL.GetRevenueByThisYear(time);
         }
 
+        public static int CountBillThisMonth(DateTime time)
+        {
+            return HoaDonDAL.CountBillThisMonth(time);
+        }
+
+        public static int CountBillThisYear(DateTime time)
+        {
+            return HoaDonDAL.CountBillThisYear(time);
+        }
+
+        public static int CountRejectedBillThisMonth(DateTime time)
+        {
+            return HoaDonDAL.CountRejectedBillThisMonth(time);
+        }
+
+        public static int CountRejectedBillThisYear(DateTime time)
+        {
+            return HoaDonDAL.CountRejectedBillThisYear(time);
+        }
     }
 }

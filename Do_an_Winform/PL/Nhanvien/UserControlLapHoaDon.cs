@@ -2,6 +2,7 @@
 using Do_an_Winform.DAL;
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
+using Do_an_Winform.PL.Quanly.BaoCao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,10 +40,9 @@ namespace Do_an_Winform.PL.Nhanvien
             dgvInfoProduct.Columns[2].ReadOnly = true;
             dgvInfoProduct.Columns[3].ReadOnly = true;
             dgvInfoProduct.Columns[4].ReadOnly = true;
-        }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
+            dgvInfoProduct.AllowUserToResizeColumns = false;
+            dgvInfoProduct.AllowUserToResizeRows = false;
         }
 
         private void UserControlLapHoaDon_Load(object sender, EventArgs e)
@@ -220,17 +220,8 @@ namespace Do_an_Winform.PL.Nhanvien
                 }
             }
         }
-        
+      
 
-        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            
-        }
         private static string TachThanhTien(string thanhTien)
         {
             string v = "";
@@ -243,36 +234,7 @@ namespace Do_an_Winform.PL.Nhanvien
             }
             return v;
         }
-        public static HoaDonDTO CheckIdBill(List<HoaDonDTO> listHoaDon, string maHD)
-        {
-            HoaDonDTO hoaDon = new HoaDonDTO();
-            for (int i = 0; i < listHoaDon.Count; i++)
-            {
-                if (listHoaDon[i].MaHD == maHD)
-                {
-                    hoaDon = listHoaDon[i];
-                    break;
-                }
-            }
-            return hoaDon;
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void DatePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
         
-
         private void btnIn2_Click(object sender, EventArgs e)
         {
             if (cbTenSP.Text == "")
@@ -377,8 +339,9 @@ namespace Do_an_Winform.PL.Nhanvien
             {
                 loaiTV = "Không";
             }
-            frm_XemHoaDon frmHD = new frm_XemHoaDon(txtMaHD.Text, tenNV, ngayTao, tenKH, loaiTV, giamGia);
-            frmHD.Show();
+            frm_XemBaoCao frmHD = new frm_XemBaoCao();
+            frmHD.rptHoaDon(txtMaHD.Text, tenNV, ngayTao, tenKH, loaiTV, giamGia);
+            frmHD.ShowDialog();
         }
         private DataTable dataTable = new DataTable();
         private void gridview_Load()
@@ -577,6 +540,18 @@ namespace Do_an_Winform.PL.Nhanvien
         {
             this.Hide();
             this.Parent = null;
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtSL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

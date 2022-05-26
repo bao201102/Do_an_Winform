@@ -21,6 +21,8 @@ namespace Do_an_Winform.PL.Nhanvien
         public UserControlSanPham()
         {
             InitializeComponent();
+            dgvAllProduct.AllowUserToResizeColumns = false;
+            dgvAllProduct.AllowUserToResizeRows = false;
             dgvAllProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAllProduct.ReadOnly = true;
         }

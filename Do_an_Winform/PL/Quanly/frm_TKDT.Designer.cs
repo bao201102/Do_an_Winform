@@ -99,11 +99,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel1.Controls.Add(this.bunifuPanel2);
             this.bunifuPanel1.Controls.Add(this.bunifuPanel3);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(4, 4);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuPanel1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1684, 688);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1263, 559);
             this.bunifuPanel1.TabIndex = 72;
             // 
             // chartCanvasTKDT
@@ -134,13 +134,13 @@ namespace Do_an_Winform.PL.Quanly
             this.chartCanvasTKDT.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
             this.chartCanvasTKDT.LegendRevese = false;
             this.chartCanvasTKDT.LegendRTL = false;
-            this.chartCanvasTKDT.Location = new System.Drawing.Point(525, 405);
-            this.chartCanvasTKDT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.chartCanvasTKDT.Location = new System.Drawing.Point(394, 329);
+            this.chartCanvasTKDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartCanvasTKDT.Name = "chartCanvasTKDT";
-            this.chartCanvasTKDT.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartCanvasTKDT.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.chartCanvasTKDT.ShowXAxis = true;
             this.chartCanvasTKDT.ShowYAxis = true;
-            this.chartCanvasTKDT.Size = new System.Drawing.Size(688, 246);
+            this.chartCanvasTKDT.Size = new System.Drawing.Size(516, 200);
             this.chartCanvasTKDT.TabIndex = 78;
             this.chartCanvasTKDT.Title = "";
             this.chartCanvasTKDT.TitleLineHeight = 1.2D;
@@ -190,11 +190,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(1176, 21);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(882, 17);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(479, 62);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(359, 50);
             this.bunifuGradientPanel1.TabIndex = 77;
             // 
             // maskedtxtToday
@@ -217,11 +217,10 @@ namespace Do_an_Winform.PL.Quanly
             this.maskedtxtToday.IconColor = System.Drawing.Color.Gray;
             this.maskedtxtToday.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.maskedtxtToday.LeftTextMargin = 5;
-            this.maskedtxtToday.Location = new System.Drawing.Point(168, 10);
-            this.maskedtxtToday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maskedtxtToday.Location = new System.Drawing.Point(126, 8);
             this.maskedtxtToday.MinimumSize = new System.Drawing.Size(4, 32);
             this.maskedtxtToday.Name = "maskedtxtToday";
-            this.maskedtxtToday.Size = new System.Drawing.Size(292, 32);
+            this.maskedtxtToday.Size = new System.Drawing.Size(220, 32);
             this.maskedtxtToday.TabIndex = 1;
             this.maskedtxtToday.Value = new System.DateTime(2022, 5, 25, 21, 19, 0, 0);
             // 
@@ -230,9 +229,10 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Leelawadee UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(21, 17);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(16, 14);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(138, 25);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(108, 20);
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "Ngày cập nhật:";
             // 
@@ -253,11 +253,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel2.Controls.Add(this.label3);
             this.bunifuPanel2.Controls.Add(this.label4);
             this.bunifuPanel2.Controls.Add(this.ChiPhi);
-            this.bunifuPanel2.Location = new System.Drawing.Point(931, 111);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuPanel2.Location = new System.Drawing.Point(698, 90);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(552, 256);
+            this.bunifuPanel2.Size = new System.Drawing.Size(414, 208);
             this.bunifuPanel2.TabIndex = 76;
             // 
             // btnTK
@@ -268,7 +268,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnTK.ActiveForecolor = System.Drawing.Color.Black;
             this.btnTK.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTK.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTK.BackColor = System.Drawing.Color.White;
             this.btnTK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTK.BackgroundImage")));
             this.btnTK.ButtonText = "Thống kê";
             this.btnTK.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -279,10 +279,10 @@ namespace Do_an_Winform.PL.Quanly
             this.btnTK.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnTK.IdleForecolor = System.Drawing.Color.Black;
             this.btnTK.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnTK.Location = new System.Drawing.Point(225, 198);
-            this.btnTK.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnTK.Location = new System.Drawing.Point(169, 161);
+            this.btnTK.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnTK.Name = "btnTK";
-            this.btnTK.Size = new System.Drawing.Size(136, 52);
+            this.btnTK.Size = new System.Drawing.Size(102, 42);
             this.btnTK.TabIndex = 80;
             this.btnTK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
@@ -317,8 +317,8 @@ namespace Do_an_Winform.PL.Quanly
             this.txtDoanhThu.IconRight = null;
             this.txtDoanhThu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDoanhThu.Lines = new string[0];
-            this.txtDoanhThu.Location = new System.Drawing.Point(207, 53);
-            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDoanhThu.Location = new System.Drawing.Point(155, 43);
+            this.txtDoanhThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDoanhThu.MaxLength = 32767;
             this.txtDoanhThu.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDoanhThu.Modified = false;
@@ -344,7 +344,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtDoanhThu.OnIdleState = stateProperties4;
-            this.txtDoanhThu.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDoanhThu.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDoanhThu.PasswordChar = '\0';
             this.txtDoanhThu.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtDoanhThu.PlaceholderText = "Enter text";
@@ -354,7 +354,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtDoanhThu.SelectionLength = 0;
             this.txtDoanhThu.SelectionStart = 0;
             this.txtDoanhThu.ShortcutsEnabled = true;
-            this.txtDoanhThu.Size = new System.Drawing.Size(284, 36);
+            this.txtDoanhThu.Size = new System.Drawing.Size(213, 29);
             this.txtDoanhThu.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDoanhThu.TabIndex = 77;
             this.txtDoanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -395,8 +395,8 @@ namespace Do_an_Winform.PL.Quanly
             this.txtLoiNhuan.IconRight = null;
             this.txtLoiNhuan.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLoiNhuan.Lines = new string[0];
-            this.txtLoiNhuan.Location = new System.Drawing.Point(207, 146);
-            this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLoiNhuan.Location = new System.Drawing.Point(155, 119);
+            this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLoiNhuan.MaxLength = 32767;
             this.txtLoiNhuan.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtLoiNhuan.Modified = false;
@@ -422,7 +422,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtLoiNhuan.OnIdleState = stateProperties8;
-            this.txtLoiNhuan.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLoiNhuan.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLoiNhuan.PasswordChar = '\0';
             this.txtLoiNhuan.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtLoiNhuan.PlaceholderText = "Enter text";
@@ -432,7 +432,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtLoiNhuan.SelectionLength = 0;
             this.txtLoiNhuan.SelectionStart = 0;
             this.txtLoiNhuan.ShortcutsEnabled = true;
-            this.txtLoiNhuan.Size = new System.Drawing.Size(284, 36);
+            this.txtLoiNhuan.Size = new System.Drawing.Size(213, 29);
             this.txtLoiNhuan.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtLoiNhuan.TabIndex = 76;
             this.txtLoiNhuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -473,8 +473,8 @@ namespace Do_an_Winform.PL.Quanly
             this.txtChiPhi.IconRight = null;
             this.txtChiPhi.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtChiPhi.Lines = new string[0];
-            this.txtChiPhi.Location = new System.Drawing.Point(207, 100);
-            this.txtChiPhi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtChiPhi.Location = new System.Drawing.Point(155, 81);
+            this.txtChiPhi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtChiPhi.MaxLength = 32767;
             this.txtChiPhi.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtChiPhi.Modified = false;
@@ -500,7 +500,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtChiPhi.OnIdleState = stateProperties12;
-            this.txtChiPhi.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtChiPhi.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtChiPhi.PasswordChar = '\0';
             this.txtChiPhi.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtChiPhi.PlaceholderText = "Enter text";
@@ -510,7 +510,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtChiPhi.SelectionLength = 0;
             this.txtChiPhi.SelectionStart = 0;
             this.txtChiPhi.ShortcutsEnabled = true;
-            this.txtChiPhi.Size = new System.Drawing.Size(284, 36);
+            this.txtChiPhi.Size = new System.Drawing.Size(213, 29);
             this.txtChiPhi.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtChiPhi.TabIndex = 14;
             this.txtChiPhi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -526,9 +526,10 @@ namespace Do_an_Winform.PL.Quanly
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 21);
+            this.label1.Location = new System.Drawing.Point(22, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 30);
+            this.label1.Size = new System.Drawing.Size(88, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "Thông tin";
             // 
@@ -539,9 +540,10 @@ namespace Do_an_Winform.PL.Quanly
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 154);
+            this.label3.Location = new System.Drawing.Point(34, 125);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 28);
+            this.label3.Size = new System.Drawing.Size(83, 21);
             this.label3.TabIndex = 8;
             this.label3.Text = "Lợi Nhuận";
             // 
@@ -552,9 +554,10 @@ namespace Do_an_Winform.PL.Quanly
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(45, 60);
+            this.label4.Location = new System.Drawing.Point(34, 49);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 28);
+            this.label4.Size = new System.Drawing.Size(86, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "Doanh Thu";
             // 
@@ -565,9 +568,10 @@ namespace Do_an_Winform.PL.Quanly
             this.ChiPhi.AutoSize = true;
             this.ChiPhi.BackColor = System.Drawing.Color.Transparent;
             this.ChiPhi.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChiPhi.Location = new System.Drawing.Point(45, 107);
+            this.ChiPhi.Location = new System.Drawing.Point(34, 87);
+            this.ChiPhi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ChiPhi.Name = "ChiPhi";
-            this.ChiPhi.Size = new System.Drawing.Size(72, 28);
+            this.ChiPhi.Size = new System.Drawing.Size(59, 21);
             this.ChiPhi.TabIndex = 9;
             this.ChiPhi.Text = "Chi Phí";
             // 
@@ -588,11 +592,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel3.Controls.Add(this.label12);
             this.bunifuPanel3.Controls.Add(this.label15);
             this.bunifuPanel3.Controls.Add(this.label13);
-            this.bunifuPanel3.Location = new System.Drawing.Point(239, 111);
-            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuPanel3.Location = new System.Drawing.Point(179, 90);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(552, 256);
+            this.bunifuPanel3.Size = new System.Drawing.Size(414, 208);
             this.bunifuPanel3.TabIndex = 73;
             // 
             // cbThangTK
@@ -615,10 +619,10 @@ namespace Do_an_Winform.PL.Quanly
             "11",
             "12",
             "Tất cả"});
-            this.cbThangTK.Location = new System.Drawing.Point(249, 201);
-            this.cbThangTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbThangTK.Location = new System.Drawing.Point(187, 163);
+            this.cbThangTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbThangTK.Name = "cbThangTK";
-            this.cbThangTK.Size = new System.Drawing.Size(255, 36);
+            this.cbThangTK.Size = new System.Drawing.Size(192, 29);
             this.cbThangTK.TabIndex = 77;
             // 
             // label2
@@ -628,9 +632,10 @@ namespace Do_an_Winform.PL.Quanly
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 204);
+            this.label2.Location = new System.Drawing.Point(27, 166);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 28);
+            this.label2.Size = new System.Drawing.Size(53, 21);
             this.label2.TabIndex = 76;
             this.label2.Text = "Tháng";
             // 
@@ -664,8 +669,8 @@ namespace Do_an_Winform.PL.Quanly
             this.txtNamTK.IconRight = null;
             this.txtNamTK.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNamTK.Lines = new string[0];
-            this.txtNamTK.Location = new System.Drawing.Point(249, 110);
-            this.txtNamTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNamTK.Location = new System.Drawing.Point(187, 89);
+            this.txtNamTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNamTK.MaxLength = 32767;
             this.txtNamTK.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNamTK.Modified = false;
@@ -691,7 +696,7 @@ namespace Do_an_Winform.PL.Quanly
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNamTK.OnIdleState = stateProperties16;
-            this.txtNamTK.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNamTK.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNamTK.PasswordChar = '\0';
             this.txtNamTK.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNamTK.PlaceholderText = "";
@@ -701,7 +706,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtNamTK.SelectionLength = 0;
             this.txtNamTK.SelectionStart = 0;
             this.txtNamTK.ShortcutsEnabled = true;
-            this.txtNamTK.Size = new System.Drawing.Size(256, 36);
+            this.txtNamTK.Size = new System.Drawing.Size(192, 29);
             this.txtNamTK.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNamTK.TabIndex = 14;
             this.txtNamTK.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -724,10 +729,10 @@ namespace Do_an_Winform.PL.Quanly
             "3",
             "4",
             "Tất cả"});
-            this.cbQuyTK.Location = new System.Drawing.Point(249, 155);
-            this.cbQuyTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbQuyTK.Location = new System.Drawing.Point(187, 126);
+            this.cbQuyTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbQuyTK.Name = "cbQuyTK";
-            this.cbQuyTK.Size = new System.Drawing.Size(255, 36);
+            this.cbQuyTK.Size = new System.Drawing.Size(192, 29);
             this.cbQuyTK.TabIndex = 13;
             this.cbQuyTK.SelectedIndexChanged += new System.EventHandler(this.cbQuyTK_SelectedIndexChanged);
             // 
@@ -741,10 +746,10 @@ namespace Do_an_Winform.PL.Quanly
             "Năm",
             "Quý",
             "Tháng"});
-            this.cbHTTK.Location = new System.Drawing.Point(249, 64);
-            this.cbHTTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbHTTK.Location = new System.Drawing.Point(187, 52);
+            this.cbHTTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbHTTK.Name = "cbHTTK";
-            this.cbHTTK.Size = new System.Drawing.Size(255, 36);
+            this.cbHTTK.Size = new System.Drawing.Size(192, 29);
             this.cbHTTK.TabIndex = 11;
             this.cbHTTK.SelectedIndexChanged += new System.EventHandler(this.cbHTTK_SelectedIndexChanged);
             // 
@@ -753,9 +758,10 @@ namespace Do_an_Winform.PL.Quanly
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(23, 21);
+            this.label16.Location = new System.Drawing.Point(17, 17);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(269, 30);
+            this.label16.Size = new System.Drawing.Size(209, 23);
             this.label16.TabIndex = 6;
             this.label16.Text = "Chọn hình thức thống kê";
             // 
@@ -766,9 +772,10 @@ namespace Do_an_Winform.PL.Quanly
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(36, 159);
+            this.label12.Location = new System.Drawing.Point(27, 129);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 28);
+            this.label12.Size = new System.Drawing.Size(39, 21);
             this.label12.TabIndex = 10;
             this.label12.Text = "Quý";
             // 
@@ -779,9 +786,10 @@ namespace Do_an_Winform.PL.Quanly
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(36, 68);
+            this.label15.Location = new System.Drawing.Point(27, 55);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(180, 28);
+            this.label15.Size = new System.Drawing.Size(142, 21);
             this.label15.TabIndex = 7;
             this.label15.Text = "Hình thức thống kê";
             // 
@@ -792,9 +800,10 @@ namespace Do_an_Winform.PL.Quanly
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(36, 113);
+            this.label13.Location = new System.Drawing.Point(27, 92);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(137, 28);
+            this.label13.Size = new System.Drawing.Size(109, 21);
             this.label13.TabIndex = 9;
             this.label13.Text = "Năm thống kê";
             // 
@@ -806,11 +815,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(65, 26);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuLabel1.Location = new System.Drawing.Point(49, 21);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(296, 41);
+            this.bunifuLabel1.Size = new System.Drawing.Size(241, 33);
             this.bunifuLabel1.TabIndex = 1;
             this.bunifuLabel1.Text = "Thống Kê Doanh Thu";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -957,12 +966,12 @@ namespace Do_an_Winform.PL.Quanly
             // 
             // frm_TKDT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1693, 697);
+            this.ClientSize = new System.Drawing.Size(1270, 566);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_TKDT";
             this.Text = "frm_TKDT";
             this.Load += new System.EventHandler(this.frm_TKDT_Load);

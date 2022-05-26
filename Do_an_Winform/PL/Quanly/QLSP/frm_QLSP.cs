@@ -18,6 +18,8 @@ namespace Do_an_Winform.PL.Quanly
         public frm_QLSP()
         {
             InitializeComponent();
+            dgvDSSP.AllowUserToResizeColumns = false;
+            dgvDSSP.AllowUserToResizeRows = false;
         }
 
         internal void frm_QLSP_Load(object sender, EventArgs e)

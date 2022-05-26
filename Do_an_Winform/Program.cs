@@ -3,6 +3,7 @@ using Do_an_Winform.PL.Nhanvien;
 using Do_an_Winform.PL.Quanly;
 using Do_an_Winform.PL.Quanly.QLBC;
 using Do_an_Winform.PL.Quanly.QLSP;
+using Do_an_Winform.PL.Quanly.QLTQ;
 using System;
 using System.Collections.Generic;
 using System.Linq;

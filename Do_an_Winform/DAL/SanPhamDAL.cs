@@ -127,6 +127,30 @@ namespace Do_an_Winform.DAL
 
         }
 
+        public static List<object> GetOutOfStockProduct(int limit)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var query = from sp in entities.SanPhams
+                       join lsp in entities.LoaiSanPhams
+                       on sp.MaLoaiSP equals lsp.MaLoaiSP
+                       where sp.TrangThai == "1" && sp.SoLuong <= limit
+                       select new
+                       {
+                           sp.MaSP,
+                           sp.TenSP,
+                           sp.SoLuong,
+                           sp.DonGia,
+                           lsp.TenLoaiSP,
+                       };
+
+            List<object> list = new List<object>();
+            foreach (var item in query)
+            {
+                list.Add(item);
+            }
+            return list;
+        }
+
         public static List<object> GetAllProductByName(string tensp)
         {
             CHDTEntities1 entities = new CHDTEntities1();

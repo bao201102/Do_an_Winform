@@ -20,6 +20,11 @@ namespace Do_an_Winform.BLL
             return SanPhamDAL.GetProduct();
         }
 
+        public static List<object> GetOutOfStockProduct(int limit)
+        {
+            return SanPhamDAL.GetOutOfStockProduct(limit);
+        }
+
         public static List<object> GetAllProductByName(string tensp)
         {
             return SanPhamDAL.GetAllProductByName(tensp);
