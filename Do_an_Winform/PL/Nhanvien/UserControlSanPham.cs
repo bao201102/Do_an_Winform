@@ -55,6 +55,7 @@ namespace Do_an_Winform.PL.Nhanvien
             }
             dgvAllProduct.DataSource = listSanPham;
             this.GanDuLieu();
+            dgvAllProduct.Columns[6].Visible = false;
         }
 
         private void btnLoc_Click(object sender, EventArgs e)
@@ -77,7 +78,7 @@ namespace Do_an_Winform.PL.Nhanvien
                         catch
                         {
                             bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Không tìm thấy sản phẩm. Vui lòng thử lại",
-                                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                         }
                     }
                     else
@@ -90,7 +91,7 @@ namespace Do_an_Winform.PL.Nhanvien
                         catch
                         {
                             bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Không tìm thấy sản phẩm. Vui lòng thử lại",
-                                                            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                                                            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                         }
                     }
                 }
@@ -107,7 +108,7 @@ namespace Do_an_Winform.PL.Nhanvien
                         catch
                         {
                             bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Không tìm thấy sản phẩm. Vui lòng thử lại",
-                                                            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                                                            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                         }
                     }
                     else
@@ -120,7 +121,7 @@ namespace Do_an_Winform.PL.Nhanvien
                         catch
                         {
                             bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Không tìm thấy sản phẩm. Vui lòng thử lại",
-                                                       Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                                                       Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                         }
                     }
                 }
@@ -142,7 +143,7 @@ namespace Do_an_Winform.PL.Nhanvien
                         catch
                         {
                             bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Không tìm thấy sản phẩm. Vui lòng thử lại",
-                                                      Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                                                      Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                         }
                     }
                     else
@@ -156,7 +157,7 @@ namespace Do_an_Winform.PL.Nhanvien
                         catch
                         {
                             bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Không tìm thấy sản phẩm. Vui lòng thử lại",
-                                                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                                                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                         }
                     }
                 }
@@ -173,13 +174,13 @@ namespace Do_an_Winform.PL.Nhanvien
                         catch
                         {
                             bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Không tìm thấy sản phẩm. Vui lòng thử lại",
-                                                     Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                                                     Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                         }
                     }
                     else
                     {
                         bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Vui lòng chọn dữ liệu cần lọc",
-                                   Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                                   Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                     }
                 }
             }
@@ -192,7 +193,6 @@ namespace Do_an_Winform.PL.Nhanvien
             dgvAllProduct.Columns[3].HeaderText = "Đơn giá";
             dgvAllProduct.Columns[4].HeaderText = "Loại SP";
             dgvAllProduct.Columns[5].HeaderText = "Thương hiệu";
-            dgvAllProduct.Columns[6].Visible = false;
         }
         public static string GetMinPrice(string priceRange)
         {

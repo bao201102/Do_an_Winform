@@ -518,6 +518,9 @@
     <EmbeddedResource Include="PL\Nhanvien\frm_NVien.resx">
       <DependentUpon>frm_NVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Nhanvien\frm_XemHD.resx">
+      <DependentUpon>frm_XemHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Nhanvien\rpt_HoaDon.rdlc" />
     <EmbeddedResource Include="PL\Nhanvien\UserControlKhachHang.resx">
       <DependentUpon>UserControlKhachHang.cs</DependentUpon>

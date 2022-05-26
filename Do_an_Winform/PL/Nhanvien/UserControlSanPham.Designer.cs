@@ -110,7 +110,7 @@
             this.btnLoc.ActiveForecolor = System.Drawing.Color.Black;
             this.btnLoc.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLoc.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLoc.BackColor = System.Drawing.Color.White;
             this.btnLoc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLoc.BackgroundImage")));
             this.btnLoc.ButtonText = "Lọc";
             this.btnLoc.Cursor = System.Windows.Forms.Cursors.Hand;

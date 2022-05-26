@@ -14,6 +14,7 @@ namespace Do_an_Winform.PL.Nhanvien
     {
         string tennv = "";
         string ngayTao = "";
+
         public frm_XemHD(string tennv1, string ngayTao1)
         {
             InitializeComponent();
@@ -23,7 +24,6 @@ namespace Do_an_Winform.PL.Nhanvien
             gridXemHD.AllowUserToResizeColumns = false;
             gridXemHD.AllowUserToResizeRows = false;
         }
-
         private void frm_XemHD_Load(object sender, EventArgs e)
         {
             lblTenNV.Text = tennv;
