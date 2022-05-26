@@ -308,5 +308,47 @@ namespace Do_an_Winform.DAL
             }
             return list;
         }
+
+        public static Dictionary<int, double> GetCostByThisMonth(DateTime time)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = from pn in entities.PhieuNhapHangs
+                        where pn.TrangThai == "1" && pn.NgayTaoPN.Month.Equals(time.Month) && pn.NgayTaoPN.Year.Equals(time.Year)
+                        group pn by pn.NgayTaoPN.Day into table
+                        select new
+                        {
+                            Key = table.Key,
+                            Value = table.Sum(t => t.ThanhTien)
+                        };
+
+            Dictionary<int, double> list = new Dictionary<int, double>();
+            foreach (var item in query.OrderBy(t => t.Key))
+            {
+                list.Add(item.Key, item.Value);
+            }
+            return list;
+        }
+
+        public static Dictionary<int, double> GetCostByThisYear(DateTime time)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = from pn in entities.PhieuNhapHangs
+                        where pn.TrangThai == "1" && pn.NgayTaoPN.Year.Equals(time.Year)
+                        group pn by pn.NgayTaoPN.Day into table
+                        select new
+                        {
+                            Key = table.Key,
+                            Value = table.Sum(t => t.ThanhTien)
+                        };
+
+            Dictionary<int, double> list = new Dictionary<int, double>();
+            foreach (var item in query.OrderBy(t => t.Key))
+            {
+                list.Add(item.Key, item.Value);
+            }
+            return list;
+        }
     }
 }
