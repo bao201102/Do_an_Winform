@@ -16,6 +16,10 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
         public frm_QLTQ()
         {
             InitializeComponent();
+            dgvDSSP.AllowUserToAddRows = false;
+            dgvDSSP.AllowUserToDeleteRows = false;
+            dgvDSSP.AllowUserToResizeColumns = false;
+            dgvDSSP.AllowUserToResizeRows = false;
         }
 
         private void GetSumCost(Dictionary<int, double> cost)
@@ -66,8 +70,17 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
             chartDT_Load(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
             GetSumRevenue(HoaDonBLL.GetRevenueByThisMonth(DateTime.Now));
             GetSumCost(PhieuNhapHangBLL.GetCostByThisMonth(DateTime.Now));
+
             lblDaBan.Text = HoaDonBLL.CountBillThisMonth(DateTime.Now).ToString();
             lblDaHuy.Text = HoaDonBLL.CountRejectedBillThisMonth(DateTime.Now).ToString();
+
+            txtSL.Text = "10";
+            dgvDSSP.DataSource = SanPhamBLL.GetOutOfStockProduct(int.Parse(txtSL.Text));
+            dgvDSSP.Columns[0].Visible = false;
+            dgvDSSP.Columns[1].HeaderText = "Tên sản phẩm";
+            dgvDSSP.Columns[2].HeaderText = "Đơn giá";
+            dgvDSSP.Columns[3].HeaderText = "Số lượng";
+            dgvDSSP.Columns[4].HeaderText = "Loại sản phẩm";
         }
 
         private void cbDate_SelectionChangeCommitted(object sender, EventArgs e)
@@ -93,6 +106,23 @@ namespace Do_an_Winform.PL.Quanly.QLTQ
         private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
         {
             cbDate_SelectionChangeCommitted(sender, e);
+        }
+
+        private void txtSL_TextChange(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvDSSP.DataSource = SanPhamBLL.GetOutOfStockProduct(int.Parse(txtSL.Text));
+                dgvDSSP.Columns[0].Visible = false;
+                dgvDSSP.Columns[1].HeaderText = "Tên sản phẩm";
+                dgvDSSP.Columns[2].HeaderText = "Đơn giá";
+                dgvDSSP.Columns[3].HeaderText = "Số lượng";
+                dgvDSSP.Columns[4].HeaderText = "Loại sản phẩm";
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

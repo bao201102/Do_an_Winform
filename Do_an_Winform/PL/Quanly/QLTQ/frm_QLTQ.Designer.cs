@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_QLTQ));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -55,21 +59,22 @@
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.dgvDSSP = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel11 = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbDate = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtSL = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.dgvDSSP = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel4.SuspendLayout();
             this.bunifuPanel5.SuspendLayout();
             this.bunifuPanel7.SuspendLayout();
             this.bunifuPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSP)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSP)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -455,8 +460,9 @@
             this.bunifuPanel6.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel6.BorderRadius = 20;
             this.bunifuPanel6.BorderThickness = 1;
-            this.bunifuPanel6.Controls.Add(this.bunifuLabel10);
             this.bunifuPanel6.Controls.Add(this.dgvDSSP);
+            this.bunifuPanel6.Controls.Add(this.txtSL);
+            this.bunifuPanel6.Controls.Add(this.bunifuLabel10);
             this.bunifuPanel6.Location = new System.Drawing.Point(540, 11);
             this.bunifuPanel6.Name = "bunifuPanel6";
             this.bunifuPanel6.ShowBorders = true;
@@ -479,69 +485,6 @@
             this.bunifuLabel10.Text = "Sản phẩm sắp hết hàng";
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // dgvDSSP
-            // 
-            this.dgvDSSP.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvDSSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDSSP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDSSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDSSP.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDSSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDSSP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDSSP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDSSP.ColumnHeadersHeight = 40;
-            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvDSSP.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvDSSP.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvDSSP.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvDSSP.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvDSSP.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvDSSP.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvDSSP.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvDSSP.CurrentTheme.Name = null;
-            this.dgvDSSP.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDSSP.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvDSSP.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvDSSP.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvDSSP.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSSP.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDSSP.EnableHeadersVisualStyles = false;
-            this.dgvDSSP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvDSSP.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvDSSP.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvDSSP.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDSSP.Location = new System.Drawing.Point(20, 58);
-            this.dgvDSSP.Name = "dgvDSSP";
-            this.dgvDSSP.RowHeadersVisible = false;
-            this.dgvDSSP.RowTemplate.Height = 40;
-            this.dgvDSSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSSP.Size = new System.Drawing.Size(737, 192);
-            this.dgvDSSP.TabIndex = 18;
-            this.dgvDSSP.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // bunifuPanel1
             // 
@@ -665,6 +608,145 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1328, 844);
             this.tableLayoutPanel1.TabIndex = 26;
             // 
+            // txtSL
+            // 
+            this.txtSL.AcceptsReturn = false;
+            this.txtSL.AcceptsTab = false;
+            this.txtSL.AnimationSpeed = 200;
+            this.txtSL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtSL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtSL.AutoSizeHeight = true;
+            this.txtSL.BackColor = System.Drawing.Color.Transparent;
+            this.txtSL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSL.BackgroundImage")));
+            this.txtSL.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtSL.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtSL.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtSL.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtSL.BorderRadius = 20;
+            this.txtSL.BorderThickness = 1;
+            this.txtSL.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSL.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSL.DefaultFont = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSL.DefaultText = "";
+            this.txtSL.FillColor = System.Drawing.Color.White;
+            this.txtSL.HideSelection = true;
+            this.txtSL.IconLeft = null;
+            this.txtSL.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSL.IconPadding = 10;
+            this.txtSL.IconRight = null;
+            this.txtSL.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSL.Lines = new string[0];
+            this.txtSL.Location = new System.Drawing.Point(657, 12);
+            this.txtSL.MaxLength = 32767;
+            this.txtSL.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtSL.Modified = false;
+            this.txtSL.Multiline = false;
+            this.txtSL.Name = "txtSL";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSL.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSL.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSL.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSL.OnIdleState = stateProperties4;
+            this.txtSL.Padding = new System.Windows.Forms.Padding(3);
+            this.txtSL.PasswordChar = '\0';
+            this.txtSL.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSL.PlaceholderText = "";
+            this.txtSL.ReadOnly = false;
+            this.txtSL.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSL.SelectedText = "";
+            this.txtSL.SelectionLength = 0;
+            this.txtSL.SelectionStart = 0;
+            this.txtSL.ShortcutsEnabled = true;
+            this.txtSL.Size = new System.Drawing.Size(100, 38);
+            this.txtSL.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtSL.TabIndex = 23;
+            this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSL.TextMarginBottom = 0;
+            this.txtSL.TextMarginLeft = 3;
+            this.txtSL.TextMarginTop = 1;
+            this.txtSL.TextPlaceholder = "";
+            this.txtSL.UseSystemPasswordChar = false;
+            this.txtSL.WordWrap = true;
+            this.txtSL.TextChange += new System.EventHandler(this.txtSL_TextChange);
+            // 
+            // dgvDSSP
+            // 
+            this.dgvDSSP.AllowCustomTheming = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvDSSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDSSP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDSSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSSP.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDSSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDSSP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDSSP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDSSP.ColumnHeadersHeight = 40;
+            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvDSSP.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvDSSP.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvDSSP.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvDSSP.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvDSSP.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvDSSP.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvDSSP.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvDSSP.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDSSP.CurrentTheme.Name = null;
+            this.dgvDSSP.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvDSSP.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvDSSP.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvDSSP.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvDSSP.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSSP.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDSSP.EnableHeadersVisualStyles = false;
+            this.dgvDSSP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvDSSP.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvDSSP.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvDSSP.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvDSSP.Location = new System.Drawing.Point(20, 56);
+            this.dgvDSSP.Name = "dgvDSSP";
+            this.dgvDSSP.RowHeadersVisible = false;
+            this.dgvDSSP.RowTemplate.Height = 40;
+            this.dgvDSSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDSSP.Size = new System.Drawing.Size(737, 214);
+            this.dgvDSSP.TabIndex = 24;
+            this.dgvDSSP.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
             // frm_QLTQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -687,10 +769,10 @@
             this.bunifuPanel7.ResumeLayout(false);
             this.bunifuPanel6.ResumeLayout(false);
             this.bunifuPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSP)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -719,11 +801,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
-        private Bunifu.UI.WinForms.BunifuDataGridView dgvDSSP;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.Charts.WinForms.BunifuChartCanvas chartCanvasDT;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         private Bunifu.UI.WinForms.BunifuDropdown cbDate;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuTextBox txtSL;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgvDSSP;
     }
 }
