@@ -50,6 +50,9 @@ namespace Do_an_Winform.PL.DangNhap
             employee_LoadData();
             txtLoaitaikhoan.Text = empType.TenLoaiNV;
             txtLoaitaikhoan.Enabled = false;
+            txtPassword.PasswordChar = '*';
+            txtNewpass1.PasswordChar = '*';
+            txtNewpass2.PasswordChar = '*';
         }
 
         private void btnCancelChanges_Click(object sender, EventArgs e)
@@ -94,19 +97,26 @@ namespace Do_an_Winform.PL.DangNhap
             }
             else
             {
-                if (txtNewpass1.Text == txtNewpass2.Text)
+                if (txtPassword.Text == user.MatKhau)
                 {
-                    TaiKhoanDTO tkDTO = new TaiKhoanDTO();
-                    tkDTO.MaNguoiDung = user.MaNguoiDung;
-                    tkDTO.MatKhau = txtNewpass1.Text;
-                    if (TaiKhoanBLL.UpdatePassword(tkDTO))
+                    if (txtNewpass1.Text == txtNewpass2.Text)
                     {
-                        bunifuSnackbar1.Show(mainform, "Bạn đã sửa mật khẩu thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                        TaiKhoanDTO tkDTO = new TaiKhoanDTO();
+                        tkDTO.MaNguoiDung = user.MaNguoiDung;
+                        tkDTO.MatKhau = txtNewpass1.Text;
+                        if (TaiKhoanBLL.UpdatePassword(tkDTO))
+                        {
+                            bunifuSnackbar1.Show(mainform, "Bạn đã sửa mật khẩu thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+                        }
+                    }
+                    else
+                    {
+                        bunifuSnackbar1.Show(mainform, "Mật khẩu nhập lại không trùng khớp", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                     }
                 }
                 else
                 {
-                    bunifuSnackbar1.Show(mainform, "Mật khẩu nhập lại không trùng khớp", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+                    bunifuSnackbar1.Show(mainform, "Mật khẩu nhập hiện tại không đúng", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
                 }
             }
         }
