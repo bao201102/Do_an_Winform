@@ -18,6 +18,7 @@ namespace Do_an_Winform.PL.Quanly
     {
         int number;
         TaiKhoanDTO dto;
+        bool isclicked;
         public frm_ThemNV(int index, TaiKhoanDTO tk)
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace Do_an_Winform.PL.Quanly
             {
                 MessageBox.Show("Tạo tài khoản thành công","Chúc mừng");
             }
-            
+            isclicked = true;
         }
 
         private void frm_Them_Load(object sender, EventArgs e)
@@ -60,17 +61,24 @@ namespace Do_an_Winform.PL.Quanly
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Nếu bạn đóng, tài khoản sẽ không được tạo", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (isclicked == true)
             {
-                if (TaiKhoanBLL.RemoveAccount(dto, "US" + NhanVienBLL.CountEmployee().ToString("000")))
-                {
-                    MessageBox.Show("Tạo tài khoản thất bại", "Thông báo");
-                }
                 this.Close();
             }
-            else if (DialogResult == DialogResult.No)
+            else
             {
-                this.Refresh();
+                if (MessageBox.Show("Nếu bạn đóng, tài khoản sẽ không được tạo", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if (TaiKhoanBLL.RemoveAccount(dto, "US" + NhanVienBLL.CountEmployee().ToString("000")))
+                    {
+                        MessageBox.Show("Tạo tài khoản thất bại", "Thông báo");
+                    }
+                    this.Close();
+                }
+                else if (DialogResult == DialogResult.No)
+                {
+                    this.Refresh();
+                }
             }
         }
     }
