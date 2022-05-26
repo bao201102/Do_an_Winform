@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlLapHoaDon));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblTotalBuy = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblTongMua = new System.Windows.Forms.Label();
             this.txtSL = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.btnIn2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblTotal2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btnDelete2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblSum2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblDiscount2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btnAdd2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblPrice2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btnThanhToan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblThanhToan = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbTenSP = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,6 +58,10 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnIn2 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnDelete2 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAdd2 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnThanhToan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtLoaiTV = new System.Windows.Forms.TextBox();
@@ -76,6 +80,7 @@
             this.dgvInfoProduct = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.lblReturn = new System.Windows.Forms.Label();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.txtMaHD = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel5.SuspendLayout();
@@ -177,26 +182,26 @@
             this.txtSL.Modified = false;
             this.txtSL.Multiline = false;
             this.txtSL.Name = "txtSL";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSL.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSL.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSL.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSL.OnIdleState = stateProperties8;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSL.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSL.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSL.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSL.OnIdleState = stateProperties12;
             this.txtSL.Padding = new System.Windows.Forms.Padding(3);
             this.txtSL.PasswordChar = '\0';
             this.txtSL.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -219,32 +224,6 @@
             this.txtSL.WordWrap = true;
             this.txtSL.TextChange += new System.EventHandler(this.txtSL_TextChange);
             // 
-            // btnIn2
-            // 
-            this.btnIn2.ActiveBorderThickness = 1;
-            this.btnIn2.ActiveCornerRadius = 20;
-            this.btnIn2.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnIn2.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnIn2.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnIn2.BackColor = System.Drawing.Color.Transparent;
-            this.btnIn2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIn2.BackgroundImage")));
-            this.btnIn2.ButtonText = "In";
-            this.btnIn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIn2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn2.ForeColor = System.Drawing.Color.Black;
-            this.btnIn2.IdleBorderThickness = 1;
-            this.btnIn2.IdleCornerRadius = 20;
-            this.btnIn2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnIn2.IdleForecolor = System.Drawing.Color.Black;
-            this.btnIn2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnIn2.Location = new System.Drawing.Point(1142, 626);
-            this.btnIn2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnIn2.Name = "btnIn2";
-            this.btnIn2.Size = new System.Drawing.Size(64, 33);
-            this.btnIn2.TabIndex = 47;
-            this.btnIn2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnIn2.Click += new System.EventHandler(this.btnIn2_Click);
-            // 
             // lblTotal2
             // 
             this.lblTotal2.AllowParentOverrides = false;
@@ -259,32 +238,6 @@
             this.lblTotal2.Text = "Total";
             this.lblTotal2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTotal2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // btnDelete2
-            // 
-            this.btnDelete2.ActiveBorderThickness = 1;
-            this.btnDelete2.ActiveCornerRadius = 20;
-            this.btnDelete2.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnDelete2.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnDelete2.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnDelete2.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete2.BackgroundImage")));
-            this.btnDelete2.ButtonText = "Xóa";
-            this.btnDelete2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete2.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete2.IdleBorderThickness = 1;
-            this.btnDelete2.IdleCornerRadius = 20;
-            this.btnDelete2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnDelete2.IdleForecolor = System.Drawing.Color.Black;
-            this.btnDelete2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnDelete2.Location = new System.Drawing.Point(1142, 587);
-            this.btnDelete2.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete2.Name = "btnDelete2";
-            this.btnDelete2.Size = new System.Drawing.Size(64, 31);
-            this.btnDelete2.TabIndex = 49;
-            this.btnDelete2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDelete2.Click += new System.EventHandler(this.btnDelete2_Click);
             // 
             // lblSum2
             // 
@@ -316,32 +269,6 @@
             this.lblDiscount2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDiscount2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // btnAdd2
-            // 
-            this.btnAdd2.ActiveBorderThickness = 1;
-            this.btnAdd2.ActiveCornerRadius = 20;
-            this.btnAdd2.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdd2.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnAdd2.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdd2.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd2.BackgroundImage")));
-            this.btnAdd2.ButtonText = "Thêm";
-            this.btnAdd2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd2.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd2.IdleBorderThickness = 1;
-            this.btnAdd2.IdleCornerRadius = 20;
-            this.btnAdd2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnAdd2.IdleForecolor = System.Drawing.Color.Black;
-            this.btnAdd2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnAdd2.Location = new System.Drawing.Point(898, 587);
-            this.btnAdd2.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdd2.Name = "btnAdd2";
-            this.btnAdd2.Size = new System.Drawing.Size(94, 31);
-            this.btnAdd2.TabIndex = 48;
-            this.btnAdd2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
-            // 
             // lblPrice2
             // 
             this.lblPrice2.AllowParentOverrides = false;
@@ -357,32 +284,6 @@
             this.lblPrice2.Text = "Price";
             this.lblPrice2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPrice2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.ActiveBorderThickness = 1;
-            this.btnThanhToan.ActiveCornerRadius = 20;
-            this.btnThanhToan.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnThanhToan.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnThanhToan.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnThanhToan.BackColor = System.Drawing.Color.Transparent;
-            this.btnThanhToan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.BackgroundImage")));
-            this.btnThanhToan.ButtonText = "Thanh toán";
-            this.btnThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThanhToan.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.ForeColor = System.Drawing.Color.Black;
-            this.btnThanhToan.IdleBorderThickness = 1;
-            this.btnThanhToan.IdleCornerRadius = 20;
-            this.btnThanhToan.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnThanhToan.IdleForecolor = System.Drawing.Color.Black;
-            this.btnThanhToan.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnThanhToan.Location = new System.Drawing.Point(893, 626);
-            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(94, 33);
-            this.btnThanhToan.TabIndex = 38;
-            this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // lblThanhToan
             // 
@@ -500,6 +401,110 @@
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 15;
             this.label1.Text = "Tên SP:";
+            // 
+            // btnIn2
+            // 
+            this.btnIn2.ActiveBorderThickness = 1;
+            this.btnIn2.ActiveCornerRadius = 20;
+            this.btnIn2.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnIn2.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnIn2.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnIn2.BackColor = System.Drawing.SystemColors.Control;
+            this.btnIn2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIn2.BackgroundImage")));
+            this.btnIn2.ButtonText = "In";
+            this.btnIn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIn2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn2.ForeColor = System.Drawing.Color.Black;
+            this.btnIn2.IdleBorderThickness = 1;
+            this.btnIn2.IdleCornerRadius = 20;
+            this.btnIn2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnIn2.IdleForecolor = System.Drawing.Color.Black;
+            this.btnIn2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnIn2.Location = new System.Drawing.Point(1142, 626);
+            this.btnIn2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnIn2.Name = "btnIn2";
+            this.btnIn2.Size = new System.Drawing.Size(64, 33);
+            this.btnIn2.TabIndex = 47;
+            this.btnIn2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnIn2.Click += new System.EventHandler(this.btnIn2_Click);
+            // 
+            // btnDelete2
+            // 
+            this.btnDelete2.ActiveBorderThickness = 1;
+            this.btnDelete2.ActiveCornerRadius = 20;
+            this.btnDelete2.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDelete2.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnDelete2.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDelete2.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDelete2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete2.BackgroundImage")));
+            this.btnDelete2.ButtonText = "Xóa";
+            this.btnDelete2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete2.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete2.IdleBorderThickness = 1;
+            this.btnDelete2.IdleCornerRadius = 20;
+            this.btnDelete2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnDelete2.IdleForecolor = System.Drawing.Color.Black;
+            this.btnDelete2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnDelete2.Location = new System.Drawing.Point(1142, 587);
+            this.btnDelete2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete2.Name = "btnDelete2";
+            this.btnDelete2.Size = new System.Drawing.Size(64, 31);
+            this.btnDelete2.TabIndex = 49;
+            this.btnDelete2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete2.Click += new System.EventHandler(this.btnDelete2_Click);
+            // 
+            // btnAdd2
+            // 
+            this.btnAdd2.ActiveBorderThickness = 1;
+            this.btnAdd2.ActiveCornerRadius = 20;
+            this.btnAdd2.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAdd2.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnAdd2.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAdd2.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd2.BackgroundImage")));
+            this.btnAdd2.ButtonText = "Thêm";
+            this.btnAdd2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd2.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd2.IdleBorderThickness = 1;
+            this.btnAdd2.IdleCornerRadius = 20;
+            this.btnAdd2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnAdd2.IdleForecolor = System.Drawing.Color.Black;
+            this.btnAdd2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnAdd2.Location = new System.Drawing.Point(898, 587);
+            this.btnAdd2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd2.Name = "btnAdd2";
+            this.btnAdd2.Size = new System.Drawing.Size(94, 31);
+            this.btnAdd2.TabIndex = 48;
+            this.btnAdd2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.ActiveBorderThickness = 1;
+            this.btnThanhToan.ActiveCornerRadius = 20;
+            this.btnThanhToan.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThanhToan.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnThanhToan.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThanhToan.BackColor = System.Drawing.SystemColors.Control;
+            this.btnThanhToan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.BackgroundImage")));
+            this.btnThanhToan.ButtonText = "Thanh toán";
+            this.btnThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.Color.Black;
+            this.btnThanhToan.IdleBorderThickness = 1;
+            this.btnThanhToan.IdleCornerRadius = 20;
+            this.btnThanhToan.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnThanhToan.IdleForecolor = System.Drawing.Color.Black;
+            this.btnThanhToan.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.btnThanhToan.Location = new System.Drawing.Point(898, 626);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(94, 33);
+            this.btnThanhToan.TabIndex = 38;
+            this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // bunifuPanel2
             // 
@@ -768,11 +773,87 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(869, 640);
             this.bunifuPanel1.TabIndex = 53;
             // 
+            // txtMaHD
+            // 
+            this.txtMaHD.AcceptsReturn = false;
+            this.txtMaHD.AcceptsTab = false;
+            this.txtMaHD.AnimationSpeed = 200;
+            this.txtMaHD.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtMaHD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtMaHD.AutoSizeHeight = true;
+            this.txtMaHD.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaHD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtMaHD.BackgroundImage")));
+            this.txtMaHD.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtMaHD.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtMaHD.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtMaHD.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtMaHD.BorderRadius = 1;
+            this.txtMaHD.BorderThickness = 1;
+            this.txtMaHD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtMaHD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaHD.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtMaHD.DefaultText = "";
+            this.txtMaHD.FillColor = System.Drawing.Color.White;
+            this.txtMaHD.HideSelection = true;
+            this.txtMaHD.IconLeft = null;
+            this.txtMaHD.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaHD.IconPadding = 10;
+            this.txtMaHD.IconRight = null;
+            this.txtMaHD.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaHD.Lines = new string[0];
+            this.txtMaHD.Location = new System.Drawing.Point(1140, 0);
+            this.txtMaHD.MaxLength = 32767;
+            this.txtMaHD.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtMaHD.Modified = false;
+            this.txtMaHD.Multiline = false;
+            this.txtMaHD.Name = "txtMaHD";
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaHD.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtMaHD.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaHD.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaHD.OnIdleState = stateProperties16;
+            this.txtMaHD.Padding = new System.Windows.Forms.Padding(3);
+            this.txtMaHD.PasswordChar = '\0';
+            this.txtMaHD.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtMaHD.PlaceholderText = "Enter text";
+            this.txtMaHD.ReadOnly = false;
+            this.txtMaHD.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMaHD.SelectedText = "";
+            this.txtMaHD.SelectionLength = 0;
+            this.txtMaHD.SelectionStart = 0;
+            this.txtMaHD.ShortcutsEnabled = true;
+            this.txtMaHD.Size = new System.Drawing.Size(82, 30);
+            this.txtMaHD.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtMaHD.TabIndex = 54;
+            this.txtMaHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMaHD.TextMarginBottom = 0;
+            this.txtMaHD.TextMarginLeft = 3;
+            this.txtMaHD.TextMarginTop = 1;
+            this.txtMaHD.TextPlaceholder = "Enter text";
+            this.txtMaHD.UseSystemPasswordChar = false;
+            this.txtMaHD.WordWrap = true;
+            // 
             // UserControlLapHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.txtMaHD);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnAdd2);
             this.Controls.Add(this.lblReturn);
@@ -839,5 +920,6 @@
         private Bunifu.UI.WinForms.BunifuDataGridView dgvInfoProduct;
         private System.Windows.Forms.Label lblReturn;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuTextBox txtMaHD;
     }
 }
