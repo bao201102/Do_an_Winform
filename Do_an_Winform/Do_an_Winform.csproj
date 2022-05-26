@@ -698,6 +698,10 @@
     <None Include="Resources\bill.png" />
     <None Include="Resources\sync.png" />
     <None Include="Resources\search_white.png" />
+    <None Include="Resources\warehouse.png" />
+    <None Include="Resources\import.png" />
+    <None Include="Resources\employees.png" />
+    <None Include="Resources\box.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
