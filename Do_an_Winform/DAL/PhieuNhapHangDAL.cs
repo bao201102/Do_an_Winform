@@ -213,11 +213,10 @@ namespace Do_an_Winform.DAL
         }
         public static double ThongKeChiPhiTheoThang(string thangTK, string namTK)
         {
-            var firstDayOfMonth = GetLastDayOfMonth(thangTK, namTK);
-            var lastDayOfMonth = GetLastDayOfMonth(thangTK, namTK);
+            DateTime firstDayOfMonth = GetLastDayOfMonth(thangTK, namTK);
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from pn in data.PhieuNhapHangs
-                          where (pn.NgayTaoPN >= firstDayOfMonth) && (pn.NgayTaoPN <= lastDayOfMonth) && (pn.TrangThai == "1")
+                          where pn.NgayTaoPN.Month.Equals(firstDayOfMonth.Month) && (pn.NgayTaoPN.Year.Equals(firstDayOfMonth.Year)) && (pn.TrangThai == "1")
                           select new
                           {
                               pn.ThanhTien

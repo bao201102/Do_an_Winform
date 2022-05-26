@@ -20,10 +20,10 @@ namespace Do_an_Winform.PL.Quanly
         }
         private void frm_TKDT_Load(object sender, EventArgs e)
         {
-            maskedtxtToday.Text = DateTime.Now.ToString("dd/MM/yyyy 00:01");
+            maskedtxtToday.Value = System.DateTime.Now;
 
             //Dữ liệu thống kê tháng hiện tại
-            DateTime today = DateTime.ParseExact(maskedtxtToday.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime today = maskedtxtToday.Value;
             txtNamTK.Text = DateTime.Now.ToString("yyyy");
             cbQuyTK.SelectedItem = LayQuy(today.Month.ToString()).ToString();
             cbThangTK.SelectedItem = today.Month;
