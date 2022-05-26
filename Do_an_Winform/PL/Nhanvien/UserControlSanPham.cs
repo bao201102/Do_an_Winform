@@ -96,7 +96,7 @@ namespace Do_an_Winform.PL.Nhanvien
             
             if (cbThuongHieu.SelectedIndex >= 0 && cbThuongHieu.SelectedValue.ToString() != "Tất cả")
             {
-                if(cbGia.SelectedIndex >= 0)
+                if(cbGia.SelectedIndex >= 0 && cbGia.Text != "")
                 {
                     int a = int.Parse(GetMinPrice(cbGia.Text));
                     int b = int.Parse(GetMaxPrice(cbGia.Text));
@@ -130,8 +130,6 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     if (cbLoaiSP.SelectedIndex < 0 || cbLoaiSP.SelectedValue.ToString() == "Tất cả")
                     {
-                        int a = int.Parse(GetMinPrice(cbGia.Text));
-                        int b = int.Parse(GetMaxPrice(cbGia.Text));
                         //MessageBox.Show("T.hiệu");
                         dgvAllProduct.DataSource = SanPhamBLL.GetProductByCondition(cbThuongHieu.SelectedValue.ToString(), 0, 0, cbLoaiSP.SelectedValue.ToString());
                         try
