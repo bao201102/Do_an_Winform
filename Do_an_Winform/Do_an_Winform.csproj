@@ -401,16 +401,16 @@
     <Compile Include="PL\Quanly\QLDoiTac\frm_TaoTaiKhoan.Designer.cs">
       <DependentUpon>frm_TaoTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Quanly\frm_HDBH.cs">
+    <Compile Include="PL\Quanly\QLHD\frm_HDBH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Quanly\frm_HDBH.Designer.cs">
+    <Compile Include="PL\Quanly\QLHD\frm_HDBH.Designer.cs">
       <DependentUpon>frm_HDBH.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Quanly\frm_HDNH.cs">
+    <Compile Include="PL\Quanly\QLHD\frm_HDNH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Quanly\frm_HDNH.Designer.cs">
+    <Compile Include="PL\Quanly\QLHD\frm_HDNH.Designer.cs">
       <DependentUpon>frm_HDNH.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Quanly\QLBC\frm_QLBC.cs">
@@ -431,10 +431,10 @@
     <Compile Include="PL\Quanly\QLSP\frm_QLSP.Designer.cs">
       <DependentUpon>frm_QLSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Quanly\frm_TKDT.cs">
+    <Compile Include="PL\Quanly\TKDT\frm_TKDT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Quanly\frm_TKDT.Designer.cs">
+    <Compile Include="PL\Quanly\TKDT\frm_TKDT.Designer.cs">
       <DependentUpon>frm_TKDT.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Quanly\QLSP\frm_QLSP_RP.cs">
@@ -576,10 +576,10 @@
     <EmbeddedResource Include="PL\Quanly\QLDoiTac\frm_TaoTaiKhoan.resx">
       <DependentUpon>frm_TaoTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\frm_HDBH.resx">
+    <EmbeddedResource Include="PL\Quanly\QLHD\frm_HDBH.resx">
       <DependentUpon>frm_HDBH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\frm_HDNH.resx">
+    <EmbeddedResource Include="PL\Quanly\QLHD\frm_HDNH.resx">
       <DependentUpon>frm_HDNH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\QLBC\frm_QLBC.resx">
@@ -591,7 +591,7 @@
     <EmbeddedResource Include="PL\Quanly\QLSP\frm_QLSP.resx">
       <DependentUpon>frm_QLSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\frm_TKDT.resx">
+    <EmbeddedResource Include="PL\Quanly\TKDT\frm_TKDT.resx">
       <DependentUpon>frm_TKDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\QLSP\frm_QLSP_RP.resx">
