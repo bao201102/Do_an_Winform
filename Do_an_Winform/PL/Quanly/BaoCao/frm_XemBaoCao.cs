@@ -73,5 +73,18 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
                 this.Close();
             }
         }
+
+        public void rptHoaDon(string maHD, string tenNV, string ngayTao, string tenKH, string loaiTV, string giamGia)
+        {
+            List<ChiTietHoaDonDTO> listCTHD = new List<ChiTietHoaDonDTO>();
+            listCTHD = ChiTietHoaDonBLL.GetAllDetailBillById(maHD);
+            reportViewerResult.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Nhanvien.rpt_HoaDon.rdlc";
+            reportViewerResult.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CTHD", listCTHD));
+            reportViewerResult.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("TenNV", tenNV));
+            reportViewerResult.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("NgayTao", ngayTao));
+            reportViewerResult.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("TenKH", tenKH));
+            reportViewerResult.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("LoaiThanhVien", loaiTV));
+            reportViewerResult.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("GiamGia", giamGia));
+        }
     }
 }

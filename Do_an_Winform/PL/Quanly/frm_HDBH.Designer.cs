@@ -381,7 +381,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnViewReport.ActiveForecolor = System.Drawing.Color.Black;
             this.btnViewReport.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnViewReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewReport.BackColor = System.Drawing.SystemColors.Control;
+            this.btnViewReport.BackColor = System.Drawing.Color.White;
             this.btnViewReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewReport.BackgroundImage")));
             this.btnViewReport.ButtonText = "Xem báo cáo";
             this.btnViewReport.Cursor = System.Windows.Forms.Cursors.Hand;

@@ -2,6 +2,7 @@
 using Do_an_Winform.DAL;
 using Do_an_Winform.DTO;
 using Do_an_Winform.PL.DangNhap;
+using Do_an_Winform.PL.Quanly.BaoCao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -338,8 +339,9 @@ namespace Do_an_Winform.PL.Nhanvien
             {
                 loaiTV = "Không";
             }
-            frm_XemHoaDon frmHD = new frm_XemHoaDon(txtMaHD.Text, tenNV, ngayTao, tenKH, loaiTV, giamGia);
-            frmHD.Show();
+            frm_XemBaoCao frmHD = new frm_XemBaoCao();
+            frmHD.rptHoaDon(txtMaHD.Text, tenNV, ngayTao, tenKH, loaiTV, giamGia);
+            frmHD.ShowDialog();
         }
         private DataTable dataTable = new DataTable();
         private void gridview_Load()
