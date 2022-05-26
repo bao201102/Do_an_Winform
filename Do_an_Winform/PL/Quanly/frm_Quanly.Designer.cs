@@ -33,6 +33,7 @@ namespace Do_an_Winform.PL.Quanly
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Quanly));
             this.Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sidemenu = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.subdoitacPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btDoiTac_NCC = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -65,7 +66,6 @@ namespace Do_an_Winform.PL.Quanly
             this.btnMaximize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sidemenu.SuspendLayout();
             this.subdoitacPanel.SuspendLayout();
             this.doitacPanel.SuspendLayout();
@@ -105,6 +105,11 @@ namespace Do_an_Winform.PL.Quanly
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.Transition.DefaultAnimation = animation1;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // sidemenu
             // 
@@ -295,7 +300,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLDoiTac.DisabledColor = System.Drawing.Color.Gray;
             this.btnQLDoiTac.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLDoiTac.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLDoiTac.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLDoiTac.Iconimage")));
+            this.btnQLDoiTac.Iconimage = global::Do_an_Winform.Properties.Resources.employees;
             this.btnQLDoiTac.Iconimage_right = null;
             this.btnQLDoiTac.Iconimage_right_Selected = null;
             this.btnQLDoiTac.Iconimage_Selected = null;
@@ -350,7 +355,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLDoanhThu.DisabledColor = System.Drawing.Color.Gray;
             this.btnQLDoanhThu.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLDoanhThu.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLDoanhThu.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLDoanhThu.Iconimage")));
+            this.btnQLDoanhThu.Iconimage = global::Do_an_Winform.Properties.Resources.revenue;
             this.btnQLDoanhThu.Iconimage_right = null;
             this.btnQLDoanhThu.Iconimage_right_Selected = null;
             this.btnQLDoanhThu.Iconimage_Selected = null;
@@ -499,7 +504,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLHD.DisabledColor = System.Drawing.Color.Gray;
             this.btnQLHD.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLHD.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLHD.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLHD.Iconimage")));
+            this.btnQLHD.Iconimage = global::Do_an_Winform.Properties.Resources.bill;
             this.btnQLHD.Iconimage_right = null;
             this.btnQLHD.Iconimage_right_Selected = null;
             this.btnQLHD.Iconimage_Selected = null;
@@ -554,7 +559,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLBC.DisabledColor = System.Drawing.Color.Gray;
             this.btnQLBC.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLBC.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLBC.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLBC.Iconimage")));
+            this.btnQLBC.Iconimage = global::Do_an_Winform.Properties.Resources.best_seller;
             this.btnQLBC.Iconimage_right = null;
             this.btnQLBC.Iconimage_right_Selected = null;
             this.btnQLBC.Iconimage_Selected = null;
@@ -609,7 +614,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnQLSP.DisabledColor = System.Drawing.Color.Gray;
             this.btnQLSP.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLSP.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLSP.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLSP.Iconimage")));
+            this.btnQLSP.Iconimage = global::Do_an_Winform.Properties.Resources.box;
             this.btnQLSP.Iconimage_right = null;
             this.btnQLSP.Iconimage_right_Selected = null;
             this.btnQLSP.Iconimage_Selected = null;
@@ -664,7 +669,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnTongquan.DisabledColor = System.Drawing.Color.Gray;
             this.btnTongquan.Font = new System.Drawing.Font("Leelawadee UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTongquan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnTongquan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTongquan.Iconimage")));
+            this.btnTongquan.Iconimage = global::Do_an_Winform.Properties.Resources.home;
             this.btnTongquan.Iconimage_right = null;
             this.btnTongquan.Iconimage_right_Selected = null;
             this.btnTongquan.Iconimage_Selected = null;
@@ -955,11 +960,6 @@ namespace Do_an_Winform.PL.Quanly
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // frm_Quanly
             // 
