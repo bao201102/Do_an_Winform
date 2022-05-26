@@ -128,52 +128,54 @@ namespace Do_an_Winform.PL.Quanly
             }
             txtLoiNhuan.Text = (double.Parse(txtDoanhThu.Text) - double.Parse(txtChiPhi.Text)).ToString();
 
-            // VẼ BIỂU ĐỒ
-            //Doanh Thu
-            /*List<double> profitDataList = new List<double>();
-            for (int i = 1; i <= 12; i++)
+            // VẼ BIỂU ĐỒ CỘT SO SÁNH DOANH THU, CHI PHI CỦA MỘT NĂM (12 Tháng)
+            if(cbHTTK.Text == "Năm")
             {
-                profitDataList.Add(HoaDonBLL.ThongKeDoanhThuTheoThang($"{i}", txtNamTK.Text));
-            }
-            barChartDT.Data = profitDataList;
-            barChartDT.TargetCanvas = chartCanvasTKDT;
-            List<Color> profitColors = new List<Color>();
-            for (int i = 0; i < profitDataList.Count; i++)
-            {
-                profitColors.Add(Color.FromArgb(80, 120, 60));
-            }
-            barChartDT.BackgroundColor = profitColors;*/
+                //Doanh Thu
+                List<double> profitDataList = new List<double>();
+                for (int i = 1; i <= 12; i++)
+                {
+                    profitDataList.Add(HoaDonBLL.ThongKeDoanhThuTheoThang($"{i}", txtNamTK.Text));
+                }
+                barChartDT.Data = profitDataList;
+                barChartDT.TargetCanvas = chartCanvasTKDT;
+                List<Color> profitColors = new List<Color>();
+                for (int i = 0; i < profitDataList.Count; i++)
+                {
+                    profitColors.Add(Color.FromArgb(80, 120, 60));
+                }
+                barChartDT.BackgroundColor = profitColors;
 
-            //Chi Phí
-            /*List<double> expenseDataList = new List<double>();
-            for (int i = 1; i <= 12; i++)
-            {
-                expenseDataList.Add(PhieuNhapHangBLL.ThongKeChiPhiTheoThang($"{i}", txtNamTK.Text));
+                //Chi Phí
+                List<double> expenseDataList = new List<double>();
+                for (int i = 1; i <= 12; i++)
+                {
+                    expenseDataList.Add(PhieuNhapHangBLL.ThongKeChiPhiTheoThang($"{i}", txtNamTK.Text));
+                }
+                barChartCP.Data = expenseDataList;
+                barChartCP.TargetCanvas = chartCanvasTKDT;
+                List<Color> expenseColors = new List<Color>();
+                for (int i = 0; i < expenseDataList.Count; i++)
+                {
+                    expenseColors.Add(Color.FromArgb(10, 110, 60));
+                }
+                barChartCP.BackgroundColor = expenseColors;              
             }
-            barChartCP.Data = expenseDataList;
-            barChartCP.TargetCanvas = chartCanvasTKDT;
-            List<Color> expenseColors = new List<Color>();
-            for (int i = 0; i < profitDataList.Count; i++)
-            {
-                expenseColors.Add(Color.FromArgb(10, 110, 60));
-            }
-            barChartCP.BackgroundColor = expenseColors;*/
 
-            //Lợi Nhuận
-            /*List<double> salesDataList = new List<double>();
-            for (int i = 1; i <= 12; i++)
+            // VẼ BIỂU ĐỒ ĐƯỜNG SO SÁNH LỢI NHUẬN CỦA MỘT NĂM (12 Tháng)
+            if (cbHTTK.Text == "Năm")
             {
-                salesDataList.Add(HoaDonBLL.ThongKeDoanhThuTheoThang($"{i}", txtNamTK.Text) - PhieuNhapHangBLL.ThongKeChiPhiTheoThang($"{i}", txtNamTK.Text));
+                //Lợi Nhuận
+                List<double> salesDataList = new List<double>();
+                for (int i = 1; i <= 12; i++)
+                {
+                    salesDataList.Add(HoaDonBLL.ThongKeDoanhThuTheoThang($"{i}", txtNamTK.Text) - PhieuNhapHangBLL.ThongKeChiPhiTheoThang($"{i}", txtNamTK.Text));
+                }
+                lineChartLN.Data = salesDataList;
+                lineChartLN.TargetCanvas = chartCanvasTKDT;
+                lineChartLN.BackgroundColor = Color.Green;
             }
-            barChartLN.Data = salesDataList;
-            barChartLN.TargetCanvas = chartCanvasTKDT;
 
-            List<Color> salesColors = new List<Color>();
-            for (int i = 0; i < profitDataList.Count; i++)
-            {
-                salesColors.Add(Color.FromArgb(40, 160, 120));
-            }
-            barChartLN.BackgroundColor = salesColors;*/
         }
     }
 }
