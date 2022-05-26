@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.Quanly.QLDoiTac;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,11 +38,26 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             dgNhanVien.Columns[7].HeaderText = "Tài khoản";
         }
 
+        private Form activeForm = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(childForm);
+            mainPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
         private void btThemNV_Click(object sender, EventArgs e)
         {
-            frm_TaoTaiKhoan form = new frm_TaoTaiKhoan();
-            form.ShowDialog();
-            dgNhanVien.DataSource = NhanVienBLL.GetAllEmployee();
+            OpenChildForm(new frm_TaoTaiKhoan());
         }
 
         private void txtFind_TextChange(object sender, EventArgs e)

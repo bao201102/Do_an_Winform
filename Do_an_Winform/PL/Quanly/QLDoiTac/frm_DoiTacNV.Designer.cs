@@ -44,8 +44,10 @@
             this.dgNhanVien = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.btThemNV = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblKhachHang = new System.Windows.Forms.Label();
+            this.mainPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgNhanVien)).BeginInit();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Transition
@@ -89,7 +91,7 @@
             this.btnCreateRP.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnCreateRP.IdleForecolor = System.Drawing.Color.White;
             this.btnCreateRP.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnCreateRP.Location = new System.Drawing.Point(1197, 25);
+            this.btnCreateRP.Location = new System.Drawing.Point(1200, 25);
             this.btnCreateRP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateRP.Name = "btnCreateRP";
             this.btnCreateRP.Size = new System.Drawing.Size(100, 50);
@@ -128,7 +130,7 @@
             this.txtFind.IconRight = global::Do_an_Winform.Properties.Resources.search;
             this.txtFind.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFind.Lines = new string[0];
-            this.txtFind.Location = new System.Drawing.Point(287, 31);
+            this.txtFind.Location = new System.Drawing.Point(308, 31);
             this.txtFind.MaxLength = 32767;
             this.txtFind.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFind.Modified = false;
@@ -231,7 +233,7 @@
             this.dgNhanVien.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgNhanVien.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgNhanVien.HeaderForeColor = System.Drawing.Color.White;
-            this.dgNhanVien.Location = new System.Drawing.Point(52, 110);
+            this.dgNhanVien.Location = new System.Drawing.Point(55, 110);
             this.dgNhanVien.Name = "dgNhanVien";
             this.dgNhanVien.RowHeadersVisible = false;
             this.dgNhanVien.RowHeadersWidth = 51;
@@ -261,7 +263,7 @@
             this.btThemNV.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btThemNV.IdleForecolor = System.Drawing.Color.White;
             this.btThemNV.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btThemNV.Location = new System.Drawing.Point(1077, 25);
+            this.btThemNV.Location = new System.Drawing.Point(1080, 25);
             this.btThemNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThemNV.Name = "btThemNV";
             this.btThemNV.Size = new System.Drawing.Size(100, 50);
@@ -275,12 +277,33 @@
             this.Transition.SetDecoration(this.lblKhachHang, BunifuAnimatorNS.DecorationType.None);
             this.lblKhachHang.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.lblKhachHang.Location = new System.Drawing.Point(32, 35);
+            this.lblKhachHang.Location = new System.Drawing.Point(35, 35);
             this.lblKhachHang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKhachHang.Name = "lblKhachHang";
             this.lblKhachHang.Size = new System.Drawing.Size(250, 32);
             this.lblKhachHang.TabIndex = 21;
             this.lblKhachHang.Text = "Danh sách nhân viên";
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.BackgroundColor = System.Drawing.Color.Transparent;
+            this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
+            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.mainPanel.BorderRadius = 3;
+            this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.dgNhanVien);
+            this.mainPanel.Controls.Add(this.btnCreateRP);
+            this.mainPanel.Controls.Add(this.lblKhachHang);
+            this.mainPanel.Controls.Add(this.txtFind);
+            this.mainPanel.Controls.Add(this.btThemNV);
+            this.Transition.SetDecoration(this.mainPanel, BunifuAnimatorNS.DecorationType.None);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.ShowBorders = true;
+            this.mainPanel.Size = new System.Drawing.Size(1328, 844);
+            this.mainPanel.TabIndex = 26;
             // 
             // bunifuElipse1
             // 
@@ -293,11 +316,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1328, 844);
-            this.Controls.Add(this.btnCreateRP);
-            this.Controls.Add(this.txtFind);
-            this.Controls.Add(this.dgNhanVien);
-            this.Controls.Add(this.btThemNV);
-            this.Controls.Add(this.lblKhachHang);
+            this.Controls.Add(this.mainPanel);
             this.Transition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -305,8 +324,9 @@
             this.Text = "frm_DoiTacNV";
             this.Load += new System.EventHandler(this.frm_DoiTacNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgNhanVien)).EndInit();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -319,5 +339,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btThemNV;
         private System.Windows.Forms.Label lblKhachHang;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.UI.WinForms.BunifuPanel mainPanel;
     }
 }

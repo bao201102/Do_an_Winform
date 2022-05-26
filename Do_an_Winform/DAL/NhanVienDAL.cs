@@ -93,12 +93,41 @@ namespace Do_an_Winform.DAL
         }
         public static bool AddEmployee(NhanVienDTO nvDTO)
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = (from x in entities.NhanViens
+                         select x).Count();
+
+            nvDTO.MaNV = "NV" + (query + 1).ToString("000");
+            nvDTO.TrangThai = "1";
+
             var config = new MapperConfiguration(cfg => cfg.CreateMap<NhanVienDTO, NhanVien>());
             var mapper = new Mapper(config);
             NhanVien nv = mapper.Map<NhanVien>(nvDTO);
-            data.NhanViens.Add(nv);
-            return data.SaveChanges() > 0 ? true : false;
+            entities.NhanViens.Add(nv);
+
+            try
+            {
+                entities.SaveChanges();
+                return true;
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting
+                        // the current instance as InnerException
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
         }
 
         public static bool UpdateEmployee(NhanVienDTO empDTO)

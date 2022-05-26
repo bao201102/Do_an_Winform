@@ -80,6 +80,7 @@ namespace Do_an_Winform.DAL
             }
             return list;
         }
+
         public static bool RemoveAccount(TaiKhoanDTO dto, string manguoidung)
         {
             CHDTEntities1 entities = new CHDTEntities1();
@@ -90,6 +91,17 @@ namespace Do_an_Winform.DAL
 
             entities.TaiKhoans.Remove(query);
             return entities.SaveChanges() > 0 ? true : false;
+        }
+
+        public static string GetUserId(string username)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+
+            var query = (from us in entities.TaiKhoans
+                        where us.UserName.Equals(username)
+                        select us).Single();
+
+            return query.MaNguoiDung;
         }
     }
 }
