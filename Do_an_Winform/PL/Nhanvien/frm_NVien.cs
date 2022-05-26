@@ -123,11 +123,6 @@ namespace Do_an_Winform.PL.Nhanvien
             openChildForm(new frm_DSHoaDon(taikhoan));
         }
 
-        private void btnDKTV_Click(object sender, EventArgs e)
-        {
-            openChildUsercontrol(new UserControlDKThanhVien());
-        }
-
         private void btnInfo_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_Thongtin(nhanvien, loaiNV, this));
