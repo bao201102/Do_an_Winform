@@ -84,12 +84,11 @@ namespace Do_an_Winform.DAL
             }
             return listhd;
         }
-
-        public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
+        public static List<HoaDonDTO> TKTheoMaHD(string hdsearch, DateTime today)
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var bills = from hd in entities.HoaDons
-                        where hd.TrangThai == "1" && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday) && (hd.MaHD == hdsearch.MaHD)
+                        where hd.TrangThai == "1" && (hd.NgayTaoHD <= today) && (hd.MaHD == hdsearch)
                         select hd;
             List<HoaDonDTO> hoaDonDTOs = new List<HoaDonDTO>();
             foreach (HoaDon bill in bills)
@@ -133,11 +132,11 @@ namespace Do_an_Winform.DAL
             return reusultDT;
         }
 
-        public static double DoanhThuTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
+        public static double DoanhThuTheoMaHD(string hdsearch, DateTime today)
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from hd in data.HoaDons
-                          where (hd.MaHD == hdsearch.MaHD) && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday) && (hd.TrangThai == "1")
+                          where (hd.MaHD == hdsearch)&& (hd.NgayTaoHD <= today) && (hd.TrangThai == "1")
                           select new
                           {
                               hd.ThanhTien

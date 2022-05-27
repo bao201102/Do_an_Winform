@@ -50,7 +50,6 @@ namespace Do_an_Winform.PL.Quanly
             foreach (object i in listmapn)
             {
                 automapn.Add(i.ToString());
-                //MessageBox.Show(i.ToString());
             }
             txtSearch.AutoCompleteCustomSource = automapn;
             
@@ -88,12 +87,12 @@ namespace Do_an_Winform.PL.Quanly
 
             if (txtSearch.Text.Trim() != "")
             {
-                startday = DatePickerStartDay.Value;
-                endday = DatePickerEndDay.Value;
-                PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
-                pnsearch.MaPN = txtSearch.Text;
-
-                listpn = PhieuNhapHangBLL.ThongKeTheoMaPN(pnsearch, startday, endday);
+                listpn = PhieuNhapHangBLL.TKTheoMaPN(txtSearch.Text, DateTime.Today);
+                foreach (PhieuNhapHangDTO pn in listpn)
+                {
+                    DatePickerStartDay.Value = pn.NgayTaoPN;
+                    DatePickerEndDay.Value = DateTime.Now;
+                }
                 gvHDNH.DataSource = listpn;
                 gvHDNH.Columns[0].HeaderText = "Mã PN";
                 gvHDNH.Columns[1].HeaderText = "Ngày tạo PN";
@@ -101,7 +100,8 @@ namespace Do_an_Winform.PL.Quanly
                 gvHDNH.Columns[3].HeaderText = "Mã NCC";
                 gvHDNH.Columns[4].HeaderText = "Thành tiền";
                 gvHDNH.Columns[5].Visible = false;
-                txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();
+                txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(txtSearch.Text, DateTime.Today).ToString();
+
             }
             else
             {
@@ -113,7 +113,7 @@ namespace Do_an_Winform.PL.Quanly
                 gvHDNH.Columns[3].HeaderText = "Mã NCC";
                 gvHDNH.Columns[4].HeaderText = "Thành tiền";
                 gvHDNH.Columns[5].Visible = false;
-                txtTongCong.Text = PhieuNhapHangBLL.ThongKeTatCaPN(startday, endday).ToString();
+                txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTatCaPN(startday, endday).ToString();
             }
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -143,9 +143,12 @@ namespace Do_an_Winform.PL.Quanly
             {
                 int mapn = int.Parse(txtSearch.Text);
                 string s = "PN" + mapn.ToString("000");
-                PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
-                pnsearch.MaPN = s;
-                listpn = PhieuNhapHangBLL.ThongKeTheoMaPN(pnsearch, startday, endday);
+                listpn = PhieuNhapHangBLL.TKTheoMaPN(s, DateTime.Today);
+                foreach (PhieuNhapHangDTO pn in listpn)
+                {
+                    DatePickerStartDay.Value = pn.NgayTaoPN;
+                    DatePickerEndDay.Value = DateTime.Now;
+                }
                 gvHDNH.DataSource = listpn;
                 gvHDNH.Columns[0].HeaderText = "Mã PN";
                 gvHDNH.Columns[1].HeaderText = "Ngày lập PN";
@@ -153,14 +156,17 @@ namespace Do_an_Winform.PL.Quanly
                 gvHDNH.Columns[3].HeaderText = "Mã NCC";
                 gvHDNH.Columns[4].HeaderText = "Thành tiền";
                 gvHDNH.Columns[5].Visible = false;
-                txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();
+                txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(s, DateTime.Today).ToString();
             }
         }
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
-            pnsearch.MaPN = txtSearch.Text;
-            listpn = PhieuNhapHangBLL.ThongKeTheoMaPN(pnsearch, startday, endday);
+            listpn = PhieuNhapHangBLL.TKTheoMaPN(txtSearch.Text, DateTime.Today);
+            foreach (PhieuNhapHangDTO pn in listpn)
+            {
+                DatePickerStartDay.Value = pn.NgayTaoPN;
+                DatePickerEndDay.Value = DateTime.Now;
+            }
             gvHDNH.DataSource = listpn;
             gvHDNH.Columns[0].HeaderText = "Mã PN";
             gvHDNH.Columns[1].HeaderText = "Ngày lập PN";
@@ -168,8 +174,31 @@ namespace Do_an_Winform.PL.Quanly
             gvHDNH.Columns[3].HeaderText = "Mã NCC";
             gvHDNH.Columns[4].HeaderText = "Thành tiền";
             gvHDNH.Columns[5].Visible = false;
-            txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();
+            txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(txtSearch.Text, DateTime.Today).ToString();
         }
+
+        private void DatePickerEndDay_CloseUp(object sender, EventArgs e)
+        {
+            DateTime startday = Convert.ToDateTime(DatePickerStartDay.Value.ToString());
+            DateTime endday = Convert.ToDateTime(DatePickerEndDay.Value.ToString());
+            if (startday <= endday)
+            {
+                listpn = PhieuNhapHangBLL.ThongKeTatCaPN(startday, endday);
+                gvHDNH.DataSource = listpn;
+                gvHDNH.Columns[0].HeaderText = "Mã PN";
+                gvHDNH.Columns[1].HeaderText = "Ngày tạo PN";
+                gvHDNH.Columns[2].HeaderText = "Mã NV";
+                gvHDNH.Columns[3].HeaderText = "Mã NCC";
+                gvHDNH.Columns[4].HeaderText = "Thành tiền";
+                gvHDNH.Columns[5].Visible = false;
+                txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTatCaPN(startday, endday).ToString();
+            }
+            else
+            {
+                bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+            }
+        }
+
         private void btnViewReport_Click(object sender, EventArgs e)
         {
             try

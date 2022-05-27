@@ -26,11 +26,11 @@ namespace Do_an_Winform.DAL
             }
             return listpn;
         }
-        public static List<PhieuNhapHangDTO> ThongKeTheoMaPN(PhieuNhapHangDTO pnsearch, DateTime startday, DateTime endday)
+        public static List<PhieuNhapHangDTO> TKTheoMaPN(string pnsearch, DateTime today)
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from pn in data.PhieuNhapHangs
-                          where (pn.MaPN == pnsearch.MaPN) && (pn.TrangThai == "1") && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday)
+                          where (pn.MaPN == pnsearch) && (pn.TrangThai == "1") && (pn.NgayTaoPN <= today)
                           select pn;
             List<PhieuNhapHangDTO> listpn = new List<PhieuNhapHangDTO>();
             foreach (PhieuNhapHang pn in truyvan)
@@ -84,11 +84,11 @@ namespace Do_an_Winform.DAL
             };
             return reusultDT;
         }
-        public static double ChiPhiTheoMaPN(PhieuNhapHangDTO pnsearch, DateTime startday, DateTime endday)
+        public static double ChiPhiTheoMaPN(string pnsearch, DateTime today)
         {
             CHDTEntities1 data = new CHDTEntities1();
             var truyvan = from pn in data.PhieuNhapHangs
-                          where (pn.MaPN == pnsearch.MaPN) && (pn.NgayTaoPN >= startday) && (pn.NgayTaoPN <= endday) && (pn.TrangThai == "1")
+                          where (pn.MaPN == pnsearch) && (pn.NgayTaoPN <= today) && (pn.TrangThai == "1")
                           select new
                           {
                               pn.ThanhTien

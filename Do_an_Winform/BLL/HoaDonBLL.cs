@@ -19,12 +19,10 @@ namespace Do_an_Winform.BLL
         {
             return HoaDonDAL.ThongKeTatCaHD(startday, endday);
         }
-
-        public static List<HoaDonDTO> ThongKeTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
+        public static List<HoaDonDTO> TKTheoMaHD(string hdsearch, DateTime today)
         {
-            return HoaDonDAL.ThongKeTheoMaHD(hdsearch, startday, endday);
+            return HoaDonDAL.TKTheoMaHD(hdsearch, today);
         }
-
         public static HoaDonDTO LayTheoMaHD(string hdsearch)
         {
             return HoaDonDAL.LayTheoMaHD(hdsearch);
@@ -40,9 +38,9 @@ namespace Do_an_Winform.BLL
             return HoaDonDAL.DoanhThuTatCaHD(startday, endday);
         }
 
-        public static double DoanhThuTheoMaHD(HoaDonDTO hdsearch, DateTime startday, DateTime endday)
+        public static double DoanhThuTheoMaHD(string hdsearch, DateTime today)
         {
-            return HoaDonDAL.DoanhThuTheoMaHD(hdsearch, startday, endday);
+            return HoaDonDAL.DoanhThuTheoMaHD(hdsearch, today);
         }
 
         public static double ThongKeDoanhThuTheoTDHT(DateTime today)

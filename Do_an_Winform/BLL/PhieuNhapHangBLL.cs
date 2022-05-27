@@ -14,12 +14,10 @@ namespace Do_an_Winform.BLL
         {
             return PhieuNhapHangDAL.ThongKeTatCaPN(startday, endday);
         }
-
-        public static List<PhieuNhapHangDTO> ThongKeTheoMaPN(PhieuNhapHangDTO pnsearch, DateTime startday, DateTime endday)
+        public static List<PhieuNhapHangDTO> TKTheoMaPN(string pnsearch, DateTime today)
         {
-            return PhieuNhapHangDAL.ThongKeTheoMaPN(pnsearch, startday, endday);
+            return PhieuNhapHangDAL.TKTheoMaPN(pnsearch, today);
         }
-
         public static PhieuNhapHangDTO LayTheoMaPN(string pnsearch)
         {
             return PhieuNhapHangDAL.LayTheoMaPN(pnsearch);
@@ -35,9 +33,9 @@ namespace Do_an_Winform.BLL
             return PhieuNhapHangDAL.ChiPhiTatCaPN(startday, endday);
         }
 
-        public static double ChiPhiTheoMaPN(PhieuNhapHangDTO pnsearch, DateTime startday, DateTime endday)
+        public static double ChiPhiTheoMaPN(string pnsearch, DateTime today)
         {
-            return PhieuNhapHangDAL.ChiPhiTheoMaPN(pnsearch, startday, endday);
+            return PhieuNhapHangDAL.ChiPhiTheoMaPN(pnsearch, today);
         }
 
         public static double ThongKeChiPhiTheoTDHT(DateTime today)

@@ -36,7 +36,6 @@ namespace Do_an_Winform.PL.Quanly
             foreach (object i in listmahd)
             {
                 automahd.Add(i.ToString());
-                //MessageBox.Show(i.ToString());
             }
             txtSearch.AutoCompleteCustomSource = automahd;
 
@@ -89,13 +88,13 @@ namespace Do_an_Winform.PL.Quanly
             }
 
             if (txtSearch.Text.Trim() != "")
-            {
-                startday = DatePickerStartDay.Value;
-                endday = DatePickerEndDay.Value;
-                HoaDonDTO hdsearch = new HoaDonDTO();
-                hdsearch.MaHD = txtSearch.Text;
-
-                listhd = HoaDonBLL.ThongKeTheoMaHD(hdsearch, startday, endday);
+            {               
+                listhd = HoaDonBLL.TKTheoMaHD(txtSearch.Text, DateTime.Today);
+                foreach (HoaDonDTO pn in listhd)
+                {
+                    DatePickerStartDay.Value = pn.NgayTaoHD;
+                    DatePickerEndDay.Value = DateTime.Now;
+                }
                 gvHDBH.DataSource = listhd;
                 gvHDBH.Columns[0].HeaderText = "Mã HD";
                 gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
@@ -103,7 +102,7 @@ namespace Do_an_Winform.PL.Quanly
                 gvHDBH.Columns[3].HeaderText = "Mã KH";
                 gvHDBH.Columns[4].HeaderText = "Thành tiền";
                 gvHDBH.Columns[5].Visible = false;
-                txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
+                txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(txtSearch.Text, DateTime.Today).ToString();
             }
             else
             {
@@ -145,9 +144,11 @@ namespace Do_an_Winform.PL.Quanly
             {
                 int mahd = int.Parse(txtSearch.Text);
                 string s = "HD" + mahd.ToString("000");
-                HoaDonDTO hdsearch = new HoaDonDTO();
-                hdsearch.MaHD = s;
-                listhd = HoaDonBLL.ThongKeTheoMaHD(hdsearch, startday, endday);
+                foreach (HoaDonDTO pn in listhd)
+                {
+                    DatePickerStartDay.Value = pn.NgayTaoHD;
+                    DatePickerEndDay.Value = DateTime.Now;
+                }
                 gvHDBH.DataSource = listhd;
                 gvHDBH.Columns[0].HeaderText = "Mã HD";
                 gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
@@ -155,14 +156,17 @@ namespace Do_an_Winform.PL.Quanly
                 gvHDBH.Columns[3].HeaderText = "Mã KH";
                 gvHDBH.Columns[4].HeaderText = "Thành tiền";
                 gvHDBH.Columns[5].Visible = false;
-                txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
+                txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(s, DateTime.Today).ToString();
             }
         }
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            HoaDonDTO hdsearch = new HoaDonDTO();
-            hdsearch.MaHD = txtSearch.Text;
-            listhd = HoaDonBLL.ThongKeTheoMaHD(hdsearch, startday, endday);
+            listhd = HoaDonBLL.TKTheoMaHD(txtSearch.Text, DateTime.Today);
+            foreach (HoaDonDTO pn in listhd)
+            {
+                DatePickerStartDay.Value = pn.NgayTaoHD;
+                DatePickerEndDay.Value = DateTime.Now;
+            }
             gvHDBH.DataSource = listhd;
             gvHDBH.Columns[0].HeaderText = "Mã HD";
             gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
@@ -170,8 +174,31 @@ namespace Do_an_Winform.PL.Quanly
             gvHDBH.Columns[3].HeaderText = "Mã KH";
             gvHDBH.Columns[4].HeaderText = "Thành tiền";
             gvHDBH.Columns[5].Visible = false;
-            txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(hdsearch, startday, endday).ToString();
+            txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(txtSearch.Text, DateTime.Today).ToString();
         }
+
+        private void DatePickerEndDay_CloseUp(object sender, EventArgs e)
+        {
+            DateTime startday = Convert.ToDateTime(DatePickerStartDay.Text);
+            DateTime endday = Convert.ToDateTime(DatePickerEndDay.Text);
+            if (startday <= endday)
+            {
+                listhd = HoaDonBLL.ThongKeTatCaHD(startday, endday);
+                gvHDBH.DataSource = listhd;
+                gvHDBH.Columns[0].HeaderText = "Mã HD";
+                gvHDBH.Columns[1].HeaderText = "Ngày lập HD";
+                gvHDBH.Columns[2].HeaderText = "Mã NV";
+                gvHDBH.Columns[3].HeaderText = "Mã KH";
+                gvHDBH.Columns[4].HeaderText = "Thành tiền";
+                gvHDBH.Columns[5].Visible = false;
+                txtTongCong.Text = HoaDonBLL.DoanhThuTatCaHD(startday, endday).ToString();
+            }
+            else
+            {
+                bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+            }
+        }
+
         private void btnViewReport_Click(object sender, EventArgs e)
         {
             try
