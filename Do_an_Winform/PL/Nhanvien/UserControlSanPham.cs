@@ -15,7 +15,6 @@ namespace Do_an_Winform.PL.Nhanvien
     public partial class UserControlSanPham : UserControl
     {
         List<SanPhamDTO> listSanPham = new List<SanPhamDTO>();
-        List<object> listSP = new List<object>();
         NhaSanXuatDTO nhasx = new NhaSanXuatDTO();
         LoaiSanPhamDTO loaisp = new LoaiSanPhamDTO();
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
@@ -191,11 +190,12 @@ namespace Do_an_Winform.PL.Nhanvien
         }
         public void GanDuLieu()
         {
-            dgvAllProduct.Columns[0].HeaderText = "Tên SP";
-            dgvAllProduct.Columns[1].HeaderText = "Số lượng";
-            dgvAllProduct.Columns[2].HeaderText = "Đơn giá";
-            dgvAllProduct.Columns[3].HeaderText = "Loại SP";
-            dgvAllProduct.Columns[4].HeaderText = "Thương hiệu";
+            dgvAllProduct.Columns[0].Visible = false;
+            dgvAllProduct.Columns[1].HeaderText = "Tên SP";
+            dgvAllProduct.Columns[2].HeaderText = "Số lượng";
+            dgvAllProduct.Columns[3].HeaderText = "Đơn giá";
+            dgvAllProduct.Columns[4].HeaderText = "Loại SP";
+            dgvAllProduct.Columns[5].HeaderText = "Thương hiệu";
         }
         public static string GetMinPrice(string priceRange)
         {

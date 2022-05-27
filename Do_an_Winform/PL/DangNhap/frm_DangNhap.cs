@@ -55,7 +55,8 @@ namespace Do_an_Winform.PL.DangNhap
                     {
                         frm_NVien frmNVien = new frm_NVien(userLogin);
                         this.Hide();
-                        frmNVien.Show();
+                        frmNVien.ShowDialog();
+                        this.Close();
                     }
                     else if (userLogin.MaLoaiNV == "LNV002")
                     {

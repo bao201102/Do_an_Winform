@@ -873,7 +873,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=SUM(string.Format("{0:#,##0} VNĐ",Fields!ThanhTien.Value))</Value>
+                                  <Value>= String.Format("{0:#,##0} VNĐ", sum(Fields!ThanhTien.Value))</Value>
                                   <Style>
                                     <FontFamily>Leelawadee UI</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -897,6 +897,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -932,7 +933,7 @@
             <DataSetName>CTHD</DataSetName>
             <Top>2.94666in</Top>
             <Height>1.11458in</Height>
-            <Width>9.90625in</Width>
+            <Width>9.90623in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>

@@ -15,7 +15,7 @@ namespace Do_an_Winform.PL.Nhanvien
 {
     public partial class frm_NVien : Form
     {
-        TaiKhoanDTO taikhoan = new TaiKhoanDTO();
+        public static TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         NhanVienDTO nhanvien = new NhanVienDTO();
         LoaiNhanVienDTO loaiNV = new LoaiNhanVienDTO();
         public static TaiKhoanDTO taikhoan1 = new TaiKhoanDTO();
@@ -93,7 +93,7 @@ namespace Do_an_Winform.PL.Nhanvien
         private void frm_NVien_Load(object sender, EventArgs e)
         {
             subuserPanel.Visible = false;
-            openChildUsercontrol(new UserControlKhachHang());
+            openChildForm(new frm_DSHoaDon(taikhoan));
             NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
             nhanvien = emp;
             userBtn.Text = emp.TenNV;

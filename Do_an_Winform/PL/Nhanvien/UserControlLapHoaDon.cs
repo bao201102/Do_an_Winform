@@ -20,7 +20,6 @@ namespace Do_an_Winform.PL.Nhanvien
         bool isShowMemId = false;
         bool isShow2 = false;
         SanPhamDTO sp = new SanPhamDTO();
-        LoaiSanPhamDTO loaisp = new LoaiSanPhamDTO();
         NhaSanXuatDTO nhasx = new NhaSanXuatDTO();
         List<SanPhamDTO> listSP = new List<SanPhamDTO>();
         List<object> listKH = new List<object>();
@@ -43,6 +42,8 @@ namespace Do_an_Winform.PL.Nhanvien
 
             dgvInfoProduct.AllowUserToResizeColumns = false;
             dgvInfoProduct.AllowUserToResizeRows = false;
+
+            taikhoan = frm_NVien.taikhoan;
         }
 
         private void UserControlLapHoaDon_Load(object sender, EventArgs e)
@@ -55,18 +56,13 @@ namespace Do_an_Winform.PL.Nhanvien
             txtSDT.Enabled = false;
             txtTenKH.Enabled = false;
             txtLoaiTV.Enabled = false;
-            try
-            {
-                nhanVien = NhanVienBLL.GetEmployee(frm_DSHoaDon.taiKhoan.MaNguoiDung);
-            }
-            catch (Exception)
-            {
-            }
-            
+
+            nhanVien = NhanVienBLL.GetEmployee(frm_NVien.taikhoan.MaNguoiDung);
+
             if (!DesignMode)
             {
                 listSP = SanPhamBLL.GetAllProduct();
-                
+
                 foreach (SanPhamDTO sp in listSP)
                 {
                     cbTenSP.Items.Add(sp.TenSP);
@@ -76,11 +72,12 @@ namespace Do_an_Winform.PL.Nhanvien
                 lblNgayBan.Text = (new DateTime(curDay.Year, curDay.Month, curDay.Day)).ToString("dd / MM / yyyy");
             }
         }
+
         private void rbThanhVien_CheckedChanged(object sender, EventArgs e)
         {
             listKH = KhachHangBLL.GetAllCustomer();
             isShowMemId = !isShowMemId;
-            if(isShowMemId)
+            if (isShowMemId)
             {
                 txtSDT.Enabled = true;
                 txtTenKH.Enabled = false;
@@ -95,16 +92,14 @@ namespace Do_an_Winform.PL.Nhanvien
                 txtSDT.Text = "";
                 txtLoaiTV.Text = "";
             }
-            
-            
         }
-        
+
         public static string TachChuoi(string discount)
         {
             string v = "";
-            for(int i = 0; i < discount.Length; i++)
+            for (int i = 0; i < discount.Length; i++)
             {
-                if(discount[i] == '%')
+                if (discount[i] == '%')
                 {
                     v = discount.Substring(0, i);
                 }
@@ -115,31 +110,30 @@ namespace Do_an_Winform.PL.Nhanvien
         private void rbKhachLe_CheckedChanged(object sender, EventArgs e)
         {
             isShow2 = !isShow2;
-            if(isShow2)
+            if (isShow2)
             {
-               txtTenKH.Enabled = true;
-               txtTenKH.Text = "";
-            }else
-            {
-               txtTenKH.Enabled = false;
-               txtTenKH.Text = "";
+                txtTenKH.Enabled = true;
+                txtTenKH.Text = "";
             }
-            
+            else
+            {
+                txtTenKH.Enabled = false;
+                txtTenKH.Text = "";
+            }
+
         }
+
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            
-            if (cbTenSP.Text == "")
+
+            if (cbTenSP.Text == "" || txtSL.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập tên sản phẩm");
-            }
-            else if (txtSL.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập số lượng");
+                bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Vui lòng nhập đủ thông tin",
+                                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
             }
             else
             {
-                int totalBuy = int.Parse(TachThanhTien(lblTotalBuy.Text));
+                int totalBuy = int.Parse(lblTotalBuy.Text);
                 HoaDonDTO hoaDon = new HoaDonDTO();
                 listHoaDon = HoaDonDAL.GetAllBill();
                 hoaDon.MaHD = txtMaHD.Text;
@@ -165,171 +159,63 @@ namespace Do_an_Winform.PL.Nhanvien
                 hoaDon.TrangThai = "1";
                 if (HoaDonDAL.AddNewBill(hoaDon))
                 {
-                    MessageBox.Show("Thêm hóa đơn thành công");
-                    int count = 0;
-                    
-                    for (int i = 0; i < dgvInfoProduct.RowCount; i++)
-                    {
-                        ChiTietHoaDonDTO chiTietHD = new ChiTietHoaDonDTO();
-                        try
-                        {
-                            string tenSP = dgvInfoProduct.Rows[i].Cells[0].Value.ToString();
-                            chiTietHD.MaHD = txtMaHD.Text;
-                            chiTietHD.MaSP = SanPhamBLL.GetProductByName(tenSP).MaSP;
-                            chiTietHD.TenSP = tenSP;
-                            chiTietHD.SoLuong = int.Parse(dgvInfoProduct.Rows[i].Cells[1].Value.ToString());
-                            chiTietHD.ThanhTien = int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[4].Value.ToString()));
-                            chiTietHD.TrangThai = "1";
-                            if (ChiTietHoaDonBLL.AddNewBillDetail(chiTietHD))
-                            {
-                                count++;
-                            }
-                        }
-                        catch { }
-                    }
-                    if (count > 0)
-                    {
-                        MessageBox.Show("Thêm chi tiết hóa đơn thành công");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Có lỗi xảy ra");
-                }
-                if(rbThanhVien.Checked == true)
-                {
-                    khachHang = KhachHangDAL.GetCustomerByPhone(txtSDT.Text);
-                    khachHang.DiemTichLuy += 50;
-                    if(khachHang.DiemTichLuy <= 100)
-                    {
-                        khachHang.MaLoaiTVien = "LTV001";
-                    }else if(khachHang.DiemTichLuy > 100 && khachHang.DiemTichLuy <= 200)
-                    {
-                        khachHang.MaLoaiTVien = "LTV002";
-                    }else if(khachHang.DiemTichLuy > 200 && khachHang.DiemTichLuy <= 400)
-                    {
-                        khachHang.MaLoaiTVien = "LTV003";
-                    }else
-                    {
-                        khachHang.MaLoaiTVien = "LTV004";
-                    }
-                    if(KhachHangDAL.UpdateInfoCustomer(new KhachHangDTO(khachHang.MaKH, khachHang.TenKH, khachHang.GioiTinh, khachHang.Email, khachHang.SĐT, khachHang.DiaChi, khachHang.MaLoaiTVien, khachHang.TrangThai, khachHang.DiemTichLuy)))
-                    {
-                        MessageBox.Show("Tích điểm thành công");
-                    }
-                }
-            }
-        }
-      
-
-        private static string TachThanhTien(string thanhTien)
-        {
-            string v = "";
-            for (int i = 0; i < thanhTien.Length; i++)
-            {
-                if (thanhTien[i] == 'đ')
-                {
-                    v = thanhTien.Substring(0, i);
-                }
-            }
-            return v;
-        }
-        
-        private void btnIn2_Click(object sender, EventArgs e)
-        {
-            if (cbTenSP.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập tên sản phẩm");
-            }
-            else if (txtSL.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập số lượng");
-            }
-            else
-            {
-                int totalBuy = int.Parse(TachThanhTien(lblTotalBuy.Text));
-                HoaDonDTO hoaDon = new HoaDonDTO();
-                listHoaDon = HoaDonDAL.GetAllBill();
-                hoaDon.MaHD = txtMaHD.Text;
-                DateTime curDay = DateTime.Now;
-                hoaDon.NgayTaoHD = (new DateTime(curDay.Year, curDay.Month, curDay.Day));
-                try
-                {
-                    nhanVien = NhanVienBLL.GetEmployee(frm_DSHoaDon.taiKhoan.MaNguoiDung);
-                }
-                catch (Exception)
-                {
-                }
-                hoaDon.MaNV = nhanVien.MaNV;
-                if (txtSDT.Text == "")
-                {
-                    hoaDon.MaKH = null;
-                }
-                else
-                {
-                    hoaDon.MaKH = (KhachHangDAL.GetCustomerByPhone(txtSDT.Text)).MaKH;
-                }
-                hoaDon.ThanhTien = totalBuy;
-                hoaDon.TrangThai = "1";
-                if (HoaDonDAL.AddNewBill(hoaDon))
-                {
-                    MessageBox.Show("Thêm hóa đơn thành công");
+                    bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Thêm hóa đơn thành công",
+                                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                     int count = 0;
 
                     for (int i = 0; i < dgvInfoProduct.RowCount; i++)
                     {
                         ChiTietHoaDonDTO chiTietHD = new ChiTietHoaDonDTO();
-                        try
+                        string tenSP = dgvInfoProduct.Rows[i].Cells[0].Value.ToString();
+                        chiTietHD.MaHD = txtMaHD.Text;
+                        chiTietHD.MaSP = SanPhamBLL.GetProductByName(tenSP).MaSP;
+                        chiTietHD.TenSP = tenSP;
+                        chiTietHD.SoLuong = int.Parse(dgvInfoProduct.Rows[i].Cells[1].Value.ToString());
+                        chiTietHD.ThanhTien = int.Parse(dgvInfoProduct.Rows[i].Cells[4].Value.ToString());
+                        chiTietHD.TrangThai = "1";
+                        if (ChiTietHoaDonBLL.AddNewBillDetail(chiTietHD))
                         {
-                            string tenSP = dgvInfoProduct.Rows[i].Cells[0].Value.ToString();
-                            chiTietHD.MaHD = txtMaHD.Text;
-                            chiTietHD.MaSP = SanPhamBLL.GetProductByName(tenSP).MaSP;
-                            chiTietHD.TenSP = tenSP;
-                            chiTietHD.SoLuong = int.Parse(dgvInfoProduct.Rows[i].Cells[1].Value.ToString());
-                            chiTietHD.ThanhTien = int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[4].Value.ToString()));
-                            chiTietHD.TrangThai = "1";
-                            if (ChiTietHoaDonBLL.AddNewBillDetail(chiTietHD))
-                            {
-                                count++;
-                            }
+                            count++;
                         }
-                        catch { }
                     }
-                    if (count > 0)
+
+                    if (rbThanhVien.Checked == true)
                     {
-                        MessageBox.Show("Thêm chi tiết hóa đơn thành công");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Có lỗi xảy ra");
-                }
-                if (rbThanhVien.Checked == true)
-                {
-                    khachHang = KhachHangDAL.GetCustomerByPhone(txtSDT.Text);
-                    khachHang.DiemTichLuy += 50;
-                    if (khachHang.DiemTichLuy <= 100)
-                    {
-                        khachHang.MaLoaiTVien = "LTV001";
-                    }
-                    else if (khachHang.DiemTichLuy > 100 && khachHang.DiemTichLuy <= 200)
-                    {
-                        khachHang.MaLoaiTVien = "LTV002";
-                    }
-                    else if (khachHang.DiemTichLuy > 200 && khachHang.DiemTichLuy <= 400)
-                    {
-                        khachHang.MaLoaiTVien = "LTV003";
+                        khachHang = KhachHangDAL.GetCustomerByPhone(txtSDT.Text);
+                        khachHang.DiemTichLuy += 50;
+                        if (khachHang.DiemTichLuy <= 100)
+                        {
+                            khachHang.MaLoaiTVien = "LTV001";
+                        }
+                        else if (khachHang.DiemTichLuy > 100 && khachHang.DiemTichLuy <= 200)
+                        {
+                            khachHang.MaLoaiTVien = "LTV002";
+                        }
+                        else if (khachHang.DiemTichLuy > 200 && khachHang.DiemTichLuy <= 400)
+                        {
+                            khachHang.MaLoaiTVien = "LTV003";
+                        }
+                        else
+                        {
+                            khachHang.MaLoaiTVien = "LTV004";
+                        }
+                        if (KhachHangDAL.UpdateInfoCustomer(new KhachHangDTO(khachHang.MaKH, khachHang.TenKH, khachHang.GioiTinh, khachHang.Email, khachHang.SĐT, khachHang.DiaChi, khachHang.MaLoaiTVien, khachHang.TrangThai, khachHang.DiemTichLuy)))
+                        {
+                            lblReturn_Click(sender, e);
+                        }
                     }
                     else
                     {
-                        khachHang.MaLoaiTVien = "LTV004";
-                    }
-                    if (KhachHangDAL.UpdateInfoCustomer(new KhachHangDTO(khachHang.MaKH, khachHang.TenKH, khachHang.GioiTinh, khachHang.Email, khachHang.SĐT, khachHang.DiaChi, khachHang.MaLoaiTVien, khachHang.TrangThai, khachHang.DiemTichLuy)))
-                    {
-                        MessageBox.Show("Tích điểm thành công");
+                        lblReturn_Click(sender, e);
                     }
                 }
             }
+        }
+
+        private void btnIn2_Click(object sender, EventArgs e)
+        {
+            btnThanhToan_Click(sender, e);
+
             string tenNV = lblTenNV.Text;
             string ngayTao = lblNgayBan.Text;
             string tenKH = txtTenKH.Text;
@@ -343,6 +229,7 @@ namespace Do_an_Winform.PL.Nhanvien
             frmHD.rptHoaDon(txtMaHD.Text, tenNV, ngayTao, tenKH, loaiTV, giamGia);
             frmHD.ShowDialog();
         }
+
         private DataTable dataTable = new DataTable();
         private void gridview_Load()
         {
@@ -353,18 +240,15 @@ namespace Do_an_Winform.PL.Nhanvien
             dataTable.Columns.Add("Thành tiền");
             dgvInfoProduct.DataSource = dataTable;
         }
+
         private void btnAdd2_Click(object sender, EventArgs e)
         {
-            if(txtTenKH.Text == "")
+            if (txtTenKH.Text == "" || cbTenSP.Text == "" || txtSL.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập thông tin khách hàng");
-            }else if(cbTenSP.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập tên sản phẩm");
-            }else if(txtSL.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập số lượng");
-            }else
+                bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Vui lòng nhập đủ thông tin",
+                                Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning);
+            }
+            else
             {
                 int sum = 0;
                 int count = 0;
@@ -376,10 +260,10 @@ namespace Do_an_Winform.PL.Nhanvien
                         int soLuong = int.Parse(dgvInfoProduct.Rows[i].Cells[1].Value.ToString());
                         soLuong = soLuong + 1;
                         dgvInfoProduct.Rows[i].Cells[1].Value = soLuong.ToString();
-                        int donGia = int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[2].Value.ToString()));
+                        int donGia = int.Parse(dgvInfoProduct.Rows[i].Cells[2].Value.ToString());
                         int tongCong = soLuong * donGia;
                         int thanhTien = tongCong - (tongCong * int.Parse(TachChuoi(lblDiscount2.Text)) / 100);
-                        dgvInfoProduct.Rows[i].Cells[4].Value = thanhTien.ToString() + "đ";
+                        dgvInfoProduct.Rows[i].Cells[4].Value = thanhTien.ToString();
                         break;
                     }
                 }
@@ -394,41 +278,38 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     try
                     {
-                        sum += int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[4].Value.ToString()));
+                        sum += int.Parse(dgvInfoProduct.Rows[i].Cells[4].Value.ToString());
                     }
                     catch { }
 
                 }
-                //MessageBox.Show(sum.ToString() + "đ");
-                //txtSL.Text = dgvInfoProduct.SelectedRows[0].Cells[1].Value.ToString();
-                //lblTotal2.Text = sum.ToString() + "đ";
-                lblTotalBuy.Text = sum.ToString() + "đ";
+                lblTotalBuy.Text = sum.ToString();
             }
         }
+
         private void dgvInfoProduct_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             int soLuong = int.Parse(dgvInfoProduct.SelectedRows[0].Cells[1].Value.ToString());
-            int donGia = int.Parse(TachThanhTien(dgvInfoProduct.SelectedRows[0].Cells[2].Value.ToString()));
+            int donGia = int.Parse(dgvInfoProduct.SelectedRows[0].Cells[2].Value.ToString());
             int chietKhau = int.Parse(TachChuoi(lblDiscount2.Text));
             int tongCong = soLuong * donGia;
             int thanhTien = tongCong - (tongCong * chietKhau / 100);
-            dgvInfoProduct.SelectedRows[0].Cells[4].Value = thanhTien + "đ";
+            dgvInfoProduct.SelectedRows[0].Cells[4].Value = thanhTien;
             int sum = 0;
             for (int i = 0; i < dgvInfoProduct.RowCount; i++)
             {
                 try
                 {
-                    sum += int.Parse(TachThanhTien(dgvInfoProduct.Rows[i].Cells[4].Value.ToString()));
+                    sum += int.Parse(dgvInfoProduct.Rows[i].Cells[4].Value.ToString());
                 }
-                catch(Exception ex) {
+                catch (Exception ex)
+                {
                     MessageBox.Show(ex.ToString());
                 }
 
             }
             txtSL.Text = dgvInfoProduct.SelectedRows[0].Cells[1].Value.ToString();
-            //lblTotal2.Text = sum.ToString() + "đ";
-            lblTotalBuy.Text = sum.ToString() + "đ";
-            MessageBox.Show(sum.ToString() + "đ");
+            lblTotalBuy.Text = sum.ToString();
         }
 
         //Cập nhật thông tin khi số lượng thay đổi
@@ -436,11 +317,11 @@ namespace Do_an_Winform.PL.Nhanvien
         {
             try
             {
-                
+
                 sp = SanPhamBLL.GetProductByName(cbTenSP.Text);
                 try
                 {
-                    lblPrice2.Text = sp.DonGia.ToString() + "đ";
+                    lblPrice2.Text = sp.DonGia.ToString();
                     if (txtLoaiTV.Text != "")
                     {
                         if (txtLoaiTV.Text == "Đồng")
@@ -455,34 +336,32 @@ namespace Do_an_Winform.PL.Nhanvien
                         {
                             lblDiscount2.Text = "10%";
                         }
-                        else
+                        else if (txtLoaiTV.Text == "Kim cương")
                         {
                             lblDiscount2.Text = "12%";
                         }
+                        else
+                        {
+                            lblDiscount2.Text = "0%";
+                        }
                     }
-                    else
-                    {
-                        lblDiscount2.Text = "0%";
-                    }
-
-
                 }
                 catch
                 {
 
                 }
                 int tongCong = (int.Parse(txtSL.Text) * sp.DonGia);
-                lblSum2.Text = tongCong.ToString() + "đ";
+                lblSum2.Text = tongCong.ToString();
                 if (lblDiscount2.Text == "0%")
                 {
-                    lblTotal2.Text = (tongCong).ToString() + "đ";
+                    lblTotal2.Text = (tongCong).ToString();
                 }
                 else
                 {
                     int discount = int.Parse(TachChuoi(lblDiscount2.Text));
                     int thanhTien = tongCong - (tongCong * discount / 100);
-                    lblTotal2.Text = (thanhTien).ToString() + "đ";
-                    
+                    lblTotal2.Text = (thanhTien).ToString();
+
                 }
             }
             catch { }
@@ -492,7 +371,7 @@ namespace Do_an_Winform.PL.Nhanvien
         {
             try
             {
-                
+
                 lblPrice2.Text = SanPhamBLL.GetProductByName(cbTenSP.Text).DonGia.ToString();
             }
             catch (Exception)
@@ -516,7 +395,7 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnDelete2_Click(object sender, EventArgs e)
         {
-            int sum = int.Parse(TachThanhTien(lblTotalBuy.Text));
+            int sum = int.Parse(lblTotalBuy.Text);
             if (dgvInfoProduct.SelectedRows.Count > 0)
             {
                 MessBox messBox = new MessBox();
@@ -526,12 +405,13 @@ namespace Do_an_Winform.PL.Nhanvien
                 {
                     try
                     {
-                        int thanhtien = int.Parse(TachThanhTien(dgvInfoProduct.SelectedRows[0].Cells[4].Value.ToString()));
+                        int thanhtien = int.Parse(dgvInfoProduct.SelectedRows[0].Cells[4].Value.ToString());
                         sum -= thanhtien;
-                        lblTotalBuy.Text = sum.ToString() + "đ";
+                        lblTotalBuy.Text = sum.ToString();
                         dgvInfoProduct.Rows.RemoveAt(dgvInfoProduct.SelectedRows[0].Index);
-                    }catch { }
-                    
+                    }
+                    catch { }
+
                 }
             }
         }

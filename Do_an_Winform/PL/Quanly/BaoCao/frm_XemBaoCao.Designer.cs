@@ -34,7 +34,6 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             this.reportViewerResult = new Microsoft.Reporting.WinForms.ReportViewer();
             this.titlePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.lblBaocao = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.titlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -42,11 +41,11 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             // 
             // reportViewerResult
             // 
-            this.reportViewerResult.Location = new System.Drawing.Point(12, 125);
+            this.reportViewerResult.Location = new System.Drawing.Point(0, 39);
             this.reportViewerResult.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewerResult.Name = "reportViewerResult";
             this.reportViewerResult.ServerReport.BearerToken = null;
-            this.reportViewerResult.Size = new System.Drawing.Size(976, 463);
+            this.reportViewerResult.Size = new System.Drawing.Size(1000, 560);
             this.reportViewerResult.TabIndex = 0;
             // 
             // titlePanel
@@ -80,23 +79,6 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             this.btnClose.Zoom = 10;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lblBaocao
-            // 
-            this.lblBaocao.AllowParentOverrides = false;
-            this.lblBaocao.AutoEllipsis = false;
-            this.lblBaocao.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblBaocao.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblBaocao.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaocao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.lblBaocao.Location = new System.Drawing.Point(432, 62);
-            this.lblBaocao.Name = "lblBaocao";
-            this.lblBaocao.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBaocao.Size = new System.Drawing.Size(93, 32);
-            this.lblBaocao.TabIndex = 63;
-            this.lblBaocao.Text = "Báo Cáo";
-            this.lblBaocao.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblBaocao.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
@@ -108,7 +90,6 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.lblBaocao);
             this.Controls.Add(this.titlePanel);
             this.Controls.Add(this.reportViewerResult);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -120,7 +101,6 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
             this.titlePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -129,7 +109,6 @@ namespace Do_an_Winform.PL.Quanly.BaoCao
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerResult;
         private Bunifu.Framework.UI.BunifuGradientPanel titlePanel;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
-        private Bunifu.UI.WinForms.BunifuLabel lblBaocao;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

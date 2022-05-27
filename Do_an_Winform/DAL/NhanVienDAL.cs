@@ -15,7 +15,7 @@ namespace Do_an_Winform.DAL
             CHDTEntities1 entities = new CHDTEntities1();
             NhanVien emp = (from nv in entities.NhanViens
                             where nv.MaNguoiDung == manguoidung
-                            select nv).Single();
+                            select nv).SingleOrDefault();
             var config = new MapperConfiguration(cfg => cfg.CreateMap<NhanVien, NhanVienDTO>());
             var mapper = new Mapper(config);
             NhanVienDTO nhanVien = mapper.Map<NhanVienDTO>(emp);
