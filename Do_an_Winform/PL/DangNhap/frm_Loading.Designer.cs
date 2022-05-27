@@ -47,7 +47,7 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.ElipseRadius = 30;
             this.bunifuElipse1.TargetControl = this;
             // 
             // bunifuImageButton1
@@ -144,7 +144,7 @@
             this.Controls.Add(this.MyProgress);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Loading";
-            this.Opacity = 0.99D;
+            this.Opacity = 0.97D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Loading";
             this.Load += new System.EventHandler(this.frm_Loading_Load);
