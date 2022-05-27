@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DAL;
+using Do_an_Winform.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Do_an_Winform.PL.Quanly
 {
     public partial class frm_TKDT : Form
     {
+        TaiKhoanDTO user = new TaiKhoanDTO();
         public frm_TKDT()
         {
             InitializeComponent();
@@ -122,7 +124,7 @@ namespace Do_an_Winform.PL.Quanly
             //THỐNG KÊ
             if (cbHTTK.Text == "")
             {
-                    bunifuSnackbarTKDT.Show(this, "Vui lòng chọn hình thức thống kê \nThử lại", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    bunifuSnackbarTKDT.Show(new frm_Quanly(user), "Vui lòng chọn hình thức thống kê \nThử lại", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
             if (cbHTTK.Text == "Năm")
             {
