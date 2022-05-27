@@ -371,23 +371,17 @@
     <Compile Include="PL\Quanly\QLDoiTac\frm_DoiTacNV.Designer.cs">
       <DependentUpon>frm_DoiTacNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Quanly\QLDoiTac\frm_InsertNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Quanly\QLDoiTac\frm_InsertNCC.Designer.cs">
+      <DependentUpon>frm_InsertNCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Quanly\QLDoiTac\frm_TaoTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\Quanly\QLDoiTac\frm_TaoTaiKhoan.Designer.cs">
       <DependentUpon>frm_TaoTaiKhoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\Quanly\QLDoiTac\frm_ThemKH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Quanly\QLDoiTac\frm_ThemKH.Designer.cs">
-      <DependentUpon>frm_ThemKH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\Quanly\QLDoiTac\frm_ThemNCC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Quanly\QLDoiTac\frm_ThemNCC.Designer.cs">
-      <DependentUpon>frm_ThemNCC.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Quanly\QLHD\frm_HDBH.cs">
       <SubType>Form</SubType>
@@ -549,14 +543,11 @@
     <EmbeddedResource Include="PL\Quanly\QLDoiTac\frm_DoiTacNV.resx">
       <DependentUpon>frm_DoiTacNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Quanly\QLDoiTac\frm_InsertNCC.resx">
+      <DependentUpon>frm_InsertNCC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\QLDoiTac\frm_TaoTaiKhoan.resx">
       <DependentUpon>frm_TaoTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\QLDoiTac\frm_ThemKH.resx">
-      <DependentUpon>frm_ThemKH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Quanly\QLDoiTac\frm_ThemNCC.resx">
-      <DependentUpon>frm_ThemNCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Quanly\QLDoiTac\ReportKH.rdlc" />
     <EmbeddedResource Include="PL\Quanly\QLDoiTac\ReportNCC.rdlc" />

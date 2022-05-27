@@ -37,13 +37,6 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             dgKhachHang.Columns[7].HeaderText = "Điểm tích lũy";
         }
 
-        private void btThemKH_Click(object sender, EventArgs e)
-        {
-            frm_ThemKH form = new frm_ThemKH();
-            form.ShowDialog();
-            dgKhachHang.DataSource = KhachHangBLL.GetAllCustomer();
-        }
-
         private void txtFind_TextChange(object sender, EventArgs e)
         {
             try

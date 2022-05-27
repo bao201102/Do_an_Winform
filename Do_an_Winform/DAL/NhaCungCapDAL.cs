@@ -34,8 +34,15 @@ namespace Do_an_Winform.DAL
         public static bool AddNCC(NhaCungCapDTO dto)
         {
             CHDTEntities1 data = new CHDTEntities1();
+
+            var query = data.NhaCungCaps.Select(t => t).Count();
+
+            dto.MaNCC = "NCC" + (query + 1).ToString("000");
+            dto.TrangThai = "1";
+
             var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCapDTO, NhaCungCap>());
             var mapper = new Mapper(config);
+
             NhaCungCap ncc = mapper.Map<NhaCungCap>(dto);
             data.NhaCungCaps.Add(ncc);
             return data.SaveChanges() > 0 ? true : false;
@@ -78,6 +85,7 @@ namespace Do_an_Winform.DAL
             return nhaCungCap;
 
         }
+
         public static int CountSupply()
         {
             CHDTEntities1 data = new CHDTEntities1();
