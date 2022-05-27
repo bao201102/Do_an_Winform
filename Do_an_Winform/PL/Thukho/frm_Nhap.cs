@@ -182,12 +182,10 @@ namespace Do_an_Winform.PL.Thukho
 
                 if (ChiTietPhieuNhapBLL.AddChiTietPN(chiTiet))
                 {
+                    if (SanPhamBLL.IncreaseQuantityProduct(chiTiet))
+                    {
 
-                }
-
-                if (SanPhamBLL.UpdateQuantityProduct(chiTiet))
-                {
-
+                    }
                 }
             }
         }

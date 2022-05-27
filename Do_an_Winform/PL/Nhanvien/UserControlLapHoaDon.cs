@@ -56,6 +56,7 @@ namespace Do_an_Winform.PL.Nhanvien
             txtSDT.Enabled = false;
             txtTenKH.Enabled = false;
             txtLoaiTV.Enabled = false;
+            lblNgayBan.Enabled = false;
 
             nhanVien = NhanVienBLL.GetEmployee(frm_NVien.taikhoan.MaNguoiDung);
 
@@ -68,8 +69,7 @@ namespace Do_an_Winform.PL.Nhanvien
                     cbTenSP.Items.Add(sp.TenSP);
                 }
                 lblTenNV.Text = nhanVien.TenNV;
-                DateTime curDay = DateTime.Now;
-                lblNgayBan.Text = (new DateTime(curDay.Year, curDay.Month, curDay.Day)).ToString("dd / MM / yyyy");
+                lblNgayBan.Value = DateTime.Now;
             }
         }
 
@@ -137,8 +137,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 HoaDonDTO hoaDon = new HoaDonDTO();
                 listHoaDon = HoaDonDAL.GetAllBill();
                 hoaDon.MaHD = txtMaHD.Text;
-                DateTime curDay = DateTime.Now;
-                hoaDon.NgayTaoHD = (new DateTime(curDay.Year, curDay.Month, curDay.Day));
+                hoaDon.NgayTaoHD = lblNgayBan.Value;
                 try
                 {
                     nhanVien = NhanVienBLL.GetEmployee(frm_DSHoaDon.taiKhoan.MaNguoiDung);
@@ -157,6 +156,7 @@ namespace Do_an_Winform.PL.Nhanvien
                 }
                 hoaDon.ThanhTien = totalBuy;
                 hoaDon.TrangThai = "1";
+
                 if (HoaDonDAL.AddNewBill(hoaDon))
                 {
                     bunifuSnackbar1.Show(new frm_NVien(taikhoan), "Thêm hóa đơn thành công",
@@ -176,6 +176,10 @@ namespace Do_an_Winform.PL.Nhanvien
                         if (ChiTietHoaDonBLL.AddNewBillDetail(chiTietHD))
                         {
                             count++;
+                            if (SanPhamBLL.DecreaseQuantityProduct(chiTietHD))
+                            {
+
+                            }
                         }
                     }
 

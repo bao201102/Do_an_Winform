@@ -66,9 +66,14 @@ namespace Do_an_Winform.BLL
             return SanPhamDAL.GetProductEqualsName(ten);
         }
 
-        public static bool UpdateQuantityProduct(ChiTietPhieuNhapDTO pn)
+        public static bool IncreaseQuantityProduct(ChiTietPhieuNhapDTO pn)
         {
-            return SanPhamDAL.UpdateQuantityProduct(pn);
+            return SanPhamDAL.IncreaseQuantityProduct(pn);
+        }
+
+        public static bool DecreaseQuantityProduct(ChiTietHoaDonDTO hd)
+        {
+            return SanPhamDAL.DecreaseQuantityProduct(hd);
         }
 
         public static bool UpdateProduct(SanPhamDTO productDTO)

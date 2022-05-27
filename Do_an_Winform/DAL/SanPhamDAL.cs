@@ -507,13 +507,23 @@ namespace Do_an_Winform.DAL
             }
         }
 
-        public static bool UpdateQuantityProduct(ChiTietPhieuNhapDTO pn)
+        public static bool IncreaseQuantityProduct(ChiTietPhieuNhapDTO pn)
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var sp = (from p in entities.SanPhams
                       where p.MaSP.Equals(pn.MaSP)
                       select p).SingleOrDefault();
             sp.SoLuong += pn.SoLuong;
+            return entities.SaveChanges() > 0 ? true : false;
+        }
+
+        public static bool DecreaseQuantityProduct(ChiTietHoaDonDTO hd)
+        {
+            CHDTEntities1 entities = new CHDTEntities1();
+            var sp = (from p in entities.SanPhams
+                      where p.MaSP.Equals(hd.MaSP)
+                      select p).SingleOrDefault();
+            sp.SoLuong -= hd.SoLuong;
             return entities.SaveChanges() > 0 ? true : false;
         }
 
