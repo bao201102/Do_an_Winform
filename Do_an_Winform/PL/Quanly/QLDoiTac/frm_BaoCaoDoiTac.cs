@@ -37,7 +37,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             {
                 lblBaocao.Text = "Báo cáo danh sách nhân viên";
                 List<NhanVienDTO> list = NhanVienBLL.LayTatCaNhanVien();
-                this.rptBaoCao.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.DoiTac.ReportNV.rdlc";
+                this.rptBaoCao.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.QLDoiTac.ReportNV.rdlc";
                 rptBaoCao.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", list));
                 this.rptBaoCao.RefreshReport();
             }
@@ -45,7 +45,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             {
                 lblBaocao.Text = "Báo cáo danh sách khách hàng";
                 List<KhachHangDTO> list = KhachHangBLL.LayTatCaKhachHang();
-                this.rptBaoCao.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.DoiTac.ReportKH.rdlc";
+                this.rptBaoCao.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.QLDoiTac.ReportKH.rdlc";
                 rptBaoCao.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", list));
                 this.rptBaoCao.RefreshReport();
             }
@@ -53,7 +53,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             {
                 lblBaocao.Text = "Báo cáo danh sách nhà cung cấp";
                 List<NhaCungCapDTO> list = NhaCungCapBLL.GetNhaCungCap();
-                this.rptBaoCao.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.DoiTac.ReportNCC.rdlc";
+                this.rptBaoCao.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.QLDoiTac.ReportNCC.rdlc";
                 rptBaoCao.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSetNCC", list));
                 this.rptBaoCao.RefreshReport();
             }
