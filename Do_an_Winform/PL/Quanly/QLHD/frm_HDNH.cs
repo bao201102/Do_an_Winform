@@ -88,6 +88,8 @@ namespace Do_an_Winform.PL.Quanly
 
             if (txtSearch.Text.Trim() != "")
             {
+                startday = DatePickerStartDay.Value;
+                endday = DatePickerEndDay.Value;
                 PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
                 pnsearch.MaPN = txtSearch.Text;
 
@@ -140,15 +142,15 @@ namespace Do_an_Winform.PL.Quanly
             if (isSuccess == true)
             {
                 int mapn = int.Parse(txtSearch.Text);
-                string s = "HD" + mapn.ToString("000");
+                string s = "PN" + mapn.ToString("000");
                 PhieuNhapHangDTO pnsearch = new PhieuNhapHangDTO();
                 pnsearch.MaPN = s;
                 listpn = PhieuNhapHangBLL.ThongKeTheoMaPN(pnsearch, startday, endday);
                 gvHDNH.DataSource = listpn;
-                gvHDNH.Columns[0].HeaderText = "Mã HD";
-                gvHDNH.Columns[1].HeaderText = "Ngày lập HD";
+                gvHDNH.Columns[0].HeaderText = "Mã PN";
+                gvHDNH.Columns[1].HeaderText = "Ngày lập PN";
                 gvHDNH.Columns[2].HeaderText = "Mã NV";
-                gvHDNH.Columns[3].HeaderText = "Mã KH";
+                gvHDNH.Columns[3].HeaderText = "Mã NCC";
                 gvHDNH.Columns[4].HeaderText = "Thành tiền";
                 gvHDNH.Columns[5].Visible = false;
                 txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();
@@ -160,10 +162,10 @@ namespace Do_an_Winform.PL.Quanly
             pnsearch.MaPN = txtSearch.Text;
             listpn = PhieuNhapHangBLL.ThongKeTheoMaPN(pnsearch, startday, endday);
             gvHDNH.DataSource = listpn;
-            gvHDNH.Columns[0].HeaderText = "Mã HD";
-            gvHDNH.Columns[1].HeaderText = "Ngày lập HD";
+            gvHDNH.Columns[0].HeaderText = "Mã PN";
+            gvHDNH.Columns[1].HeaderText = "Ngày lập PN";
             gvHDNH.Columns[2].HeaderText = "Mã NV";
-            gvHDNH.Columns[3].HeaderText = "Mã KH";
+            gvHDNH.Columns[3].HeaderText = "Mã NCC";
             gvHDNH.Columns[4].HeaderText = "Thành tiền";
             gvHDNH.Columns[5].Visible = false;
             txtTongCong.Text = PhieuNhapHangBLL.ChiPhiTheoMaPN(pnsearch, startday, endday).ToString();

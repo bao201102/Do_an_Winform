@@ -31,22 +31,22 @@ namespace Do_an_Winform.PL.Quanly
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TKDT));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -123,7 +123,7 @@ namespace Do_an_Winform.PL.Quanly
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1277, 629);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1277, 619);
             this.tableLayoutPanel1.TabIndex = 79;
             // 
             // bunifuPanel4
@@ -140,7 +140,7 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel4.Location = new System.Drawing.Point(3, 3);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(496, 623);
+            this.bunifuPanel4.Size = new System.Drawing.Size(496, 613);
             this.bunifuPanel4.TabIndex = 80;
             // 
             // bunifuPanel3
@@ -160,11 +160,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel3.Controls.Add(this.label12);
             this.bunifuPanel3.Controls.Add(this.label15);
             this.bunifuPanel3.Controls.Add(this.label13);
-            this.bunifuPanel3.Location = new System.Drawing.Point(38, 1);
+            this.bunifuPanel3.Location = new System.Drawing.Point(38, 2);
             this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = false;
-            this.bunifuPanel3.Size = new System.Drawing.Size(414, 329);
+            this.bunifuPanel3.Size = new System.Drawing.Size(414, 287);
             this.bunifuPanel3.TabIndex = 73;
             // 
             // cbThangTK
@@ -187,7 +187,7 @@ namespace Do_an_Winform.PL.Quanly
             "11",
             "12",
             "Tất cả"});
-            this.cbThangTK.Location = new System.Drawing.Point(187, 257);
+            this.cbThangTK.Location = new System.Drawing.Point(187, 250);
             this.cbThangTK.Margin = new System.Windows.Forms.Padding(2);
             this.cbThangTK.Name = "cbThangTK";
             this.cbThangTK.Size = new System.Drawing.Size(192, 29);
@@ -200,7 +200,7 @@ namespace Do_an_Winform.PL.Quanly
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 260);
+            this.label2.Location = new System.Drawing.Point(27, 253);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 21);
@@ -237,33 +237,33 @@ namespace Do_an_Winform.PL.Quanly
             this.txtNamTK.IconRight = null;
             this.txtNamTK.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNamTK.Lines = new string[0];
-            this.txtNamTK.Location = new System.Drawing.Point(187, 138);
+            this.txtNamTK.Location = new System.Drawing.Point(187, 131);
             this.txtNamTK.Margin = new System.Windows.Forms.Padding(2);
             this.txtNamTK.MaxLength = 32767;
             this.txtNamTK.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNamTK.Modified = false;
             this.txtNamTK.Multiline = false;
             this.txtNamTK.Name = "txtNamTK";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNamTK.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtNamTK.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNamTK.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNamTK.OnIdleState = stateProperties4;
+            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNamTK.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtNamTK.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNamTK.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.Silver;
+            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.ForeColor = System.Drawing.Color.Empty;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNamTK.OnIdleState = stateProperties20;
             this.txtNamTK.Padding = new System.Windows.Forms.Padding(2);
             this.txtNamTK.PasswordChar = '\0';
             this.txtNamTK.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -279,7 +279,7 @@ namespace Do_an_Winform.PL.Quanly
             this.txtNamTK.TabIndex = 14;
             this.txtNamTK.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNamTK.TextMarginBottom = 0;
-            this.txtNamTK.TextMarginLeft = 3;
+            this.txtNamTK.TextMarginLeft = 1;
             this.txtNamTK.TextMarginTop = 1;
             this.txtNamTK.TextPlaceholder = "";
             this.txtNamTK.UseSystemPasswordChar = false;
@@ -298,7 +298,7 @@ namespace Do_an_Winform.PL.Quanly
             "3",
             "4",
             "Tất cả"});
-            this.cbQuyTK.Location = new System.Drawing.Point(187, 197);
+            this.cbQuyTK.Location = new System.Drawing.Point(187, 190);
             this.cbQuyTK.Margin = new System.Windows.Forms.Padding(2);
             this.cbQuyTK.Name = "cbQuyTK";
             this.cbQuyTK.Size = new System.Drawing.Size(192, 29);
@@ -315,7 +315,7 @@ namespace Do_an_Winform.PL.Quanly
             "Năm",
             "Quý",
             "Tháng"});
-            this.cbHTTK.Location = new System.Drawing.Point(187, 75);
+            this.cbHTTK.Location = new System.Drawing.Point(187, 68);
             this.cbHTTK.Margin = new System.Windows.Forms.Padding(2);
             this.cbHTTK.Name = "cbHTTK";
             this.cbHTTK.Size = new System.Drawing.Size(192, 29);
@@ -327,7 +327,7 @@ namespace Do_an_Winform.PL.Quanly
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Leelawadee UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(17, 17);
+            this.label16.Location = new System.Drawing.Point(17, 10);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(209, 23);
@@ -341,7 +341,7 @@ namespace Do_an_Winform.PL.Quanly
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(27, 200);
+            this.label12.Location = new System.Drawing.Point(27, 193);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(39, 21);
@@ -355,7 +355,7 @@ namespace Do_an_Winform.PL.Quanly
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(27, 78);
+            this.label15.Location = new System.Drawing.Point(27, 71);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(142, 21);
@@ -369,7 +369,7 @@ namespace Do_an_Winform.PL.Quanly
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(27, 141);
+            this.label13.Location = new System.Drawing.Point(27, 134);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(109, 21);
@@ -378,7 +378,6 @@ namespace Do_an_Winform.PL.Quanly
             // 
             // bunifuPanel2
             // 
-            this.bunifuPanel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
             this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
             this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -393,11 +392,11 @@ namespace Do_an_Winform.PL.Quanly
             this.bunifuPanel2.Controls.Add(this.label4);
             this.bunifuPanel2.Controls.Add(this.label3);
             this.bunifuPanel2.Controls.Add(this.ChiPhi);
-            this.bunifuPanel2.Location = new System.Drawing.Point(38, 328);
+            this.bunifuPanel2.Location = new System.Drawing.Point(38, 300);
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = false;
-            this.bunifuPanel2.Size = new System.Drawing.Size(414, 321);
+            this.bunifuPanel2.Size = new System.Drawing.Size(414, 311);
             this.bunifuPanel2.TabIndex = 76;
             // 
             // btnTK
@@ -407,7 +406,6 @@ namespace Do_an_Winform.PL.Quanly
             this.btnTK.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnTK.ActiveForecolor = System.Drawing.Color.Black;
             this.btnTK.ActiveLineColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTK.BackColor = System.Drawing.Color.White;
             this.btnTK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTK.BackgroundImage")));
             this.btnTK.ButtonText = "Thống kê";
@@ -419,7 +417,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnTK.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
             this.btnTK.IdleForecolor = System.Drawing.Color.Black;
             this.btnTK.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.btnTK.Location = new System.Drawing.Point(150, 274);
+            this.btnTK.Location = new System.Drawing.Point(145, 255);
             this.btnTK.Margin = new System.Windows.Forms.Padding(5);
             this.btnTK.Name = "btnTK";
             this.btnTK.Size = new System.Drawing.Size(102, 42);
@@ -464,26 +462,26 @@ namespace Do_an_Winform.PL.Quanly
             this.txtDoanhThu.Modified = false;
             this.txtDoanhThu.Multiline = false;
             this.txtDoanhThu.Name = "txtDoanhThu";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDoanhThu.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtDoanhThu.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDoanhThu.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDoanhThu.OnIdleState = stateProperties8;
+            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDoanhThu.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtDoanhThu.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDoanhThu.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.Silver;
+            stateProperties24.FillColor = System.Drawing.Color.White;
+            stateProperties24.ForeColor = System.Drawing.Color.Empty;
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDoanhThu.OnIdleState = stateProperties24;
             this.txtDoanhThu.Padding = new System.Windows.Forms.Padding(2);
             this.txtDoanhThu.PasswordChar = '\0';
             this.txtDoanhThu.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -535,33 +533,33 @@ namespace Do_an_Winform.PL.Quanly
             this.txtLoiNhuan.IconRight = null;
             this.txtLoiNhuan.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLoiNhuan.Lines = new string[0];
-            this.txtLoiNhuan.Location = new System.Drawing.Point(166, 205);
+            this.txtLoiNhuan.Location = new System.Drawing.Point(166, 197);
             this.txtLoiNhuan.Margin = new System.Windows.Forms.Padding(2);
             this.txtLoiNhuan.MaxLength = 32767;
             this.txtLoiNhuan.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtLoiNhuan.Modified = false;
             this.txtLoiNhuan.Multiline = false;
             this.txtLoiNhuan.Name = "txtLoiNhuan";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtLoiNhuan.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtLoiNhuan.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtLoiNhuan.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtLoiNhuan.OnIdleState = stateProperties12;
+            stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties25.FillColor = System.Drawing.Color.Empty;
+            stateProperties25.ForeColor = System.Drawing.Color.Empty;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtLoiNhuan.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtLoiNhuan.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties27.FillColor = System.Drawing.Color.Empty;
+            stateProperties27.ForeColor = System.Drawing.Color.Empty;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtLoiNhuan.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.Silver;
+            stateProperties28.FillColor = System.Drawing.Color.White;
+            stateProperties28.ForeColor = System.Drawing.Color.Empty;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtLoiNhuan.OnIdleState = stateProperties28;
             this.txtLoiNhuan.Padding = new System.Windows.Forms.Padding(2);
             this.txtLoiNhuan.PasswordChar = '\0';
             this.txtLoiNhuan.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -613,33 +611,33 @@ namespace Do_an_Winform.PL.Quanly
             this.txtChiPhi.IconRight = null;
             this.txtChiPhi.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtChiPhi.Lines = new string[0];
-            this.txtChiPhi.Location = new System.Drawing.Point(166, 126);
+            this.txtChiPhi.Location = new System.Drawing.Point(166, 124);
             this.txtChiPhi.Margin = new System.Windows.Forms.Padding(2);
             this.txtChiPhi.MaxLength = 32767;
             this.txtChiPhi.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtChiPhi.Modified = false;
             this.txtChiPhi.Multiline = false;
             this.txtChiPhi.Name = "txtChiPhi";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtChiPhi.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtChiPhi.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtChiPhi.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtChiPhi.OnIdleState = stateProperties16;
+            stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties29.FillColor = System.Drawing.Color.Empty;
+            stateProperties29.ForeColor = System.Drawing.Color.Empty;
+            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtChiPhi.OnActiveState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtChiPhi.OnDisabledState = stateProperties30;
+            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties31.FillColor = System.Drawing.Color.Empty;
+            stateProperties31.ForeColor = System.Drawing.Color.Empty;
+            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtChiPhi.OnHoverState = stateProperties31;
+            stateProperties32.BorderColor = System.Drawing.Color.Silver;
+            stateProperties32.FillColor = System.Drawing.Color.White;
+            stateProperties32.ForeColor = System.Drawing.Color.Empty;
+            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtChiPhi.OnIdleState = stateProperties32;
             this.txtChiPhi.Padding = new System.Windows.Forms.Padding(2);
             this.txtChiPhi.PasswordChar = '\0';
             this.txtChiPhi.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -694,7 +692,7 @@ namespace Do_an_Winform.PL.Quanly
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 211);
+            this.label3.Location = new System.Drawing.Point(27, 203);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 21);
@@ -708,7 +706,7 @@ namespace Do_an_Winform.PL.Quanly
             this.ChiPhi.AutoSize = true;
             this.ChiPhi.BackColor = System.Drawing.Color.Transparent;
             this.ChiPhi.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChiPhi.Location = new System.Drawing.Point(27, 130);
+            this.ChiPhi.Location = new System.Drawing.Point(27, 128);
             this.ChiPhi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ChiPhi.Name = "ChiPhi";
             this.ChiPhi.Size = new System.Drawing.Size(59, 21);
@@ -749,7 +747,7 @@ namespace Do_an_Winform.PL.Quanly
             this.chartCanvasTKDT.Padding = new System.Windows.Forms.Padding(3);
             this.chartCanvasTKDT.ShowXAxis = true;
             this.chartCanvasTKDT.ShowYAxis = true;
-            this.chartCanvasTKDT.Size = new System.Drawing.Size(767, 621);
+            this.chartCanvasTKDT.Size = new System.Drawing.Size(767, 611);
             this.chartCanvasTKDT.TabIndex = 78;
             this.chartCanvasTKDT.Title = "";
             this.chartCanvasTKDT.TitleLineHeight = 1.2D;
@@ -983,7 +981,7 @@ namespace Do_an_Winform.PL.Quanly
             this.lineChartLN.CubicInterpolationMode = Bunifu.Charts.WinForms.ChartTypes.BunifuLineChart.CubicInterpolationModes.Default;
             this.lineChartLN.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("lineChartLN.Data")));
             this.lineChartLN.Fill = Bunifu.Charts.WinForms.ChartTypes.BunifuLineChart.FillOptions.Blank;
-            this.lineChartLN.Label = "Line Chart";
+            this.lineChartLN.Label = "Lợi nhuận";
             this.lineChartLN.LineTension = 0.4D;
             this.lineChartLN.Order = 0;
             this.lineChartLN.PointBackgroundColor = System.Drawing.Color.Empty;
@@ -1000,7 +998,7 @@ namespace Do_an_Winform.PL.Quanly
             this.lineChartLN.ShowLine = true;
             this.lineChartLN.SpanGaps = false;
             this.lineChartLN.SteppedLine = Bunifu.Charts.WinForms.ChartTypes.BunifuLineChart.SteppedLineStyles.False;
-            this.lineChartLN.TargetCanvas = null;
+            this.lineChartLN.TargetCanvas = this.chartCanvasTKDT;
             // 
             // frm_TKDT
             // 

@@ -18,6 +18,7 @@ namespace Do_an_Winform.PL.Quanly
         {
             InitializeComponent();
         }
+
         private void frm_TKDT_Load(object sender, EventArgs e)
         {
             maskedtxtToday.Value = System.DateTime.Now;
@@ -30,7 +31,12 @@ namespace Do_an_Winform.PL.Quanly
             txtDoanhThu.Text = HoaDonBLL.ThongKeDoanhThuTheoTDHT(today).ToString();
             txtChiPhi.Text = PhieuNhapHangBLL.ThongKeChiPhiTheoTDHT(today).ToString();
             txtLoiNhuan.Text = (double.Parse(txtDoanhThu.Text) - double.Parse(txtChiPhi.Text)).ToString();
+
+            txtDoanhThu.ReadOnly = true;
+            txtChiPhi.ReadOnly = true;
+            txtLoiNhuan.ReadOnly = true;
         }
+
         private void cbQuyTK_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbThangTK.Items.Clear();
@@ -60,6 +66,7 @@ namespace Do_an_Winform.PL.Quanly
                 cbThangTK.Items.AddRange(allmonth);
             }
         }
+
         private void cbHTTK_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbHTTK.Text == "Năm")
@@ -95,6 +102,7 @@ namespace Do_an_Winform.PL.Quanly
                 }
             }
         }
+
         public int LayQuy(string month)
         {
             if (month == "1" || month == "2" || month == "3") return 1;
@@ -103,10 +111,16 @@ namespace Do_an_Winform.PL.Quanly
             else if (month == "10" || month == "11" || month == "12") return 4;
             return 0;
         }
+
         private void btnTK_Click(object sender, EventArgs e)
         {
+            chartCanvasTKDT.Clear();
+            barChartCP.Data.Clear();
+            barChartDT.Data.Clear();
+            barChartLN.Data.Clear();
+
             //THỐNG KÊ
-            if(cbHTTK.Text == "")
+            if (cbHTTK.Text == "")
             {
                     bunifuSnackbarTKDT.Show(this, "Vui lòng chọn hình thức thống kê \nThử lại", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
@@ -176,6 +190,8 @@ namespace Do_an_Winform.PL.Quanly
                 lineChartLN.BackgroundColor = Color.Green;
             }
 
+            chartCanvasTKDT.Update();
+            chartCanvasTKDT.Refresh();
         }
 
         private void txtNamTK_KeyPress(object sender, KeyPressEventArgs e)

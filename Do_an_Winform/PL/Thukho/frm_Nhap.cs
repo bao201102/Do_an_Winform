@@ -39,7 +39,7 @@ namespace Do_an_Winform.PL.Thukho
             NhanVienDTO emp = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
             lblTenNV.Text = emp.TenNV;
 
-            cbbNhaCC.DataSource = NhaCungCapBLL.GetNhaCungCap();
+            cbbNhaCC.DataSource = NhaCungCapBLL.GetAllSupplier();
             cbbNhaCC.DisplayMember = "TenNCC";
             cbbNhaCC.ValueMember = "MaNCC";
 

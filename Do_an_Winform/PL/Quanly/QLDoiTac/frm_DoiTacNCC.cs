@@ -1,5 +1,6 @@
 ﻿using Do_an_Winform.BLL;
 using Do_an_Winform.DTO;
+using Do_an_Winform.PL.Quanly.QLDoiTac;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 
         private void frm_DoiTacNCC_Load(object sender, EventArgs e)
         {
-            dgNhaCungCap.DataSource = NhaCungCapBLL.GetNhaCungCap();
+            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupplier();
             dgNhaCungCap.ReadOnly = true;
             dgNhaCungCap.AllowUserToResizeColumns = false;
             dgNhaCungCap.AllowUserToResizeRows = false;
@@ -38,16 +39,16 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 
         private void btThemNCC_Click(object sender, EventArgs e)
         {
-            frm_ThemNCC form = new frm_ThemNCC();
+            frm_InsertNCC form = new frm_InsertNCC();
             form.ShowDialog();
-            dgNhaCungCap.DataSource = NhaCungCapBLL.GetNhaCungCap();
+            dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupplier();
         }
 
         private void txtFind_TextChange(object sender, EventArgs e)
         {
             try
             {
-                dgNhaCungCap.DataSource = NhaCungCapBLL.GetNhaCungCap();
+                dgNhaCungCap.DataSource = NhaCungCapBLL.GetAllSupplierByName(txtFind.Text);
                 dgNhaCungCap.Columns[0].Visible = false;
                 dgNhaCungCap.Columns[1].HeaderText = "Tên nhà cung cấp";
                 dgNhaCungCap.Columns[2].HeaderText = "Số điện thoại";

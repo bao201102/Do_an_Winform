@@ -43,7 +43,7 @@ namespace Do_an_Winform.DAL
                         on nv.MaLoaiNV equals lnv.MaLoaiNV
                         join tk in entities.TaiKhoans
                         on nv.MaNguoiDung equals tk.MaNguoiDung
-                        where nv.TenNV.Equals(name) && nv.TrangThai == "1"
+                        where nv.TenNV.Contains(name) && nv.TrangThai == "1"
                         select new
                         {
                             nv.MaNV,

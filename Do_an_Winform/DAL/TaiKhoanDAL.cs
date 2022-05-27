@@ -64,7 +64,7 @@ namespace Do_an_Winform.DAL
                 entities.SaveChanges();
                 return true;
             }
-            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            catch (Exception)
             {
                 return false;
             }

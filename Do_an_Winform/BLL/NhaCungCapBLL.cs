@@ -10,17 +10,17 @@ namespace Do_an_Winform.BLL
 {
     class NhaCungCapBLL
     {
-        public static List<NhaCungCapDTO> GetNhaCungCap()
+        public static List<NhaCungCapDTO> GetAllSupplier()
         {
-            return NhaCungCapDAL.GetNhaCungCap();
+            return NhaCungCapDAL.GetAllSupplier();
         }
 
-        public static bool AddNCC(NhaCungCapDTO dto)
+        public static bool InsertSupplier(NhaCungCapDTO dto)
         {
-            return NhaCungCapDAL.AddNCC(dto);
+            return NhaCungCapDAL.InsertSupplier(dto);
         }
 
-        public static List<object> GetAllSupplierByName(string name)
+        public static List<NhaCungCapDTO> GetAllSupplierByName(string name)
         {
             return NhaCungCapDAL.GetAllSupplierByName(name);
         }
@@ -28,10 +28,6 @@ namespace Do_an_Winform.BLL
         public static NhaCungCapDTO GetNhaCungCapByID(string mancc)
         {
             return NhaCungCapDAL.GetNhaCungCapByID(mancc);
-        }
-        public static int CountSupply()
-        {
-            return NhaCungCapDAL.CountSupply();
         }
     }
 }

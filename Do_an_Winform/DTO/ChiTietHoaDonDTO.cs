@@ -21,6 +21,12 @@ namespace Do_an_Winform.DTO
 			get { return _MaSP; }
 			set { _MaSP = value; }
 		}
+		private string _TenSP;
+		public string TenSP
+		{
+			get { return _TenSP; }
+			set { _TenSP = value; }
+		}
 
 		private int _SoLuong;
 		public int SoLuong
@@ -43,30 +49,27 @@ namespace Do_an_Winform.DTO
 			set { _TrangThai = value; }
 		}
 
-		private string _TenSP;
-		public string TenSP
-		{
-			get { return _TenSP; }
-			set { _TenSP = value; }
-		}
+		
 		public ChiTietHoaDonDTO()
 		{
 			this.MaHD = "";
 			this.MaSP = "";
+			this.TenSP = "";
 			this.SoLuong = 0;
 			this.ThanhTien = 0;
 			this.TrangThai = "";
-			this.TenSP = "";
+			
 
 		}
-		public ChiTietHoaDonDTO(string MaHD_, string MaSP_, int SoLuong_, int ThanhTien_, string TrangThai_, string TenSP_)
+		public ChiTietHoaDonDTO(string MaHD_, string MaSP_, string TenSP_, int SoLuong_, int ThanhTien_, string TrangThai_)
 		{
 			this.MaHD = MaHD_;
 			this.MaSP = MaSP_;
+			this.TenSP = TenSP_;
 			this.SoLuong = SoLuong_;
 			this.ThanhTien = ThanhTien_;
 			this.TrangThai = TrangThai_;
-			this.TenSP = TenSP_;
+			
 
 		}
 	}

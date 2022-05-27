@@ -41,6 +41,10 @@ namespace Do_an_Winform.PL.Nhanvien
             cbThuongHieu.DataSource = NhaSanXuatBLL.GetAllManufac();
             cbThuongHieu.DisplayMember = "TenNhaSX";
             cbThuongHieu.ValueMember = "MaNhaSX";
+            cbGia.Items.Add("1000000 - 5000000");
+            cbGia.Items.Add("5000000 - 10000000");
+            cbGia.Items.Add("10000000 - 30000000");
+            cbGia.Items.Add("30000000 - 50000000");
         }
 
         private void cbTenSP_TextChanged(object sender, EventArgs e)

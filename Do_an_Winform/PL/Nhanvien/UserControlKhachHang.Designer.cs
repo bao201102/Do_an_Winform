@@ -54,10 +54,10 @@
             this.lbl1.AutoSize = true;
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
             this.lbl1.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.lbl1.Location = new System.Drawing.Point(427, 48);
+            this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.lbl1.Location = new System.Drawing.Point(451, 37);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(278, 32);
+            this.lbl1.Size = new System.Drawing.Size(277, 32);
             this.lbl1.TabIndex = 1;
             this.lbl1.Text = "Danh Sách Khách Hàng";
             // 
