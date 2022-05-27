@@ -52,7 +52,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             else if (thongtin == "3")
             {
                 lblBaocao.Text = "Báo cáo danh sách nhà cung cấp";
-                List<NhaCungCapDTO> list = NhaCungCapBLL.GetNhaCungCap();
+                List<NhaCungCapDTO> list = NhaCungCapBLL.GetAllSupplier();
                 this.rptBaoCao.LocalReport.ReportEmbeddedResource = "Do_an_Winform.PL.Quanly.QLDoiTac.ReportNCC.rdlc";
                 rptBaoCao.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSetNCC", list));
                 this.rptBaoCao.RefreshReport();
