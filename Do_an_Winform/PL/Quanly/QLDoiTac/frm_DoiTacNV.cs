@@ -78,7 +78,6 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             catch (Exception)
             {
 
-                throw;
             }
         }
 

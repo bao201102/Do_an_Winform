@@ -38,7 +38,7 @@ namespace Do_an_Winform.PL.Quanly.QLDoiTac
                 bool result = messBox.ShowMess("Bạn có muốn thêm nhà cung cấp mới không ?");
                 if (result)
                 {
-                    if (NhaCungCapBLL.AddNCC(ncc))
+                    if (NhaCungCapBLL.InsertSupplier(ncc))
                     {
                         bunifuSnackbar1.Show(new frm_QLSP(), "Bạn đã thêm nhà cung cấp mới thành công", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
                         Close();

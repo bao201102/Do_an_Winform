@@ -43,13 +43,14 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
             {
                 dgKhachHang.DataSource = KhachHangBLL.GetCustomerByName(txtFind.Text);
 
-                dgKhachHang.Columns[0].HeaderText = "Tên khách hàng";
-                dgKhachHang.Columns[1].HeaderText = "Giới tính";
-                dgKhachHang.Columns[2].HeaderText = "Email";
-                dgKhachHang.Columns[3].HeaderText = "Số điện thoại";
-                dgKhachHang.Columns[4].HeaderText = "Địa chỉ";
-                dgKhachHang.Columns[5].HeaderText = "Loại thành viên";
-                dgKhachHang.Columns[6].HeaderText = "Điểm tích lũy";
+                dgKhachHang.Columns[0].Visible = false;
+                dgKhachHang.Columns[1].HeaderText = "Tên khách hàng";
+                dgKhachHang.Columns[2].HeaderText = "Giới tính";
+                dgKhachHang.Columns[3].HeaderText = "Email";
+                dgKhachHang.Columns[4].HeaderText = "Số điện thoại";
+                dgKhachHang.Columns[5].HeaderText = "Địa chỉ";
+                dgKhachHang.Columns[6].HeaderText = "Loại thành viên";
+                dgKhachHang.Columns[7].HeaderText = "Điểm tích lũy";
 
             }
             catch (Exception)

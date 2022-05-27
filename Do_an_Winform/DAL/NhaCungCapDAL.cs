@@ -10,7 +10,7 @@ namespace Do_an_Winform.DAL
 {
     class NhaCungCapDAL
     {
-        public static List<NhaCungCapDTO> GetNhaCungCap()
+        public static List<NhaCungCapDTO> GetAllSupplier()
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var ncc = (from cc in entities.NhaCungCaps
@@ -28,10 +28,9 @@ namespace Do_an_Winform.DAL
 
             }
             return nhaCungCapDTOs;
-
         }
 
-        public static bool AddNCC(NhaCungCapDTO dto)
+        public static bool InsertSupplier(NhaCungCapDTO dto)
         {
             CHDTEntities1 data = new CHDTEntities1();
 
@@ -48,27 +47,24 @@ namespace Do_an_Winform.DAL
             return data.SaveChanges() > 0 ? true : false;
         }
 
-        public static List<object> GetAllSupplierByName(string name)
+        public static List<NhaCungCapDTO> GetAllSupplierByName(string name)
         {
             CHDTEntities1 entities = new CHDTEntities1();
-            List<object> list = new List<object>();
+            var ncc = (from cc in entities.NhaCungCaps
+                       where cc.TrangThai == "1" && cc.TenNCC.Contains(name)
+                       select cc);
 
-            var query = from ncc in entities.NhaCungCaps
-                        where ncc.TenNCC.Equals(name) && ncc.TrangThai == "1"
-                        select new
-                        {
-                            ncc.MaNCC,
-                            ncc.TenNCC,
-                            ncc.SDT,
-                            ncc.Email,
-                            ncc.DiaChi
-                        };
-
-            foreach (var item in query)
+            List<NhaCungCapDTO> nhaCungCapDTOs = new List<NhaCungCapDTO>();
+            foreach (NhaCungCap item in ncc)
             {
-                list.Add(item);
+
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<NhaCungCap, NhaCungCapDTO>());
+                var mapper = new Mapper(config);
+                NhaCungCapDTO nhaCungCap = mapper.Map<NhaCungCapDTO>(item);
+                nhaCungCapDTOs.Add(nhaCungCap);
+
             }
-            return list;
+            return nhaCungCapDTOs;
         }
 
         public static NhaCungCapDTO GetNhaCungCapByID(string mancc)
@@ -84,14 +80,6 @@ namespace Do_an_Winform.DAL
 
             return nhaCungCap;
 
-        }
-
-        public static int CountSupply()
-        {
-            CHDTEntities1 data = new CHDTEntities1();
-            var nhacungcap = (from ncc in data.NhaCungCaps
-                            select ncc).Count();
-            return nhacungcap + 1;
         }
     }
 }
