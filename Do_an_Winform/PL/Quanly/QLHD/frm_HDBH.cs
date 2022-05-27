@@ -179,8 +179,8 @@ namespace Do_an_Winform.PL.Quanly
 
         private void DatePickerEndDay_CloseUp(object sender, EventArgs e)
         {
-            DateTime startday = Convert.ToDateTime(DatePickerStartDay.Text);
-            DateTime endday = Convert.ToDateTime(DatePickerEndDay.Text);
+            DateTime startday = DatePickerStartDay.Value;
+            DateTime endday = DatePickerEndDay.Value;
             if (startday <= endday)
             {
                 listhd = HoaDonBLL.ThongKeTatCaHD(startday, endday);

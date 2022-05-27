@@ -33,7 +33,6 @@ namespace Do_an_Winform.PL.Quanly
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Quanly));
             this.Transition = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sidemenu = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.subdoitacPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btDoiTac_NCC = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -66,6 +65,7 @@ namespace Do_an_Winform.PL.Quanly
             this.btnMaximize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sidemenu.SuspendLayout();
             this.subdoitacPanel.SuspendLayout();
             this.doitacPanel.SuspendLayout();
@@ -105,11 +105,6 @@ namespace Do_an_Winform.PL.Quanly
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.Transition.DefaultAnimation = animation1;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // sidemenu
             // 
@@ -961,6 +956,11 @@ namespace Do_an_Winform.PL.Quanly
             this.btnClose.Zoom = 10;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // frm_Quanly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -970,6 +970,7 @@ namespace Do_an_Winform.PL.Quanly
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.titlePanel);
             this.Transition.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Quanly";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
