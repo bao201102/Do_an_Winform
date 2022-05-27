@@ -19,7 +19,7 @@ namespace Do_an_Winform.DAL
             List<PhieuNhapHangDTO> listpn = new List<PhieuNhapHangDTO>();
             foreach (PhieuNhapHang pn in truyvan)
             {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuNhapHang, PhieuNhapHangDTO>());
                 var mapper = new Mapper(config);
                 PhieuNhapHangDTO phieunhap = mapper.Map<PhieuNhapHangDTO>(pn);
                 listpn.Add(phieunhap);
@@ -35,7 +35,7 @@ namespace Do_an_Winform.DAL
             List<PhieuNhapHangDTO> listpn = new List<PhieuNhapHangDTO>();
             foreach (PhieuNhapHang pn in truyvan)
             {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDon, HoaDonDTO>());
+                var config = new MapperConfiguration(cfg => cfg.CreateMap<PhieuNhapHang, PhieuNhapHangDTO>());
                 var mapper = new Mapper(config);
                 PhieuNhapHangDTO pndto = mapper.Map<PhieuNhapHangDTO>(pn);
                 listpn.Add(pndto);
