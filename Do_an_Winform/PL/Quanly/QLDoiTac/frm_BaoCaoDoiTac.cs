@@ -33,7 +33,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
 
         private void rptBaoCaoNV_Load(object sender, EventArgs e)
         {
-            if (thongtin == "1")
+            if (thongtin == "nhanvien")
             {
                 lblBaocao.Text = "Báo cáo danh sách nhân viên";
                 List<NhanVienDTO> list = NhanVienBLL.LayTatCaNhanVien();
@@ -41,7 +41,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
                 rptBaoCao.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", list));
                 this.rptBaoCao.RefreshReport();
             }
-            else if (thongtin == "2")
+            else if (thongtin == "khachhang")
             {
                 lblBaocao.Text = "Báo cáo danh sách khách hàng";
                 List<KhachHangDTO> list = KhachHangBLL.LayTatCaKhachHang();
@@ -49,7 +49,7 @@ namespace Do_an_Winform.PL.Quanly.DoiTac
                 rptBaoCao.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", list));
                 this.rptBaoCao.RefreshReport();
             }
-            else if (thongtin == "3")
+            else if (thongtin == "nhacungcap")
             {
                 lblBaocao.Text = "Báo cáo danh sách nhà cung cấp";
                 List<NhaCungCapDTO> list = NhaCungCapBLL.GetAllSupplier();
