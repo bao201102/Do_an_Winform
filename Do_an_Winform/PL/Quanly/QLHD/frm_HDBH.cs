@@ -18,6 +18,8 @@ namespace Do_an_Winform.PL.Quanly
     {
         DateTime startday, endday;
         List<HoaDonDTO> listhd;
+        TaiKhoanDTO user = new TaiKhoanDTO();
+
         public frm_HDBH()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace Do_an_Winform.PL.Quanly
             txtSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txtSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
+
         private void frm_HDBH_Load(object sender, EventArgs e)
         {
             //auto complete
@@ -56,6 +59,7 @@ namespace Do_an_Winform.PL.Quanly
             gvHDBH.Columns[5].Visible = false;
             txtTongCong.Text = HoaDonBLL.ThongKeDoanhThuTheoTDHT(DateTime.Now).ToString();
         }
+
         private void txtSearch_Enter(object sender, EventArgs e)
         {
             if (txtSearch.Text == "Tìm kiếm mã hóa đơn")
@@ -64,6 +68,7 @@ namespace Do_an_Winform.PL.Quanly
                 txtSearch.ForeColor = Color.Black;
             }
         }
+
         private void txtSearch_Leave(object sender, EventArgs e)
         {
             if (txtSearch.Text == "")
@@ -72,6 +77,7 @@ namespace Do_an_Winform.PL.Quanly
                 txtSearch.ForeColor = Color.Silver;
             }
         }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -81,12 +87,12 @@ namespace Do_an_Winform.PL.Quanly
 
                 if (endday < startday)
                 {
-                    bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    bunifuSnackbarHDBH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
             }
             catch (Exception)
             {
-                bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                bunifuSnackbarHDBH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 return;
             }
 
@@ -120,6 +126,7 @@ namespace Do_an_Winform.PL.Quanly
                 txtTongCong.Text = HoaDonBLL.DoanhThuTatCaHD(startday, endday).ToString();
             }
         }
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             try
@@ -162,6 +169,7 @@ namespace Do_an_Winform.PL.Quanly
                 txtTongCong.Text = HoaDonBLL.DoanhThuTheoMaHD(s, DateTime.Today).ToString();
             }
         }
+
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             listhd = HoaDonBLL.TKTheoMaHD(txtSearch.Text, DateTime.Today);
@@ -198,7 +206,7 @@ namespace Do_an_Winform.PL.Quanly
             }
             else
             {
-                bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                bunifuSnackbarHDBH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
         }
 
@@ -211,12 +219,12 @@ namespace Do_an_Winform.PL.Quanly
 
                 if (endday < startday)
                 {
-                    bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    bunifuSnackbarHDBH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
             }
             catch (Exception)
             {
-                bunifuSnackbarHDBH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                bunifuSnackbarHDBH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 return;
             }
 
