@@ -38,14 +38,14 @@ namespace Do_an_Winform.PL.DangNhap
             }
             MyProgress.Value += startpoint;
             endpoint += 1;
-            if (endpoint == 180)
-            {
-                timer1.Enabled = false;
-                frm_DangNhap loginform = new frm_DangNhap();
-                this.Hide();
-                loginform.ShowDialog();
-                this.Close();
-            }
+            //if (endpoint == 180)
+            //{
+            //    timer1.Enabled = false;
+            //    frm_DangNhap loginform = new frm_DangNhap();
+            //    this.Hide();
+            //    loginform.ShowDialog();
+            //    this.Close();
+            //}
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
