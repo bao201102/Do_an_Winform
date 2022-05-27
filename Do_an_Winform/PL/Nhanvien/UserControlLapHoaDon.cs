@@ -58,7 +58,7 @@ namespace Do_an_Winform.PL.Nhanvien
             txtLoaiTV.Enabled = false;
             lblNgayBan.Enabled = false;
 
-            nhanVien = NhanVienBLL.GetEmployee(frm_NVien.taikhoan.MaNguoiDung);
+            nhanVien = NhanVienBLL.GetEmployee(taikhoan.MaNguoiDung);
 
             if (!DesignMode)
             {

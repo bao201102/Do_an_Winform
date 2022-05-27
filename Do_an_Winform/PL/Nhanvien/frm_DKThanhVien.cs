@@ -17,9 +17,11 @@ namespace Do_an_Winform.PL.Nhanvien
     {
         List<object> listKH = new List<object>();
         TaiKhoanDTO taikhoan = new TaiKhoanDTO();
-        public frm_DKThanhVien()
+        public frm_DKThanhVien(TaiKhoanDTO user)
         {
             InitializeComponent();
+
+            taikhoan = user;
         }
 
         private void btnAddMem_Click(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace Do_an_Winform.PL.Nhanvien
     {
         List<LoaiThanhVienDTO> loaiThanhViens = new List<LoaiThanhVienDTO>();
         LoaiThanhVienDTO loaiThanhVien = new LoaiThanhVienDTO();
+        TaiKhoanDTO taikhoan = new TaiKhoanDTO();
         public UserControlKhachHang()
         {
             InitializeComponent();
@@ -23,18 +24,14 @@ namespace Do_an_Winform.PL.Nhanvien
             dgvAllCustomer.AllowUserToResizeRows = false;
             dgvAllCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAllCustomer.ReadOnly = true;
+
+            taikhoan = frm_NVien.taikhoan;
         }
 
         private void UserControlKhachHang_Load(object sender, EventArgs e)
         {
             if (!DesignMode)
             {
-                //foreach (KhachHangDTO kh in listKhachHang)
-                //{
-                //    loaiThanhVien = LoaiThanhVienBLL.GetTypeMemById(kh.MaLoaiTVien);
-                //    kh.MaLoaiTVien = loaiThanhVien.TenLoaiTVien;
-                //    cbTenKhachHang.Items.Add(kh.TenKH);
-                //}
                 dgvAllCustomer.DataSource = KhachHangBLL.GetAllCustomer();
                 dgvAllCustomer.Columns[0].HeaderText = "Mã KH";
                 dgvAllCustomer.Columns[1].HeaderText = "Tên KH";
@@ -49,18 +46,12 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void cbTenKhachHang_TextChanged(object sender, EventArgs e)
         {
-            //foreach (var kh in listKhachHang)
-            //{
-            //    loaiThanhVien = LoaiThanhVienBLL.GetTypeMemById(kh.MaLoaiTVien);
-            //    kh.MaLoaiTVien = loaiThanhVien.TenLoaiTVien;
-            //    cbTenKhachHang.Items.Add(kh.TenKH);
-            //}
             dgvAllCustomer.DataSource = KhachHangBLL.GetCustomerByName(cbTenKhachHang.Text);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            frm_DKThanhVien frm = new frm_DKThanhVien();
+            frm_DKThanhVien frm = new frm_DKThanhVien(taikhoan);
             frm.ShowDialog();
         }
 
