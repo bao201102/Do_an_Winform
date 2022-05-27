@@ -298,6 +298,7 @@ namespace Do_an_Winform.DAL
                         where sp.TrangThai == "1"
                         select new
                         {
+                            sp.MaSP,
                             sp.TenSP,
                             sp.SoLuong,
                             sp.DonGia,
@@ -320,6 +321,7 @@ namespace Do_an_Winform.DAL
                                 && sp.TrangThai == "1"
                                 select new
                                 {
+                                    sp.MaSP,
                                     sp.TenSP,
                                     sp.SoLuong,
                                     sp.DonGia,
@@ -339,6 +341,7 @@ namespace Do_an_Winform.DAL
                                 && sp.TrangThai == "1"
                                 select new
                                 {
+                                    sp.MaSP,
                                     sp.TenSP,
                                     sp.SoLuong,
                                     sp.DonGia,
@@ -360,6 +363,7 @@ namespace Do_an_Winform.DAL
                                 && sp.TrangThai == "1"
                                 select new
                                 {
+                                    sp.MaSP,
                                     sp.TenSP,
                                     sp.SoLuong,
                                     sp.DonGia,
@@ -378,6 +382,7 @@ namespace Do_an_Winform.DAL
                                 && sp.TrangThai == "1"
                                 select new
                                 {
+                                    sp.MaSP,
                                     sp.TenSP,
                                     sp.SoLuong,
                                     sp.DonGia,
@@ -403,6 +408,7 @@ namespace Do_an_Winform.DAL
                                 && sp.TrangThai == "1"
                                 select new
                                 {
+                                    sp.MaSP,
                                     sp.TenSP,
                                     sp.SoLuong,
                                     sp.DonGia,
@@ -421,6 +427,7 @@ namespace Do_an_Winform.DAL
                                 && sp.TrangThai == "1"
                                 select new
                                 {
+                                    sp.MaSP,
                                     sp.TenSP,
                                     sp.SoLuong,
                                     sp.DonGia,
@@ -442,6 +449,7 @@ namespace Do_an_Winform.DAL
                                 && sp.TrangThai == "1"
                                 select new
                                 {
+                                    sp.MaSP,
                                     sp.TenSP,
                                     sp.SoLuong,
                                     sp.DonGia,
@@ -459,6 +467,7 @@ namespace Do_an_Winform.DAL
                                 where sp.TrangThai == "1"
                                 select new
                                 {
+                                    sp.MaSP,
                                     sp.TenSP,
                                     sp.SoLuong,
                                     sp.DonGia,
