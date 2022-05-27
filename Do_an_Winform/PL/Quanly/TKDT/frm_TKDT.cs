@@ -37,6 +37,8 @@ namespace Do_an_Winform.PL.Quanly
             txtDoanhThu.ReadOnly = true;
             txtChiPhi.ReadOnly = true;
             txtLoiNhuan.ReadOnly = true;
+
+            cbThangTK.SelectedIndex = 0;
         }
 
         private void cbQuyTK_SelectedIndexChanged(object sender, EventArgs e)

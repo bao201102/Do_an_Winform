@@ -57,6 +57,9 @@ namespace Do_an_Winform.PL.Quanly
             DatePickerStartDay.Value = System.DateTime.Now;
             DatePickerEndDay.Value = System.DateTime.Now;
 
+            gvHDNH.AllowUserToResizeColumns = false;
+            gvHDNH.AllowUserToResizeRows = false;
+
             listpn = PhieuNhapHangBLL.ThongKeTatCaPN(DatePickerStartDay.Value, DatePickerEndDay.Value);
             gvHDNH.DataSource = listpn;
             gvHDNH.Columns[0].HeaderText = "Mã PN";
@@ -93,6 +96,7 @@ namespace Do_an_Winform.PL.Quanly
                     DatePickerStartDay.Value = pn.NgayTaoPN;
                     DatePickerEndDay.Value = DateTime.Now;
                 }
+
                 gvHDNH.DataSource = listpn;
                 gvHDNH.Columns[0].HeaderText = "Mã PN";
                 gvHDNH.Columns[1].HeaderText = "Ngày tạo PN";

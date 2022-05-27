@@ -43,6 +43,9 @@ namespace Do_an_Winform.PL.Quanly
             DatePickerStartDay.Value = System.DateTime.Now;
             DatePickerEndDay.Value = System.DateTime.Now;
 
+            gvHDBH.AllowUserToResizeColumns = false;
+            gvHDBH.AllowUserToResizeRows = false;
+
             listhd = HoaDonBLL.ThongKeTatCaHD(DatePickerStartDay.Value, DatePickerEndDay.Value);
             gvHDBH.DataSource = listhd;
             gvHDBH.Columns[0].HeaderText = "Mã HD";

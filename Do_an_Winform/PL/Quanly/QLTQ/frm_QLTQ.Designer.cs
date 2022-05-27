@@ -536,6 +536,7 @@
             // 
             this.txtSL.AcceptsReturn = false;
             this.txtSL.AcceptsTab = false;
+            this.txtSL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSL.AnimationSpeed = 200;
             this.txtSL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtSL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
