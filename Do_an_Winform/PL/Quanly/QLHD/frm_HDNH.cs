@@ -18,6 +18,7 @@ namespace Do_an_Winform.PL.Quanly
     {
         DateTime startday, endday;
         List<PhieuNhapHangDTO> listpn;
+        TaiKhoanDTO user = new TaiKhoanDTO();
         public frm_HDNH()
         {
             InitializeComponent();
@@ -79,12 +80,12 @@ namespace Do_an_Winform.PL.Quanly
 
                 if (endday < startday)
                 {
-                    bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    bunifuSnackbarHDNH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
             }
             catch (Exception)
             {
-                bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                bunifuSnackbarHDNH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 return;
             }
 
@@ -129,12 +130,12 @@ namespace Do_an_Winform.PL.Quanly
 
                 if (endday < startday)
                 {
-                    bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    bunifuSnackbarHDNH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
             }
             catch (Exception)
             {
-                bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                bunifuSnackbarHDNH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 return;
             }
 
@@ -199,7 +200,7 @@ namespace Do_an_Winform.PL.Quanly
             }
             else
             {
-                bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                bunifuSnackbarHDNH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
             }
         }
 
@@ -212,12 +213,12 @@ namespace Do_an_Winform.PL.Quanly
 
                 if (endday < startday)
                 {
-                    bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                    bunifuSnackbarHDNH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 }
             }
             catch (Exception)
             {
-                bunifuSnackbarHDNH.Show(this, "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
+                bunifuSnackbarHDNH.Show(new frm_Quanly(user), "Vui lòng kiểm tra lại thời gian \nThời gian đã nhập không hợp lệ", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error);
                 return;
             }
 
