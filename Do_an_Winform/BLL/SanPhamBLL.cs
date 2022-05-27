@@ -50,11 +50,6 @@ namespace Do_an_Winform.BLL
             return SanPhamDAL.GetAllProductByCat(maloaisp);
         }
 
-        public static List<object> GetProductByManufacId(string maNhaSX)
-        {
-            return SanPhamDAL.GetProductByManufacId(maNhaSX);
-        }
-
         public static List<object> GetProductByCondition(string maNhaSX, int minprice, int maxprice, string maLoaiSP)
         {
             
