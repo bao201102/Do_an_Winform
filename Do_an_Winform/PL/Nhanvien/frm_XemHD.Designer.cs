@@ -30,9 +30,9 @@ namespace Do_an_Winform.PL.Nhanvien
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_XemHD));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblNgayTao = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -40,6 +40,8 @@ namespace Do_an_Winform.PL.Nhanvien
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.gridXemHD = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.lblReturn = new System.Windows.Forms.Label();
+            this.lblBillId = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblMaHD = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridXemHD)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +57,8 @@ namespace Do_an_Winform.PL.Nhanvien
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 15;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.lblMaHD);
+            this.bunifuPanel1.Controls.Add(this.lblBillId);
             this.bunifuPanel1.Controls.Add(this.lblNgayTao);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel3);
             this.bunifuPanel1.Controls.Add(this.lblTenNV);
@@ -132,9 +136,9 @@ namespace Do_an_Winform.PL.Nhanvien
             this.gridXemHD.AllowCustomTheming = false;
             this.gridXemHD.AllowUserToAddRows = false;
             this.gridXemHD.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.gridXemHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.gridXemHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridXemHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -143,14 +147,14 @@ namespace Do_an_Winform.PL.Nhanvien
             this.gridXemHD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridXemHD.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridXemHD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridXemHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridXemHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridXemHD.ColumnHeadersHeight = 40;
             this.gridXemHD.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.gridXemHD.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -170,14 +174,14 @@ namespace Do_an_Winform.PL.Nhanvien
             this.gridXemHD.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.gridXemHD.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.gridXemHD.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridXemHD.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridXemHD.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridXemHD.EnableHeadersVisualStyles = false;
             this.gridXemHD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.gridXemHD.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -205,14 +209,45 @@ namespace Do_an_Winform.PL.Nhanvien
             this.lblReturn.Text = "< Trở lại";
             this.lblReturn.Click += new System.EventHandler(this.lblReturn_Click);
             // 
-            // frm_XemHDon
+            // lblBillId
+            // 
+            this.lblBillId.AllowParentOverrides = false;
+            this.lblBillId.AutoEllipsis = false;
+            this.lblBillId.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblBillId.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblBillId.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBillId.Location = new System.Drawing.Point(606, 36);
+            this.lblBillId.Name = "lblBillId";
+            this.lblBillId.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblBillId.Size = new System.Drawing.Size(87, 21);
+            this.lblBillId.TabIndex = 13;
+            this.lblBillId.Text = "Mã hóa đơn:";
+            this.lblBillId.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblBillId.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblMaHD
+            // 
+            this.lblMaHD.AllowParentOverrides = false;
+            this.lblMaHD.AutoEllipsis = false;
+            this.lblMaHD.CursorType = null;
+            this.lblMaHD.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaHD.Location = new System.Drawing.Point(795, 36);
+            this.lblMaHD.Name = "lblMaHD";
+            this.lblMaHD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblMaHD.Size = new System.Drawing.Size(40, 21);
+            this.lblMaHD.TabIndex = 14;
+            this.lblMaHD.Text = "Bill ID";
+            this.lblMaHD.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblMaHD.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // frm_XemHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 557);
             this.Controls.Add(this.lblReturn);
             this.Controls.Add(this.bunifuPanel1);
-            this.Name = "frm_XemHDon";
+            this.Name = "frm_XemHD";
             this.Text = "frm_XemHDon";
             this.Load += new System.EventHandler(this.frm_XemHD_Load);
             this.bunifuPanel1.ResumeLayout(false);
@@ -232,5 +267,7 @@ namespace Do_an_Winform.PL.Nhanvien
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         internal Bunifu.UI.WinForms.BunifuDataGridView gridXemHD;
         private System.Windows.Forms.Label lblReturn;
+        private Bunifu.UI.WinForms.BunifuLabel lblMaHD;
+        private Bunifu.UI.WinForms.BunifuLabel lblBillId;
     }
 }

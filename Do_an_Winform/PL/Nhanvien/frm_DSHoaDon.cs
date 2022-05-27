@@ -75,15 +75,15 @@ namespace Do_an_Winform.PL.Nhanvien
             string mahd = gridviewDSHoaDon.CurrentRow.Cells[0].Value.ToString();
             string tenNV = NhanVienBLL.GetEmployeeById(manv).TenNV;
             string ngayTao = date;
-            frm_XemHD frm = new frm_XemHD(tenNV, ngayTao);
+            frm_XemHD frm = new frm_XemHD(tenNV, ngayTao, mahd);
             openChildForm(frm);
-            frm.gridXemHD.DataSource = HoaDonBLL.GetAllBillById(mahd);
-            frm.gridXemHD.Columns[0].Visible = false;
-            frm.gridXemHD.Columns[1].HeaderText = "Mã sản phẩm";
-            frm.gridXemHD.Columns[2].HeaderText = "Tên sản phẩm";
-            frm.gridXemHD.Columns[3].HeaderText = "Số lượng";
-            frm.gridXemHD.Columns[4].HeaderText = "Thành tiền";
-            frm.gridXemHD.Columns[5].Visible = false;
+            //frm.gridXemHD.DataSource = ChiTietHoaDonBLL.GetAllDetailBillById(mahd);
+            //frm.gridXemHD.Columns[0].Visible = false;
+            //frm.gridXemHD.Columns[0].HeaderText = "Mã SP";
+            //frm.gridXemHD.Columns[1].HeaderText = "Tên SP";
+            //frm.gridXemHD.Columns[2].HeaderText = "Số lượng";
+            //frm.gridXemHD.Columns[3].HeaderText = "Thành tiền";
+            //frm.gridXemHD.Columns[5].Visible = false;
         }
 
         private void frm_DSHoaDon_Load_1(object sender, EventArgs e)

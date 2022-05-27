@@ -23,8 +23,8 @@ namespace Do_an_Winform.DAL
         {
             CHDTEntities1 entities = new CHDTEntities1();
             var detailBills = from cthd in entities.ChiTietHoaDons
-                           where cthd.TrangThai == "1" && cthd.MaHD == maHD
-                           select cthd;
+                              where cthd.TrangThai == "1" && cthd.MaHD == maHD
+                              select cthd;
             List<ChiTietHoaDonDTO> CTHDDTOs = new List<ChiTietHoaDonDTO>();
             foreach (ChiTietHoaDon detailbill in detailBills)
             {
