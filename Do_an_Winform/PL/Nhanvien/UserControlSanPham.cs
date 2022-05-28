@@ -40,6 +40,7 @@ namespace Do_an_Winform.PL.Nhanvien
             cbThuongHieu.DataSource = NhaSanXuatBLL.GetAllManufac();
             cbThuongHieu.DisplayMember = "TenNhaSX";
             cbThuongHieu.ValueMember = "MaNhaSX";
+            cbGia.Items.Add("Tất cả");
             cbGia.Items.Add("1000000 - 5000000");
             cbGia.Items.Add("5000000 - 10000000");
             cbGia.Items.Add("10000000 - 30000000");
@@ -66,7 +67,7 @@ namespace Do_an_Winform.PL.Nhanvien
 
             if (cbThuongHieu.SelectedIndex >= 0 && cbThuongHieu.SelectedValue.ToString() != "Tất cả")
             {
-                if (cbGia.SelectedIndex >= 0 && cbGia.Text != "")
+                if (cbGia.SelectedIndex >= 0 && cbGia.Text != "" && cbGia.Text != "Tất cả")
                 {
                     int a = int.Parse(GetMinPrice(cbGia.Text));
                     int b = int.Parse(GetMaxPrice(cbGia.Text));
@@ -131,7 +132,7 @@ namespace Do_an_Winform.PL.Nhanvien
             }
             else
             {
-                if (cbGia.SelectedIndex >= 0)
+                if (cbGia.SelectedIndex >= 0 && cbGia.Text != "Tất cả")
                 {
                     int a = int.Parse(GetMinPrice(cbGia.Text));
                     int b = int.Parse(GetMaxPrice(cbGia.Text));
