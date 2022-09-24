@@ -45,6 +45,7 @@ namespace Do_an_Winform.PL.Nhanvien
             cbGia.Items.Add("5000000 - 10000000");
             cbGia.Items.Add("10000000 - 30000000");
             cbGia.Items.Add("30000000 - 50000000");
+            cbGia.SelectedIndex = 0;
         }
 
         private void cbTenSP_TextChanged(object sender, EventArgs e)
@@ -64,10 +65,14 @@ namespace Do_an_Winform.PL.Nhanvien
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-
-            if (cbThuongHieu.SelectedIndex >= 0 && cbThuongHieu.SelectedValue.ToString() != "Tất cả")
+            if (cbThuongHieu.SelectedIndex == 0 && cbLoaiSP.SelectedIndex == 0 && cbGia.SelectedIndex == 0)
             {
-                if (cbGia.SelectedIndex >= 0 && cbGia.Text != "" && cbGia.Text != "Tất cả")
+                dgvAllProduct.DataSource = SanPhamBLL.GetProduct();
+
+            }
+            else if (cbThuongHieu.SelectedIndex >= 0 && cbThuongHieu.SelectedValue.ToString() != "Tất cả")
+            {
+                if (cbGia.SelectedIndex >= 0 && cbGia.Text != "Tất cả")
                 {
                     int a = int.Parse(GetMinPrice(cbGia.Text));
                     int b = int.Parse(GetMaxPrice(cbGia.Text));
