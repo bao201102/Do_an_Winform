@@ -13,10 +13,10 @@ namespace Do_an_Winform
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CHDTEntities1 : DbContext
+    public partial class CHDTEntities : DbContext
     {
-        public CHDTEntities1()
-            : base("name=CHDTEntities1")
+        public CHDTEntities()
+            : base("name=CHDTEntities")
         {
         }
     
@@ -37,7 +37,6 @@ namespace Do_an_Winform
         public virtual DbSet<NhaSanXuat> NhaSanXuats { get; set; }
         public virtual DbSet<PhieuNhapHang> PhieuNhapHangs { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
     }
 }

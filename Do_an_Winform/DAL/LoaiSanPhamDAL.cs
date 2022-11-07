@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static LoaiSanPhamDTO GetProTypeById(string maLoaiSP)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             LoaiSanPham proType = (from loaisp in entities.LoaiSanPhams
                                    where loaisp.MaLoaiSP == maLoaiSP
                                    select loaisp).Single();
@@ -24,7 +24,7 @@ namespace Do_an_Winform.DAL
 
         public static List<LoaiSanPhamDTO> GetAllCat()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var query = from lsp in entities.LoaiSanPhams
                         select lsp;
 
@@ -42,7 +42,7 @@ namespace Do_an_Winform.DAL
 
         public static Dictionary<string, double> GetTopProductCatByDay(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query1 = from cthd in entities.ChiTietHoaDons
                          join hd in entities.HoaDons
@@ -86,7 +86,7 @@ namespace Do_an_Winform.DAL
 
         public static Dictionary<string, double> GetTopProductCatByMonth(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query1 = from cthd in entities.ChiTietHoaDons
                          join hd in entities.HoaDons
@@ -130,7 +130,7 @@ namespace Do_an_Winform.DAL
 
         public static Dictionary<string, double> GetTopProductCatByYear(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query1 = from cthd in entities.ChiTietHoaDons
                          join hd in entities.HoaDons

@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static List<LoaiThanhVienDTO> GetAllTypeMem()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var listloaitv = from loaitv in entities.LoaiThanhViens
                              select loaitv;
             List<LoaiThanhVienDTO> loaithanhviens = new List<LoaiThanhVienDTO>();
@@ -27,7 +27,7 @@ namespace Do_an_Winform.DAL
         }
         public static LoaiThanhVienDTO GetTypeMemById(string maloaitv)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             LoaiThanhVien loaitv = (from loaithanhvien in entities.LoaiThanhViens
                          where loaithanhvien.MaLoaiTVien == maloaitv
                          select loaithanhvien).Single();

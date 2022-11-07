@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static LoaiNhanVienDTO GetEmpType(string maLoaiNV)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             LoaiNhanVien empType = (from lnv in entities.LoaiNhanViens
                             where lnv.MaLoaiNV == maLoaiNV
                             select lnv).Single();
@@ -23,7 +23,7 @@ namespace Do_an_Winform.DAL
         }
         public static List<LoaiNhanVienDTO> GetAllEmpType()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             List<LoaiNhanVienDTO> list = new List<LoaiNhanVienDTO>();
             var empType = from lnv in entities.LoaiNhanViens
                                     select lnv;

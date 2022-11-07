@@ -426,9 +426,9 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Do_an_Winform</rd:DataSetName>
-        <rd:TableName>CHDTEntities1</rd:TableName>
+        <rd:TableName>CHDTEntities</rd:TableName>
         <rd:ObjectDataSourceSelectMethod>NhaCungCaps</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>Do_an_Winform.CHDTEntities1, Do_an_Winform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>Do_an_Winform.CHDTEntities, Do_an_Winform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     { 
         public static List<object> GetAllCustomer()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             List<object> list = new List<object>();
 
             var query = from kh in entities.KhachHangs
@@ -39,7 +39,7 @@ namespace Do_an_Winform.DAL
         }
         public static List<KhachHangDTO> GetCusByTxtNameChanged(string txtNameChanged)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var customers = from kh in entities.KhachHangs
                             where kh.TenKH.Contains(txtNameChanged)
                             select kh;
@@ -61,13 +61,13 @@ namespace Do_an_Winform.DAL
             var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHangDTO, KhachHang>());
             var mapper = new Mapper(config);
             KhachHang khachHang = mapper.Map<KhachHang>(kh);
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             entities.KhachHangs.Add(khachHang);
             return entities.SaveChanges() > 0 ? true : false;
         }
         public static List<object> GetCustomerByName(string name)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             List<object> list = new List<object>();
 
             var query = from kh in entities.KhachHangs
@@ -94,7 +94,7 @@ namespace Do_an_Winform.DAL
         }
         public static bool AddCustomer(KhachHangDTO dto)
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var config = new MapperConfiguration(cfg => cfg.CreateMap<KhachHangDTO, KhachHang>());
             var mapper = new Mapper(config);
             KhachHang kh = mapper.Map<KhachHang>(dto);
@@ -103,7 +103,7 @@ namespace Do_an_Winform.DAL
         }
         public static KhachHangDTO GetCustomerByPhone(string phone) 
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             KhachHang cus = (from kh in entities.KhachHangs
                                 where kh.SĐT.Equals(phone) && kh.TrangThai == "1"
                                 select kh).Single();
@@ -114,7 +114,7 @@ namespace Do_an_Winform.DAL
         }
         public static bool UpdateInfoCustomer(KhachHangDTO kh)
         {
-            CHDTEntities1 entities1 = new CHDTEntities1();
+            CHDTEntities entities1 = new CHDTEntities();
             var customer = (from ctm in entities1.KhachHangs
                          where ctm.MaKH == kh.MaKH
                          select ctm).Single();
@@ -134,7 +134,7 @@ namespace Do_an_Winform.DAL
         }
         public static List<KhachHangDTO> LayTatCaKhachHang()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var customers = from kh in entities.KhachHangs
                             select kh;
             List<KhachHangDTO> khachHangDTOs = new List<KhachHangDTO>();
@@ -152,7 +152,7 @@ namespace Do_an_Winform.DAL
         }
         public static int CountCustomer()
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var khachhang = (from kh in data.KhachHangs
                             select kh).Count();
             return khachhang + 1;

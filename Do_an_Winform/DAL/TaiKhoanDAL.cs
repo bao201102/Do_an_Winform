@@ -13,7 +13,7 @@ namespace Do_an_Winform.DAL
         public static TaiKhoanDTO GetUser(TaiKhoan account)
         {
 
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             TaiKhoan user = (from us in entities.TaiKhoans
                              where us.UserName == account.UserName && us.MatKhau == account.MatKhau
                              select us).SingleOrDefault();
@@ -33,7 +33,7 @@ namespace Do_an_Winform.DAL
 
         public static List<TaiKhoanDTO> GetMaLoaiNV(string maloai)
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             List<TaiKhoanDTO> list = new List<TaiKhoanDTO>();
             var query = from tk in data.TaiKhoans
                         where tk.MaLoaiNV == maloai
@@ -49,7 +49,7 @@ namespace Do_an_Winform.DAL
 
         public static bool AddAccount(TaiKhoanDTO dto)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = (from x in entities.TaiKhoans
                          select x).Count();
@@ -72,7 +72,7 @@ namespace Do_an_Winform.DAL
 
         public static bool RemoveAccount(TaiKhoanDTO dto, string manguoidung)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             TaiKhoan query = (from tk in entities.TaiKhoans
                               where tk.MaNguoiDung == manguoidung
@@ -84,7 +84,7 @@ namespace Do_an_Winform.DAL
 
         public static bool UpdatePassword(TaiKhoanDTO dto)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             TaiKhoan tk = entities.TaiKhoans.Where(x => x.MaNguoiDung.Equals(dto.MaNguoiDung)).Single();
 
             tk.MatKhau = dto.MatKhau;
@@ -103,7 +103,7 @@ namespace Do_an_Winform.DAL
 
         public static string GetUserId(string username)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = (from us in entities.TaiKhoans
                         where us.UserName.Equals(username)

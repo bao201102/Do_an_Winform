@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static List<NhaCungCapDTO> GetAllSupplier()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var ncc = (from cc in entities.NhaCungCaps
                        where cc.TrangThai == "1"
                        select cc);
@@ -32,7 +32,7 @@ namespace Do_an_Winform.DAL
 
         public static bool InsertSupplier(NhaCungCapDTO dto)
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
 
             var query = data.NhaCungCaps.Select(t => t).Count();
 
@@ -49,7 +49,7 @@ namespace Do_an_Winform.DAL
 
         public static List<NhaCungCapDTO> GetAllSupplierByName(string name)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var ncc = (from cc in entities.NhaCungCaps
                        where cc.TrangThai == "1" && cc.TenNCC.Contains(name)
                        select cc);
@@ -69,7 +69,7 @@ namespace Do_an_Winform.DAL
 
         public static NhaCungCapDTO GetNhaCungCapByID(string mancc)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             NhaCungCap ncc = (from cc in entities.NhaCungCaps
                        where cc.MaNCC.Equals(mancc)
                        select cc).FirstOrDefault();

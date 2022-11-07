@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static List<SanPhamDTO> GetAllProduct()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var products = from pro in entities.SanPhams
                            where pro.TrangThai == "1"
                            select pro;
@@ -31,7 +31,7 @@ namespace Do_an_Winform.DAL
         {
             if (name != "")
             {
-                CHDTEntities1 entities = new CHDTEntities1();
+                CHDTEntities entities = new CHDTEntities();
                 var products = from pro in entities.SanPhams
                                where pro.TenSP.Contains(name.ToLower().Trim()) && pro.TrangThai == "1"
                                select pro;
@@ -47,7 +47,7 @@ namespace Do_an_Winform.DAL
             }
             else
             {
-                CHDTEntities1 entities = new CHDTEntities1();
+                CHDTEntities entities = new CHDTEntities();
                 var products = from pro in entities.SanPhams
                                where pro.TrangThai == "1"
                                select pro;
@@ -67,7 +67,7 @@ namespace Do_an_Winform.DAL
         {
             if (name != "")
             {
-                CHDTEntities1 entities = new CHDTEntities1();
+                CHDTEntities entities = new CHDTEntities();
                 var products = from pro in entities.SanPhams
                                where pro.TenSP.Contains(name.Trim().ToLower()) && pro.MaLoaiSP == maloai && pro.TrangThai == "1"
                                select pro;
@@ -83,7 +83,7 @@ namespace Do_an_Winform.DAL
             }
             else
             {
-                CHDTEntities1 entities = new CHDTEntities1();
+                CHDTEntities entities = new CHDTEntities();
                 var products = from pro in entities.SanPhams
                                where pro.MaLoaiSP == maloai && pro.TrangThai == "1"
                                select pro;
@@ -101,7 +101,7 @@ namespace Do_an_Winform.DAL
 
         public static List<object> GetProduct()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var pros = from sp in entities.SanPhams
                        join nsx in entities.NhaSanXuats
                        on sp.MaNhaSX equals nsx.MaNhaSX
@@ -129,7 +129,7 @@ namespace Do_an_Winform.DAL
 
         public static List<object> GetOutOfStockProduct(int limit)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var query = from sp in entities.SanPhams
                        join lsp in entities.LoaiSanPhams
                        on sp.MaLoaiSP equals lsp.MaLoaiSP
@@ -153,7 +153,7 @@ namespace Do_an_Winform.DAL
 
         public static List<object> GetAllProductByName(string tensp)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var pros = from sp in entities.SanPhams
                        join nsx in entities.NhaSanXuats
                        on sp.MaNhaSX equals nsx.MaNhaSX
@@ -180,7 +180,7 @@ namespace Do_an_Winform.DAL
 
         public static List<object> GetAllProductByCat(string maloaisp)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var query = from sp in entities.SanPhams
                         join nsx in entities.NhaSanXuats
                         on sp.MaNhaSX equals nsx.MaNhaSX
@@ -207,7 +207,7 @@ namespace Do_an_Winform.DAL
 
         public static List<object> GetProductByManufacId(string maNhaSX)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var query = from sp in entities.SanPhams
                         join nsx in entities.NhaSanXuats
                         on sp.MaNhaSX equals nsx.MaNhaSX
@@ -233,7 +233,7 @@ namespace Do_an_Winform.DAL
 
         public static List<SanPhamDTO> GetProByTxtNameChanged(string txtNameChanged)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var products = from pro in entities.SanPhams
                            where pro.TenSP.Contains(txtNameChanged) && pro.TrangThai == "1"
                            select pro;
@@ -250,7 +250,7 @@ namespace Do_an_Winform.DAL
 
         public static SanPhamDTO GetProductById(string masp)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             SanPham product = (from sp in entities.SanPhams
                                where sp.MaSP == masp && sp.TrangThai == "1"
                                select sp).SingleOrDefault();
@@ -263,7 +263,7 @@ namespace Do_an_Winform.DAL
 
         public static SanPhamDTO GetProductByName(string ten)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var product = (from sp in entities.SanPhams
                            where sp.TenSP == ten && sp.TrangThai == "1"
                            select sp).FirstOrDefault();
@@ -276,7 +276,7 @@ namespace Do_an_Winform.DAL
 
         public static SanPhamDTO GetProductEqualsName(string ten)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             SanPham product = (from sp in entities.SanPhams
                                where sp.TenSP.Equals(ten) && sp.TrangThai == "1"
                                select sp).FirstOrDefault();
@@ -289,7 +289,7 @@ namespace Do_an_Winform.DAL
 
         public static List<object> GetProductByCondition(string manhasx, int minprice, int maxprice, string maloaisp)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var query = from sp in entities.SanPhams
                         join nsx in entities.NhaSanXuats
                         on sp.MaNhaSX equals nsx.MaNhaSX
@@ -494,7 +494,7 @@ namespace Do_an_Winform.DAL
 
         public static bool InsertProdut(SanPhamDTO product)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = (from x in entities.SanPhams
                          select x).Count();
@@ -518,7 +518,7 @@ namespace Do_an_Winform.DAL
 
         public static bool IncreaseQuantityProduct(ChiTietPhieuNhapDTO pn)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var sp = (from p in entities.SanPhams
                       where p.MaSP.Equals(pn.MaSP)
                       select p).SingleOrDefault();
@@ -528,7 +528,7 @@ namespace Do_an_Winform.DAL
 
         public static bool DecreaseQuantityProduct(ChiTietHoaDonDTO hd)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var sp = (from p in entities.SanPhams
                       where p.MaSP.Equals(hd.MaSP)
                       select p).SingleOrDefault();
@@ -538,7 +538,7 @@ namespace Do_an_Winform.DAL
 
         public static bool UpdateProduct(SanPhamDTO productDTO)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             SanPham sp = entities.SanPhams.Where(x => x.MaSP.Equals(productDTO.MaSP)).Single();
 
             sp.TenSP = productDTO.TenSP;
@@ -560,7 +560,7 @@ namespace Do_an_Winform.DAL
 
         public static bool DeleteProduct(string masp)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             SanPham sp = entities.SanPhams.Where(x => x.MaSP.Equals(masp)).Single();
 
             sp.TrangThai = "0";
@@ -579,7 +579,7 @@ namespace Do_an_Winform.DAL
 
         public static List<SanPhamDTO> GetProductByProId(string maSP)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var products = from pro in entities.SanPhams
                            where pro.TrangThai == "1" && pro.MaSP == maSP
                            select pro;
@@ -596,7 +596,7 @@ namespace Do_an_Winform.DAL
 
         public static Dictionary<string, double> GetTopProductByDay(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query1 = from cthd in entities.ChiTietHoaDons
                          join hd in entities.HoaDons
@@ -632,7 +632,7 @@ namespace Do_an_Winform.DAL
 
         public static Dictionary<string, double> GetTopProductByMonth(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query1 = from cthd in entities.ChiTietHoaDons
                          join hd in entities.HoaDons
@@ -668,7 +668,7 @@ namespace Do_an_Winform.DAL
 
         public static Dictionary<string, double> GetTopProductByYear(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query1 = from cthd in entities.ChiTietHoaDons
                          join hd in entities.HoaDons

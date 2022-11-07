@@ -4,36 +4,35 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6ec74317953f46c6975509c3e5bddcb4" Name="Diagram1" ZoomLevel="100">
-        <EntityTypeShape EntityType="CHDTModel.ChiTietHoaDon" Width="1.5" PointX="8.25" PointY="4.75" />
-        <EntityTypeShape EntityType="CHDTModel.ChiTietPhieuNhap" Width="1.5" PointX="3" PointY="4.5" />
-        <EntityTypeShape EntityType="CHDTModel.HoaDon" Width="1.5" PointX="6" PointY="0.75" />
-        <EntityTypeShape EntityType="CHDTModel.KhachHang" Width="1.5" PointX="6" PointY="9.375" />
-        <EntityTypeShape EntityType="CHDTModel.LoaiNhanVien" Width="1.5" PointX="1.5" PointY="24" />
-        <EntityTypeShape EntityType="CHDTModel.LoaiSanPham" Width="1.5" PointX="3.75" PointY="1.25" />
-        <EntityTypeShape EntityType="CHDTModel.LoaiThanhVien" Width="1.5" PointX="3.75" PointY="10.125" />
-        <EntityTypeShape EntityType="CHDTModel.NhaCungCap" Width="1.5" PointX="1.5" PointY="8.875" />
-        <EntityTypeShape EntityType="CHDTModel.NhanVien" Width="1.5" PointX="1.5" PointY="16.625" />
-        <EntityTypeShape EntityType="CHDTModel.NhaSanXuat" Width="1.5" PointX="0.75" PointY="5.125" />
-        <EntityTypeShape EntityType="CHDTModel.PhieuNhapHang" Width="1.5" PointX="0.75" PointY="12.5" />
-        <EntityTypeShape EntityType="CHDTModel.SanPham" Width="1.5" PointX="6" PointY="4.5" />
-        <EntityTypeShape EntityType="CHDTModel.sysdiagram" Width="1.5" PointX="8.75" PointY="8.25" />
-        <EntityTypeShape EntityType="CHDTModel.TaiKhoan" Width="1.5" PointX="1.5" PointY="21" IsExpanded="true" />
-        <AssociationConnector Association="CHDTModel.FK_ChiTietHoaDon_HoaDon" />
-        <AssociationConnector Association="CHDTModel.FK_ChiTietHoaDon_SanPham" />
-        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_NhaSanXuat" />
-        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_PhieuNhapHang" />
-        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_SanPham" />
-        <AssociationConnector Association="CHDTModel.FK_HoaDon_NhanVien" />
-        <AssociationConnector Association="CHDTModel.FK__KhachHang__MaLoa__3D5E1FD2" />
-        <AssociationConnector Association="CHDTModel.FK__NhanVien__MaLoai__3E52440B" />
-        <AssociationConnector Association="CHDTModel.FK__SanPham__MaLoaiS__47DBAE45" />
-        <AssociationConnector Association="CHDTModel.FK_PhieuNhapHang_NhaCungCap" />
-        <AssociationConnector Association="CHDTModel.FK__PhieuNhapH__MaNV__4316F928" />
-        <AssociationConnector Association="CHDTModel.FK__SanPham__MaNhaSX__48CFD27E" />
-        <AssociationConnector Association="CHDTModel.FK__DangNhap__MaLoai__398D8EEE" />
-        <AssociationConnector Association="CHDTModel.FK__NhanVien__MaNguo__3F466844" />
-        </Diagram>
+      <Diagram DiagramId="f9abfae7b2d048aab60c76000ed5dddc" Name="Diagram1">
+        <EntityTypeShape EntityType="CHDTModel.ChiTietHoaDon" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.ChiTietPhieuNhap" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.HoaDon" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.KhachHang" Width="1.5" PointX="6" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.LoaiNhanVien" Width="1.5" PointX="1.5" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.LoaiSanPham" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.LoaiThanhVien" Width="1.5" PointX="3.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.NhaCungCap" Width="1.5" PointX="1.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.NhanVien" Width="1.5" PointX="1.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.NhaSanXuat" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.PhieuNhapHang" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.SanPham" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CHDTModel.TaiKhoan" Width="1.5" PointX="1.5" PointY="23.625" IsExpanded="true" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietHoaDon_HoaDon" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietHoaDon_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_NhaSanXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_PhieuNhapHang" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_ChiTietPhieuNhap_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__KhachHang__MaLoa__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__DangNhap__MaLoai__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__NhanVien__MaLoai__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__SanPham__MaLoaiS__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK_PhieuNhapHang_NhaCungCap" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__NhanVien__MaNguo__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__PhieuNhapH__MaNV__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="CHDTModel.FK__SanPham__MaNhaSX__48CFD27E" ManuallyRouted="false" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

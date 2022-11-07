@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static bool AddNewBillDetail(ChiTietHoaDonDTO chitiethd)
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var config = new MapperConfiguration(cfg => cfg.CreateMap<ChiTietHoaDonDTO, ChiTietHoaDon>());
             var mapper = new Mapper(config);
             ChiTietHoaDon chiTietHD = mapper.Map<ChiTietHoaDon>(chitiethd);
@@ -21,7 +21,7 @@ namespace Do_an_Winform.DAL
         }
         public static List<ChiTietHoaDonDTO> GetAllDetailBillById(string maHD)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var detailBills = from cthd in entities.ChiTietHoaDons
                               where cthd.TrangThai == "1" && cthd.MaHD == maHD
                               select cthd;
@@ -37,7 +37,7 @@ namespace Do_an_Winform.DAL
         }
         public static List<ChiTietHoaDonDTO> GetAllDetailBill()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var detailBills = from cthd in entities.ChiTietHoaDons
                               where cthd.TrangThai == "1"
                               select cthd;

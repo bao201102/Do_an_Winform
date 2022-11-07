@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static bool AddChiTietPN(ChiTietPhieuNhapDTO phieuNhapDTO)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             phieuNhapDTO.TrangThai = "1";
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<ChiTietPhieuNhapDTO, ChiTietPhieuNhap>());
@@ -27,7 +27,7 @@ namespace Do_an_Winform.DAL
 
         public static List<ChiTietPhieuNhapDTO> GetAllByID(string maPn)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var query = from pn in entities.ChiTietPhieuNhaps
                            where pn.MaPN.Equals(maPn)
                            select pn;

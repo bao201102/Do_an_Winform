@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static NhanVienDTO GetEmployee(string manguoidung)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             NhanVien emp = (from nv in entities.NhanViens
                             where nv.MaNguoiDung == manguoidung
                             select nv).SingleOrDefault();
@@ -24,7 +24,7 @@ namespace Do_an_Winform.DAL
 
         public static NhanVienDTO GetEmployeeById(string manv)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             NhanVien emp = entities.NhanViens.Where(x => x.MaNV.Equals(manv)).Single();
 
             var config = new MapperConfiguration(cfg => cfg.CreateMap<NhanVien, NhanVienDTO>());
@@ -35,7 +35,7 @@ namespace Do_an_Winform.DAL
 
         public static List<object> GetEmployeeByName(string name)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             List<object> list = new List<object>();
 
             var query = from nv in entities.NhanViens
@@ -65,7 +65,7 @@ namespace Do_an_Winform.DAL
 
         public static List<object> GetAllEmployee()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             List<object> list = new List<object>();
 
             var query = from nv in entities.NhanViens
@@ -95,7 +95,7 @@ namespace Do_an_Winform.DAL
 
         public static bool AddEmployee(NhanVienDTO nvDTO)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = (from x in entities.NhanViens
                          select x).Count();
@@ -134,7 +134,7 @@ namespace Do_an_Winform.DAL
 
         public static bool UpdateEmployee(NhanVienDTO empDTO)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             NhanVien emp = entities.NhanViens.Where(x => x.MaNV.Equals(empDTO.MaNV)).Single();
 
             emp.TenNV = empDTO.TenNV;
@@ -156,7 +156,7 @@ namespace Do_an_Winform.DAL
 
         public static List<NhanVienDTO> LayTatCaNhanVien()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             List<NhanVienDTO> list = new List<NhanVienDTO>();
             var nhanvien = from nv in entities.NhanViens
                            select nv;
@@ -175,7 +175,7 @@ namespace Do_an_Winform.DAL
 
         public static int CountEmployee()
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var nhanvien = (from nv in data.NhanViens
                            select nv).Count();
             return nhanvien + 1;

@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static List<NhaSanXuatDTO> GetAllManufac()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var manufacs = from nhasx in entities.NhaSanXuats
                            //join sp in entities.SanPhams
                            //on nhasx.MaNhaSX equals sp.MaNhaSX
@@ -33,7 +33,7 @@ namespace Do_an_Winform.DAL
 
         public static NhaSanXuatDTO GetManufacById(string maNhaSX)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             NhaSanXuat manufac = (from nhasx in entities.NhaSanXuats
                                    where nhasx.MaNhaSX == maNhaSX
                                    select nhasx).Single();
@@ -44,7 +44,7 @@ namespace Do_an_Winform.DAL
         }
         public static NhaSanXuatDTO GetManufacByName(string tenNSX)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             NhaSanXuat manufac = (from nhasx in entities.NhaSanXuats
                                   where nhasx.TenNhaSX.Equals(tenNSX)
                                   select nhasx).SingleOrDefault();

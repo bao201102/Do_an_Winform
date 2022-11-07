@@ -12,7 +12,7 @@ namespace Do_an_Winform.DAL
     {
         public static bool AddNewBill(HoaDonDTO hd)
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var config = new MapperConfiguration(cfg => cfg.CreateMap<HoaDonDTO, HoaDon>());
             var mapper = new Mapper(config);
             HoaDon hoaDon = mapper.Map<HoaDon>(hd);
@@ -22,7 +22,7 @@ namespace Do_an_Winform.DAL
 
         public static List<HoaDonDTO> GetAllBill()
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var bills = from hd in entities.HoaDons
                         where hd.TrangThai == "1"
                         select hd;
@@ -39,7 +39,7 @@ namespace Do_an_Winform.DAL
 
         public static List<object> LayTatCaMaHD()
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             List<object> list = new List<object>();
             var truyvan = from hd in data.HoaDons
                           where hd.TrangThai == "1"
@@ -53,7 +53,7 @@ namespace Do_an_Winform.DAL
 
         public static List<HoaDonDTO> GetAllBillById(string maHD)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var bills = from hd in entities.HoaDons
                         where hd.TrangThai == "1" && hd.MaHD == maHD
                         select hd;
@@ -70,7 +70,7 @@ namespace Do_an_Winform.DAL
 
         public static List<HoaDonDTO> ThongKeTatCaHD(DateTime startday, DateTime endday)
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var truyvan = from hd in data.HoaDons
                           where hd.TrangThai == "1" && (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday)
                           select hd;
@@ -86,7 +86,7 @@ namespace Do_an_Winform.DAL
         }
         public static List<HoaDonDTO> TKTheoMaHD(string hdsearch, DateTime today)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             var bills = from hd in entities.HoaDons
                         where hd.TrangThai == "1" && (hd.NgayTaoHD <= today) && (hd.MaHD == hdsearch)
                         select hd;
@@ -103,7 +103,7 @@ namespace Do_an_Winform.DAL
 
         public static HoaDonDTO LayTheoMaHD(string mahd)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
             HoaDon truyvan = (from hd in entities.HoaDons
                               where hd.MaHD == mahd && hd.TrangThai == "1"
                               select hd).SingleOrDefault();
@@ -116,7 +116,7 @@ namespace Do_an_Winform.DAL
 
         public static double DoanhThuTatCaHD(DateTime startday, DateTime endday)
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var truyvan = from hd in data.HoaDons
                           where (hd.NgayTaoHD >= startday) && (hd.NgayTaoHD <= endday) && (hd.TrangThai == "1")
                           select new
@@ -134,7 +134,7 @@ namespace Do_an_Winform.DAL
 
         public static double DoanhThuTheoMaHD(string hdsearch, DateTime today)
         {
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var truyvan = from hd in data.HoaDons
                           where (hd.MaHD == hdsearch)&& (hd.NgayTaoHD <= today) && (hd.TrangThai == "1")
                           select new
@@ -155,7 +155,7 @@ namespace Do_an_Winform.DAL
             DateTime date = DateTime.Now;
             var firstDayOfMonth = new DateTime(date.Year, date.Month, 1);
 
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var truyvan = from hd in data.HoaDons
                           where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= today) && (hd.TrangThai == "1")
                           select new
@@ -174,7 +174,7 @@ namespace Do_an_Winform.DAL
         {
             var firstDayOfMonth = GetLastDayOfMonth("1", namTK);
             var lastDayOfMonth = GetLastDayOfMonth("12", namTK);
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var truyvan = from hd in data.HoaDons
                           where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth) && (hd.TrangThai == "1")
                           select new
@@ -199,7 +199,7 @@ namespace Do_an_Winform.DAL
             {
                 firstDayOfMonth = GetFirstDayOfMonth("1", namTK);
                 lastDayOfMonth = GetLastDayOfMonth("3", namTK);
-                CHDTEntities1 data = new CHDTEntities1();
+                CHDTEntities data = new CHDTEntities();
                 var truyvan = from hd in data.HoaDons
                               where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth) && (hd.TrangThai == "1")
                               select new
@@ -216,7 +216,7 @@ namespace Do_an_Winform.DAL
             {
                 firstDayOfMonth = GetFirstDayOfMonth("4", namTK);
                 lastDayOfMonth = GetLastDayOfMonth("6", namTK);
-                CHDTEntities1 data = new CHDTEntities1();
+                CHDTEntities data = new CHDTEntities();
                 var truyvan = from hd in data.HoaDons
                               where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
                               select new
@@ -232,7 +232,7 @@ namespace Do_an_Winform.DAL
             {
                 firstDayOfMonth = GetFirstDayOfMonth("7", namTK);
                 lastDayOfMonth = GetLastDayOfMonth("9", namTK);
-                CHDTEntities1 data = new CHDTEntities1();
+                CHDTEntities data = new CHDTEntities();
                 var truyvan = from hd in data.HoaDons
                               where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
                               select new
@@ -248,7 +248,7 @@ namespace Do_an_Winform.DAL
             {
                 firstDayOfMonth = GetFirstDayOfMonth("10", namTK);
                 lastDayOfMonth = GetLastDayOfMonth("12", namTK);
-                CHDTEntities1 data = new CHDTEntities1();
+                CHDTEntities data = new CHDTEntities();
                 var truyvan = from hd in data.HoaDons
                               where (hd.NgayTaoHD >= firstDayOfMonth) && (hd.NgayTaoHD <= lastDayOfMonth)
                               select new
@@ -267,7 +267,7 @@ namespace Do_an_Winform.DAL
         public static double ThongKeDoanhThuTheoThang(string thangTK, string namTK)
         {
             DateTime firstDayOfMonth = GetLastDayOfMonth(thangTK, namTK);
-            CHDTEntities1 data = new CHDTEntities1();
+            CHDTEntities data = new CHDTEntities();
             var truyvan = from hd in data.HoaDons
                           where (hd.NgayTaoHD.Month.Equals(firstDayOfMonth.Month)) && (hd.NgayTaoHD.Year.Equals(firstDayOfMonth.Year)) && (hd.TrangThai == "1")
                           select new
@@ -305,7 +305,7 @@ namespace Do_an_Winform.DAL
 
         public static bool EditBill(HoaDonDTO hd)
         {
-            CHDTEntities1 entities1 = new CHDTEntities1();
+            CHDTEntities entities1 = new CHDTEntities();
             var bill1 = (from bill in entities1.HoaDons
                          where bill.MaHD == hd.MaHD
                          select bill).Single();
@@ -322,7 +322,7 @@ namespace Do_an_Winform.DAL
 
         public static Dictionary<int, double> GetRevenueByThisMonth(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = from hd in entities.HoaDons
                         where hd.TrangThai == "1" && hd.NgayTaoHD.Month.Equals(time.Month) && hd.NgayTaoHD.Year.Equals(time.Year)
@@ -343,7 +343,7 @@ namespace Do_an_Winform.DAL
 
         public static Dictionary<int, double> GetRevenueByThisYear(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = from hd in entities.HoaDons
                         where hd.TrangThai == "1" && hd.NgayTaoHD.Year.Equals(time.Year)
@@ -364,7 +364,7 @@ namespace Do_an_Winform.DAL
 
         public static int CountBillThisMonth(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = from hd in entities.HoaDons
                         where hd.TrangThai == "1" && hd.NgayTaoHD.Month.Equals(time.Month) && hd.NgayTaoHD.Year.Equals(time.Year)
@@ -375,7 +375,7 @@ namespace Do_an_Winform.DAL
 
         public static int CountBillThisYear(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = from hd in entities.HoaDons
                         where hd.TrangThai == "1" && hd.NgayTaoHD.Year.Equals(time.Year)
@@ -386,7 +386,7 @@ namespace Do_an_Winform.DAL
 
         public static int CountRejectedBillThisMonth(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = from hd in entities.HoaDons
                         where hd.TrangThai == "0" && hd.NgayTaoHD.Month.Equals(time.Month) && hd.NgayTaoHD.Year.Equals(time.Year)
@@ -397,7 +397,7 @@ namespace Do_an_Winform.DAL
 
         public static int CountRejectedBillThisYear(DateTime time)
         {
-            CHDTEntities1 entities = new CHDTEntities1();
+            CHDTEntities entities = new CHDTEntities();
 
             var query = from hd in entities.HoaDons
                         where hd.TrangThai == "0" && hd.NgayTaoHD.Year.Equals(time.Year)
